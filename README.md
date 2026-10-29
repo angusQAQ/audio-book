@@ -4,7 +4,7 @@
 
 ## 本機開發
 
-需要 Node.js 24、Python 3.12、Chromium 與 ffmpeg（包含 ffprobe）。網站是純靜態 HTML/CSS/JavaScript，沒有資料庫或伺服器端金鑰。
+需要 Node.js 24、Python 3.12、Chromium 與 ffmpeg（包含 ffprobe）。開發伺服器使用已鎖版的 http-server，支援 MP3 拖曳跳播所需的 HTTP Range。網站是純靜態 HTML/CSS/JavaScript，沒有資料庫或伺服器端金鑰。
 
 ```sh
 npm ci
@@ -22,7 +22,7 @@ npm test
 python3 scripts/validate_assets.py
 ```
 
-Playwright 驗證 11 頁 × 三種點讀模式的真實 MP3 播放、發光、暫停／繼續、重聽、速度、翻頁、縮放、閱讀記憶、搜尋空狀態、音檔錯誤復原、320–1920px 排版、鍵盤、減少動態，以及 axe 無障礙檢查。資產檢查核對原 PDF SHA-256、所有圖片和點讀映射，並以 ffprobe 解碼檢查全部 MP3。
+Playwright 驗證 11 頁 × 三種點讀模式的真實 MP3 播放、發光、播放／暫停／繼續、拖曳跳播與時間顯示、重聽、速度、翻頁、縮放、閱讀記憶、搜尋空狀態、音檔錯誤復原、320–1920px 與 790×730 排版、鍵盤、減少動態，以及 axe 無障礙檢查。資產檢查核對原 PDF SHA-256、所有圖片和點讀映射，並以 ffprobe 解碼檢查全部 MP3。
 
 ## 指定粵語 MP3
 
@@ -38,7 +38,7 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 在 `main` 或 `storyboo
 
 ## GitHub 與網站同步
 
-所有新增、修改、刪除的正式檔案均以 Git 提交保存於 `angusQAQ/audio-book`。發布前必須完成 `validate_assets.py --require-edge` 與 `npm test`，將生成的 MP3 一併提交，然後同步 `main` 與網站既有的 `gh-pages` 分支。保留兩者歷史，禁止強制推送。更新後由 **Verify published reading website** 工作流程等待線上資料與該提交完全一致，再以手機視窗核對原 PDF 雜湊、三種 MP3 點讀、字形發光和翻頁。它驗證實際 GitHub Pages 網站，不以推送成功代替部署成功。
+所有新增、修改、刪除的正式檔案均以 Git 提交保存於 `angusQAQ/audio-book`。發布前必須完成 `validate_assets.py --require-edge` 與 `npm test`，將生成的 MP3 一併提交，然後同步 `main` 與網站既有的 `gh-pages` 分支。保留兩者歷史，禁止強制推送。更新後由 **Verify published reading website** 工作流程等待線上資料與該提交完全一致，再以手機視窗核對網站程式與 Logo 雜湊、原 PDF、三種 MP3 點讀、播放器跳播／時間、字形發光和翻頁。它驗證實際 GitHub Pages 網站，不以推送成功代替部署成功。
 
 ## 檔案
 
@@ -49,6 +49,7 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 在 `main` 或 `storyboo
 - `assets/pages/`：原網站的完整原書頁圖，從既有內嵌資產逐位元組拆出，無重製教材。
 - `assets/glow/`：原書字形發光遮罩。
 - `assets/audio/`：已提交的內置 MP3；`library.json` 的 `voice` 記錄實際引擎。
+- `assets/brand/diandian-logo.png`：專屬透明底 Logo，圖形包含兩個閱讀者圓點、打開的書和播放符號，生成提示已嵌入檔案。
 - `assets/fonts/`：自託管 Noto Sans TC 字型子集與 OFL 授權。
 - `PRODUCT.md`、`DESIGN.md`、`.impeccable/`、`.hallmark/`：設計依據與驗證紀錄。
 

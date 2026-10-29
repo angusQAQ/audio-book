@@ -52,21 +52,33 @@
     const number = Number(value);
     return Number.isInteger(number) ? Math.max(0,Math.min(item.pages.length-1,number)) : null;
   }
+  function formatTime(value) {
+    const seconds = Math.max(0, Math.floor(Number(value) || 0));
+    return Math.floor(seconds / 60) + ':' + String(seconds % 60).padStart(2,'0');
+  }
   function setProgress(fraction) {
     const value = Math.max(0,Math.min(1,Number(fraction) || 0));
-    $('#reading-progress span').style.transform = 'scaleX(' + value + ')';
-    $('#reading-progress').setAttribute('aria-valuenow', String(Math.round(value*100)));
+    const seek = $('#audio-seek');
+    const timed = engine === 'audio' && Number.isFinite(player.duration) && player.duration > 0;
+    seek.value = String(value * 100);
+    seek.style.setProperty('--seek-progress',(value * 100) + '%');
+    seek.disabled = !timed;
+    $('#elapsed-time').textContent = timed ? formatTime(player.currentTime) : '0:00';
+    $('#duration-time').textContent = timed ? formatTime(player.duration) : '0:00';
+    seek.setAttribute('aria-valuetext', timed ? formatTime(player.currentTime) + '，共 ' + formatTime(player.duration) : '尚未播放');
   }
   function setState(state) {
     playState = state;
     document.body.dataset.playState = state;
     const active = ['playing','paused','loading'].includes(state);
-    $('#pause').disabled = !['playing','paused'].includes(state);
+    const label = state === 'playing' ? '暫停' : state === 'paused' ? '繼續' : state === 'loading' ? '準備中' : '播放';
+    $('#pause').disabled = state === 'loading';
+    $('#pause').setAttribute('aria-busy',String(state === 'loading'));
     $('#stop').disabled = !active;
-    $('#replay').disabled = !current;
-    $('#pause-label').textContent = state === 'paused' ? '繼續' : '暫停';
-    $('#pause').setAttribute('aria-label', state === 'paused' ? '繼續朗讀' : '暫停朗讀');
-    $('#pause [data-icon]').innerHTML = icon(state === 'paused' ? 'play' : 'pause');
+    $('#replay').disabled = !current || state === 'loading';
+    $('#pause-label').textContent = label;
+    $('#pause').setAttribute('aria-label', label + '朗讀');
+    $('#pause [data-icon]').innerHTML = icon(state === 'playing' ? 'pause' : 'play');
   }
   function clearGlow() {
     $('#glow-layer').replaceChildren();
@@ -208,7 +220,17 @@
     else playAudio(expected,false);
   }
   function togglePause() {
-    if (!current) return;
+    if (!current) {
+      for (const block of book.pages[page].blocks) {
+        const units = mode === 'sentence' ? [{text:block.text,audio:block.audio,start:0,end:block.text.length}]
+          : mode === 'character' && block.characters.length ? block.characters : block.words;
+        const unit = units.find(item => item.audio);
+        if (unit) { play(itemFor(block,unit)); return; }
+      }
+      announce('這一頁暫未提供讀音，請翻到另一頁。','error');
+      return;
+    }
+    if (['idle','ended','error'].includes(playState)) { play(current); return; }
     if (playState === 'paused') {
       if (engine === 'native') { try { synth.resume(); setState('playing'); announce('正在朗讀粵語'); } catch { play(current); } }
       else { player.play().then(()=>{ setState('playing'); announce('正在朗讀粵語'); }).catch(()=>failPlayback()); }
@@ -217,6 +239,13 @@
       setState('paused'); announce('已暫停，按「繼續」接着聽。');
     }
   }
+  player.addEventListener('loadedmetadata',()=>{ if (engine === 'audio') setProgress(0); });
+  player.addEventListener('durationchange',()=>{ if (engine === 'audio' && player.duration > 0) setProgress(player.currentTime/player.duration); });
+  $('#audio-seek').addEventListener('input',()=>{
+    if (engine !== 'audio' || !Number.isFinite(player.duration) || player.duration <= 0) return;
+    player.currentTime = player.duration * Number($('#audio-seek').value) / 100;
+    setProgress(player.currentTime/player.duration);
+  });
   player.addEventListener('ended',()=>{ if (engine === 'audio') finish(audioToken); });
   player.addEventListener('error',()=>{ if (engine === 'audio' && player.getAttribute('src')) failPlayback(); });
   player.addEventListener('timeupdate',()=>{ if (engine === 'audio' && Number.isFinite(player.duration) && player.duration>0) setProgress(player.currentTime/player.duration); });

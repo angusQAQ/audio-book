@@ -6,6 +6,9 @@ import { chromium } from '@playwright/test';
 const base = new URL(process.env.READING_SITE_URL || 'https://angusqaq.github.io/audio-book/');
 const expected = readFileSync(new URL('../library.json', import.meta.url));
 const expectedHash = createHash('sha256').update(expected).digest('hex');
+const shippedFiles = ['index.html','app.js','styles.css','library.json','assets/brand/diandian-logo.png'].map(path => ({
+  path, hash: createHash('sha256').update(readFileSync(new URL('../' + path, import.meta.url))).digest('hex'),
+}));
 const book = JSON.parse(expected).books[0];
 if (process.env.REQUIRE_EDGE === '1') {
   assert.equal(book.voice.name, 'zh-HK-HiuMaanNeural');
@@ -16,13 +19,16 @@ if (process.env.REQUIRE_EDGE === '1') {
 let published = false;
 for (let attempt = 0; attempt < 24; attempt++) {
   try {
-    const url = new URL('library.json', base);
-    url.searchParams.set('verify', expectedHash);
-    const response = await fetch(url, { signal: AbortSignal.timeout(15000), cache: 'no-store' });
-    if (response.ok) {
+    let matches = true;
+    for (const file of shippedFiles) {
+      const url = new URL(file.path, base);
+      url.searchParams.set('verify', file.hash);
+      const response = await fetch(url, { signal: AbortSignal.timeout(15000), cache: 'no-store' });
+      if (!response.ok) { matches = false; break; }
       const hash = createHash('sha256').update(Buffer.from(await response.arrayBuffer())).digest('hex');
-      if (hash === expectedHash) { published = true; break; }
+      if (hash !== file.hash) { matches = false; break; }
     }
+    if (matches) { published = true; break; }
   } catch { /* The previous Pages deployment may still be serving. */ }
   if (attempt < 23) await new Promise(resolve => setTimeout(resolve, 10000));
 }
@@ -38,6 +44,7 @@ try {
   page.on('pageerror', error => errors.push(error.message));
   await page.goto(base.href, { waitUntil: 'networkidle' });
   await page.getByRole('heading', { name: book.title, exact: true }).waitFor();
+  assert.ok(await page.locator('.brand-symbol img').evaluate(image => image.complete && image.naturalWidth > 0));
   const pdf = await page.request.get(new URL(book.source.url, base).href);
   assert.equal(pdf.status(), 200);
   assert.equal(createHash('sha256').update(await pdf.body()).digest('hex'), book.source.sha256);
@@ -53,11 +60,25 @@ try {
     });
     await page.locator('#stop').click();
   }
+  await page.locator('[data-mode="sentence"]').click();
+  await page.locator('.hotspot').nth(2).click();
+  await page.waitForFunction(() => window.readerDiagnostics().state === 'playing');
+  await page.locator('#pause').click();
+  await page.locator('#audio-seek').fill('50');
+  await page.waitForFunction(() => {
+    const state = window.readerDiagnostics();
+    return state.currentTime / state.duration > 0.4 && state.currentTime / state.duration < 0.6;
+  });
+  assert.notEqual(await page.locator('#duration-time').textContent(), '0:00');
+  await page.locator('#stop').click();
+  await page.locator('#pause').click();
+  await page.waitForFunction(() => window.readerDiagnostics().state === 'playing');
+  await page.locator('#stop').click();
   await page.locator('#next-page').click();
   assert.equal(await page.evaluate(() => window.readerDiagnostics().page), 4);
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   assert.deepEqual(errors, []);
-  console.log(`PASS: published library matches ${expectedHash.slice(0, 12)}; original PDF SHA256, all three MP3 point-reading modes, glyph glow, page navigation and phone layout verified.`);
+  console.log(`PASS: published library matches ${expectedHash.slice(0, 12)}; current code/logo hashes, original PDF SHA256, all three MP3 point-reading modes, glyph glow, audio play/seek/time controls, page navigation and phone layout verified.`);
 } finally {
   await browser.close();
 }

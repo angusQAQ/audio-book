@@ -101,8 +101,8 @@ test('broken MP3 produces a recoverable error and replay works', async ({ page }
 
 test('desktop, tablet, phone, keyboard focus and reduced motion accessibility', async ({ page }) => {
   mkdirSync('.impeccable/review', { recursive: true });
-  for (const width of [320, 390, 768, 1280, 1440, 1920]) {
-    await page.setViewportSize({ width, height: 900 });
+  for (const width of [320, 390, 768, 790, 1280, 1440, 1920]) {
+    await page.setViewportSize({ width, height: width === 790 ? 730 : 900 });
     await page.goto('/');
     await page.evaluate(() => document.fonts.ready);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
@@ -132,4 +132,33 @@ test('desktop, tablet, phone, keyboard focus and reduced motion accessibility', 
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await playFirst(page);
   expect(await page.locator('.ink-glow').first().evaluate(x => getComputedStyle(x).animationName)).toBe('none');
+});
+
+
+test('audio player starts, seeks, shows time and restarts after stop', async ({ page }) => {
+  await page.setViewportSize({ width: 790, height: 730 });
+  await openReader(page, 1);
+  await expect(page.locator('#pause')).toBeEnabled();
+  await expect(page.locator('#pause')).toHaveAttribute('aria-label', '播放朗讀');
+  await page.locator('#pause').click();
+  await expect.poll(() => page.evaluate(() => window.readerDiagnostics().state)).toBe('playing');
+  await page.locator('#stop').click();
+  await page.locator('.hotspot').nth(4).click();
+  await expect.poll(() => page.evaluate(() => window.readerDiagnostics().state)).toBe('playing');
+  await page.locator('#pause').click();
+  await expect(page.locator('#audio-seek')).toBeEnabled();
+  await page.locator('#audio-seek').fill('45');
+  await expect.poll(() => page.evaluate(() => {
+    const player = window.readerDiagnostics(); return player.currentTime / player.duration;
+  })).toBeCloseTo(0.45, 1);
+  await expect(page.locator('#duration-time')).not.toHaveText('0:00');
+  await expect(page.locator('#elapsed-time')).not.toHaveText('0:00');
+  await expect(page.locator('#audio-seek')).toHaveAttribute('aria-valuetext', /，共 /);
+  mkdirSync('.impeccable/review', { recursive: true });
+  await page.screenshot({ path: '.impeccable/review/player-790.png', fullPage: true });
+  await page.locator('#stop').click();
+  await expect(page.locator('#audio-seek')).toBeDisabled();
+  await expect(page.locator('#elapsed-time')).toHaveText('0:00');
+  await page.locator('#pause').click();
+  await expect.poll(() => page.evaluate(() => window.readerDiagnostics().state)).toBe('playing');
 });

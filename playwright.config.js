@@ -12,7 +12,7 @@ export default defineConfig({
     launchOptions: { executablePath, args: ['--no-sandbox', '--disable-dev-shm-usage', '--autoplay-policy=no-user-gesture-required'] },
   },
   webServer: {
-    command: 'python3 -m http.server 8011 --bind 127.0.0.1',
+    command: 'node node_modules/http-server/bin/http-server . -p 8011 -a 127.0.0.1 -c-1 --silent',
     url: 'http://127.0.0.1:8011',
     reuseExistingServer: !process.env.CI,
     stdout: 'ignore',
