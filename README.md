@@ -32,7 +32,7 @@ python3 scripts/validate_assets.py --require-edge
 npm test
 ```
 
-指定 `edge-tts==7.2.8`、`zh-HK-HiuMaanNeural`、`rate=-12%`。文字直接來自 `library.json` 的讀音單位，包含原書的英語句子。`.cache/edge-tts/` 可續傳，每個快取都有內容雜湊與時長驗證；整批成功才更新 `assets/audio/` 與資料索引。舊音檔不會在下載失敗時被取代。網站直接播放已提交的 MP3，預設不使用裝置語音，也不會在點讀時連線語音服務。速度滑桿是相對於預製音檔的播放速度。
+指定 `edge-tts==7.3.1`、`zh-HK-HiuMaanNeural`、`rate=-12%`。文字直接來自 `library.json` 的讀音單位，包含原書的英語句子。`.cache/edge-tts/` 可續傳，每個快取都有內容雜湊與時長驗證；整批成功才更新 `assets/audio/` 與資料索引。舊音檔不會在下載失敗時被取代。網站直接播放已提交的 MP3，預設不使用裝置語音，也不會在點讀時連線語音服務。速度滑桿是相對於預製音檔的播放速度。
 
 GitHub Actions 的 **Prepare and verify Cantonese MP3** 在 `main` 或 `storybook-playground` 的相關資料／生成流程變更後執行，也可手動啟動。它生成 MP3、嚴格驗證指定聲音並跑瀏覽器測試，全部通過才將音檔回存同一分支。執行失敗時不部署，不宣稱已生成指定聲音。
 
