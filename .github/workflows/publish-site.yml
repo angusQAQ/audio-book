@@ -34,17 +34,24 @@ jobs:
           pip install -r requirements.txt
           npm ci
           npx playwright install --with-deps chromium
-      - uses: actions/cache@v5
+      - uses: actions/cache/restore@v5
+        id: speech-cache
         with:
           path: .cache/edge-tts
-          key: edge-tts-hiu-maan-12-words-v2-${{ hashFiles('library.json', 'requirements.txt') }}
+          key: edge-tts-hiu-maan-12-words-v2-${{ hashFiles('library.json', 'requirements.txt') }}-${{ github.run_id }}
           restore-keys: edge-tts-hiu-maan-12-words-v2-
       - name: Ensure the requested bundled voice and preserve the original PDF
         run: |
           if ! python scripts/validate_assets.py --require-edge; then
-            python scripts/generate_audio.py --jobs 3
+            python scripts/generate_audio.py --jobs 2
             python scripts/validate_assets.py --require-edge
           fi
+      - name: Preserve verified speech cache even after a service interruption
+        if: always() && hashFiles('.cache/edge-tts/*.json') != ''
+        uses: actions/cache/save@v5
+        with:
+          path: .cache/edge-tts
+          key: edge-tts-hiu-maan-12-words-v2-${{ hashFiles('library.json', 'requirements.txt') }}-${{ github.run_id }}
       - name: Test the complete reader and Audio Play UI
         run: npm test
       - name: Save any newly generated MP3 to GitHub

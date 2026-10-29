@@ -102,7 +102,7 @@ async def generate(jobs):
                     except (ValueError, subprocess.CalledProcessError):
                         valid = False
             if not valid:
-                for attempt in range(4):
+                for attempt in range(7):
                     partial = path.with_suffix('.partial.mp3')
                     metadata = path.with_suffix('.partial.jsonl')
                     try:
@@ -124,9 +124,13 @@ async def generate(jobs):
                     except Exception as error:
                         partial.unlink(missing_ok=True)
                         metadata.unlink(missing_ok=True)
-                        if attempt == 3 or getattr(error, 'status', None) in (401, 403):
+                        if attempt == 6 or getattr(error, 'status', None) in (401, 403) or isinstance(error,(ValueError,KeyError,TypeError)):
+                            error.tts_unit = asset.get('id','unknown')
+                            error.tts_completed = completed
                             raise
-                        await asyncio.sleep(2 ** (attempt + 1))
+                        delay = [2,5,10,20,30,45][attempt]
+                        print(f'Retrying {type(error).__name__} for unit {asset.get("id","unknown")} after {delay}s; completed {completed}/{total}',flush=True)
+                        await asyncio.sleep(delay)
             generated[key] = path
             asset.update({
                 'src': f'assets/audio/{key}.mp3', 'voice': VOICE, 'rate': RATE,
@@ -145,6 +149,7 @@ async def generate(jobs):
     # Fail the prerequisite once before scheduling the full library.
     first = next(iter(library['books'][0]['audio'].values()))
     await one(first)
+    print(f'::notice title=Word timing preflight::Requested HiuMaan voice returned {len(first["boundaries"])} real word timestamps',flush=True)
     remaining = [asset for book in library['books'] for asset in book['audio'].values() if asset is not first]
     await asyncio.gather(*(one(asset) for asset in remaining))
     for book in library['books']:
@@ -169,13 +174,14 @@ async def generate(jobs):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--jobs', type=int, default=3, choices=range(1, 7))
+    parser.add_argument('--jobs', type=int, default=2, choices=range(1, 7))
     arguments = parser.parse_args()
     try:
         asyncio.run(generate(arguments.jobs))
     except Exception as error:
         # Safe public CI diagnosis: never include URLs, headers or environment values.
-        diagnosis = f"{type(error).__name__}; HTTP status={getattr(error, 'status', 'not supplied')}"
+        diagnosis = f"{type(error).__name__}; HTTP status={getattr(error, 'status', 'not supplied')}; unit={getattr(error, 'tts_unit', 'not supplied')}; completed={getattr(error, 'tts_completed', 'not supplied')}"
+        if isinstance(error,ValueError): diagnosis += '; ' + str(error).replace('\n',' ')[:180]
         print('Speech generation failed: ' + diagnosis, flush=True)
         if os.environ.get('GITHUB_ACTIONS') == 'true':
             print('::error title=Speech generation::' + diagnosis, flush=True)
