@@ -38,7 +38,7 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 在 `main` 或 `storyboo
 
 ## GitHub 與網站同步
 
-所有新增、修改、刪除的正式檔案均以 Git 提交保存於 `angusQAQ/audio-book`。發布前必須完成 `validate_assets.py --require-edge` 與 `npm test`，將生成的 MP3 一併提交，然後同步 `main` 與網站既有的 `gh-pages` 分支。保留兩者歷史，禁止強制推送。更新後檢查 GitHub Pages 的實際 HTTP 回應與點讀功能，不以推送成功代替部署成功。
+所有新增、修改、刪除的正式檔案均以 Git 提交保存於 `angusQAQ/audio-book`。發布前必須完成 `validate_assets.py --require-edge` 與 `npm test`，將生成的 MP3 一併提交，然後同步 `main` 與網站既有的 `gh-pages` 分支。保留兩者歷史，禁止強制推送。更新後由 **Verify published reading website** 工作流程等待線上資料與該提交完全一致，再以手機視窗核對原 PDF 雜湊、三種 MP3 點讀、字形發光和翻頁。它驗證實際 GitHub Pages 網站，不以推送成功代替部署成功。
 
 ## 檔案
 
