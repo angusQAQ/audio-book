@@ -241,7 +241,7 @@ test('real word timestamps guide the glow through playback, seeking and page spl
   await page.locator('#pause').click();
   const samples=[asset.boundaries[0],asset.boundaries[Math.floor(asset.boundaries.length/2)]];
   for (const boundary of samples) {
-    await page.locator('#audio-seek').fill(String((boundary.time+Math.min(.03,boundary.duration/3))/asset.duration*100));
+    await page.locator('#audio-seek').fill(((boundary.time+Math.min(.03,boundary.duration/3))/asset.duration*100).toFixed(1));
     await expect.poll(()=>page.evaluate(()=>window.readerDiagnostics().highlightedText)).toBe(block.text.slice(boundary.start,boundary.end));
   }
   await page.screenshot({path:'.impeccable/review/apple-word-glow.png'});
@@ -268,7 +268,34 @@ test('real word timestamps guide the glow through playback, seeking and page spl
   await expect.poll(()=>page.evaluate(()=>window.readerDiagnostics().state)).toBe('playing');
   await page.locator('#pause').click();
   const last=continuation.boundaries.at(-1);
-  await page.locator('#audio-seek').fill(String(Math.min(continuation.duration-.05,last.time+.02)/continuation.duration*100));
+  await page.locator('#audio-seek').fill((Math.min(continuation.duration-.05,last.time+.02)/continuation.duration*100).toFixed(1));
   const text=await page.evaluate(()=>window.readerDiagnostics().highlightedText);
   if (text) expect(continued.text.includes(text)).toBe(true);
+});
+
+
+test('book pages flip in both directions, cancel safely and respect reduced motion', async ({ page }) => {
+  await page.setViewportSize({width:1111,height:730});
+  await openReader(page,1);
+  await page.locator('#next-page').click();
+  await expect(page.locator('.page-turn')).toBeVisible();
+  await expect(page.locator('#page-canvas')).toHaveAttribute('data-turn-direction','next');
+  await expect.poll(()=>page.evaluate(()=>window.readerDiagnostics().imageReady)).toBe(true);
+  await expect(page.locator('.page-turn')).toHaveCount(0);
+  await page.locator('#previous-page').click();
+  await expect(page.locator('.page-turn')).toBeVisible();
+  await expect(page.locator('#page-canvas')).toHaveAttribute('data-turn-direction','previous');
+  await expect.poll(()=>page.evaluate(()=>window.readerDiagnostics().imageReady)).toBe(true);
+  await page.locator('#next-page').click();
+  await page.locator('#next-page').click();
+  await page.locator('#next-page').click();
+  await expect.poll(()=>page.evaluate(()=>window.readerDiagnostics().imageReady)).toBe(true);
+  expect(await page.evaluate(()=>window.readerDiagnostics().page)).toBe(4);
+  await expect(page.locator('#page-image')).toHaveAttribute('src',book.pages[3].image);
+  await expect(page.locator('.page-turn')).toHaveCount(0);
+  await page.emulateMedia({reducedMotion:'reduce'});
+  await page.locator('#next-page').click();
+  await expect.poll(()=>page.evaluate(()=>window.readerDiagnostics().imageReady)).toBe(true);
+  await expect(page.locator('.page-turn')).toHaveCount(0);
+  expect(await page.evaluate(()=>window.readerDiagnostics().page)).toBe(5);
 });

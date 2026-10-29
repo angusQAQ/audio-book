@@ -308,3 +308,9 @@ body[data-view="reader"] .site-header { display: none; }
 }
 
 .site-header { flex-wrap: wrap; }
+
+/* A real page leaf rotates over the intact original scans; reduced motion swaps directly. */
+.page-turn { position: absolute; inset: 0; z-index: 8; overflow: clip; perspective: 1400px; pointer-events: none; }
+.page-turn-leaf { position: absolute; inset: 0; transform-origin: left center; transform-style: preserve-3d; backface-visibility: hidden; box-shadow: 8px 0 24px -6px var(--color-shadow); }
+.page-turn-image, .page-turn-underlay { position: absolute; inset: 0; display: block; width: 100%; height: 100%; max-width: none; object-fit: contain; }
+@media (prefers-reduced-motion: reduce) { .page-turn { display: none; } }

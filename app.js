@@ -40,6 +40,7 @@
   let voices = [], current = null, engine = null, nativeUtterance = null, nativeTimer = null;
   let token = 0, audioToken = 0, playState = 'idle', imageReady = false, nativeBoundary = null;
   let glowFrame = 0, glowKey = '';
+  let turnToken = 0, pendingTurn = null, turnAnimation = null;
   const player = new Audio();
   player.preload = 'none';
   player.preservesPitch = true;
@@ -76,7 +77,7 @@
     if (state === 'playing' && engine === 'audio') glowFrame = requestAnimationFrame(syncAudioGlow);
     const active = ['playing','paused','loading'].includes(state);
     const label = state === 'playing' ? '暫停' : state === 'paused' ? '繼續' : state === 'loading' ? '準備中' : '播放';
-    $('#pause').disabled = state === 'loading';
+    $('#pause').disabled = state === 'loading' || !imageReady;
     $('#pause').setAttribute('aria-busy',String(state === 'loading'));
     $('#stop').disabled = !active;
     $('#replay').disabled = !current || state === 'loading';
@@ -342,11 +343,52 @@
     paper.style.width=width+'px'; paper.style.aspectRatio=item.pdfWidth+' / '+item.pdfHeight;
     document.body.dataset.zoomed=width>availableWidth?'true':'false';
   }
-  function loadedImage() { imageReady=true; $('#hotspots').hidden=false; }
+  function cancelPageTurn() {
+    turnToken++;
+    if (turnAnimation) turnAnimation.cancel();
+    turnAnimation=null; pendingTurn=null;
+    paper.querySelectorAll('.page-turn').forEach(layer=>layer.remove());
+    paper.dataset.turning='false';
+  }
+  function readyPage(expected) {
+    if (expected !== turnToken) return;
+    turnAnimation=null; pendingTurn=null;
+    paper.querySelectorAll('.page-turn').forEach(layer=>layer.remove());
+    paper.dataset.turning='false'; paper.setAttribute('aria-busy','false');
+    imageReady=true; $('#hotspots').hidden=false; setState(playState);
+  }
+  function loadedImage() {
+    if (image.currentSrc && image.currentSrc !== new URL(book.pages[page].image,location.href).href) return;
+    if (turnAnimation) return;
+    const turn=pendingTurn;
+    if (!turn) { readyPage(turnToken); return; }
+    pendingTurn=null;
+    const layer=el('div','page-turn'); layer.setAttribute('aria-hidden','true');
+    const leaf=el('div','page-turn-leaf');
+    function pageCopy(source,className) {
+      const copy=el('img',className); copy.src=source; copy.alt=''; copy.draggable=false; return copy;
+    }
+    if (turn.direction<0) layer.append(pageCopy(turn.source,'page-turn-underlay'));
+    leaf.append(pageCopy(turn.direction>0?turn.source:image.currentSrc,'page-turn-image'));
+    layer.append(leaf); paper.append(layer);
+    paper.dataset.turning='true'; paper.dataset.turnDirection=turn.direction>0?'next':'previous';
+    const frames=turn.direction>0
+      ? [{transform:'rotateY(0deg)'},{transform:'rotateY(-100deg)'}]
+      : [{transform:'rotateY(-100deg)'},{transform:'rotateY(0deg)'}];
+    turnAnimation=leaf.animate(frames,{duration:420,easing:'cubic-bezier(.25,.65,.2,1)',fill:'forwards'});
+    turnAnimation.finished.then(()=>readyPage(turn.token)).catch(()=>{});
+  }
   image.addEventListener('load',loadedImage);
-  image.addEventListener('error',()=>{ imageReady=false; $('#hotspots').hidden=true; announce('書頁未能載入，請重新整理或使用完整下載包。','error'); });
+  image.addEventListener('error',()=>{
+    cancelPageTurn(); imageReady=false; paper.setAttribute('aria-busy','false'); $('#hotspots').hidden=true;
+    setState(playState); announce('書頁未能載入，請重新整理或使用完整下載包。','error');
+  });
   function renderPage(direction) {
-    imageReady=false; $('#hotspots').hidden=true;
+    const source=image.currentSrc || image.src;
+    const canTurn=imageReady && direction && !matchMedia('(prefers-reduced-motion: reduce)').matches && typeof paper.animate==='function';
+    cancelPageTurn();
+    imageReady=false; $('#hotspots').hidden=true; paper.setAttribute('aria-busy','true'); setState(playState);
+    if (canTurn) pendingTurn={source,direction,token:turnToken};
     const item=book.pages[page];
     image.alt='《'+book.title+'》原書第 '+(page+1)+' 頁：'+item.title;
     image.src=item.image; $('#page-select').value=String(page+1);
@@ -355,10 +397,6 @@
     renderHotspots(); resizePage();
     storage.set('library-position:'+book.id,page);
     if (image.complete && image.naturalWidth) loadedImage();
-    if (direction && !matchMedia('(prefers-reduced-motion: reduce)').matches && paper.animate) {
-      if (paper.getAnimations) paper.getAnimations().forEach(animation=>animation.cancel());
-      paper.animate([{opacity:.45,transform:'translateX('+(direction>0?16:-16)+'px)'},{opacity:1,transform:'translateX(0)'}],{duration:220,easing:'cubic-bezier(.2,.7,.2,1)'});
-    }
   }
   function updateURL(push) {
     try {
@@ -388,6 +426,7 @@
     if (update!==false) { updateURL(true); $('#reader-view').focus({preventScroll:true}); }
   }
   function showLibrary(update) {
+    cancelPageTurn();
     document.title='點點書房｜粵語繪本遊樂園';
     halt(true); document.body.dataset.view='library'; $('#library-view').hidden=false; $('#reader-view').hidden=true; $('#header-book').hidden=true;
     renderLibrary(); if (update!==false) { updateURL(true); $('#continue-reading').focus({preventScroll:true}); } window.scrollTo(0,0);
@@ -494,7 +533,7 @@
   });
   if (typeof ResizeObserver !== 'undefined') new ResizeObserver(resizePage).observe(viewport);
   else window.addEventListener('resize',resizePage);
-  window.addEventListener('pagehide',()=>halt(true));
+  window.addEventListener('pagehide',()=>{ halt(true); cancelPageTurn(); });
   function route() {
     const query=new URLSearchParams(location.search), id=query.get('book'), number=Number(query.get('page'));
     if (id || number>0) showReader(id||books[0].id,number>0?number-1:undefined,false);
@@ -504,7 +543,7 @@
   window.readerDiagnostics=()=>({view:document.body.dataset.view,book:book.id,page:page+1,mode,current:current?current.text:null,
     playing:playState==='playing',state:playState,engine,currentTime:engine==='audio'?player.currentTime:0,
     audioSource:player.getAttribute('src'),duration:Number.isFinite(player.duration)?player.duration:null,
-    playbackRate:rate,imageReady,glowCount:$('#glow-layer').children.length,voiceCount:voices.length,
+    playbackRate:rate,imageReady,turning:paper.dataset.turning==='true',glowCount:$('#glow-layer').children.length,voiceCount:voices.length,
     highlightedText:$('#glow-layer').dataset.text || null, timingCount:current?current.timings.length:0,
     nativeBoundary:nativeBoundary?nativeBoundary.text:null,nativeHeld:!!nativeUtterance});
   route();
