@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-29T08:18:41.637508Z",
+  "generatedAt": "2026-10-29T08:42:56.171757Z",
   "title": "Design System: 點點書房",
   "extensions": {
     "colorMeta": {
@@ -241,6 +241,20 @@
           "oklch(87% 0.0123 143.19)",
           "oklch(95% 0.0041 143.19)"
         ]
+      },
+      "paper-3": {
+        "role": "neutral",
+        "displayName": "Timeline Paper",
+        "tonalRamp": [
+          "oklch(15% 0.005 84.5)",
+          "oklch(27% 0.010 84.5)",
+          "oklch(39% 0.015 84.5)",
+          "oklch(51% 0.020 84.5)",
+          "oklch(63% 0.020 84.5)",
+          "oklch(75% 0.016 84.5)",
+          "oklch(87% 0.009 84.5)",
+          "oklch(95% 0.003 84.5)"
+        ]
       }
     },
     "typographyMeta": {
@@ -270,7 +284,11 @@
       },
       "caption": {
         "displayName": "Caption",
-        "purpose": "Counts, status and footer text."
+        "purpose": "Counts, audio status and time, and footer text."
+      },
+      "player-status-compact": {
+        "displayName": "Compact Player Status",
+        "purpose": "Local phone audio-status text only."
       }
     },
     "shadows": [
@@ -325,11 +343,6 @@
         "name": "voice-wave",
         "value": "750ms ease-in-out infinite alternate",
         "purpose": "Playing-only wave bars, with 150ms stagger on even bars."
-      },
-      {
-        "name": "progress",
-        "value": "120ms linear",
-        "purpose": "Reading-progress scale transition."
       }
     ],
     "breakpoints": [
@@ -369,12 +382,12 @@
       "css": ".ds-icon{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;background:none;color:var(--color-ink);border-radius:12px;padding:var(--space-xs);cursor:pointer;font-family:var(--font-body);transition:background-color var(--dur-micro) ease,color var(--dur-micro) ease;}.ds-icon svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}.ds-icon:hover:not(:disabled){background:var(--color-mint);}.ds-icon:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px;transition:none;}.ds-icon:active:not(:disabled){transform:translateY(1px);} .ds-icon:disabled{background:var(--color-disabled);color:var(--color-disabled-ink);cursor:not-allowed;box-shadow:none;} @media(prefers-reduced-motion:reduce){.ds-icon{transition:none;}.ds-icon:active:not(:disabled){transform:none;}}"
     },
     {
-      "name": "Transport action",
-      "kind": "button",
-      "refersTo": "button-transport",
-      "description": "Keep playback controls recognisable with icon and text.",
-      "html": "<button class=\"ds-transport\" aria-label=\"暫停朗讀\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M8 5v14M16 5v14\"/></svg><span>暫停</span></button>",
-      "css": ".ds-transport{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:var(--space-2xs);width:48px;min-height:64px;border:0;background:none;font-size:var(--text-xs);color:var(--color-ink-2);border-radius:12px;padding:var(--space-2xs);cursor:pointer;font-family:var(--font-body);transition:background-color var(--dur-micro) ease,color var(--dur-micro) ease;}.ds-transport svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}.ds-transport:hover:not(:disabled){background:var(--color-mint);}.ds-transport:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px;transition:none;}.ds-transport:active:not(:disabled){transform:translateY(1px);} .ds-transport:disabled{background:var(--color-disabled);color:var(--color-disabled-ink);cursor:not-allowed;box-shadow:none;} @media(prefers-reduced-motion:reduce){.ds-transport{transition:none;}.ds-transport:active:not(:disabled){transform:none;}}@media(max-width:580px){.ds-transport{width:40px;font-size:11px;}.ds-transport svg{width:20px;}}"
+      "name": "Audio player",
+      "kind": "custom",
+      "refersTo": "player-toggle",
+      "description": "The paused player with a native seek range, visible media time and secondary replay/stop controls. The application binds seeking and time to the audio element.",
+      "html": "<section class=\"ds-player\" aria-label=\"正在朗讀的內容\"><button class=\"ds-player-toggle\" aria-label=\"繼續朗讀\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m8 5 11 7-11 7Z\"/></svg></button><div class=\"ds-player-content\"><div class=\"ds-player-meta\" role=\"status\">已暫停，按「繼續」接着聽。</div><p>學校裏有甚麼令你感到溫馨和快樂的事？</p><div class=\"ds-timeline\"><span class=\"ds-time\" aria-hidden=\"true\">0:07</span><input class=\"ds-seek\" type=\"range\" min=\"0\" max=\"100\" step=\"0.1\" value=\"46.7\" style=\"--seek-progress:46.7%\" aria-label=\"朗讀進度\" aria-valuetext=\"0:07，共 0:15\"><span class=\"ds-time\" aria-hidden=\"true\">0:15</span></div></div><div class=\"ds-transport\"><button class=\"ds-transport-button\" aria-label=\"重聽\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M19 7a8 8 0 1 0 1 8M19 3v5h-5\"/></svg><span>重聽</span></button><button class=\"ds-transport-button\" aria-label=\"停止朗讀\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 6h12v12H6z\"/></svg><span>停止</span></button></div></section>",
+      "css": ".ds-player{position:relative;display:flex;align-items:center;gap:var(--space-lg);background:var(--color-card);color:var(--color-ink);border-top:1px solid var(--color-rule);padding:var(--space-md) var(--space-lg) var(--space-lg);min-height:124px;font-family:var(--font-body);}.ds-player-content{flex:1;min-width:0;}.ds-player-meta{color:var(--color-muted);font-size:var(--text-xs);margin-bottom:var(--space-xs);}.ds-player-content p{margin:0;font-size:var(--text-md);line-height:1.7;max-height:54px;overflow:auto;}.ds-player-toggle{display:grid;place-items:center;flex:none;width:56px;height:56px;border:0;border-radius:50%;padding:var(--space-md);background:var(--color-ink);color:var(--color-paper);cursor:pointer;font-family:var(--font-body);transition:background-color var(--dur-micro) ease,color var(--dur-micro) ease;}.ds-player-toggle svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;width:26px;height:26px;stroke-width:2;}.ds-player-toggle:hover:not(:disabled){background:var(--color-ink-2);}.ds-player-toggle[aria-busy=\"true\"]{cursor:progress;}.ds-player-toggle:disabled{background:var(--color-disabled);color:var(--color-disabled-ink);}.ds-player-toggle:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px;transition:none;}.ds-player-toggle:active:not(:disabled){transform:translateY(1px);}@media(max-width:580px){.ds-player-toggle{width:48px;height:48px;padding:var(--space-sm);}}@media(prefers-reduced-motion:reduce){.ds-player-toggle{transition:none;}.ds-player-toggle:active:not(:disabled){transform:none;}}.ds-transport{display:flex;align-items:center;gap:var(--space-2xs);flex:none;}.ds-transport-button{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:var(--space-2xs);width:48px;min-height:64px;border:0;background:none;font-size:var(--text-xs);color:var(--color-ink-2);border-radius:12px;padding:var(--space-2xs);cursor:pointer;font-family:var(--font-body);transition:background-color var(--dur-micro) ease,color var(--dur-micro) ease;}.ds-transport-button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}.ds-transport-button:hover:not(:disabled){background:var(--color-mint);}.ds-transport-button:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px;transition:none;}.ds-transport-button:disabled{background:var(--color-disabled);color:var(--color-disabled-ink);cursor:not-allowed;}.ds-transport-button:active:not(:disabled){transform:translateY(1px);}@media(max-width:580px){.ds-transport{width:100%;justify-content:flex-end;margin-top:calc(-1 * var(--space-xs));gap:0;}.ds-transport-button{flex-direction:row;min-height:36px;width:auto;padding:var(--space-2xs) var(--space-sm);gap:var(--space-2xs);font-size:11px;}.ds-transport-button svg{width:16px;height:16px;}}@media(prefers-reduced-motion:reduce){.ds-transport-button{transition:none;}.ds-transport-button:active:not(:disabled){transform:none;}}.ds-timeline{display:flex;align-items:center;gap:var(--space-sm);margin-top:var(--space-xs);}.ds-time{flex:none;min-width:3em;font-size:var(--text-xs);color:var(--color-muted);font-variant-numeric:tabular-nums;}.ds-time:last-child{text-align:right;}.ds-seek{width:100%;min-width:0;height:24px;margin:0;padding:0;background:transparent;accent-color:var(--color-accent-2);cursor:pointer;-webkit-appearance:none;appearance:none;}.ds-seek::-webkit-slider-runnable-track{height:5px;border-radius:4px;background:linear-gradient(90deg,var(--color-accent-2) var(--seek-progress,0%),var(--color-paper-3) var(--seek-progress,0%));}.ds-seek::-webkit-slider-thumb{width:14px;height:14px;margin-top:-4.5px;border:0;border-radius:50%;background:var(--color-accent-2);-webkit-appearance:none;}.ds-seek::-moz-range-track{height:5px;border-radius:4px;background:var(--color-paper-3);}.ds-seek::-moz-range-progress{height:5px;border-radius:4px;background:var(--color-accent-2);}.ds-seek::-moz-range-thumb{width:14px;height:14px;border:0;border-radius:50%;background:var(--color-accent-2);}.ds-seek:disabled{cursor:not-allowed;}.ds-seek:disabled::-webkit-slider-thumb{background:var(--color-disabled-ink);}.ds-seek:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px;}@media(max-width:580px){.ds-timeline{margin-top:var(--space-2xs);gap:var(--space-xs);}}@media(max-width:580px){.ds-player{flex-wrap:wrap;gap:var(--space-xs) var(--space-sm);padding:var(--space-sm) var(--space-md);min-height:160px;}.ds-player-content{flex-basis:calc(100% - 60px);}.ds-player-meta{font-size:11px;}.ds-player-content p{font-size:var(--text-sm);max-height:48px;}}"
     },
     {
       "name": "Book search",
@@ -383,14 +396,6 @@
       "description": "Search by title or author.",
       "html": "<label class=\"ds-search\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M16 16l5 5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z\"/></svg><input type=\"search\" aria-label=\"搜尋書名或作者\" placeholder=\"搜尋書名或作者\" autocomplete=\"off\"></label>",
       "css": ".ds-search{position:relative;display:inline-flex;align-items:center;color:var(--color-muted);}.ds-search svg{position:absolute;left:12px;pointer-events:none;width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}.ds-search input{width:260px;min-height:48px;border:1px solid var(--color-muted);border-radius:var(--radius-stock);background:var(--color-card);color:var(--color-ink);padding:var(--space-sm) var(--space-md) var(--space-sm) var(--space-xl);font-size:var(--text-sm);caret-color:var(--color-ink);font-family:var(--font-body);transition:background-color var(--dur-micro) ease,color var(--dur-micro) ease;}.ds-search input::placeholder{color:var(--color-muted);opacity:1;}.ds-search input:focus-visible{outline:3px solid var(--color-focus);outline-offset:3px;}@media(max-width:580px){.ds-search,.ds-search input{width:100%;}}@media(prefers-reduced-motion:reduce){.ds-search input{transition:none;}}"
-    },
-    {
-      "name": "Page select",
-      "kind": "input",
-      "refersTo": "select-page",
-      "description": "Use a native select for direct page navigation.",
-      "html": "<label class=\"ds-page\"><select aria-label=\"跳到頁數\"><option>3</option><option>4</option><option>5</option></select><span>/ 11</span></label>",
-      "css": ".ds-page{display:inline-flex;align-items:center;gap:var(--space-xs);white-space:nowrap;color:var(--color-ink);font-size:var(--text-sm);font-family:var(--font-body);}.ds-page select{min-height:44px;min-width:56px;max-width:100%;border:1px solid var(--color-rule);padding:var(--space-xs);background:var(--color-card);color:inherit;border-radius:10px;font-size:var(--text-sm);font-family:var(--font-body);transition:background-color var(--dur-micro) ease,color var(--dur-micro) ease;}.ds-page select:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px;transition:none;}@media(prefers-reduced-motion:reduce){.ds-page select{transition:none;}}"
     },
     {
       "name": "Shelf navigation",
@@ -421,13 +426,21 @@
       "kind": "custom",
       "refersTo": "settings-panel",
       "description": "A paper popover with native voice and speed fields.",
-      "html": "<section class=\"ds-settings\"><label for=\"ds-voice\">朗讀聲音</label><select id=\"ds-voice\"><option>內置粵語（預製 MP3）</option></select><p>預設播放內置粵語 MP3，不需裝置語音。下方可調整速度，也可選擇裝置的粵語聲音。</p><div class=\"ds-rate-heading\"><label for=\"ds-rate\">朗讀速度</label><output for=\"ds-rate\">1.00 倍</output></div><input id=\"ds-rate\" type=\"range\" min=\"0.75\" max=\"1.25\" step=\"0.05\" value=\"1\"><div class=\"ds-rate-labels\"><span>慢一點</span><span>正常</span><span>快一點</span></div></section>",
+      "html": "<section class=\"ds-settings\"><label for=\"ds-voice\">朗讀聲音</label><select id=\"ds-voice\"><option>內置粵語（預製 MP3）</option></select><p>內置曉曼粵語，已放慢 12%。直接播放 MP3，不需裝置語音；下方可再調整速度。</p><div class=\"ds-rate-heading\"><label for=\"ds-rate\">朗讀速度</label><output for=\"ds-rate\">1.00 倍</output></div><input id=\"ds-rate\" type=\"range\" min=\"0.75\" max=\"1.25\" step=\"0.05\" value=\"1\"><div class=\"ds-rate-labels\"><span>慢一點</span><span>正常</span><span>快一點</span></div></section>",
       "css": ".ds-settings{width:300px;max-width:calc(100dvw - 24px);padding:var(--space-lg);background:var(--color-card);color:var(--color-ink);border-radius:18px;box-shadow:3px 10px 32px var(--color-shadow);font-size:var(--text-sm);font-family:var(--font-body);}.ds-settings>label{display:block;margin-bottom:var(--space-sm);font-weight:700;}.ds-settings select{width:100%;min-height:44px;max-width:100%;border:1px solid var(--color-rule);padding:var(--space-xs);background:var(--color-card);color:inherit;border-radius:10px;font-size:var(--text-sm);font-family:var(--font-body);transition:background-color var(--dur-micro) ease,color var(--dur-micro) ease;}.ds-settings p{margin:var(--space-sm) 0 var(--space-lg);color:var(--color-muted);line-height:1.8;font-size:var(--text-xs);}.ds-rate-heading,.ds-rate-labels{display:flex;justify-content:space-between;align-items:center;gap:var(--space-xs);}.ds-rate-heading{margin-bottom:var(--space-sm);}.ds-rate-heading output{font-variant-numeric:tabular-nums;}.ds-settings input{width:100%;margin:0;accent-color:var(--color-accent-2);cursor:pointer;min-height:24px;}.ds-rate-labels{font-size:var(--text-xs);color:var(--color-muted);}.ds-settings select:focus-visible,.ds-settings input:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px;transition:none;}@media(prefers-reduced-motion:reduce){.ds-settings select{transition:none;}}"
+    },
+    {
+      "name": "Player toggle",
+      "kind": "button",
+      "refersTo": "player-toggle",
+      "description": "One circular primary control for play, pause and continue; disabled and busy while loading.",
+      "html": "<button class=\"ds-player-toggle\" aria-label=\"播放朗讀\" aria-busy=\"false\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m8 5 11 7-11 7Z\"/></svg></button>",
+      "css": ".ds-player-toggle{display:grid;place-items:center;flex:none;width:56px;height:56px;border:0;border-radius:50%;padding:var(--space-md);background:var(--color-ink);color:var(--color-paper);cursor:pointer;font-family:var(--font-body);transition:background-color var(--dur-micro) ease,color var(--dur-micro) ease;}.ds-player-toggle svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;width:26px;height:26px;stroke-width:2;}.ds-player-toggle:hover:not(:disabled){background:var(--color-ink-2);}.ds-player-toggle[aria-busy=\"true\"]{cursor:progress;}.ds-player-toggle:disabled{background:var(--color-disabled);color:var(--color-disabled-ink);}.ds-player-toggle:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px;transition:none;}.ds-player-toggle:active:not(:disabled){transform:translateY(1px);}@media(max-width:580px){.ds-player-toggle{width:48px;height:48px;padding:var(--space-sm);}}@media(prefers-reduced-motion:reduce){.ds-player-toggle{transition:none;}.ds-player-toggle:active:not(:disabled){transform:none;}}"
     }
   ],
   "narrative": {
     "northStar": "繪本遊樂園的閱讀入場券",
-    "overview": "A welcoming storybook playground made from warm paper, yellow reading tickets, dark teal ink and coral bookmarks. Original book artwork supplies the illustration and colour; the interface gives it a tactile paper frame and clear reading actions.\n\nThe shelf is spacious and inviting. Opening a book replaces that invitation with a quiet, full-height reader: the original page remains intact, familiar controls stay visible, and the selected printed words carry the reading glow. Playfulness lives in the paper materials, book tilt and bookmark shapes.",
+    "overview": "A welcoming storybook playground made from warm paper, yellow reading tickets, dark teal ink and coral bookmarks. Original book artwork supplies the illustration and colour; the interface gives it a tactile paper frame and clear reading actions.\n\nThe shelf is spacious and inviting. Opening a book replaces that invitation with a quiet, full-height reader: the original page remains intact, familiar page controls and a compact audio player stay visible, and the selected printed words carry the reading glow. Playfulness lives in the paper materials, book tilt and bookmark shapes.",
     "keyCharacteristics": [
       "Warm yellow and cream paper with dark teal text and actions.",
       "Original book pages lead the imagery.",
@@ -447,16 +460,17 @@
       },
       {
         "name": "The Paper Lift Rule",
-        "body": "Use soft translucent green shadows to lift books and floating settings. Toolbar controls and the reading dock use flat paper fills and fine borders.",
+        "body": "Use soft translucent green shadows to lift books and floating settings. Toolbar controls and the audio player use flat paper fills and fine borders.",
         "section": "elevation"
       }
     ],
     "dos": [
       "Do use original book artwork inside paper frames.",
       "Do use the shared paper, ink, mint and coral roles consistently.",
-      "Do preserve native page, zoom, voice and speed controls alongside labelled reading actions.",
+      "Do preserve native page, zoom, voice, speed and seek controls alongside labelled reading actions.",
       "Do keep keyboard focus visible and respect reduced-motion preferences.",
-      "Do adapt the shelf and reader controls to the compact layout."
+      "Do adapt the shelf and reader controls to the compact layout.",
+      "Do pair the supplied transparent logo with the live Chinese wordmark."
     ],
     "donts": [
       "Don't recolour, crop away or rewrite the original reading page.",

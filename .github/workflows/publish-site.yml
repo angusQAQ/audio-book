@@ -1,0 +1,101 @@
+name: Publish and verify permanent website
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: publish-permanent-reader
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install verification tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          pip install -r requirements.txt
+          npm ci
+          npx playwright install --with-deps chromium
+      - uses: actions/cache@v5
+        with:
+          path: .cache/edge-tts
+          key: edge-tts-hiu-maan-12-v1-${{ hashFiles('library.json', 'requirements.txt') }}
+          restore-keys: edge-tts-hiu-maan-12-v1-
+      - name: Ensure the requested bundled voice and preserve the original PDF
+        run: |
+          if ! python scripts/validate_assets.py --require-edge; then
+            python scripts/generate_audio.py --jobs 3
+            python scripts/validate_assets.py --require-edge
+          fi
+      - name: Test the complete reader and Audio Play UI
+        run: npm test
+      - name: Save any newly generated MP3 to GitHub
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add assets/audio library.json library.js
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate verified HiuMaan Cantonese MP3 at -12%"
+            git push origin HEAD:main
+          fi
+      - name: Synchronize every tracked website file to gh-pages
+        run: |
+          git fetch origin gh-pages:refs/remotes/origin/gh-pages
+          if ! git merge-base --is-ancestor origin/gh-pages HEAD; then
+            echo "::error title=Preserve GitHub changes::gh-pages has changes absent from main. Merge them into main before publishing; no history was overwritten."
+            exit 1
+          fi
+          git push origin HEAD:gh-pages
+      - name: Request the permanent GitHub Pages build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" > .cache/pages-build.json 2> .cache/pages-build-error.txt; then
+            cat .cache/pages-build-error.txt
+            echo "::error title=Permanent website build::$(tail -1 .cache/pages-build-error.txt)"
+            exit 1
+          fi
+      - name: Wait for the exact published commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          reader_commit="$(git rev-parse HEAD)"
+          for attempt in $(seq 1 60); do
+            pages_result="$(gh api "repos/$GITHUB_REPOSITORY/pages/builds/latest")"
+            pages_state="$(jq -r '.status' <<< "$pages_result")"
+            pages_commit="$(jq -r '.commit' <<< "$pages_result")"
+            echo "Pages build: $pages_state"
+            if [ "$pages_commit" = "$reader_commit" ] && [ "$pages_state" = built ]; then
+              exit 0
+            fi
+            if [ "$pages_commit" = "$reader_commit" ] && [ "$pages_state" = errored ]; then
+              echo "::error title=Permanent website build::GitHub Pages reported a failed build."
+              exit 1
+            fi
+            sleep 5
+          done
+          echo "::error title=Permanent website build::Timed out waiting for this commit to be published."
+          exit 1
+      - name: Verify the actual permanent website
+        env:
+          READING_SITE_URL: https://angusqaq.github.io/audio-book/
+          REQUIRE_EDGE: '1'
+        run: node scripts/check_live_site.mjs

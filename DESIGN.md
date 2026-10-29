@@ -19,6 +19,7 @@ colors:
   error: '#a23d2e'
   disabled: '#e1dfd2'
   disabled-ink: '#536052'
+  paper-3: '#e8ddc6'
 typography:
   display:
     fontFamily: Noto Sans TC, PingFang TC, sans-serif
@@ -57,6 +58,10 @@ typography:
     fontFamily: Noto Sans TC, PingFang TC, sans-serif
     fontSize: 0.75rem
     fontWeight: 400
+  player-status-compact:
+    fontFamily: Noto Sans TC, PingFang TC, sans-serif
+    fontSize: 11px
+    fontWeight: 400
 rounded:
   card: 28px
   stock: 14px
@@ -64,6 +69,8 @@ rounded:
   control: 12px
   segment: 10px
   panel: 18px
+  circle: 50%
+  timeline: 4px
 spacing:
   3xs: 2px
   2xs: 4px
@@ -138,6 +145,47 @@ components:
     rounded: '{rounded.panel}'
     padding: 24px
     width: 300px
+  button-transport-compact:
+    textColor: '{colors.ink-2}'
+    rounded: '{rounded.control}'
+    padding: 4px 12px
+  player-toggle:
+    backgroundColor: '{colors.ink}'
+    textColor: '{colors.paper}'
+    rounded: '{rounded.circle}'
+    padding: 16px
+    width: 56px
+    height: 56px
+  player-toggle-hover:
+    backgroundColor: '{colors.ink-2}'
+  player-toggle-compact:
+    padding: 12px
+    width: 48px
+    height: 48px
+  audio-seek:
+    width: 100%
+    height: 24px
+  audio-seek-track:
+    backgroundColor: '{colors.paper-3}'
+    rounded: '{rounded.timeline}'
+    height: 5px
+  audio-seek-thumb:
+    backgroundColor: '{colors.accent-2}'
+    rounded: '{rounded.circle}'
+    width: 14px
+    height: 14px
+  brand-mark:
+    width: 64px
+    height: 64px
+  brand-mark-reader:
+    width: 50px
+    height: 50px
+  brand-mark-compact:
+    width: 44px
+    height: 44px
+  brand-mark-reader-compact:
+    width: 36px
+    height: 36px
 ---
 
 # Design System: 點點書房
@@ -148,7 +196,7 @@ components:
 
 A welcoming storybook playground made from warm paper, yellow reading tickets, dark teal ink and coral bookmarks. Original book artwork supplies the illustration and colour; the interface gives it a tactile paper frame and clear reading actions.
 
-The shelf is spacious and inviting. Opening a book replaces that invitation with a quiet, full-height reader: the original page remains intact, familiar controls stay visible, and the selected printed words carry the reading glow. Playfulness lives in the paper materials, book tilt and bookmark shapes.
+The shelf is spacious and inviting. Opening a book replaces that invitation with a quiet, full-height reader: the original page remains intact, familiar page controls and a compact audio player stay visible, and the selected printed words carry the reading glow. Playfulness lives in the paper materials, book tilt and bookmark shapes.
 
 **Key Characteristics:**
 
@@ -170,7 +218,7 @@ The palette combines sunny ticket stock, cream paper, dark teal ink and gentle m
 
 ### Secondary
 
-- **Reading Teal** (`accent-2`): PDF links, the voice wave, speed slider and reading progress.
+- **Reading Teal** (`accent-2`): PDF links, the voice wave, speed slider, seek progress and timeline thumb.
 - **Mint Paper** (`mint`): the bookshelf card and quiet-control hover or open states.
 
 ### Tertiary
@@ -182,7 +230,8 @@ The palette combines sunny ticket stock, cream paper, dark teal ink and gentle m
 
 - **Cream Paper** (`paper`): page canvas and reverse text on deep teal.
 - **Recessed Paper** (`paper-2`): reader viewport, mode-group backing and empty-search surface.
-- **Clean Card Stock** (`card`): controls, page backing, dock and settings panel.
+- **Timeline Paper** (`paper-3`): the unplayed section of the audio seek track.
+- **Clean Card Stock** (`card`): controls, page backing, audio player and settings panel.
 - **Quiet Green** (`muted`): metadata, hints, captions and search outline.
 - **Paper Rule** (`rule`): fine dividers and select or navigation borders.
 - **Focus Teal** (`focus`): keyboard outlines.
@@ -207,7 +256,7 @@ The type is clear and friendly without competing with the original book letterin
 - **Title:** bold book title; uses `title`, reducing to (1.2rem) at the medium breakpoint.
 - **Body:** regular interface copy; uses `body`. The invitation copy has a more open line height (1.85); selected reading text uses (1.7).
 - **Label:** compact controls, metadata and supporting copy; uses `label`. Primary action labels are bold (700).
-- **Caption:** book counts, dock status and quiet footer text; uses `caption`. Small printed-cover labels remain local cover details.
+- **Caption:** book counts, audio status, elapsed/total time and quiet footer text; uses `caption`. Player times use tabular figures. The phone audio status uses `player-status-compact`; this local size does not replace the general caption role. Small printed-cover labels remain local cover details.
 
 ### Named Rules
 
@@ -219,9 +268,9 @@ The shelf sits in a centred container (1200px maximum, including gutters). Deskt
 
 The desktop reading invitation uses two equal columns, with copy and action beside the original book spread. Its inner padding and gap use the large spacing steps. The bookshelf uses a horizontal row: cover, title and metadata, then reading action. At (850px) the actions move under the details; at (580px) the invitation stacks, its action and search fill the width, and the shelf keeps a compact cover-and-details layout.
 
-The reader fills the viewport (100dvh) using a header, wrapping tool row, scrollable page viewport and bottom reading dock. JavaScript sizes the original page from its PDF aspect ratio and available viewport, rather than applying the shelf's container width. Fit, page-width and explicit zoom values use the same intact page. Extra side arrows disappear on phones and when the page is wider than the viewport.
+The reader fills the viewport (100dvh) using a header, wrapping tool row, scrollable page viewport and bottom audio player. JavaScript sizes the original page from its PDF aspect ratio and available viewport, rather than applying the shelf's container width. Fit, page-width and explicit zoom values use the same intact page. Extra side arrows disappear on phones and when the page is wider than the viewport.
 
-At (580px), reading modes and voice settings share the first tool row; page and zoom controls use a centred full-width second row. The dock tightens, the book-name header and redundant selection-kind label are hidden, and transport controls remain labelled. The settings panel is capped to the available viewport width.
+At (580px), reading modes and voice settings share the first tool row; page and zoom controls use a centred full-width second row. The player wraps: its circular play control stays beside selected text and timeline, while replay and stop move to a full-width row aligned to the right. The book-name header and redundant selection-kind label are hidden. The player has a minimum height (124px desktop, 160px phone), with desktop spacing (24px) and compact row/column gaps (8px / 12px). Phone player padding is (12px 16px). The settings panel is capped to the available viewport width.
 
 ## Elevation & Depth
 
@@ -239,11 +288,11 @@ The shared shadow colour is defined in the implementation; full shadow values li
 
 ### Named Rules
 
-**The Paper Lift Rule.** Use soft translucent green shadows to lift books and floating settings. Toolbar controls and the reading dock use flat paper fills and fine borders.
+**The Paper Lift Rule.** Use soft translucent green shadows to lift books and floating settings. Toolbar controls and the audio player use flat paper fills and fine borders.
 
 ## Shapes
 
-Shelf cards use the broad `card` curve. Actions and search use `stock`; page arrows and transport buttons use `control`; select fields and mode options use `segment`. Shelf navigation is a pill. The settings popover uses `panel`.
+Shelf cards use the broad `card` curve. Actions and search use `stock`; page arrows and secondary transport buttons use `control`; select fields and mode options use `segment`. The primary audio toggle and timeline thumb use `circle`; the thin seek track uses `timeline`. Shelf navigation is a pill. The settings popover uses `panel`.
 
 The reading invitation is a paper ticket with a large outer curve (32px desktop, 24px phone) and a fine dashed inset edge. Book silhouettes use asymmetric spine-and-page corners, a slight rotation and a coral tab with a rounded lower end. Those material details belong to the shelf; the original reading page remains rectangular.
 
@@ -253,7 +302,7 @@ The reading invitation is a paper ticket with a large outer curve (32px desktop,
 
 Primary actions are deep teal paper buttons with cream text, bold labels, optional inline SVG and a soft lift. They use the primary component tokens, a minimum height (54px) and a lighter teal hover. The phone invitation action fills its container.
 
-Quiet actions use clean card stock, a fine border and mint hover. Icon buttons use a clear background, square hit area (44px) and mint hover. Transport buttons stack a line icon above a text label, with a minimum height (64px); their width reduces from (48px) to (40px) on phones. Disabled buttons use the disabled colour pair and lose their shadow.
+Quiet actions use clean card stock, a fine border and mint hover. Icon buttons use a clear background, square hit area (44px) and mint hover. Secondary replay and stop controls stack a line icon above a text label on desktop, with width (48px) and minimum height (64px). On phones they become horizontal icon-and-label buttons, with automatic width, minimum height (36px), padding (4px 12px) and icons (16px). Disabled buttons use the disabled colour pair and lose their shadow.
 
 Buttons move down slightly (1px) on activation. Global focus is a teal outline (3px) offset by (4px). Normal colour transitions last (120ms). Reduced-motion mode removes animation, transitions and activation transforms.
 
@@ -275,11 +324,19 @@ Page, zoom and voice fields remain native selects with a fine paper-rule border,
 
 ### Navigation
 
-The brand uses a deep-teal book mark on cream. The shelf navigation is a clean-stock pill with an inline SVG, a fine rule, label text and mint hover. It remains in the header on desktop and phone. The reader's page controls combine labelled selects with arrow buttons; familiar keyboard controls supplement the visible controls.
+The home brand uses the transparent generated asset `assets/brand/diandian-logo.png`: a dark-teal open book, two yellow/coral reader dots and a play symbol. The crisp Chinese wordmark remains HTML text beside it. The mark has a clear backing and no enclosing badge. Its frame uses the brand component sizes; the image is displayed slightly larger within that clipped frame (80px shelf, 62px reader; 54px and 44px on phones). The same asset supplies the favicon. Keep the logo image and live wordmark together as the accessible home button. The shelf navigation is a clean-stock pill with an inline SVG, a fine rule, label text and mint hover. It remains in the header on desktop and phone. The reader's page controls combine labelled selects with arrow buttons; familiar keyboard controls supplement the visible controls.
 
 ### Original-page reader
 
-The original page image is the content surface. Transparent targets follow its source coordinates; a separate non-interactive layer renders the printed-word glow. Playing, paused and error status are communicated in the dock. The progress line uses reading teal; the voice-wave animation runs only while playing. Page changes use a short fade and horizontal arrival (220ms), removed for reduced motion.
+The original page image is the content surface. Transparent targets follow its source coordinates; a separate non-interactive layer renders the printed-word glow. Page changes use a short fade and horizontal arrival (220ms), removed for reduced motion.
+
+### Audio player
+
+One circular deep-teal play/pause control leads the clean-stock player. It uses the `player-toggle` tokens, a cream line icon (26px, stroke width 2), and a lighter teal hover. It steps to `player-toggle-compact` on phones. The selected text and polite live status sit in the flexible middle column; replay and stop are secondary controls. The voice-wave animation runs only while playing.
+
+The native seek range is a real media control, flanked by visible elapsed and total time in `m:ss` format. It uses a thin rounded track, reading-teal progress and circular thumb. The timeline has a desktop gap (12px) and top margin (8px), tightening to (8px) and (4px) on phones. Time labels reserve a stable minimum width (3em). The range has values (0–100) in steps (0.1) and updates the audio position while dragging or using the keyboard.
+
+Before duration metadata is available, and for device speech without a media duration, seeking is disabled and both time labels show `0:00`. The accessible range value describes elapsed and total time. The main control starts the first available reading unit when no text is selected, changes to pause while playing and to continue while paused, and exposes a disabled busy state while loading. Replay restarts the selected unit; stop resets progress while retaining that selection so play can start it again. Completed or failed playback returns the main control to play, with status text explaining the state. These are functional playback states, not decorative progress.
 
 ## Do's and Don'ts
 
@@ -287,9 +344,10 @@ The original page image is the content surface. Transparent targets follow its s
 
 - **Do** use original book artwork inside paper frames.
 - **Do** use the shared paper, ink, mint and coral roles consistently.
-- **Do** preserve native page, zoom, voice and speed controls alongside labelled reading actions.
+- **Do** preserve native page, zoom, voice, speed and seek controls alongside labelled reading actions.
 - **Do** keep keyboard focus visible and respect reduced-motion preferences.
 - **Do** adapt the shelf and reader controls to the compact layout.
+- **Do** pair the supplied transparent logo with the live Chinese wordmark.
 
 ### Don't:
 

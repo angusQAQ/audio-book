@@ -34,11 +34,17 @@ npm test
 
 指定 `edge-tts==7.3.1`、`zh-HK-HiuMaanNeural`、`rate=-12%`。文字直接來自 `library.json` 的讀音單位，包含原書的英語句子。`.cache/edge-tts/` 可續傳，每個快取都有內容雜湊與時長驗證；整批成功才更新 `assets/audio/` 與資料索引。舊音檔不會在下載失敗時被取代。網站直接播放已提交的 MP3，預設不使用裝置語音，也不會在點讀時連線語音服務。速度滑桿是相對於預製音檔的播放速度。
 
-GitHub Actions 的 **Prepare and verify Cantonese MP3** 在 `main` 或 `storybook-playground` 的相關資料／生成流程變更後執行，也可手動啟動。它生成 MP3、嚴格驗證指定聲音並跑瀏覽器測試，全部通過才將音檔回存同一分支。執行失敗時不部署，不宣稱已生成指定聲音。
+GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動啟動，先生成及驗證音檔。它生成 MP3、嚴格驗證指定聲音並跑瀏覽器測試，全部通過才將音檔回存同一分支。執行失敗時不部署，不宣稱已生成指定聲音。
 
 ## GitHub 與網站同步
 
-所有新增、修改、刪除的正式檔案均以 Git 提交保存於 `angusQAQ/audio-book`。發布前必須完成 `validate_assets.py --require-edge` 與 `npm test`，將生成的 MP3 一併提交，然後同步 `main` 與網站既有的 `gh-pages` 分支。保留兩者歷史，禁止強制推送。更新後由 **Verify published reading website** 工作流程等待線上資料與該提交完全一致，再以手機視窗核對網站程式與 Logo 雜湊、原 PDF、三種 MP3 點讀、播放器跳播／時間、字形發光和翻頁。它驗證實際 GitHub Pages 網站，不以推送成功代替部署成功。
+所有新增、修改、刪除的正式檔案均以 Git 提交保存於 `angusQAQ/audio-book`，包括 PDF、頁圖、MP3、Logo、字型、程式、測試和設定。
+
+每次推送 `main`，**Publish and verify permanent website** 都會自動驗證或生成指定 MP3、核對原 PDF、執行完整瀏覽器測試，再將所有已追蹤檔案同步至永久網站的 `gh-pages` 分支並要求 GitHub Pages 建置。必要的生成音檔先提交回 `main`；全程保留歷史，禁止強制推送。若 `gh-pages` 含有 `main` 未包含的修改，流程會停止並提示先合併，避免覆寫工作。
+
+流程等待 GitHub Pages 回報該提交已建置，再執行實際網站驗證：線上 HTML、JS、CSS、資料和 Logo 必須與提交的雜湊相同，原 PDF、三種 MP3 點讀、播放器跳播／時間、字形發光和翻頁亦必須正常。發布完成與否以此流程實際結果為準。後續一般修改只需提交並推送 `main`，毋須另外手動更新永久網站。
+
+**Verify published reading website** 可另行手動啟動，或在直接推送 `gh-pages` 時作獨立線上檢查。
 
 ## 檔案
 

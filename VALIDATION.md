@@ -13,4 +13,4 @@
 
 ## 正式網站
 
-已建立 **Verify published reading website** 工作流程。它等待線上 HTML、JS、CSS、圖書資料與 Logo 的 SHA-256 與已提交版本完全一致，再以實際網站的手機視窗核對原 PDF 雜湊、三種 MP3 點讀、字形發光、播放器拖曳／時間／重播與翻頁。本機對完整相同驗證程式的執行已通過；正式發布結果以對應 GitHub Actions 實際執行結果為準。
+已建立每次 `main` 推送自動執行的 **Publish and verify permanent website** 工作流程：驗證或生成 MP3、跑完整測試、將所有追蹤檔案同步 `gh-pages`、要求並等待該提交的 Pages 建置，最後驗證實際網站。另保留可獨立執行的 **Verify published reading website**。它等待線上 HTML、JS、CSS、圖書資料與 Logo 的 SHA-256 與已提交版本完全一致，再以實際網站的手機視窗核對原 PDF 雜湊、三種 MP3 點讀、字形發光、播放器拖曳／時間／重播與翻頁。本機對完整相同驗證程式的執行已通過；正式發布結果以對應 GitHub Actions 實際執行結果為準。設計文件更新已在本輪直接核對 YAML、token 引用與 sidecar v2 結構。

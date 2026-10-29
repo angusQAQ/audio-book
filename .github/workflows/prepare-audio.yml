@@ -1,13 +1,6 @@
 name: Prepare and verify Cantonese MP3
 on:
   workflow_dispatch:
-  push:
-    branches: [main, storybook-playground]
-    paths:
-      - 'library.json'
-      - 'requirements.txt'
-      - 'scripts/generate_audio.py'
-      - '.github/workflows/prepare-audio.yml'
 permissions:
   contents: write
 concurrency:
