@@ -354,7 +354,23 @@
         "name": "compact",
         "value": "580px"
       }
-    ]
+    ],
+    "appleDesign": {
+      "source": "dickwu/apple-design-skill@ff4ebddf0488598723a82bfdce1afb04de0b1c44",
+      "toolbarHeight": "58px at default text size",
+      "controlHit": "44px",
+      "textScaling": "200% tested",
+      "appearances": {
+        "dark": {
+          "paper": "#111f1d",
+          "card": "#20322d",
+          "ink": "#f4f1e7",
+          "muted": "#b4c6bc",
+          "focus": "#a5e0cb"
+        }
+      },
+      "readingGuidance": "Real WordBoundary timestamps drive glyph glow at the current media position."
+    }
   },
   "components": [
     {

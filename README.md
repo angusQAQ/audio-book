@@ -60,3 +60,7 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 - `PRODUCT.md`、`DESIGN.md`、`.impeccable/`、`.hallmark/`：設計依據與驗證紀錄。
 
 設計依據：[nutlope/hallmark](https://github.com/nutlope/hallmark)（8f6969f）與 [pbakaus/impeccable](https://github.com/pbakaus/impeccable)（5e745ac）。童書原文與插圖沿用使用者提供的 PDF，沒有新增授權宣稱。
+
+## 設計與存檔點
+
+專案已安裝 [Apple Design skill](https://github.com/dickwu/apple-design-skill)，固定來源與技能檔案位於 `.agents/skills/apple-design/`；設計檢視見 `docs/apple-design-review.md`。`AGENTS.md` 要求每個可審閱更新階段建立 Git commit 並推送 GitHub，完成驗證後自動同步永久網站。

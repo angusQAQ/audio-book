@@ -41,3 +41,24 @@
   --shadow-card: 3px 9px 22px -10px var(--color-shadow);
   --radius-card: 28px; --radius-stock: 14px;
 }
+:root {
+  --color-hero-ink: #183f3b;
+  --color-reading-glow: #efb837;
+  --color-logo-ground: #fff9ec;
+  --control-hit: 44px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-paper: #111f1d; --color-paper-2: #172925; --color-paper-3: #3b514a;
+    --color-card: #20322d; --color-ink: #f4f1e7; --color-ink-2: #d3dfd6;
+    --color-muted: #b4c6bc; --color-rule: #7a9083;
+    --color-accent-2: #93d2bc; --color-focus: #a5e0cb;
+    --color-mint: #284638; --color-coral-paper: #63483c;
+    --color-error: #ffb7a4; --color-disabled: #33453e; --color-disabled-ink: #b3c6b8;
+    --color-shadow: #020d0980; --color-reading-glow: #ffd15c;
+  }
+}
+@media (prefers-contrast: more) {
+  :root { --color-muted: var(--color-ink); --color-rule: var(--color-ink); }
+}

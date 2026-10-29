@@ -2,7 +2,7 @@
 <html lang="zh-HK">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#fff9ec">
   <meta name="description" content="點點書房：打開原書，點字詞和句子聽粵語。">
   <title>點點書房｜粵語繪本遊樂園</title>
@@ -36,10 +36,11 @@
   </main>
   <main id="reader-view" hidden>
     <h1 id="reader-title" class="sr-only">我們的好老師</h1>
-    <div class="reader-tools">
-      <div class="mode-group" role="group" aria-label="點讀方式"><button data-mode="sentence" aria-pressed="true">句子</button><button data-mode="word" aria-pressed="false">詞語</button><button data-mode="character" aria-pressed="false">單字</button></div>
-      <div class="page-tools"><button id="previous-page" class="icon-button" aria-label="上一頁"><span data-icon="left"></span></button><label class="page-label"><span class="sr-only">跳到頁數</span><select id="page-select" aria-label="跳到頁數"></select><span id="page-total"></span></label><button id="next-page" class="icon-button" aria-label="下一頁"><span data-icon="right"></span></button><label><span class="sr-only">書頁縮放</span><select id="zoom" aria-label="書頁縮放"><option value="fit">整頁</option><option value="width">頁寬</option><option value="1">100%</option><option value="1.5">150%</option><option value="2">200%</option></select></label></div>
-      <details id="voice-settings" class="voice-settings"><summary><span data-icon="sliders"></span>聲音與語速</summary><div class="settings-panel"><label for="voice-select">朗讀聲音</label><select id="voice-select" aria-label="朗讀聲音"><option value="auto">自動選擇粵語</option><option value="offline">內建粵語讀音</option></select><p id="voice-help">正在尋找這個裝置的粵語聲音。</p><div class="rate-heading"><label for="playback-rate">朗讀速度</label><output id="rate-label" for="playback-rate">1.00 倍</output></div><input id="playback-rate" type="range" min="0.75" max="1.25" step="0.05" value="1" aria-label="朗讀速度"><div class="rate-labels"><span>慢一點</span><span>正常</span><span>快一點</span></div></div></details>
+    <div class="reader-tools" aria-label="閱讀工具列">
+      <button id="reader-back" class="icon-button" aria-label="我的書架" title="返回書架"><span data-icon="left"></span></button>
+      <details id="mode-settings" class="mode-settings"><summary aria-label="點讀方式：句子" title="點讀方式"><span data-icon="reading"></span><span id="mode-badge" aria-hidden="true">句</span></summary><div class="settings-panel mode-panel"><div class="mode-group" role="group" aria-label="點讀方式"><button data-mode="sentence" aria-pressed="true">句子</button><button data-mode="word" aria-pressed="false">詞語</button><button data-mode="character" aria-pressed="false">單字</button></div></div></details>
+      <div class="page-tools"><button id="previous-page" class="icon-button" aria-label="上一頁" title="上一頁"><span data-icon="left"></span></button><label class="page-label"><span class="sr-only">跳到頁數</span><select id="page-select" aria-label="跳到頁數" title="跳到頁數"></select><span id="page-total" class="sr-only" aria-hidden="true"></span></label><button id="next-page" class="icon-button" aria-label="下一頁" title="下一頁"><span data-icon="right"></span></button></div>
+      <details id="voice-settings" class="voice-settings"><summary aria-label="閱讀設定" title="縮放、聲音與語速"><span data-icon="sliders"></span></summary><div class="settings-panel"><label for="zoom">書頁縮放</label><select id="zoom" aria-label="書頁縮放"><option value="fit">整頁</option><option value="width">頁寬</option><option value="1">100%</option><option value="1.5">150%</option><option value="2">200%</option></select><label for="voice-select">朗讀聲音</label><select id="voice-select" aria-label="朗讀聲音"><option value="offline">內置粵語（預製 MP3）</option></select><p id="voice-help">內置粵語，直接播放。</p><div class="rate-heading"><label for="playback-rate">朗讀速度</label><output id="rate-label" for="playback-rate">1.00 倍</output></div><input id="playback-rate" type="range" min="0.75" max="1.25" step="0.05" value="1" aria-label="朗讀速度"><div class="rate-labels"><span>慢一點</span><span>正常</span><span>快一點</span></div></div></details>
     </div>
     <div id="page-viewport" aria-label="原書閱讀區">
       <div id="page-stage"><div id="page-canvas"><img id="page-image" src="assets/pages/c5428019cc021c6b1d41.jpg" width="1654" height="2340" alt="我們的好老師原書" draggable="false"><div id="glow-layer" aria-hidden="true"></div><div id="hotspots" aria-label="原書字句點讀區"></div></div></div>

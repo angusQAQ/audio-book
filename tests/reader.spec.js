@@ -10,6 +10,14 @@ async function openReader(page, number = 3) {
   await expect.poll(() => page.evaluate(() => window.readerDiagnostics?.().imageReady)).toBe(true);
 }
 
+async function chooseMode(page,mode) {
+  if (!(await page.locator('#mode-settings').evaluate(item=>item.open))) await page.locator('#mode-settings summary').click();
+  await page.locator(`[data-mode="${mode}"]`).click();
+}
+async function openSettings(page) {
+  if (!(await page.locator('#voice-settings').evaluate(item=>item.open))) await page.locator('#voice-settings summary').click();
+}
+
 async function playFirst(page) {
   const button = page.locator('.hotspot').first();
   await button.click();
@@ -47,7 +55,7 @@ test('every original page and all three modes render and play bundled MP3', asyn
     await page.locator('#page-select').selectOption(String(index + 1));
     await expect.poll(() => page.evaluate(() => window.readerDiagnostics().imageReady)).toBe(true);
     for (const mode of ['sentence', 'word', 'character']) {
-      await page.locator(`[data-mode="${mode}"]`).click();
+      await chooseMode(page,mode);
       expect(await page.locator('.hotspot').count()).toBeGreaterThan(0);
       await playFirst(page);
       await page.locator('#stop').click();
@@ -77,10 +85,12 @@ test('pause, resume, replay, rate, keyboard navigation and zoom', async ({ page 
   await expect.poll(() => page.evaluate(() => window.readerDiagnostics().state)).toBe('playing');
   await page.keyboard.press('Escape');
   expect(await page.evaluate(() => window.readerDiagnostics().state)).toBe('idle');
+  await openSettings(page);
   await page.locator('#zoom').selectOption('width');
   const wide = await page.locator('#page-canvas').evaluate(x => x.clientWidth);
   await page.locator('#zoom').selectOption('fit');
   expect(await page.locator('#page-canvas').evaluate(x => x.clientWidth)).toBeLessThan(wide);
+  await page.keyboard.press('Escape');
   await page.locator('#reader-view').focus();
   await page.keyboard.press('ArrowRight');
   expect(await page.evaluate(() => window.readerDiagnostics().page)).toBe(4);
@@ -112,7 +122,7 @@ test('desktop, tablet, phone, keyboard focus and reduced motion accessibility', 
     await openReader(page);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     await page.locator('#voice-settings summary').click();
-    const bounds = await page.locator('.settings-panel').boundingBox();
+    const bounds = await page.locator('#voice-settings .settings-panel').boundingBox();
     expect(bounds.x).toBeGreaterThanOrEqual(0);
     expect(bounds.x + bounds.width).toBeLessThanOrEqual(width + 1);
     if (width === 1440 || width === 390) {
@@ -161,4 +171,104 @@ test('audio player starts, seeks, shows time and restarts after stop', async ({ 
   await expect(page.locator('#elapsed-time')).toHaveText('0:00');
   await page.locator('#pause').click();
   await expect.poll(() => page.evaluate(() => window.readerDiagnostics().state)).toBe('playing');
+});
+
+
+test('compact icon toolbar prioritizes the book and preserves keyboard access', async ({ page }) => {
+  for (const width of [320, 390, 790, 1111]) {
+    await page.setViewportSize({ width, height: 730 });
+    await openReader(page, 1);
+    await expect(page.locator('.site-header')).toBeHidden();
+    expect(await page.locator('.reader-tools').evaluate(item=>item.getBoundingClientRect().height)).toBeLessThanOrEqual(60);
+    expect(await page.locator('#page-viewport').evaluate(item=>item.clientHeight)).toBeGreaterThan(370);
+    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+    await expect(page.locator('#reader-back')).toBeVisible();
+  }
+  await page.locator('#mode-settings summary').click();
+  await page.locator('[data-mode="sentence"]').focus();
+  await page.keyboard.press('ArrowRight');
+  expect(await page.evaluate(()=>window.readerDiagnostics().mode)).toBe('word');
+  expect(await page.evaluate(()=>window.readerDiagnostics().page)).toBe(1);
+  await page.keyboard.press('Escape');
+  await expect(page.locator('#mode-settings summary')).toBeFocused();
+  await chooseMode(page,'sentence');
+  await page.locator('.hotspot').nth(4).click();
+  await expect.poll(()=>page.evaluate(()=>window.readerDiagnostics().state)).toBe('playing');
+  await openSettings(page);
+  await page.keyboard.press('Escape');
+  await expect(page.locator('#voice-settings summary')).toBeFocused();
+  expect(await page.evaluate(()=>window.readerDiagnostics().state)).toBe('playing');
+});
+
+test('dark appearance, increased contrast and enlarged interface text remain usable', async ({ page }) => {
+  mkdirSync('.impeccable/review', { recursive:true });
+  await page.setViewportSize({width:390,height:844});
+  await page.emulateMedia({colorScheme:'dark',contrast:'more',reducedMotion:'reduce'});
+  await page.goto('/');
+  await page.evaluate(()=>document.fonts.ready);
+  expect((await new AxeBuilder({page}).analyze()).violations).toEqual([]);
+  await page.screenshot({path:'.impeccable/review/apple-dark-library.png',fullPage:true});
+  await openReader(page,1);
+  expect((await new AxeBuilder({page}).analyze()).violations).toEqual([]);
+  expect(await page.locator('#page-image').evaluate(item=>getComputedStyle(item).filter)).toBe('none');
+  await page.screenshot({path:'.impeccable/review/apple-dark-reader.png',fullPage:true});
+  for (const selector of ['#reader-back','#mode-settings summary','#voice-settings summary','#audio-seek','#replay','#stop']) {
+    expect(await page.locator(selector).evaluate(item=>item.getBoundingClientRect().height)).toBeGreaterThanOrEqual(44);
+  }
+  await page.emulateMedia({colorScheme:'light',contrast:'no-preference'});
+  await page.evaluate(()=>document.documentElement.style.fontSize='32px');
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await openSettings(page);
+  await expect(page.locator('#zoom')).toBeVisible();
+  const bounds=await page.locator('#voice-settings .settings-panel').boundingBox();
+  expect(bounds.x).toBeGreaterThanOrEqual(0);
+  expect(bounds.x+bounds.width).toBeLessThanOrEqual(391);
+  await page.keyboard.press('Escape');
+  await page.locator('#reader-back').click();
+  await expect(page.locator('#library-view')).toBeVisible();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});
+
+
+test('real word timestamps guide the glow through playback, seeking and page splits', async ({ page }) => {
+  const block = book.pages[0].blocks[4], asset = book.audio[block.audio];
+  expect(asset.timingSchema).toBe(1);
+  expect(asset.boundaries.length).toBeGreaterThan(3);
+  await page.setViewportSize({width:1111,height:730});
+  await openReader(page,1);
+  await page.locator('.hotspot').nth(4).click();
+  await expect.poll(()=>page.evaluate(()=>window.readerDiagnostics().state)).toBe('playing');
+  await page.locator('#pause').click();
+  const samples=[asset.boundaries[0],asset.boundaries[Math.floor(asset.boundaries.length/2)]];
+  for (const boundary of samples) {
+    await page.locator('#audio-seek').fill(String((boundary.time+Math.min(.03,boundary.duration/3))/asset.duration*100));
+    await expect.poll(()=>page.evaluate(()=>window.readerDiagnostics().highlightedText)).toBe(block.text.slice(boundary.start,boundary.end));
+  }
+  await page.screenshot({path:'.impeccable/review/apple-word-glow.png'});
+  await openSettings(page);
+  await page.locator('#playback-rate').fill('0.85');
+  await page.locator('#playback-rate').dispatchEvent('change');
+  await page.keyboard.press('Escape');
+  const prior=await page.evaluate(()=>window.readerDiagnostics().highlightedText);
+  await page.locator('#pause').click();
+  await expect.poll(()=>page.evaluate(()=>window.readerDiagnostics().highlightedText),{timeout:5000}).not.toBe(prior);
+  await page.locator('#stop').click();
+  expect(await page.evaluate(()=>window.readerDiagnostics().highlightedText)).toBeNull();
+  await chooseMode(page,'character');
+  await page.locator('.hotspot').first().click();
+  await expect.poll(()=>page.evaluate(()=>window.readerDiagnostics().state)).toBe('ended');
+  await expect(page.locator('.ink-glow')).toHaveCount(0);
+  await page.waitForTimeout(200);
+  await expect(page.locator('.ink-glow')).toHaveCount(0);
+  await page.locator('#page-select').selectOption('3');
+  await chooseMode(page,'sentence');
+  const continued=book.pages[2].blocks.find(item=>item.id==='p3-b6');
+  const continuation=book.audio[continued.audio];
+  await page.locator('.hotspot[data-block="p3-b6"]').first().click();
+  await expect.poll(()=>page.evaluate(()=>window.readerDiagnostics().state)).toBe('playing');
+  await page.locator('#pause').click();
+  const last=continuation.boundaries.at(-1);
+  await page.locator('#audio-seek').fill(String(Math.min(continuation.duration-.05,last.time+.02)/continuation.duration*100));
+  const text=await page.evaluate(()=>window.readerDiagnostics().highlightedText);
+  if (text) expect(continued.text.includes(text)).toBe(true);
 });

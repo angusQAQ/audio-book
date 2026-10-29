@@ -268,9 +268,9 @@ The shelf sits in a centred container (1200px maximum, including gutters). Deskt
 
 The desktop reading invitation uses two equal columns, with copy and action beside the original book spread. Its inner padding and gap use the large spacing steps. The bookshelf uses a horizontal row: cover, title and metadata, then reading action. At (850px) the actions move under the details; at (580px) the invitation stacks, its action and search fill the width, and the shelf keeps a compact cover-and-details layout.
 
-The reader fills the viewport (100dvh) using a header, wrapping tool row, scrollable page viewport and bottom audio player. JavaScript sizes the original page from its PDF aspect ratio and available viewport, rather than applying the shelf's container width. Fit, page-width and explicit zoom values use the same intact page. Extra side arrows disappear on phones and when the page is wider than the viewport.
+The reader fills the viewport (100dvh) using one compact icon toolbar, a scrollable page viewport and bottom audio player. The library brand header is hidden while reading. The toolbar normally measures 58px, with 44px hit targets; reading modes and zoom/voice settings use accessible disclosures. JavaScript sizes the original page from its PDF aspect ratio and available viewport, rather than applying the shelf's container width. Fit, page-width and explicit zoom values use the same intact page. Extra side arrows disappear on phones and when the page is wider than the viewport.
 
-At (580px), reading modes and voice settings share the first tool row; page and zoom controls use a centred full-width second row. The player wraps: its circular play control stays beside selected text and timeline, while replay and stop move to a full-width row aligned to the right. The book-name header and redundant selection-kind label are hidden. The player has a minimum height (124px desktop, 160px phone), with desktop spacing (24px) and compact row/column gaps (8px / 12px). Phone player padding is (12px 16px). The settings panel is capped to the available viewport width.
+The compact reader toolbar shares the same controls at all widths: a return action, reading-mode disclosure, native page picker with previous/next, and one settings disclosure. At large text sizes it may wrap. Settings respect safe-area insets and close with Escape while restoring focus. The phone player wraps its secondary controls; all transports and seek targets are at least 44px high.
 
 ## Elevation & Depth
 
@@ -355,3 +355,7 @@ Before duration metadata is available, and for device speech without a media dur
 - **Don't** place decorative paper effects over printed text or its reading targets.
 - **Don't** turn the quiet reader toolbar into a second illustrated hero.
 - **Don't** introduce a new display font or extra accent palette without an approved system change.
+
+
+<!-- Apple Design refinement: semantic appearances and compact reading controls -->
+The interface follows the system light/dark appearance and increased-contrast preference. The dark palette uses a deep green ground, light warm text and pale teal focus accents; the original book scans are never inverted or filtered. Light/dark primary text contrasts are 11.04:1 and 15.02:1; secondary text on controls is 5.95:1 and 7.55:1. Safe-area insets protect the compact toolbar and player. Word guidance follows saved Edge WordBoundary media times, with current-word glyph glow synchronized to the audio position, seeking and playback rate.

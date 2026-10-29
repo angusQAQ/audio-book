@@ -3,6 +3,7 @@
   const $ = selector => document.querySelector(selector);
   const $$ = selector => Array.from(document.querySelectorAll(selector));
   const paths = {
+    reading:'M4 5h16M4 12h16M4 19h10',
     left:'m14 5-7 7 7 7',right:'m10 5 7 7-7 7',pause:'M8 5v14M16 5v14',play:'m8 5 11 7-11 7Z',
     stop:'M6 6h12v12H6z',replay:'M19 7a8 8 0 1 0 1 8M19 3v5h-5',
     book:'M12 5C8 2 4 3 2 4v15c4-1 7 0 10 2 3-2 6-3 10-2V4c-2-1-6-2-10 1Zm0 0v16',
@@ -38,6 +39,7 @@
   let voicePreference = storage.get('library-reading-voice') || 'offline';
   let voices = [], current = null, engine = null, nativeUtterance = null, nativeTimer = null;
   let token = 0, audioToken = 0, playState = 'idle', imageReady = false, nativeBoundary = null;
+  let glowFrame = 0, glowKey = '';
   const player = new Audio();
   player.preload = 'none';
   player.preservesPitch = true;
@@ -70,6 +72,8 @@
   function setState(state) {
     playState = state;
     document.body.dataset.playState = state;
+    cancelAnimationFrame(glowFrame);
+    if (state === 'playing' && engine === 'audio') glowFrame = requestAnimationFrame(syncAudioGlow);
     const active = ['playing','paused','loading'].includes(state);
     const label = state === 'playing' ? '暫停' : state === 'paused' ? '繼續' : state === 'loading' ? '準備中' : '播放';
     $('#pause').disabled = state === 'loading';
@@ -82,6 +86,8 @@
   }
   function clearGlow() {
     $('#glow-layer').replaceChildren();
+    $('#glow-layer').dataset.text = '';
+    glowKey = '';
     $$('.hotspot[aria-pressed="true"]').forEach(button => button.setAttribute('aria-pressed','false'));
   }
   function halt(clear) {
@@ -115,12 +121,64 @@
     }
     return fragment;
   }
+  function normalizedLetters(text) {
+    const letters = [];
+    for (let index = 0; index < text.length; index++) {
+      for (const letter of text[index].normalize('NFKC').toLowerCase()) {
+        if (/[\p{L}\p{N}]/u.test(letter)) letters.push({letter,index});
+      }
+    }
+    return letters;
+  }
+  function timedRanges(item) {
+    const asset = book.audio[item.audio];
+    if (!asset || !asset.boundaries) return [];
+    const spoken = normalizedLetters(asset.text), visible = normalizedLetters(item.block.text.slice(item.unit.start,item.unit.end));
+    const table = Array.from({length:spoken.length + 1},()=>new Uint16Array(visible.length + 1));
+    for (let i=spoken.length-1;i>=0;i--) for (let j=visible.length-1;j>=0;j--) {
+      table[i][j] = spoken[i].letter === visible[j].letter ? table[i+1][j+1]+1 : Math.max(table[i+1][j],table[i][j+1]);
+    }
+    const positions = new Map();
+    for (let i=0,j=0;i<spoken.length && j<visible.length;) {
+      if (spoken[i].letter === visible[j].letter) { positions.set(spoken[i].index,visible[j].index + item.unit.start); i++; j++; }
+      else if (table[i+1][j] >= table[i][j+1]) i++;
+      else j++;
+    }
+    return asset.boundaries.map(boundary=>{
+      const mapped = [];
+      for (let i=boundary.start;i<boundary.end;i++) if (positions.has(i)) mapped.push(positions.get(i));
+      return {time:boundary.time,duration:boundary.duration,start:mapped.length?Math.min(...mapped):null,end:mapped.length?Math.max(...mapped)+1:null};
+    });
+  }
+  function currentGlowUnit() {
+    if (nativeBoundary) return nativeBoundary;
+    if (engine !== 'audio' || !current.timings.length) return current.unit;
+    const timings = current.timings;
+    let boundary = timings[0];
+    for (const candidate of timings) {
+      if (candidate.time > player.currentTime + 0.015) break;
+      boundary = candidate;
+    }
+    return boundary.start === null ? null : boundary;
+  }
   function activateGlow() {
-    if (!current) return;
-    $('#glow-layer').replaceChildren(glowImages(current.block,current.unit));
-    if (nativeBoundary) $('#glow-layer').append(glowImages(current.block,nativeBoundary,'boundary'));
+    if (!current || !['playing','paused'].includes(playState)) return;
+    const unit = currentGlowUnit();
+    const key = current.block.id + ':' + (unit ? unit.start + ':' + unit.end : 'outside');
+    if (key === glowKey) return;
+    glowKey = key;
+    const layer = $('#glow-layer');
+    layer.replaceChildren(...(unit ? [glowImages(current.block,unit,'reading-word')] : []));
+    layer.dataset.text = unit ? current.block.text.slice(unit.start,unit.end) : '';
+    layer.dataset.start = unit ? String(unit.start) : '';
+    layer.dataset.end = unit ? String(unit.end) : '';
     $$('.hotspot').forEach(button => button.setAttribute('aria-pressed',
       button.dataset.block === current.block.id && Number(button.dataset.start) === current.unit.start ? 'true' : 'false'));
+  }
+  function syncAudioGlow() {
+    if (engine !== 'audio' || playState !== 'playing') return;
+    activateGlow();
+    glowFrame = requestAnimationFrame(syncAudioGlow);
   }
   function failPlayback(message) {
     clearGlow(); setState('error');
@@ -211,7 +269,7 @@
   function play(item) {
     halt(false);
     refreshVoices();
-    current = item; const expected = token;
+    current = {...item,timings:timedRanges(item)}; const expected = token;
     $('#current-text').textContent = item.text;
     $('#selection-kind').textContent = modeNames[mode]+'點讀';
     setState('loading'); announce('正在準備讀音…');
@@ -243,12 +301,13 @@
   player.addEventListener('durationchange',()=>{ if (engine === 'audio' && player.duration > 0) setProgress(player.currentTime/player.duration); });
   $('#audio-seek').addEventListener('input',()=>{
     if (engine !== 'audio' || !Number.isFinite(player.duration) || player.duration <= 0) return;
+    if (playState === 'ended') setState('paused');
     player.currentTime = player.duration * Number($('#audio-seek').value) / 100;
-    setProgress(player.currentTime/player.duration);
+    setProgress(player.currentTime/player.duration); activateGlow();
   });
-  player.addEventListener('ended',()=>{ if (engine === 'audio') finish(audioToken); });
-  player.addEventListener('error',()=>{ if (engine === 'audio' && player.getAttribute('src')) failPlayback(); });
-  player.addEventListener('timeupdate',()=>{ if (engine === 'audio' && Number.isFinite(player.duration) && player.duration>0) setProgress(player.currentTime/player.duration); });
+  player.addEventListener('ended',()=>{ if (engine === 'audio' && player.ended) finish(audioToken); });
+  player.addEventListener('error',()=>{ if (engine === 'audio' && player.error && player.getAttribute('src')) failPlayback(); });
+  player.addEventListener('timeupdate',()=>{ if (engine === 'audio' && Number.isFinite(player.duration) && player.duration>0) { setProgress(player.currentTime/player.duration); activateGlow(); } });
   function itemFor(block,unit) {
     return {block,unit,audio:unit.audio,lang:block.lang,text:mode === 'sentence' ? (block.speech || block.text) : unit.text};
   }
@@ -320,14 +379,16 @@
     page=Math.max(0,Math.min(book.pages.length-1,Number.isInteger(index)?index:(savedPage(book)??0)));
     $('#reader-view').setAttribute('tabindex','-1');
     document.body.dataset.view='reader'; $('#library-view').hidden=true; $('#reader-view').hidden=false;
+    document.title=book.title+'｜點點書房';
     $('#header-book').hidden=false; $('#header-book').textContent=book.title; $('#reader-title').textContent=book.title;
-    $('#page-select').replaceChildren(...book.pages.map((_,i)=>new Option(String(i+1),String(i+1))));
+    $('#page-select').replaceChildren(...book.pages.map((_,i)=>new Option((i+1)+' / '+book.pages.length,String(i+1))));
     $('#page-total').textContent='/ '+book.pages.length;
     $('#current-text').textContent='想聽哪一段？直接點一下書上的文字。'; announce('點書上的'+modeNames[mode]+'，聽聽怎麼讀。');
     renderPage(); updateModes();
     if (update!==false) { updateURL(true); $('#reader-view').focus({preventScroll:true}); }
   }
   function showLibrary(update) {
+    document.title='點點書房｜粵語繪本遊樂園';
     halt(true); document.body.dataset.view='library'; $('#library-view').hidden=false; $('#reader-view').hidden=true; $('#header-book').hidden=true;
     renderLibrary(); if (update!==false) { updateURL(true); $('#continue-reading').focus({preventScroll:true}); } window.scrollTo(0,0);
   }
@@ -362,14 +423,29 @@
     $('#continue-reading').onclick=()=>showReader(first.id);
   }
   function updateModes() {
-    $$('[data-mode]').forEach(button=>button.setAttribute('aria-pressed',button.dataset.mode===mode?'true':'false'));
+    $$('[data-mode]').forEach(button=>{
+      const selected = button.dataset.mode === mode;
+      button.setAttribute('aria-pressed',String(selected)); button.tabIndex = selected ? 0 : -1;
+    });
     $('#selection-kind').textContent=modeNames[mode]+'點讀';
+    $('#mode-badge').textContent=modeNames[mode][0];
+    $('#mode-settings summary').setAttribute('aria-label','點讀方式：'+modeNames[mode]);
   }
   $$('[data-mode]').forEach(button=>button.addEventListener('click',()=>{
-    if (mode===button.dataset.mode) return;
-    stop(true); mode=button.dataset.mode; storage.set('library-reading-mode',mode); updateModes(); renderHotspots();
-    announce('點書上的'+modeNames[mode]+'，聽聽怎麼讀。');
+    if (mode !== button.dataset.mode) {
+      stop(true); mode=button.dataset.mode; storage.set('library-reading-mode',mode); updateModes(); renderHotspots();
+      announce('點書上的'+modeNames[mode]+'，聽聽怎麼讀。');
+    }
+    if (!button.dataset.keyboard) { $('#mode-settings').open=false; $('#mode-settings summary').focus(); }
   }));
+  $('.mode-group').addEventListener('keydown',event=>{
+    if (!['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) return;
+    event.preventDefault(); event.stopPropagation();
+    const buttons=$$('[data-mode]'), index=buttons.indexOf(document.activeElement);
+    const next=event.key==='Home'?0:event.key==='End'?buttons.length-1:(index+(event.key==='ArrowRight'?1:-1)+buttons.length)%buttons.length;
+    buttons[next].dataset.keyboard='true'; buttons[next].click(); delete buttons[next].dataset.keyboard; buttons[next].focus();
+  });
+  $('#reader-back').addEventListener('click',()=>showLibrary());
   for (const id of ['#previous-page','#previous-side']) $(id).addEventListener('click',()=>navigate(page-1));
   for (const id of ['#next-page','#next-side']) $(id).addEventListener('click',()=>navigate(page+1));
   $('#page-select').addEventListener('change',event=>navigate(Number(event.target.value)-1));
@@ -397,11 +473,21 @@
   if (synth && synth.addEventListener) synth.addEventListener('voiceschanged',refreshVoices);
   $('#voice-settings').addEventListener('toggle',()=>{ if ($('#voice-settings').open) refreshVoices(); });
   refreshVoices();
+  for (const id of ['#mode-settings','#voice-settings']) $(id).addEventListener('toggle',()=>{
+    if ($(id).open) for (const other of ['#mode-settings','#voice-settings']) if (other !== id) $(other).open=false;
+  });
   document.addEventListener('click',event=>{
-    const details=$('#voice-settings'); if (details.open && !details.contains(event.target)) details.open=false;
+    for (const id of ['#mode-settings','#voice-settings']) {
+      const details=$(id); if (details.open && !details.contains(event.target)) details.open=false;
+    }
   });
   document.addEventListener('keydown',event=>{
-    if (event.key==='Escape') { $('#voice-settings').open=false; stop(false); return; }
+    if (event.key==='Escape') {
+      const open=$('#mode-settings[open],#voice-settings[open]');
+      if (open) { open.open=false; open.querySelector('summary').focus(); }
+      else stop(false);
+      return;
+    }
     if (document.body.dataset.view!=='reader' || event.target.closest('input,select,textarea') || event.ctrlKey || event.altKey || event.metaKey) return;
     if (event.key==='ArrowLeft') { event.preventDefault(); navigate(page-1); }
     if (event.key==='ArrowRight') { event.preventDefault(); navigate(page+1); }
@@ -419,6 +505,7 @@
     playing:playState==='playing',state:playState,engine,currentTime:engine==='audio'?player.currentTime:0,
     audioSource:player.getAttribute('src'),duration:Number.isFinite(player.duration)?player.duration:null,
     playbackRate:rate,imageReady,glowCount:$('#glow-layer').children.length,voiceCount:voices.length,
+    highlightedText:$('#glow-layer').dataset.text || null, timingCount:current?current.timings.length:0,
     nativeBoundary:nativeBoundary?nativeBoundary.text:null,nativeHeld:!!nativeUtterance});
   route();
 })();

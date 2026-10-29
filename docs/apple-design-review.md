@@ -1,0 +1,63 @@
+# Design review: 點點書房
+
+## Summary
+
+以原書為核心，保留暖黃繪本書架、專屬 Logo 與粵語點讀，依 Apple Design skill 改善閱讀時的工具層級、觸控、字體放大與外觀。此專案為靜態網站，採用 HIG 的設計及無障礙原則；不宣稱符合原生 App 的工具列、App Store 或系統音訊 API 規則。
+
+技能：`.agents/skills/apple-design/SKILL.md`。來源及固定版本見同目錄 `SOURCE.md`，安裝檔與參考資料均提交 GitHub。
+
+## Improvements
+
+### High — 閱讀空間與漸進式顯示
+
+- **What:** 1111×730 視窗中，原品牌列為 74px、原工具列 78px，書頁視窗只有 451px。
+- **Why:** `layout.md › Visual hierarchy`：「Use progressive disclosure to make layouts cleaner and easier to interact with.」書本是主要工作內容，設定在需要時再出現。
+- **Fix:** 閱讀時收起品牌列，整合為 58px 符號工具列；頁數與翻頁保持可見，點讀模式、縮放及聲音由標示清楚的圖示開啟。書頁視窗實測增至 533px，增加 82px。首頁仍保留品牌及書架。
+
+Regular / compact 共用結構：
+
+```text
+[返回] [點讀模式]        [上一頁 1/11 下一頁]        [設定]
+                    原書完整頁面
+[播放]          當前文字與可拖曳時間軸          [重聽 停止]
+```
+
+### High — 觸控與鍵盤
+
+- **What:** 原進度條操作區高 24px，手機次要播放按鈕高 36px；閱讀模式上按方向鍵會觸發整頁翻頁。
+- **Why:** `accessibility.md › Mobility`：「Offer sufficiently sized controls.」`buttons.md › Best practices` 建議 44×44 的操作區；`segmented-controls.md › Best practices` 要求將相關選項維持為一致的單選控制。
+- **Fix:** 主要圖示、進度條與次要播放操作皆提供至少 44px 高的操作區。模式選項支援方向鍵、Home/End 及循序焦點。Escape 優先關閉面板並恢復焦點，不因關閉設定而意外停止朗讀。
+
+### Medium — 深色、對比與放大
+
+- **Why:** `color.md › Best practices`：「Make sure all your app’s colors work well in light, dark, and increased contrast contexts.」`typography.md › Supporting Dynamic Type`：「Make sure your app’s layout adapts to all font sizes.」
+- **Fix:** 用語意 CSS 變數跟隨系統深色外觀及高對比偏好；加入安全區內距，放大文字時讓工具與頁面適當換行／捲動。原 PDF 頁圖維持原樣，無反相或濾鏡。
+
+| 角色 | 淺色 | 深色 | 實測對比 |
+| --- | --- | --- | --- |
+| 底色 | `#fff9ec` | `#111f1d` | — |
+| 主要文字 | `#183f3b` | `#f4f1e7` | 11.04:1 / 15.02:1 |
+| 控制面板 | `#fffcf4` | `#20322d` | — |
+| 輔助文字 | `#56665a` | `#b4c6bc` | 面板上 5.95:1 / 7.55:1 |
+| 主動作 | 深青底、米白字 | 米白底、深色字 | 11.04:1 / 15.02:1 |
+| 閱讀提示 | `#efb837` | `#ffd15c` | 在原字形遮罩上描光，不改寫頁圖 |
+
+保留 Noto Sans TC 字型與既有字級角色，主要操作 16px、一般標籤 14px、輔助文字 12px；可隨文字設定放大。沒有加入裝飾性動態或透明玻璃層。
+
+## Craft notes
+
+特色是直接在原書上點讀、發亮及聆聽，而不是套用原生 iOS 外殼。移除閱讀時重複的品牌與書架文字列，讓已有的原書插圖與閱讀互動承載個性；圖示保持同一筆畫風格並提供名稱。
+
+## What works
+
+原 PDF、11 頁完整書頁、句詞字映射、閱讀記憶、翻頁、縮放、預製粵語與 Audio Play UI 均保留。首屏仍可直接選書，閱讀頁預設不自動發聲。
+
+## Platform notes
+
+在 Chromium 實測跨 320–1920px、790×730 與 1111×730；另檢查深色／高對比、減少動態與 200% 介面文字。這些證據不等同實體 iPhone、VoiceOver 或 Safari 全平台認證。
+
+## Speech pipeline diagnosis
+
+失敗執行回傳 `NoAudioReceived`；安裝工具均通過。edge-tts 上游在 [#512](https://github.com/rany2/edge-tts/issues/512) 有相同的近期間歇性服務回報，不因此判定缺少憑證或改用其他聲音。
+
+修復：並行量降為 2；暫時性失敗最多七次並退避 2／5／10／20／30／45 秒；401／403 及確定的資料錯誤不盲目重試。服務對照探測會分別檢查句子及字詞邊界。有效 MP3 與字詞時間快取在工作失敗時仍保存，下一次可續傳。只有整批音檔與真實時間資料驗證成功，才更新圖書索引並取代網站資產。
