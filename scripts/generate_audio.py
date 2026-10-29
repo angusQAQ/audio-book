@@ -45,6 +45,7 @@ async def generate(jobs):
     cache.mkdir(parents=True, exist_ok=True)
     semaphore = asyncio.Semaphore(jobs)
     generated = {}
+    locks = {}
     completed = 0
     total = sum(len(book['audio']) for book in library['books'])
     proxy = os.environ.get('HTTPS_PROXY') or os.environ.get('https_proxy')
@@ -54,7 +55,7 @@ async def generate(jobs):
         key = key_for(asset)
         path = cache / f'{key}.mp3'
         receipt = cache / f'{key}.json'
-        async with semaphore:
+        async with semaphore, locks.setdefault(key, asyncio.Lock()):
             valid = False
             if path.exists() and receipt.exists():
                 stamp = json.loads(receipt.read_text())
@@ -80,9 +81,9 @@ async def generate(jobs):
                             'duration': seconds, 'voice': VOICE, 'rate': RATE,
                         }))
                         break
-                    except Exception:
+                    except Exception as error:
                         partial.unlink(missing_ok=True)
-                        if attempt == 3:
+                        if attempt == 3 or getattr(error, 'status', None) in (401, 403):
                             raise
                         await asyncio.sleep(2 ** (attempt + 1))
             generated[key] = path
@@ -127,4 +128,14 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--jobs', type=int, default=3, choices=range(1, 7))
     arguments = parser.parse_args()
-    asyncio.run(generate(arguments.jobs))
+    try:
+        asyncio.run(generate(arguments.jobs))
+    except Exception as error:
+        # Safe public CI diagnosis: never include URLs, headers or environment values.
+        diagnosis = f"{type(error).__name__}; HTTP status={getattr(error, 'status', 'not supplied')}"
+        print('Speech generation failed: ' + diagnosis, flush=True)
+        summary = os.environ.get('GITHUB_STEP_SUMMARY')
+        if summary:
+            with open(summary, 'a') as report:
+                report.write('## Speech generation failed\n\n' + diagnosis + '\n\nExisting audio and library indexes were preserved.\n')
+        raise

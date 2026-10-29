@@ -39,7 +39,7 @@ jobs:
         run: npm ci
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
-      - uses: actions/cache@v4
+      - uses: actions/cache@v5
         with:
           path: .cache/edge-tts
           key: edge-tts-hiu-maan-12-v1-${{ hashFiles('library.json', 'requirements.txt') }}
