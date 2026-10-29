@@ -17,5 +17,8 @@ web
 ## Brand Commitments
 名稱「點點書房」。依使用者要求，採繪本遊樂園風格，使用 Hallmark、Impeccable 及已安裝 Apple Design skill 的適用設計原則。閱讀模式採精簡圖示工具列，優先保留書頁空間；點讀字詞依真實語音時間發亮。每個可審閱更新階段建立 Git commit 存檔點。
 
+## Shelf and Reading Refinements
+每本書可封存及隨時恢復，使用目前瀏覽器保存書架分類，不刪除原檔或閱讀進度；即使全部封存，仍有清楚的已封存入口。首頁背景採米白紙張配淡圓點；書卡不顯示簡介及原 PDF 按鍵，移除整個頁尾，原 PDF 仍完整保存於 GitHub。逐詞提示使用柔和底色與下方細線，低不透明度字形提示透過 multiply 合成保留原字筆畫，沒有強光暈或閃爍。
+
 ## Evidence on Hand
 原檔 assets/pdf/〈我們的好老師〉.pdf，SHA256 e185baacc918f1bad825f628611cfbbccfe684acb90398e87539ecfa5bf345bb；與既有網站所載來源完全相同。現有內容包括宋詒瑞的課文、原書頁圖與 764 個讀音單位。使用者已確認網站正常運作。未提供使用者數據、推薦證言，亦不增添此類宣稱。

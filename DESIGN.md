@@ -256,7 +256,7 @@ The type is clear and friendly without competing with the original book letterin
 - **Title:** bold book title; uses `title`, reducing to (1.2rem) at the medium breakpoint.
 - **Body:** regular interface copy; uses `body`. The invitation copy has a more open line height (1.85); selected reading text uses (1.7).
 - **Label:** compact controls, metadata and supporting copy; uses `label`. Primary action labels are bold (700).
-- **Caption:** book counts, audio status, elapsed/total time and quiet footer text; uses `caption`. Player times use tabular figures. The phone audio status uses `player-status-compact`; this local size does not replace the general caption role. Small printed-cover labels remain local cover details.
+- **Caption:** book counts, archive help, audio status and elapsed/total time; uses `caption`. Player times use tabular figures. The phone audio status uses `player-status-compact`; this local size does not replace the general caption role. Small printed-cover labels remain local cover details.
 
 ### Named Rules
 
@@ -312,7 +312,9 @@ A recessed-paper group holds the three familiar sentence, word and character opt
 
 ### Cards / Containers
 
-The shelf card uses mint paper, the broad card curve and generous internal space. Its actual cover thumbnail stays visible beside book details and the reading action. The empty-search container uses recessed paper, the same broad curve, an explanatory message and a quiet reset button.
+The shelf card uses mint paper, the broad card curve and generous internal space. Its actual cover thumbnail stays visible beside title, author, page count, reading and archive/restore actions. Book descriptions and PDF action links are omitted; the original PDF remains a tracked source asset. The library footer is removed. The empty-search container uses recessed paper, the same broad curve, an explanatory message and a quiet reset button.
+
+The library background is warm paper with a sparse 22px dotted pattern: .7px dots in #183f3b12, or #f4f1e712 in dark appearance. The pattern stays outside the solid content cards and never appears on the reading canvas. A labelled 44px filter group switches between active and archived books. Archive and restore are reversible, preserve reading progress and announce their result; the preference is local to the current browser. Empty active/archived views always provide a path back, including when every book is archived.
 
 The sound settings panel uses clean stock, a softer local curve and the settings shadow. It contains a labelled native voice select and range input, clear help text, and a numeric speed output. The open summary gains mint backing.
 
@@ -328,7 +330,7 @@ The home brand uses the transparent generated asset `assets/brand/diandian-logo.
 
 ### Original-page reader
 
-The original page image is the content surface. Transparent targets follow its source coordinates; a separate non-interactive layer renders the printed-word glow. Real Edge WordBoundary timestamps select the currently spoken word from media time, including after seeking or changing speed. Cross-page speech is mapped only to printed characters on the visible page. The glow is steady and clears when playback ends.
+The original page image is the content surface. Transparent targets follow its source coordinates; a separate non-interactive layer renders a pale #ffd85b3d background and a 2px #946b16 underline below the current word. The retained glyph mask uses opacity .16 without blur or drop shadows. The entire cue layer blends with multiply inside the isolated page canvas, so its bright colours cannot lighten the original printed strokes. These page-specific colours stay the same in both appearances because the original scan stays the same. Real Edge WordBoundary timestamps select the currently spoken word from media time, including after seeking or changing speed. Cross-page speech is mapped only to printed characters on the visible page. The cue is steady and clears when playback ends.
 
 Page changes rotate a temporary copy of the original scan around its left binding, over the next page: 420ms with cubic-bezier(.25,.65,.2,1). Previous-page motion reverses the turn. Rapid navigation cancels stale animation and image callbacks; reading targets become available when the correct page is ready. Reduced motion swaps pages directly. The original image files remain intact.
 
@@ -360,4 +362,4 @@ Before duration metadata is available, and for device speech without a media dur
 
 
 <!-- Apple Design refinement: semantic appearances and compact reading controls -->
-The interface follows the system light/dark appearance and increased-contrast preference. The dark palette uses a deep green ground, light warm text and pale teal focus accents; the original book scans are never inverted or filtered. Light/dark primary text contrasts are 11.04:1 and 15.02:1; secondary text on controls is 5.95:1 and 7.55:1. Safe-area insets protect the compact toolbar and player. Word guidance follows saved Edge WordBoundary media times, with current-word glyph glow synchronized to the audio position, seeking and playback rate.
+The interface follows the system light/dark appearance and increased-contrast preference. The dark palette uses a deep green ground, light warm text and pale teal focus accents; the original book scans are never inverted or filtered. Light/dark primary text contrasts are 11.04:1 and 15.02:1; secondary text on controls is 5.95:1 and 7.55:1. Safe-area insets protect the compact toolbar and player. Word guidance follows saved Edge WordBoundary media times, with legible background-and-underline cues synchronized to the audio position, seeking and playback rate.

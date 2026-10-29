@@ -44,6 +44,8 @@ try {
   page.on('pageerror', error => errors.push(error.message));
   await page.goto(base.href, { waitUntil: 'networkidle' });
   await page.getByRole('heading', { name: book.title, exact: true }).waitFor();
+  assert.equal(await page.locator('.pdf-link, .book-description, .library-footer').count(), 0);
+  assert.ok(await page.locator('body').evaluate(body=>getComputedStyle(body).backgroundImage.includes('radial-gradient')));
   assert.ok(await page.locator('.brand-symbol img').evaluate(image => image.complete && image.naturalWidth > 0));
   const pdf = await page.request.get(new URL(book.source.url, base).href);
   assert.equal(pdf.status(), 200);
@@ -66,6 +68,9 @@ try {
       const state = window.readerDiagnostics();
       return state.engine === 'audio' && state.currentTime > 0 && state.glowCount > 0;
     });
+    assert.ok(await page.locator('.reading-marker').count() > 0);
+    assert.equal(await page.locator('.ink-glow').first().evaluate(node=>getComputedStyle(node).filter), 'none');
+    assert.equal(await page.locator('#glow-layer').evaluate(node=>getComputedStyle(node).mixBlendMode), 'multiply');
     await page.locator('#stop').click();
   }
   await chooseMode('sentence');
@@ -99,9 +104,18 @@ try {
   await page.waitForFunction(() => window.readerDiagnostics().imageReady);
   assert.equal(await page.evaluate(() => window.readerDiagnostics().page), 2);
   assert.equal(await page.locator('.page-turn').count(), 0);
+  await page.locator('#reader-back').click();
+  await page.getByRole('button',{name:`封存《${book.title}》`,exact:true}).click();
+  assert.equal(await page.locator(`[data-book-id="${book.id}"]`).count(), 0);
+  await page.reload({waitUntil:'networkidle'});
+  await page.locator('[data-shelf="archived"]').click();
+  await page.getByRole('button',{name:`恢復《${book.title}》`,exact:true}).click();
+  await page.locator('[data-shelf="active"]').click();
+  await page.getByRole('button',{name:`封存《${book.title}》`,exact:true}).waitFor();
+  assert.equal(await page.locator(`[data-book-id="${book.id}"] .book-reading-link`).textContent(), '繼續第 2 頁');
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   assert.deepEqual(errors, []);
-  console.log(`PASS: published library matches ${expectedHash.slice(0, 12)}; current code/theme/logo hashes, original PDF SHA256, all three MP3 modes, real word-timed glow, audio play/seek/time controls, compact toolbar, page turns and phone layout verified.`);
+  console.log(`PASS: published library matches ${expectedHash.slice(0, 12)}; current code/theme/logo hashes, original PDF SHA256, all three MP3 modes, legible word-timed reading cues, audio controls, compact toolbar, page turns, reversible book archive and phone layout verified.`);
 } finally {
   await browser.close();
 }

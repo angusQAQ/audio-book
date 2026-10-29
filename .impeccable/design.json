@@ -284,7 +284,7 @@
       },
       "caption": {
         "displayName": "Caption",
-        "purpose": "Counts, audio status and time, and footer text."
+        "purpose": "Counts, audio status and time, and archive help."
       },
       "player-status-compact": {
         "displayName": "Compact Player Status",
@@ -337,7 +337,7 @@
       {
         "name": "reading-glow",
         "value": "steady; actual WordBoundary media timestamps",
-        "purpose": "Highlight the currently spoken printed word without flashing; clear at playback end."
+        "purpose": "Steady word background and underline follow media timestamps; no blur or bright stroke overlay."
       },
       {
         "name": "voice-wave",
@@ -369,7 +369,9 @@
           "focus": "#a5e0cb"
         }
       },
-      "readingGuidance": "Real WordBoundary timestamps drive glyph glow at the current media position."
+      "readingGuidance": "Real WordBoundary timestamps drive a pale multiply-blended word background, a 2px underline and a .16-opacity glyph mask without blur; original dark strokes remain legible.",
+      "bookArchive": "Active/archived filter with reversible per-book actions, browser-local persistence, preserved reading progress, labelled feedback and a reachable all-archived state.",
+      "libraryBackground": "Warm paper with sparse .7px dots on a 22px grid, semantic light/dark grain; no pattern in the reader."
     }
   },
   "components": [
