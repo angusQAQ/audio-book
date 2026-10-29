@@ -1,0 +1,17 @@
+{
+  "name": "diandian-reading-library",
+  "version": "1.0.0",
+  "private": true,
+  "description": "點點書房：保留原書的粵語點讀遊樂園",
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8000 --bind 0.0.0.0",
+    "test": "playwright test",
+    "validate": "python3 scripts/validate_assets.py",
+    "audio:generate": "python3 scripts/generate_audio.py"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.11.1",
+    "@playwright/test": "1.58.0"
+  }
+}

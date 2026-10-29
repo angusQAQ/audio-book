@@ -1,0 +1,13 @@
+node_modules/
+.cache/
+test-results/
+playwright-report/
+.impeccable/questions/
+.impeccable/review/
+.hallmark/before/
+.hallmark/after/
+.hallmark/before.json
+.hallmark/before.txt
+.hallmark/compare.html
+__pycache__/
+*.pyc

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-HK">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#fff9ec">
+  <meta name="description" content="點點書房：打開原書，點字詞和句子聽粵語。">
+  <title>點點書房｜粵語繪本遊樂園</title>
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciLz4=" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-view="library" data-play-state="idle">
+  <header class="site-header">
+    <button class="brand" id="home" aria-label="回到點點書房書架"><span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 11C13 7 7 8 4 10v22c6-2 11-1 16 3 5-4 10-5 16-3V10c-3-2-9-3-16 1Zm0 0v24"/><path d="m11 16 3 1m-3 5 3 1m12-6 4-1m-4 7 4-1"/></svg></span><span>點點書房</span></button>
+    <span id="header-book" hidden></span>
+    <button id="shelf-link" class="shelf-link"><span data-icon="shelf"></span>我的書架</button>
+  </header>
+  <p id="app-error" role="alert" hidden></p>
+  <main id="library-view">
+    <section class="library-hero">
+      <div class="hero-copy"><h1>每一頁，<br>都有新發現。</h1><p>選一本書，點字、聽粵語。<br>一起走進故事的遊樂園。</p><button id="continue-reading" class="primary-button"><span data-icon="book"></span><span id="continue-label">打開我的第一本書</span></button></div>
+      <figure class="hero-book" aria-label="《我們的好老師》原書內頁">
+        <img src="assets/pages/0093d26ae7b9c05eece5.jpg" width="1654" height="2340" alt="我們的好老師：瑪麗老師與同學的故事" fetchpriority="high">
+        <img src="assets/pages/83741f6fa876c320ac43.jpg" width="1654" height="2340" alt="我們的好老師：原書下半篇" fetchpriority="high">
+        <figcaption>翻開原書，聽見故事。</figcaption>
+      </figure>
+    </section>
+    <section class="library-section" aria-labelledby="shelf-title">
+      <div class="library-heading"><div><h2 id="shelf-title">我的書架 <span id="book-count"></span></h2><p>想聽哪一個故事？</p></div><label class="search-field"><span data-icon="search"></span><span class="sr-only">搜尋書名或作者</span><input id="book-search" type="search" placeholder="搜尋書名或作者" autocomplete="off"></label></div>
+      <div id="books-grid" class="bookshelf-grid"></div>
+      <div id="empty-search" class="empty-search" hidden><span data-icon="search"></span><h3>還沒有找到這本書</h3><p>試試書名或作者，或清除搜尋看看整個書架。</p><button id="clear-search" class="quiet-button">顯示全部書籍</button></div>
+      <div id="shelf-rail" class="shelf-rail" aria-hidden="true"></div>
+      <p class="shelf-future">更多故事，會慢慢住進這個書架。</p>
+    </section>
+    <footer class="library-footer"><span class="footer-mark" aria-hidden="true">點</span><span>一本書，一點聲音，一起閱讀。</span><a href="https://github.com/angusQAQ/audio-book" target="_blank" rel="noopener noreferrer">在 GitHub 看更新</a></footer>
+  </main>
+  <main id="reader-view" hidden>
+    <h1 id="reader-title" class="sr-only">我們的好老師</h1>
+    <div class="reader-tools">
+      <div class="mode-group" role="group" aria-label="點讀方式"><button data-mode="sentence" aria-pressed="true">句子</button><button data-mode="word" aria-pressed="false">詞語</button><button data-mode="character" aria-pressed="false">單字</button></div>
+      <div class="page-tools"><button id="previous-page" class="icon-button" aria-label="上一頁"><span data-icon="left"></span></button><label class="page-label"><span class="sr-only">跳到頁數</span><select id="page-select" aria-label="跳到頁數"></select><span id="page-total"></span></label><button id="next-page" class="icon-button" aria-label="下一頁"><span data-icon="right"></span></button><label><span class="sr-only">書頁縮放</span><select id="zoom" aria-label="書頁縮放"><option value="fit">整頁</option><option value="width">頁寬</option><option value="1">100%</option><option value="1.5">150%</option><option value="2">200%</option></select></label></div>
+      <details id="voice-settings" class="voice-settings"><summary><span data-icon="sliders"></span>聲音與語速</summary><div class="settings-panel"><label for="voice-select">朗讀聲音</label><select id="voice-select" aria-label="朗讀聲音"><option value="auto">自動選擇粵語</option><option value="offline">內建粵語讀音</option></select><p id="voice-help">正在尋找這個裝置的粵語聲音。</p><div class="rate-heading"><label for="playback-rate">朗讀速度</label><output id="rate-label" for="playback-rate">1.00 倍</output></div><input id="playback-rate" type="range" min="0.75" max="1.25" step="0.05" value="1" aria-label="朗讀速度"><div class="rate-labels"><span>慢一點</span><span>正常</span><span>快一點</span></div></div></details>
+    </div>
+    <div id="page-viewport" aria-label="原書閱讀區">
+      <div id="page-stage"><div id="page-canvas"><img id="page-image" src="assets/pages/c5428019cc021c6b1d41.jpg" width="1654" height="2340" alt="我們的好老師原書" draggable="false"><div id="glow-layer" aria-hidden="true"></div><div id="hotspots" aria-label="原書字句點讀區"></div></div></div>
+      <button id="previous-side" class="side previous" aria-label="向左翻到上一頁"><span data-icon="left"></span></button><button id="next-side" class="side next" aria-label="向右翻到下一頁"><span data-icon="right"></span></button>
+    </div>
+    <section id="reading-dock" class="reading-dock" aria-label="正在朗讀的內容">
+      <div class="dock-content"><div class="dock-meta"><span class="voice-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span id="status" role="status" aria-live="polite">點書上的句子，聽聽怎麼讀。</span><span id="selection-kind">句子點讀</span></div><p id="current-text">想聽哪一段？直接點一下書上的文字。</p></div>
+      <div class="transport"><button id="pause" class="transport-button" aria-label="暫停朗讀" disabled><span data-icon="pause"></span><span id="pause-label">暫停</span></button><button id="replay" class="transport-button" aria-label="重聽" disabled><span data-icon="replay"></span><span>重聽</span></button><button id="stop" class="transport-button" aria-label="停止朗讀" disabled><span data-icon="stop"></span><span>停止</span></button></div>
+      <div id="reading-progress" class="reading-progress" role="progressbar" aria-label="朗讀進度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+    </section>
+  </main>
+  <noscript>請啟用 JavaScript，以使用書架、翻頁和粵語點讀。<a href="assets/pdf/〈我們的好老師〉.pdf">開啟《我們的好老師》原 PDF</a></noscript>
+
+
+
+<script>
+    window.addEventListener('error', function (event) {
+      if ((event.target && event.target.tagName === 'SCRIPT') || event.error) {
+        var notice = document.getElementById('app-error'); notice.hidden = false;
+        notice.textContent = '點讀書未能完整載入，請重新整理，或使用完整下載包。';
+      }
+    }, true);
+  </script>
+  <script src="library.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
