@@ -9,6 +9,8 @@
     book:'M12 5C8 2 4 3 2 4v15c4-1 7 0 10 2 3-2 6-3 10-2V4c-2-1-6-2-10 1Zm0 0v16',
     shelf:'M3 3v18h18M7 5v11M11 3v13M15 6l3 10M3 17h18',
     search:'M16 16l5 5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z',
+    archive:'M3 3h18v5H3zM5 8v13h14V8M9 12h6',
+    restore:'M4 9v12h16V9M12 15V3m-4 4 4-4 4 4',
     sliders:'M4 6h16M4 18h16M9 3v6M15 15v6M4 12h16M17 9v6'
   };
   function icon(name) {
@@ -32,6 +34,12 @@
     get(key) { try { return localStorage.getItem(key); } catch { return null; } },
     set(key,value) { try { localStorage.setItem(key,String(value)); } catch {} }
   };
+  let shelfView = 'active';
+  const archivedBooks = new Set();
+  try {
+    const saved = JSON.parse(storage.get('library-archived-books') || '[]');
+    if (Array.isArray(saved)) for (const id of saved) if (books.some(item=>item.id===id)) archivedBooks.add(id);
+  } catch { /* An invalid preference must not hide the bookshelf. */ }
   let book = books[0], page = 0, mode = storage.get('library-reading-mode') || 'sentence';
   if (!['sentence','word','character'].includes(mode)) mode = 'sentence';
   let rate = Number(storage.get('library-reading-rate') || 1);
@@ -113,6 +121,10 @@
       const start = Math.max(unit.start,row.start)-row.start;
       const end = Math.min(unit.end,row.end)-row.start;
       const [x,y,w,h] = row.rect;
+      const marker = el('span','reading-marker');
+      marker.style.left = ((x + w * start / row.text.length)*100)+'%'; marker.style.top = (y*100)+'%';
+      marker.style.width = (w*(end-start)/row.text.length*100)+'%'; marker.style.height = (h*100)+'%';
+      fragment.append(marker);
       const glow = el('img','ink-glow' + (extraClass ? ' '+extraClass : ''));
       glow.alt = ''; glow.src = row.glow;
       glow.style.left = (x*100)+'%'; glow.style.top = (y*100)+'%';
@@ -433,33 +445,61 @@
   }
   function renderLibrary() {
     const query=$('#book-search').value.trim().toLocaleLowerCase();
-    const matches=books.filter(item=>(item.title+' '+item.author+' '+(item.category||'')).toLocaleLowerCase().includes(query));
-    $('#book-count').textContent=books.length+' 本點讀書';
+    const active=books.filter(item=>!archivedBooks.has(item.id));
+    const visible=books.filter(item=>archivedBooks.has(item.id)===(shelfView==='archived'));
+    const matches=visible.filter(item=>(item.title+' '+item.author+' '+(item.category||'')).toLocaleLowerCase().includes(query));
+    $('#active-count').textContent=String(active.length); $('#archived-count').textContent=String(books.length-active.length);
+    $$('[data-shelf]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.shelf===shelfView)));
+    $('#book-count').textContent=visible.length+(shelfView==='archived'?' 本已封存':' 本點讀書');
     const fragment=document.createDocumentFragment();
     for (const item of matches) {
       const card=el('article','shelf-item'), open=el('button','book-open');
+      card.dataset.bookId=item.id;
       open.setAttribute('aria-label','閱讀《'+item.title+'》');
       const windowEl=el('span','cover-window'), thumbnail=el('img');
       thumbnail.src=item.pages[Math.min(item.pages.length-1,(item.coverPage||3)-1)].image; thumbnail.alt=''; windowEl.append(thumbnail);
       open.append(windowEl,el('span','cover-series',item.category||'粵語點讀'),el('span','cover-title',item.title),el('span','cover-author',item.author+' 著'),el('span','cover-tab'));
       open.addEventListener('click',()=>showReader(item.id));
       const title=el('h3',null,item.title), metadata=el('p','book-meta',item.author+' 著　'+item.pages.length+' 頁');
-      const details=el('div','book-details'); details.append(title,metadata,el('p','book-description',item.description));
+      const details=el('div','book-details'); details.append(title,metadata);
       const position=savedPage(item), link=el('button','book-reading-link');
       const glyph=el('span'); glyph.innerHTML=icon('play');
       link.append(glyph,el('span',null,position===null?'開始閱讀':'繼續第 '+(position+1)+' 頁'));
       link.addEventListener('click',()=>showReader(item.id));
       const actions=el('div','book-actions'); actions.append(link);
-      if (item.source && item.source.url) {
-        const original=el('a','pdf-link','開啟原 PDF'); original.href=item.source.url;
-        original.target='_blank'; original.rel='noopener'; actions.append(original);
-      }
+      const archived=archivedBooks.has(item.id), archive=el('button','archive-button');
+      const archiveIcon=el('span'); archiveIcon.innerHTML=icon(archived?'restore':'archive');
+      archive.append(archiveIcon,el('span',null,archived?'恢復到書架':'封存'));
+      archive.setAttribute('aria-label',(archived?'恢復':'封存')+'《'+item.title+'》');
+      archive.addEventListener('click',()=>{
+        if (archived) archivedBooks.delete(item.id); else archivedBooks.add(item.id);
+        storage.set('library-archived-books',JSON.stringify([...archivedBooks]));
+        renderLibrary();
+        $('#library-status').textContent=archived?'已將《'+item.title+'》恢復到書架。':'已封存《'+item.title+'》，可到「已封存」隨時恢復。';
+        $('[data-shelf="'+(archived?'active':'archived')+'"]').focus();
+      });
+      actions.append(archive);
       card.append(open,details,actions); fragment.append(card);
     }
     $('#books-grid').replaceChildren(fragment); $('#empty-search').hidden=matches.length>0; $('#shelf-rail').hidden=!matches.length;
-    const first=books.find(item=>savedPage(item)!==null)||books[0];
-    $('#continue-label').textContent=savedPage(first)===null?'打開我的第一本書':'繼續閱讀《'+first.title+'》';
-    $('#continue-reading').onclick=()=>showReader(first.id);
+    const empty=$('#empty-search');
+    empty.querySelector('h3').textContent=query?'還沒有找到這本書':shelfView==='archived'?'還沒有封存的書籍':'書架暫時沒有書';
+    empty.querySelector('p').textContent=query?'試試書名或作者，或清除搜尋看看這個書架。':shelfView==='archived'?'封存後的書會放在這裏，隨時都可以恢復。':'封存的書本仍然保留，想讀的時候可以隨時恢復。';
+    $('#clear-search').textContent=query?'顯示全部書籍':shelfView==='archived'?'返回閱讀中':'查看已封存書籍';
+    $('#clear-search').onclick=()=>{
+      if (query) { $('#book-search').value=''; renderLibrary(); $('#book-search').focus(); }
+      else selectShelf(shelfView==='archived'?'active':'archived',true);
+    };
+    const first=active.find(item=>savedPage(item)!==null)||active[0];
+    $('#continue-label').textContent=first?(savedPage(first)===null?'打開我的第一本書':'繼續閱讀《'+first.title+'》'):'查看已封存書籍';
+    $('#continue-reading').onclick=()=>{
+      if (first) showReader(first.id);
+      else { selectShelf('archived',true); $('.library-section').scrollIntoView({block:'start'}); }
+    };
+  }
+  function selectShelf(view,focus) {
+    shelfView=view; $('#library-status').textContent=''; renderLibrary();
+    if (focus) $('[data-shelf="'+view+'"]').focus();
   }
   function updateModes() {
     $$('[data-mode]').forEach(button=>{
@@ -492,7 +532,7 @@
   $('#home').addEventListener('click',()=>showLibrary());
   $('#shelf-link').addEventListener('click',()=>showLibrary());
   $('#book-search').addEventListener('input',renderLibrary);
-  $('#clear-search').addEventListener('click',()=>{ $('#book-search').value=''; renderLibrary(); $('#book-search').focus(); });
+  $$('[data-shelf]').forEach(button=>button.addEventListener('click',()=>selectShelf(button.dataset.shelf)));
   $('#stop').addEventListener('click',()=>stop(false));
   $('#pause').addEventListener('click',togglePause);
   $('#replay').addEventListener('click',()=>{ if (current) play(current); });

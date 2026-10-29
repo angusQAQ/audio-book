@@ -30,7 +30,9 @@ async function playFirst(page) {
 test('shelf search, original PDF and reading progress survive reload', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByRole('heading', { name: book.title, exact: true })).toBeVisible();
-  const pdf = await page.request.get(await page.getByRole('link', { name: '開啟原 PDF' }).getAttribute('href'));
+  await expect(page.locator('.pdf-link')).toHaveCount(0);
+  await expect(page.locator('.book-description, .library-footer')).toHaveCount(0);
+  const pdf = await page.request.get(book.source.url);
   expect(pdf.ok()).toBe(true);
   expect((await pdf.body()).subarray(0, 4).toString()).toBe('%PDF');
   await page.getByRole('searchbox').fill('不存在的圖書');
@@ -298,4 +300,79 @@ test('book pages flip in both directions, cancel safely and respect reduced moti
   await expect.poll(()=>page.evaluate(()=>window.readerDiagnostics().imageReady)).toBe(true);
   await expect(page.locator('.page-turn')).toHaveCount(0);
   expect(await page.evaluate(()=>window.readerDiagnostics().page)).toBe(5);
+});
+
+test('books can be archived and restored after reload without losing reading progress', async ({ page }) => {
+  await openReader(page,4);
+  await page.locator('#reader-back').click();
+  await page.getByRole('button',{name:`封存《${book.title}》`,exact:true}).click();
+  await expect(page.locator('#books-grid .shelf-item')).toHaveCount(0);
+  await expect(page.locator('#library-status')).toContainText('已封存');
+  await expect(page.locator('[data-shelf="archived"]')).toBeFocused();
+  await expect(page.locator('#active-count')).toHaveText('0');
+  await expect(page.locator('#continue-label')).toHaveText('查看已封存書籍');
+  await page.reload();
+  await expect(page.locator('#books-grid .shelf-item')).toHaveCount(0);
+  await page.locator('#continue-reading').click();
+  await expect(page.locator('[data-shelf="archived"]')).toHaveAttribute('aria-pressed','true');
+  await expect(page.getByRole('button',{name:'繼續第 4 頁',exact:true})).toBeVisible();
+  await page.getByRole('searchbox').fill('找不到的書');
+  await expect(page.getByRole('heading',{name:'還沒有找到這本書'})).toBeVisible();
+  await page.getByRole('button',{name:'顯示全部書籍',exact:true}).click();
+  await page.getByRole('button',{name:'繼續第 4 頁',exact:true}).click();
+  expect(await page.evaluate(()=>window.readerDiagnostics().page)).toBe(4);
+  await page.locator('#reader-back').click();
+  await expect(page.locator('[data-shelf="archived"]')).toHaveAttribute('aria-pressed','true');
+  const archiveA11y=await new AxeBuilder({page}).analyze();
+  expect(archiveA11y.violations).toEqual([]);
+  await page.getByRole('button',{name:`恢復《${book.title}》`,exact:true}).click();
+  await expect(page.locator('#archived-count')).toHaveText('0');
+  await expect(page.locator('[data-shelf="active"]')).toBeFocused();
+  await expect(page.getByRole('heading',{name:'還沒有封存的書籍'})).toBeVisible();
+  await page.locator('[data-shelf="active"]').press('Enter');
+  await expect(page.getByRole('button',{name:'繼續第 4 頁',exact:true})).toBeVisible();
+  await page.reload();
+  await expect(page.getByRole('button',{name:`封存《${book.title}》`,exact:true})).toBeVisible();
+  await expect(page.getByRole('button',{name:'繼續第 4 頁',exact:true})).toBeVisible();
+  await expect(page.locator('.pdf-link')).toHaveCount(0);
+});
+
+test('reading cues preserve dark printed strokes in light and dark appearance', async ({ page }) => {
+  await page.setViewportSize({width:1111,height:730});
+  for (const colorScheme of ['light','dark']) {
+    await page.emulateMedia({colorScheme});
+    await openReader(page,1);
+    await page.locator('.hotspot').nth(4).click();
+    await expect.poll(()=>page.evaluate(()=>window.readerDiagnostics().state)).toBe('playing');
+    await page.locator('#pause').click();
+    await expect(page.locator('.reading-marker').first()).toBeVisible();
+    await page.locator('#glow-layer').evaluate(layer=>layer.style.visibility='hidden');
+    const original=await page.locator('#page-canvas').screenshot({path:`.impeccable/review/legibility-before-${colorScheme}.png`});
+    await page.locator('#glow-layer').evaluate(layer=>layer.style.visibility='');
+    const highlighted=await page.locator('#page-canvas').screenshot({path:`.impeccable/review/legibility-after-${colorScheme}.png`});
+    const result=await page.evaluate(async ([before,after])=>{
+      async function pixels(encoded) {
+        const image=new Image(); image.src='data:image/png;base64,'+encoded; await image.decode();
+        const canvas=document.createElement('canvas'); canvas.width=image.width; canvas.height=image.height;
+        const context=canvas.getContext('2d'); context.drawImage(image,0,0);
+        return {width:image.width,height:image.height,data:context.getImageData(0,0,image.width,image.height).data};
+      }
+      const original=await pixels(before),highlighted=await pixels(after);
+      if (original.width!==highlighted.width || original.height!==highlighted.height) throw new Error('Reading comparison geometry changed');
+      const a=original.data,b=highlighted.data;
+      let changed=0,lightened=0,dark=0;
+      for (let i=0;i<a.length;i+=4) {
+        if (Math.abs(a[i]-b[i])+Math.abs(a[i+1]-b[i+1])+Math.abs(a[i+2]-b[i+2])>3) changed++;
+        if (Math.max(a[i],a[i+1],a[i+2])<125) {
+          dark++;
+          if (b[i]>a[i]+3 || b[i+1]>a[i+1]+3 || b[i+2]>a[i+2]+3) lightened++;
+        }
+      }
+      return {changed,lightened,dark};
+    },[original.toString('base64'),highlighted.toString('base64')]);
+    expect(result.dark).toBeGreaterThan(100);
+    expect(result.changed).toBeGreaterThan(10);
+    expect(result.lightened).toBe(0);
+    await page.screenshot({path:`.impeccable/review/legible-reading-${colorScheme}.png`});
+  }
 });

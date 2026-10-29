@@ -44,6 +44,9 @@
 :root {
   --color-hero-ink: #183f3b;
   --color-reading-glow: #efb837;
+  --color-reading-highlight: #ffd85b3d;
+  --color-reading-line: #946b16;
+  --color-paper-grain: #183f3b12;
   --color-logo-ground: #fff9ec;
   --control-hit: 44px;
 }
@@ -57,6 +60,7 @@
     --color-mint: #284638; --color-coral-paper: #63483c;
     --color-error: #ffb7a4; --color-disabled: #33453e; --color-disabled-ink: #b3c6b8;
     --color-shadow: #020d0980; --color-reading-glow: #ffd15c;
+    --color-paper-grain: #f4f1e712;
   }
 }
 @media (prefers-contrast: more) {

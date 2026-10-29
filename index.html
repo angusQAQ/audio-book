@@ -27,12 +27,14 @@
     </section>
     <section class="library-section" aria-labelledby="shelf-title">
       <div class="library-heading"><div><h2 id="shelf-title">我的書架 <span id="book-count"></span></h2><p>想聽哪一個故事？</p></div><label class="search-field"><span data-icon="search"></span><span class="sr-only">搜尋書名或作者</span><input id="book-search" type="search" placeholder="搜尋書名或作者" autocomplete="off"></label></div>
+      <div class="shelf-filters" role="group" aria-label="書籍分類"><button data-shelf="active" aria-pressed="true">閱讀中 <span id="active-count">0</span></button><button data-shelf="archived" aria-pressed="false"><span data-icon="archive"></span>已封存 <span id="archived-count">0</span></button></div>
+      <p class="archive-help">封存只整理這個瀏覽器的書架，原書與閱讀進度都會保留。</p>
+      <p id="library-status" class="library-status" role="status" aria-live="polite"></p>
       <div id="books-grid" class="bookshelf-grid"></div>
       <div id="empty-search" class="empty-search" hidden><span data-icon="search"></span><h3>還沒有找到這本書</h3><p>試試書名或作者，或清除搜尋看看整個書架。</p><button id="clear-search" class="quiet-button">顯示全部書籍</button></div>
       <div id="shelf-rail" class="shelf-rail" aria-hidden="true"></div>
       <p class="shelf-future">更多故事，會慢慢住進這個書架。</p>
     </section>
-    <footer class="library-footer"><span class="footer-mark" aria-hidden="true">點</span><span>一本書，一點聲音，一起閱讀。</span><a href="https://github.com/angusQAQ/audio-book" target="_blank" rel="noopener noreferrer">在 GitHub 看更新</a></footer>
   </main>
   <main id="reader-view" hidden>
     <h1 id="reader-title" class="sr-only">我們的好老師</h1>
