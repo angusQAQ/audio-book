@@ -46,6 +46,13 @@ def validate(require_edge=False):
             if require_edge:
                 assert asset['voice'] == 'zh-HK-HiuMaanNeural' and asset['rate'] == '-12%' and asset['engine'] == 'edge-tts'
                 assert hashlib.sha256(path.read_bytes()).hexdigest() == asset['sha256']
+                assert asset.get('timingSchema') == 1 and asset.get('boundaries'), 'Real speech word timestamps missing'
+                previous = -1
+                for boundary in asset['boundaries']:
+                    assert 0 <= boundary['start'] < boundary['end'] <= len(asset['text'])
+                    assert boundary['time'] >= previous and boundary['duration'] > 0
+                    assert boundary['time'] + boundary['duration'] <= asset['duration'] + 0.5
+                    previous = boundary['time']
             audio_count += 1
     print(f'PASS: original PDF, 11 original pages, {audio_count} decodable MP3 files, {references} word/character mappings, matching JSON/JS.' + (' Requested Edge voice verified.' if require_edge else ''))
 

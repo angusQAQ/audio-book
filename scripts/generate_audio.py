@@ -7,6 +7,8 @@ if any download, TLS verification, or MP3 validation fails.
 import argparse
 import asyncio
 import hashlib
+import html
+import unicodedata
 import json
 import os
 from pathlib import Path
@@ -19,6 +21,7 @@ import edge_tts
 ROOT = Path(__file__).resolve().parents[1]
 VOICE = 'zh-HK-HiuMaanNeural'
 RATE = '-12%'
+TIMING_SCHEMA = 1
 
 
 def duration(path):
@@ -35,8 +38,41 @@ def duration(path):
 def key_for(asset):
     return hashlib.sha256(json.dumps({
         'text': asset['text'], 'voice': VOICE, 'rate': RATE,
-        'edge_tts': edge_tts.__version__,
+        'edge_tts': edge_tts.__version__, 'word_boundary_schema': TIMING_SCHEMA,
     }, ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:24]
+
+
+def aligned_boundaries(text, events):
+    """Map real Edge word timestamps to original Unicode positions, ignoring punctuation."""
+    normalized = []
+    positions = []
+    for index, character in enumerate(text):
+        for letter in unicodedata.normalize('NFKC', character).casefold():
+            if letter.isalnum():
+                normalized.append(letter)
+                positions.append(index)
+    source = ''.join(normalized)
+    cursor = 0
+    boundaries = []
+    for event in events:
+        if event.get('type') != 'WordBoundary':
+            continue
+        token = ''.join(letter for letter in unicodedata.normalize('NFKC', html.unescape(event['text'])).casefold() if letter.isalnum())
+        if not token:
+            continue
+        start = source.find(token, cursor)
+        if start < 0:
+            raise ValueError('Edge word boundary cannot be aligned to its source text')
+        end = start + len(token)
+        boundaries.append({
+            'start': positions[start], 'end': positions[end - 1] + 1,
+            'time': round(event['offset'] / 10_000_000, 6),
+            'duration': round(event['duration'] / 10_000_000, 6),
+        })
+        cursor = end
+    if not boundaries or cursor != len(source):
+        raise ValueError('Edge word timestamps do not cover the spoken source')
+    return boundaries
 
 
 async def generate(jobs):
@@ -59,7 +95,7 @@ async def generate(jobs):
             valid = False
             if path.exists() and receipt.exists():
                 stamp = json.loads(receipt.read_text())
-                valid = stamp.get('sha256') == hashlib.sha256(path.read_bytes()).hexdigest()
+                valid = stamp.get('sha256') == hashlib.sha256(path.read_bytes()).hexdigest() and stamp.get('timingSchema') == TIMING_SCHEMA and bool(stamp.get('boundaries'))
                 if valid:
                     try:
                         duration(path)
@@ -68,21 +104,26 @@ async def generate(jobs):
             if not valid:
                 for attempt in range(4):
                     partial = path.with_suffix('.partial.mp3')
+                    metadata = path.with_suffix('.partial.jsonl')
                     try:
                         communicate = edge_tts.Communicate(
                             asset['text'], voice=VOICE, rate=RATE, proxy=proxy,
-                            connect_timeout=20, receive_timeout=60,
+                            connect_timeout=20, receive_timeout=60, boundary='WordBoundary',
                         )
-                        await communicate.save(str(partial))
+                        await communicate.save(str(partial), str(metadata))
+                        timings = aligned_boundaries(asset['text'], [json.loads(line) for line in metadata.read_text().splitlines() if line.strip()])
+                        metadata.unlink(missing_ok=True)
                         seconds = duration(partial)
                         partial.replace(path)
                         receipt.write_text(json.dumps({
                             'sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
                             'duration': seconds, 'voice': VOICE, 'rate': RATE,
+                            'timingSchema': TIMING_SCHEMA, 'boundaries': timings,
                         }))
                         break
                     except Exception as error:
                         partial.unlink(missing_ok=True)
+                        metadata.unlink(missing_ok=True)
                         if attempt == 3 or getattr(error, 'status', None) in (401, 403):
                             raise
                         await asyncio.sleep(2 ** (attempt + 1))
@@ -92,6 +133,8 @@ async def generate(jobs):
                 'engine': 'edge-tts', 'engineVersion': edge_tts.__version__,
                 'sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
                 'duration': duration(path),
+                'timingSchema': TIMING_SCHEMA,
+                'boundaries': json.loads(receipt.read_text())['boundaries'],
             })
             for name in ['ttsInput', 'jyutping', 'profile']:
                 asset.pop(name, None)

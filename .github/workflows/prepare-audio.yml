@@ -1,6 +1,9 @@
 name: Prepare and verify Cantonese MP3
 on:
   workflow_dispatch:
+  push:
+    branches: [apple-reader]
+    paths: ['scripts/generate_audio.py', '.github/workflows/prepare-audio.yml']
 permissions:
   contents: write
 concurrency:
@@ -35,8 +38,8 @@ jobs:
       - uses: actions/cache@v5
         with:
           path: .cache/edge-tts
-          key: edge-tts-hiu-maan-12-v1-${{ hashFiles('library.json', 'requirements.txt') }}
-          restore-keys: edge-tts-hiu-maan-12-v1-
+          key: edge-tts-hiu-maan-12-words-v2-${{ hashFiles('library.json', 'requirements.txt') }}
+          restore-keys: edge-tts-hiu-maan-12-words-v2-
       - name: Generate requested voice
         run: python scripts/generate_audio.py --jobs 3
       - name: Validate original PDF, all MP3 files and browser behavior
