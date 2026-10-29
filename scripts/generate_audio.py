@@ -134,6 +134,8 @@ if __name__ == '__main__':
         # Safe public CI diagnosis: never include URLs, headers or environment values.
         diagnosis = f"{type(error).__name__}; HTTP status={getattr(error, 'status', 'not supplied')}"
         print('Speech generation failed: ' + diagnosis, flush=True)
+        if os.environ.get('GITHUB_ACTIONS') == 'true':
+            print('::error title=Speech generation::' + diagnosis, flush=True)
         summary = os.environ.get('GITHUB_STEP_SUMMARY')
         if summary:
             with open(summary, 'a') as report:

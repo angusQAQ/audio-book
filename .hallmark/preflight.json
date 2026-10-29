@@ -1,0 +1,21 @@
+{
+  "scanned": "2026-10-29",
+  "findings": {
+    "framework": "static HTML, CSS and JavaScript from original gh-pages e614916",
+    "fonts": "incumbent system Chinese sans and serif; replacement self-hosted Noto Sans TC",
+    "palette": "user requests storybook playground; Hum paper palette adapted to yellow, dark teal and coral",
+    "motion": "glyph glow and state-driven voice wave; reader entrance animation removed for reliable contrast"
+  },
+  "preserve": [
+    "all 11 original PDF page image streams",
+    "original uploaded PDF SHA256",
+    "764 audio units and sentence/word/character mappings",
+    "reading progress, navigation, controls and local voice options"
+  ],
+  "introduce": [
+    "maintainable static source/assets",
+    "original PDF link",
+    "storybook paper-ticket world",
+    "pre-generated Edge speech pipeline with strict publication gate"
+  ]
+}

@@ -1,0 +1,28 @@
+[
+ {
+  "mode": "redesign",
+  "depth": "full",
+  "scope": "app",
+  "shape": "app screen",
+  "theme": "hum",
+  "axes": "light/rounded-sans/chromatic-yellow",
+  "hero": "reading invitation with original book spread",
+  "nav": "kept top bar",
+  "footer": "quiet product close with GitHub source link",
+  "imagery": "original textbook page streams",
+  "photos": [],
+  "sections": [
+   "library",
+   "reader"
+  ],
+  "signature": "original book on a reading ticket, glyph glow on playback",
+  "waived": [
+   "39b: book-cover content is an oversized reading action"
+  ],
+  "prompt": "Cantonese point-reading library in user-requested storybook playground style",
+  "entry": "index.html",
+  "fingerprint": "our-good-teacher-paper-ticket",
+  "review": "fresh finish reviewer: ship for visual and UX scope; requested Edge audio and deployment remain pending",
+  "date": "2026-10-29"
+ }
+]

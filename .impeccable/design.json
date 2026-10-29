@@ -1,0 +1,468 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T08:18:41.637508Z",
+  "title": "Design System: 點點書房",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "Sunny Ticket",
+        "tonalRamp": [
+          "oklch(15% 0.0362 91.74)",
+          "oklch(27% 0.0723 91.74)",
+          "oklch(39% 0.1085 91.74)",
+          "oklch(51% 0.1447 91.74)",
+          "oklch(63% 0.1447 91.74)",
+          "oklch(75% 0.1157 91.74)",
+          "oklch(87% 0.0651 91.74)",
+          "oklch(95% 0.0217 91.74)"
+        ]
+      },
+      "accent-deep": {
+        "role": "primary",
+        "displayName": "Ochre Perforation",
+        "tonalRamp": [
+          "oklch(15% 0.0328 81.60)",
+          "oklch(27% 0.0655 81.60)",
+          "oklch(39% 0.0983 81.60)",
+          "oklch(51% 0.1311 81.60)",
+          "oklch(63% 0.1311 81.60)",
+          "oklch(75% 0.1049 81.60)",
+          "oklch(87% 0.0590 81.60)",
+          "oklch(95% 0.0197 81.60)"
+        ]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Deep Teal Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0112 186.28)",
+          "oklch(27% 0.0223 186.28)",
+          "oklch(39% 0.0335 186.28)",
+          "oklch(51% 0.0446 186.28)",
+          "oklch(63% 0.0446 186.28)",
+          "oklch(75% 0.0357 186.28)",
+          "oklch(87% 0.0201 186.28)",
+          "oklch(95% 0.0067 186.28)"
+        ]
+      },
+      "ink-2": {
+        "role": "primary",
+        "displayName": "Soft Teal Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0119 179.62)",
+          "oklch(27% 0.0238 179.62)",
+          "oklch(39% 0.0356 179.62)",
+          "oklch(51% 0.0475 179.62)",
+          "oklch(63% 0.0475 179.62)",
+          "oklch(75% 0.0380 179.62)",
+          "oklch(87% 0.0214 179.62)",
+          "oklch(95% 0.0071 179.62)"
+        ]
+      },
+      "accent-2": {
+        "role": "secondary",
+        "displayName": "Reading Teal",
+        "tonalRamp": [
+          "oklch(15% 0.0162 180.73)",
+          "oklch(27% 0.0324 180.73)",
+          "oklch(39% 0.0486 180.73)",
+          "oklch(51% 0.0649 180.73)",
+          "oklch(63% 0.0649 180.73)",
+          "oklch(75% 0.0519 180.73)",
+          "oklch(87% 0.0292 180.73)",
+          "oklch(95% 0.0097 180.73)"
+        ]
+      },
+      "accent-3": {
+        "role": "tertiary",
+        "displayName": "Coral Bookmark",
+        "tonalRamp": [
+          "oklch(15% 0.0345 36.05)",
+          "oklch(27% 0.0689 36.05)",
+          "oklch(39% 0.1034 36.05)",
+          "oklch(51% 0.1379 36.05)",
+          "oklch(63% 0.1379 36.05)",
+          "oklch(75% 0.1103 36.05)",
+          "oklch(87% 0.0621 36.05)",
+          "oklch(95% 0.0207 36.05)"
+        ]
+      },
+      "mint": {
+        "role": "secondary",
+        "displayName": "Mint Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0095 126.75)",
+          "oklch(27% 0.0191 126.75)",
+          "oklch(39% 0.0286 126.75)",
+          "oklch(51% 0.0382 126.75)",
+          "oklch(63% 0.0382 126.75)",
+          "oklch(75% 0.0305 126.75)",
+          "oklch(87% 0.0172 126.75)",
+          "oklch(95% 0.0057 126.75)"
+        ]
+      },
+      "coral-paper": {
+        "role": "tertiary",
+        "displayName": "Blush Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0089 49.22)",
+          "oklch(27% 0.0178 49.22)",
+          "oklch(39% 0.0266 49.22)",
+          "oklch(51% 0.0355 49.22)",
+          "oklch(63% 0.0355 49.22)",
+          "oklch(75% 0.0284 49.22)",
+          "oklch(87% 0.0160 49.22)",
+          "oklch(95% 0.0053 49.22)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Cream Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0046 86.15)",
+          "oklch(27% 0.0091 86.15)",
+          "oklch(39% 0.0137 86.15)",
+          "oklch(51% 0.0183 86.15)",
+          "oklch(63% 0.0183 86.15)",
+          "oklch(75% 0.0146 86.15)",
+          "oklch(87% 0.0082 86.15)",
+          "oklch(95% 0.0027 86.15)"
+        ]
+      },
+      "paper-2": {
+        "role": "neutral",
+        "displayName": "Recessed Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0067 85.67)",
+          "oklch(27% 0.0135 85.67)",
+          "oklch(39% 0.0202 85.67)",
+          "oklch(51% 0.0269 85.67)",
+          "oklch(63% 0.0269 85.67)",
+          "oklch(75% 0.0215 85.67)",
+          "oklch(87% 0.0121 85.67)",
+          "oklch(95% 0.0040 85.67)"
+        ]
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "Clean Card Stock",
+        "tonalRamp": [
+          "oklch(15% 0.0028 89.72)",
+          "oklch(27% 0.0055 89.72)",
+          "oklch(39% 0.0083 89.72)",
+          "oklch(51% 0.0110 89.72)",
+          "oklch(63% 0.0110 89.72)",
+          "oklch(75% 0.0088 89.72)",
+          "oklch(87% 0.0050 89.72)",
+          "oklch(95% 0.0017 89.72)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Quiet Green",
+        "tonalRamp": [
+          "oklch(15% 0.0068 152.90)",
+          "oklch(27% 0.0136 152.90)",
+          "oklch(39% 0.0204 152.90)",
+          "oklch(51% 0.0272 152.90)",
+          "oklch(63% 0.0272 152.90)",
+          "oklch(75% 0.0217 152.90)",
+          "oklch(87% 0.0122 152.90)",
+          "oklch(95% 0.0041 152.90)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Paper Rule",
+        "tonalRamp": [
+          "oklch(15% 0.0091 103.66)",
+          "oklch(27% 0.0182 103.66)",
+          "oklch(39% 0.0272 103.66)",
+          "oklch(51% 0.0363 103.66)",
+          "oklch(63% 0.0363 103.66)",
+          "oklch(75% 0.0290 103.66)",
+          "oklch(87% 0.0163 103.66)",
+          "oklch(95% 0.0054 103.66)"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "Focus Teal",
+        "tonalRamp": [
+          "oklch(15% 0.0176 187.05)",
+          "oklch(27% 0.0352 187.05)",
+          "oklch(39% 0.0527 187.05)",
+          "oklch(51% 0.0703 187.05)",
+          "oklch(63% 0.0703 187.05)",
+          "oklch(75% 0.0562 187.05)",
+          "oklch(87% 0.0316 187.05)",
+          "oklch(95% 0.0105 187.05)"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Error Rust",
+        "tonalRamp": [
+          "oklch(15% 0.0343 30.91)",
+          "oklch(27% 0.0686 30.91)",
+          "oklch(39% 0.1029 30.91)",
+          "oklch(51% 0.1372 30.91)",
+          "oklch(63% 0.1372 30.91)",
+          "oklch(75% 0.1097 30.91)",
+          "oklch(87% 0.0617 30.91)",
+          "oklch(95% 0.0206 30.91)"
+        ]
+      },
+      "disabled": {
+        "role": "neutral",
+        "displayName": "Disabled Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0044 99.62)",
+          "oklch(27% 0.0088 99.62)",
+          "oklch(39% 0.0132 99.62)",
+          "oklch(51% 0.0176 99.62)",
+          "oklch(63% 0.0176 99.62)",
+          "oklch(75% 0.0141 99.62)",
+          "oklch(87% 0.0079 99.62)",
+          "oklch(95% 0.0026 99.62)"
+        ]
+      },
+      "disabled-ink": {
+        "role": "neutral",
+        "displayName": "Disabled Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0068 143.19)",
+          "oklch(27% 0.0137 143.19)",
+          "oklch(39% 0.0205 143.19)",
+          "oklch(51% 0.0274 143.19)",
+          "oklch(63% 0.0274 143.19)",
+          "oklch(75% 0.0219 143.19)",
+          "oklch(87% 0.0123 143.19)",
+          "oklch(95% 0.0041 143.19)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Desktop reading invitation."
+      },
+      "display-compact": {
+        "displayName": "Display Compact",
+        "purpose": "Phone reading invitation at 580px and below."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Shelf section heading."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Book titles on desktop."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Regular interface copy."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Controls, metadata and hints."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Counts, status and footer text."
+      }
+    },
+    "shadows": [
+      {
+        "name": "page-card",
+        "value": "3px 9px 22px -10px #234f3a24",
+        "purpose": "Original page backing."
+      },
+      {
+        "name": "primary-action",
+        "value": "2px 6px 12px -5px #234f3a24",
+        "purpose": "Primary reading action."
+      },
+      {
+        "name": "displayed-book",
+        "value": "6px 13px 20px -9px #234f3a24",
+        "purpose": "Original book spread on the shelf invitation."
+      },
+      {
+        "name": "cover",
+        "value": "4px 7px 12px -4px #234f3a24",
+        "purpose": "Constructed cover with source thumbnail."
+      },
+      {
+        "name": "settings",
+        "value": "3px 10px 32px #234f3a24",
+        "purpose": "Floating voice settings panel."
+      }
+    ],
+    "motion": [
+      {
+        "name": "colour-state",
+        "value": "120ms ease",
+        "purpose": "Button, link, input, select and summary colour transitions."
+      },
+      {
+        "name": "cover-hover",
+        "value": "220ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Cover rotation and slight lift on hover."
+      },
+      {
+        "name": "page-arrival",
+        "value": "220ms cubic-bezier(.2,.7,.2,1)",
+        "purpose": "Page-change opacity and 16px horizontal arrival."
+      },
+      {
+        "name": "reading-glow",
+        "value": "400ms ease-out",
+        "purpose": "Printed-word glow arrival."
+      },
+      {
+        "name": "voice-wave",
+        "value": "750ms ease-in-out infinite alternate",
+        "purpose": "Playing-only wave bars, with 150ms stagger on even bars."
+      },
+      {
+        "name": "progress",
+        "value": "120ms linear",
+        "purpose": "Reading-progress scale transition."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "shelf-medium",
+        "value": "850px"
+      },
+      {
+        "name": "compact",
+        "value": "580px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary reading action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Open or continue a book.",
+      "html": "<button class=\"ds-primary\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 5C8 2 4 3 2 4v15c4-1 7 0 10 2 3-2 6-3 10-2V4c-2-1-6-2-10 1Zm0 0v16\"/></svg><span>開始閱讀</span></button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-sm);padding:var(--space-md) var(--space-lg);min-height:54px;border:0;border-radius:var(--radius-stock);background:var(--color-ink);color:var(--color-paper);font-weight:700;font-size:var(--text-sm);box-shadow:2px 6px 12px -5px var(--color-shadow);cursor:pointer;font-family:var(--font-body);transition:background-color var(--dur-micro) ease,color var(--dur-micro) ease;}.ds-primary:hover{background:var(--color-ink-2);}.ds-primary svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}.ds-primary:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px;transition:none;}.ds-primary:active:not(:disabled){transform:translateY(1px);} .ds-primary:disabled{background:var(--color-disabled);color:var(--color-disabled-ink);cursor:not-allowed;box-shadow:none;} @media(prefers-reduced-motion:reduce){.ds-primary{transition:none;}.ds-primary:active:not(:disabled){transform:none;}}"
+    },
+    {
+      "name": "Quiet action",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Reset search or offer a quiet secondary action.",
+      "html": "<button class=\"ds-quiet\">顯示全部書籍</button>",
+      "css": ".ds-quiet{min-height:44px;padding:var(--space-sm) var(--space-lg);background:var(--color-card);color:var(--color-ink);border:1px solid var(--color-rule);border-radius:var(--radius-stock);cursor:pointer;font-family:var(--font-body);transition:background-color var(--dur-micro) ease,color var(--dur-micro) ease;}.ds-quiet:hover{background:var(--color-mint);}.ds-quiet:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px;transition:none;}.ds-quiet:active:not(:disabled){transform:translateY(1px);} .ds-quiet:disabled{background:var(--color-disabled);color:var(--color-disabled-ink);cursor:not-allowed;box-shadow:none;} @media(prefers-reduced-motion:reduce){.ds-quiet{transition:none;}.ds-quiet:active:not(:disabled){transform:none;}}"
+    },
+    {
+      "name": "Page arrow",
+      "kind": "button",
+      "refersTo": "button-icon",
+      "description": "A labelled icon control with a 44px hit area.",
+      "html": "<button class=\"ds-icon\" aria-label=\"下一頁\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m10 5 7 7-7 7\"/></svg></button>",
+      "css": ".ds-icon{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;background:none;color:var(--color-ink);border-radius:12px;padding:var(--space-xs);cursor:pointer;font-family:var(--font-body);transition:background-color var(--dur-micro) ease,color var(--dur-micro) ease;}.ds-icon svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}.ds-icon:hover:not(:disabled){background:var(--color-mint);}.ds-icon:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px;transition:none;}.ds-icon:active:not(:disabled){transform:translateY(1px);} .ds-icon:disabled{background:var(--color-disabled);color:var(--color-disabled-ink);cursor:not-allowed;box-shadow:none;} @media(prefers-reduced-motion:reduce){.ds-icon{transition:none;}.ds-icon:active:not(:disabled){transform:none;}}"
+    },
+    {
+      "name": "Transport action",
+      "kind": "button",
+      "refersTo": "button-transport",
+      "description": "Keep playback controls recognisable with icon and text.",
+      "html": "<button class=\"ds-transport\" aria-label=\"暫停朗讀\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M8 5v14M16 5v14\"/></svg><span>暫停</span></button>",
+      "css": ".ds-transport{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:var(--space-2xs);width:48px;min-height:64px;border:0;background:none;font-size:var(--text-xs);color:var(--color-ink-2);border-radius:12px;padding:var(--space-2xs);cursor:pointer;font-family:var(--font-body);transition:background-color var(--dur-micro) ease,color var(--dur-micro) ease;}.ds-transport svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}.ds-transport:hover:not(:disabled){background:var(--color-mint);}.ds-transport:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px;transition:none;}.ds-transport:active:not(:disabled){transform:translateY(1px);} .ds-transport:disabled{background:var(--color-disabled);color:var(--color-disabled-ink);cursor:not-allowed;box-shadow:none;} @media(prefers-reduced-motion:reduce){.ds-transport{transition:none;}.ds-transport:active:not(:disabled){transform:none;}}@media(max-width:580px){.ds-transport{width:40px;font-size:11px;}.ds-transport svg{width:20px;}}"
+    },
+    {
+      "name": "Book search",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "Search by title or author.",
+      "html": "<label class=\"ds-search\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M16 16l5 5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z\"/></svg><input type=\"search\" aria-label=\"搜尋書名或作者\" placeholder=\"搜尋書名或作者\" autocomplete=\"off\"></label>",
+      "css": ".ds-search{position:relative;display:inline-flex;align-items:center;color:var(--color-muted);}.ds-search svg{position:absolute;left:12px;pointer-events:none;width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}.ds-search input{width:260px;min-height:48px;border:1px solid var(--color-muted);border-radius:var(--radius-stock);background:var(--color-card);color:var(--color-ink);padding:var(--space-sm) var(--space-md) var(--space-sm) var(--space-xl);font-size:var(--text-sm);caret-color:var(--color-ink);font-family:var(--font-body);transition:background-color var(--dur-micro) ease,color var(--dur-micro) ease;}.ds-search input::placeholder{color:var(--color-muted);opacity:1;}.ds-search input:focus-visible{outline:3px solid var(--color-focus);outline-offset:3px;}@media(max-width:580px){.ds-search,.ds-search input{width:100%;}}@media(prefers-reduced-motion:reduce){.ds-search input{transition:none;}}"
+    },
+    {
+      "name": "Page select",
+      "kind": "input",
+      "refersTo": "select-page",
+      "description": "Use a native select for direct page navigation.",
+      "html": "<label class=\"ds-page\"><select aria-label=\"跳到頁數\"><option>3</option><option>4</option><option>5</option></select><span>/ 11</span></label>",
+      "css": ".ds-page{display:inline-flex;align-items:center;gap:var(--space-xs);white-space:nowrap;color:var(--color-ink);font-size:var(--text-sm);font-family:var(--font-body);}.ds-page select{min-height:44px;min-width:56px;max-width:100%;border:1px solid var(--color-rule);padding:var(--space-xs);background:var(--color-card);color:inherit;border-radius:10px;font-size:var(--text-sm);font-family:var(--font-body);transition:background-color var(--dur-micro) ease,color var(--dur-micro) ease;}.ds-page select:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px;transition:none;}@media(prefers-reduced-motion:reduce){.ds-page select{transition:none;}}"
+    },
+    {
+      "name": "Shelf navigation",
+      "kind": "nav",
+      "refersTo": "nav-shelf",
+      "description": "Persistent return to the bookshelf.",
+      "html": "<button class=\"ds-shelf\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 3v18h18M7 5v11M11 3v13M15 6l3 10M3 17h18\"/></svg><span>我的書架</span></button>",
+      "css": ".ds-shelf{display:inline-flex;align-items:center;gap:var(--space-xs);border:1px solid var(--color-rule);background:var(--color-card);color:var(--color-ink);border-radius:var(--radius-pill);padding:var(--space-sm) var(--space-md);font-size:var(--text-sm);min-height:44px;cursor:pointer;font-family:var(--font-body);transition:background-color var(--dur-micro) ease,color var(--dur-micro) ease;}.ds-shelf svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}.ds-shelf:hover{background:var(--color-mint);}.ds-shelf:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px;transition:none;}.ds-shelf:active:not(:disabled){transform:translateY(1px);} .ds-shelf:disabled{background:var(--color-disabled);color:var(--color-disabled-ink);cursor:not-allowed;box-shadow:none;} @media(prefers-reduced-motion:reduce){.ds-shelf{transition:none;}.ds-shelf:active:not(:disabled){transform:none;}}@media(max-width:580px){.ds-shelf{padding:var(--space-xs) var(--space-sm);font-size:var(--text-xs);}}"
+    },
+    {
+      "name": "Reading mode group",
+      "kind": "chip",
+      "refersTo": "mode-option",
+      "description": "Three pressed-state options for sentence, word and character reading.",
+      "html": "<div class=\"ds-modes\" role=\"group\" aria-label=\"點讀方式\"><button aria-pressed=\"true\">句子</button><button aria-pressed=\"false\">詞語</button><button aria-pressed=\"false\">單字</button></div>",
+      "css": ".ds-modes{display:inline-flex;align-items:center;padding:var(--space-2xs);background:var(--color-paper-2);border-radius:var(--radius-stock);gap:var(--space-2xs);}.ds-modes button{border:0;padding:var(--space-xs) var(--space-md);min-height:44px;background:none;border-radius:10px;font-size:var(--text-sm);color:var(--color-ink-2);cursor:pointer;font-family:var(--font-body);transition:background-color var(--dur-micro) ease,color var(--dur-micro) ease;}.ds-modes button[aria-pressed=\"true\"]{background:var(--color-ink);color:var(--color-paper);}.ds-modes button:hover:not([aria-pressed=\"true\"]){background:var(--color-mint);}.ds-modes button:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px;transition:none;}.ds-modes button:active{transform:translateY(1px);}@media(max-width:580px){.ds-modes button{padding-inline:var(--space-sm);}}@media(prefers-reduced-motion:reduce){.ds-modes button{transition:none;}.ds-modes button:active{transform:none;}}"
+    },
+    {
+      "name": "Shelf card details",
+      "kind": "card",
+      "refersTo": "shelf-card",
+      "description": "The text-and-action portion of the mint bookshelf card; original artwork remains a content asset in the full app.",
+      "html": "<article class=\"ds-card\"><div><h3>我們的好老師</h3><p>宋詒瑞 著　11 頁</p></div><button class=\"ds-primary\">開始閱讀</button></article>",
+      "css": ".ds-card{display:flex;align-items:center;justify-content:space-between;gap:var(--space-xl);padding:var(--space-lg) var(--space-xl);background:var(--color-mint);color:var(--color-ink);border-radius:var(--radius-card);font-family:var(--font-body);}.ds-card h3{margin:0 0 var(--space-xs);font-size:var(--text-xl);font-weight:700;line-height:1.5;}.ds-card p{margin:0;color:var(--color-ink-2);font-size:var(--text-sm);line-height:1.8;}.ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-sm);padding:var(--space-md) var(--space-lg);min-height:54px;border:0;border-radius:var(--radius-stock);background:var(--color-ink);color:var(--color-paper);font-weight:700;font-size:var(--text-sm);box-shadow:2px 6px 12px -5px var(--color-shadow);cursor:pointer;font-family:var(--font-body);transition:background-color var(--dur-micro) ease,color var(--dur-micro) ease;}.ds-primary:hover{background:var(--color-ink-2);}.ds-primary svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}.ds-primary:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px;transition:none;}.ds-primary:active:not(:disabled){transform:translateY(1px);} .ds-primary:disabled{background:var(--color-disabled);color:var(--color-disabled-ink);cursor:not-allowed;box-shadow:none;} @media(prefers-reduced-motion:reduce){.ds-primary{transition:none;}.ds-primary:active:not(:disabled){transform:none;}}@media(max-width:580px){.ds-card{flex-wrap:wrap;gap:var(--space-md);padding:var(--space-lg) var(--space-md);}.ds-card h3{font-size:var(--text-lg);}.ds-card p{font-size:var(--text-xs);}}"
+    },
+    {
+      "name": "Voice settings panel",
+      "kind": "custom",
+      "refersTo": "settings-panel",
+      "description": "A paper popover with native voice and speed fields.",
+      "html": "<section class=\"ds-settings\"><label for=\"ds-voice\">朗讀聲音</label><select id=\"ds-voice\"><option>內置粵語（預製 MP3）</option></select><p>預設播放內置粵語 MP3，不需裝置語音。下方可調整速度，也可選擇裝置的粵語聲音。</p><div class=\"ds-rate-heading\"><label for=\"ds-rate\">朗讀速度</label><output for=\"ds-rate\">1.00 倍</output></div><input id=\"ds-rate\" type=\"range\" min=\"0.75\" max=\"1.25\" step=\"0.05\" value=\"1\"><div class=\"ds-rate-labels\"><span>慢一點</span><span>正常</span><span>快一點</span></div></section>",
+      "css": ".ds-settings{width:300px;max-width:calc(100dvw - 24px);padding:var(--space-lg);background:var(--color-card);color:var(--color-ink);border-radius:18px;box-shadow:3px 10px 32px var(--color-shadow);font-size:var(--text-sm);font-family:var(--font-body);}.ds-settings>label{display:block;margin-bottom:var(--space-sm);font-weight:700;}.ds-settings select{width:100%;min-height:44px;max-width:100%;border:1px solid var(--color-rule);padding:var(--space-xs);background:var(--color-card);color:inherit;border-radius:10px;font-size:var(--text-sm);font-family:var(--font-body);transition:background-color var(--dur-micro) ease,color var(--dur-micro) ease;}.ds-settings p{margin:var(--space-sm) 0 var(--space-lg);color:var(--color-muted);line-height:1.8;font-size:var(--text-xs);}.ds-rate-heading,.ds-rate-labels{display:flex;justify-content:space-between;align-items:center;gap:var(--space-xs);}.ds-rate-heading{margin-bottom:var(--space-sm);}.ds-rate-heading output{font-variant-numeric:tabular-nums;}.ds-settings input{width:100%;margin:0;accent-color:var(--color-accent-2);cursor:pointer;min-height:24px;}.ds-rate-labels{font-size:var(--text-xs);color:var(--color-muted);}.ds-settings select:focus-visible,.ds-settings input:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px;transition:none;}@media(prefers-reduced-motion:reduce){.ds-settings select{transition:none;}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "繪本遊樂園的閱讀入場券",
+    "overview": "A welcoming storybook playground made from warm paper, yellow reading tickets, dark teal ink and coral bookmarks. Original book artwork supplies the illustration and colour; the interface gives it a tactile paper frame and clear reading actions.\n\nThe shelf is spacious and inviting. Opening a book replaces that invitation with a quiet, full-height reader: the original page remains intact, familiar controls stay visible, and the selected printed words carry the reading glow. Playfulness lives in the paper materials, book tilt and bookmark shapes.",
+    "keyCharacteristics": [
+      "Warm yellow and cream paper with dark teal text and actions.",
+      "Original book pages lead the imagery.",
+      "Soft corners, fine rules and restrained paper shadows.",
+      "Familiar labelled controls, visible focus and reduced-motion support."
+    ],
+    "rules": [
+      {
+        "name": "The Paper and Ink Rule",
+        "body": "Use warm paper for the canvas and dark teal for readable text, selected controls and primary actions. Yellow belongs to the reading invitation; coral marks book tabs.",
+        "section": "colors"
+      },
+      {
+        "name": "The Original Page Rule",
+        "body": "Keep the original page image and its aspect ratio intact. Align transparent reading targets and glow overlays to the source coordinates rather than rebuilding the printed page as interface text.",
+        "section": "typography"
+      },
+      {
+        "name": "The Paper Lift Rule",
+        "body": "Use soft translucent green shadows to lift books and floating settings. Toolbar controls and the reading dock use flat paper fills and fine borders.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use original book artwork inside paper frames.",
+      "Do use the shared paper, ink, mint and coral roles consistently.",
+      "Do preserve native page, zoom, voice and speed controls alongside labelled reading actions.",
+      "Do keep keyboard focus visible and respect reduced-motion preferences.",
+      "Do adapt the shelf and reader controls to the compact layout."
+    ],
+    "donts": [
+      "Don't recolour, crop away or rewrite the original reading page.",
+      "Don't place decorative paper effects over printed text or its reading targets.",
+      "Don't turn the quiet reader toolbar into a second illustrated hero.",
+      "Don't introduce a new display font or extra accent palette without an approved system change."
+    ]
+  }
+}

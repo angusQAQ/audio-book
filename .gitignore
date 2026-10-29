@@ -11,3 +11,4 @@ playwright-report/
 .hallmark/compare.html
 __pycache__/
 *.pyc
+.hallmark/salt
