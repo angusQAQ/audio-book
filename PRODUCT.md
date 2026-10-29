@@ -12,7 +12,7 @@ web
 現有 GitHub Pages 網站：https://angusqaq.github.io/audio-book/ 。所有程式與資產變更透過 angusQAQ/audio-book 的 Git 提交管理，驗證後同步網站。
 
 ## Capabilities and Constraints
-保留 11 頁《我們的好老師》的完整書頁、點讀位置、字形發光、三種點讀模式、翻頁、縮放、閱讀進度、暫停、重聽與語速控制。保留原 PDF，不改寫教材。依使用者後續要求，底部採 Audio Play UI：主要播放／暫停、可拖曳進度、已播／總時間、重聽與停止；首頁按鈕採「兩點聲音、一本打開的書」新 Logo。預製 MP3 指定 edge-tts、zh-HK-HiuMaanNeural、rate=-12%。網站播放毋須即時呼叫語音服務。
+保留 11 頁《我們的好老師》的完整書頁、點讀位置、字形發光、三種點讀模式、翻頁、縮放、閱讀進度、暫停、重聽與語速控制。保留原 PDF，不改寫教材。依使用者後續要求，底部採 Audio Play UI：主要播放／暫停、可拖曳進度、已播／總時間、重聽與停止；首頁按鈕採「兩點聲音、一本打開的書」新 Logo。預製 MP3 指定 edge-tts、zh-HK-HiuMaanNeural、rate=-12%。網站播放毋須即時呼叫語音服務。書頁提供沿書脊翻動的雙向翻頁動畫；連續翻頁可取消上一個動畫，減少動態效果設定改用直接換頁。
 
 ## Brand Commitments
 名稱「點點書房」。依使用者要求，採繪本遊樂園風格，使用 Hallmark、Impeccable 及已安裝 Apple Design skill 的適用設計原則。閱讀模式採精簡圖示工具列，優先保留書頁空間；點讀字詞依真實語音時間發亮。每個可審閱更新階段建立 Git commit 存檔點。

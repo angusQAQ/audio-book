@@ -22,17 +22,19 @@ npm test
 python3 scripts/validate_assets.py
 ```
 
-Playwright 驗證 11 頁 × 三種點讀模式的真實 MP3 播放、發光、播放／暫停／繼續、拖曳跳播與時間顯示、重聽、速度、翻頁、縮放、閱讀記憶、搜尋空狀態、音檔錯誤復原、320–1920px 與 790×730 排版、鍵盤、減少動態，以及 axe 無障礙檢查。資產檢查核對原 PDF SHA-256、所有圖片和點讀映射，並以 ffprobe 解碼檢查全部 MP3。
+Playwright 驗證 11 頁 × 三種點讀模式的真實 MP3 播放、依語音時間逐詞發光、播放／暫停／繼續、拖曳跳播與時間顯示、重聽、速度、雙向翻頁動畫與快速翻頁取消、縮放、閱讀記憶、搜尋空狀態、音檔錯誤復原、320–1920px 與 790×730 排版、精簡圖示工具列、鍵盤、深色／高對比、200% 介面字體、減少動態，以及 axe 無障礙檢查。資產檢查核對原 PDF SHA-256、所有圖片、點讀映射及語音字詞時間，並以 ffprobe 解碼檢查全部 MP3。
 
 ## 指定粵語 MP3
 
 ```sh
-/workspace/.venvs/audio-book/bin/python scripts/generate_audio.py --jobs 3
+/workspace/.venvs/audio-book/bin/python scripts/generate_audio.py --jobs 2
 python3 scripts/validate_assets.py --require-edge
 npm test
 ```
 
-指定 `edge-tts==7.3.1`、`zh-HK-HiuMaanNeural`、`rate=-12%`。文字直接來自 `library.json` 的讀音單位，包含原書的英語句子。`.cache/edge-tts/` 可續傳，每個快取都有內容雜湊與時長驗證；整批成功才更新 `assets/audio/` 與資料索引。舊音檔不會在下載失敗時被取代。網站直接播放已提交的 MP3，預設不使用裝置語音，也不會在點讀時連線語音服務。速度滑桿是相對於預製音檔的播放速度。
+指定 `edge-tts==7.3.1`、`zh-HK-HiuMaanNeural`、`rate=-12%`。文字直接來自 `library.json` 的讀音單位，包含原書的英語句子。同時保存服務提供的 `WordBoundary` 時間，播放器依實際音訊進度讓正在讀的字詞發亮；跳播、暫停與改速後仍跟隨音訊，跨頁續句只標亮目前頁面的原字。
+
+`.cache/edge-tts/` 可續傳，每個快取都有內容雜湊、時長及字詞時間驗證；整批成功才更新 `assets/audio/` 與資料索引。暫時性服務失敗會退避重試，並限制兩個並行請求。Actions 即使遇到服務中斷，亦保留已驗證快取供下次續傳。舊音檔不會在下載失敗時被取代。網站直接播放已提交的 MP3，預設不使用裝置語音，也不會在點讀時連線語音服務。速度滑桿是相對於預製音檔的播放速度。
 
 GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動啟動，先生成及驗證音檔。它生成 MP3、嚴格驗證指定聲音並跑瀏覽器測試，全部通過才將音檔回存同一分支。執行失敗時不部署，不宣稱已生成指定聲音。
 

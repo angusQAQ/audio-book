@@ -302,7 +302,7 @@ The reading invitation is a paper ticket with a large outer curve (32px desktop,
 
 Primary actions are deep teal paper buttons with cream text, bold labels, optional inline SVG and a soft lift. They use the primary component tokens, a minimum height (54px) and a lighter teal hover. The phone invitation action fills its container.
 
-Quiet actions use clean card stock, a fine border and mint hover. Icon buttons use a clear background, square hit area (44px) and mint hover. Secondary replay and stop controls stack a line icon above a text label on desktop, with width (48px) and minimum height (64px). On phones they become horizontal icon-and-label buttons, with automatic width, minimum height (36px), padding (4px 12px) and icons (16px). Disabled buttons use the disabled colour pair and lose their shadow.
+Quiet actions use clean card stock, a fine border and mint hover. Icon buttons use a clear background, square hit area (44px) and mint hover. Secondary replay and stop controls stack a line icon above a text label on desktop, with width (48px) and minimum height (64px). On phones they become horizontal icon-and-label buttons, with automatic width, minimum height (44px), padding (4px 12px) and icons (16px). Disabled buttons use the disabled colour pair and lose their shadow.
 
 Buttons move down slightly (1px) on activation. Global focus is a teal outline (3px) offset by (4px). Normal colour transitions last (120ms). Reduced-motion mode removes animation, transitions and activation transforms.
 
@@ -328,7 +328,9 @@ The home brand uses the transparent generated asset `assets/brand/diandian-logo.
 
 ### Original-page reader
 
-The original page image is the content surface. Transparent targets follow its source coordinates; a separate non-interactive layer renders the printed-word glow. Page changes use a short fade and horizontal arrival (220ms), removed for reduced motion.
+The original page image is the content surface. Transparent targets follow its source coordinates; a separate non-interactive layer renders the printed-word glow. Real Edge WordBoundary timestamps select the currently spoken word from media time, including after seeking or changing speed. Cross-page speech is mapped only to printed characters on the visible page. The glow is steady and clears when playback ends.
+
+Page changes rotate a temporary copy of the original scan around its left binding, over the next page: 420ms with cubic-bezier(.25,.65,.2,1). Previous-page motion reverses the turn. Rapid navigation cancels stale animation and image callbacks; reading targets become available when the correct page is ready. Reduced motion swaps pages directly. The original image files remain intact.
 
 ### Audio player
 

@@ -48,6 +48,12 @@ Regular / compact 共用結構：
 
 特色是直接在原書上點讀、發亮及聆聽，而不是套用原生 iOS 外殼。移除閱讀時重複的品牌與書架文字列，讓已有的原書插圖與閱讀互動承載個性；圖示保持同一筆畫風格並提供名稱。
 
+### 翻頁與朗讀指引
+
+`motion.md › Providing feedback`：「Aim for brevity and precision in feedback animations.」「Let people cancel motion.」翻頁以原頁圖副本沿左側書脊轉動 420ms，前後方向相反；快速連按可取消上一個動畫，停止舊朗讀並確保最後頁圖與點讀位置一致。依 `motion.md › Best practices` 的「Make motion optional.」，減少動態效果時直接換頁。420ms、書脊位置及曲線是本專案的設計判斷，並非 Apple 規定數值。
+
+句子、詞語及單字以 Edge 真實 WordBoundary 資料跟隨音訊；發亮保持穩定，不閃爍。跳播與改速仍以媒體時間計算，跨頁續句不標亮下一頁尚未出現的字。播放結束後清除發光。
+
 ## What works
 
 原 PDF、11 頁完整書頁、句詞字映射、閱讀記憶、翻頁、縮放、預製粵語與 Audio Play UI 均保留。首屏仍可直接選書，閱讀頁預設不自動發聲。
@@ -61,3 +67,5 @@ Regular / compact 共用結構：
 失敗執行回傳 `NoAudioReceived`；安裝工具均通過。edge-tts 上游在 [#512](https://github.com/rany2/edge-tts/issues/512) 有相同的近期間歇性服務回報，不因此判定缺少憑證或改用其他聲音。
 
 修復：並行量降為 2；暫時性失敗最多七次並退避 2／5／10／20／30／45 秒；401／403 及確定的資料錯誤不盲目重試。服務對照探測會分別檢查句子及字詞邊界。有效 MP3 與字詞時間快取在工作失敗時仍保存，下一次可續傳。只有整批音檔與真實時間資料驗證成功，才更新圖書索引並取代網站資產。
+
+[修復後的 GitHub 執行](https://github.com/angusQAQ/audio-book/actions/runs/40867187041) 已完成全部生成、嚴格音訊驗證及瀏覽器測試；機器人提交 `c99df7b` 保存全部 764 個帶時間映射與 749 個去重 MP3。

@@ -330,14 +330,14 @@
         "purpose": "Cover rotation and slight lift on hover."
       },
       {
-        "name": "page-arrival",
-        "value": "220ms cubic-bezier(.2,.7,.2,1)",
-        "purpose": "Page-change opacity and 16px horizontal arrival."
+        "name": "page-turn",
+        "value": "420ms cubic-bezier(.25,.65,.2,1)",
+        "purpose": "Original scan rotates around the left binding; reversed for previous page, cancellable and disabled for reduced motion."
       },
       {
         "name": "reading-glow",
-        "value": "400ms ease-out",
-        "purpose": "Printed-word glow arrival."
+        "value": "steady; actual WordBoundary media timestamps",
+        "purpose": "Highlight the currently spoken printed word without flashing; clear at playback end."
       },
       {
         "name": "voice-wave",

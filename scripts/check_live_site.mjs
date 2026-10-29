@@ -6,7 +6,7 @@ import { chromium } from '@playwright/test';
 const base = new URL(process.env.READING_SITE_URL || 'https://angusqaq.github.io/audio-book/');
 const expected = readFileSync(new URL('../library.json', import.meta.url));
 const expectedHash = createHash('sha256').update(expected).digest('hex');
-const shippedFiles = ['index.html','app.js','styles.css','library.json','assets/brand/diandian-logo.png'].map(path => ({
+const shippedFiles = ['index.html','app.js','styles.css','tokens.css','base.css','library.json','assets/brand/diandian-logo.png'].map(path => ({
   path, hash: createHash('sha256').update(readFileSync(new URL('../' + path, import.meta.url))).digest('hex'),
 }));
 const book = JSON.parse(expected).books[0];
@@ -49,10 +49,18 @@ try {
   assert.equal(pdf.status(), 200);
   assert.equal(createHash('sha256').update(await pdf.body()).digest('hex'), book.source.sha256);
   await page.getByRole('button', { name: `閱讀《${book.title}》`, exact: true }).click();
+  assert.equal(await page.locator('.site-header').isVisible(), false);
+  assert.ok((await page.locator('.reader-tools').boundingBox()).height <= 60);
+  async function chooseMode(mode) {
+    if (!(await page.locator('#mode-settings').evaluate(panel => panel.open))) {
+      await page.locator('#mode-settings > summary').click();
+    }
+    await page.locator(`[data-mode="${mode}"]`).click();
+  }
   await page.locator('#page-select').selectOption('3');
   await page.waitForFunction(() => window.readerDiagnostics().imageReady);
   for (const mode of ['sentence', 'word', 'character']) {
-    await page.locator(`[data-mode="${mode}"]`).click();
+    await chooseMode(mode);
     await page.locator('.hotspot').first().click();
     await page.waitForFunction(() => {
       const state = window.readerDiagnostics();
@@ -60,7 +68,7 @@ try {
     });
     await page.locator('#stop').click();
   }
-  await page.locator('[data-mode="sentence"]').click();
+  await chooseMode('sentence');
   await page.locator('.hotspot').nth(2).click();
   await page.waitForFunction(() => window.readerDiagnostics().state === 'playing');
   await page.locator('#pause').click();
@@ -74,11 +82,26 @@ try {
   await page.locator('#pause').click();
   await page.waitForFunction(() => window.readerDiagnostics().state === 'playing');
   await page.locator('#stop').click();
+  // Seek inside two real word boundaries; the printed words must follow media time.
+  await page.locator('#page-select').selectOption('1');
+  await page.waitForFunction(() => window.readerDiagnostics().imageReady);
+  const block = book.pages[0].blocks[4], asset = book.audio[block.audio];
+  assert.equal(asset.timingSchema, 1);
+  await page.locator('.hotspot').nth(4).click();
+  await page.waitForFunction(() => window.readerDiagnostics().state === 'playing');
+  await page.locator('#pause').click();
+  for (const boundary of [asset.boundaries[0], asset.boundaries[Math.floor(asset.boundaries.length / 2)]]) {
+    await page.locator('#audio-seek').fill(((boundary.time + Math.min(.03, boundary.duration / 3)) / asset.duration * 100).toFixed(1));
+    await page.waitForFunction(text => window.readerDiagnostics().highlightedText === text, block.text.slice(boundary.start, boundary.end));
+  }
+  await page.locator('#stop').click();
   await page.locator('#next-page').click();
-  assert.equal(await page.evaluate(() => window.readerDiagnostics().page), 4);
+  await page.waitForFunction(() => window.readerDiagnostics().imageReady);
+  assert.equal(await page.evaluate(() => window.readerDiagnostics().page), 2);
+  assert.equal(await page.locator('.page-turn').count(), 0);
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   assert.deepEqual(errors, []);
-  console.log(`PASS: published library matches ${expectedHash.slice(0, 12)}; current code/logo hashes, original PDF SHA256, all three MP3 point-reading modes, glyph glow, audio play/seek/time controls, page navigation and phone layout verified.`);
+  console.log(`PASS: published library matches ${expectedHash.slice(0, 12)}; current code/theme/logo hashes, original PDF SHA256, all three MP3 modes, real word-timed glow, audio play/seek/time controls, compact toolbar, page turns and phone layout verified.`);
 } finally {
   await browser.close();
 }
