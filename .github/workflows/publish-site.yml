@@ -103,6 +103,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           reader_commit="$(git rev-parse HEAD)"
+          pages_error_noted=false
           for attempt in $(seq 1 60); do
             pages_result="$(gh api "repos/$GITHUB_REPOSITORY/pages/builds/latest")"
             pages_state="$(jq -r '.status' <<< "$pages_result")"
@@ -112,11 +113,16 @@ jobs:
               exit 0
             fi
             if [ "$pages_commit" = "$reader_commit" ] && [ "$pages_state" = errored ]; then
-              echo "::error title=Permanent website build::GitHub Pages reported a failed build."
-              exit 1
+              # The branch update and build request can create two builds for one SHA.
+              # Pages may briefly report the cancelled build while its replacement runs.
+              if [ "$pages_error_noted" = false ]; then
+                echo "::notice title=Permanent website build::A Pages attempt errored; waiting for the replacement build within the existing five-minute limit."
+                pages_error_noted=true
+              fi
             fi
             sleep 5
           done
+          jq -r '.error.message // empty' <<< "$pages_result"
           echo "::error title=Permanent website build::Timed out waiting for this commit to be published."
           exit 1
       - name: Verify the actual permanent website
