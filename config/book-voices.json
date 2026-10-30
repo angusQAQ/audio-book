@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "model": "openbmb/VoxCPM2",
+  "packageVersion": "2.0.3",
+  "seed": 42,
+  "speedFactor": 0.88,
+  "books": {
+    "our-good-teacher": {
+      "profile": "warm-cantonese-teacher",
+      "label": "親切老師・香港粵語女聲",
+      "locale": "zh-HK",
+      "description": "成年女老師，使用自然香港粵語，聲線溫柔親切，發音清晰準確，情緒自然，節奏舒緩有耐心，適合小學生聆聽校園故事，不唱歌，不誇張演戲。",
+      "sampleBlock": "p3-b6",
+      "reason": "配合《我們的好老師》的校園故事與小學生點讀用途，優先選擇親切、穩定、清楚的敘述聲線。"
+    }
+  }
+}
