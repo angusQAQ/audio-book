@@ -1,0 +1,200 @@
+{
+  "status": "proposed-source-matched; not listening-approved",
+  "entries": [
+    {
+      "displayText": "琪琪",
+      "spokenText": "琪琪",
+      "proposedJyutping": "kei4 kei4",
+      "usageConsideration": "角色姓名；依「琪」條目的唯一候選音擬定。",
+      "sourceCandidateMatched": true,
+      "senseReviewApproved": false,
+      "actualAudioListeningApproved": false,
+      "evidence": [
+        {
+          "character": "琪",
+          "reading": "kei4",
+          "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E7%90%AA",
+          "pageSha256": "321f1f69769dde18facfa527b5ef6ef2267e6d1be5044935aff3986fce2bfa10"
+        },
+        {
+          "character": "琪",
+          "reading": "kei4",
+          "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E7%90%AA",
+          "pageSha256": "321f1f69769dde18facfa527b5ef6ef2267e6d1be5044935aff3986fce2bfa10"
+        }
+      ]
+    },
+    {
+      "displayText": "樂樂",
+      "spokenText": "樂樂",
+      "proposedJyutping": "lok6 lok6",
+      "usageConsideration": "角色姓名；先按快樂義擬定，仍需聽校。",
+      "sourceCandidateMatched": true,
+      "senseReviewApproved": false,
+      "actualAudioListeningApproved": false,
+      "evidence": [
+        {
+          "character": "樂",
+          "reading": "lok6",
+          "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E6%A8%82",
+          "pageSha256": "c7f97f6adbad22dc6a9816d4034a4be12e2c7fe393fc7524c31fbf2bae073725"
+        },
+        {
+          "character": "樂",
+          "reading": "lok6",
+          "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E6%A8%82",
+          "pageSha256": "c7f97f6adbad22dc6a9816d4034a4be12e2c7fe393fc7524c31fbf2bae073725"
+        }
+      ]
+    },
+    {
+      "displayText": "和藹",
+      "spokenText": "和藹",
+      "proposedJyutping": "wo4 oi2",
+      "usageConsideration": "形容老師親切和藹；按本次現代詞義擬定。",
+      "sourceCandidateMatched": true,
+      "senseReviewApproved": false,
+      "actualAudioListeningApproved": false,
+      "evidence": [
+        {
+          "character": "和",
+          "reading": "wo4",
+          "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E5%92%8C",
+          "pageSha256": "71fbee135583dae3a9b9b700fac50ae195f779ecdaf1d2e749037aeb385153de"
+        },
+        {
+          "character": "藹",
+          "reading": "oi2",
+          "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E8%97%B9",
+          "pageSha256": "a8d9d557dfdd062faa003a45846d502069ec891dc5fefd5dccfd98f9d7d4eed8"
+        }
+      ]
+    },
+    {
+      "displayText": "教",
+      "spokenText": "教",
+      "proposedJyutping": "gaau3",
+      "usageConsideration": "語境為教我們說英語。",
+      "sourceCandidateMatched": true,
+      "senseReviewApproved": false,
+      "actualAudioListeningApproved": false,
+      "evidence": [
+        {
+          "character": "教",
+          "reading": "gaau3",
+          "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E6%95%99",
+          "pageSha256": "71e8bdf08f4831f4d226850e22939325475adb5a5dac8c5d2b040b1b7302004f"
+        }
+      ]
+    },
+    {
+      "displayText": "狐狸",
+      "spokenText": "狐狸",
+      "proposedJyutping": "wu4 lei4",
+      "usageConsideration": "故事中的動物名稱。",
+      "sourceCandidateMatched": true,
+      "senseReviewApproved": false,
+      "actualAudioListeningApproved": false,
+      "evidence": [
+        {
+          "character": "狐",
+          "reading": "wu4",
+          "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E7%8B%90",
+          "pageSha256": "faaab22c44d2a91ed7352bc142c0b6dcdfdfb1593e6187dd9e057bf8bda62016"
+        },
+        {
+          "character": "狸",
+          "reading": "lei4",
+          "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E7%8B%B8",
+          "pageSha256": "28c090d58b55c3c67997953ac433ec695729a18683e5e9a407dfb16292159913"
+        }
+      ]
+    },
+    {
+      "displayText": "狼",
+      "spokenText": "狼",
+      "proposedJyutping": "long4",
+      "usageConsideration": "故事中的小狼。",
+      "sourceCandidateMatched": true,
+      "senseReviewApproved": false,
+      "actualAudioListeningApproved": false,
+      "evidence": [
+        {
+          "character": "狼",
+          "reading": "long4",
+          "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E7%8B%BC",
+          "pageSha256": "4ce1447b1cf25afde59f0e6ca94612ce266e2cf770f64ce14509aad7ea306268"
+        }
+      ]
+    },
+    {
+      "displayText": "趟",
+      "spokenText": "趟",
+      "proposedJyutping": "tong3",
+      "usageConsideration": "走一趟的量詞用法。",
+      "sourceCandidateMatched": true,
+      "senseReviewApproved": false,
+      "actualAudioListeningApproved": false,
+      "evidence": [
+        {
+          "character": "趟",
+          "reading": "tong3",
+          "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E8%B6%9F",
+          "pageSha256": "a146b021b0eb38d30e58554baed7a4eecbc117a076fd7c3fc3dbcb1ed63122a0"
+        }
+      ]
+    },
+    {
+      "displayText": "瑪麗",
+      "spokenText": "瑪麗",
+      "proposedJyutping": "maa5 lai6",
+      "usageConsideration": "原書教師姓名，與英語 Mary 的朗讀分開。",
+      "sourceCandidateMatched": true,
+      "senseReviewApproved": false,
+      "actualAudioListeningApproved": false,
+      "evidence": [
+        {
+          "character": "瑪",
+          "reading": "maa5",
+          "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E7%91%AA",
+          "pageSha256": "dfcacc36c11eb92dcf08a2e92e7827d3926b1dea0b07332635ccc401ca9d667d"
+        },
+        {
+          "character": "麗",
+          "reading": "lai6",
+          "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E9%BA%97",
+          "pageSha256": "6057244ea77b7bc503b321d7c8ab604e5b12dc089fe97fde83d757182ccc14f9"
+        }
+      ]
+    },
+    {
+      "displayText": "犭",
+      "spokenText": "反犬旁",
+      "proposedJyutping": "faan2 hyun2 pong4",
+      "usageConsideration": "保留原符號，朗讀部首名稱。",
+      "sourceCandidateMatched": true,
+      "senseReviewApproved": false,
+      "actualAudioListeningApproved": false,
+      "evidence": [
+        {
+          "character": "反",
+          "reading": "faan2",
+          "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E5%8F%8D",
+          "pageSha256": "ce0bfd491418fbbd767ab4c22c9aa7286d7c07f4b0f908576f8cc1214d2185f9"
+        },
+        {
+          "character": "犬",
+          "reading": "hyun2",
+          "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E7%8A%AC",
+          "pageSha256": "d1d617d2fe36b342c99cb7299a20a6dd33ffa53fe44db2bf63bf078906bbaf06"
+        },
+        {
+          "character": "旁",
+          "reading": "pong4",
+          "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E6%97%81",
+          "pageSha256": "0d185da38d250f9f0bad7f02599bdf41ca3a4c07198150cc5490f5596e4ee837"
+        }
+      ]
+    }
+  ]
+}

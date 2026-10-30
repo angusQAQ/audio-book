@@ -98,3 +98,7 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 [下載可移植 skill ZIP](https://angusqaq.github.io/audio-book/downloads/children-picture-book-skill.zip)。解壓後將 `children-picture-book/` 放到目標專案的 `.agents/skills/`；支援 skill 的工具可按其規則發現，若目前工作階段尚未顯示，重新開啟該專案後使用。模板 `templates/book-brief.json` 的年齡／主題等欄位故意留空，填寫後可用附帶的 `scripts/init_book.py --brief 本次需求.json --output 新書目錄` 檢查並建立草稿；不會覆寫既有書。封裝可由 `python3 scripts/package_picture_book_skill.py` 重建。
 
 專案已安裝 [Apple Design skill](https://github.com/dickwu/apple-design-skill)，固定來源與技能檔案位於 `.agents/skills/apple-design/`；設計檢視見 `docs/apple-design-review.md`。`AGENTS.md` 要求每個可審閱更新階段建立 Git commit 並推送 GitHub，完成驗證後自動同步永久網站。
+
+## 配音員參考聲線與粵語正音
+
+三本書已按使用者提供的聲線樣本產生 [10 段 VoxCPM 真實試音](voice-review/mei-school/README.md)，[下載校音包](https://angusqaq.github.io/audio-book/downloads/voxcpm-narrator-review.zip)。試音待聽校，正式書架仍使用已驗證的原音源。正音依香港中文大學《漢語多功能字庫》；[字庫來源與 4,437 項語境校音表](reports/cantonese/README.md)保留候選讀音與未完成項目。模型生成、ASR 轉寫、字庫選音及實際聲調聽校分開記錄，未核對者不稱為正確。進度與重跑方法見 [VoxCPM 說明](docs/voxcpm.md)。

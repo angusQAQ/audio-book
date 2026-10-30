@@ -61,17 +61,40 @@ jobs:
         with:
           path: .cache/huggingface
           key: voxcpm2-official-reference-v1
+      - uses: actions/cache@v5
+        with:
+          path: .cache/voxcpm/whisper
+          key: whisper-large-v3-turbo-cantonese-review-v1
       - name: Generate actual cloned-voice samples from each book
         run: python scripts/voxcpm_reference_review.py --generate
+      - name: Checkpoint actual generated samples before the longer ASR review
+        if: always()
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          if [ -d voice-review ]; then
+            git add voice-review
+            if ! git diff --cached --quiet; then
+              git commit -m "Checkpoint actual VoxCPM samples before ASR review"
+              git pull --rebase origin "${{ github.ref_name }}"
+              git push origin "HEAD:${{ github.ref_name }}"
+            fi
+          fi
       - name: Record Cantonese ASR hypotheses for review, never as pronunciation approval
-        run: python scripts/voxcpm_reference_review.py --transcribe
+        run: python scripts/voxcpm_reference_review.py --transcribe --sentences-only
+      - name: Package actual samples with their current evidence
+        if: always()
+        run: |
+          if [ -d voice-review ]; then
+            python scripts/package_voxcpm_review.py
+          fi
       - name: Preserve actual samples and receipts without replacing website audio
         if: always()
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          if [ -d voice-review/mei-school ]; then
-            git add voice-review/mei-school
+          if [ -d voice-review ]; then
+            git add voice-review downloads/voxcpm-narrator-review.zip
             if ! git diff --cached --quiet; then
               git commit -m "Save generated VoxCPM reference samples for Cantonese listening review"
               git pull --rebase origin "${{ github.ref_name }}"

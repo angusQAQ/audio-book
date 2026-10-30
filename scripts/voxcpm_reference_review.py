@@ -15,6 +15,13 @@ ROOT=Path(__file__).resolve().parents[1]
 OUTPUT=ROOT/'voice-review/mei-school'
 
 
+def output_for(reference):
+    folder=reference.get('reviewFolder','mei-school')
+    if not folder or any(ch not in 'abcdefghijklmnopqrstuvwxyz0123456789-' for ch in folder):
+        raise ValueError('Review folder must be an explicit safe slug')
+    return ROOT/'voice-review'/folder
+
+
 def plan():
     reference=json.loads((ROOT/'config/voxcpm-reference.json').read_text())
     library=json.loads((ROOT/'library.json').read_text())
@@ -34,11 +41,30 @@ def plan():
             else: asset=next(a for a in book['audio'].values() if a['text']==value)
             cases.append(dict(id=f'{book_id}-{index:02}',book=book_id,kind=kind,text=asset['text'],
                               originalAudioId=asset['id'],pronunciationReview='pending-CUHK-context-and-listening-review'))
+    if reference.get('reviewScope')=='sentences':cases=[case for case in cases if case['kind']=='sentence']
     return reference,selected,cases
 
 
 def generate():
     reference,selected,cases=plan()
+    mode=reference.get('generationMode','reference-only')
+    if mode not in ('reference-only','continuation'):raise ValueError('Unknown cloning mode')
+    if mode=='continuation' and not (selected.get('transcript') and selected.get('transcriptStatus')=='user-confirmed'):
+        raise ValueError('Continuation requires an exact user-confirmed transcript; ASR hypotheses cannot substitute')
+    output=output_for(reference)
+    pending=[]
+    for index,case in enumerate(cases):
+        receipt_path=output/(case['id']+'.json');mp3=output/(case['id']+'.mp3')
+        if receipt_path.exists() and mp3.exists():
+            saved=json.loads(receipt_path.read_text())
+            if (saved.get('text')==case['text'] and saved.get('referenceSha256')==selected['sha256']
+                    and saved.get('engineVersion')==reference['packageVersion'] and saved.get('speedFactor')==reference['speedFactor']
+                    and saved.get('generationMode','reference-only')==mode
+                    and saved.get('sha256')==hashlib.sha256(mp3.read_bytes()).hexdigest()
+                    and (not reference.get('modelRevision') or saved.get('modelRevision')==reference['modelRevision'])):
+                print('Reusing verified actual review MP3 (still not pronunciation-approved): '+case['id'],flush=True);continue
+        pending.append((index,case))
+    if not pending:return
     import numpy as np
     import soundfile as sf
     import torch
@@ -46,7 +72,7 @@ def generate():
     from voxcpm import VoxCPM
     assert importlib.metadata.version('voxcpm')==reference['packageVersion']
     torch.set_num_threads(min(4,os.cpu_count() or 1))
-    info=HfApi().model_info(reference['model'],token=False,files_metadata=True)
+    info=HfApi().model_info(reference['model'],revision=reference.get('modelRevision'),token=False,files_metadata=True)
     revision=info.sha; files={item.rfilename:item for item in info.siblings}
     weights=[]
     for alternatives in [('model.safetensors','pytorch_model.bin'),('audiovae.safetensors','audiovae.pth')]:
@@ -63,15 +89,17 @@ def generate():
         if expected and digest!=expected: raise ValueError('Official model checksum mismatch')
         artifacts.append(dict(file=name,sha256=digest,officialLfsHashVerified=bool(expected)))
     model=VoxCPM.from_pretrained(folder,load_denoiser=False,optimize=False,device='cpu')
-    OUTPUT.mkdir(parents=True,exist_ok=True)
+    output.mkdir(parents=True,exist_ok=True)
     rate=model.tts_model.sample_rate
-    for index,case in enumerate(cases):
+    for index,case in pending:
         started=time.monotonic(); seed=reference['seed']+index
         random.seed(seed);np.random.seed(seed);torch.manual_seed(seed)
-        waveform=model.generate(text='(香港粵語，清楚自然，親切地朗讀兒童故事。)'+case['text'],
-                                reference_wav_path=str(ROOT/selected['file']),cfg_value=2.0,
+        arguments=dict(reference_wav_path=str(ROOT/selected['file']))
+        if mode=='continuation':arguments.update(prompt_wav_path=str(ROOT/selected['file']),prompt_text=selected['transcript'])
+        input_text=case['text'] if mode=='continuation' else '(香港粵語，清楚自然，親切地朗讀兒童故事。)'+case['text']
+        waveform=model.generate(text=input_text,**arguments,cfg_value=2.0,
                                 inference_timesteps=10,max_len=256,retry_badcase_max_times=1)
-        wav=OUTPUT/(case['id']+'.wav');mp3=OUTPUT/(case['id']+'.mp3')
+        wav=output/(case['id']+'.wav');mp3=output/(case['id']+'.mp3')
         sf.write(wav,waveform,rate)
         subprocess.run(['ffmpeg','-v','error','-nostdin','-y','-i',str(wav),'-af',f'atempo={reference["speedFactor"]}',
                         '-c:a','libmp3lame','-b:a','192k',str(mp3)],check=True)
@@ -83,28 +111,35 @@ def generate():
                      speedFactor=reference['speedFactor'],seed=seed,duration=seconds,
                      file=str(mp3.relative_to(ROOT)),sha256=hashlib.sha256(mp3.read_bytes()).hexdigest(),
                      status='generated-not-pronunciation-approved',alignment='not-aligned',published=False,
+                     generationMode=mode,inputText=input_text,promptTranscript=selected.get('transcript') if mode=='continuation' else None,
                      generationSeconds=round(time.monotonic()-started,2))
-        (OUTPUT/(case['id']+'.json')).write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n')
+        (output/(case['id']+'.json')).write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n')
         print(f'Generated real VoxCPM review sample: {case["id"]}, {seconds:.2f}s',flush=True)
     del model;gc.collect()
 
 
-def transcribe():
+def transcribe(sentences_only=False):
     reference,selected,cases=plan()
     import torch
     import whisper
     torch.set_num_threads(min(4,os.cpu_count() or 1))
     model=whisper.load_model('turbo',device='cpu')
-    OUTPUT.mkdir(parents=True,exist_ok=True)
-    paths=[ROOT/c['file'] for c in reference['candidates']]+sorted(OUTPUT.glob('*.mp3'))
+    output=output_for(reference);output.mkdir(parents=True,exist_ok=True)
+    cases_by_id={case['id']:case for case in cases}
+    paths=[ROOT/selected['file']]+[path for path in sorted(output.glob('*.mp3'))
+           if not sentences_only or cases_by_id[path.stem]['kind']=='sentence']
     for path in paths:
+        audio=whisper.load_audio(str(path));mel=whisper.log_mel_spectrogram(whisper.pad_or_trim(audio),n_mels=model.dims.n_mels).to(model.device)
+        _,probabilities=model.detect_language(mel)
+        top=sorted(probabilities.items(),key=lambda pair:pair[1],reverse=True)[:5]
         result=model.transcribe(str(path),language='yue',task='transcribe',fp16=False,
                                 temperature=0,condition_on_previous_text=False,word_timestamps=True)
         report=dict(file=str(path.relative_to(ROOT)),sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
                     recognizer='openai-whisper',model='large-v3-turbo',language='yue',
+                    detectedLanguage=top[0][0],languageProbabilities=dict(top),
                     transcriptHypothesis=result['text'],segments=result['segments'],
                     correctnessVerified=False,status='ASR-only; not a tone or pronunciation approval')
-        (OUTPUT/(path.stem+'-asr.json')).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+        (output/(path.stem+'-asr.json')).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
         print(f'ASR candidate (not approval): {path.name}: {result["text"]}',flush=True)
 
 
@@ -112,10 +147,11 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--generate',action='store_true')
     parser.add_argument('--transcribe',action='store_true')
+    parser.add_argument('--sentences-only',action='store_true',help='Language detection is more informative on full sentences than isolated syllables')
     args=parser.parse_args()
     reference,selected,cases=plan()
     if args.generate: generate()
-    elif args.transcribe: transcribe()
+    elif args.transcribe: transcribe(args.sentences_only)
     else: print(json.dumps(dict(status='planned-not-generated',reference=selected,cases=cases),ensure_ascii=False,indent=2))
 
 

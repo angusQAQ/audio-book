@@ -43,6 +43,12 @@ def collect(characters, output, delay=1.0):
                         contexts[ch].append(dict(book=book['id'], page=page_number, block=block['id'], text=block['text']))
     report = dict(authority='香港中文大學漢語多功能字庫', baseUrl=BASE,
                   status='lookup-only; context and actual speech review required', records=[])
+    cached={}
+    if output.exists():
+        previous=json.loads(output.read_text())
+        if previous.get('baseUrl')==BASE:
+            cached={record['character']:record for record in previous.get('records',[])
+                    if record.get('pageSha256') and record.get('status','').startswith('retrieved')}
     output.parent.mkdir(parents=True, exist_ok=True)
     failed = False
     for index, ch in enumerate(characters):
@@ -50,23 +56,26 @@ def collect(characters, output, delay=1.0):
         record = dict(character=ch, url=url, contexts=contexts[ch], selectedReading=None,
                       pronunciationApproved=False, retrievedAt=datetime.now(timezone.utc).isoformat())
         try:
-            request = Request(url, headers={'User-Agent':'audio-book pronunciation source review'})
-            with urlopen(request, timeout=25) as response:
-                data=response.read(); encoding=response.headers.get_content_charset() or 'utf-8'
-            page=data.decode(encoding, errors='replace'); parser=Readings(); parser.feed(page)
-            values=parser.values | set(re.findall(r'(?<![a-z])([a-z]+[1-6])\.(?:wav|mp3)',page,re.I))
-            record.update(status='retrieved-needs-context-review', pageSha256=hashlib.sha256(data).hexdigest(),
-                          candidateReadings=sorted(values), parseVerified=False)
-            if not values: record['status']='retrieved-parser-review-required'
+            if ch in cached and cached[ch].get('url')==url:
+                record=dict(cached[ch],contexts=contexts[ch])
+            else:
+                request = Request(url, headers={'User-Agent':'audio-book pronunciation source review'})
+                with urlopen(request, timeout=25) as response:
+                    data=response.read(); encoding=response.headers.get_content_charset() or 'utf-8'
+                page=data.decode(encoding, errors='replace'); parser=Readings(); parser.feed(page)
+                values=parser.values | set(re.findall(r'(?<![a-z])([a-z]+[1-6])\.(?:wav|mp3)',page,re.I))
+                record.update(status='retrieved-needs-context-review', pageSha256=hashlib.sha256(data).hexdigest(),
+                              candidateReadings=sorted(values), parseVerified=False)
+                if not values: record['status']='retrieved-parser-review-required'
         except Exception as error:
             record.update(status='lookup-blocked', error=type(error).__name__, candidateReadings=[])
             failed=True
         report['records'].append(record)
         report['requestedCharacters']=len(characters); report['retrievedCharacters']=sum(r['status']!='lookup-blocked' for r in report['records'])
-        output.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+        temporary=output.with_suffix('.tmp');temporary.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');temporary.replace(output)
         print(f'CUHK {index+1}/{len(characters)}: {ch} {record["status"]}',flush=True)
         if failed: break  # Do not hammer a denied or unavailable source.
-        if index+1<len(characters): time.sleep(delay)
+        if ch not in cached and index+1<len(characters): time.sleep(delay)
     if failed: raise RuntimeError('CUHK lookup was blocked; no reading has been approved')
 
 
