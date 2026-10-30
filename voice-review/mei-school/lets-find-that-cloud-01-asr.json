@@ -1,0 +1,73 @@
+{
+  "file": "voice-review/mei-school/lets-find-that-cloud-01.mp3",
+  "sha256": "a334291c3ee19f95287f1419e152d8154bcfb6edc50f95257e04ce2726385c7b",
+  "recognizer": "openai-whisper",
+  "model": "large-v3-turbo",
+  "language": "yue",
+  "transcriptHypothesis": " 再快就不敢咯",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.36,
+      "end": 2.6,
+      "text": " 再快就不敢咯",
+      "tokens": [
+        50365,
+        220,
+        8623,
+        10251,
+        3111,
+        1960,
+        40205,
+        8975,
+        107,
+        50506
+      ],
+      "temperature": 0,
+      "avg_logprob": -1.388169982216575,
+      "compression_ratio": 0.6206896551724138,
+      "no_speech_prob": 8.33307367553715e-10,
+      "words": [
+        {
+          "word": " 再",
+          "start": 0.36,
+          "end": 1.2,
+          "probability": 0.025328369811177254
+        },
+        {
+          "word": "快",
+          "start": 1.2,
+          "end": 1.58,
+          "probability": 0.3134520649909973
+        },
+        {
+          "word": "就",
+          "start": 1.58,
+          "end": 1.84,
+          "probability": 0.16743630170822144
+        },
+        {
+          "word": "不",
+          "start": 1.84,
+          "end": 2.08,
+          "probability": 0.45759260654449463
+        },
+        {
+          "word": "敢",
+          "start": 2.08,
+          "end": 2.3,
+          "probability": 0.7159477472305298
+        },
+        {
+          "word": "咯",
+          "start": 2.3,
+          "end": 2.6,
+          "probability": 0.5015893280506134
+        }
+      ]
+    }
+  ],
+  "correctnessVerified": false,
+  "status": "ASR-only; not a tone or pronunciation approval"
+}

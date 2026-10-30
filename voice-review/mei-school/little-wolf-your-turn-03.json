@@ -1,0 +1,37 @@
+{
+  "id": "little-wolf-your-turn-03",
+  "book": "little-wolf-your-turn",
+  "kind": "character",
+  "text": "狼",
+  "originalAudioId": "75b614695f24bc5afd",
+  "pronunciationReview": "pending-CUHK-context-and-listening-review",
+  "engine": "voxcpm",
+  "engineVersion": "2.0.3",
+  "model": "openbmb/VoxCPM2",
+  "modelRevision": "32279effe8c19989596f05d353d1447f51d9e915",
+  "modelArtifacts": [
+    {
+      "file": "model.safetensors",
+      "sha256": "f7f964cfa9da23653baec6e6f7750719977ad944ed9f95fe52fe3a620506891d",
+      "officialLfsHashVerified": true
+    },
+    {
+      "file": "audiovae.pth",
+      "sha256": "94b5d51e107e0507d4acc976cfdadb64edd6fd06d1f751dadbf2fd1594274bf1",
+      "officialLfsHashVerified": true
+    }
+  ],
+  "referenceFile": "assets/voice-references/mei-school/candidate-01.wav",
+  "referenceSha256": "6e34ebb4e56cdd03d623300146631f7b7319f63facd6cbd542da4ee846976508",
+  "referenceApproved": false,
+  "sampleRate": 48000,
+  "speedFactor": 0.88,
+  "seed": 47,
+  "duration": 5.472,
+  "file": "voice-review/mei-school/little-wolf-your-turn-03.mp3",
+  "sha256": "1852e58d3a8cd9ec365f1a448970e71cff86483d4645ee64b60afbc6ec3eef9d",
+  "status": "generated-not-pronunciation-approved",
+  "alignment": "not-aligned",
+  "published": false,
+  "generationSeconds": 213.58
+}

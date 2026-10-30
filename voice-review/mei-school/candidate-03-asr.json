@@ -1,0 +1,246 @@
+{
+  "file": "assets/voice-references/mei-school/candidate-03.wav",
+  "sha256": "cf384232ae46170be90a93c851dbb152a34159c8b087c05761510c4230be18b9",
+  "recognizer": "openai-whisper",
+  "model": "large-v3-turbo",
+  "language": "yue",
+  "transcriptHypothesis": "原来是一个小女孩爬上树就说了Hello梅姨又说了Hello, 你好啊",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.34,
+      "text": "原来是一个小女孩爬上树就说了",
+      "tokens": [
+        50365,
+        19683,
+        6912,
+        1541,
+        20182,
+        7322,
+        17015,
+        36269,
+        8164,
+        105,
+        5708,
+        8987,
+        239,
+        3111,
+        8090,
+        2289,
+        50517
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.64035668244233,
+      "compression_ratio": 0.9397590361445783,
+      "no_speech_prob": 1.386975343603547e-11,
+      "words": [
+        {
+          "word": "原",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9111836552619934
+        },
+        {
+          "word": "来",
+          "start": 0.16,
+          "end": 0.46,
+          "probability": 0.8054390549659729
+        },
+        {
+          "word": "是",
+          "start": 0.46,
+          "end": 0.58,
+          "probability": 0.8950458765029907
+        },
+        {
+          "word": "一个",
+          "start": 0.58,
+          "end": 0.74,
+          "probability": 0.7192043662071228
+        },
+        {
+          "word": "小",
+          "start": 0.74,
+          "end": 1.0,
+          "probability": 0.99458247423172
+        },
+        {
+          "word": "女",
+          "start": 1.0,
+          "end": 1.16,
+          "probability": 0.9792561531066895
+        },
+        {
+          "word": "孩",
+          "start": 1.16,
+          "end": 1.36,
+          "probability": 0.9846339821815491
+        },
+        {
+          "word": "爬",
+          "start": 1.36,
+          "end": 1.64,
+          "probability": 0.8491081595420837
+        },
+        {
+          "word": "上",
+          "start": 1.64,
+          "end": 1.94,
+          "probability": 0.5311062335968018
+        },
+        {
+          "word": "树",
+          "start": 1.94,
+          "end": 2.3,
+          "probability": 0.5241882055997849
+        },
+        {
+          "word": "就",
+          "start": 2.3,
+          "end": 2.7,
+          "probability": 0.5554269552230835
+        },
+        {
+          "word": "说",
+          "start": 2.7,
+          "end": 2.88,
+          "probability": 0.8633810877799988
+        },
+        {
+          "word": "了",
+          "start": 2.88,
+          "end": 3.34,
+          "probability": 0.10516586899757385
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.34,
+      "end": 3.82,
+      "text": "Hello",
+      "tokens": [
+        50517,
+        15947,
+        50580
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.64035668244233,
+      "compression_ratio": 0.9397590361445783,
+      "no_speech_prob": 1.386975343603547e-11,
+      "words": [
+        {
+          "word": "Hello",
+          "start": 3.34,
+          "end": 3.82,
+          "probability": 0.2228609174489975
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 3.82,
+      "end": 5.82,
+      "text": "梅姨又说了",
+      "tokens": [
+        50580,
+        19017,
+        227,
+        7795,
+        101,
+        17047,
+        8090,
+        2289,
+        50650
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.64035668244233,
+      "compression_ratio": 0.9397590361445783,
+      "no_speech_prob": 1.386975343603547e-11,
+      "words": [
+        {
+          "word": "梅",
+          "start": 3.82,
+          "end": 4.96,
+          "probability": 0.7348814904689789
+        },
+        {
+          "word": "姨",
+          "start": 4.96,
+          "end": 5.14,
+          "probability": 0.6416609734296799
+        },
+        {
+          "word": "又",
+          "start": 5.14,
+          "end": 5.32,
+          "probability": 0.9552896022796631
+        },
+        {
+          "word": "说",
+          "start": 5.32,
+          "end": 5.48,
+          "probability": 0.9771212935447693
+        },
+        {
+          "word": "了",
+          "start": 5.48,
+          "end": 5.82,
+          "probability": 0.8497456312179565
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 5.82,
+      "end": 7.56,
+      "text": "Hello, 你好啊",
+      "tokens": [
+        50650,
+        15947,
+        11,
+        10930,
+        2131,
+        4905,
+        50765
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.64035668244233,
+      "compression_ratio": 0.9397590361445783,
+      "no_speech_prob": 1.386975343603547e-11,
+      "words": [
+        {
+          "word": "Hello,",
+          "start": 5.82,
+          "end": 6.4,
+          "probability": 0.9673125743865967
+        },
+        {
+          "word": " 你",
+          "start": 6.6,
+          "end": 6.92,
+          "probability": 0.48194941878318787
+        },
+        {
+          "word": "好",
+          "start": 6.92,
+          "end": 7.22,
+          "probability": 0.866319477558136
+        },
+        {
+          "word": "啊",
+          "start": 7.22,
+          "end": 7.56,
+          "probability": 0.6297765970230103
+        }
+      ]
+    }
+  ],
+  "correctnessVerified": false,
+  "status": "ASR-only; not a tone or pronunciation approval"
+}

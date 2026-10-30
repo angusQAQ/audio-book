@@ -1,0 +1,43 @@
+{
+  "file": "voice-review/mei-school/lets-find-that-cloud-02.mp3",
+  "sha256": "09db3aa2ecaec961eb46939f3b6db3fd35a8ef683aba1011241bf74a7e5b9743",
+  "recognizer": "openai-whisper",
+  "model": "large-v3-turbo",
+  "language": "yue",
+  "transcriptHypothesis": " Kiki",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.96,
+      "text": " Kiki",
+      "tokens": [
+        50365,
+        591,
+        9850,
+        50425
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.8733475685119629,
+      "compression_ratio": 0.3333333333333333,
+      "no_speech_prob": 2.5520738300421897e-10,
+      "words": [
+        {
+          "word": " K",
+          "start": 0.0,
+          "end": 0.36,
+          "probability": 0.15981648862361908
+        },
+        {
+          "word": "iki",
+          "start": 0.36,
+          "end": 0.96,
+          "probability": 0.7859001159667969
+        }
+      ]
+    }
+  ],
+  "correctnessVerified": false,
+  "status": "ASR-only; not a tone or pronunciation approval"
+}

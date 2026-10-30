@@ -1,0 +1,57 @@
+{
+  "file": "voice-review/mei-school/lets-find-that-cloud-03.mp3",
+  "sha256": "edb41b49ae748d9e107086d91228d6b9c3fc394011860aa7857bc8ab29ac3781",
+  "recognizer": "openai-whisper",
+  "model": "large-v3-turbo",
+  "language": "yue",
+  "transcriptHypothesis": " ULUH",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.6,
+      "text": " ULUH",
+      "tokens": [
+        50365,
+        624,
+        43,
+        52,
+        39,
+        50400
+      ],
+      "temperature": 0,
+      "avg_logprob": -1.2526711055210658,
+      "compression_ratio": 0.3333333333333333,
+      "no_speech_prob": 2.5708665751800197e-10,
+      "words": [
+        {
+          "word": " U",
+          "start": 0.0,
+          "end": 0.28,
+          "probability": 0.11392617970705032
+        },
+        {
+          "word": "L",
+          "start": 0.28,
+          "end": 0.44,
+          "probability": 0.4488479793071747
+        },
+        {
+          "word": "U",
+          "start": 0.44,
+          "end": 0.54,
+          "probability": 0.13063982129096985
+        },
+        {
+          "word": "H",
+          "start": 0.54,
+          "end": 0.6,
+          "probability": 0.44246378540992737
+        }
+      ]
+    }
+  ],
+  "correctnessVerified": false,
+  "status": "ASR-only; not a tone or pronunciation approval"
+}

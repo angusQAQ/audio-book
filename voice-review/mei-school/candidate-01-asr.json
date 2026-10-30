@@ -1,0 +1,358 @@
+{
+  "file": "assets/voice-references/mei-school/candidate-01.wav",
+  "sha256": "6e34ebb4e56cdd03d623300146631f7b7319f63facd6cbd542da4ee846976508",
+  "recognizer": "openai-whisper",
+  "model": "large-v3-turbo",
+  "language": "yue",
+  "transcriptHypothesis": "梅依又说:\"我不要!我不要去呀!\"妈妈又说:\"快点啦!快点着想见爱套啦!\"梅依又说:\"我不要!我不要去呀!\"",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.4,
+      "text": "梅依又说:\"我不要!我不要去呀!\"",
+      "tokens": [
+        50365,
+        19017,
+        227,
+        3254,
+        251,
+        17047,
+        8090,
+        31330,
+        1654,
+        11962,
+        0,
+        1654,
+        11962,
+        6734,
+        15348,
+        2963,
+        50565
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.3071525437491281,
+      "compression_ratio": 1.5348837209302326,
+      "no_speech_prob": 6.345595576773277e-11,
+      "words": [
+        {
+          "word": "梅",
+          "start": 0.0,
+          "end": 0.3,
+          "probability": 0.9842106699943542
+        },
+        {
+          "word": "依",
+          "start": 0.3,
+          "end": 0.6,
+          "probability": 0.7376659661531448
+        },
+        {
+          "word": "又",
+          "start": 0.6,
+          "end": 0.92,
+          "probability": 0.8960331082344055
+        },
+        {
+          "word": "说",
+          "start": 0.92,
+          "end": 1.14,
+          "probability": 0.7061471939086914
+        },
+        {
+          "word": ":\"",
+          "start": 1.14,
+          "end": 1.62,
+          "probability": 0.19654099643230438
+        },
+        {
+          "word": "我",
+          "start": 1.62,
+          "end": 1.82,
+          "probability": 0.8647213578224182
+        },
+        {
+          "word": "不要!",
+          "start": 1.82,
+          "end": 2.2,
+          "probability": 0.8343322277069092
+        },
+        {
+          "word": "我",
+          "start": 2.42,
+          "end": 2.7,
+          "probability": 0.5585001707077026
+        },
+        {
+          "word": "不要",
+          "start": 2.7,
+          "end": 3.02,
+          "probability": 0.99454665184021
+        },
+        {
+          "word": "去",
+          "start": 3.02,
+          "end": 3.42,
+          "probability": 0.9351745247840881
+        },
+        {
+          "word": "呀",
+          "start": 3.42,
+          "end": 3.78,
+          "probability": 0.5992764234542847
+        },
+        {
+          "word": "!\"",
+          "start": 3.78,
+          "end": 4.4,
+          "probability": 0.9006563425064087
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 5.360000000000001,
+      "end": 9.96,
+      "text": "妈妈又说:\"快点啦!快点着想见爱套啦!\"",
+      "tokens": [
+        50640,
+        32462,
+        32462,
+        17047,
+        8090,
+        31330,
+        10251,
+        12579,
+        9724,
+        0,
+        10251,
+        12579,
+        20708,
+        7093,
+        23813,
+        27324,
+        1881,
+        245,
+        9724,
+        2963,
+        50865
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.3071525437491281,
+      "compression_ratio": 1.5348837209302326,
+      "no_speech_prob": 6.345595576773277e-11,
+      "words": [
+        {
+          "word": "妈",
+          "start": 5.360000000000001,
+          "end": 5.92,
+          "probability": 0.8329035639762878
+        },
+        {
+          "word": "妈",
+          "start": 5.92,
+          "end": 6.06,
+          "probability": 0.9988644123077393
+        },
+        {
+          "word": "又",
+          "start": 6.06,
+          "end": 6.24,
+          "probability": 0.959917426109314
+        },
+        {
+          "word": "说",
+          "start": 6.24,
+          "end": 6.4,
+          "probability": 0.9833452105522156
+        },
+        {
+          "word": ":\"",
+          "start": 6.4,
+          "end": 7.08,
+          "probability": 0.9635441899299622
+        },
+        {
+          "word": "快",
+          "start": 7.08,
+          "end": 7.46,
+          "probability": 0.9853413701057434
+        },
+        {
+          "word": "点",
+          "start": 7.46,
+          "end": 7.6,
+          "probability": 0.9878646731376648
+        },
+        {
+          "word": "啦!",
+          "start": 7.6,
+          "end": 7.76,
+          "probability": 0.802897036075592
+        },
+        {
+          "word": "快",
+          "start": 7.9,
+          "end": 7.98,
+          "probability": 0.901155412197113
+        },
+        {
+          "word": "点",
+          "start": 7.98,
+          "end": 8.1,
+          "probability": 0.9980427026748657
+        },
+        {
+          "word": "着",
+          "start": 8.1,
+          "end": 8.24,
+          "probability": 0.2516552805900574
+        },
+        {
+          "word": "想",
+          "start": 8.24,
+          "end": 8.52,
+          "probability": 0.8132985234260559
+        },
+        {
+          "word": "见",
+          "start": 8.52,
+          "end": 8.78,
+          "probability": 0.9736557602882385
+        },
+        {
+          "word": "爱",
+          "start": 8.78,
+          "end": 9.0,
+          "probability": 0.6816654205322266
+        },
+        {
+          "word": "套",
+          "start": 9.0,
+          "end": 9.28,
+          "probability": 0.7134193032979965
+        },
+        {
+          "word": "啦",
+          "start": 9.28,
+          "end": 9.48,
+          "probability": 0.9561854004859924
+        },
+        {
+          "word": "!\"",
+          "start": 9.48,
+          "end": 9.96,
+          "probability": 0.8138678073883057
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 9.96,
+      "end": 14.4,
+      "text": "梅依又说:\"我不要!我不要去呀!\"",
+      "tokens": [
+        50865,
+        19017,
+        227,
+        3254,
+        251,
+        17047,
+        8090,
+        31330,
+        1654,
+        11962,
+        0,
+        1654,
+        11962,
+        6734,
+        15348,
+        2963,
+        51090
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.3071525437491281,
+      "compression_ratio": 1.5348837209302326,
+      "no_speech_prob": 6.345595576773277e-11,
+      "words": [
+        {
+          "word": "梅",
+          "start": 9.96,
+          "end": 10.56,
+          "probability": 0.9995473027229309
+        },
+        {
+          "word": "依",
+          "start": 10.56,
+          "end": 10.82,
+          "probability": 0.9987821280956268
+        },
+        {
+          "word": "又",
+          "start": 10.82,
+          "end": 11.12,
+          "probability": 0.9989662170410156
+        },
+        {
+          "word": "说",
+          "start": 11.12,
+          "end": 11.34,
+          "probability": 0.9935085773468018
+        },
+        {
+          "word": ":\"",
+          "start": 11.34,
+          "end": 11.96,
+          "probability": 0.9502033591270447
+        },
+        {
+          "word": "我",
+          "start": 11.96,
+          "end": 12.2,
+          "probability": 0.9869111776351929
+        },
+        {
+          "word": "不要!",
+          "start": 12.2,
+          "end": 12.6,
+          "probability": 0.9961052536964417
+        },
+        {
+          "word": "我",
+          "start": 12.86,
+          "end": 13.1,
+          "probability": 0.955543577671051
+        },
+        {
+          "word": "不要",
+          "start": 13.1,
+          "end": 13.44,
+          "probability": 0.9961737990379333
+        },
+        {
+          "word": "去",
+          "start": 13.44,
+          "end": 13.84,
+          "probability": 0.9987922310829163
+        },
+        {
+          "word": "呀",
+          "start": 13.84,
+          "end": 14.2,
+          "probability": 0.9903630614280701
+        },
+        {
+          "word": "!\"",
+          "start": 14.2,
+          "end": 14.4,
+          "probability": 0.9415010809898376
+        }
+      ]
+    }
+  ],
+  "correctnessVerified": false,
+  "status": "ASR-only; not a tone or pronunciation approval"
+}
