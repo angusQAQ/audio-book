@@ -1,0 +1,38 @@
+name: Check CUHK source for the printed 着 variant
+on:
+  workflow_dispatch:
+  push:
+    branches: [voxcpm-reference]
+    paths: ['config/cuhk-character-aliases.json', '.github/workflows/check-cuhk-variants.yml']
+permissions:
+  contents: write
+concurrency:
+  group: cuhk-variant-source
+  cancel-in-progress: false
+jobs:
+  lookup:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Retrieve the additional official source without changing the printed text
+        run: python scripts/fetch_cuhk_readings.py --characters 著 --output reports/cantonese/cuhk-variants.json
+      - name: Save actual source evidence without approving a pronunciation
+        if: always()
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          if [ -f reports/cantonese/cuhk-variants.json ]; then
+            git add reports/cantonese/cuhk-variants.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Save CUHK 著 source for contextual review of printed 着"
+              git pull --rebase origin "${{ github.ref_name }}"
+              git push origin "HEAD:${{ github.ref_name }}"
+            fi
+          fi
