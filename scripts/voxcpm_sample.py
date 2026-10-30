@@ -28,13 +28,23 @@ def plan_for(book_id):
         raise ValueError('The sample must use an existing book passage')
     if config['schemaVersion'] != 1 or profile['locale'] != 'zh-HK' or config['speedFactor'] != 0.88:
         raise ValueError('Expected a Hong Kong Cantonese profile at -12%')
-    return {
+    result = {
         'book': book_id, 'title': book['title'], 'model': config['model'],
         'packageVersion': config['packageVersion'], 'seed': config['seed'],
         'speedFactor': config['speedFactor'], **profile,
         'text': book['audio'][block['audio']]['text'],
         'publishedEngine': book['voice']['engine'],
     }
+    if config.get('referenceConfig'):
+        reference = json.loads((ROOT / config['referenceConfig']).read_text())
+        selected_id = reference.get('approvedCandidate') or reference['provisionalCandidate']
+        selected = next(candidate for candidate in reference['candidates'] if candidate['id'] == selected_id)
+        path = ROOT / selected['file']
+        if hashlib.sha256(path.read_bytes()).hexdigest() != selected['sha256']:
+            raise ValueError('The narrator reference differs from its recorded original')
+        result['reference'] = {'file': selected['file'], 'sha256': selected['sha256'],
+                               'approved': bool(reference.get('approvedCandidate'))}
+    return result
 
 
 def runtime():
@@ -73,9 +83,13 @@ def sample(plan, model_dir, device):
     random.seed(plan['seed'])
     np.random.seed(plan['seed'])
     torch.manual_seed(plan['seed'])
+    clone_arguments = {}
+    if plan.get('reference'):
+        clone_arguments['reference_wav_path'] = str(ROOT / plan['reference']['file'])
     waveform = model.generate(
         text='(' + plan['description'] + ')' + plan['text'],
         cfg_value=2.0, inference_timesteps=10, max_len=512,
+        **clone_arguments,
     )
     receipt = {
         **plan, 'engine': 'voxcpm', 'engineVersion': importlib.metadata.version('voxcpm'),
