@@ -66,6 +66,8 @@ Regular / compact 共用結構：
 
 ## Platform notes
 
+翻頁修正沿用 `motion.md › Best practices` 的「Make motion optional.」與 `motion.md › Providing feedback` 的「Let people cancel motion.」：圖片已載入後，翻頁功能不再無限等待動畫完成；仍保留正常動畫與減少動態選項，快速連翻會取消舊動畫。850ms 復原上限與 56px 水平滑動門檻是專案實作判斷。放大後保留橫向捲動，普通點字不觸發翻頁。
+
 在 Chromium 實測跨 320–1920px、790×730 與 1111×730；另檢查深色／高對比、減少動態與 200% 介面文字。這些證據不等同實體 iPhone、VoiceOver 或 Safari 全平台認證。
 
 ## Speech pipeline diagnosis

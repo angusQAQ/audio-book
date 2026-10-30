@@ -131,6 +131,15 @@ try {
   const wolfPdf = await page.request.get(new URL(wolf.source.url,base).href);
   assert.equal(createHash('sha256').update(await wolfPdf.body()).digest('hex'), wolf.source.sha256);
   await page.getByRole('button',{name:`閱讀《${wolf.title}》`,exact:true}).click();
+  await page.waitForFunction(()=>window.readerDiagnostics().imageReady);
+  await page.locator('#next-page').click();
+  await page.waitForFunction(()=>window.readerDiagnostics().page===2 && window.readerDiagnostics().imageReady);
+  assert.equal(await page.locator('#page-image').getAttribute('src'),wolf.pages[1].image);
+  assert.equal(await page.locator('.page-turn').count(),0);
+  await page.locator('#previous-side').click();
+  await page.waitForFunction(()=>window.readerDiagnostics().page===1 && window.readerDiagnostics().imageReady);
+  await page.locator('#next-side').click();
+  await page.waitForFunction(()=>window.readerDiagnostics().page===2 && window.readerDiagnostics().imageReady);
   await page.locator('#page-select').selectOption('3');
   await page.waitForFunction(()=>window.readerDiagnostics().imageReady);
   for (const mode of ['sentence','word','character']) {

@@ -48,7 +48,7 @@
   let voices = [], current = null, engine = null, nativeUtterance = null, nativeTimer = null;
   let token = 0, audioToken = 0, playState = 'idle', imageReady = false, nativeBoundary = null;
   let glowFrame = 0, glowKey = '';
-  let turnToken = 0, pendingTurn = null, turnAnimation = null;
+  let turnToken = 0, pendingTurn = null, turnAnimation = null, turnTimer = null;
   const player = new Audio();
   player.preload = 'none';
   player.preservesPitch = true;
@@ -374,13 +374,16 @@
   }
   function cancelPageTurn() {
     turnToken++;
-    if (turnAnimation) turnAnimation.cancel();
+    clearTimeout(turnTimer); turnTimer=null;
+    try { if (turnAnimation) turnAnimation.cancel(); } catch { /* Navigation must survive unavailable animation APIs. */ }
     turnAnimation=null; pendingTurn=null;
     paper.querySelectorAll('.page-turn').forEach(layer=>layer.remove());
     paper.dataset.turning='false';
   }
   function readyPage(expected) {
     if (expected !== turnToken) return;
+    clearTimeout(turnTimer); turnTimer=null;
+    try { if (turnAnimation) turnAnimation.cancel(); } catch { /* The new image is already loaded. */ }
     turnAnimation=null; pendingTurn=null;
     paper.querySelectorAll('.page-turn').forEach(layer=>layer.remove());
     paper.dataset.turning='false'; paper.setAttribute('aria-busy','false');
@@ -404,8 +407,18 @@
     const frames=turn.direction>0
       ? [{transform:'rotateY(0deg)'},{transform:'rotateY(-100deg)'}]
       : [{transform:'rotateY(-100deg)'},{transform:'rotateY(0deg)'}];
-    turnAnimation=leaf.animate(frames,{duration:420,easing:'cubic-bezier(.25,.65,.2,1)',fill:'forwards'});
-    turnAnimation.finished.then(()=>readyPage(turn.token)).catch(()=>{});
+    let completed=false;
+    const complete=()=>{ if (!completed) { completed=true; readyPage(turn.token); } };
+    // Some embedded browsers suspend animation completion. Never leave the old
+    // cover above the loaded page while waiting indefinitely for that callback.
+    turnTimer=setTimeout(complete,850);
+    try {
+      turnAnimation=leaf.animate(frames,{duration:420,easing:'cubic-bezier(.25,.65,.2,1)',fill:'forwards'});
+      if (turnAnimation) {
+        turnAnimation.onfinish=complete;
+        if (turnAnimation.finished && typeof turnAnimation.finished.then==='function') turnAnimation.finished.then(complete,complete);
+      } else complete();
+    } catch { complete(); }
   }
   image.addEventListener('load',loadedImage);
   image.addEventListener('error',()=>{
@@ -426,6 +439,10 @@
     renderHotspots(); resizePage();
     storage.set('library-position:'+book.id,page);
     if (image.complete && image.naturalWidth) loadedImage();
+    const expected=turnToken;
+    if (typeof image.decode==='function') image.decode().then(()=>{
+      if (expected===turnToken) loadedImage();
+    }).catch(()=>{});
   }
   function updateURL(push) {
     try {
@@ -546,6 +563,24 @@
   for (const id of ['#previous-page','#previous-side']) $(id).addEventListener('click',()=>navigate(page-1));
   for (const id of ['#next-page','#next-side']) $(id).addEventListener('click',()=>navigate(page+1));
   $('#page-select').addEventListener('change',event=>navigate(Number(event.target.value)-1));
+  let swipe=null, suppressSwipeClickUntil=0;
+  viewport.addEventListener('pointerdown',event=>{
+    swipe=null; suppressSwipeClickUntil=0;
+    if (!event.isPrimary || event.button!==0 || !['touch','pen','mouse'].includes(event.pointerType) || !imageReady || document.body.dataset.zoomed==='true' || !event.target.closest('#page-canvas')) return;
+    swipe={id:event.pointerId,x:event.clientX,y:event.clientY,version:turnToken};
+  });
+  viewport.addEventListener('pointercancel',()=>{ swipe=null; });
+  viewport.addEventListener('pointerup',event=>{
+    const start=swipe; swipe=null;
+    if (!start || start.id!==event.pointerId || start.version!==turnToken || document.body.dataset.zoomed==='true') return;
+    const dx=event.clientX-start.x, dy=event.clientY-start.y;
+    if (Math.abs(dx)<56 || Math.abs(dx)<Math.abs(dy)*1.5) return;
+    suppressSwipeClickUntil=performance.now()+400;
+    event.preventDefault(); navigate(page+(dx<0?1:-1));
+  });
+  viewport.addEventListener('click',event=>{
+    if (performance.now()<suppressSwipeClickUntil) { event.preventDefault(); event.stopPropagation(); }
+  },true);
   $('#zoom').addEventListener('change',()=>{ resizePage(); viewport.scrollTop=0; viewport.scrollLeft=0; });
   $('#home').addEventListener('click',()=>showLibrary());
   $('#shelf-link').addEventListener('click',()=>showLibrary());
