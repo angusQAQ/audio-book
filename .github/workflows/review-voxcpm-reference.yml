@@ -1,0 +1,80 @@
+name: Review narrator reference and CUHK Cantonese readings
+on:
+  workflow_dispatch:
+  push:
+    branches: [voxcpm-reference]
+    paths: ['scripts/voxcpm_reference_review.py', 'scripts/fetch_cuhk_readings.py', 'config/voxcpm-reference.json', 'config/cantonese-pronunciation.json', 'assets/voice-references/**', '.github/workflows/review-voxcpm-reference.yml']
+permissions:
+  contents: write
+concurrency:
+  group: voxcpm-reference-review
+  cancel-in-progress: false
+jobs:
+  cuhk:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Retrieve actual CUHK reading candidates for all three books
+        run: python scripts/fetch_cuhk_readings.py
+      - name: Preserve real lookup results, including blocked or unresolved records
+        if: always()
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add reports/cantonese
+          if ! git diff --cached --quiet; then
+            git commit -m "Save CUHK source lookup evidence without approving pronunciations"
+            git pull --rebase origin "${{ github.ref_name }}"
+            git push origin "HEAD:${{ github.ref_name }}"
+          fi
+  samples:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      HF_HOME: ${{ github.workspace }}/.cache/huggingface
+      XDG_CACHE_HOME: ${{ github.workspace }}/.cache/voxcpm
+      MPLCONFIGDIR: ${{ github.workspace }}/.cache/matplotlib
+      NUMBA_CACHE_DIR: ${{ github.workspace }}/.cache/numba
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install the pinned CPU voice runtime
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          pip install --index-url https://download.pytorch.org/whl/cpu 'torch==2.7.1+cpu' 'torchaudio==2.7.1+cpu'
+          pip install -r requirements-voxcpm.txt
+      - uses: actions/cache@v5
+        with:
+          path: .cache/huggingface
+          key: voxcpm2-official-reference-v1
+      - name: Generate actual cloned-voice samples from each book
+        run: python scripts/voxcpm_reference_review.py --generate
+      - name: Record Cantonese ASR hypotheses for review, never as pronunciation approval
+        run: python scripts/voxcpm_reference_review.py --transcribe
+      - name: Preserve actual samples and receipts without replacing website audio
+        if: always()
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          if [ -d voice-review/mei-school ]; then
+            git add voice-review/mei-school
+            if ! git diff --cached --quiet; then
+              git commit -m "Save generated VoxCPM reference samples for Cantonese listening review"
+              git pull --rebase origin "${{ github.ref_name }}"
+              git push origin "HEAD:${{ github.ref_name }}"
+            fi
+          fi

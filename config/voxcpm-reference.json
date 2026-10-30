@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "model": "openbmb/VoxCPM2",
+  "packageVersion": "2.0.3",
+  "speedFactor": 0.88,
+  "seed": 42,
+  "source": {
+    "filename": "【梅伊第一天上學】 兒童故事粵語 粵語故事系列.mp3",
+    "sha256": "8ba0ebdeb6daecf4d0f772b22def232fc3dfe9ca237cfc7ffa2668ec066484f4",
+    "duration": 501.289796,
+    "sampleRate": 44100,
+    "channels": 2,
+    "bytes": 5362327,
+    "role": "user-provided narrator reference; not replacement story content"
+  },
+  "candidates": [
+    {
+      "id": "candidate-01",
+      "file": "assets/voice-references/mei-school/candidate-01.wav",
+      "start": 48.36,
+      "end": 62.84,
+      "sha256": "6e34ebb4e56cdd03d623300146631f7b7319f63facd6cbd542da4ee846976508",
+      "status": "candidate-not-listening-reviewed",
+      "transcript": null
+    },
+    {
+      "id": "candidate-02",
+      "file": "assets/voice-references/mei-school/candidate-02.wav",
+      "start": 88.25,
+      "end": 103.88,
+      "sha256": "0b601ff14c3578aa7cb24ed1ce82ec442293638fe983001ca40bfa57e25f5ff0",
+      "status": "candidate-not-listening-reviewed",
+      "transcript": null
+    },
+    {
+      "id": "candidate-03",
+      "file": "assets/voice-references/mei-school/candidate-03.wav",
+      "start": 184.44,
+      "end": 192.93,
+      "sha256": "cf384232ae46170be90a93c851dbb152a34159c8b087c05761510c4230be18b9",
+      "status": "candidate-not-listening-reviewed",
+      "transcript": null
+    }
+  ],
+  "provisionalCandidate": "candidate-01",
+  "approvedCandidate": null,
+  "books": [
+    "our-good-teacher",
+    "little-wolf-your-turn",
+    "lets-find-that-cloud"
+  ],
+  "status": "reference-candidates-prepared",
+  "pronunciationAuthority": {
+    "name": "香港中文大學漢語多功能字庫",
+    "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/",
+    "policy": "context-specific reading; no automatic approval from ASR or voice model"
+  }
+}

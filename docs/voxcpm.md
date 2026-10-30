@@ -4,6 +4,16 @@
 
 ## 目前進度
 
+### 配音員參考聲線與正音要求
+
+使用者提供《梅伊第一天上學》粵語故事 MP3 作配音員聲線參考，並明確要求套用至書架全部三本書。原檔約 501.29 秒、44.1kHz 立體聲；來源雜湊及三個由停頓邊界擷取的 16kHz 單聲道候選片段記錄於 `config/voxcpm-reference.json`。候選尚未經聲線／音質聽校，不稱為已批准聲線；原故事內容不會改成點讀書正文。
+
+粵語正音依香港中文大學《漢語多功能字庫》。`config/cantonese-pronunciation.json` 記錄查核規則；`scripts/fetch_cuhk_readings.py` 從官方頁面擷取候選音、來源網址及雜湊，保留各書上下文，**不會自動批准任何讀音**。三書共 530 個不同漢字；多音字、人名及部首名稱仍須按詞義與實際聲音核對。
+
+`scripts/voxcpm_reference_review.py` 為三書製作 10 段真正的句子／詞語／單字試音，使用 `reference_wav_path`，保存模型 revision、參考片段雜湊、實際 MP3、時長及收據；不把尚未核對的 ASR 文字當成精確 prompt transcript。Whisper 的粵語轉寫另標為假設，不等於聲調正確或點讀對齊完成。新試音只保存 `voice-review/mei-school/`，不修改正式索引。
+
+GitHub 的 **Review narrator reference and CUHK Cantonese readings** 流程在 `voxcpm-reference` 分支執行查音及試音，將真實結果存回同一分支。正式替換仍須完成逐語境正音、全書生成和新音訊對齊。此次本機對模型及中大字庫再次請求均收到代理 `403 Forbidden`；已在環境草稿保留既有目的地並加入 `humanum.arts.cuhk.edu.hk`，儲存草稿不代表目前網路規則已套用。
+
 - 已在 `/workspace/.venvs/voxcpm` 安裝完整依賴，與現有 Edge 生成環境分開。`requirements-voxcpm.txt` 固定此次實際安裝的版本；CPU PyTorch 及 torchaudio 從官方 CPU 套件來源安裝，保留 TLS 與套件雜湊驗證。
 - 已通過 VoxCPM/VoxCPM2、torch、torchaudio、torchcodec、soundfile 載入、CPU 矩陣運算、官方 CLI、`pip check`、安裝腳本重跑及圖書聲音設定檢查。
 - **未完成模型下載與實際試音。** Hugging Face 模型資料請求被目前雲端代理拒絕：`Tunnel connection failed: 403 Forbidden`。正式試音命令亦回傳 `ProxyError`，沒有產生可用的 VoxCPM MP3。現有環境沒有 NVIDIA GPU，但上游支援 CPU，缺 GPU 不是此次下載失敗的原因。

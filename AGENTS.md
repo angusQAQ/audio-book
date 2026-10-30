@@ -10,4 +10,5 @@
 - 原 PDF 的 SHA-256 固定為 `e185baacc918f1bad825f628611cfbbccfe684acb90398e87539ecfa5bf345bb`。
 - 預製粵語使用 `edge-tts`、`zh-HK-HiuMaanNeural`、語速 `-12%`，完整生成並驗證後才取代已提交的音訊。
 - 使用者另要求安裝 VoxCPM 並依圖書選擇合適聲音；設定與進度見 `config/book-voices.json`、`docs/voxcpm.md`。VoxCPM 新音源必須完成實際粵語試音、全書生成及新音訊對齊後才發布；未完成時保留原 Edge MP3，不把舊音訊重新標示成 VoxCPM，不以均分時長偽造逐字同步。
+- 最新聲音任務：三本書均使用使用者提供的配音員聲線參考。粵語正音以香港中文大學《漢語多功能字庫》為依據，按語境選音，姓名／多音字／部首名稱另作記錄；自動轉寫不等於聲調或正音驗證。規則與待查紀錄見 `config/cantonese-pronunciation.json`，參考音訊見 `config/voxcpm-reference.json`。
 - 重要檢查：`npm test`、`python3 scripts/validate_assets.py --require-edge`，以及部署流程中的實際網站驗證。不要以安裝、埠開啟或 Git 推送成功代替功能驗證。
