@@ -12,6 +12,9 @@ const shippedFiles = [
   'books/little-wolf-your-turn/exports/小狼，換你說！_繪本.pdf',
   'books/little-wolf-your-turn/exports/小狼，換你說！_跨頁閱讀版.pdf',
   'books/little-wolf-your-turn/exports/小狼，換你說！_可編輯排版.pptx',
+  'books/lets-find-that-cloud/exports/走！去找那朵雲_繪本.pdf',
+  'books/lets-find-that-cloud/exports/走！去找那朵雲_跨頁閱讀版.pdf',
+  'books/lets-find-that-cloud/exports/走！去找那朵雲_可編輯排版.pptx',
 ].map(path => ({
   path, hash: createHash('sha256').update(readFileSync(new URL('../' + path, import.meta.url))).digest('hex'),
 }));

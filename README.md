@@ -79,6 +79,16 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 
 粵語點讀版保留 18 個完整跨頁及放大的手寫字，提供句子／詞語／單字、精確逐字位置與真實時間跟讀。發布流程以曉曼女聲、-12% 預製並驗證全部 MP3 後，才註冊到書架；[直接閱讀](https://angusqaq.github.io/audio-book/?book=little-wolf-your-turn&page=1)。原 PDF、PowerPoint 和 SVG 均保留。重建頁圖／點讀映射使用 `python3 books/little-wolf-your-turn/build_reader.py`，音訊原子註冊及部首讀音映射的細節見該專案 README。
 
+## 原創走部繪本
+
+《走！去找那朵雲》為 7–9 歲設計，以「起、趕、超、越、趟、趣」為核心，兼認走、延伸趁。阿米與小澄去找天上的雲，在水窪發現腳邊也有天空。359 個漢字、14 個故事跨頁，採原創人物、灰鉛筆與局部淡彩、大留白及放大的手寫楷體。
+
+- [跨頁閱讀 PDF｜18 畫面](https://angusqaq.github.io/audio-book/books/lets-find-that-cloud/exports/走！去找那朵雲_跨頁閱讀版.pdf)
+- [單頁繪本 PDF｜34 頁](https://angusqaq.github.io/audio-book/books/lets-find-that-cloud/exports/走！去找那朵雲_繪本.pdf)
+- [可編輯 PowerPoint](https://angusqaq.github.io/audio-book/books/lets-find-that-cloud/exports/走！去找那朵雲_可編輯排版.pptx)
+
+[完整專案與編輯方法](books/lets-find-that-cloud/README.md)包含兩本參考書的細讀、故事與分鏡、角色模型表、15 幅正式插畫、兩個修改前版本、完整生成提示、字型授權、SVG 與重建程式。PDF 已嵌字；編輯 PowerPoint／SVG 前需安裝附帶字型。發布流程核對三份成品的線上 SHA-256。
+
 ## 設計與存檔點
 
 專案已安裝 [Apple Design skill](https://github.com/dickwu/apple-design-skill)，固定來源與技能檔案位於 `.agents/skills/apple-design/`；設計檢視見 `docs/apple-design-review.md`。`AGENTS.md` 要求每個可審閱更新階段建立 Git commit 並推送 GitHub，完成驗證後自動同步永久網站。
