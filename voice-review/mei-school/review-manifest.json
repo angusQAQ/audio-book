@@ -5,6 +5,7 @@
   "modelRevision": "32279effe8c19989596f05d353d1447f51d9e915",
   "sampleCount": 10,
   "sourcePolicy": "config/cantonese-pronunciation.json",
+  "asrAssessmentNote": "Transcripts and language labels are diagnostic hypotheses, not proof of correct Cantonese sounds or tones.",
   "samples": [
     {
       "id": "lets-find-that-cloud-01",

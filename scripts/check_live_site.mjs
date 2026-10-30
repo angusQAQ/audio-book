@@ -14,6 +14,7 @@ const shippedFiles = [
   'config/cantonese-pronunciation.json','config/voxcpm-reference.json',
   'reports/cantonese/cuhk-lookup.json','reports/cantonese/cuhk-variants.json',
   'voice-review/mei-school/review-manifest.json','downloads/voxcpm-narrator-review.zip',
+  'assets/voice-references/mei-school/candidate-02.wav','reports/cantonese/critical-reading-plan.json',
   ...narratorReview.samples.map(sample=>sample.file),
   'books/little-wolf-your-turn/exports/小狼，換你說！_繪本.pdf',
   'books/little-wolf-your-turn/exports/小狼，換你說！_跨頁閱讀版.pdf',

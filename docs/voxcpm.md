@@ -10,7 +10,7 @@
 
 粵語正音依香港中文大學《漢語多功能字庫》。`config/cantonese-pronunciation.json` 記錄查核規則；`scripts/fetch_cuhk_readings.py` 從官方頁面擷取候選音、來源網址及雜湊，保留各書上下文，**不會自動批准任何讀音**。三書共 530 個不同漢字；多音字、人名及部首名稱仍須按詞義與實際聲音核對。
 
-`scripts/voxcpm_reference_review.py` 為三書製作 10 段真正的句子／詞語／單字試音，使用 `reference_wav_path`，保存模型 revision、參考片段雜湊、實際 MP3、時長及收據；不把尚未核對的 ASR 文字當成精確 prompt transcript。Whisper 的粵語轉寫另標為假設，不等於聲調正確或點讀對齊完成。新試音只保存 `voice-review/mei-school/`，不修改正式索引。
+`scripts/voxcpm_reference_review.py` 為三書製作 10 段真正的句子／詞語／單字試音，使用 `reference_wav_path`，保存模型 revision、參考片段雜湊、實際 MP3、時長及收據；不把尚未核對的 ASR 文字當成精確 prompt transcript。Whisper 的粵語轉寫與語種標籤另標為診斷假設，不等於聲調正確或點讀對齊完成，不能單憑語種標籤斷定普通話／粵語發音。新試音只保存 `voice-review/mei-school/`，不修改正式索引。
 
 GitHub 的 **Review narrator reference and CUHK Cantonese readings** 流程在 `voxcpm-reference` 分支執行查音及試音，將真實結果存回同一分支。正式替換仍須完成逐語境正音、全書生成和新音訊對齊。此次本機對模型及中大字庫再次請求均收到代理 `403 Forbidden`；已在環境草稿保留既有目的地並加入 `humanum.arts.cuhk.edu.hk`，儲存草稿不代表目前網路規則已套用。
 
@@ -23,7 +23,7 @@ GitHub 的 **Review narrator reference and CUHK Cantonese readings** 流程在 `
 
 `config/book-voices.json` 已為三本書記錄使用者提供的同一配音員參考，不以文字描述重新隨機設計一個音色。第一輪使用候選片段一的 `reference_wav_path`，實際的 10 段試音仍需聽校；`approvedCandidate` 保持空值。
 
-下一輪擬改用較多旁白的候選片段二，採參考錄音＋精確逐字稿的音訊續讀模式。只有 `transcriptStatus=user-confirmed` 才可使用 `prompt_text`；Whisper 口語轉書面語的假設不能冒充精確稿。延續生成依然要核對最終粵語字音和聲調。
+下一輪擬改用較多旁白的候選片段二，採參考錄音＋精確逐字稿的音訊續讀模式。只有 `transcriptStatus=user-confirmed` 才可使用 `prompt_text`；Whisper 假設可能改寫口語，未經逐字核對不能冒充精確稿。延續生成依然要核對最終粵語字音和聲調。
 
 VoxCPM 不是 Edge 的「曉曼」；新試音的放慢採實際生成後 `ffmpeg atempo=0.88`，不是把 Edge 聲音名稱貼到另一個引擎上。
 
