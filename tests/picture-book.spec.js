@@ -69,7 +69,7 @@ test('enlarged handwriting uses exact glyph targets and real timed reading cues'
   await page.locator('#pause').click();
   const audio=wolf.audio[first.audio];
   for (const boundary of [audio.boundaries[0],audio.boundaries.at(-1)]) {
-    await page.locator('#audio-seek').fill(String((boundary.time+Math.min(.03,boundary.duration/3))/audio.duration*100));
+    await page.locator('#audio-seek').fill(((boundary.time+Math.min(.03,boundary.duration/3))/audio.duration*100).toFixed(1));
     await expect.poll(()=>page.evaluate(()=>window.readerDiagnostics().highlightedText)).toBe(first.text.slice(boundary.start,boundary.end));
   }
   await page.locator('#stop').click();
