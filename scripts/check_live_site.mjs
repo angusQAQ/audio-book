@@ -49,8 +49,10 @@ const browser = await chromium.launch({
   executablePath: process.env.CHROMIUM_PATH,
   args: ['--no-sandbox', '--disable-dev-shm-usage', '--autoplay-policy=no-user-gesture-required'],
 });
+let verificationPage;
 try {
   const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
+  verificationPage=page;
   const errors = [];
   page.on('pageerror', error => errors.push(error.message));
   await page.goto(base.href, { waitUntil: 'networkidle' });
@@ -136,10 +138,12 @@ try {
   await page.waitForFunction(()=>window.readerDiagnostics().page===2 && window.readerDiagnostics().imageReady);
   assert.equal(await page.locator('#page-image').getAttribute('src'),wolf.pages[1].image);
   assert.equal(await page.locator('.page-turn').count(),0);
+  await page.setViewportSize({width:1111,height:730});
   await page.locator('#previous-side').click();
   await page.waitForFunction(()=>window.readerDiagnostics().page===1 && window.readerDiagnostics().imageReady);
   await page.locator('#next-side').click();
   await page.waitForFunction(()=>window.readerDiagnostics().page===2 && window.readerDiagnostics().imageReady);
+  await page.setViewportSize({width:390,height:844});
   await page.locator('#page-select').selectOption('3');
   await page.waitForFunction(()=>window.readerDiagnostics().imageReady);
   for (const mode of ['sentence','word','character']) {
@@ -163,6 +167,11 @@ try {
   await page.locator('#stop').click();
   assert.deepEqual(errors, []);
   console.log(`PASS: published library matches ${expectedHash.slice(0, 12)}; both books, new picture-book PDF and 18 page hashes, all MP3 modes, real timed glyph cues, audio controls, page turns, reversible archive and phone layout verified.`);
+} catch (error) {
+  const state=await verificationPage?.evaluate(()=>window.readerDiagnostics?.()).catch(()=>null);
+  const diagnosis=String(error.stack || error)+'\nReader state: '+JSON.stringify(state);
+  if(process.env.GITHUB_ACTIONS==='true') console.error('::error title=Permanent website verification::'+diagnosis.slice(0,10000).replaceAll('%','%25').replaceAll('\r','%0D').replaceAll('\n','%0A'));
+  throw error;
 } finally {
   await browser.close();
 }
