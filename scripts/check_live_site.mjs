@@ -2,21 +2,14 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { chromium } from '@playwright/test';
-import { verifyPublishedFile } from './verify_published_file.mjs';
 
 const base = new URL(process.env.READING_SITE_URL || 'https://angusqaq.github.io/audio-book/');
 const expected = readFileSync(new URL('../library.json', import.meta.url));
 const expectedHash = createHash('sha256').update(expected).digest('hex');
-const narratorReview=JSON.parse(readFileSync(new URL('../voice-review/mei-school/review-manifest.json',import.meta.url)));
 const shippedFiles = [
   'index.html','app.js','styles.css','tokens.css','base.css','library.json',
   'assets/brand/diandian-logo.png','config/book-voices.json','docs/voxcpm.md',
   'downloads/children-picture-book-skill.zip',
-  'config/cantonese-pronunciation.json','config/voxcpm-reference.json',
-  'reports/cantonese/cuhk-lookup.json','reports/cantonese/cuhk-variants.json',
-  'voice-review/mei-school/review-manifest.json','downloads/voxcpm-narrator-review.zip',
-  'assets/voice-references/mei-school/candidate-02.wav','reports/cantonese/critical-reading-plan.json',
-  ...narratorReview.samples.map(sample=>sample.file),
   'books/little-wolf-your-turn/exports/小狼，換你說！_繪本.pdf',
   'books/little-wolf-your-turn/exports/小狼，換你說！_跨頁閱讀版.pdf',
   'books/little-wolf-your-turn/exports/小狼，換你說！_可編輯排版.pptx',
@@ -165,12 +158,14 @@ try {
       await page.waitForFunction(()=>window.readerDiagnostics().engine==='audio' && window.readerDiagnostics().currentTime>0 && window.readerDiagnostics().glowCount>0);
       const src=await page.evaluate(()=>window.readerDiagnostics().audioSource);
       const asset=Object.values(illustrated.audio).find(item=>item.src===src);
-      await verifyPublishedFile(base,src,asset.sha256);
+      const response=await page.request.get(new URL(src,base).href);
+      assert.equal(createHash('sha256').update(await response.body()).digest('hex'),asset.sha256);
       await page.locator('#stop').click();
     }
     for (let index=0;index<illustrated.pages.length;index++) {
       const item=illustrated.pages[index];
-      await verifyPublishedFile(base,item.image,item.imageSha256);
+      const response=await page.request.get(new URL(item.image,base).href);
+      assert.equal(createHash('sha256').update(await response.body()).digest('hex'),item.imageSha256);
     }
     if (illustrated.id === wolf.id) {
       await page.locator('#page-select').selectOption('17');

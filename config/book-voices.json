@@ -6,41 +6,12 @@
   "speedFactor": 0.88,
   "books": {
     "our-good-teacher": {
-      "profile": "uploaded-narrator-reference",
-      "label": "使用者提供的配音員參考聲線・香港粵語",
+      "profile": "warm-cantonese-teacher",
+      "label": "親切老師・香港粵語女聲",
       "locale": "zh-HK",
-      "description": "沿用使用者提供的配音員音色，以自然香港粵語清楚朗讀；語氣親切，適合兒童聆聽，不加入歌唱或音效。",
-      "sampleBlock": "p4-b5",
-      "reason": "使用者明確要求《我們的好老師》改用提供的同一配音員聲線，並依中大漢語多功能字庫正音。",
-      "referenceStatus": "candidate-not-approved",
-      "publishedReplacement": false
-    },
-    "little-wolf-your-turn": {
-      "profile": "uploaded-narrator-reference",
-      "label": "使用者提供的配音員參考聲線・香港粵語",
-      "locale": "zh-HK",
-      "description": "沿用使用者提供的配音員音色，以自然香港粵語清楚朗讀；語氣親切，適合兒童聆聽，不加入歌唱或音效。",
-      "sampleBlock": "p4-b1",
-      "reason": "使用者明確要求《小狼，換你說！》改用提供的同一配音員聲線，並依中大漢語多功能字庫正音。",
-      "referenceStatus": "candidate-not-approved",
-      "publishedReplacement": false
-    },
-    "lets-find-that-cloud": {
-      "profile": "uploaded-narrator-reference",
-      "label": "使用者提供的配音員參考聲線・香港粵語",
-      "locale": "zh-HK",
-      "description": "沿用使用者提供的配音員音色，以自然香港粵語清楚朗讀；語氣親切，適合兒童聆聽，不加入歌唱或音效。",
-      "sampleBlock": "p5-b1",
-      "reason": "使用者明確要求《走！去找那朵雲》改用提供的同一配音員聲線，並依中大漢語多功能字庫正音。",
-      "referenceStatus": "candidate-not-approved",
-      "publishedReplacement": false
+      "description": "成年女老師，使用自然香港粵語，聲線溫柔親切，發音清晰準確，情緒自然，節奏舒緩有耐心，適合小學生聆聽校園故事，不唱歌，不誇張演戲。",
+      "sampleBlock": "p3-b6",
+      "reason": "配合《我們的好老師》的校園故事與小學生點讀用途，優先選擇親切、穩定、清楚的敘述聲線。"
     }
-  },
-  "referenceConfig": "config/voxcpm-reference.json",
-  "pronunciationPolicy": "config/cantonese-pronunciation.json",
-  "requestedBooks": [
-    "our-good-teacher",
-    "little-wolf-your-turn",
-    "lets-find-that-cloud"
-  ]
+  }
 }
