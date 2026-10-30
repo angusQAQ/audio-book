@@ -29,9 +29,13 @@ BOOK = json.loads((ROOT / 'story.json').read_text())
 W, H = 960, 540
 INK, MUTED = '#303536', '#626B68'
 FONT = ROOT / 'assets/fonts/Iansui-Regular.ttf'
+HAND_FONT = ROOT / 'assets/fonts/Yomogi-Regular.ttf'
+FONTS = {'Iansui': FONT, 'Yomogi': HAND_FONT}
+EMPHASIS_SCALE = BOOK['typography']['targetScale']
 TARGETS = set(BOOK['coreCharacters'] + BOOK['extensionCharacters'])
 STORY_HAN = len(re.findall(r'[\u3400-\u9fff]', ''.join(''.join(s['lines']) for s in BOOK['spreads'])))
-pdfmetrics.registerFont(TTFont('Iansui', str(FONT)))
+for family, path in FONTS.items():
+    pdfmetrics.registerFont(TTFont(family, str(path)))
 CROPS = {'wolf': (0, 0, .337, .49), 'dog': (.337, 0, .667, .49),
          'fox': (.667, 0, 1, .49), 'monkey': (0, .49, .337, 1),
          'lion': (.337, .49, .667, 1)}
@@ -41,10 +45,15 @@ HEAD_CROPS = {'wolf': (.04, 0, .31, .30), 'dog': (.35, .01, .65, .30),
 
 
 def text_item(text, x, y, size=23, colour=INK, emphasis=False):
-    sizes = [size * (1.12 if emphasis and ch in TARGETS else 1) for ch in text]
-    advances = [pdfmetrics.stringWidth(ch, 'Iansui', fs) for ch, fs in zip(text, sizes)]
+    fonts = ['Yomogi' if emphasis and ch in TARGETS else 'Iansui' for ch in text]
+    sizes = [size * (EMPHASIS_SCALE if family == 'Yomogi' else 1) for family in fonts]
+    advances = [pdfmetrics.stringWidth(ch, family, fs) for ch, family, fs in zip(text, fonts, sizes)]
+    # Share a baseline while allowing the larger handwritten glyphs to rise above the body.
+    ascent = max((pdfmetrics.getAscent(family) / 1000 * fs for family, fs in zip(fonts, sizes)), default=size)
+    descent = max((-pdfmetrics.getDescent(family) / 1000 * fs for family, fs in zip(fonts, sizes)), default=0)
     return dict(kind='text', text=text, x=x, y=y, size=size, colour=colour,
-                sizes=sizes, advances=advances, width=sum(advances), height=max(sizes, default=size) * 1.25)
+                fonts=fonts, sizes=sizes, advances=advances, ascent=ascent,
+                width=sum(advances), height=ascent + descent)
 
 
 def wrap(text, width, size, emphasis):
@@ -71,8 +80,9 @@ def add_block(items, paragraphs, x, y, width=364, size=22.8, leading=33, colour=
     for para in paragraphs:
         fs = 33 if para == '「嗷——」' else size
         for line in wrap(para, width, fs, emphasis):
-            items.append(text_item(line, x, y, fs, colour, emphasis))
-            y += max(leading, fs * 1.25)
+            item = text_item(line, x, y, fs, colour, emphasis)
+            items.append(item)
+            y += max(leading, item['height'] + 6)
     return y
 
 
@@ -118,7 +128,9 @@ def pages(proof):
             elif spread['id'] == 's14':
                 x, y, width, height = (0, 25, 900, 506.25)
             elif spread['id'] == 's10':
-                y = 30
+                x, y, width, height = (45, 68, 870, 489.375)
+            elif spread['id'] == 's12':
+                x, y, width, height = (98, 90, 764, 429.75)
             elif spread['id'] == 's03':
                 x, y, width, height = (170, 48, 790, 444.375)
             elif spread['layout'] == 'left-middle' and spread['id'] != 's04':
@@ -129,7 +141,12 @@ def pages(proof):
         else:
             raise FileNotFoundError('Missing finished illustration: ' + str(art))
         if spread['layout'] == 'left-middle':
-            add_block(items, spread['lines'], 53, 154, 338, 22.8, 34)
+            if spread['id'] == 's07':
+                y = add_block(items, spread['lines'][:2], 53, 154, 365, 22.8, 34)
+                first_guess, second_guess = spread['lines'][2].split('？', 1)
+                add_block(items, [first_guess + '？', second_guess], 53, y, 338, 22.8, 34)
+            else:
+                add_block(items, spread['lines'], 53, 154, 338, 22.8, 34)
         elif len(spread['lines']) == 2:
             add_block(items, spread['lines'], 52, 39)
         else:
@@ -145,13 +162,13 @@ def pages(proof):
     for index, (ch, word, name) in enumerate(cards):
         x, y = 48 + index % 3 * 130, 134 + index // 3 * 171
         lesson.append(rect(x, y, 112, 151, '#FFFFFF', '#D6E3DA', 9))
-        lesson += [text_item(ch, x + 31, y + 6, 48), character(name, x + 24, y + 64, 64, 63, head=True), text_item(word, x + 38 - (len(word) - 2) * 7, y + 128, 15)]
+        lesson += [text_item(ch, x + 26, y - 1, 40, emphasis=True), character(name, x + 24, y + 64, 64, 63, head=True), text_item(word, x + 34, y + 122, 15, emphasis=True)]
     lesson += [text_item('犬和犭，是一家', 532, 39, 29),
                text_item('犬', 553, 104, 71, '#B35C50'), text_item('→', 658, 126, 34, MUTED),
                text_item('犭', 734, 104, 71, '#B35C50')]
-    add_block(lesson, ['「犬」有狗的意思。', '它作左旁時，常寫成「犭」，', '這個形狀也叫反犬旁。'], 532, 221, 377, 18, 26, INK, False)
-    lesson.append(text_item('猜一猜　　獨自', 532, 352, 28))
-    add_block(lesson, ['「猜」和「獨」也是犬部字，', '卻不是動物的名稱。'], 532, 401, 377, 18, 26, INK, False)
+    add_block(lesson, ['「犬」有狗的意思。', '它作左旁時，常寫成「犭」，', '這個形狀也叫反犬旁。'], 532, 221, 377, 18, 26)
+    lesson.append(text_item('猜一猜　　獨自', 532, 350, 28, emphasis=True))
+    add_block(lesson, ['「猜」和「獨」也是犬部字，', '卻不是動物的名稱。'], 532, 401, 377, 18, 26)
     lesson += [text_item('再翻一遍，找出故事裏的犬部字。', 532, 477, 16, '#4D7568'),
                text_item('30', 38, 513, 10.5, MUTED), text_item('31', 905, 513, 10.5, MUTED)]
     result.append(dict(id='lesson', items=lesson, note='核心六字：狗、狐、狸、狼、猴、獅。延伸：猜、獨。詞語採用「狐狸」。繁體貓屬豸部，豬屬豕部，未誤列。'))
@@ -164,7 +181,7 @@ def pages(proof):
         back += [picture(cover, 95, 161, 228, 177), picture(cover, 668, 300, 190, 185)]
     else:
         back += [character('wolf', 110, 160, 220, 178), character('wolf', 668, 300, 190, 185)]
-    add_block(back, ['《小狼，換你說！》', '原創故事與排版・點點書房', '插畫：AI 輔助，依原創角色設定製作', '字型：芫荽 Iansui・SIL OFL 1.1', f'正文 {STORY_HAN} 個漢字・六個核心字・兩個延伸字'], 54, 363, 382, 11.5, 20, MUTED, False)
+    add_block(back, ['《小狼，換你說！》', '原創故事與排版・點點書房', '插畫：AI 輔助，依原創角色設定製作', '字型：芫荽 Iansui／Yomogi・SIL OFL 1.1', f'正文 {STORY_HAN} 個漢字・六個核心字・兩個延伸字'], 54, 363, 382, 11.5, 20, MUTED, False)
     result.append(dict(id='back', items=back, note='左頁：製作頁 32；右頁：封底。閱讀後可請孩子設計自己的新角色卡。'))
     return result
 
@@ -221,10 +238,10 @@ def render_pdf(page_list, target):
                 pdf.restoreState()
             else:
                 pdf.setFillColorRGB(*colour(item['colour']))
-                baseline = H - item['y'] - pdfmetrics.getAscent('Iansui') / 1000 * max(item['sizes'])
+                baseline = H - item['y'] - item['ascent']
                 obj = pdf.beginText(item['x'], baseline)
-                for ch, fs in zip(item['text'], item['sizes']):
-                    obj.setFont('Iansui', fs); obj.textOut(ch)
+                for ch, family, fs in zip(item['text'], item['fonts'], item['sizes']):
+                    obj.setFont(family, fs); obj.textOut(ch)
                 pdf.drawText(obj)
         pdf.showPage()
     pdf.save()
@@ -256,10 +273,10 @@ def render_pptx(page_list, target):
                 tf = shape.text_frame; tf.word_wrap = False
                 tf.margin_left = tf.margin_top = tf.margin_right = tf.margin_bottom = 0
                 p = tf.paragraphs[0]; p.space_before = p.space_after = Pt(0); p.line_spacing = 1.0
-                for ch, fs in zip(item['text'], item['sizes']):
-                    run = p.add_run(); run.text = ch; run.font.name = 'Iansui'; run.font.size = Pt(fs)
+                for ch, family, fs in zip(item['text'], item['fonts'], item['sizes']):
+                    run = p.add_run(); run.text = ch; run.font.name = family; run.font.size = Pt(fs)
                     run.font.color.rgb = RGBColor.from_string(item['colour'][1:])
-                    ea = OxmlElement('a:ea'); ea.set('typeface', 'Iansui'); run._r.get_or_add_rPr().append(ea)
+                    ea = OxmlElement('a:ea'); ea.set('typeface', family); run._r.get_or_add_rPr().append(ea)
     deck.save(str(target))
 
 
@@ -274,8 +291,8 @@ def render_svgs(page_list, directory):
                 href = os.path.relpath(item['path'], directory)
                 elements.append(f'<svg x="{g["x"]}" y="{g["y"]}" width="{g["width"]}" height="{g["height"]}" viewBox="{l*iw} {t*ih} {(r-l)*iw} {(b-t)*ih}"><title>{html.escape(item["alt"])}</title><image href="{html.escape(href)}" width="{iw}" height="{ih}"/></svg>')
             else:
-                baseline = item['y'] + pdfmetrics.getAscent('Iansui') / 1000 * max(item['sizes'])
-                spans = ''.join(f'<tspan font-size="{fs}">{html.escape(ch)}</tspan>' for ch, fs in zip(item['text'], item['sizes']))
+                baseline = item['y'] + item['ascent']
+                spans = ''.join(f'<tspan font-family="{family}" font-size="{fs}">{html.escape(ch)}</tspan>' for ch, family, fs in zip(item['text'], item['fonts'], item['sizes']))
                 elements.append(f'<text x="{item["x"]}" y="{baseline}" fill="{item["colour"]}" font-family="Iansui,芫荽">{spans}</text>')
         content = '<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540"><rect width="960" height="540" fill="white"/>' + '\n'.join(elements) + '</svg>'
         (directory / (page['id'] + '.svg')).write_text(content)
@@ -300,8 +317,8 @@ def single_pages(source, target):
 
 
 def validate(page_list, output, proof):
-    cmap = FontToolsFont(FONT).getBestCmap()
-    missing = sorted({ch for p in page_list for i in p['items'] if i['kind']=='text' for ch in i['text'] if ord(ch) not in cmap})
+    cmaps = {family: FontToolsFont(path).getBestCmap() for family, path in FONTS.items()}
+    missing = sorted({ch for p in page_list for i in p['items'] if i['kind']=='text' for ch, family in zip(i['text'], i['fonts']) if ord(ch) not in cmaps[family]})
     assert not missing, 'Missing glyphs: ' + ''.join(missing)
     for p in page_list:
         for i in p['items']:
@@ -336,8 +353,34 @@ def validate(page_list, output, proof):
     expected = ''.join(i['text'] for p in page_list for i in p['items'] if i['kind']=='text')
     actual = ''.join(shape.text for slide in deck.slides for shape in slide.shapes if shape.has_text_frame)
     assert expected == actual, 'Editable slide text differs from book source'
+    # Verify the exported runs: fallback or flattened text would defeat the learning cue.
+    handwritten = Counter()
+    for layout, pdf_page, slide in zip(page_list, spreads, deck.slides):
+        text_items = [item for item in layout['items'] if item['kind'] == 'text']
+        expected_runs = [(ch, family, fs) for item in text_items
+                         for ch, family, fs in zip(item['text'], item['fonts'], item['sizes'])]
+        actual_runs = [(run.text, run.font.name, run.font.size.pt)
+                       for shape in slide.shapes if shape.has_text_frame
+                       for para in shape.text_frame.paragraphs for run in para.runs]
+        assert len(actual_runs) == len(expected_runs), (layout['id'], 'Editable font runs missing')
+        for (ch, family, fs), (text, exported_font, exported_size) in zip(expected_runs, actual_runs):
+            assert ch == text and family == exported_font and abs(fs - exported_size) < .011, (layout['id'], ch, 'Editable font or size changed')
+        expected_hand = Counter((ch, round(fs, 2)) for ch, family, fs in expected_runs if family == 'Yomogi')
+        pdf_hand = Counter((char['c'], round(span['size'], 2))
+                           for block in pdf_page.get_text('rawdict')['blocks'] if 'lines' in block
+                           for line in block['lines'] for span in line['spans'] if 'Yomogi' in span['font']
+                           for char in span['chars'])
+        assert pdf_hand == expected_hand, (layout['id'], 'PDF handwriting font or size changed')
+        handwritten.update(ch for ch, family, fs in expected_runs if family == 'Yomogi')
+        if layout['id'].startswith('s'):
+            for item in text_items:
+                for ch, family, fs in zip(item['text'], item['fonts'], item['sizes']):
+                    if ch in TARGETS:
+                        assert family == 'Yomogi' and abs(fs / item['size'] - EMPHASIS_SCALE) < .001
     report = {'status': 'proof' if proof else 'complete', 'spreadPages':len(spreads), 'singlePages':len(leaves),
               'editableSlides':len(deck.slides), 'missingGlyphs':missing, 'allTextEditable':True,
+              'targetTypography': {'font': 'Yomogi', 'bodyScale': EMPHASIS_SCALE,
+                                   'pdfAndPptxRunsVerified': True, 'handwrittenGlyphs': dict(handwritten)},
               'storyHanCharacters':len(re.findall(r'[\u3400-\u9fff]', ''.join(''.join(s['lines']) for s in BOOK['spreads']))),
               'targets':{ch:full_text.count(ch) for ch in BOOK['coreCharacters']+BOOK['extensionCharacters']}}
     (output / 'validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')

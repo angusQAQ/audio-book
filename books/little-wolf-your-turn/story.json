@@ -5,6 +5,11 @@
   "series": "部首故事・犬",
   "audience": "7–9 歲・小二至小三",
   "language": "zh-HK",
+  "typography": {
+    "bodyFamily": "Iansui",
+    "targetFamily": "Yomogi",
+    "targetScale": 1.5
+  },
   "coreCharacters": [
     "狗",
     "狐",

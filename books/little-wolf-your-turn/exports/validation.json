@@ -5,6 +5,21 @@
   "editableSlides": 18,
   "missingGlyphs": [],
   "allTextEditable": true,
+  "targetTypography": {
+    "font": "Yomogi",
+    "bodyScale": 1.5,
+    "pdfAndPptxRunsVerified": true,
+    "handwrittenGlyphs": {
+      "狗": 9,
+      "狐": 7,
+      "狸": 7,
+      "猴": 5,
+      "獅": 5,
+      "狼": 11,
+      "獨": 3,
+      "猜": 6
+    }
+  },
   "storyHanCharacters": 367,
   "targets": {
     "狗": 9,
