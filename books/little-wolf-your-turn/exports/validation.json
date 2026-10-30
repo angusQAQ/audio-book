@@ -1,0 +1,19 @@
+{
+  "status": "complete",
+  "spreadPages": 18,
+  "singlePages": 34,
+  "editableSlides": 18,
+  "missingGlyphs": [],
+  "allTextEditable": true,
+  "storyHanCharacters": 367,
+  "targets": {
+    "狗": 9,
+    "狐": 7,
+    "狸": 7,
+    "狼": 14,
+    "猴": 5,
+    "獅": 5,
+    "猜": 6,
+    "獨": 3
+  }
+}
