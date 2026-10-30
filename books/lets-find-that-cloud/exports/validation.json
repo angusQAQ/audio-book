@@ -6,12 +6,21 @@
   "missingGlyphs": [],
   "allTextEditable": true,
   "originalArtworkHashesVerified": 16,
+  "properNameMarks": {
+    "names": {
+      "琪琪": 10,
+      "樂樂": 9
+    },
+    "style": "continuous rule below each full name",
+    "pdfPptxSvgGeometryVerified": true,
+    "editableTextAndRuleGrouped": true
+  },
   "targetTypography": {
     "font": "JyunsaiKaai",
     "bodyScale": 1.5,
     "pdfAndPptxRunsVerified": true,
     "handwrittenGlyphs": {
-      "走": 20,
+      "走": 18,
       "起": 8,
       "趟": 5,
       "趕": 6,
@@ -21,7 +30,7 @@
       "趣": 4
     }
   },
-  "storyHanCharacters": 359,
+  "storyHanCharacters": 364,
   "targets": {
     "起": 8,
     "趕": 7,

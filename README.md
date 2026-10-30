@@ -81,7 +81,7 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 
 ## 原創走部繪本
 
-《走！去找那朵雲》為 7–9 歲設計，以「起、趕、超、越、趟、趣」為核心，兼認走、延伸趁。阿米與小澄去找天上的雲，在水窪發現腳邊也有天空。359 個漢字、14 個故事跨頁，採原創人物、灰鉛筆與局部淡彩、大留白及放大的手寫楷體。
+《走！去找那朵雲》為 7–9 歲設計，以「起、趕、超、越、趟、趣」為核心，兼認走、延伸趁。琪琪與樂樂去找天上的雲，在水窪發現腳邊也有天空。364 個漢字、14 個故事跨頁，採原創人物、灰鉛筆與局部淡彩、大留白及放大的手寫楷體。
 
 - [跨頁閱讀 PDF｜18 畫面](https://angusqaq.github.io/audio-book/books/lets-find-that-cloud/exports/走！去找那朵雲_跨頁閱讀版.pdf)
 - [單頁繪本 PDF｜34 頁](https://angusqaq.github.io/audio-book/books/lets-find-that-cloud/exports/走！去找那朵雲_繪本.pdf)

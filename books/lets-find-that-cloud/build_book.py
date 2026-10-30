@@ -19,7 +19,7 @@ from fontTools.ttLib import TTFont as FontToolsFont
 from PIL import Image, ImageDraw
 from pptx import Presentation
 from pptx.dml.color import RGBColor
-from pptx.enum.shapes import MSO_SHAPE
+from pptx.enum.shapes import MSO_CONNECTOR, MSO_SHAPE, MSO_SHAPE_TYPE
 from pptx.oxml.xmlchemy import OxmlElement
 from pptx.util import Pt
 from reportlab.pdfbase import pdfmetrics
@@ -37,10 +37,13 @@ HAND_FAMILY = 'JyunsaiKaai'
 FONTS = {'Iansui': FONT, HAND_FAMILY: HAND_FONT}
 EMPHASIS_SCALE = BOOK['typography']['targetScale']
 TARGETS = set(BOOK['coreCharacters'] + BOOK['extensionCharacters'] + [BOOK['radical']['base']])
+PROPER_NAMES = BOOK['typography']['properNames']
+NAME_MARK = BOOK['typography']['properNameMark']
+NAME_PATTERN = re.compile('|'.join(re.escape(name) for name in sorted(PROPER_NAMES, key=len, reverse=True)))
 STORY_HAN = len(re.findall(r'[\u3400-\u9fff]', ''.join(''.join(s['lines']) for s in BOOK['spreads'])))
 for family, path in FONTS.items():
     pdfmetrics.registerFont(TTFont(family, str(path)))
-CROPS = {'ami': (0,0,.25,1), 'cheng': (.5,0,.75,1)}
+CROPS = {'qiqi': (0,0,.25,1), 'lele': (.5,0,.75,1)}
 
 
 def text_item(text, x, y, size=23, colour=INK, emphasis=False):
@@ -50,9 +53,16 @@ def text_item(text, x, y, size=23, colour=INK, emphasis=False):
     # Share a baseline while allowing the larger handwritten glyphs to rise above the body.
     ascent = max((pdfmetrics.getAscent(family) / 1000 * fs for family, fs in zip(fonts, sizes)), default=size)
     descent = max((-pdfmetrics.getDescent(family) / 1000 * fs for family, fs in zip(fonts, sizes)), default=0)
+    name_marks = []
+    for match in NAME_PATTERN.finditer(text):
+        name_marks.append(dict(name=match.group(), start=match.start(), end=match.end(),
+                               x=sum(advances[:match.start()]) + NAME_MARK['inset'],
+                               width=sum(advances[match.start():match.end()]) - 2 * NAME_MARK['inset']))
+    if name_marks:
+        descent = max(descent, NAME_MARK['baselineOffset'] + NAME_MARK['strokeWidth'] / 2)
     return dict(kind='text', text=text, x=x, y=y, size=size, colour=colour,
                 fonts=fonts, sizes=sizes, advances=advances, ascent=ascent,
-                width=sum(advances), height=ascent + descent)
+                width=sum(advances), height=ascent + descent, nameMarks=name_marks)
 
 
 def wrap(text, width, size, emphasis):
@@ -60,11 +70,17 @@ def wrap(text, width, size, emphasis):
         return [line for paragraph in text.split('\n') for line in wrap(paragraph,width,size,emphasis)]
     closing, opening = set('，。！？：；、」』）》】…'), set('「『（《【')
     units = []
-    for ch in text:
-        if units and (ch in closing or units[-1][-1] in opening):
-            units[-1] += ch
+    # Keep each personal name on one line so its proper-name mark stays continuous.
+    tokens = []
+    cursor = 0
+    for match in NAME_PATTERN.finditer(text):
+        tokens.extend(text[cursor:match.start()]); tokens.append(match.group()); cursor = match.end()
+    tokens.extend(text[cursor:])
+    for token in tokens:
+        if units and (token in closing or units[-1][-1] in opening):
+            units[-1] += token
         else:
-            units.append(ch)
+            units.append(token)
     lines, line = [], ''
     for unit in units:
         if line and text_item(line+unit,0,0,size,emphasis=emphasis)['width'] > width:
@@ -105,11 +121,11 @@ def pages(proof):
            text_item('部首故事・走',278,26,17,'#557D8B'),
            text_item('走！',278,65,56,emphasis=True),
            text_item('去找那朵雲',277,170,51)]
-    if cover.exists():front.append(picture(cover,270,249,420,275,alt='阿米與小澄帶着紙風車，抬頭望雲'))
-    elif proof:front += [character('ami',330,270,100,230),character('cheng',495,270,100,230)]
+    if cover.exists():front.append(picture(cover,270,249,420,275,alt='琪琪與樂樂帶着紙風車，抬頭望雲'))
+    elif proof:front += [character('qiqi',330,270,100,230),character('lele',495,270,100,230)]
     result.append(dict(id='cover',items=front,note='原創走部繪本；封面；7–9 歲。'))
     title=[text_item('給每一個',63,78,21),text_item('走在路上的人。',63,113,21,emphasis=True),
-           character('ami',75,248,125,242),character('cheng',247,248,125,242),
+           character('qiqi',75,248,125,242),character('lele',247,248,125,242),
            text_item('走！',537,159,42,emphasis=True),text_item('去找那朵雲',536,242,46),
            text_item('部首故事・走',540,329,19),text_item('原創繁體中文繪本・7–9 歲',540,452,13,MUTED)]
     result.append(dict(id='title',items=title,note='右頁為扉頁 1；左頁為閱讀版的前襯，不計入單頁 PDF。'))
@@ -151,8 +167,8 @@ def pages(proof):
           text_item('有趣的事，',532,216,23,emphasis=True),text_item('有時要慢一點才看得見。',532,258,23),
           text_item('繁體中文・7–9 歲',532,494,12,MUTED),text_item('32',38,513,10.5,MUTED)]
     if cover.exists():back.append(picture(cover,582,329,292,154,alt='兩位同行的孩子'))
-    else:back += [character('ami',590,335,90,145),character('cheng',755,335,90,145)]
-    back += [character('ami',91,167,98,170),character('cheng',258,167,98,170)]
+    else:back += [character('qiqi',590,335,90,145),character('lele',755,335,90,145)]
+    back += [character('qiqi',91,167,98,170),character('lele',258,167,98,170)]
     add_block(back,['《走！去找那朵雲》','原創故事與排版・點點書房','插畫：AI 輔助，依原創角色設定製作','字型：芫荽／芫茜雅楷・SIL OFL 1.1',f'正文 {STORY_HAN} 個漢字・六個核心字・一個延伸字','字卡答案：趕；跑屬足部，追屬辵部。'],54,367,382,11.5,19,MUTED,False)
     result.append(dict(id='back',items=back,note='左頁製作頁 32；右頁封底。快與慢都不是好壞的標籤，故事重點是注意與同行。'))
     return result
@@ -215,6 +231,12 @@ def render_pdf(page_list, target):
                 for ch, family, fs in zip(item['text'], item['fonts'], item['sizes']):
                     obj.setFont(family, fs); obj.textOut(ch)
                 pdf.drawText(obj)
+                pdf.setStrokeColorRGB(*colour(item['colour']))
+                pdf.setLineWidth(NAME_MARK['strokeWidth'])
+                for mark in item['nameMarks']:
+                    x = item['x'] + mark['x']
+                    y = baseline - NAME_MARK['baselineOffset']
+                    pdf.line(x, y, x + mark['width'], y)
         pdf.showPage()
     pdf.save()
 
@@ -244,7 +266,13 @@ def render_pptx(page_list, target):
                 shape.crop_left = l; shape.crop_top = t; shape.crop_right = 1-r; shape.crop_bottom = 1-b
                 shape._element.xpath('.//p:cNvPr')[0].set('descr', item['alt'])
             else:
-                shape = slide.shapes.add_textbox(Pt(item['x']), Pt(item['y']), Pt(item['width'] + 5), Pt(item['height'] + 4))
+                # Group editable rules with their native text, so moving the text keeps its marks.
+                shapes = slide.shapes
+                if item['nameMarks']:
+                    group = shapes.add_group_shape()
+                    group.name = '專名號：' + item['text']
+                    shapes = group.shapes
+                shape = shapes.add_textbox(Pt(item['x']), Pt(item['y']), Pt(item['width'] + 5), Pt(item['height'] + 4))
                 tf = shape.text_frame; tf.word_wrap = False
                 tf.margin_left = tf.margin_top = tf.margin_right = tf.margin_bottom = 0
                 p = tf.paragraphs[0]; p.space_before = p.space_after = Pt(0); p.line_spacing = 1.0
@@ -253,6 +281,16 @@ def render_pptx(page_list, target):
                     run.font.bold = family == HAND_FAMILY
                     run.font.color.rgb = RGBColor.from_string(item['colour'][1:])
                     ea = OxmlElement('a:ea'); ea.set('typeface', family); run._r.get_or_add_rPr().append(ea)
+                for mark in item['nameMarks']:
+                    x = item['x'] + mark['x']
+                    y = item['y'] + item['ascent'] + NAME_MARK['baselineOffset']
+                    line = shapes.add_connector(MSO_CONNECTOR.STRAIGHT, Pt(x), Pt(y), Pt(x + mark['width']), Pt(y))
+                    line.name = '專名號：' + mark['name']
+                    line.line.width = Pt(NAME_MARK['strokeWidth'])
+                    line.line.color.rgb = RGBColor.from_string(item['colour'][1:])
+                    line._element.spPr.append(OxmlElement('a:effectLst'))
+                    for effect in line._element.xpath('./p:style/a:effectRef'):
+                        effect.set('idx', '0')
     deck.save(str(target))
 
 
@@ -270,6 +308,9 @@ def render_svgs(page_list, directory):
                 baseline = item['y'] + item['ascent']
                 spans = ''.join(f'<tspan font-family="{family}" font-weight="{700 if family == HAND_FAMILY else 400}" font-size="{fs}">{html.escape(ch)}</tspan>' for ch, family, fs in zip(item['text'], item['fonts'], item['sizes']))
                 elements.append(f'<text x="{item["x"]}" y="{baseline}" fill="{item["colour"]}" font-family="Iansui,芫荽">{spans}</text>')
+                for mark in item['nameMarks']:
+                    x = item['x'] + mark['x']; y = baseline + NAME_MARK['baselineOffset']
+                    elements.append(f'<line data-proper-name="{mark["name"]}" x1="{x}" y1="{y}" x2="{x+mark["width"]}" y2="{y}" stroke="{item["colour"]}" stroke-width="{NAME_MARK["strokeWidth"]}"/>')
         content = '<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540"><rect width="960" height="540" fill="white"/>' + '\n'.join(elements) + '</svg>'
         (directory / (page['id'] + '.svg')).write_text(content)
         ET.fromstring(content)
@@ -290,6 +331,14 @@ def single_pages(source, target):
     book.set_metadata({'title': BOOK['title'] + '｜走部故事', 'author': '點點書房・原創繪本製作', 'subject': '7–9 歲；封面、32內頁、封底'})
     book.set_toc([[1,'封面',1],[1,'故事',3],[1,'走部遊戲',31],[1,'製作頁',33],[1,'封底',34]])
     book.save(target, garbage=4, deflate=True)
+
+
+def all_shapes(shapes):
+    for shape in shapes:
+        if shape.shape_type == MSO_SHAPE_TYPE.GROUP:
+            yield from all_shapes(shape.shapes)
+        else:
+            yield shape
 
 
 def validate(page_list, output, proof):
@@ -336,18 +385,19 @@ def validate(page_list, output, proof):
     assert len(deck.slides) == 18
     assert sum(len(s.shapes) for s in deck.slides) > 100
     expected = ''.join(i['text'] for p in page_list for i in p['items'] if i['kind']=='text')
-    actual = ''.join(shape.text for slide in deck.slides for shape in slide.shapes if shape.has_text_frame)
+    actual = ''.join(shape.text for slide in deck.slides for shape in all_shapes(slide.shapes) if shape.has_text_frame)
     assert expected == actual, 'Editable slide text differs from book source'
     # Verify the exported runs: fallback or flattened text would defeat the learning cue.
     handwritten = Counter()
+    proper_name_marks = Counter()
     for layout, pdf_page, slide in zip(page_list, spreads, deck.slides):
         text_items = [item for item in layout['items'] if item['kind'] == 'text']
         expected_runs = [(ch, family, fs) for item in text_items
                          for ch, family, fs in zip(item['text'], item['fonts'], item['sizes'])]
         actual_runs = [(run.text, run.font.name, run.font.size.pt)
-                       for shape in slide.shapes if shape.has_text_frame
+                       for shape in all_shapes(slide.shapes) if shape.has_text_frame
                        for para in shape.text_frame.paragraphs for run in para.runs]
-        for shape in slide.shapes:
+        for shape in all_shapes(slide.shapes):
             if shape.has_text_frame:
                 for para in shape.text_frame.paragraphs:
                     for run in para.runs:
@@ -361,15 +411,39 @@ def validate(page_list, output, proof):
                            for line in block['lines'] for span in line['spans'] if HAND_FAMILY in span['font']
                            for char in span['chars'])
         assert pdf_hand == expected_hand, (layout['id'], 'PDF handwriting font or size changed')
+        expected_marks = [(item, mark) for item in text_items for mark in item['nameMarks']]
+        pdf_rules = [drawing for drawing in pdf_page.get_drawings()
+                     if len(drawing['items']) == 1 and drawing['items'][0][0] == 'l']
+        pptx_rules = [shape for shape in all_shapes(slide.shapes)
+                      if shape.shape_type == MSO_SHAPE_TYPE.LINE and shape.name.startswith('專名號：')]
+        svg_rules = ET.parse((output/'editable' if proof else ROOT/'editable')/(layout['id']+'.svg')).findall('{http://www.w3.org/2000/svg}line')
+        assert len(pdf_rules) == len(pptx_rules) == len(svg_rules) == len(expected_marks), (layout['id'], 'Missing proper-name mark')
+        for (item, mark), drawing, shape, rule in zip(expected_marks, pdf_rules, pptx_rules, svg_rules):
+            x = item['x'] + mark['x']; y = item['y'] + item['ascent'] + NAME_MARK['baselineOffset']
+            expected_line = (x, y, x + mark['width'], y)
+            pdf_line = tuple(drawing['items'][0][1]) + tuple(drawing['items'][0][2])
+            pptx_line = (shape.begin_x.pt, shape.begin_y.pt, shape.end_x.pt, shape.end_y.pt)
+            svg_line = tuple(float(rule.get(key)) for key in ('x1','y1','x2','y2'))
+            assert all(abs(a-b)<.02 for line in (pdf_line,pptx_line,svg_line) for a,b in zip(line,expected_line)), (layout['id'],mark['name'],'Misplaced proper-name mark')
+            assert abs(drawing['width']-NAME_MARK['strokeWidth'])<.02 and abs(shape.line.width.pt-NAME_MARK['strokeWidth'])<.02
+            assert abs(float(rule.get('stroke-width'))-NAME_MARK['strokeWidth'])<.02
+            assert shape._element.spPr.find('{http://schemas.openxmlformats.org/drawingml/2006/main}effectLst') is not None
+            assert all(effect.get('idx') == '0' for effect in shape._element.xpath('./p:style/a:effectRef')), 'Proper-name rules must not inherit theme shadows'
+            assert shape.name == '專名號：'+mark['name'] and rule.get('data-proper-name') == mark['name']
+            proper_name_marks[mark['name']] += 1
         handwritten.update(ch for ch, family, fs in expected_runs if family == HAND_FAMILY)
         if layout['id'].startswith('s'):
             for item in text_items:
                 for ch, family, fs in zip(item['text'], item['fonts'], item['sizes']):
                     if ch in TARGETS:
                         assert family == HAND_FAMILY and abs(fs / item['size'] - EMPHASIS_SCALE) < .001
+    manuscript_names = Counter(match.group() for spread in BOOK['spreads'] for line in spread['lines'] for match in NAME_PATTERN.finditer(line))
+    assert proper_name_marks == manuscript_names, 'Every manuscript name must retain a complete proper-name mark'
     report = {'status': 'proof' if proof else 'complete', 'spreadPages':len(spreads), 'singlePages':len(leaves),
               'editableSlides':len(deck.slides), 'missingGlyphs':missing, 'allTextEditable':True,
               'originalArtworkHashesVerified':artwork_count,
+              'properNameMarks': {'names': dict(proper_name_marks), 'style': 'continuous rule below each full name',
+                                  'pdfPptxSvgGeometryVerified': True, 'editableTextAndRuleGrouped': True},
               'targetTypography': {'font': HAND_FAMILY, 'bodyScale': EMPHASIS_SCALE,
                                    'pdfAndPptxRunsVerified': True, 'handwrittenGlyphs': dict(handwritten)},
               'storyHanCharacters':len(re.findall(r'[\u3400-\u9fff]', ''.join(''.join(s['lines']) for s in BOOK['spreads']))),
