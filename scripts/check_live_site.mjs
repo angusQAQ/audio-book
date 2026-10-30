@@ -9,6 +9,7 @@ const expectedHash = createHash('sha256').update(expected).digest('hex');
 const shippedFiles = [
   'index.html','app.js','styles.css','tokens.css','base.css','library.json',
   'assets/brand/diandian-logo.png','config/book-voices.json','docs/voxcpm.md',
+  'config/pronunciation-overrides.json',
   'downloads/children-picture-book-skill.zip',
   'books/little-wolf-your-turn/exports/小狼，換你說！_繪本.pdf',
   'books/little-wolf-your-turn/exports/小狼，換你說！_跨頁閱讀版.pdf',
@@ -174,6 +175,18 @@ try {
       await page.waitForFunction(()=>window.readerDiagnostics().highlightedText==='犭');
       await page.locator('#stop').click();
     } else {
+      await page.locator('#page-select').selectOption('1');
+      await page.waitForFunction(()=>window.readerDiagnostics().imageReady);await chooseMode('character');
+      const do2=Object.values(cloud.audio).find(asset=>asset.text==='朵');
+      assert.equal(do2.pronunciationHints['朵'],'do2');
+      assert.equal(do2.ttsText,'躲');
+      await page.getByRole('button',{name:'朗讀粵語：朵',exact:true}).click();
+      await page.waitForFunction(()=>window.readerDiagnostics().engine==='audio' && window.readerDiagnostics().highlightedText==='朵');
+      assert.equal(await page.evaluate(()=>window.readerDiagnostics().audioSource),do2.src);
+      const do2Response=await page.request.get(new URL(do2.src,base).href);
+      assert.equal(do2Response.status(),200);
+      assert.equal(createHash('sha256').update(await do2Response.body()).digest('hex'),do2.sha256);
+      await page.locator('#stop').click();
       for (const [number,name] of [[3,'琪琪'],[4,'樂樂']]) {
         await page.locator('#page-select').selectOption(String(number));
         await page.waitForFunction(()=>window.readerDiagnostics().imageReady);await chooseMode('word');

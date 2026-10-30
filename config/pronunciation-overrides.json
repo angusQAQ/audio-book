@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "authority": "使用者指定「那朵雲」的「朵」讀 do2；依香港中文大學漢語多功能字庫查核",
+  "source": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E6%9C%B5",
+  "books": {
+    "lets-find-that-cloud": {
+      "朵": {
+        "jyutping": "do2",
+        "ttsCharacter": "躲"
+      }
+    }
+  },
+  "note": "畫面、PDF、原文及跟讀顯示保留「朵」。只在 Edge 語音輸入以無歧義同音字提示 do2；字數及位置一對一，時間仍取自新 MP3 的實際 WordBoundary。"
+}

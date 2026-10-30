@@ -53,4 +53,41 @@ class AudioRegistration(unittest.TestCase):
             self.assertEqual(updated['books'][1]['audio'][asset['id']]['sha256'],asset['sha256'])
 
 
+class PronunciationOverrides(unittest.TestCase):
+    def test_do2_hint_changes_only_cloud_speech_and_cache_identity(self):
+        library = json.loads((REPO/'library.json').read_text())
+        for book in library['books']:
+            before = deepcopy(book)
+            generator.configure_pronunciation(book)
+            if book['id'] != 'lets-find-that-cloud':
+                self.assertEqual(book, before)
+                continue
+            affected = [asset for asset in book['audio'].values() if '朵' in asset['text']]
+            self.assertEqual(len(affected), 6)
+            for asset in affected:
+                original = {key:value for key,value in asset.items() if key not in ('ttsText','pronunciationHints')}
+                self.assertEqual(asset['ttsText'], asset['text'].replace('朵','躲'))
+                self.assertEqual(asset['pronunciationHints'], {'朵':'do2'})
+                self.assertNotEqual(generator.key_for(asset), generator.key_for(original))
+                self.assertEqual(asset['text'], before['audio'][asset['id']]['text'])
+
+    def test_actual_homophone_boundaries_still_point_to_printed_do2_character(self):
+        original = '去找那朵雲'
+        spoken = original.replace('朵','躲')
+        events = [
+            {'type':'WordBoundary','text':'去找那','offset':700000,'duration':8100000},
+            {'type':'WordBoundary','text':'躲','offset':9200000,'duration':2300000},
+            {'type':'WordBoundary','text':'雲','offset':12400000,'duration':4100000},
+        ]
+        boundaries = generator.aligned_boundaries(spoken,events)
+        self.assertEqual(original[boundaries[1]['start']:boundaries[1]['end']], '朵')
+        self.assertEqual(boundaries[1]['time'], .92)
+        self.assertEqual(boundaries[1]['duration'], .23)
+        self.assertEqual(boundaries[2]['time'], 1.24)
+
+    def test_hint_cannot_shift_printed_character_positions(self):
+        with self.assertRaises(ValueError):
+            generator.tts_input({'text':'朵','ttsText':'do2'})
+
+
 if __name__ == '__main__':unittest.main()

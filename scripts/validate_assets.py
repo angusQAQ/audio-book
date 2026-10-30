@@ -11,6 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def validate(require_edge=False):
     library = json.loads((ROOT / 'library.json').read_text())
+    override_path = ROOT / 'config/pronunciation-overrides.json'
+    overrides = json.loads(override_path.read_text())['books'] if override_path.exists() else {}
     wrapper = (ROOT / 'library.js').read_text()
     assert json.loads(wrapper.removeprefix('window.READING_LIBRARY = ').strip().removesuffix(';')) == library
     references = 0
@@ -50,6 +52,20 @@ def validate(require_edge=False):
             assert book['voice']['name'] == 'zh-HK-HiuMaanNeural', 'Requested Edge voice has not been generated'
             assert book['voice']['rate'] == '-12%'
         for asset in book['audio'].values():
+            rules = {ch:rule for ch,rule in overrides.get(book['id'],{}).items() if ch in asset['text']}
+            if rules:
+                spoken = asset['text']
+                for ch,rule in rules.items(): spoken = spoken.replace(ch,rule['ttsCharacter'])
+                assert asset.get('ttsText') == spoken, 'Requested pronunciation has not been generated'
+                assert asset.get('pronunciationHints') == {ch:rule['jyutping'] for ch,rule in rules.items()}
+            if asset.get('ttsText'):
+                assert len(asset['ttsText']) == len(asset['text']), 'Pronunciation hint changed character positions'
+                assert asset.get('pronunciationHints'), 'Pronunciation hint has no declared reading'
+                identity={'text':asset['text'],'voice':asset['voice'],'rate':asset['rate'],
+                          'edge_tts':asset['engineVersion'],'word_boundary_schema':asset['timingSchema'],
+                          'tts_text':asset['ttsText']}
+                expected=hashlib.sha256(json.dumps(identity,ensure_ascii=False,sort_keys=True).encode()).hexdigest()[:24]+'.mp3'
+                assert Path(asset['src']).name == expected, 'Pronunciation hint still uses an old MP3'
             path = ROOT / asset['src']
             assert path.is_file() and path.stat().st_size > 500, f'Missing MP3: {path.name}'
             result = subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'default=noprint_wrappers=1:nokey=1', str(path)], capture_output=True, text=True, check=True)

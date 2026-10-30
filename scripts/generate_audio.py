@@ -36,10 +36,40 @@ def duration(path):
 
 
 def key_for(asset):
-    return hashlib.sha256(json.dumps({
+    identity = {
         'text': asset['text'], 'voice': VOICE, 'rate': RATE,
         'edge_tts': edge_tts.__version__, 'word_boundary_schema': TIMING_SCHEMA,
-    }, ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:24]
+    }
+    if asset.get('ttsText'):
+        identity['tts_text'] = tts_input(asset)
+    return hashlib.sha256(json.dumps(identity, ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:24]
+
+
+def tts_input(asset):
+    text = asset.get('ttsText', asset['text'])
+    if len(text) != len(asset['text']):
+        raise ValueError('Pronunciation hints must preserve character positions')
+    return text
+
+
+def configure_pronunciation(book):
+    path = ROOT / 'config/pronunciation-overrides.json'
+    if not path.exists(): return
+    config = json.loads(path.read_text())
+    if config.get('schemaVersion') != 1: raise ValueError('Unknown pronunciation override schema')
+    rules = config['books'].get(book['id'])
+    if not rules: return
+    for character, rule in rules.items():
+        if len(character) != 1 or len(rule['ttsCharacter']) != 1:
+            raise ValueError('Pronunciation hints must use single-character homophones')
+    for asset in book['audio'].values():
+        used = {ch: rule for ch, rule in rules.items() if ch in asset['text']}
+        if not used: continue
+        text = asset['text']
+        for ch, rule in used.items(): text = text.replace(ch, rule['ttsCharacter'])
+        asset['ttsText'] = text
+        asset['pronunciationHints'] = {ch: rule['jyutping'] for ch, rule in used.items()}
+    book['pronunciationRevision'] = hashlib.sha256(json.dumps(rules,ensure_ascii=False,sort_keys=True).encode()).hexdigest()
 
 
 def aligned_boundaries(text, events):
@@ -80,16 +110,20 @@ async def generate(jobs, include_book=None):
     pending = None
     if include_book:
         pending = json.loads((ROOT / include_book).read_text())
+        configure_pronunciation(pending)
         existing = next((book for book in library['books'] if book['id'] == pending['id']), None)
-        if existing and existing.get('contentRevision') == pending['contentRevision']:
+        if (existing and existing.get('contentRevision') == pending['contentRevision']
+                and existing.get('pronunciationRevision') == pending.get('pronunciationRevision')):
             print(f'Book {pending["id"]} is already registered at this verified content revision.', flush=True)
             return
         if existing:
             for key, asset in pending['audio'].items():
                 previous = existing['audio'].get(key)
-                if previous and previous['text'] == asset['text']:
+                if (previous and previous['text'] == asset['text']
+                        and tts_input(previous) == tts_input(asset)):
                     asset.update(previous)
         library['books'] = [book for book in library['books'] if book['id'] != pending['id']] + [pending]
+    for book in library['books']: configure_pronunciation(book)
     cache = ROOT / '.cache' / 'edge-tts'
     cache.mkdir(parents=True, exist_ok=True)
     semaphore = asyncio.Semaphore(jobs)
@@ -115,8 +149,9 @@ async def generate(jobs, include_book=None):
                 continue
             path, receipt = cache / f'{key}.mp3', cache / f'{key}.json'
             shutil.copyfile(source, path)
-            receipt.write_text(json.dumps({name: asset[name] for name in
-                                           ('sha256','duration','voice','rate','timingSchema','boundaries')}))
+            stamp = {name: asset[name] for name in ('sha256','duration','voice','rate','timingSchema','boundaries')}
+            if asset.get('ttsText'): stamp['ttsText'] = asset['ttsText']
+            receipt.write_text(json.dumps(stamp))
 
     async def one(asset):
         nonlocal completed
@@ -128,6 +163,7 @@ async def generate(jobs, include_book=None):
             if path.exists() and receipt.exists():
                 stamp = json.loads(receipt.read_text())
                 valid = stamp.get('sha256') == hashlib.sha256(path.read_bytes()).hexdigest() and stamp.get('timingSchema') == TIMING_SCHEMA and bool(stamp.get('boundaries'))
+                if asset.get('ttsText'): valid = valid and stamp.get('ttsText') == tts_input(asset)
                 if valid:
                     try:
                         duration(path)
@@ -139,19 +175,21 @@ async def generate(jobs, include_book=None):
                     metadata = path.with_suffix('.partial.jsonl')
                     try:
                         communicate = edge_tts.Communicate(
-                            asset['text'], voice=VOICE, rate=RATE, proxy=proxy,
+                            tts_input(asset), voice=VOICE, rate=RATE, proxy=proxy,
                             connect_timeout=20, receive_timeout=60, boundary='WordBoundary',
                         )
                         await communicate.save(str(partial), str(metadata))
-                        timings = aligned_boundaries(asset['text'], [json.loads(line) for line in metadata.read_text().splitlines() if line.strip()])
+                        timings = aligned_boundaries(tts_input(asset), [json.loads(line) for line in metadata.read_text().splitlines() if line.strip()])
                         metadata.unlink(missing_ok=True)
                         seconds = duration(partial)
                         partial.replace(path)
-                        receipt.write_text(json.dumps({
+                        stamp = {
                             'sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
                             'duration': seconds, 'voice': VOICE, 'rate': RATE,
                             'timingSchema': TIMING_SCHEMA, 'boundaries': timings,
-                        }))
+                        }
+                        if asset.get('ttsText'): stamp['ttsText'] = asset['ttsText']
+                        receipt.write_text(json.dumps(stamp))
                         break
                     except Exception as error:
                         partial.unlink(missing_ok=True)
