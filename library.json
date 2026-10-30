@@ -77266,12 +77266,16 @@
           "id": "5faca43200a91eec8b",
           "text": "去找那朵雲",
           "lang": "yue",
-          "src": "assets/audio/aeb1138c14057c54c9cc9c07.mp3",
+          "ttsText": "去找那躲雲",
+          "pronunciationHints": {
+            "朵": "do2"
+          },
+          "src": "assets/audio/df0c2d10a498feb4277ee788.mp3",
           "voice": "zh-HK-HiuMaanNeural",
           "rate": "-12%",
           "engine": "edge-tts",
           "engineVersion": "7.3.1",
-          "sha256": "650ad5759db0e51b5d1087594959563635e4ba2847c9aee364f662c2341aacee",
+          "sha256": "4d02643b7bf27111e51ac70d07ef09938828c13aeb100e81bdbbeb821276dbc3",
           "duration": 2.52,
           "timingSchema": 1,
           "boundaries": [
@@ -77291,19 +77295,13 @@
               "start": 2,
               "end": 3,
               "time": 0.618166,
-              "duration": 0.241458
+              "duration": 0.227291
             },
             {
               "start": 3,
-              "end": 4,
-              "time": 0.859666,
-              "duration": 0.22725
-            },
-            {
-              "start": 4,
               "end": 5,
-              "time": 1.086916,
-              "duration": 0.482958
+              "time": 0.845458,
+              "duration": 0.710208
             }
           ]
         },
@@ -77374,12 +77372,12 @@
           "id": "1bf7e21e3b888702df",
           "text": "朵",
           "lang": "yue",
-          "src": "assets/audio/82c79f7b8236fa854899b22f.mp3",
+          "src": "assets/audio/75f2a2583ca48c3e3fb61a03.mp3",
           "voice": "zh-HK-HiuMaanNeural",
           "rate": "-12%",
           "engine": "edge-tts",
           "engineVersion": "7.3.1",
-          "sha256": "80fef5961f1113b4363f1d898b7e82148df559ba832cb9e93e2b0b9953ac17bb",
+          "sha256": "d06be3cfae8457990724f2e24fcd0f44ea602c5010483bcf5ce410561526ce9b",
           "duration": 1.872,
           "timingSchema": 1,
           "boundaries": [
@@ -77387,9 +77385,13 @@
               "start": 0,
               "end": 1,
               "time": 0.149416,
-              "duration": 0.440333
+              "duration": 0.411916
             }
-          ]
+          ],
+          "ttsText": "躲",
+          "pronunciationHints": {
+            "朵": "do2"
+          }
         },
         "b7c8697742e8b4d0e8": {
           "id": "b7c8697742e8b4d0e8",
@@ -78136,13 +78138,17 @@
           "id": "e6fe16f41568158bdd",
           "text": "去找那朵雲！」",
           "lang": "yue",
-          "src": "assets/audio/50d8e04e2530914a70e42239.mp3",
+          "ttsText": "去找那躲雲！」",
+          "pronunciationHints": {
+            "朵": "do2"
+          },
+          "src": "assets/audio/76c212e3e975be5f3dc6adb5.mp3",
           "voice": "zh-HK-HiuMaanNeural",
           "rate": "-12%",
           "engine": "edge-tts",
           "engineVersion": "7.3.1",
-          "sha256": "01a963693d03ee26956a59b3c7578f4eae1c57cf7c22dd116c92acb4a0471821",
-          "duration": 2.976,
+          "sha256": "de42170f6a0f74efd3fee6fed7f5382e61b8a4edb99c0c5a4afb344cba84eefc",
+          "duration": 2.952,
           "timingSchema": 1,
           "boundaries": [
             {
@@ -78165,15 +78171,9 @@
             },
             {
               "start": 3,
-              "end": 4,
-              "time": 0.859666,
-              "duration": 0.213041
-            },
-            {
-              "start": 4,
               "end": 5,
-              "time": 1.072708,
-              "duration": 0.454541
+              "time": 0.859666,
+              "duration": 0.696041
             }
           ]
         },
@@ -80584,13 +80584,17 @@
           "id": "d29e334cb963648b11",
           "text": "白兔雲伸長耳朵，又縮了回去。",
           "lang": "yue",
-          "src": "assets/audio/0cf0731cd3f3737f71211a6d.mp3",
+          "ttsText": "白兔雲伸長耳躲，又縮了回去。",
+          "pronunciationHints": {
+            "朵": "do2"
+          },
+          "src": "assets/audio/41ec459a8bd8a76a22f92b01.mp3",
           "voice": "zh-HK-HiuMaanNeural",
           "rate": "-12%",
           "engine": "edge-tts",
           "engineVersion": "7.3.1",
-          "sha256": "d93df35cf3313bf7e62f5493e4b2316f867840300e12f5cb7481ada9be2b9b0f",
-          "duration": 4.368,
+          "sha256": "b3d93e8e4714dfd323f241481f5f9307ab6f492b070f69c0111a718a56f1422b",
+          "duration": 4.344,
           "timingSchema": 1,
           "boundaries": [
             {
@@ -80614,26 +80618,26 @@
             {
               "start": 8,
               "end": 9,
-              "time": 2.095458,
+              "time": 2.08125,
               "duration": 0.213083
             },
             {
               "start": 9,
               "end": 10,
-              "time": 2.308541,
+              "time": 2.294333,
               "duration": 0.198833
             },
             {
               "start": 10,
               "end": 11,
-              "time": 2.507375,
+              "time": 2.493166,
               "duration": 0.15625
             },
             {
               "start": 11,
               "end": 13,
-              "time": 2.663625,
-              "duration": 0.752833
+              "time": 2.649416,
+              "duration": 0.738625
             }
           ]
         },
@@ -80683,12 +80687,12 @@
           "id": "b7afcaf619f3f84d48",
           "text": "耳朵",
           "lang": "yue",
-          "src": "assets/audio/1cd483d987ff150fb979390c.mp3",
+          "src": "assets/audio/60a9a9a1edd83d745f170140.mp3",
           "voice": "zh-HK-HiuMaanNeural",
           "rate": "-12%",
           "engine": "edge-tts",
           "engineVersion": "7.3.1",
-          "sha256": "635dca435966678b4f69e7d077586e1b61614b9109ccfb9b798dc828f7ef8bd2",
+          "sha256": "8897f65ebe9e69ef94e69ba7c51d588607ec0400c07340565cbe8f97fd4dfa3b",
           "duration": 1.776,
           "timingSchema": 1,
           "boundaries": [
@@ -80698,7 +80702,11 @@
               "time": 0.103416,
               "duration": 0.710208
             }
-          ]
+          ],
+          "ttsText": "耳躲",
+          "pronunciationHints": {
+            "朵": "do2"
+          }
         },
         "402a209150477a4c06": {
           "id": "402a209150477a4c06",
@@ -84001,13 +84009,17 @@
           "id": "e9b4b316a1e67051fb",
           "text": "琪琪看見一朵新的雲：「走！",
           "lang": "yue",
-          "src": "assets/audio/3220dc64c6808007914629c2.mp3",
+          "ttsText": "琪琪看見一躲新的雲：「走！",
+          "pronunciationHints": {
+            "朵": "do2"
+          },
+          "src": "assets/audio/1c1e3f7c62030e8ee525c506.mp3",
           "voice": "zh-HK-HiuMaanNeural",
           "rate": "-12%",
           "engine": "edge-tts",
           "engineVersion": "7.3.1",
-          "sha256": "7a4371675c95e23a9f2edcc70a6d203c9f56d354dd91ca3da28f17610cc469d0",
-          "duration": 4.032,
+          "sha256": "91d72c4508b718d0506d09e68e3d01dc43f9d8fdf1f5ff8bae3572e42c221c29",
+          "duration": 3.96,
           "timingSchema": 1,
           "boundaries": [
             {
@@ -84026,31 +84038,37 @@
               "start": 2,
               "end": 4,
               "time": 0.603958,
-              "duration": 0.482958
+              "duration": 0.46875
             },
             {
               "start": 4,
+              "end": 5,
+              "time": 1.072708,
+              "duration": 0.127833
+            },
+            {
+              "start": 5,
               "end": 6,
-              "time": 1.086916,
-              "duration": 0.326708
+              "time": 1.200583,
+              "duration": 0.15625
             },
             {
               "start": 6,
               "end": 8,
-              "time": 1.413625,
-              "duration": 0.411916
+              "time": 1.356833,
+              "duration": 0.426125
             },
             {
               "start": 8,
               "end": 9,
-              "time": 1.825583,
+              "time": 1.782958,
               "duration": 0.454541
             },
             {
               "start": 11,
               "end": 12,
-              "time": 2.55,
-              "duration": 0.525583
+              "time": 2.450583,
+              "duration": 0.539791
             }
           ]
         },
@@ -86016,7 +86034,8 @@
         "locale": "zh-HK",
         "version": "7.3.1"
       },
-      "contentRevision": "3c67b53791f234597bd59c331f8cf7b82ba4585e6343c19c20735a2b1113f655"
+      "contentRevision": "3c67b53791f234597bd59c331f8cf7b82ba4585e6343c19c20735a2b1113f655",
+      "pronunciationRevision": "dfe8cafc1dd2fef6d541d22fca4602deaad3cc9a51e34f29147b2a2d7e6adb6e"
     }
   ]
 }
