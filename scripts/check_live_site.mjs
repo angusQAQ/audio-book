@@ -9,6 +9,7 @@ const expectedHash = createHash('sha256').update(expected).digest('hex');
 const shippedFiles = [
   'index.html','app.js','styles.css','tokens.css','base.css','library.json',
   'assets/brand/diandian-logo.png','config/book-voices.json','docs/voxcpm.md',
+  'downloads/children-picture-book-skill.zip',
   'books/little-wolf-your-turn/exports/小狼，換你說！_繪本.pdf',
   'books/little-wolf-your-turn/exports/小狼，換你說！_跨頁閱讀版.pdf',
   'books/little-wolf-your-turn/exports/小狼，換你說！_可編輯排版.pptx',

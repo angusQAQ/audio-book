@@ -1,0 +1,6 @@
+interface:
+  display_name: "電子兒童繪本"
+  short_description: "按每次指定的年齡、主題與內容，製作插畫繪本及可編輯成品"
+  default_prompt: "使用 $children-picture-book，依我這次指定的適讀年齡、主題、內容與交付格式製作或修改電子兒童繪本；先讀已知要求，只詢問會改變成果的缺項。"
+policy:
+  allow_implicit_invocation: true

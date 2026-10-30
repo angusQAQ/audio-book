@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "book": {
+    "slug": null,
+    "title": null,
+    "language": null
+  },
+  "audience": {
+    "ageMin": null,
+    "ageMax": null,
+    "readingMode": null,
+    "readingAbility": null,
+    "accessibilityNeeds": []
+  },
+  "theme": null,
+  "content": {
+    "mode": null,
+    "request": null,
+    "requiredElements": [],
+    "avoidElements": [],
+    "sourceTextPaths": [],
+    "references": [],
+    "learningGoals": [],
+    "targetCharacters": [],
+    "characterNames": []
+  },
+  "design": {
+    "artDirection": null,
+    "palette": [],
+    "pageSize": null,
+    "storySpreads": null,
+    "wordBudget": null,
+    "bodyFont": null,
+    "emphasisFont": null,
+    "emphasisScale": null,
+    "properNameMarks": null
+  },
+  "deliverables": {
+    "formats": [],
+    "readAlong": false,
+    "audio": null
+  },
+  "publication": {
+    "github": false,
+    "permanentWebsite": false,
+    "destination": null
+  },
+  "decisions": {
+    "userRequirements": [],
+    "editorialChoices": [],
+    "unresolvedQuestions": []
+  }
+}
