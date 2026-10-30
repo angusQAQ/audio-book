@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build editable book layouts and embedded-font PDFs from one checked source."""
 import argparse
+import hashlib
 from collections import Counter
 from functools import lru_cache
 import html
@@ -55,6 +56,8 @@ def text_item(text, x, y, size=23, colour=INK, emphasis=False):
 
 
 def wrap(text, width, size, emphasis):
+    if '\n' in text:
+        return [line for paragraph in text.split('\n') for line in wrap(paragraph,width,size,emphasis)]
     closing, opening = set('，。！？：；、」』）》】…'), set('「『（《【')
     units = []
     for ch in text:
@@ -112,14 +115,20 @@ def pages(proof):
     result.append(dict(id='title',items=title,note='右頁為扉頁 1；左頁為閱讀版的前襯，不計入單頁 PDF。'))
     for spread in BOOK['spreads']:
         items=[];art=ROOT/'assets/illustrations'/(spread['id']+'.png')
-        if art.exists():items.append(picture(art,0,0,W,H,alt=spread['art']))
+        if art.exists():items.append(picture(art,*spread.get('artPlacement',[0,0,W,506]),alt=spread['art']))
         elif proof:items.append(rect(515,265,378,211,'#F2F6F7'))
         else:raise FileNotFoundError('Missing illustration: '+str(art))
+        paragraphs=list(spread['lines'])
+        if spread['id']=='s04':paragraphs[2]=paragraphs[2].replace('，','，\n',1)
+        if spread['id']=='s11':paragraphs[2]=paragraphs[2].replace('，','，\n',1)
+        if spread['id']=='s13':paragraphs[0]=paragraphs[0].replace('，','，\n',1)
         if spread['layout']=='left-middle':
-            add_block(items,spread['lines'],52,150,354,22.8,34)
+            add_block(items,paragraphs,52,150,354,22.8,34)
+        elif spread['layout']=='top-left':
+            add_block(items,paragraphs,52,37,400,22.8,34)
         else:
-            add_block(items,spread['lines'][:1],52,37,356,22.8,34)
-            add_block(items,spread['lines'][1:],534,37,356,22.8,34)
+            add_block(items,paragraphs[:1],52,37,356,22.8,34)
+            add_block(items,paragraphs[1:],534,37,356,22.8,34)
         for number,x in zip(spread['pages'],(38,905)):items.append(text_item(str(number),x,513,10.5,MUTED))
         result.append(dict(id=spread['id'],items=items,note=f"內頁 {spread['pages'][0]}–{spread['pages'][1]}。{spread['beat']}\n"+'\n'.join(spread['lines'])))
     lesson=[text_item('字裏有一條小路',46,37,29),text_item('六個走部字，陪我們走一趟。',46,86,17,MUTED)]
@@ -225,6 +234,9 @@ def render_pptx(page_list, target):
                     shape.line.color.rgb = RGBColor.from_string(item['stroke'][1:]); shape.line.width = Pt(.6)
                 else:
                     shape.line.fill.background()
+                shape._element.spPr.append(OxmlElement('a:effectLst'))
+                for effect in shape._element.xpath('./p:style/a:effectRef'):
+                    effect.set('idx','0')
             elif item['kind'] == 'image':
                 g = image_geometry(item)
                 shape = slide.shapes.add_picture(item['path'], Pt(g['x']), Pt(g['y']), Pt(g['width']), Pt(g['height']))
@@ -281,6 +293,15 @@ def single_pages(source, target):
 
 
 def validate(page_list, output, proof):
+    for page, spread in zip(page_list[2:16],BOOK['spreads']):
+        visible=''.join(item['text'] for item in page['items'] if item['kind']=='text' and item['size']>11)
+        assert visible==''.join(spread['lines']), (page['id'],'Story text differs from manuscript')
+    artwork_count=0
+    if not proof:
+        provenance=json.loads((ROOT/'artwork-log.json').read_text())
+        for record in [provenance['characterBible']]+provenance['illustrations']:
+            assert hashlib.sha256((ROOT/record['file']).read_bytes()).hexdigest()==record['sha256'], ('Artwork differs from logged original',record['file'])
+            artwork_count+=1
     cmaps = {family: FontToolsFont(path).getBestCmap() for family, path in FONTS.items()}
     missing = sorted({ch for p in page_list for i in p['items'] if i['kind']=='text' for ch, family in zip(i['text'], i['fonts']) if ord(ch) not in cmaps[family]})
     assert not missing, 'Missing glyphs: ' + ''.join(missing)
@@ -326,6 +347,11 @@ def validate(page_list, output, proof):
         actual_runs = [(run.text, run.font.name, run.font.size.pt)
                        for shape in slide.shapes if shape.has_text_frame
                        for para in shape.text_frame.paragraphs for run in para.runs]
+        for shape in slide.shapes:
+            if shape.has_text_frame:
+                for para in shape.text_frame.paragraphs:
+                    for run in para.runs:
+                        assert run.font.bold==(run.font.name==HAND_FAMILY), (layout['id'],'Editable target font weight changed')
         assert len(actual_runs) == len(expected_runs), (layout['id'], 'Editable font runs missing')
         for (ch, family, fs), (text, exported_font, exported_size) in zip(expected_runs, actual_runs):
             assert ch == text and family == exported_font and abs(fs - exported_size) < .011, (layout['id'], ch, 'Editable font or size changed')
@@ -343,6 +369,7 @@ def validate(page_list, output, proof):
                         assert family == HAND_FAMILY and abs(fs / item['size'] - EMPHASIS_SCALE) < .001
     report = {'status': 'proof' if proof else 'complete', 'spreadPages':len(spreads), 'singlePages':len(leaves),
               'editableSlides':len(deck.slides), 'missingGlyphs':missing, 'allTextEditable':True,
+              'originalArtworkHashesVerified':artwork_count,
               'targetTypography': {'font': HAND_FAMILY, 'bodyScale': EMPHASIS_SCALE,
                                    'pdfAndPptxRunsVerified': True, 'handwrittenGlyphs': dict(handwritten)},
               'storyHanCharacters':len(re.findall(r'[\u3400-\u9fff]', ''.join(''.join(s['lines']) for s in BOOK['spreads']))),

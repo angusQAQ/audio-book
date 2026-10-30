@@ -1,0 +1,34 @@
+{
+  "status": "complete",
+  "spreadPages": 18,
+  "singlePages": 34,
+  "editableSlides": 18,
+  "missingGlyphs": [],
+  "allTextEditable": true,
+  "originalArtworkHashesVerified": 16,
+  "targetTypography": {
+    "font": "JyunsaiKaai",
+    "bodyScale": 1.5,
+    "pdfAndPptxRunsVerified": true,
+    "handwrittenGlyphs": {
+      "走": 20,
+      "起": 8,
+      "趟": 5,
+      "趕": 6,
+      "超": 3,
+      "越": 6,
+      "趁": 3,
+      "趣": 4
+    }
+  },
+  "storyHanCharacters": 359,
+  "targets": {
+    "起": 8,
+    "趕": 7,
+    "超": 3,
+    "越": 6,
+    "趟": 6,
+    "趣": 4,
+    "趁": 3
+  }
+}
