@@ -8,4 +8,5 @@
 - 書籍封存必須可以隨時恢復，保留原檔與閱讀進度。書架不顯示簡介、原 PDF 按鍵或頁尾；移除按鍵不等於刪除 PDF。首頁使用樸素背景；跟讀提示不得以亮色或光暈遮擋原字筆畫。
 - 原 PDF 的 SHA-256 固定為 `e185baacc918f1bad825f628611cfbbccfe684acb90398e87539ecfa5bf345bb`。
 - 預製粵語使用 `edge-tts`、`zh-HK-HiuMaanNeural`、語速 `-12%`，完整生成並驗證後才取代已提交的音訊。
+- 使用者另要求安裝 VoxCPM 並依圖書選擇合適聲音；設定與進度見 `config/book-voices.json`、`docs/voxcpm.md`。VoxCPM 新音源必須完成實際粵語試音、全書生成及新音訊對齊後才發布；未完成時保留原 Edge MP3，不把舊音訊重新標示成 VoxCPM，不以均分時長偽造逐字同步。
 - 重要檢查：`npm test`、`python3 scripts/validate_assets.py --require-edge`，以及部署流程中的實際網站驗證。不要以安裝、埠開啟或 Git 推送成功代替功能驗證。

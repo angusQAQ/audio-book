@@ -44,6 +44,10 @@ npm test
 
 GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動啟動，先生成及驗證音檔。它生成 MP3、嚴格驗證指定聲音並跑瀏覽器測試，全部通過才將音檔回存同一分支。執行失敗時不部署，不宣稱已生成指定聲音。
 
+## VoxCPM 與按書配音
+
+已加入獨立 VoxCPM 2.0.3 安裝腳本及逐書聲音設定：`bash scripts/install_voxcpm.sh`；以 `scripts/voxcpm_sample.py --describe` 查看《我們的好老師》的「親切老師・香港粵語女聲」方向。程式與 CPU 檢查已通過，但公開模型下載目前被雲端代理以 403 拒絕，尚未完成實際合成。網站繼續使用已驗證的曉曼 `-12%` MP3，沒有把舊音檔標示成新模型。詳見 [VoxCPM 安裝、網路要求與試音進度](docs/voxcpm.md)。
+
 ## GitHub 與網站同步
 
 所有新增、修改、刪除的正式檔案均以 Git 提交保存於 `angusQAQ/audio-book`，包括 PDF、頁圖、MP3、Logo、字型、程式、測試和設定。

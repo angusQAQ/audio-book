@@ -12,6 +12,10 @@
 - 可重用安裝腳本已實際重跑：虛擬環境、Python 依賴、`npm ci`、JavaScript 語法檢查通過。安裝及支援 Range 的啟動指引已儲存為雲端環境設定草稿。
 - Apple Design skill 已固定來源提交；適用的 HIG 引文、對比值、閱讀視窗增加 82px、44px 操作區及動態取捨記錄於 `docs/apple-design-review.md`。實際截圖檢查淺色桌面／手機、深色書架／閱讀與翻頁中段；原頁圖無濾鏡或修改。上述為 Chromium 證據，未宣稱 Safari 或實體 VoiceOver 測試。
 
+## VoxCPM 安裝檢查（2026-10-30）
+
+`voxcpm==2.0.3` 與獨立環境已安裝；官方 CLI、VoxCPM2／torchcodec 等載入、CPU 計算、`pip check`、安裝腳本重跑、真實原書段落及缺失書本錯誤檢查均通過。模型下載被雲端代理以 403 拒絕，實際試音命令回傳 `ProxyError`；**模型合成、試音聆聽與新 MP3 尚未通過驗證**。原網站的 PDF、資料索引與 MP3 均未變更。詳見 `docs/voxcpm.md`。
+
 ## 正式網站
 
 已建立每次 `main` 推送自動執行的 **Publish and verify permanent website** 工作流程：驗證或生成 MP3、跑完整測試、將所有追蹤檔案同步 `gh-pages`、要求並等待該提交的 Pages 建置，最後驗證實際網站。另保留可獨立執行的 **Verify published reading website**。它等待線上 HTML、JS、CSS（含 tokens/base）、圖書資料與 Logo 的 SHA-256 與已提交版本完全一致，再以實際網站的手機視窗核對原 PDF 雜湊、三種 MP3 點讀、真實時間逐詞發光、播放器拖曳／時間／重播、精簡工具列、翻頁、封存及重新整理後恢復。本機對完整相同驗證程式的執行已通過；正式發布結果以對應 GitHub Actions 實際執行結果為準。設計文件更新已在本輪直接核對 YAML、token 引用與 sidecar v2 結構。
