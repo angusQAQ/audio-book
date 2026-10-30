@@ -15,10 +15,15 @@ const shippedFiles = [
 ].map(path => ({
   path, hash: createHash('sha256').update(readFileSync(new URL('../' + path, import.meta.url))).digest('hex'),
 }));
-const book = JSON.parse(expected).books[0];
+const library = JSON.parse(expected);
+const book = library.books[0];
+const wolf = library.books.find(item=>item.id==='little-wolf-your-turn');
+assert.ok(wolf, 'The new picture book has not completed audio registration');
 if (process.env.REQUIRE_EDGE === '1') {
-  assert.equal(book.voice.name, 'zh-HK-HiuMaanNeural');
-  assert.equal(book.voice.rate, '-12%');
+  for (const item of library.books) {
+    assert.equal(item.voice.name, 'zh-HK-HiuMaanNeural');
+    assert.equal(item.voice.rate, '-12%');
+  }
 }
 
 // A successful push is insufficient: wait for the published library to match this commit.
@@ -50,6 +55,7 @@ try {
   page.on('pageerror', error => errors.push(error.message));
   await page.goto(base.href, { waitUntil: 'networkidle' });
   await page.getByRole('heading', { name: book.title, exact: true }).waitFor();
+  await page.getByRole('heading', { name: wolf.title, exact: true }).waitFor();
   assert.equal(await page.locator('.pdf-link, .book-description, .library-footer').count(), 0);
   assert.ok(await page.locator('body').evaluate(body=>getComputedStyle(body).backgroundImage.includes('radial-gradient')));
   assert.ok(await page.locator('.brand-symbol img').evaluate(image => image.complete && image.naturalWidth > 0));
@@ -121,7 +127,33 @@ try {
   assert.equal(await page.locator(`[data-book-id="${book.id}"] .book-reading-link`).textContent(), '繼續第 2 頁');
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   assert.deepEqual(errors, []);
-  console.log(`PASS: published library matches ${expectedHash.slice(0, 12)}; current code/theme/logo hashes, original PDF SHA256, all three MP3 modes, legible word-timed reading cues, audio controls, compact toolbar, page turns, reversible book archive and phone layout verified.`);
+  // Verify the new book against the exact PDF-derived pages and real MP3 on production.
+  const wolfPdf = await page.request.get(new URL(wolf.source.url,base).href);
+  assert.equal(createHash('sha256').update(await wolfPdf.body()).digest('hex'), wolf.source.sha256);
+  await page.getByRole('button',{name:`閱讀《${wolf.title}》`,exact:true}).click();
+  await page.locator('#page-select').selectOption('3');
+  await page.waitForFunction(()=>window.readerDiagnostics().imageReady);
+  for (const mode of ['sentence','word','character']) {
+    await chooseMode(mode);await page.locator('.hotspot').first().click();
+    await page.waitForFunction(()=>window.readerDiagnostics().engine==='audio' && window.readerDiagnostics().currentTime>0 && window.readerDiagnostics().glowCount>0);
+    const src=await page.evaluate(()=>window.readerDiagnostics().audioSource);
+    const asset=Object.values(wolf.audio).find(item=>item.src===src);
+    const response=await page.request.get(new URL(src,base).href);
+    assert.equal(createHash('sha256').update(await response.body()).digest('hex'),asset.sha256);
+    await page.locator('#stop').click();
+  }
+  for (let index=0;index<wolf.pages.length;index++) {
+    const item=wolf.pages[index];
+    const response=await page.request.get(new URL(item.image,base).href);
+    assert.equal(createHash('sha256').update(await response.body()).digest('hex'),item.imageSha256);
+  }
+  await page.locator('#page-select').selectOption('17');
+  await page.waitForFunction(()=>window.readerDiagnostics().imageReady);await chooseMode('character');
+  await page.getByRole('button',{name:'朗讀粵語：犭',exact:true}).first().click();
+  await page.waitForFunction(()=>window.readerDiagnostics().highlightedText==='犭');
+  await page.locator('#stop').click();
+  assert.deepEqual(errors, []);
+  console.log(`PASS: published library matches ${expectedHash.slice(0, 12)}; both books, new picture-book PDF and 18 page hashes, all MP3 modes, real timed glyph cues, audio controls, page turns, reversible archive and phone layout verified.`);
 } finally {
   await browser.close();
 }

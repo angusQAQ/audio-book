@@ -14,6 +14,28 @@
 
 正文及書末的八個字目採 Yomogi 手寫體；正文大小為一般文字的 150%（22.8pt 正文搭配 34.2pt 字目），六張識字卡的主字為 60pt。混排共用基線，依實際字寬換行，並隨最大字體調整行距。故事、插畫與頁數維持原版。
 
+## 粵語點讀版
+
+點點書房的書籍 ID 為 `little-wolf-your-turn`。`reader/` 保存 18 個完整跨頁的 144dpi JPEG、封面縮圖、透明文字提示遮罩及待生成音訊的 `book.json`。點讀區按原生排版的實際逐字字寬、字級和基線計算，放大的手寫字不使用均分字寬。正文保持原作文字，詞語切分採故事用詞表；另有單字點讀及書末識字卡。部首符號「犭」朗讀為「反犬旁」，以明確的文字映射連接真實語音邊界與書上的符號。
+
+音源固定使用 `edge-tts==7.3.1`、`zh-HK-HiuMaanNeural`、`rate=-12%`。共 354 個去重後的朗讀單位；可重用原書已驗證的相同文字 MP3。新增語音與實際 WordBoundary 全部成功後，才將本書註冊到 `library.json`／`library.js`，避免書架出現不能播放的半成品。GitHub Actions 會生成、解碼及驗證、保存全部 MP3，再測試並同步永久網站。
+
+重新生成點讀圖及映射：
+
+```sh
+python3 build_reader.py
+```
+
+在可連線 Edge 語音服務的環境，於儲存庫根目錄執行：
+
+```sh
+python3 scripts/generate_audio.py --include-book books/little-wolf-your-turn/reader/book.json --jobs 2
+python3 scripts/validate_assets.py --require-edge
+npm test
+```
+
+雲端工作區目前對語音服務回傳 403，因此正式生成由 GitHub Actions 完成。已驗證的 MP3 從 GitHub 直接重用，不依賴可遺失的 CI 快取；失敗時不修改正式書架索引及既有音訊。
+
 ## 編輯方法
 
 開啟 PowerPoint 或 SVG 前，安裝 `assets/fonts/Iansui-Regular.ttf` 與 `assets/fonts/Yomogi-Regular.ttf`，避免電腦以其他字型替代而改變版面；授權分別見同資料夾 `OFL.txt`、`Yomogi-OFL.txt`。PDF 已嵌入實際使用的字型，閱讀時不需安裝。

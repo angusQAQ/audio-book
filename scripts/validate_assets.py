@@ -15,6 +15,7 @@ def validate(require_edge=False):
     assert json.loads(wrapper.removeprefix('window.READING_LIBRARY = ').strip().removesuffix(';')) == library
     references = 0
     audio_count = 0
+    page_count = 0
     for book in library['books']:
         pdf = ROOT / book['source']['url']
         assert hashlib.sha256(pdf.read_bytes()).hexdigest() == book['source']['sha256'], 'Original PDF changed'
@@ -23,13 +24,23 @@ def validate(require_edge=False):
             assert len(book['pages']) == 11
         for page in book['pages']:
             assert (ROOT / page['image']).is_file(), 'Missing original page'
+            page_count += 1
+            if page.get('imageSha256'):
+                assert hashlib.sha256((ROOT / page['image']).read_bytes()).hexdigest() == page['imageSha256'], 'Reader page differs from its verified render'
             for block in page['blocks']:
                 assert block['audio'] in book['audio']
                 for line in block['lines']:
                     assert (ROOT / line['glow']).is_file()
                     assert 0 <= line['start'] < line['end'] <= len(block['text'])
+                    assert block['text'][line['start']:line['end']] == line['text']
                     x, y, w, h = line['rect']
                     assert 0 <= x < 1 and 0 <= y < 1 and w > 0 and h > 0 and x + w <= 1.01 and y + h <= 1.01
+                    if line.get('charRects'):
+                        assert len(line['charRects']) == len(line['text']), 'Mixed-font character geometry missing'
+                        for cx, cy, cw, ch in line['charRects']:
+                            assert x - 1e-6 <= cx and y - 1e-6 <= cy and cw > 0 and ch > 0
+                            assert cx+cw <= x+w+1e-6 and cy+ch <= y+h+1e-6
+                        assert hashlib.sha256((ROOT / line['glow']).read_bytes()).hexdigest() == line['glowSha256']
                 for unit in block['words'] + block['characters']:
                     assert block['text'][unit['start']:unit['end']] == unit['text']
                     if unit['audio']:
@@ -54,7 +65,7 @@ def validate(require_edge=False):
                     assert boundary['time'] + boundary['duration'] <= asset['duration'] + 0.5
                     previous = boundary['time']
             audio_count += 1
-    print(f'PASS: original PDF, 11 original pages, {audio_count} decodable MP3 files, {references} word/character mappings, matching JSON/JS.' + (' Requested Edge voice verified.' if require_edge else ''))
+    print(f'PASS: {len(library["books"])} preserved book PDFs, {page_count} verified pages, {audio_count} decodable MP3 references, {references} word/character mappings, matching JSON/JS.' + (' Requested Edge voice verified.' if require_edge else ''))
 
 
 if __name__ == '__main__':

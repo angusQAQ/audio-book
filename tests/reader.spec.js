@@ -306,6 +306,9 @@ test('books can be archived and restored after reload without losing reading pro
   await openReader(page,4);
   await page.locator('#reader-back').click();
   await page.getByRole('button',{name:`封存《${book.title}》`,exact:true}).click();
+  await expect(page.locator('#books-grid .shelf-item')).toHaveCount(library.books.length-1);
+  // Archiving one book must leave every other book available. Also cover all archived.
+  for (const other of library.books.slice(1)) await page.getByRole('button',{name:`封存《${other.title}》`,exact:true}).click();
   await expect(page.locator('#books-grid .shelf-item')).toHaveCount(0);
   await expect(page.locator('#library-status')).toContainText('已封存');
   await expect(page.locator('[data-shelf="archived"]')).toBeFocused();
@@ -326,6 +329,7 @@ test('books can be archived and restored after reload without losing reading pro
   const archiveA11y=await new AxeBuilder({page}).analyze();
   expect(archiveA11y.violations).toEqual([]);
   await page.getByRole('button',{name:`恢復《${book.title}》`,exact:true}).click();
+  for (const other of library.books.slice(1)) await page.getByRole('button',{name:`恢復《${other.title}》`,exact:true}).click();
   await expect(page.locator('#archived-count')).toHaveText('0');
   await expect(page.locator('[data-shelf="active"]')).toBeFocused();
   await expect(page.getByRole('heading',{name:'還沒有封存的書籍'})).toBeVisible();

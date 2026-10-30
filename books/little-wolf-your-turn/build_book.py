@@ -9,6 +9,8 @@ import json
 import os
 from pathlib import Path
 import re
+import subprocess
+import sys
 import xml.etree.ElementTree as ET
 
 import fitz
@@ -412,6 +414,8 @@ def main():
     for index,thumb in enumerate(thumbs):sheet.paste(thumb,((index%3)*336,(index//3)*208))
     sheet.save(output / '全書縮圖.png')
     print(json.dumps(report,ensure_ascii=False,indent=2))
+    if not args.proof and (ROOT / 'reader/book.json').exists():
+        subprocess.run([sys.executable, str(ROOT / 'build_reader.py')], check=True)
 
 
 if __name__ == '__main__':

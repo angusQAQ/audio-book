@@ -75,8 +75,21 @@ def aligned_boundaries(text, events):
     return boundaries
 
 
-async def generate(jobs):
+async def generate(jobs, include_book=None):
     library = json.loads((ROOT / 'library.json').read_text())
+    pending = None
+    if include_book:
+        pending = json.loads((ROOT / include_book).read_text())
+        existing = next((book for book in library['books'] if book['id'] == pending['id']), None)
+        if existing and existing.get('contentRevision') == pending['contentRevision']:
+            print(f'Book {pending["id"]} is already registered at this verified content revision.', flush=True)
+            return
+        if existing:
+            for key, asset in pending['audio'].items():
+                previous = existing['audio'].get(key)
+                if previous and previous['text'] == asset['text']:
+                    asset.update(previous)
+        library['books'] = [book for book in library['books'] if book['id'] != pending['id']] + [pending]
     cache = ROOT / '.cache' / 'edge-tts'
     cache.mkdir(parents=True, exist_ok=True)
     semaphore = asyncio.Semaphore(jobs)
@@ -85,6 +98,25 @@ async def generate(jobs):
     completed = 0
     total = sum(len(book['audio']) for book in library['books'])
     proxy = os.environ.get('HTTPS_PROXY') or os.environ.get('https_proxy')
+
+    # A fresh runner must reuse committed, verified MP3 instead of downloading the
+    # entire old library again. Cache is an optimization, not the source of truth.
+    for book in library['books']:
+        for asset in book['audio'].values():
+            if (asset.get('voice') != VOICE or asset.get('rate') != RATE
+                    or asset.get('engineVersion') != edge_tts.__version__
+                    or asset.get('timingSchema') != TIMING_SCHEMA or not asset.get('boundaries')):
+                continue
+            source = ROOT / asset.get('src', '')
+            if not source.is_file() or hashlib.sha256(source.read_bytes()).hexdigest() != asset.get('sha256'):
+                continue
+            key = key_for(asset)
+            if source.name != f'{key}.mp3':
+                continue
+            path, receipt = cache / f'{key}.mp3', cache / f'{key}.json'
+            shutil.copyfile(source, path)
+            receipt.write_text(json.dumps({name: asset[name] for name in
+                                           ('sha256','duration','voice','rate','timingSchema','boundaries')}))
 
     async def one(asset):
         nonlocal completed
@@ -147,7 +179,8 @@ async def generate(jobs):
                 print(f'Generated / reused {completed}/{total} MP3 files', flush=True)
 
     # Fail the prerequisite once before scheduling the full library.
-    first = next(iter(library['books'][0]['audio'].values()))
+    candidates = [asset for book in library['books'] for asset in book['audio'].values()]
+    first = next((asset for asset in candidates if not (cache / f'{key_for(asset)}.json').exists()), candidates[0])
     await one(first)
     print(f'::notice title=Word timing preflight::Requested HiuMaan voice returned {len(first["boundaries"])} real word timestamps',flush=True)
     remaining = [asset for book in library['books'] for asset in book['audio'].values() if asset is not first]
@@ -175,9 +208,10 @@ async def generate(jobs):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--jobs', type=int, default=2, choices=range(1, 7))
+    parser.add_argument('--include-book', type=str, help='Register a pending book only after complete audio generation; an unchanged revision is skipped')
     arguments = parser.parse_args()
     try:
-        asyncio.run(generate(arguments.jobs))
+        asyncio.run(generate(arguments.jobs, arguments.include_book))
     except Exception as error:
         # Safe public CI diagnosis: never include URLs, headers or environment values.
         diagnosis = f"{type(error).__name__}; HTTP status={getattr(error, 'status', 'not supplied')}; unit={getattr(error, 'tts_unit', 'not supplied')}; completed={getattr(error, 'tts_completed', 'not supplied')}"

@@ -42,6 +42,8 @@ jobs:
           restore-keys: edge-tts-hiu-maan-12-words-v2-
       - name: Ensure the requested bundled voice and preserve the original PDF
         run: |
+          python -m unittest discover -s tests -p 'test_*.py'
+          python scripts/generate_audio.py --include-book books/little-wolf-your-turn/reader/book.json --jobs 2
           if ! python scripts/validate_assets.py --require-edge; then
             python scripts/generate_audio.py --jobs 2
             python scripts/validate_assets.py --require-edge

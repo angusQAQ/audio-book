@@ -61,6 +61,10 @@ h1 { font-size: var(--text-display); max-width: 10em; line-height: 1.35; }
 .cover-title { position: absolute; top: 124px; left: 16px; right: 8px; font-size: 18px; line-height: 1.35; font-weight: 700; max-width: none; }
 .cover-author { position: absolute; bottom: 8px; left: 16px; font-size: 12px; }
 .cover-tab { position: absolute; top: 0; right: 16px; width: 12px; height: 26px; background: var(--color-accent-3); border-radius: 0 0 6px 6px; }
+.book-open.illustrated-cover { height: auto; aspect-ratio: 8/9; background: #e8f1e9; }
+.illustrated-cover .cover-window { inset: 0; height: 100%; }
+.illustrated-cover .cover-window img { height: 100%; object-fit: contain; }
+.illustrated-cover > :is(.cover-series,.cover-title,.cover-author,.cover-tab) { display: none; }
 .book-details h3 { font-size: var(--text-xl); line-height: 1.5; margin-bottom: var(--space-xs); }
 .book-meta { color: var(--color-ink-2); font-size: var(--text-sm); line-height: 1.8; }
 .book-reading-link { display: flex; align-items: center; justify-content: center; gap: var(--space-xs); padding: var(--space-md) var(--space-lg); min-height: 48px; border: 0; border-radius: var(--radius-stock); background: var(--color-ink); color: var(--color-paper); font-size: var(--text-sm); font-weight: 700; }

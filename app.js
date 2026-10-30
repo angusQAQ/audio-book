@@ -114,22 +114,32 @@
     announce('已停止。點書上的文字，再聽一次。');
     if (clear) $('#current-text').textContent = '想聽哪一段？直接點一下書上的文字。';
   }
+  function rangeRect(row,start,end) {
+    if (row.charRects && row.charRects.length === row.text.length) {
+      const cells = row.charRects.slice(start,end);
+      const left = Math.min(...cells.map(rect=>rect[0])), top = Math.min(...cells.map(rect=>rect[1]));
+      return [left,top,Math.max(...cells.map(rect=>rect[0]+rect[2]))-left,Math.max(...cells.map(rect=>rect[1]+rect[3]))-top];
+    }
+    const [x,y,w,h] = row.rect;
+    return [x+w*start/row.text.length,y,w*(end-start)/row.text.length,h];
+  }
   function glowImages(block,unit,extraClass) {
     const fragment = document.createDocumentFragment();
     for (const row of block.lines) {
       if (!row.glow || unit.end <= row.start || unit.start >= row.end) continue;
       const start = Math.max(unit.start,row.start)-row.start;
       const end = Math.min(unit.end,row.end)-row.start;
-      const [x,y,w,h] = row.rect;
+      const [mx,my,mw,mh] = rangeRect(row,start,end);
       const marker = el('span','reading-marker');
-      marker.style.left = ((x + w * start / row.text.length)*100)+'%'; marker.style.top = (y*100)+'%';
-      marker.style.width = (w*(end-start)/row.text.length*100)+'%'; marker.style.height = (h*100)+'%';
+      marker.style.left = (mx*100)+'%'; marker.style.top = (my*100)+'%';
+      marker.style.width = (mw*100)+'%'; marker.style.height = (mh*100)+'%';
       fragment.append(marker);
+      const [x,y,w,h] = row.glowRect || row.rect;
       const glow = el('img','ink-glow' + (extraClass ? ' '+extraClass : ''));
       glow.alt = ''; glow.src = row.glow;
       glow.style.left = (x*100)+'%'; glow.style.top = (y*100)+'%';
       glow.style.width = (w*100)+'%'; glow.style.height = (h*100)+'%';
-      glow.style.clipPath = 'inset(0 ' + ((1-end/row.text.length)*100) + '% 0 ' + (start/row.text.length*100) + '%)';
+      glow.style.clipPath = 'inset(' + [Math.max(0,(my-y)/h*100),Math.max(0,(x+w-mx-mw)/w*100),Math.max(0,(y+h-my-mh)/h*100),Math.max(0,(mx-x)/w*100)].map(value=>value+'%').join(' ') + ')';
       fragment.append(glow);
     }
     return fragment;
@@ -146,6 +156,13 @@
   function timedRanges(item) {
     const asset = book.audio[item.audio];
     if (!asset || !asset.boundaries) return [];
+    const speechMap = item.unit.speechMap || (item.unit.start === 0 && item.unit.end === item.block.text.length ? item.block.speechMap : null);
+    if (speechMap) {
+      return asset.boundaries.map(boundary=>{
+        const ranges = speechMap.filter(range=>range.spokenStart < boundary.end && range.spokenEnd > boundary.start);
+        return {time:boundary.time,duration:boundary.duration,start:ranges.length?Math.min(...ranges.map(range=>range.start)):null,end:ranges.length?Math.max(...ranges.map(range=>range.end)):null};
+      });
+    }
     const spoken = normalizedLetters(asset.text), visible = normalizedLetters(item.block.text.slice(item.unit.start,item.unit.end));
     const table = Array.from({length:spoken.length + 1},()=>new Uint16Array(visible.length + 1));
     for (let i=spoken.length-1;i>=0;i--) for (let j=visible.length-1;j>=0;j--) {
@@ -322,7 +339,7 @@
   player.addEventListener('error',()=>{ if (engine === 'audio' && player.error && player.getAttribute('src')) failPlayback(); });
   player.addEventListener('timeupdate',()=>{ if (engine === 'audio' && Number.isFinite(player.duration) && player.duration>0) { setProgress(player.currentTime/player.duration); activateGlow(); } });
   function itemFor(block,unit) {
-    return {block,unit,audio:unit.audio,lang:block.lang,text:mode === 'sentence' ? (block.speech || block.text) : unit.text};
+    return {block,unit,audio:unit.audio,lang:block.lang,text:mode === 'sentence' ? (block.speech || block.text) : (unit.speech || unit.text)};
   }
   function renderHotspots() {
     const fragment = document.createDocumentFragment();
@@ -332,10 +349,10 @@
       for (const row of block.lines) for (const unit of units) {
         if (!unit.audio || unit.end<=row.start || unit.start>=row.end) continue;
         const start=Math.max(unit.start,row.start)-row.start, end=Math.min(unit.end,row.end)-row.start;
-        const [x,y,w,h]=row.rect;
+        const [x,y,w,h]=rangeRect(row,start,end);
         const button=el('button','hotspot');
-        button.type='button'; button.style.left=((x+w*start/row.text.length)*100)+'%';
-        button.style.top=(y*100)+'%'; button.style.width=((w*(end-start)/row.text.length)*100)+'%'; button.style.height=(h*100)+'%';
+        button.type='button'; button.style.left=(x*100)+'%';
+        button.style.top=(y*100)+'%'; button.style.width=(w*100)+'%'; button.style.height=(h*100)+'%';
         button.dataset.audio=unit.audio; button.dataset.block=block.id; button.dataset.start=unit.start;
         button.setAttribute('aria-label','朗讀'+(block.lang==='en'?'英語':'粵語')+'：'+unit.text);
         button.setAttribute('aria-pressed','false'); button.addEventListener('click',()=>play(itemFor(block,unit)));
@@ -457,10 +474,11 @@
       card.dataset.bookId=item.id;
       open.setAttribute('aria-label','閱讀《'+item.title+'》');
       const windowEl=el('span','cover-window'), thumbnail=el('img');
-      thumbnail.src=item.pages[Math.min(item.pages.length-1,(item.coverPage||3)-1)].image; thumbnail.alt=''; windowEl.append(thumbnail);
+      thumbnail.src=item.coverImage || item.pages[Math.min(item.pages.length-1,(item.coverPage||3)-1)].image; thumbnail.alt=''; windowEl.append(thumbnail);
+      if (item.coverImage) open.classList.add('illustrated-cover');
       open.append(windowEl,el('span','cover-series',item.category||'粵語點讀'),el('span','cover-title',item.title),el('span','cover-author',item.author+' 著'),el('span','cover-tab'));
       open.addEventListener('click',()=>showReader(item.id));
-      const title=el('h3',null,item.title), metadata=el('p','book-meta',item.author+' 著　'+item.pages.length+' 頁');
+      const title=el('h3',null,item.title), metadata=el('p','book-meta',item.author+' 著　'+item.pages.length+' '+(item.pageUnit || '頁'));
       const details=el('div','book-details'); details.append(title,metadata);
       const position=savedPage(item), link=el('button','book-reading-link');
       const glyph=el('span'); glyph.innerHTML=icon('play');
