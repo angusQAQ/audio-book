@@ -73,6 +73,10 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 
 設計依據：[nutlope/hallmark](https://github.com/nutlope/hallmark)（8f6969f）與 [pbakaus/impeccable](https://github.com/pbakaus/impeccable)（5e745ac）。童書原文與插圖沿用使用者提供的 PDF，沒有新增授權宣稱。
 
+## 原創犬部繪本
+
+《小狼，換你說！》為 7–9 歲、小二至小三的繁體中文故事繪本，以「狗、狐、狸、狼、猴、獅」為核心、延伸「猜、獨」。已完成 15 幅正式插畫、34 頁單頁 PDF、18 畫面跨頁 PDF、18 張可編輯 PowerPoint 與 SVG 排版。故事、設計分析、教學提示、字型授權和重建方法見 [繪本專案](books/little-wolf-your-turn/README.md)。所有原創正式檔案均提交 GitHub；發布檢查另核對三份成品的線上 SHA-256。
+
 ## 設計與存檔點
 
 專案已安裝 [Apple Design skill](https://github.com/dickwu/apple-design-skill)，固定來源與技能檔案位於 `.agents/skills/apple-design/`；設計檢視見 `docs/apple-design-review.md`。`AGENTS.md` 要求每個可審閱更新階段建立 Git commit 並推送 GitHub，完成驗證後自動同步永久網站。
