@@ -54,8 +54,6 @@ jobs:
         with:
           path: .cache/edge-tts
           key: edge-tts-hiu-maan-12-words-v2-${{ hashFiles('library.json', 'requirements.txt') }}-${{ github.run_id }}
-      - name: Test the complete reader and Audio Play UI
-        run: npm test
       - name: Save any newly generated MP3 to GitHub
         run: |
           git config user.name github-actions[bot]
@@ -65,6 +63,23 @@ jobs:
             git commit -m "Generate verified HiuMaan Cantonese MP3 at -12%"
             git push origin HEAD:main
           fi
+      - name: Test the complete reader and Audio Play UI
+        run: |
+          mkdir -p .cache
+          if ! npm test > .cache/reader-tests.log 2>&1; then
+            cat .cache/reader-tests.log
+            python - <<'PY'
+          from pathlib import Path
+          import re
+          log = re.sub(r'\x1b\[[0-9;]*m', '', Path('.cache/reader-tests.log').read_text())
+          failure = log.find('  1)')
+          excerpt = log[failure if failure >= 0 else max(0,len(log)-6000):][:6000]
+          message = excerpt.replace('%','%25').replace('\r','%0D').replace('\n','%0A')
+          print('::error title=Browser verification details::' + message)
+          PY
+            exit 1
+          fi
+          cat .cache/reader-tests.log
       - name: Synchronize every tracked website file to gh-pages
         run: |
           git fetch origin gh-pages:refs/remotes/origin/gh-pages
