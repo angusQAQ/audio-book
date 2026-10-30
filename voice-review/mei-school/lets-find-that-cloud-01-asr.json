@@ -4,6 +4,14 @@
   "recognizer": "openai-whisper",
   "model": "large-v3-turbo",
   "language": "yue",
+  "detectedLanguage": "zh",
+  "languageProbabilities": {
+    "zh": 0.6266332864761353,
+    "ja": 0.19520702958106995,
+    "ko": 0.035667866468429565,
+    "en": 0.03422060236334801,
+    "id": 0.025387192144989967
+  },
   "transcriptHypothesis": " 再快就不敢咯",
   "segments": [
     {
@@ -25,45 +33,45 @@
         50506
       ],
       "temperature": 0,
-      "avg_logprob": -1.388169982216575,
+      "avg_logprob": -1.3881973786787554,
       "compression_ratio": 0.6206896551724138,
-      "no_speech_prob": 8.33307367553715e-10,
+      "no_speech_prob": 8.333210232969179e-10,
       "words": [
         {
           "word": " 再",
           "start": 0.36,
           "end": 1.2,
-          "probability": 0.025328369811177254
+          "probability": 0.025326596572995186
         },
         {
           "word": "快",
           "start": 1.2,
           "end": 1.58,
-          "probability": 0.3134520649909973
+          "probability": 0.31339937448501587
         },
         {
           "word": "就",
           "start": 1.58,
           "end": 1.84,
-          "probability": 0.16743630170822144
+          "probability": 0.16744957864284515
         },
         {
           "word": "不",
           "start": 1.84,
           "end": 2.08,
-          "probability": 0.45759260654449463
+          "probability": 0.4576076865196228
         },
         {
           "word": "敢",
           "start": 2.08,
           "end": 2.3,
-          "probability": 0.7159477472305298
+          "probability": 0.7159495949745178
         },
         {
           "word": "咯",
           "start": 2.3,
           "end": 2.6,
-          "probability": 0.5015893280506134
+          "probability": 0.5015754103660583
         }
       ]
     }

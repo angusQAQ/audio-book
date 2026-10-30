@@ -4,6 +4,14 @@
   "recognizer": "openai-whisper",
   "model": "large-v3-turbo",
   "language": "yue",
+  "detectedLanguage": "zh",
+  "languageProbabilities": {
+    "zh": 0.9268288016319275,
+    "en": 0.05131354555487633,
+    "ja": 0.010216197930276394,
+    "ko": 0.003034368623048067,
+    "vi": 0.0013551808660849929
+  },
   "transcriptHypothesis": "梅依又说:\"我不要!我不要去呀!\"妈妈又说:\"快点啦!快点着想见爱套啦!\"梅依又说:\"我不要!我不要去呀!\"",
   "segments": [
     {
@@ -32,81 +40,81 @@
         50565
       ],
       "temperature": 0,
-      "avg_logprob": -0.3071525437491281,
+      "avg_logprob": -0.30717107227870394,
       "compression_ratio": 1.5348837209302326,
-      "no_speech_prob": 6.345595576773277e-11,
+      "no_speech_prob": 6.345345776592737e-11,
       "words": [
         {
           "word": "梅",
           "start": 0.0,
           "end": 0.3,
-          "probability": 0.9842106699943542
+          "probability": 0.9841982424259186
         },
         {
           "word": "依",
           "start": 0.3,
           "end": 0.6,
-          "probability": 0.7376659661531448
+          "probability": 0.7376627177000046
         },
         {
           "word": "又",
           "start": 0.6,
           "end": 0.92,
-          "probability": 0.8960331082344055
+          "probability": 0.8960351943969727
         },
         {
           "word": "说",
           "start": 0.92,
           "end": 1.14,
-          "probability": 0.7061471939086914
+          "probability": 0.7061557173728943
         },
         {
           "word": ":\"",
           "start": 1.14,
           "end": 1.62,
-          "probability": 0.19654099643230438
+          "probability": 0.19654206931591034
         },
         {
           "word": "我",
           "start": 1.62,
           "end": 1.82,
-          "probability": 0.8647213578224182
+          "probability": 0.8647168874740601
         },
         {
           "word": "不要!",
           "start": 1.82,
           "end": 2.2,
-          "probability": 0.8343322277069092
+          "probability": 0.8343313932418823
         },
         {
           "word": "我",
           "start": 2.42,
           "end": 2.7,
-          "probability": 0.5585001707077026
+          "probability": 0.5584790706634521
         },
         {
           "word": "不要",
           "start": 2.7,
           "end": 3.02,
-          "probability": 0.99454665184021
+          "probability": 0.9945204854011536
         },
         {
           "word": "去",
           "start": 3.02,
           "end": 3.42,
-          "probability": 0.9351745247840881
+          "probability": 0.9351593852043152
         },
         {
           "word": "呀",
           "start": 3.42,
           "end": 3.78,
-          "probability": 0.5992764234542847
+          "probability": 0.599268913269043
         },
         {
           "word": "!\"",
           "start": 3.78,
           "end": 4.4,
-          "probability": 0.9006563425064087
+          "probability": 0.900641679763794
         }
       ]
     },
@@ -140,111 +148,111 @@
         50865
       ],
       "temperature": 0,
-      "avg_logprob": -0.3071525437491281,
+      "avg_logprob": -0.30717107227870394,
       "compression_ratio": 1.5348837209302326,
-      "no_speech_prob": 6.345595576773277e-11,
+      "no_speech_prob": 6.345345776592737e-11,
       "words": [
         {
           "word": "妈",
           "start": 5.360000000000001,
           "end": 5.92,
-          "probability": 0.8329035639762878
+          "probability": 0.8329057097434998
         },
         {
           "word": "妈",
           "start": 5.92,
           "end": 6.06,
-          "probability": 0.9988644123077393
+          "probability": 0.9988614320755005
         },
         {
           "word": "又",
           "start": 6.06,
           "end": 6.24,
-          "probability": 0.959917426109314
+          "probability": 0.9599012732505798
         },
         {
           "word": "说",
           "start": 6.24,
           "end": 6.4,
-          "probability": 0.9833452105522156
+          "probability": 0.9833158850669861
         },
         {
           "word": ":\"",
           "start": 6.4,
           "end": 7.08,
-          "probability": 0.9635441899299622
+          "probability": 0.9635297060012817
         },
         {
           "word": "快",
           "start": 7.08,
           "end": 7.46,
-          "probability": 0.9853413701057434
+          "probability": 0.9853132367134094
         },
         {
           "word": "点",
           "start": 7.46,
           "end": 7.6,
-          "probability": 0.9878646731376648
+          "probability": 0.9878419041633606
         },
         {
           "word": "啦!",
           "start": 7.6,
           "end": 7.76,
-          "probability": 0.802897036075592
+          "probability": 0.8028885126113892
         },
         {
           "word": "快",
           "start": 7.9,
           "end": 7.98,
-          "probability": 0.901155412197113
+          "probability": 0.9011293053627014
         },
         {
           "word": "点",
           "start": 7.98,
           "end": 8.1,
-          "probability": 0.9980427026748657
+          "probability": 0.9980377554893494
         },
         {
           "word": "着",
           "start": 8.1,
           "end": 8.24,
-          "probability": 0.2516552805900574
+          "probability": 0.251655250787735
         },
         {
           "word": "想",
           "start": 8.24,
           "end": 8.52,
-          "probability": 0.8132985234260559
+          "probability": 0.8132917881011963
         },
         {
           "word": "见",
           "start": 8.52,
           "end": 8.78,
-          "probability": 0.9736557602882385
+          "probability": 0.9736349582672119
         },
         {
           "word": "爱",
           "start": 8.78,
           "end": 9.0,
-          "probability": 0.6816654205322266
+          "probability": 0.6816545128822327
         },
         {
           "word": "套",
           "start": 9.0,
           "end": 9.28,
-          "probability": 0.7134193032979965
+          "probability": 0.7134067118167877
         },
         {
           "word": "啦",
           "start": 9.28,
           "end": 9.48,
-          "probability": 0.9561854004859924
+          "probability": 0.9561616778373718
         },
         {
           "word": "!\"",
           "start": 9.48,
           "end": 9.96,
-          "probability": 0.8138678073883057
+          "probability": 0.813854455947876
         }
       ]
     },
@@ -274,81 +282,81 @@
         51090
       ],
       "temperature": 0,
-      "avg_logprob": -0.3071525437491281,
+      "avg_logprob": -0.30717107227870394,
       "compression_ratio": 1.5348837209302326,
-      "no_speech_prob": 6.345595576773277e-11,
+      "no_speech_prob": 6.345345776592737e-11,
       "words": [
         {
           "word": "梅",
           "start": 9.96,
           "end": 10.56,
-          "probability": 0.9995473027229309
+          "probability": 0.9995454549789429
         },
         {
           "word": "依",
           "start": 10.56,
           "end": 10.82,
-          "probability": 0.9987821280956268
+          "probability": 0.9987742900848389
         },
         {
           "word": "又",
           "start": 10.82,
           "end": 11.12,
-          "probability": 0.9989662170410156
+          "probability": 0.9989621639251709
         },
         {
           "word": "说",
           "start": 11.12,
           "end": 11.34,
-          "probability": 0.9935085773468018
+          "probability": 0.9934819340705872
         },
         {
           "word": ":\"",
           "start": 11.34,
           "end": 11.96,
-          "probability": 0.9502033591270447
+          "probability": 0.9501908421516418
         },
         {
           "word": "我",
           "start": 11.96,
           "end": 12.2,
-          "probability": 0.9869111776351929
+          "probability": 0.9868733286857605
         },
         {
           "word": "不要!",
           "start": 12.2,
           "end": 12.6,
-          "probability": 0.9961052536964417
+          "probability": 0.9960822463035583
         },
         {
           "word": "我",
           "start": 12.86,
           "end": 13.1,
-          "probability": 0.955543577671051
+          "probability": 0.9555110335350037
         },
         {
           "word": "不要",
           "start": 13.1,
           "end": 13.44,
-          "probability": 0.9961737990379333
+          "probability": 0.9961537718772888
         },
         {
           "word": "去",
           "start": 13.44,
           "end": 13.84,
-          "probability": 0.9987922310829163
+          "probability": 0.9987825751304626
         },
         {
           "word": "呀",
           "start": 13.84,
           "end": 14.2,
-          "probability": 0.9903630614280701
+          "probability": 0.9903386235237122
         },
         {
           "word": "!\"",
           "start": 14.2,
           "end": 14.4,
-          "probability": 0.9415010809898376
+          "probability": 0.9414719343185425
         }
       ]
     }

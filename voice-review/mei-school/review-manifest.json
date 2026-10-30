@@ -15,8 +15,14 @@
       "sha256": "a334291c3ee19f95287f1419e152d8154bcfb6edc50f95257e04ce2726385c7b",
       "duration": 3.288,
       "asrHypothesis": " 再快就不敢咯",
-      "detectedLanguage": null,
-      "languageProbabilities": null,
+      "detectedLanguage": "zh",
+      "languageProbabilities": {
+        "zh": 0.6266332864761353,
+        "ja": 0.19520702958106995,
+        "ko": 0.035667866468429565,
+        "en": 0.03422060236334801,
+        "id": 0.025387192144989967
+      },
       "pronunciationApproved": false
     },
     {
@@ -67,8 +73,14 @@
       "sha256": "a1d3f329a107ac2d64b165a973b966f80f0ccc90610c74e706546e053c7a6609",
       "duration": 8.184,
       "asrHypothesis": "狐狸抱着一叠故事书猴子搬来小木耳狮子挂起布木",
-      "detectedLanguage": null,
-      "languageProbabilities": null,
+      "detectedLanguage": "zh",
+      "languageProbabilities": {
+        "zh": 0.9610798954963684,
+        "en": 0.022356925532221794,
+        "ja": 0.006444211583584547,
+        "ko": 0.0027202379424124956,
+        "vi": 0.0010616302024573088
+      },
       "pronunciationApproved": false
     },
     {
@@ -106,8 +118,14 @@
       "sha256": "debd57453479b415bf0efd86dfc68a8526183adb55fb39bb0026c5c67117e15c",
       "duration": 7.824,
       "asrHypothesis": "Mari Loci 亲切友好点Nai Xin Li Ga 我们说英语她真是一位好老师",
-      "detectedLanguage": null,
-      "languageProbabilities": null,
+      "detectedLanguage": "zh",
+      "languageProbabilities": {
+        "zh": 0.8484006524085999,
+        "en": 0.08148130774497986,
+        "ja": 0.02235465869307518,
+        "ko": 0.01315769087523222,
+        "ru": 0.004668081644922495
+      },
       "pronunciationApproved": false
     },
     {

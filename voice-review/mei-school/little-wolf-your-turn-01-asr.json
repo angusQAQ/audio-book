@@ -4,6 +4,14 @@
   "recognizer": "openai-whisper",
   "model": "large-v3-turbo",
   "language": "yue",
+  "detectedLanguage": "zh",
+  "languageProbabilities": {
+    "zh": 0.9610798954963684,
+    "en": 0.022356925532221794,
+    "ja": 0.006444211583584547,
+    "ko": 0.0027202379424124956,
+    "vi": 0.0010616302024573088
+  },
   "transcriptHypothesis": "狐狸抱着一叠故事书猴子搬来小木耳狮子挂起布木",
   "segments": [
     {
@@ -30,63 +38,63 @@
         50509
       ],
       "temperature": 0,
-      "avg_logprob": -0.28990371603714793,
+      "avg_logprob": -0.2899239690680253,
       "compression_ratio": 0.8571428571428571,
-      "no_speech_prob": 9.122503447089869e-11,
+      "no_speech_prob": 9.122780308956635e-11,
       "words": [
         {
           "word": "狐",
           "start": 0.0,
           "end": 0.42,
-          "probability": 0.7260766923427582
+          "probability": 0.7260387241840363
         },
         {
           "word": "狸",
           "start": 0.42,
           "end": 0.68,
-          "probability": 0.8272829353809357
+          "probability": 0.827258974313736
         },
         {
           "word": "抱",
           "start": 0.68,
           "end": 0.96,
-          "probability": 0.9873033165931702
+          "probability": 0.9872974157333374
         },
         {
           "word": "着",
           "start": 0.96,
           "end": 1.22,
-          "probability": 0.8824525475502014
+          "probability": 0.8824452757835388
         },
         {
           "word": "一",
           "start": 1.22,
           "end": 1.54,
-          "probability": 0.8107335567474365
+          "probability": 0.8107214570045471
         },
         {
           "word": "叠",
           "start": 1.54,
           "end": 1.68,
-          "probability": 0.8298176229000092
+          "probability": 0.8298115432262421
         },
         {
           "word": "故",
           "start": 1.68,
           "end": 1.94,
-          "probability": 0.9539965391159058
+          "probability": 0.9539842009544373
         },
         {
           "word": "事",
           "start": 1.94,
           "end": 2.22,
-          "probability": 0.9912399649620056
+          "probability": 0.9912133812904358
         },
         {
           "word": "书",
           "start": 2.22,
           "end": 2.66,
-          "probability": 0.931113600730896
+          "probability": 0.9310868084430695
         }
       ]
     },
@@ -111,51 +119,51 @@
         50625
       ],
       "temperature": 0,
-      "avg_logprob": -0.28990371603714793,
+      "avg_logprob": -0.2899239690680253,
       "compression_ratio": 0.8571428571428571,
-      "no_speech_prob": 9.122503447089869e-11,
+      "no_speech_prob": 9.122780308956635e-11,
       "words": [
         {
           "word": "猴",
           "start": 2.66,
           "end": 3.36,
-          "probability": 0.671022042632103
+          "probability": 0.6709988415241241
         },
         {
           "word": "子",
           "start": 3.36,
           "end": 3.7,
-          "probability": 0.9983652234077454
+          "probability": 0.9983528852462769
         },
         {
           "word": "搬",
           "start": 3.7,
           "end": 4.14,
-          "probability": 0.9111654162406921
+          "probability": 0.9111479818820953
         },
         {
           "word": "来",
           "start": 4.14,
           "end": 4.4,
-          "probability": 0.9648321866989136
+          "probability": 0.9648039937019348
         },
         {
           "word": "小",
           "start": 4.4,
           "end": 4.68,
-          "probability": 0.9944005608558655
+          "probability": 0.9943760633468628
         },
         {
           "word": "木",
           "start": 4.68,
           "end": 4.9,
-          "probability": 0.9027613401412964
+          "probability": 0.9027613997459412
         },
         {
           "word": "耳",
           "start": 4.9,
           "end": 5.2,
-          "probability": 0.6618914157152176
+          "probability": 0.661876454949379
         }
       ]
     },
@@ -178,45 +186,45 @@
         50753
       ],
       "temperature": 0,
-      "avg_logprob": -0.28990371603714793,
+      "avg_logprob": -0.2899239690680253,
       "compression_ratio": 0.8571428571428571,
-      "no_speech_prob": 9.122503447089869e-11,
+      "no_speech_prob": 9.122780308956635e-11,
       "words": [
         {
           "word": "狮",
           "start": 5.2,
           "end": 6.06,
-          "probability": 0.49945591017603874
+          "probability": 0.49943600594997406
         },
         {
           "word": "子",
           "start": 6.06,
           "end": 6.4,
-          "probability": 0.3043164908885956
+          "probability": 0.304168701171875
         },
         {
           "word": "挂",
           "start": 6.4,
           "end": 6.84,
-          "probability": 0.9368159472942352
+          "probability": 0.9367896020412445
         },
         {
           "word": "起",
           "start": 6.84,
           "end": 7.1,
-          "probability": 0.996453046798706
+          "probability": 0.9964410662651062
         },
         {
           "word": "布",
           "start": 7.1,
           "end": 7.36,
-          "probability": 0.7637122273445129
+          "probability": 0.7636830806732178
         },
         {
           "word": "木",
           "start": 7.36,
           "end": 7.64,
-          "probability": 0.8747624754905701
+          "probability": 0.8747611045837402
         }
       ]
     }
