@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { chromium } from '@playwright/test';
+import { verifyPublishedFile } from './verify_published_file.mjs';
 
 const base = new URL(process.env.READING_SITE_URL || 'https://angusqaq.github.io/audio-book/');
 const expected = readFileSync(new URL('../library.json', import.meta.url));
@@ -164,14 +165,12 @@ try {
       await page.waitForFunction(()=>window.readerDiagnostics().engine==='audio' && window.readerDiagnostics().currentTime>0 && window.readerDiagnostics().glowCount>0);
       const src=await page.evaluate(()=>window.readerDiagnostics().audioSource);
       const asset=Object.values(illustrated.audio).find(item=>item.src===src);
-      const response=await page.request.get(new URL(src,base).href);
-      assert.equal(createHash('sha256').update(await response.body()).digest('hex'),asset.sha256);
+      await verifyPublishedFile(base,src,asset.sha256);
       await page.locator('#stop').click();
     }
     for (let index=0;index<illustrated.pages.length;index++) {
       const item=illustrated.pages[index];
-      const response=await page.request.get(new URL(item.image,base).href);
-      assert.equal(createHash('sha256').update(await response.body()).digest('hex'),item.imageSha256);
+      await verifyPublishedFile(base,item.image,item.imageSha256);
     }
     if (illustrated.id === wolf.id) {
       await page.locator('#page-select').selectOption('17');

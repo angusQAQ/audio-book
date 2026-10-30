@@ -66,6 +66,7 @@ jobs:
           fi
       - name: Test the complete reader and Audio Play UI
         run: |
+          node --test tests/test_published_files.mjs
           mkdir -p .cache
           if ! npm test > .cache/reader-tests.log 2>&1; then
             cat .cache/reader-tests.log
