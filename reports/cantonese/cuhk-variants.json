@@ -1,0 +1,25 @@
+{
+  "authority": "香港中文大學漢語多功能字庫",
+  "baseUrl": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/",
+  "status": "lookup-only; context and actual speech review required",
+  "records": [
+    {
+      "character": "著",
+      "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E8%91%97",
+      "contexts": [],
+      "selectedReading": null,
+      "pronunciationApproved": false,
+      "retrievedAt": "2026-10-30T13:26:20.598905+00:00",
+      "status": "retrieved-needs-context-review",
+      "pageSha256": "9852b0c9e6bbb1c8663e74d12c7cf6d76090df16be49cbeb44a65388abeb2dae",
+      "candidateReadings": [
+        "zoek3",
+        "zoek6",
+        "zyu3"
+      ],
+      "parseVerified": false
+    }
+  ],
+  "requestedCharacters": 1,
+  "retrievedCharacters": 1
+}
