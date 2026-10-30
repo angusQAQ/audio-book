@@ -44,7 +44,10 @@ jobs:
           key: edge-tts-hiu-maan-12-words-v2-${{ hashFiles('library.json', 'requirements.txt') }}-${{ github.run_id }}
           restore-keys: edge-tts-hiu-maan-12-words-v2-
       - name: Generate requested voice
-        run: python scripts/generate_audio.py --jobs 2
+        run: |
+          python scripts/generate_audio.py --include-book books/little-wolf-your-turn/reader/book.json --jobs 2
+          python scripts/generate_audio.py --include-book books/lets-find-that-cloud/reader/book.json --jobs 2
+          python scripts/generate_audio.py --jobs 2
       - name: Preserve verified speech cache even after a service interruption
         if: always() && hashFiles('.cache/edge-tts/*.json') != ''
         uses: actions/cache/save@v5

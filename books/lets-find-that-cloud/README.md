@@ -13,6 +13,16 @@
 - `story.json`：故事、字目、分鏡、角色和配色；`design-brief.md`：參考書細讀與編輯取捨。
 - `assets/`：角色模型表、15 幅正式插畫、未修改字型及授權；生成來源與提示另存紀錄。
 
+## 粵語點讀
+
+書籍 ID 為 `lets-find-that-cloud`。`reader/` 保存最新 PDF 的 18 個完整跨頁頁圖、書封、透明文字提示遮罩和點讀來源 `book.json`；73 個文字區，328 個去重朗讀單位，1,007 個詞語／單字映射。琪琪 10 處、樂樂 9 處的人名及專名號保留於原頁圖；放大字按真實字寬建立點擊區，姓名在詞語模式可整個選讀。
+
+音源使用 `edge-tts==7.3.1`、`zh-HK-HiuMaanNeural`、`-12%`，時間來自真實 WordBoundary。140 個單位可重用既有指定聲音，188 個需生成；全部成功及驗證後才原子註冊書架。原 PDF、插畫、PPTX 和 SVG 均保留。
+
+重建頁圖與點讀來源：`python3 books/lets-find-that-cloud/build_reader.py`。在可連線語音服務的環境，執行 `python3 scripts/generate_audio.py --include-book books/lets-find-that-cloud/reader/book.json --jobs 2`，再執行資產與瀏覽器檢查。正式流程由 GitHub Actions 生成、驗證及保存 MP3，完整測試後同步永久網站。`reader/validation.json` 只證明圖文／幾何檢查，實際音訊以正式 `library.json` 和發布流程為準。
+
+本次需求記錄於 `brief.json`，沿用本書已確認的 7–9 歲及原作設定，新增點讀；使用新 skill 的其他新書需重新設定年齡、主題與內容。
+
 ## 編輯與重建
 
 開啟 PowerPoint 或 SVG 前，安裝 `assets/fonts/Iansui-Regular.ttf`、`assets/fonts/JyunsaiKaai-Bold.ttf`，避免替代字型改變字形及版面。PDF 已嵌字，閱讀時不用安裝。文字、字目、頁碼及圖像物件可分別修改；PowerPoint 的人名文字與專名號線條已編組，可一起移動，SVG 的線條也保留為向量。修改人名長度後應從故事來源重建，讓線長與文字重新對齊。插畫為獨立 PNG，並非可逐筆拆解的向量。

@@ -1,0 +1,12 @@
+{
+  "status": "geometry-verified; audio registration is separate",
+  "pages": 18,
+  "blocks": 73,
+  "audioUnits": 328,
+  "wordCharacterMappings": 1007,
+  "preservedNameOccurrences": {
+    "琪琪": 10,
+    "樂樂": 9
+  },
+  "sourcePdfSha256": "227c67366ca56081484e356efab19c6f792264e0c80b9614e2921bee358a51fc"
+}

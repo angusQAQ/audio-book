@@ -87,6 +87,8 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 - [單頁繪本 PDF｜34 頁](https://angusqaq.github.io/audio-book/books/lets-find-that-cloud/exports/走！去找那朵雲_繪本.pdf)
 - [可編輯 PowerPoint](https://angusqaq.github.io/audio-book/books/lets-find-that-cloud/exports/走！去找那朵雲_可編輯排版.pptx)
 
+[粵語點讀版](https://angusqaq.github.io/audio-book/?book=lets-find-that-cloud&page=1)保留最新姓名及專名號，提供句子／詞語／單字點讀和實際語音時間指引。預製曉曼粵語 MP3，語速 -12%；音訊完整驗證後加入書架。
+
 [完整專案與編輯方法](books/lets-find-that-cloud/README.md)包含兩本參考書的細讀、故事與分鏡、角色模型表、15 幅正式插畫、兩個修改前版本、完整生成提示、字型授權、SVG 與重建程式。PDF 已嵌字；編輯 PowerPoint／SVG 前需安裝附帶字型。發布流程核對三份成品的線上 SHA-256。
 
 ## 設計與存檔點

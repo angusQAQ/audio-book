@@ -8,8 +8,8 @@ async function ready(page,number) {
   await expect(page.locator('.page-turn')).toHaveCount(0);
 }
 
-test('both books turn from their cover through every page with arrows and keyboard',async({page})=>{
-  test.setTimeout(90000);
+test('all books turn from their cover through every page with arrows and keyboard',async({page})=>{
+  test.setTimeout(120000);
   await page.setViewportSize({width:1111,height:730});
   const errors=[];page.on('pageerror',error=>errors.push(error.message));
   for(const book of books) {

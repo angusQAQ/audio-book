@@ -22,6 +22,8 @@ const shippedFiles = [
 const library = JSON.parse(expected);
 const book = library.books[0];
 const wolf = library.books.find(item=>item.id==='little-wolf-your-turn');
+const cloud = library.books.find(item=>item.id==='lets-find-that-cloud');
+assert.ok(cloud, 'The cloud picture book has not completed audio registration');
 assert.ok(wolf, 'The new picture book has not completed audio registration');
 if (process.env.REQUIRE_EDGE === '1') {
   for (const item of library.books) {
@@ -133,44 +135,57 @@ try {
   assert.equal(await page.locator(`[data-book-id="${book.id}"] .book-reading-link`).textContent(), '繼續第 2 頁');
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   assert.deepEqual(errors, []);
-  // Verify the new book against the exact PDF-derived pages and real MP3 on production.
-  const wolfPdf = await page.request.get(new URL(wolf.source.url,base).href);
-  assert.equal(createHash('sha256').update(await wolfPdf.body()).digest('hex'), wolf.source.sha256);
-  await page.getByRole('button',{name:`閱讀《${wolf.title}》`,exact:true}).click();
-  await page.waitForFunction(()=>window.readerDiagnostics().imageReady);
-  await page.locator('#next-page').click();
-  await page.waitForFunction(()=>window.readerDiagnostics().page===2 && window.readerDiagnostics().imageReady);
-  assert.equal(await page.locator('#page-image').getAttribute('src'),wolf.pages[1].image);
-  assert.equal(await page.locator('.page-turn').count(),0);
-  await page.setViewportSize({width:1111,height:730});
-  await page.locator('#previous-side').click();
-  await page.waitForFunction(()=>window.readerDiagnostics().page===1 && window.readerDiagnostics().imageReady);
-  await page.locator('#next-side').click();
-  await page.waitForFunction(()=>window.readerDiagnostics().page===2 && window.readerDiagnostics().imageReady);
-  await page.setViewportSize({width:390,height:844});
-  await page.locator('#page-select').selectOption('3');
-  await page.waitForFunction(()=>window.readerDiagnostics().imageReady);
-  for (const mode of ['sentence','word','character']) {
-    await chooseMode(mode);await page.locator('.hotspot').first().click();
-    await page.waitForFunction(()=>window.readerDiagnostics().engine==='audio' && window.readerDiagnostics().currentTime>0 && window.readerDiagnostics().glowCount>0);
-    const src=await page.evaluate(()=>window.readerDiagnostics().audioSource);
-    const asset=Object.values(wolf.audio).find(item=>item.src===src);
-    const response=await page.request.get(new URL(src,base).href);
-    assert.equal(createHash('sha256').update(await response.body()).digest('hex'),asset.sha256);
-    await page.locator('#stop').click();
+  // Verify both original picture books against exact PDF pages and real MP3 on production.
+  for (const illustrated of [wolf, cloud]) {
+    const illustratedPdf = await page.request.get(new URL(illustrated.source.url,base).href);
+    assert.equal(createHash('sha256').update(await illustratedPdf.body()).digest('hex'), illustrated.source.sha256);
+    await page.getByRole('button',{name:`閱讀《${illustrated.title}》`,exact:true}).click();
+    await page.waitForFunction(()=>window.readerDiagnostics().imageReady);
+    await page.locator('#next-page').click();
+    await page.waitForFunction(()=>window.readerDiagnostics().page===2 && window.readerDiagnostics().imageReady);
+    assert.equal(await page.locator('#page-image').getAttribute('src'),illustrated.pages[1].image);
+    assert.equal(await page.locator('.page-turn').count(),0);
+    await page.setViewportSize({width:1111,height:730});
+    await page.locator('#previous-side').click();
+    await page.waitForFunction(()=>window.readerDiagnostics().page===1 && window.readerDiagnostics().imageReady);
+    await page.locator('#next-side').click();
+    await page.waitForFunction(()=>window.readerDiagnostics().page===2 && window.readerDiagnostics().imageReady);
+    await page.setViewportSize({width:390,height:844});
+    await page.locator('#page-select').selectOption('3');
+    await page.waitForFunction(()=>window.readerDiagnostics().imageReady);
+    for (const mode of ['sentence','word','character']) {
+      await chooseMode(mode);await page.locator('.hotspot').first().click();
+      await page.waitForFunction(()=>window.readerDiagnostics().engine==='audio' && window.readerDiagnostics().currentTime>0 && window.readerDiagnostics().glowCount>0);
+      const src=await page.evaluate(()=>window.readerDiagnostics().audioSource);
+      const asset=Object.values(illustrated.audio).find(item=>item.src===src);
+      const response=await page.request.get(new URL(src,base).href);
+      assert.equal(createHash('sha256').update(await response.body()).digest('hex'),asset.sha256);
+      await page.locator('#stop').click();
+    }
+    for (let index=0;index<illustrated.pages.length;index++) {
+      const item=illustrated.pages[index];
+      const response=await page.request.get(new URL(item.image,base).href);
+      assert.equal(createHash('sha256').update(await response.body()).digest('hex'),item.imageSha256);
+    }
+    if (illustrated.id === wolf.id) {
+      await page.locator('#page-select').selectOption('17');
+      await page.waitForFunction(()=>window.readerDiagnostics().imageReady);await chooseMode('character');
+      await page.getByRole('button',{name:'朗讀粵語：犭',exact:true}).first().click();
+      await page.waitForFunction(()=>window.readerDiagnostics().highlightedText==='犭');
+      await page.locator('#stop').click();
+    } else {
+      for (const [number,name] of [[3,'琪琪'],[4,'樂樂']]) {
+        await page.locator('#page-select').selectOption(String(number));
+        await page.waitForFunction(()=>window.readerDiagnostics().imageReady);await chooseMode('word');
+        await page.getByRole('button',{name:`朗讀粵語：${name}`,exact:true}).first().click();
+        await page.waitForFunction(expected=>window.readerDiagnostics().current===expected && window.readerDiagnostics().engine==='audio' && window.readerDiagnostics().currentTime>0,name);
+        await page.locator('#stop').click();
+      }
+    }
+    await page.locator('#reader-back').click();
   }
-  for (let index=0;index<wolf.pages.length;index++) {
-    const item=wolf.pages[index];
-    const response=await page.request.get(new URL(item.image,base).href);
-    assert.equal(createHash('sha256').update(await response.body()).digest('hex'),item.imageSha256);
-  }
-  await page.locator('#page-select').selectOption('17');
-  await page.waitForFunction(()=>window.readerDiagnostics().imageReady);await chooseMode('character');
-  await page.getByRole('button',{name:'朗讀粵語：犭',exact:true}).first().click();
-  await page.waitForFunction(()=>window.readerDiagnostics().highlightedText==='犭');
-  await page.locator('#stop').click();
   assert.deepEqual(errors, []);
-  console.log(`PASS: published library matches ${expectedHash.slice(0, 12)}; both books, new picture-book PDF and 18 page hashes, all MP3 modes, real timed glyph cues, audio controls, page turns, reversible archive and phone layout verified.`);
+  console.log(`PASS: published library matches ${expectedHash.slice(0, 12)}; all three books, both original picture-book PDFs and 36 page hashes, all MP3 modes, real timed glyph cues, audio controls, page turns, reversible archive and phone layout verified.`);
 } catch (error) {
   const state=await verificationPage?.evaluate(()=>window.readerDiagnostics?.()).catch(()=>null);
   const diagnosis=String(error.stack || error)+'\nReader state: '+JSON.stringify(state);

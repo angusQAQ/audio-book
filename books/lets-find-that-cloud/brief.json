@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "book": {
+    "slug": "lets-find-that-cloud",
+    "title": "走！去找那朵雲",
+    "language": "zh-HK"
+  },
+  "audience": {
+    "ageMin": 7,
+    "ageMax": 9,
+    "readingMode": "independent",
+    "readingAbility": "小二至小三，可自行閱讀",
+    "accessibilityNeeds": []
+  },
+  "theme": "走部故事：找雲、觀察與同行",
+  "content": {
+    "mode": "revision",
+    "request": "把最新版《走！去找那朵雲》做成粵語點讀書並加入點點書房，保留現有故事、插畫、姓名專名號及成品。",
+    "requiredElements": [],
+    "avoidElements": [],
+    "sourceTextPaths": [
+      "story.json"
+    ],
+    "references": [],
+    "learningGoals": [
+      "在故事中認識走部字"
+    ],
+    "targetCharacters": [
+      "起",
+      "趕",
+      "超",
+      "越",
+      "趟",
+      "趣",
+      "趁",
+      "走"
+    ],
+    "characterNames": [
+      "琪琪",
+      "樂樂"
+    ]
+  },
+  "design": {
+    "artDirection": "保留現有灰鉛筆與局部淡彩",
+    "palette": [],
+    "pageSize": {
+      "width": 960,
+      "height": 540,
+      "unit": "pt"
+    },
+    "storySpreads": 14,
+    "wordBudget": 364,
+    "bodyFont": "Iansui",
+    "emphasisFont": "JyunsaiKaai Bold",
+    "emphasisScale": 1.5,
+    "properNameMarks": true
+  },
+  "deliverables": {
+    "formats": [
+      "pdf-spread",
+      "pdf-single",
+      "pptx",
+      "svg",
+      "reader-assets"
+    ],
+    "readAlong": true,
+    "audio": {
+      "engine": "edge-tts",
+      "version": "7.3.1",
+      "voice": "zh-HK-HiuMaanNeural",
+      "rate": "-12%",
+      "timing": "actual WordBoundary"
+    }
+  },
+  "publication": {
+    "github": true,
+    "permanentWebsite": true,
+    "destination": "https://angusqaq.github.io/audio-book/"
+  },
+  "decisions": {
+    "userRequirements": [
+      "沿用本書已確認的 7–9 歲與原作設定",
+      "琪琪、樂樂及全部姓名專名號保留",
+      "新增句子、詞語與單字粵語點讀",
+      "全部正式檔案 GitHub 存檔並同步永久網站"
+    ],
+    "editorialChoices": [
+      "使用實際字型度量建立逐字矩形，保留完整 PDF 跨頁",
+      "音訊及真實時間全部生成並驗證後才更新書架索引"
+    ],
+    "unresolvedQuestions": []
+  }
+}
