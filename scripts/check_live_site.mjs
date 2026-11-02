@@ -17,6 +17,10 @@ const shippedFiles = [
   'books/lets-find-that-cloud/exports/走！去找那朵雲_繪本.pdf',
   'books/lets-find-that-cloud/exports/走！去找那朵雲_跨頁閱讀版.pdf',
   'books/lets-find-that-cloud/exports/走！去找那朵雲_可編輯排版.pptx',
+  'books/sea-come-to-my-home/exports/大海，來我家！_繪本.pdf',
+  'books/sea-come-to-my-home/exports/大海，來我家！_跨頁閱讀版.pdf',
+  'books/sea-come-to-my-home/exports/大海，來我家！_可編輯排版.pptx',
+  'books/sea-come-to-my-home/exports/render-validation.json',
 ].map(path => ({
   path, hash: createHash('sha256').update(readFileSync(new URL('../' + path, import.meta.url))).digest('hex'),
 }));

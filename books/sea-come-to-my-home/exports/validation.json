@@ -1,0 +1,44 @@
+{
+  "status": "complete",
+  "spreadPages": 16,
+  "singlePages": 30,
+  "editableSlides": 16,
+  "missingGlyphs": [],
+  "allTextEditable": true,
+  "originalArtworkHashesVerified": 14,
+  "properNameMarks": {
+    "names": {
+      "小安": 8,
+      "圓圓": 4
+    },
+    "style": "continuous rule below each full name",
+    "pdfPptxSvgGeometryVerified": true,
+    "editableTextAndRuleGrouped": true
+  },
+  "targetTypography": {
+    "font": "JyunsaiKaai",
+    "bodyScale": 1.5,
+    "pdfAndPptxRunsVerified": true,
+    "handwrittenGlyphs": {
+      "海": 13,
+      "水": 19,
+      "洗": 3,
+      "浮": 4,
+      "泡": 4,
+      "濕": 3,
+      "沉": 4,
+      "流": 3,
+      "氵": 2
+    }
+  },
+  "storyHanCharacters": 310,
+  "targets": {
+    "海": 15,
+    "洗": 3,
+    "泡": 4,
+    "浮": 4,
+    "沉": 4,
+    "濕": 3,
+    "流": 3
+  }
+}

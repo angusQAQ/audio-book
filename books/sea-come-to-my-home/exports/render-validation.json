@@ -1,0 +1,25 @@
+{
+  "status": "verified",
+  "date": "2026-11-02",
+  "officePages": 16,
+  "officeTextMatchesEveryPage": true,
+  "actualOfficeFonts": [
+    "Iansui-Regular",
+    "JyunsaiKaai-Bold"
+  ],
+  "officeTargetFontAndSizeVerified": true,
+  "properNameRulesVerified": 12,
+  "storyTextImageCollisionChecks": 40,
+  "radicalEntriesVerified": 11,
+  "svgActualRenders": [
+    "s10",
+    "lesson"
+  ],
+  "officeRenderedPdfSha256": "431d978c674b145d3cadea7b899eed8be00fcfc7be360a4f63603d1fcb7f971d",
+  "files": {
+    "大海，來我家！_可編輯排版.pptx": "6e89ff8617d696975a907aeb2f6a47e40cfeb7ce119c5fa00b4512828ffebb53",
+    "大海，來我家！_繪本.pdf": "934b7a52f10560f2f8e040c95cd82c5230587b08aa8ad5b757ba905f12685406",
+    "大海，來我家！_跨頁閱讀版.pdf": "2a8c9be0128d0cbc7f4344eac6538543339a9955ba8052668093dbc13aa49af8"
+  },
+  "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
+}

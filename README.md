@@ -93,6 +93,16 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 
 [完整專案與編輯方法](books/lets-find-that-cloud/README.md)包含兩本參考書的細讀、故事與分鏡、角色模型表、15 幅正式插畫、兩個修改前版本、完整生成提示、字型授權、SVG 與重建程式。PDF 已嵌字；編輯 PowerPoint／SVG 前需安裝附帶字型。發布流程核對三份成品的線上 SHA-256。
 
+## 原創氵部首繪本
+
+《大海，來我家！》為本次確認的7–9歲自主讀者設計。看海計劃被雨打斷，小安與圓圓在水盆造海，從紙船浮沉到合力造小筏。310個漢字、12故事跨頁；核心海、洗、泡、浮、沉、濕，延伸流，兼認水／氵。全新人物、鉛筆淡彩、大留白、鏡頭交替與放大手寫楷體；人名附專名號。
+
+- [跨頁閱讀 PDF｜16 畫面](https://angusqaq.github.io/audio-book/books/sea-come-to-my-home/exports/大海，來我家！_跨頁閱讀版.pdf)
+- [單頁繪本 PDF｜30 頁](https://angusqaq.github.io/audio-book/books/sea-come-to-my-home/exports/大海，來我家！_繪本.pdf)
+- [可編輯 PowerPoint](https://angusqaq.github.io/audio-book/books/sea-come-to-my-home/exports/大海，來我家！_可編輯排版.pptx)
+
+[本書專案](books/sea-come-to-my-home/README.md)保存參考細讀、完整故事／分鏡、14幅含角色表的原創圖、精確生成紀錄、原生文字SVG、字型授權與重建程式。兩份PDF、PowerPoint與實際渲染驗證報告加入永久網站雜湊檢查。
+
 ## 設計與存檔點
 
 已建立 [電子兒童繪本 skill](.agents/skills/children-picture-book/SKILL.md)。在此專案可使用 `$children-picture-book`，說明本次適讀年齡、主題、內容及成品要求；不會把上一本書的 7–9 歲、部首、角色或頁數當成預設。涵蓋參考分析、故事／分鏡、角色與插畫、PDF／可編輯排版、專名號、實際校稿、另有要求的點讀及 Git／發布驗證。
