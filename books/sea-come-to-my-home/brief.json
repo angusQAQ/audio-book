@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "book": {
+    "slug": "sea-come-to-my-home",
+    "title": "大海，來我家！",
+    "language": "zh-HK"
+  },
+  "audience": {
+    "ageMin": 7,
+    "ageMax": 9,
+    "readingMode": "independent",
+    "readingAbility": "小二至小三，可自行閱讀",
+    "accessibilityNeeds": []
+  },
+  "theme": "氵／水部：雨天水盆遊戲、浮沉與一起改變玩法",
+  "content": {
+    "mode": "original",
+    "request": "深度參考使用者提供的口部《生日會》與足部《跟屁蟲》的藝術、版面、文字和節奏，創作全新氵部首兒童故事繪本。",
+    "requiredElements": [
+      "讓部首字自然融入完整情節"
+    ],
+    "avoidElements": [
+      "複製參考書人物、圖像、原句",
+      "沿用既有繪本人物與找雲情節",
+      "把雨或船誤列為水部",
+      "把所有輕物／重物一概說成浮／沉"
+    ],
+    "sourceTextPaths": [
+      "story.json"
+    ],
+    "references": [
+      {
+        "title": "生日會",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 16,
+        "sha256": "8f67a3121f40ebaa67844db1918eccb9c7f21bdc4faeacf4acd98557499d9eaf",
+        "source": "使用者附件，未重新公開原 PDF"
+      },
+      {
+        "title": "跟屁蟲",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 17,
+        "sha256": "abfb8339a9bbcb41fa25d914a9c1bff836b7ffc986eaa04077252a5d48a5a8fe",
+        "source": "使用者附件，未重新公開原 PDF"
+      }
+    ],
+    "learningGoals": [
+      "認識水部的氵寫法",
+      "在語境中理解海、洗、泡、浮、沉、濕",
+      "由具體水盆經驗認識浮沉，鼓勵觀察與合作"
+    ],
+    "targetCharacters": [
+      "海",
+      "洗",
+      "泡",
+      "浮",
+      "沉",
+      "濕",
+      "流"
+    ],
+    "characterNames": [
+      "小安",
+      "圓圓"
+    ]
+  },
+  "design": {
+    "artDirection": "灰鉛筆、局部色鉛筆淡彩；大留白、動作與表情特寫、非均勻圖文節奏",
+    "palette": [
+      "#FFFFFF",
+      "#303C40",
+      "#77B8BA",
+      "#D98D76",
+      "#C5B8D7",
+      "#E1BD62"
+    ],
+    "pageSize": {
+      "width": 960,
+      "height": 600,
+      "unit": "pt"
+    },
+    "storySpreads": 12,
+    "wordBudget": 310,
+    "bodyFont": "Iansui",
+    "emphasisFont": "JyunsaiKaai Bold",
+    "emphasisScale": 1.5,
+    "properNameMarks": true
+  },
+  "deliverables": {
+    "formats": [
+      "pdf-spread",
+      "pdf-single",
+      "pptx",
+      "svg"
+    ],
+    "readAlong": false,
+    "audio": null
+  },
+  "publication": {
+    "github": true,
+    "permanentWebsite": true,
+    "destination": "https://angusqaq.github.io/audio-book/"
+  },
+  "decisions": {
+    "userRequirements": [
+      "氵部首主題",
+      "深度參考指定兩本部首繪本",
+      "本次已確認沿用7–9歲、完整插畫PDF與可編輯排版",
+      "所有正式檔案GitHub存檔、每階段git commit並同步永久網站"
+    ],
+    "editorialChoices": [
+      "全新角色小安與圓圓；用雨天水盆遊戲連接情節",
+      "12個故事跨頁、28內頁；16個閱讀畫面、30單頁含封面封底",
+      "核心字手寫楷體150%；人名專名號",
+      "兩份PDF、原生文字PowerPoint、SVG及完整原創插畫來源",
+      "本次未要求點讀，不更動既有三本點讀書與音源"
+    ],
+    "unresolvedQuestions": []
+  }
+}
