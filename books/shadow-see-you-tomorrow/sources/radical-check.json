@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-02",
+  "description": "部首歸屬核對；竹字頭符號先以EquivalentUnifiedIdeograph映射至統一漢字再查kRSUnicode，不把符號冒充Unihan條目。",
+  "dataset": "Unicode 17.0 kRSUnicode",
+  "source": "https://github.com/unicode-org/unicodetools/blob/578f6c0516f5f268292ebda50b51848407a06478/unicodetools/data/ucd/17.0.0/Unihan/kRSUnicode.txt",
+  "sha256": "481f8a3d2fda0c6b8e6f7c746a0eedfb145a62f30bf6e61527a8f7cdb2a99108",
+  "entries": {
+    "日": {
+      "codepoint": "U+65E5",
+      "kRSUnicode": "72.0",
+      "sourceLine": "65E5\t72.0"
+    },
+    "早": {
+      "codepoint": "U+65E9",
+      "kRSUnicode": "72.2",
+      "sourceLine": "65E8..65EF\t72.2"
+    },
+    "明": {
+      "codepoint": "U+660E",
+      "kRSUnicode": "72.4",
+      "sourceLine": "65F9..6619\t72.4"
+    },
+    "時": {
+      "codepoint": "U+6642",
+      "kRSUnicode": "72.6",
+      "sourceLine": "6640..6656\t72.6"
+    },
+    "晚": {
+      "codepoint": "U+665A",
+      "kRSUnicode": "72.7",
+      "sourceLine": "6657..6669\t72.7"
+    },
+    "晴": {
+      "codepoint": "U+6674",
+      "kRSUnicode": "72.8",
+      "sourceLine": "666A..6683\t72.8"
+    },
+    "暗": {
+      "codepoint": "U+6697",
+      "kRSUnicode": "72.9",
+      "sourceLine": "6692..6699\t72.9"
+    },
+    "月": {
+      "codepoint": "U+6708",
+      "kRSUnicode": "74.0",
+      "sourceLine": "6708\t74.0"
+    },
+    "陽": {
+      "codepoint": "U+967D",
+      "kRSUnicode": "170.9",
+      "sourceLine": "967B..968E\t170.9"
+    }
+  }
+}

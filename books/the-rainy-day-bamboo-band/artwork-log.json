@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "generator": "OpenAI image_gen",
+  "date": "2026-11-02",
+  "characterBible": {
+    "file": "assets/characters.png",
+    "source": "/workspace/generated_images/exec-b960e54a-eea6-4f01-970f-59879d40d180.png",
+    "prompt": "Create an ORIGINAL four-column full-body CHARACTER MODEL SHEET for a hand-drawn children's picture book, ages 7–9. Pure WHITE paper background; no scenery, lettering, labels, logos, swatches, watermark or props. Columns exactly equal width, ample white gaps, all feet visible, common ground baseline. LEFT two columns: same GIRL age8 front and three-quarter. RIGHT two columns: same GRANDFATHER age70 front and three-quarter. Girl is about 72 percent of grandfather's height, sturdy compact build with a broad SQUARE face, medium-brown skin, a few freckles over a broad short nose, SMALL narrow almond-shaped monolid dark eyes spaced widely, straight heavy eyebrows, wide expressive mouth with one slightly uneven front tooth. BLACK tightly curly hair gathered in ONE HIGH PUFF, no bangs, no braid, no bob. TEAL loose boxy short-sleeved T-shirt, BURNT SIENNA wide cropped trousers, cream flat canvas slip-on shoes; no bag or jewellery. Grandfather is tall, lean and gently stooped, a LONG RECTANGULAR face, pronounced cheekbones, long nose, small deep-set eyes and smile wrinkles, BALD CROWN with cropped WHITE hair at sides, thin WHITE moustache, RECTANGULAR wire glasses. Cream short-sleeved shirt, dark forest-green waistcoat with two square pockets, charcoal trousers, brown lace-up shoes. Natural different body proportions: child about five heads tall, adult about seven. LOOSE confident graphite contours, varied pencil pressure, hatching visible, selective FLAT dry colored-pencil clothes. Friendly expressive original faces drawn through brows and mouth; not chibi, no huge round eyes, doll faces, porcelain skin, glossy 3D, anime or photographic realism. Each character has a decisively different silhouette, facial structure and age. Empty relaxed hands. Preserve the same individual features between front and three-quarter.",
+    "references": [],
+    "transparentBackground": false,
+    "sha256": "4deda8153ee54a7af345a6a6765e99fdb1bb04084a2da331fbb603e807441608"
+  },
+  "illustrations": [
+    {
+      "id": "props",
+      "file": "assets/props.png",
+      "prompt": "Original graphite and flat dry colored-pencil PROP MODEL SHEET on pure WHITE background, no people, lettering or labels. FOUR separated objects: LEFT one oval honey-coloured woven bamboo basket with a single arched handle; next ONE upright short thick pale bamboo tube with open top, smooth rim and CLOSED bottom made by natural bamboo node, stable base, about12cm high; next exactly TWO short bamboo chopsticks with blunt rounded tips, about18cm long; RIGHT one genuine traditional TRANSVERSE bamboo flute held sideways when played, about30cm long, warm honey color, a row of finger holes and a side blowing hole near one end. No recorder, panpipes, sharp splinters, blades, strings, stars or extra objects.",
+      "references": [],
+      "transparentBackground": false,
+      "source": "/workspace/generated_images/exec-aa3fa2ff-01ae-4098-918e-ebe023fff190.png",
+      "sha256": "83c77f2b3c91f8fbc17cfd6dc44fc50d6dcf8088a51d15f071f66ea18257c47c"
+    },
+    {
+      "id": "cover",
+      "file": "assets/illustrations/cover.png",
+      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. DUODUO: sturdy brown-skinned girl age8, square face, freckles, ONE HIGH BLACK CURLY PUFF, teal boxy short-sleeved shirt, burnt sienna wide cropped trousers, cream slip-on shoes. GRANDFATHER: tall lean bald crown with cropped white side hair, white moustache, long rectangular face, rectangular wire glasses, cream short sleeves, dark forest-green waistcoat, charcoal trousers, brown lace-up shoes. Props match attached model: ONE oval woven bamboo basket, ONE smooth closed-bottom upright bamboo tube, TWO blunt bamboo chopsticks, ONE transverse side-blown bamboo flute only when requested. No lettering, typography, logos, speech balloons or watermark. Transparent-background compact FULL-BODY cover cutout of the two same characters, keep all shoes visible. Girl LEFT taps one closed-bottom bamboo tube on mat with her two chopsticks, grandfather RIGHT seated on low stool holds one horizontal bamboo flute at his mouth playing, basket to side; happy engaged expressions, generous air between silhouettes, no rain or scenery.",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": true,
+      "source": "/workspace/generated_images/exec-635e4b92-30dc-4675-a708-b2f5ea83a5bc.png",
+      "sha256": "63ec15c2a75243f6aeffb68e73f96fe7438e671a58a051a45295e1e3d5e718cb"
+    },
+    {
+      "id": "s01",
+      "file": "assets/illustrations/s01.png",
+      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. DUODUO: sturdy brown-skinned girl age8, square face, freckles, ONE HIGH BLACK CURLY PUFF, teal boxy short-sleeved shirt, burnt sienna wide cropped trousers, cream slip-on shoes. GRANDFATHER: tall lean bald crown with cropped white side hair, white moustache, long rectangular face, rectangular wire glasses, cream short sleeves, dark forest-green waistcoat, charcoal trousers, brown lace-up shoes. Props match attached model: ONE oval woven bamboo basket, ONE smooth closed-bottom upright bamboo tube, TWO blunt bamboo chopsticks, ONE transverse side-blown bamboo flute only when requested. No letters, numbers, Chinese, typography, musical notes, speech balloons, diagrams or watermark. Draw COMPLETE connected bodies and hands, no floating or amputated legs. WIDE LANDSCAPE composition, entire TOP 45 percent completely PURE WHITE, all art in lower55 percent. Keep central binding strip x45–55 percent free of faces, hands, toys and important marks; stage complete groups in left or right quarter. Sparse ground strokes, white feathered edges. Girl lower LEFT standing holding an EMPTY oval bamboo basket, shoulders slumped, looking toward the open doorway at far left edge where thin grey rain is visible. Grandfather lower RIGHT on a low stool, attentive. No instruments yet. Warm sheltered veranda, tiny floor strokes, no snow.",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "source": "/workspace/generated_images/exec-d42086cd-1438-4189-b036-7e5ced639584.png",
+      "sha256": "4ffdc132ef55169a65cec3db0d4aa338784181d2de4b38ce6d16485de5f7381c"
+    }
+  ]
+}

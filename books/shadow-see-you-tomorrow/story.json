@@ -1,0 +1,405 @@
+{
+  "schemaVersion": 1,
+  "status": "production",
+  "audience": "7–9 歲・小二至小三自主閱讀",
+  "language": "zh-HK",
+  "extensionCharacters": [],
+  "format": {
+    "width": 960,
+    "height": 600,
+    "interiorPages": 28,
+    "readingSlides": 16
+  },
+  "title": "影子，明天見！",
+  "slug": "shadow-see-you-tomorrow",
+  "series": "部首故事・日",
+  "theme": "孩子藉小木熊的影子觀察日光、時間及明暗變化，夜裏用電筒繼續探索。",
+  "coreCharacters": [
+    "早",
+    "晴",
+    "時",
+    "晚",
+    "暗",
+    "明"
+  ],
+  "radical": {
+    "base": "日",
+    "variant": "日",
+    "name": "日字旁",
+    "kangxiNumber": 72,
+    "emphasizedForms": []
+  },
+  "typography": {
+    "bodyFamily": "Iansui",
+    "targetFamily": "JyunsaiKaai",
+    "targetWeight": 700,
+    "targetScale": 1.5,
+    "properNames": [
+      "平平"
+    ],
+    "normalCharacters": [
+      "日"
+    ],
+    "properNameMark": {
+      "style": "underline",
+      "baselineOffset": 4.2,
+      "strokeWidth": 0.7,
+      "inset": 0.4
+    }
+  },
+  "palette": {
+    "paper": "#FFFFFF",
+    "cover": "#F5EECF",
+    "ink": "#333B49",
+    "muted": "#717C8C",
+    "blue": "#3B5DA8",
+    "yellow": "#DCC365"
+  },
+  "characters": {
+    "pingping": "平平，八歲男孩；瘦長身形、長窄臉、大耳朵、長鼻、小杏眼、紫色長方眼鏡、黑色短平頭；群青短袖黃邊領衫、石灰短褲、白長襪、淡黃球鞋。",
+    "father": "爸爸，三十八歲；寬肩結實、梯形寬臉、粗眉、圓大鼻、深色短曲髮及方短鬍鬚；珊瑚短袖、暖灰長褲、深藍鞋，沒有眼鏡。爸爸是稱謂，不另作姓名。"
+  },
+  "presentation": {
+    "titleLines": [
+      "影子，",
+      "明天見！"
+    ],
+    "coverSizes": [
+      56,
+      54
+    ],
+    "coverAlt": "平平捧着小木熊，爸爸拿着尚未開啟的電筒",
+    "dedication": [
+      "給每一位",
+      "願意蹲下來仔細看看的小朋友。"
+    ],
+    "backHeadline": [
+      "小熊沒有動，",
+      "影子怎麼變了？"
+    ],
+    "backInvitation": [
+      "換一個時候，",
+      "再來看看吧。"
+    ]
+  },
+  "learning": {
+    "heading": "跟着影子認字",
+    "subtitle": "六個日部字，記下明暗與時間。",
+    "variantHeading": "同一個部首，不同位置",
+    "radicalForms": [
+      "早：日在上方",
+      "晴：日在左方"
+    ],
+    "explanation": [
+      "早、晴、時、晚、暗、明都屬日部。",
+      "日可以在字的上方，也可以在左邊；意思與太陽有關，卻不一定屬日部。"
+    ],
+    "example": "晴天的早上，影子會隨時間改變。",
+    "note": "有光照到不透明的小熊，背後才會有影子。",
+    "question": "找一找：明、陽、月，哪個屬日部？",
+    "answer": "明屬日部；陽屬阜部，月屬月部。",
+    "choiceRadicals": {
+      "明": 72,
+      "陽": 170,
+      "月": 74
+    },
+    "cards": [
+      [
+        "早",
+        "早上"
+      ],
+      [
+        "晴",
+        "晴天"
+      ],
+      [
+        "時",
+        "時間"
+      ],
+      [
+        "晚",
+        "晚上"
+      ],
+      [
+        "暗",
+        "暗一點"
+      ],
+      [
+        "明",
+        "明天"
+      ]
+    ],
+    "cardFill": "#F5EECF",
+    "cardStroke": "#DBDED8"
+  },
+  "spreads": [
+    {
+      "id": "s01",
+      "pages": [
+        2,
+        3
+      ],
+      "lines": [
+        "晴朗的早上，平平把小熊放在院子裏。",
+        "小熊旁邊，多了一個黑黑的伙伴。"
+      ],
+      "beat": "從實際日照引出影子。",
+      "art": "SUNNY MORNING. Boy lower LEFT crouches and looks toward ONE small honey-brown wooden bear standing on paving in lower RIGHT quarter. Low morning light from LEFT makes a long clear grey BEAR-SHAPED shadow extending to the RIGHT of bear, safely within right half. No chalk circle yet. Father not present. Sparse private courtyard paving, pure white top.",
+      "layout": "top-split",
+      "textSplit": 1,
+      "artPlacement": [
+        0,
+        100,
+        960,
+        460
+      ]
+    },
+    {
+      "id": "s02",
+      "pages": [
+        4,
+        5
+      ],
+      "lines": [
+        "平平蹲下來，摸摸地上的影子。",
+        "摸不到，也拿不起。",
+        "「你會一直在這裏嗎？」"
+      ],
+      "beat": "孩子把影子當伙伴，圖像保留物理事實。",
+      "art": "Morning light LEFT. Boy lower LEFT leans a hand toward bear shadow on lower RIGHT, his fingertip touches paving rather than picking up a physical object. ONE wooden bear on paving, attached grey bear-shaped shadow extends right. No second bear, living shadow character, chalk circle or father.",
+      "layout": "top-split",
+      "textSplit": 1,
+      "artPlacement": [
+        0,
+        100,
+        960,
+        460
+      ]
+    },
+    {
+      "id": "s03",
+      "pages": [
+        6,
+        7
+      ],
+      "lines": [
+        "他用粉筆畫了一個大圈，把小熊和影子圍起來。",
+        "「晚上，爸爸也來看！」"
+      ],
+      "beat": "以圈記下早上位置，為比較留下不動的線索。",
+      "art": "Morning, light from LEFT. Boy lower LEFT draws with ONE short white chalk stick. In lower RIGHT quarter ONE honey-brown wooden bear and its right-extending long grey shadow are both INSIDE ONE thin white chalk oval on grey paving. Oval fully within right half, not crossing center binding. The bear stands toward LEFT side of oval so the morning shadow fits to its right. Father absent.",
+      "layout": "top-split",
+      "textSplit": 1,
+      "artPlacement": [
+        0,
+        100,
+        960,
+        460
+      ]
+    },
+    {
+      "id": "s04",
+      "pages": [
+        8,
+        9
+      ],
+      "lines": [
+        "快到中午時，平平又跑回來。",
+        "影子變短了，悄悄縮到小熊腳邊。"
+      ],
+      "beat": "時間改變，對照同一玩具和固定記號。",
+      "art": "NEAR NOON: overhead sunlight, ONE wooden bear in EXACT same left-of-oval position on paving in lower RIGHT; white chalk oval unchanged and empty on its right side. The bear shadow is SHORT and tucked near its feet, not long or detached. Boy lower LEFT returns with surprised tilted eyebrows. Only one boy and one toy.",
+      "layout": "top-split",
+      "textSplit": 1,
+      "artPlacement": [
+        0,
+        100,
+        960,
+        460
+      ]
+    },
+    {
+      "id": "s05",
+      "pages": [
+        10,
+        11
+      ],
+      "lines": [
+        "他搬來小凳，坐着等。",
+        "「我倒要看看，你甚麼時候會動。」"
+      ],
+      "beat": "把急於留住影子改成耐心觀察。",
+      "art": "Boy lower LEFT sits on a low plain stool leaning forward, long slim legs and violet rectangular glasses recognizable. ONE wooden bear lower RIGHT at SAME left-side position inside unchanged chalk oval, small noon shadow close to feet. No extra toys, father or markings. Small warm light wash low on paving only.",
+      "layout": "top-split",
+      "textSplit": 1,
+      "artPlacement": [
+        0,
+        100,
+        960,
+        460
+      ]
+    },
+    {
+      "id": "s06",
+      "pages": [
+        12,
+        13
+      ],
+      "lines": [
+        "雲飄過來，遮住太陽。",
+        "影子變淡了，院子也暗了一點。"
+      ],
+      "beat": "雲遮光時影子變淡，避免誤畫真的搬走。",
+      "art": "A CLOUDY moment represented only by soft cool-grey light low over courtyard; keep entire upper 45 percent PURE WHITE. Boy lower LEFT on stool puzzled. ONE wooden bear lower RIGHT unchanged in same chalk oval. Its ground shadow is now extremely FAINT and SOFT, almost invisible, not a crisp black shape. No rain, no storm, no sun glyph, no cloud drawn over text area.",
+      "layout": "top-split",
+      "textSplit": 1,
+      "artPlacement": [
+        0,
+        100,
+        960,
+        460
+      ]
+    },
+    {
+      "id": "s07",
+      "pages": [
+        14,
+        15
+      ],
+      "lines": [
+        "雲飄走了，陽光又照到小熊身上。",
+        "平平發現，影子已經換了方向。"
+      ],
+      "beat": "光照方向與影子位置相連。",
+      "art": "AFTERNOON light now comes from RIGHT. ONE wooden bear still at same position in lower RIGHT chalk oval, but its clearly attached grey shadow extends LEFT from the feet, rather than morning right. Bear and shadow all stay in lower right half; oval remains fixed around original morning area. Boy lower LEFT stands from stool, pointing in discovery. No extra toy or floating shadow.",
+      "layout": "top-split",
+      "textSplit": 1,
+      "artPlacement": [
+        0,
+        100,
+        960,
+        460
+      ]
+    },
+    {
+      "id": "s08",
+      "pages": [
+        16,
+        17
+      ],
+      "lines": [
+        "傍晚，影子拖得長長的。",
+        "它的一隻耳朵，伸到了圈外。"
+      ],
+      "beat": "長影越過圈，讓讀者從圖中找到證據。",
+      "art": "LATE AFTERNOON: warm low light from RIGHT. ONE wooden bear lower RIGHT same position. Its VERY LONG coherent bear-shaped shadow stretches LEFT, and its rounded ear silhouette at far end extends a little beyond the LEFT edge of the unchanged chalk oval. Keep complete shadow and circle in right half, no center-cut vital detail. Boy lower LEFT leans in delighted. The physical bear is still upright and unmoved.",
+      "layout": "top-split",
+      "textSplit": 1,
+      "artPlacement": [
+        0,
+        100,
+        960,
+        460
+      ]
+    },
+    {
+      "id": "s09",
+      "pages": [
+        18,
+        19
+      ],
+      "lines": [
+        "天慢慢黑了，院子裏沒有開燈。",
+        "平平看不清小熊的影子了。"
+      ],
+      "beat": "夜色轉暗，準備新的光源。",
+      "art": "TWILIGHT only in lower 55 percent as a restrained desaturated graphite-blue vignette fading to white edges. Boy lower LEFT and ONE wooden bear lower RIGHT at unchanged chalk oval remain faintly visible. NO discernible cast bear shadow, no bright moon, stars, streetlights or lamps. Do not fill top with night sky; leave upper 45 percent pure white. Quiet, not frightening.",
+      "layout": "top-split",
+      "textSplit": 1,
+      "artPlacement": [
+        0,
+        100,
+        960,
+        460
+      ]
+    },
+    {
+      "id": "s10",
+      "pages": [
+        20,
+        21
+      ],
+      "lines": [
+        "爸爸回來了，帶着電筒和白紙板。",
+        "光一亮，小熊的影子又出現了！"
+      ],
+      "beat": "爸爸帶來可控制光源，延續孩子探索。",
+      "art": "NIGHT in a soft lower-half blue-grey vignette, pure white upper half. Father kneels lower LEFT beside boy. Father holds ONE small pale-yellow flashlight aimed toward ONE wooden bear lower RIGHT. Behind the bear is ONE upright white cardboard screen on a discreet stand, wholly in right half. Light source LEFT, toy in MIDDLE RIGHT, cardboard further RIGHT: a coherent bear-shaped grey shadow falls ON SCREEN behind toy, not between light and toy. Original white chalk oval faint on ground. All people full and coherent, no giant black bear creature.",
+      "layout": "top-split",
+      "textSplit": 1,
+      "artPlacement": [
+        0,
+        100,
+        960,
+        460
+      ]
+    },
+    {
+      "id": "s11",
+      "pages": [
+        22,
+        23
+      ],
+      "lines": [
+        "平平接過電筒，照一照小熊。",
+        "他把電筒移一移，影子也跟着改變。",
+        "「原來，要有光，才能看見你！」"
+      ],
+      "beat": "孩子自己操作光，觀察影子變化。",
+      "art": "Same nighttime setup: boy lower LEFT now holds ONE yellow flashlight in hand aimed to ONE wooden bear lower RIGHT, father kneels beside and behind him with empty hands. One upright white cardboard screen behind toy on right receives ONE visible enlarged grey bear-shaped silhouette. Beam directional from left source through toy onto screen; no detached living shadow or duplicate bear. Small pencil motion ticks by flashlight hand, no writing. Upper 45 percent PURE WHITE.",
+      "layout": "top-split",
+      "textSplit": 1,
+      "artPlacement": [
+        0,
+        100,
+        960,
+        460
+      ]
+    },
+    {
+      "id": "s12",
+      "pages": [
+        24,
+        25
+      ],
+      "lines": [
+        "平平收好電筒，向小熊揮揮手。",
+        "「明天早上，我還在這裏等你！」"
+      ],
+      "beat": "以明天再觀察的邀約結尾，不以成人訓話收尾。",
+      "art": "Quiet night, upper 45 percent pure white, lower-half soft blue-grey vignette. Boy lower LEFT waves to ONE wooden bear still on paving in lower RIGHT at same chalk oval. Father stands well to LEFT behind boy, holds yellow flashlight SWITCHED OFF pointing down and white cardboard at his side. No cast bear shadow now. Both father and boy complete and recognizable, clear separation of silhouettes, warm satisfied expressions.",
+      "layout": "top-split",
+      "textSplit": 1,
+      "artPlacement": [
+        0,
+        100,
+        960,
+        460
+      ]
+    }
+  ],
+  "characterCrops": {
+    "pingping": [
+      0.025,
+      0.025,
+      0.24,
+      0.97
+    ],
+    "father": [
+      0.455,
+      0.005,
+      0.721,
+      0.97
+    ]
+  }
+}

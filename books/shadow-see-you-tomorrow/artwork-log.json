@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "generator": "OpenAI image_gen",
+  "date": "2026-11-02",
+  "characterBible": {
+    "file": "assets/characters.png",
+    "source": "/workspace/generated_images/exec-4d3b39a0-df64-4b14-b5c5-e742db57258e.png",
+    "prompt": "Create an ORIGINAL four-column full-body CHARACTER MODEL SHEET for a hand-drawn children's picture book, ages 7–9. PURE WHITE paper background; no scenery, letters, labels, logos or props. Four equal-width separated columns, full bodies and shoes in frame, common baseline. LEFT two columns: SAME BOY age8 front and three-quarter. RIGHT two columns: SAME FATHER age38 front and three-quarter. Boy is conspicuously TALL and LANKY, about 75 percent of father's height. His face is LONG and narrow with angular chin, LARGE protruding ears, a long gently pointed nose, thin arched eyebrows and SMALL horizontal almond-shaped eyes behind VIOLET RECTANGULAR glasses. Short BLACK bristly FLAT-TOP crew cut, NO fringe, bowl cut, soft curls or bangs. Light warm beige skin, no pink round doll cheeks. ULTRAMARINE blue short-sleeved polo shirt with narrow pale-yellow collar and sleeve trim, stone-grey knee-length shorts, tall white socks, pale-yellow sneakers. Father is WIDE-SHOULDERED and stocky, broader than the lanky boy; broad trapezoid face, heavy eyebrows, a large rounded nose, short DARK wavy hair, short square beard, no glasses. Dusty coral short-sleeved T-shirt, warm grey trousers, navy canvas shoes. Child five heads tall, adult seven; tiny expressive eyes and changing mouth shapes, natural hands. Loose lively GRAPHITE pencil with rhythmic angular contours and sparse hatching, FLAT dry colored-pencil accents, abundant white paper, contemporary warm literary illustration. NOT chibi, huge sparkling eyes, rounded baby face, anime, 3D, glossy rendering or photorealism. Character distinction must come from facial structure, ear and nose shapes, age and body silhouette as well as color. Empty relaxed hands.",
+    "references": [],
+    "transparentBackground": false,
+    "sha256": "13df211ab85c2ad73cc7ad417c157384b0122ba23b408a6505a359e3d623423b"
+  },
+  "illustrations": [
+    {
+      "id": "props",
+      "file": "assets/props.png",
+      "prompt": "Original graphite and restrained flat dry colored-pencil PROP MODEL SHEET on pure WHITE background, no people, lettering or labels. THREE columns: LEFT two views of SAME simple honey-brown carved WOODEN BEAR toy, standing upright, round ears, short round muzzle, two dot eyes, paws at sides, no clothes, bow or hat, about15cm tall, opaque wood with faint grain; MIDDLE one small pale-YELLOW flashlight with dark grey lens rim and one tiny round switch, switched off; RIGHT one white rectangular CARDBOARD screen upright on a discreet tiny stand, no drawing on it, plus ONE small short white chalk stick laid below. No shadow creature, live bear, text, symbols or extra toys.",
+      "references": [],
+      "transparentBackground": false,
+      "source": "/workspace/generated_images/exec-9bd53583-6e5a-489e-abea-39991f334f9f.png",
+      "sha256": "91265fadc02897408b49122cb548ef36daf98d40200342d18fd26a82af3b8ec1"
+    },
+    {
+      "id": "cover",
+      "file": "assets/illustrations/cover.png",
+      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. PINGPING: lanky long-faced boy8, protruding ears, short black FLAT-TOP CREW CUT with no fringe, VIOLET RECTANGULAR glasses, ultramarine polo with pale-yellow collar/sleeve trim, grey shorts, white socks, yellow sneakers. FATHER: stocky broad shoulder, wide trapezoid face, rounded nose, black wavy hair and square short beard, coral T-shirt, warm grey trousers, navy shoes. ONE small honey-brown carved wooden bear with round ears, dot eyes, no clothes; one white chalk oval only AFTER requested. Yellow flashlight and white rectangular cardboard screen appear ONLY at night when requested. No lettering, typography, logos, speech balloons or watermark. Transparent-background compact FULL-BODY cover cutout: boy LEFT holds one small wooden bear gently at chest height and looks curiously at it; father RIGHT kneels smiling, holds ONE switched-OFF small yellow flashlight pointing downward. Full figures and all shoes visible, no shadow, scene, cardboard or chalk circle.",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": true,
+      "source": "/workspace/generated_images/exec-21b37009-f1c1-446a-9124-b624a7c72fe4.png",
+      "sha256": "fcb313f804734b71878f968cff1cab797cfdcdddc3cc7c12f11b92c8cef3b19e"
+    },
+    {
+      "id": "s01",
+      "file": "assets/illustrations/s01.png",
+      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. PINGPING: lanky long-faced boy8, protruding ears, short black FLAT-TOP CREW CUT with no fringe, VIOLET RECTANGULAR glasses, ultramarine polo with pale-yellow collar/sleeve trim, grey shorts, white socks, yellow sneakers. FATHER: stocky broad shoulder, wide trapezoid face, rounded nose, black wavy hair and square short beard, coral T-shirt, warm grey trousers, navy shoes. ONE small honey-brown carved wooden bear with round ears, dot eyes, no clothes; one white chalk oval only AFTER requested. Yellow flashlight and white rectangular cardboard screen appear ONLY at night when requested. No letters, numbers, Chinese, typography, musical notes, speech balloons, diagrams or watermark. Draw COMPLETE connected bodies and hands, no floating or amputated legs. WIDE LANDSCAPE composition, entire TOP 45 percent completely PURE WHITE, all art in lower55 percent. Keep central binding strip x45–55 percent free of faces, hands, toys and important marks; stage complete groups in left or right quarter. Sparse ground strokes, white feathered edges. SUNNY MORNING. Boy lower LEFT crouches and looks toward ONE small honey-brown wooden bear standing on paving in lower RIGHT quarter. Low morning light from LEFT makes a long clear grey BEAR-SHAPED shadow extending to the RIGHT of bear, safely within right half. No chalk circle yet. Father not present. Sparse private courtyard paving, pure white top.",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "source": "/workspace/generated_images/exec-57879c8f-ac7a-4d91-83be-79a08468442f.png",
+      "sha256": "b5afd931418a30a35d3277f165f9069fc2f41a940ea712f87d6e99f847d956c0"
+    }
+  ]
+}
