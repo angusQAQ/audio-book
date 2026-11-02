@@ -87,7 +87,10 @@
     "bodyFont": "Iansui",
     "emphasisFont": "JyunsaiKaai Bold",
     "emphasisScale": 1.5,
-    "properNameMarks": true
+    "properNameMarks": true,
+    "normalCharacters": [
+      "水"
+    ]
   },
   "deliverables": {
     "formats": [
@@ -109,7 +112,8 @@
       "氵部首主題",
       "深度參考指定兩本部首繪本",
       "本次已確認沿用7–9歲、完整插畫PDF與可編輯排版",
-      "所有正式檔案GitHub存檔、每階段git commit並同步永久網站"
+      "所有正式檔案GitHub存檔、每階段git commit並同步永久網站",
+      "只放大氵部首字目；水字維持一般字級，不放大"
     ],
     "editorialChoices": [
       "全新角色小安與圓圓；用雨天水盆遊戲連接情節",

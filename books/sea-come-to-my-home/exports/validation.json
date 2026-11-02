@@ -21,7 +21,6 @@
     "pdfAndPptxRunsVerified": true,
     "handwrittenGlyphs": {
       "海": 13,
-      "水": 19,
       "洗": 3,
       "浮": 4,
       "泡": 4,
@@ -30,6 +29,15 @@
       "流": 3,
       "氵": 2
     }
+  },
+  "normalCharacterTypography": {
+    "characters": [
+      "水"
+    ],
+    "bodyScale": 1,
+    "font": "Iansui",
+    "pdfAndPptxRunsVerified": true,
+    "svgRunsVerified": true
   },
   "storyHanCharacters": 310,
   "targets": {

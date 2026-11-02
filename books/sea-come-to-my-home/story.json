@@ -38,7 +38,10 @@
       "baselineOffset": 4.2,
       "strokeWidth": 0.7,
       "inset": 0.4
-    }
+    },
+    "normalCharacters": [
+      "水"
+    ]
   },
   "format": {
     "width": 960,

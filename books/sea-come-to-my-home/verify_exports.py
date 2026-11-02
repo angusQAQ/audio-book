@@ -33,6 +33,11 @@ def verify(office_pdf, svg_renders):
                            for ch, family, size in zip(item['text'], item['fonts'], item['sizes']) if family == book.HAND_FAMILY)
         actual = Counter((char['c'], round(span['size'], 1)) for span in spans if book.HAND_FAMILY in span['font'] for char in span['chars'])
         assert actual == expected, (layout['id'], 'Office target font/size changed')
+        expected_normal = Counter((ch, round(size, 1)) for item in text_items
+                                  for ch, size in zip(item['text'], item['sizes']) if ch in book.NORMAL_CHARACTERS)
+        actual_normal = Counter((char['c'], round(span['size'], 1)) for span in spans
+                                if span['font'] == 'Iansui-Regular' for char in span['chars'] if char['c'] in book.NORMAL_CHARACTERS)
+        assert actual_normal == expected_normal, (layout['id'], 'Office ordinary character font/size changed')
         rules = [drawing for drawing in page.get_drawings() if len(drawing['items']) == 1 and drawing['items'][0][0] == 'l']
         expected_rules = [(item, mark) for item in text_items for mark in item['nameMarks']]
         assert len(rules) == len(expected_rules), (layout['id'], 'Office proper-name marks missing')
@@ -80,6 +85,7 @@ def verify(office_pdf, svg_renders):
         'status':'verified','date':'2026-11-02','officePages':len(document),
         'officeTextMatchesEveryPage':True,'actualOfficeFonts':sorted(fonts),
         'officeTargetFontAndSizeVerified':True,'properNameRulesVerified':marks,
+        'ordinaryCharactersNotEnlarged':sorted(book.NORMAL_CHARACTERS),
         'storyTextImageCollisionChecks':collision_checks,'radicalEntriesVerified':len(facts),
         'svgActualRenders':['s10','lesson'],
         'officeRenderedPdfSha256':hashlib.sha256(office_pdf.read_bytes()).hexdigest(),

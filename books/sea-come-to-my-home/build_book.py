@@ -36,7 +36,9 @@ HAND_FONT = ROOT / 'assets/fonts/JyunsaiKaai-Bold.ttf'
 HAND_FAMILY = 'JyunsaiKaai'
 FONTS = {'Iansui': FONT, HAND_FAMILY: HAND_FONT}
 EMPHASIS_SCALE = BOOK['typography']['targetScale']
-TARGETS = set(BOOK['coreCharacters'] + BOOK['extensionCharacters'] + [BOOK['radical']['base'], BOOK['radical']['variant']])
+TARGETS = set(BOOK['coreCharacters'] + BOOK['extensionCharacters'] + [BOOK['radical']['variant']])
+NORMAL_CHARACTERS = set(BOOK['typography']['normalCharacters'])
+assert TARGETS.isdisjoint(NORMAL_CHARACTERS), 'Ordinary characters must not receive target emphasis'
 PROPER_NAMES = BOOK['typography']['properNames']
 NAME_MARK = BOOK['typography']['properNameMark']
 NAME_PATTERN = re.compile('|'.join(re.escape(name) for name in sorted(PROPER_NAMES, key=len, reverse=True)))
@@ -157,8 +159,8 @@ def pages(proof):
         glyph=text_item(ch,0,y+8,44,emphasis=True);glyph['x']=x+(118-glyph['width'])/2;lesson.append(glyph)
         example=text_item(word,0,y+115,18,emphasis=True);example['x']=x+(118-example['width'])/2;lesson.append(example)
     lesson += [text_item('水，變成了三點水',532,38,24,emphasis=True),
-               text_item('水',560,126,48,emphasis=True),text_item('氵',782,126,48,emphasis=True),
-               text_item('常見寫法',665,158,17,MUTED)]
+               text_item('「水」的常見寫法',550,158,19,MUTED),
+               text_item('氵',782,126,48,emphasis=True)]
     add_block(lesson,['「氵」叫三點水，','是「水」常見的偏旁寫法。','這些字都屬水部。'],532,266,377,19,30,emphasis=True)
     lesson.append(text_item('水流過小島。',532,418,22,emphasis=True))
     lesson.append(text_item('「流」也是水部字。',532,474,17,emphasis=True))
@@ -440,6 +442,21 @@ def validate(page_list, output, proof):
             assert shape.name == '專名號：'+mark['name'] and rule.get('data-proper-name') == mark['name']
             proper_name_marks[mark['name']] += 1
         handwritten.update(ch for ch, family, fs in expected_runs if family == HAND_FAMILY)
+        for item in text_items:
+            for ch, family, fs in zip(item['text'], item['fonts'], item['sizes']):
+                if ch in NORMAL_CHARACTERS:
+                    assert family == 'Iansui' and abs(fs-item['size']) < .001, (layout['id'], ch, 'Ordinary character enlarged')
+        expected_normal = Counter((ch, round(fs, 2)) for ch, family, fs in expected_runs if ch in NORMAL_CHARACTERS)
+        pdf_normal = Counter((char['c'], round(span['size'], 2))
+                             for block in pdf_page.get_text('rawdict')['blocks'] if 'lines' in block
+                             for line in block['lines'] for span in line['spans']
+                             for char in span['chars'] if char['c'] in NORMAL_CHARACTERS and 'Iansui' in span['font'])
+        assert pdf_normal == expected_normal, (layout['id'], 'PDF ordinary character font/size changed')
+        svg_root = ET.parse((output/'editable' if proof else ROOT/'editable')/(layout['id']+'.svg')).getroot()
+        svg_normal = Counter((span.text, round(float(span.get('font-size')), 2))
+                             for span in svg_root.findall('.//{http://www.w3.org/2000/svg}tspan')
+                             if span.text in NORMAL_CHARACTERS and span.get('font-family') == 'Iansui')
+        assert svg_normal == expected_normal, (layout['id'], 'SVG ordinary character font/size changed')
         if layout['id'].startswith('s'):
             for item in text_items:
                 for ch, family, fs in zip(item['text'], item['fonts'], item['sizes']):
@@ -454,6 +471,8 @@ def validate(page_list, output, proof):
                                   'pdfPptxSvgGeometryVerified': True, 'editableTextAndRuleGrouped': True},
               'targetTypography': {'font': HAND_FAMILY, 'bodyScale': EMPHASIS_SCALE,
                                    'pdfAndPptxRunsVerified': True, 'handwrittenGlyphs': dict(handwritten)},
+              'normalCharacterTypography': {'characters':sorted(NORMAL_CHARACTERS),'bodyScale':1,
+                                            'font':'Iansui','pdfAndPptxRunsVerified':True,'svgRunsVerified':True},
               'storyHanCharacters':len(re.findall(r'[\u3400-\u9fff]', ''.join(''.join(s['lines']) for s in BOOK['spreads']))),
               'targets':{ch:full_text.count(ch) for ch in BOOK['coreCharacters']+BOOK['extensionCharacters']}}
     (output / 'validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')

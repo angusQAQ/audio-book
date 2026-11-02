@@ -9,17 +9,20 @@
   ],
   "officeTargetFontAndSizeVerified": true,
   "properNameRulesVerified": 12,
+  "ordinaryCharactersNotEnlarged": [
+    "水"
+  ],
   "storyTextImageCollisionChecks": 40,
   "radicalEntriesVerified": 11,
   "svgActualRenders": [
     "s10",
     "lesson"
   ],
-  "officeRenderedPdfSha256": "431d978c674b145d3cadea7b899eed8be00fcfc7be360a4f63603d1fcb7f971d",
+  "officeRenderedPdfSha256": "14540e37f5dc89b96543a96573a1ca1215c9ed4bdd34438f3350a7dded053d02",
   "files": {
-    "大海，來我家！_可編輯排版.pptx": "6e89ff8617d696975a907aeb2f6a47e40cfeb7ce119c5fa00b4512828ffebb53",
-    "大海，來我家！_繪本.pdf": "934b7a52f10560f2f8e040c95cd82c5230587b08aa8ad5b757ba905f12685406",
-    "大海，來我家！_跨頁閱讀版.pdf": "2a8c9be0128d0cbc7f4344eac6538543339a9955ba8052668093dbc13aa49af8"
+    "大海，來我家！_可編輯排版.pptx": "09dcc9510cb39a6a1ce9ea55804c6fe7e722654282528155205c82a8863124f5",
+    "大海，來我家！_繪本.pdf": "1a058a0206c367eb4880079d17d72f8e8aaf7437d5ac5fdacf9cbe05a063f61a",
+    "大海，來我家！_跨頁閱讀版.pdf": "39d28325f48a8dfd22f942f46267cba7e314ea273e76d88a30b48e6017357137"
   },
   "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
 }

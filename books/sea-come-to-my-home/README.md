@@ -9,7 +9,7 @@
 - [可編輯PowerPoint｜16張](https://angusqaq.github.io/audio-book/books/sea-come-to-my-home/exports/大海，來我家！_可編輯排版.pptx)
 - [全書縮圖](exports/全書縮圖.png)、[SVG來源](editable)、[字型及授權](assets/fonts)
 
-正文芫荽Iansui；字目芫茜雅楷JyunsaiKaai Bold、150%；全部小安／圓圓人名下附連續專名號。PDF嵌入實際字型；編輯PPTX與SVG前安裝assets/fonts中的兩份字型。PPTX保留原生文字框、可編輯字級／字型、姓名線與獨立插畫，SVG保留文字、線條和相對路徑圖片。PNG可以獨立替換，並非可逐筆編輯向量；SVG搬移時一併保留assets。
+正文芫荽Iansui；氵字目芫茜雅楷JyunsaiKaai Bold、150%；「水」維持一般字級，不放大。全部小安／圓圓人名下附連續專名號。PDF嵌入實際字型；編輯PPTX與SVG前安裝assets/fonts中的兩份字型。PPTX保留原生文字框、可編輯字級／字型、姓名線與獨立插畫，SVG保留文字、線條和相對路徑圖片。PNG可以獨立替換，並非可逐筆編輯向量；SVG搬移時一併保留assets。
 
 ## 來源與重建
 
