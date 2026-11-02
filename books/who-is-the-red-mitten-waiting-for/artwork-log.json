@@ -44,8 +44,8 @@
       "sha256": "071ee51034933a7a59e3985676465041929985d3b99f1cd858a628357ecaf909"
     },
     {
-      "id": "s02",
-      "file": "assets/illustrations/s02.png",
+      "id": "s02-initial",
+      "file": "assets/revisions/s02-initial.png",
       "source": "/workspace/generated_images/exec-55a4fbaa-acbd-4cdc-b738-b30724997333.png",
       "prompt": "Original delicate graphite pencil and restrained dry colored-pencil storybook art, abundant PURE WHITE paper, no 3D, no photorealism, no glossy rendering. Characters MUST match the attached original model: LANGLANG boy age8, neat round black BOWL haircut, burnt-orange hooded duffle coat with TWO dark toggles, navy full trousers, TEAL ankle boots. ROUROU girl age8 same height, one LOW black BRAID over shoulder, plum-purple knee-length coat, pale SKY BLUE scarf, cream trousers, slate shoes. No extra accessories. Cool-day school playground suggested with only sparse grey lines, no snow. Found item: ONE RIGHT-HAND red knitted MITTEN, one thumb, ribbed cuff, exactly ONE small YELLOW FIVE-POINT STAR on back; never a fingered glove. Other matching LEFT mitten appears only late. Original faces, pencil gestures, readable hands. No letters, symbols, typography, speech bubbles, signage or watermark. Keep faces away from central binding.\nNOISY PLAYGROUND. Wide double page, upper 45% completely PURE WHITE. Lower LEFT boy Langlang stands holding EXACTLY ONE red star mitten above his head, mouth gently open as if calling. In distant lower RIGHT show ONLY two pairs of anonymous children's trouser legs/feet and ONE small muted blue-grey bouncing ball, tiny pencil motion strokes, no faces or new named character. No Rourou in this scene. No writing, bubbles, musical symbols or sound-effect glyphs. Bare hands, orange coat correct; maintain single star mitten like cover.",
       "references": [
@@ -54,7 +54,8 @@
         "assets/illustrations/cover.png"
       ],
       "transparentBackground": false,
-      "sha256": "714b7fad3842af936b91f71f88d94b47a21d4771ceca072799d8c607d39e792a"
+      "sha256": "714b7fad3842af936b91f71f88d94b47a21d4771ceca072799d8c607d39e792a",
+      "supersededBy": "s02"
     },
     {
       "id": "s03",
@@ -181,6 +182,18 @@
       ],
       "transparentBackground": false,
       "sha256": "d3d19b30122a2a3c3ef7a03d44dea09033f87464a092f71b54be1394913f429c"
+    },
+    {
+      "id": "s02",
+      "file": "assets/illustrations/s02.png",
+      "source": "/workspace/generated_images/exec-0264ed85-7594-44ac-816b-1be23505b9ed.png",
+      "prompt": "Edit the attached ORIGINAL children's picture-book illustration to repair a visibly broken composition. Preserve the LEFT boy Langlang very closely: black round bowl-cut hair, expressive East Asian age-8 face, burnt-orange hooded duffle coat with two dark toggles, navy trousers, teal ankle boots, his raised hand holding exactly ONE red knitted mitten with ONE yellow star and thumb pointing viewer right. Keep his full body, pose, proportions, colors, shoes and position. The RIGHT side currently shows two pairs of lower legs sharply cut off at the knees and floating without bodies: REPLACE those incomplete figures with TWO COMPLETE, anatomically coherent, small background children playing with the same grey-blue ball. Show every child's head, neck, torso, arms, two full legs and two shoes, all within the image. Keep them entirely in the right third, at smaller background scale, with heads below the upper 45 percent of the canvas, to leave generous PURE WHITE upper space for separately typeset text. One child wears a muted beige jacket and cream trousers with dark shoes; the other wears a muted sage jacket and olive trousers with grey shoes. They face the ball, in natural light kicking/running poses, engaged with each other rather than the foreground boy. No floating limbs, severed figures, extra limbs, cropped heads or detached body pieces. Keep the wide landscape composition, sparse pale grey playground ground, white paper background, fine graphite outlines, black scribbled pencil hair, restrained dry colored-pencil texture, warm original childlike expressions. Keep the center binding region free of faces and important details. No speech bubbles, text, letters, symbols, logos, watermark, snow, extra red mittens or extra people. The output must look like one cohesive finished hand-drawn illustration, with no rectangular patch edges or blank bands cutting through figures. Do not alter the established delicate pencil style.",
+      "references": [
+        "assets/revisions/s02-initial.png"
+      ],
+      "transparentBackground": false,
+      "revisionReason": "修正內頁5的踢球人物只剩下截斷小腿；補成完整背景人物，保留朗朗舉手套的構圖及正文。",
+      "sha256": "47ed41b2377c2c21f59f7361c94a3e28c1a844730ba05b03aad5ec7c7a27723f"
     }
   ]
 }

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "date": "2026-11-02",
+      "baseCommit": "7d912ec1407223e71d615faf141fe2b57962a7eb",
+      "internalPages": [
+        4,
+        5
+      ],
+      "spread": "s02",
+      "issue": "內頁5的踢球人物只剩下懸空、截斷的小腿。",
+      "change": "以影像編輯補成兩名完整的遠景踢球人物；保留朗朗舉紅手套、灰藍球、白紙留白與鉛筆淡彩風格。正文不變。",
+      "originalArtwork": "assets/revisions/s02-initial.png",
+      "currentArtwork": "assets/illustrations/s02.png",
+      "provenance": "artwork-log.json",
+      "outputs": [
+        "跨頁PDF",
+        "單頁PDF",
+        "可編輯PowerPoint",
+        "s02.svg",
+        "全書縮圖"
+      ],
+      "verificationReports": [
+        "exports/validation.json",
+        "exports/render-validation.json"
+      ],
+      "verification": {
+        "跨頁閱讀版": {
+          "allPageTextUnchanged": true,
+          "changedPageIndicesZeroBased": [
+            3
+          ],
+          "allOtherPageRendersUnchanged": true
+        },
+        "繪本": {
+          "allPageTextUnchanged": true,
+          "changedPageIndicesZeroBased": [
+            4,
+            5
+          ],
+          "allOtherPageRendersUnchanged": true
+        },
+        "otherBooksReaderAndMp3Unchanged": true,
+        "actualOfficePages": 14,
+        "actualSvgRenders": [
+          "s02",
+          "s10",
+          "lesson"
+        ],
+        "singlePage5AndOfficeSvgVisuallyReviewed": true
+      }
+    }
+  ]
+}

@@ -15,14 +15,15 @@
   "storyTextImageCollisionChecks": 13,
   "radicalEntriesVerified": 10,
   "svgActualRenders": [
+    "s02",
     "s10",
     "lesson"
   ],
-  "officeRenderedPdfSha256": "5fe90ed2e44b94ca4f6992b729b2cc8e13d18169f11ca0332b09f052a15c817e",
+  "officeRenderedPdfSha256": "0327c01f13df50f57f6c839993fa2d78825c16a199a80db23ebab739ffb59dca",
   "files": {
-    "紅手套在等誰？_跨頁閱讀版.pdf": "0746a691fba1a56572db591b4da91382f19044b9d4400115762167f7544737b9",
-    "紅手套在等誰？_繪本.pdf": "460a8c877cf4693154ee979c8790ae02507d3aa6811b0375f9515ffd5c5b876c",
-    "紅手套在等誰？_可編輯排版.pptx": "30093159194cfd7b733130b41f21e00cd1d3b6418bc39dd1bc93ce91e8423731"
+    "紅手套在等誰？_跨頁閱讀版.pdf": "24ee027999d49c7fa4a056bdb52680feefab244368e1e157587ce962c7bd7ebb",
+    "紅手套在等誰？_繪本.pdf": "10ca1a565ad9ae9a28156ab16b2c2ae70fa788d4444dc31bdc00972d39c473eb",
+    "紅手套在等誰？_可編輯排版.pptx": "8cdf9112bdbeb8ec92a9e85d188b9da1c90c839bf42f7cab002be4a094100ce4"
   },
   "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
 }

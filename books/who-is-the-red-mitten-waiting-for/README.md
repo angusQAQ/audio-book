@@ -15,7 +15,7 @@ PDF嵌入實際字型。編輯PPTX／SVG前請安裝assets/fonts內的兩份字�
 
 ## 來源與重建
 
-[brief.json](brief.json)保存本次已確認需求；[story.json](story.json)保存完整故事、分鏡、圖文分工、人物及道具設定；[design-brief.md](design-brief.md)保存參考細讀與轉化。[artwork-log.json](artwork-log.json)記錄角色表、道具模型、封面、10幅故事圖及2份修改前版本，共15個原圖的精確提示、參考與SHA-256。部首資料、實際條目與授權見[sources](sources)。
+[brief.json](brief.json)保存本次已確認需求；[story.json](story.json)保存完整故事、分鏡、圖文分工、人物及道具設定；[design-brief.md](design-brief.md)保存參考細讀與轉化。[artwork-log.json](artwork-log.json)記錄角色表、道具模型、封面、10幅故事圖及3份修改前版本，共16個原圖的精確提示、參考與SHA-256。部首資料、實際條目與授權見[sources](sources)。
 
 在獨立Python虛擬環境安裝requirements-book.txt，從專案根目錄執行：
 
@@ -25,10 +25,13 @@ python3 books/who-is-the-red-mitten-waiting-for/build_book.py
 
 程式重建兩份PDF、PPTX、14份SVG、全書縮圖及validation.json，核對原稿、原圖、字型／字級、缺字、單頁裁切、完整句子與引語的左右頁邊界，以及全部人名專名號的幾何。
 
-使用LibreOffice將PPTX實際另存PDF，使用已安裝字型的Inkscape將editable/s10.svg及lesson.svg各渲染為同名PNG，再執行：
+使用LibreOffice將PPTX實際另存PDF，使用已安裝字型的Inkscape將editable/s02.svg、s10.svg及lesson.svg各渲染為同名PNG，再執行：
 
 ```bash
 python3 books/who-is-the-red-mitten-waiting-for/verify_exports.py --office-pdf 實際Office輸出.pdf --svg-renders SVG渲染目錄
 ```
 
 實際渲染逐頁核對文字、字型／字級、姓名線及圖文留白，保存[render-validation.json](exports/render-validation.json)；原生檢查見[validation.json](exports/validation.json)。已查看原PDF與Office全書縮圖及代表頁高解析。此為數位成品；Office實測工具為LibreOffice，未作印廠出血／CMYK製版。本次沒有製作或註冊點讀音訊。
+## 內頁5插畫修訂（2026-11-02）
+
+修正踢球人物只有截斷小腿的構圖，補成兩名完整的遠景小朋友；正文及其他故事插畫維持原稿。跨頁PDF、單頁PDF、PowerPoint、SVG與縮圖同步重建。修改前原圖保留於assets/revisions/s02-initial.png，精確編輯提示與新舊雜湊見artwork-log.json，修訂範圍見[revisions.json](revisions.json)。
