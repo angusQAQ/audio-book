@@ -1,0 +1,6 @@
+interface:
+  display_name: "現代漢語規範"
+  short_description: "按現代漢語的句法、搭配、語序與邏輯校訂中文"
+  default_prompt: "使用 $modern-chinese-norm，按我的要求與讀者程度校訂中文；先讀 SKILL.md 與 reference.md，保留指定用語及符合語境的修辭。"
+policy:
+  allow_implicit_invocation: true

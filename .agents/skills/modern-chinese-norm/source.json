@@ -1,0 +1,16 @@
+{
+  "source": "使用者於本次對話上傳的SKILL.md與reference.md",
+  "date": "2026-11-02",
+  "installationScope": "project-local",
+  "preservedVerbatim": true,
+  "files": {
+    "SKILL.md": {
+      "sha256": "4cab5b5e86d7c64eb6a4daf6f08956e681b60bd98304010b83f2068f30742658",
+      "bytes": 3983
+    },
+    "reference.md": {
+      "sha256": "16f656b8ecdf5aa10d8204ffe290848d410eca9cb1d0a758cb0c2a1d4810a4f1",
+      "bytes": 8634
+    }
+  }
+}

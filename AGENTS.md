@@ -2,6 +2,7 @@
 
 - 使用本專案現有 checkout；除非使用者明確要求，勿另建 Git worktree。
 - 製作或修訂兒童繪本使用 `.agents/skills/children-picture-book/SKILL.md`。新書的適讀年齡、主題、內容、角色與篇幅均依本次要求設定，不自動沿用前作；修訂既有書則保留該書已確認設定。
+- 中文文案校訂使用使用者提供的 `.agents/skills/modern-chinese-norm/SKILL.md` 及 `reference.md`，逐句檢查句法、搭配、語序、邏輯與指代，並結合上下文、讀者程度及已指定的香港用語判斷；技能已安裝於本專案，實際繪本／網站修改仍須完成成品、驗證與Git存檔。
 - 所有正式網站檔案與增刪修改都必須以 Git commit 保存並推送 GitHub；每個可審閱的更新階段都建立獨立 commit 存檔點，不把工作只留在本機。
 - 推送 `main` 會觸發 `Publish and verify permanent website`，驗證通過後自動同步永久網站；確認實際發布及線上檢查成功才宣稱完成。保留歷史，禁止強推。
 - 設計優化使用 `.agents/skills/apple-design/SKILL.md`，按其索引讀取相關 HIG 檔案後再引用。此專案為靜態網站，採用適用的設計與無障礙原則，不套用原生 App 專屬規則。
