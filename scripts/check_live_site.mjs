@@ -40,6 +40,14 @@ const shippedFiles = [
   'books/who-opened-windows-in-the-leaf/exports/誰在葉子上開窗？_跨頁閱讀版.pdf',
   'books/who-opened-windows-in-the-leaf/exports/誰在葉子上開窗？_可編輯排版.pptx',
   'books/who-opened-windows-in-the-leaf/exports/render-validation.json',
+  'books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_繪本.pdf',
+  'books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_跨頁閱讀版.pdf',
+  'books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_可編輯排版.pptx',
+  'books/the-rainy-day-bamboo-band/exports/render-validation.json',
+  'books/shadow-see-you-tomorrow/exports/影子，明天見！_繪本.pdf',
+  'books/shadow-see-you-tomorrow/exports/影子，明天見！_跨頁閱讀版.pdf',
+  'books/shadow-see-you-tomorrow/exports/影子，明天見！_可編輯排版.pptx',
+  'books/shadow-see-you-tomorrow/exports/render-validation.json',
 ].map(path => ({
   path, hash: createHash('sha256').update(readFileSync(new URL('../' + path, import.meta.url))).digest('hex'),
 }));

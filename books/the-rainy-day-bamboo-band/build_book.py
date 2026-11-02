@@ -217,7 +217,7 @@ def pdf_image(path):
         return ImageReader(path)
     # Standard high-quality PDF image encoding; the original PNG is kept intact.
     encoded = io.BytesIO()
-    image.convert('RGB').save(encoded, format='JPEG', quality=95, subsampling=0, optimize=True)
+    image.convert('RGB').save(encoded, format='JPEG', quality=90, subsampling=0, optimize=True)
     encoded.seek(0)
     return ImageReader(encoded)
 
@@ -258,6 +258,16 @@ def render_pdf(page_list, target):
     pdf.save()
 
 
+@lru_cache(maxsize=32)
+def presentation_image(path):
+    image = Image.open(path)
+    if 'A' in image.getbands():
+        return Path(path).read_bytes()
+    encoded = io.BytesIO()
+    image.convert('RGB').save(encoded, format='JPEG', quality=92, subsampling=0, optimize=True)
+    return encoded.getvalue()
+
+
 def render_pptx(page_list, target):
     deck = Presentation(); deck.slide_width = Pt(W); deck.slide_height = Pt(H)
     deck.core_properties.title = BOOK['title']; deck.core_properties.subject = BOOK['series']+'・可編輯排版'
@@ -278,7 +288,7 @@ def render_pptx(page_list, target):
                     effect.set('idx','0')
             elif item['kind'] == 'image':
                 g = image_geometry(item)
-                shape = slide.shapes.add_picture(item['path'], Pt(g['x']), Pt(g['y']), Pt(g['width']), Pt(g['height']))
+                shape = slide.shapes.add_picture(io.BytesIO(presentation_image(item['path'])), Pt(g['x']), Pt(g['y']), Pt(g['width']), Pt(g['height']))
                 l, t, r, b = g['crop']
                 shape.crop_left = l; shape.crop_top = t; shape.crop_right = 1-r; shape.crop_bottom = 1-b
                 shape._element.xpath('.//p:cNvPr')[0].set('descr', item['alt'])
@@ -365,7 +375,7 @@ def validate(page_list, output, proof):
             assert not left_text.endswith(('，','：','、')), (spread['id'], 'Unfinished sentence crosses pages')
             assert left_text.count('「') == left_text.count('」'), (spread['id'], 'Quotation crosses pages')
         visible=''.join(item['text'] for item in page['items'] if item['kind']=='text' and item['size']>11)
-        assert visible==''.join(spread['lines']), (page['id'],'Story text differs from manuscript')
+        assert visible==''.join(spread['lines']).replace('\n',''), (page['id'],'Story text differs from manuscript')
     artwork_count=0
     if not proof:
         provenance=json.loads((ROOT/'artwork-log.json').read_text())

@@ -1,0 +1,30 @@
+{
+  "status": "verified",
+  "date": "2026-11-02",
+  "officePages": 16,
+  "officeTextMatchesEveryPage": true,
+  "actualOfficeFonts": [
+    "Iansui-Regular",
+    "JyunsaiKaai-Bold"
+  ],
+  "officeTargetFontAndSizeVerified": true,
+  "properNameRulesVerified": 7,
+  "ordinaryCharactersNotEnlarged": [
+    "日"
+  ],
+  "storyTextImageCollisionChecks": 7,
+  "radicalEntriesVerified": 9,
+  "svgActualRenders": [
+    "s01",
+    "s10",
+    "s11",
+    "lesson"
+  ],
+  "officeRenderedPdfSha256": "131cf7728037ab5fced89549ce0a6cb204b7cc74ec43395035503f2c7fa81359",
+  "files": {
+    "影子，明天見！_可編輯排版.pptx": "37fd4120f0a3d5ebf64555043e18941432b8046c53c746283535fc9254ff9e83",
+    "影子，明天見！_繪本.pdf": "e8bb5eab1b7a9845ad7127849d18d72d37e71f2f42e18bbd599d4107dabe3c37",
+    "影子，明天見！_跨頁閱讀版.pdf": "2f0e52e935293837a93c4f1f149687a3bd355dab9076504a19b658c21e86ceeb"
+  },
+  "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
+}

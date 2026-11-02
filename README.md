@@ -125,6 +125,17 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 
 [言部專案](books/who-is-the-red-mitten-waiting-for/README.md)及[艹部專案](books/who-opened-windows-in-the-leaf/README.md)包含參考細讀、原稿與分鏡、角色及道具模型、原創插畫、精確生成紀錄、字型授權、SVG及重建方法。各書已完成原生檢查、實際Office／SVG渲染與逐頁校稿；永久網址檢查涵蓋六份成品及兩份渲染報告。
 
+## 原創竹字頭與日部繪本
+
+本次確認兩本均為7–9歲自主閱讀、完整插畫PDF及可編輯排版檔。人物重新設計，區分臉形、五官、髮型、年齡和體態；日部父子另依使用者意見保留共通的鼻形、耳形、眉眼與笑容。
+
+| 主題／書名 | 故事與字目 | 成品 |
+| --- | --- | --- |
+| ⺮／《雨天的竹筒樂隊》 | 筷、筒、笛、節、等、笑。226漢字、10故事跨頁。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_可編輯排版.pptx) |
+| 日／《影子，明天見！》 | 早、晴、時、晚、暗、明。296漢字、12故事跨頁。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/shadow-see-you-tomorrow/exports/影子，明天見！_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/shadow-see-you-tomorrow/exports/影子，明天見！_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/shadow-see-you-tomorrow/exports/影子，明天見！_可編輯排版.pptx) |
+
+[竹字頭專案](books/the-rainy-day-bamboo-band/README.md)及[日部專案](books/shadow-see-you-tomorrow/README.md)包含角色、原稿、原圖與修訂、精確提示、字型授權、SVG和重建方法。這次交付繪本及可編輯檔，未新增點讀音訊。
+
 ## 設計與存檔點
 
 已加入使用者提供的[現代漢語規範 skill](.agents/skills/modern-chinese-norm/SKILL.md)及[參考文件](.agents/skills/modern-chinese-norm/reference.md)，可在本專案使用 `$modern-chinese-norm`。根目錄AGENTS.md已要求中文文案校訂時使用；[安裝與本次校訂紀錄](docs/modern-chinese-norm-review.md)說明適用範圍，以及《香味先到了》的句法、指稱與圖文核對結果。

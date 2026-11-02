@@ -115,6 +115,42 @@
       "transparentBackground": false,
       "source": "/workspace/generated_images/exec-485abea6-812d-4cd9-8daf-ab32efe1da5a.png",
       "sha256": "7fd3c387fbfe58ca81cf2b206f3bb27d50a2f1cab68914179f910e28368288a0"
+    },
+    {
+      "id": "s08",
+      "file": "assets/illustrations/s08.png",
+      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. DUODUO: sturdy brown-skinned girl age8, square face, freckles, ONE HIGH BLACK CURLY PUFF, teal boxy short-sleeved shirt, burnt sienna wide cropped trousers, cream slip-on shoes. GRANDFATHER: tall lean bald crown with cropped white side hair, white moustache, long rectangular face, rectangular wire glasses, cream short sleeves, dark forest-green waistcoat, charcoal trousers, brown lace-up shoes. Props match attached model: ONE oval woven bamboo basket, ONE smooth closed-bottom upright bamboo tube, TWO blunt bamboo chopsticks, ONE transverse side-blown bamboo flute only when requested. No letters, numbers, Chinese, typography, musical notes, speech balloons, diagrams or watermark. Draw COMPLETE connected bodies and hands, no floating or amputated legs. WIDE LANDSCAPE composition, entire TOP 45 percent completely PURE WHITE, all art in lower55 percent. Keep central binding strip x45–55 percent free of faces, hands, toys and important marks; stage complete groups in left or right quarter. Sparse ground strokes, white feathered edges. Joyful ensemble lower half: grandfather seated RIGHT plays horizontal bamboo flute; girl seated LEFT taps bamboo tube gently with her pair of chopsticks. Small rain strokes outside far left doorway. Natural individual smiles, slight leaning body rhythm; rain remains ordinary rain, not a person, creature or musical symbol. Full figures.",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "source": "/workspace/generated_images/exec-5657e608-df06-4e38-99f6-1c74bffde8bf.png",
+      "sha256": "a89cdce854858cb8241688bd72100649d9b054283b2ce5ecb4a44560344460d0"
+    },
+    {
+      "id": "s09",
+      "file": "assets/illustrations/s09.png",
+      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. DUODUO: sturdy brown-skinned girl age8, square face, freckles, ONE HIGH BLACK CURLY PUFF, teal boxy short-sleeved shirt, burnt sienna wide cropped trousers, cream slip-on shoes. GRANDFATHER: tall lean bald crown with cropped white side hair, white moustache, long rectangular face, rectangular wire glasses, cream short sleeves, dark forest-green waistcoat, charcoal trousers, brown lace-up shoes. Props match attached model: ONE oval woven bamboo basket, ONE smooth closed-bottom upright bamboo tube, TWO blunt bamboo chopsticks, ONE transverse side-blown bamboo flute only when requested. No letters, numbers, Chinese, typography, musical notes, speech balloons, diagrams or watermark. Draw COMPLETE connected bodies and hands, no floating or amputated legs. WIDE LANDSCAPE composition, entire TOP 45 percent completely PURE WHITE, all art in lower55 percent. Keep central binding strip x45–55 percent free of faces, hands, toys and important marks; stage complete groups in left or right quarter. Sparse ground strokes, white feathered edges. Girl lower LEFT stands at open doorway pointing at a few remaining droplets falling from eave, no rainfall. Grandfather lower RIGHT carefully puts ONE transverse bamboo flute into oval basket; single bamboo tube remains on mat by basket, pair chopsticks laid together on mat. Faces and hands whole, all shoes visible, no cropped limbs.",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "source": "/workspace/generated_images/exec-0c289f70-0408-49c0-8073-a1d752de399e.png",
+      "sha256": "196eef05cef5f1bafa08259941ff19062c8137ac0c741b7127649393edbc067a"
+    },
+    {
+      "id": "s10",
+      "file": "assets/illustrations/s10.png",
+      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. DUODUO: sturdy brown-skinned girl age8, square face, freckles, ONE HIGH BLACK CURLY PUFF, teal boxy short-sleeved shirt, burnt sienna wide cropped trousers, cream slip-on shoes. GRANDFATHER: tall lean bald crown with cropped white side hair, white moustache, long rectangular face, rectangular wire glasses, cream short sleeves, dark forest-green waistcoat, charcoal trousers, brown lace-up shoes. Props match attached model: ONE oval woven bamboo basket, ONE smooth closed-bottom upright bamboo tube, TWO blunt bamboo chopsticks, ONE transverse side-blown bamboo flute only when requested. No letters, numbers, Chinese, typography, musical notes, speech balloons, diagrams or watermark. Draw COMPLETE connected bodies and hands, no floating or amputated legs. WIDE LANDSCAPE composition, entire TOP 45 percent completely PURE WHITE, all art in lower55 percent. Keep central binding strip x45–55 percent free of faces, hands, toys and important marks; stage complete groups in left or right quarter. Sparse ground strokes, white feathered edges. Girl lower LEFT gleefully lifts her pair of chopsticks ready over the single tube. Grandfather lower RIGHT laughs, holding transverse flute again, ready to play, not yet at lips. Basket beside girl, sky outside doorway now pale and clear. Affectionate but not saccharine, full bodies, one tube one flute two chopsticks. No text.",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "source": "/workspace/generated_images/exec-b7775d1c-8530-4454-a4a7-887516df1283.png",
+      "sha256": "42c1920dd178461b8815c8c0fd79481888af34e19c7dc98f86bc6bf0e742f347"
     }
   ]
 }

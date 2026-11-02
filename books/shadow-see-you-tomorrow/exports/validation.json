@@ -1,0 +1,48 @@
+{
+  "status": "complete",
+  "spreadPages": 16,
+  "singlePages": 30,
+  "editableSlides": 16,
+  "missingGlyphs": [],
+  "allTextEditable": true,
+  "originalArtworkHashesVerified": 21,
+  "properNameMarks": {
+    "names": {
+      "平平": 7
+    },
+    "style": "continuous rule below each full name",
+    "pdfPptxSvgGeometryVerified": true,
+    "editableTextAndRuleGrouped": true
+  },
+  "targetTypography": {
+    "font": "JyunsaiKaai",
+    "bodyScale": 1.5,
+    "pdfAndPptxRunsVerified": true,
+    "handwrittenGlyphs": {
+      "明": 8,
+      "晴": 6,
+      "早": 7,
+      "晚": 5,
+      "時": 7,
+      "暗": 4
+    }
+  },
+  "normalCharacterTypography": {
+    "characters": [
+      "日"
+    ],
+    "bodyScale": 1,
+    "font": "Iansui",
+    "pdfAndPptxRunsVerified": true,
+    "svgRunsVerified": true
+  },
+  "storyHanCharacters": 296,
+  "targets": {
+    "早": 7,
+    "晴": 6,
+    "時": 8,
+    "晚": 5,
+    "暗": 5,
+    "明": 11
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "status": "verified",
+  "date": "2026-11-02",
+  "officePages": 14,
+  "officeTextMatchesEveryPage": true,
+  "actualOfficeFonts": [
+    "Iansui-Regular",
+    "JyunsaiKaai-Bold"
+  ],
+  "officeTargetFontAndSizeVerified": true,
+  "properNameRulesVerified": 7,
+  "ordinaryCharactersNotEnlarged": [
+    "竹"
+  ],
+  "storyTextImageCollisionChecks": 8,
+  "radicalEntriesVerified": 9,
+  "svgActualRenders": [
+    "s01",
+    "s05",
+    "s10",
+    "lesson"
+  ],
+  "officeRenderedPdfSha256": "e5232db7d55da1beec747ee14262131340828540b3863461aec7dedcc2f99a52",
+  "files": {
+    "雨天的竹筒樂隊_可編輯排版.pptx": "4c6536cdbdef6c9a521474621a5bf016e59f0b57a3d39c9c07ef583617241fb8",
+    "雨天的竹筒樂隊_跨頁閱讀版.pdf": "4a381e02f3dcf4512af4cf5ddd55bc0d6319caba0db4f029930c4928b05b7db4",
+    "雨天的竹筒樂隊_繪本.pdf": "d50cfbf08cfb88b5726e73cbd4b482affd24932a1bfd669e168d990c35390e57"
+  },
+  "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
+}
