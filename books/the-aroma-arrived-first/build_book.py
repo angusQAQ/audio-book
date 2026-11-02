@@ -158,9 +158,14 @@ def pages(proof):
         lesson.append(rect(x,y,118,158,learn['cardFill'],learn['cardStroke'],8))
         glyph=text_item(ch,0,y+8,44,emphasis=True);glyph['x']=x+(118-glyph['width'])/2;lesson.append(glyph)
         example=text_item(word,0,y+115,18,emphasis=True);example['x']=x+(118-example['width'])/2;lesson.append(example)
-    lesson += [text_item(learn['variantHeading'],532,38,23,emphasis=True),
-               text_item(learn['variantLabel'],540,158,19,MUTED),
-               text_item(BOOK['radical']['variant'],782,126,48,emphasis=True)]
+    lesson.append(text_item(learn['variantHeading'],532,38,23,emphasis=True))
+    # Show both radical forms together, sharing one baseline despite mixed sizes.
+    forms = [text_item(label, x, 0, 23, emphasis=True)
+             for label, x in zip(learn['radicalForms'], (540, 738))]
+    form_ascent = max(item['ascent'] for item in forms)
+    for item in forms:
+        item['y'] = 142 + form_ascent - item['ascent']
+    lesson.extend(forms)
     add_block(lesson,learn['explanation'],532,266,377,18,29,emphasis=True)
     lesson.append(text_item(learn['example'],532,418,21,emphasis=True))
     lesson.append(text_item(learn['note'],532,474,16,emphasis=True))

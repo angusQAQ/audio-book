@@ -19,13 +19,13 @@
     "bodyScale": 1.5,
     "pdfAndPptxRunsVerified": true,
     "handwrittenGlyphs": {
-      "炒": 4,
+      "炒": 5,
       "煮": 6,
-      "烤": 4,
-      "燈": 8,
+      "烤": 5,
+      "燈": 9,
       "照": 7,
       "熱": 8,
-      "灬": 2
+      "灬": 1
     }
   },
   "normalCharacterTypography": {
@@ -37,12 +37,12 @@
     "pdfAndPptxRunsVerified": true,
     "svgRunsVerified": true
   },
-  "storyHanCharacters": 313,
+  "storyHanCharacters": 322,
   "targets": {
-    "炒": 4,
+    "炒": 5,
     "煮": 7,
-    "烤": 4,
-    "燈": 8,
+    "烤": 5,
+    "燈": 9,
     "照": 7,
     "熱": 8
   }

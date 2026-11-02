@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-02",
+  "baseCommit": "ca1537f148c1e1ce0828f26cbb491e8f2aed8435",
+  "requestedBy": "user",
+  "changes": [
+    {
+      "location": "presentation.dedication",
+      "before": "給每一張等人坐下的小凳子。",
+      "after": "給每一位喜歡和大家相聚的小朋友。"
+    },
+    {
+      "location": "s01.lines[0]",
+      "before": "小街今晚辦小聚會。",
+      "after": "今晚，街坊們要一起聚會。"
+    },
+    {
+      "location": "s01.lines[1]",
+      "before": "米米幫婆婆擺桌子。",
+      "after": "米米幫婆婆擺好椅子。"
+    },
+    {
+      "location": "s03 / s08 / s12 / activity / alt text",
+      "before": "紅豆湯、熱湯、煮湯",
+      "after": "紅豆沙、熱紅豆沙、煮紅豆沙"
+    },
+    {
+      "location": "s10.lines[0]",
+      "before": "有人搬來小凳，",
+      "after": "有人搬來更多椅子，"
+    },
+    {
+      "location": "s12.lines[2]",
+      "before": "婆婆把一碗熱湯，放到她面前。",
+      "after": "婆婆把一碗熱紅豆沙放到她面前。"
+    },
+    {
+      "location": "learning.radicalForms",
+      "before": "「火」的常見寫法（僅示灬）",
+      "after": [
+        "火字旁：火",
+        "四點底：灬"
+      ]
+    }
+  ],
+  "artwork": "保留全部已提交原圖；紅豆的鍋、碗及木椅與本次校訂相符，原始生成提示作歷史紀錄保留。",
+  "storyHanCharacters": 322
+}

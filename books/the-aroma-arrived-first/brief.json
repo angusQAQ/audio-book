@@ -9,7 +9,7 @@
     "ageMin": 7,
     "ageMax": 9,
     "readingMode": "independent",
-    "readingAbility": "小二至小三，可自行閱讀",
+    "readingAbility": "以小學二年級自主閱讀為主",
     "accessibilityNeeds": []
   },
   "theme": "社區小聚會中的等待、光亮、香味與小幫手的參與",
@@ -80,7 +80,7 @@
       "unit": "pt"
     },
     "storySpreads": 12,
-    "wordBudget": 313,
+    "wordBudget": 322,
     "bodyFont": "Iansui",
     "emphasisFont": "JyunsaiKaai Bold",
     "emphasisScale": 1.5,
@@ -108,7 +108,8 @@
     "userRequirements": [
       "火部首主題，兩本為獨立作品",
       "本次明確確認7–9歲自主閱讀及完整插畫PDF＋可編輯排版",
-      "GitHub保存正式檔案、每階段commit並同步永久網站"
+      "GitHub保存正式檔案、每階段commit並同步永久網站",
+      "本次校訂：獻詞直接寫給小朋友、聚會由街坊舉辦、米米擺椅子、紅豆沙全書一致、更多椅子、火字旁與四點底並列。"
     ],
     "editorialChoices": [
       "題名《香味先到了》；12故事跨頁、28內頁，含封面封底30單頁",

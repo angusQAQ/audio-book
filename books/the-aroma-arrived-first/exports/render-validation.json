@@ -18,11 +18,11 @@
     "s10",
     "lesson"
   ],
-  "officeRenderedPdfSha256": "87e05c90c21aae4793e8e73188a976b79543443886a75076a8027a171eedf959",
+  "officeRenderedPdfSha256": "0ee937ddae5be8ec05468a1b091125dca9a99b635c9d87372739b90e52a253d6",
   "files": {
-    "香味先到了_繪本.pdf": "ac1f312d4a33652837396cb080148b3200e3848deb8a515eb924bb91cb526093",
-    "香味先到了_可編輯排版.pptx": "8a8a98967497505c8fc969c6dd4567defe7fc8fb43a65b704d4eacb30f77480a",
-    "香味先到了_跨頁閱讀版.pdf": "af7d11b71d938b51586f1fbe38759a6ae7405d213df0f104e5ef1eabead39f9f"
+    "香味先到了_繪本.pdf": "00950d9f11e9f4bc4839469aae4849974474dd55c8ac87c979a203d25e0a546d",
+    "香味先到了_可編輯排版.pptx": "0909cf1e5e742ce5d14a09a41fd51a23b6207e90340367f2d415480bffc7e100",
+    "香味先到了_跨頁閱讀版.pdf": "90911841786e0187f8fd9245db419d8d6a3898697e188f5bca5375b90ac34bf1"
   },
   "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
 }

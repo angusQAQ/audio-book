@@ -109,7 +109,7 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 
 | 主題／書名 | 核心字與故事 | 成品 |
 | --- | --- | --- |
-| 火／《香味先到了》 | 炒、煮、烤、燈、照、熱。米米幫婆婆的小攤迎接街坊。313漢字。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/the-aroma-arrived-first/exports/香味先到了_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/the-aroma-arrived-first/exports/香味先到了_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/the-aroma-arrived-first/exports/香味先到了_可編輯排版.pptx) |
+| 火／《香味先到了》 | 炒、煮、烤、燈、照、熱。米米幫婆婆的小攤迎接街坊。322漢字。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/the-aroma-arrived-first/exports/香味先到了_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/the-aroma-arrived-first/exports/香味先到了_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/the-aroma-arrived-first/exports/香味先到了_可編輯排版.pptx) |
 | 心／《黑線旁的小鳥》 | 急、忘、怕、悄、想、慢。一次畫畫意外，帶來承認、傾聽與再合作。272漢字。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/little-birds-beside-the-line/exports/黑線旁的小鳥_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/little-birds-beside-the-line/exports/黑線旁的小鳥_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/little-birds-beside-the-line/exports/黑線旁的小鳥_可編輯排版.pptx) |
 
 [火部專案](books/the-aroma-arrived-first/README.md)與[心部專案](books/little-birds-beside-the-line/README.md)保存參考分析、原稿／分鏡、原圖及修訂、精確提示、字型授權、SVG與重建程式。兩本均已實際以LibreOffice及Inkscape開啟渲染、逐頁核對文字和專名號；發布流程核對六份成品及兩份渲染報告的永久網址SHA-256。
