@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-02",
+  "description": "僅核對部首歸屬，不作粵語讀音來源",
+  "dataset": "Unicode 17.0 kRSUnicode",
+  "source": "https://github.com/unicode-org/unicodetools/blob/578f6c0516f5f268292ebda50b51848407a06478/unicodetools/data/ucd/17.0.0/Unihan/kRSUnicode.txt",
+  "sha256": "481f8a3d2fda0c6b8e6f7c746a0eedfb145a62f30bf6e61527a8f7cdb2a99108",
+  "entries": {
+    "花": {
+      "codepoint": "U+82B1",
+      "kRSUnicode": "140.4",
+      "sourceLine": "8298..82BE\t140.4"
+    },
+    "草": {
+      "codepoint": "U+8349",
+      "kRSUnicode": "140.6",
+      "sourceLine": "8347..8352\t140.6"
+    },
+    "葉": {
+      "codepoint": "U+8449",
+      "kRSUnicode": "140.9",
+      "sourceLine": "842D..8456\t140.9"
+    },
+    "苗": {
+      "codepoint": "U+82D7",
+      "kRSUnicode": "140.5",
+      "sourceLine": "82D0..8311\t140.5"
+    },
+    "芽": {
+      "codepoint": "U+82BD",
+      "kRSUnicode": "140.4",
+      "sourceLine": "8298..82BE\t140.4"
+    },
+    "藏": {
+      "codepoint": "U+85CF",
+      "kRSUnicode": "140.14",
+      "sourceLine": "85AF..85D3\t140.14"
+    },
+    "艸": {
+      "codepoint": "U+8278",
+      "kRSUnicode": "140.0",
+      "sourceLine": "8278..8279\t140.0"
+    },
+    "艹": {
+      "codepoint": "U+8279",
+      "kRSUnicode": "140.0",
+      "sourceLine": "8278..8279\t140.0"
+    },
+    "樹": {
+      "codepoint": "U+6A39",
+      "kRSUnicode": "75.12",
+      "sourceLine": "6A32..6A64\t75.12"
+    },
+    "根": {
+      "codepoint": "U+6839",
+      "kRSUnicode": "75.6",
+      "sourceLine": "6812..683D\t75.6"
+    }
+  }
+}

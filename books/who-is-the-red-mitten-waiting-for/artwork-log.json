@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "generator": "OpenAI image_gen",
+  "date": "2026-11-02",
+  "characterBible": {
+    "file": "assets/characters.png",
+    "source": "/workspace/generated_images/exec-58ceec86-cbbd-491d-bed4-58ae72cfc046.png",
+    "prompt": "Create an ORIGINAL character model sheet for a Traditional Chinese children's picture book, ages 7–9, 'Who Is the Red Mitten Waiting For?'. Delicate flat graphite pencil outlines, scribbled pencil hair, restrained dry colored-pencil accents, expressive original East Asian child faces, white paper grain, NO 3D or photorealism. Pure WHITE background, no scenery, absolutely NO text, labels, letters, logos or watermark. FOUR equal widely spaced columns, full body with all shoes visible, common ground baseline, empty hands, no overlap. Left to right: BOY LANGLANG front; same boy three-quarter; GIRL ROURou front; same girl three-quarter. Both are eight-year-old children of similar height. LANGLANG: short neat BLACK ROUND BOWL HAIRCUT, round expressive face, burnt-orange HOODED duffle COAT with two small dark toggles, navy full-length trousers, teal closed ankle boots, no scarf, no hat. ROUROU: black hair in ONE LOW BRAID resting over her shoulder, soft oval face, PLUM PURPLE knee-length button coat, pale SKY BLUE neck scarf, cream full-length corduroy trousers, dark slate closed shoes. No patterns, logos or extra accessories. Graphite dominates, color mainly in clothes, light skin pencil accents. Characters are distinct from any existing storybook illustration.",
+    "references": [],
+    "sha256": "f92874259ab9b62ae9b058e1278537e2bb745d35e4878366f20625fa90dd14fb"
+  },
+  "illustrations": [
+    {
+      "id": "props",
+      "file": "assets/mitten-model.png",
+      "source": "/workspace/generated_images/exec-5d8e5fcc-6d56-47ce-8090-ddedf5b8c94d.png",
+      "prompt": "An ORIGINAL pencil-and-colored-pencil PROP CONTINUITY SHEET on pure WHITE paper. THREE widely separated columns, no people, NO text or labels. LEFT column: exactly ONE RIGHT-HAND red knitted MITTEN, one thumb sticking LEFT when back faces viewer, rounded closed finger chamber, simple ribbed cuff, ONE small YELLOW FIVE-POINT STAR centered on back. MIDDLE column: the MATCHING RED PAIR, one left and one right mitten, one thumb each, identical knitting and ONE yellow star on EACH back, side by side with thumbs pointing inward. RIGHT column: a pair of plain TEAL knitted mittens, no stars, no pattern, no red. Accurate original hand-sized winter textile objects, flat graphite outlines and dry colored pencil, no photorealism or glossy rendering. No other objects, letters, numbers, logos or watermarks.",
+      "references": [],
+      "transparentBackground": false,
+      "sha256": "583916b5e7c3985ebc7f78c621208da959954582551fcddd8e777b41ab777dca"
+    },
+    {
+      "id": "cover",
+      "file": "assets/illustrations/cover.png",
+      "source": "/workspace/generated_images/exec-540c8569-b3ae-4eae-be8b-e2f74e24443e.png",
+      "prompt": "Original delicate graphite pencil and restrained dry colored-pencil storybook art, abundant PURE WHITE paper, no 3D, no photorealism, no glossy rendering. Characters MUST match the attached original model: LANGLANG boy age8, neat round black BOWL haircut, burnt-orange hooded duffle coat with TWO dark toggles, navy full trousers, TEAL ankle boots. ROUROU girl age8 same height, one LOW black BRAID over shoulder, plum-purple knee-length coat, pale SKY BLUE scarf, cream trousers, slate shoes. No extra accessories. Cool-day school playground suggested with only sparse grey lines, no snow. Found item: ONE RIGHT-HAND red knitted MITTEN, one thumb, ribbed cuff, exactly ONE small YELLOW FIVE-POINT STAR on back; never a fingered glove. Other matching LEFT mitten appears only late. Original faces, pencil gestures, readable hands. No letters, symbols, typography, speech bubbles, signage or watermark. Keep faces away from central binding.\nA compact COVER CUTOUT with a truly TRANSPARENT background. Full bodies, no scenery, all shoes visible. Boy Langlang on LEFT holds ONE small red right-hand mitten carefully at chest height, yellow star facing us. Girl Rourou on RIGHT leans slightly toward it, curious warm smile, one hand pointing gently at the star. No other gloves, ball, paper, toys or children. A few tiny pencil grounding strokes only, no rectangular white panel. Clear friendly silhouette and negative space around heads.",
+      "references": [
+        "assets/characters.png"
+      ],
+      "transparentBackground": true,
+      "sha256": "99ba449fec02ae151fca415b1ebe981def4a6bdce17cc80a1547017f988b1c40"
+    }
+  ]
+}

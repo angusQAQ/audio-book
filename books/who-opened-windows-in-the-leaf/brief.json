@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "book": {
+    "slug": "who-opened-windows-in-the-leaf",
+    "title": "誰在葉子上開窗？",
+    "language": "zh-HK"
+  },
+  "audience": {
+    "ageMin": 7,
+    "ageMax": 9,
+    "readingMode": "independent",
+    "readingAbility": "小二至小三，可自行閱讀",
+    "accessibilityNeeds": []
+  },
+  "theme": "從葉洞的疑問到辨認小客人，觀察同一盆植物與毛毛蟲的變化",
+  "content": {
+    "mode": "original",
+    "request": "依本次要求獨立創作以艸為部首的兒童故事繪本。",
+    "requiredElements": [
+      "完整故事與原創插畫",
+      "人物使用疊字名及專名號",
+      "選定字目以放大手寫楷體呈現",
+      "規範現代漢語與符合年齡的詞彙"
+    ],
+    "avoidElements": [
+      "複製參考書人物、原句或構圖",
+      "沿用另一新作人物與情節"
+    ],
+    "sourceTextPaths": [
+      "story.json"
+    ],
+    "references": [
+      {
+        "title": "生日會",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 16,
+        "sha256": "8f67a3121f40ebaa67844db1918eccb9c7f21bdc4faeacf4acd98557499d9eaf",
+        "source": "使用者附件，未重新公開原 PDF"
+      },
+      {
+        "title": "跟屁蟲",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 17,
+        "sha256": "abfb8339a9bbcb41fa25d914a9c1bff836b7ffc986eaa04077252a5d48a5a8fe",
+        "source": "使用者附件，未重新公開原 PDF"
+      }
+    ],
+    "learningGoals": [
+      "在完整故事中理解六個核心字",
+      "辨認部首本形與偏旁／字頭，區分非本部字"
+    ],
+    "targetCharacters": [
+      "花",
+      "草",
+      "葉",
+      "苗",
+      "芽",
+      "藏"
+    ],
+    "characterNames": [
+      "恩恩",
+      "豆豆"
+    ]
+  },
+  "design": {
+    "artDirection": "原創人物、灰鉛筆輪廓與局部色鉛筆淡彩、大留白、手部及表情特寫",
+    "palette": [
+      "#FFFFFF",
+      "#E5EEDC",
+      "#374139",
+      "#6D7C6C",
+      "#9DBCA8",
+      "#D6AC83",
+      "#8DAAC1",
+      "#BC8268"
+    ],
+    "pageSize": {
+      "width": 960,
+      "height": 600,
+      "unit": "pt"
+    },
+    "storySpreads": 10,
+    "wordBudget": 249,
+    "bodyFont": "Iansui",
+    "emphasisFont": "JyunsaiKaai Bold",
+    "emphasisScale": 1.5,
+    "properNameMarks": true,
+    "normalCharacters": [
+      "艸"
+    ]
+  },
+  "deliverables": {
+    "formats": [
+      "pdf-spread",
+      "pdf-single",
+      "pptx",
+      "svg"
+    ],
+    "readAlong": false,
+    "audio": null
+  },
+  "publication": {
+    "github": true,
+    "permanentWebsite": true,
+    "destination": "https://angusqaq.github.io/audio-book/"
+  },
+  "decisions": {
+    "userRequirements": [
+      "本次明確確認兩本均沿用7–9歲自主閱讀、完整插畫PDF＋可編輯排版檔",
+      "兩本獨立的主題、內容與人物",
+      "人物名字使用疊字",
+      "現代漢語規範校稿",
+      "所有正式檔案GitHub保存，每個可審閱階段建立commit，驗證後同步永久網站"
+    ],
+    "editorialChoices": [
+      "每本10個故事跨頁、24內頁，含封面封底26單頁、14閱讀畫面",
+      "依各自情節選定六字，保留原生文字與獨立插圖",
+      "本次交付PDF與可編輯檔，不新增點讀音訊"
+    ],
+    "unresolvedQuestions": []
+  }
+}

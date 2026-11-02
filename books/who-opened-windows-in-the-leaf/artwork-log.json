@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "generator": "OpenAI image_gen",
+  "date": "2026-11-02",
+  "characterBible": {
+    "file": "assets/characters.png",
+    "source": "/workspace/generated_images/exec-da2bfa7c-1e3f-4d4b-b389-57844fa8e091.png",
+    "prompt": "Create an ORIGINAL character model sheet for a Traditional Chinese children's picture book, ages 7–9, 'Who Opened Windows in the Leaf?'. Delicate flat graphite pencil contours, densely scribbled dark hair, restrained dry colored-pencil mint, apricot and indigo accents, abundant pure WHITE paper, warm expressive original faces. Not 3D, not photorealistic, no glossy paint. FOUR equal spaced columns, left to right: GIRL ENEN front; same girl three-quarter; BOY DOUDOU front; same boy three-quarter. Entire full bodies and shoes visible, equal ground baseline, empty hands, no overlaps, no scenery. Both are East Asian eight-year-old children of similar height, not toddlers. ENEN: straight BLACK HAIR in TWO LOW BRAIDED PIGTAILS with plain dusty-pink ties, apricot long-sleeve shirt under MINT GREEN full-length DUNGAREES with one front pocket, pale peach closed velcro shoes. DOUDOU: SHORT BLACK CURLY hair, round soft face, muted CORNFLOWER BLUE long-sleeve sweatshirt with no logos, warm BROWN knee-length shorts, ivory ankle socks and mustard closed sneakers. No hat, jewelry or extra accessories. Pure white background. Absolutely NO text, labels, numbers, letters or watermark.",
+    "references": [],
+    "sha256": "f36caed5de68f4c488996411b1960b098fb94d9d975df136b6de50ed457a7f54"
+  },
+  "illustrations": [
+    {
+      "id": "props",
+      "file": "assets/plant-model.png",
+      "source": "/workspace/generated_images/exec-974d62b5-f134-40e0-bf11-9d4f83a3dc75.png",
+      "prompt": "Original graphite and restrained colored-pencil PROP CONTINUITY SHEET for a storybook, pure WHITE paper, no typography. THREE clearly separated panels left-to-right, with identical pot, saucer and SINGLE plant identity. Every panel: ONE matte terracotta round pot on shallow ivory saucer, short upright central seedling stem, FOUR broad soft oval green leaves at different heights, exactly THREE fine grass blades at soil edge. LEFT initial: all FOUR leaves intact, no holes, NO insect, no new bud. CENTER investigation: same four leaves; prominent RIGHT-HAND older leaf has exactly THREE small irregular round holes and one tiny bitten edge, one very small SMOOTH pale-green caterpillar underneath it; one tightly FOLDED light-green bud at a lower stem node. RIGHT several days later: same older four leaves still present with same right-leaf holes, plus ONE small fifth light-green leaf unfolded from that bud, one slightly longer but still small smooth caterpillar; no flower, fruit, cocoon or butterfly. Keep leaf size and pot proportions consistent across panels, no dense garden or other props. Not realistic painting or 3D. No faces on plants/insect, no labels or borders.",
+      "references": [],
+      "transparentBackground": false,
+      "sha256": "e136b240134e34cfe5548a38cfafb928a76784e30b301dffdb01048310dfd2e1"
+    },
+    {
+      "id": "cover",
+      "file": "assets/illustrations/cover.png",
+      "source": "/workspace/generated_images/exec-995522c6-764f-46f2-a0ed-5facdd4a7754.png",
+      "prompt": "Original delicate GRAPHITE PENCIL and restrained dry COLORED PENCIL picture-book art, pure white paper and minimal setting; not 3D, not photo, not saturated paint. ENEN girl age8: two LOW black braided PIGTAILS with dusty-pink ties, APRICOT long sleeves, MINT GREEN full-length dungarees, pale peach velcro shoes. DOUDOU boy age8: short BLACK CURLY hair, CORNFLOWER BLUE long sleeves, warm BROWN knee shorts, ivory ankle socks, mustard sneakers. Match attached original model exactly, similar child heights, expressive original faces. Same ONE plain matte TERRACOTTA round plant pot on one shallow IVORY saucer, a single young green broad-OVAL-leaf seedling with a short central stem and just three fine grass blades at soil edge. Four main leaves initially, later a small fifth new leaf; selected older RIGHT leaf has THREE SMALL NATURAL CATERPILLAR HOLES and one small bitten edge once requested. Exactly ONE smooth pale GREEN caterpillar, very small compared with leaf, not hairy or smiling. No blossoms, fruit, butterfly, duplicate pots or miraculous plant regrowth. Leaves remain attached to plant. Ground setting is a low windowsill/table, never high dangerous ledge. No words, lettering, logos, labels, speech balloons or watermark. Important faces clear of center fold.\nA compact COVER CUTOUT on a truly TRANSPARENT background. Girl Enen on LEFT and boy Doudou on RIGHT kneel or lean down to examine ONE small potted seedling between them on the ground. All shoes visible. Broad right leaf has three small natural holes and tiny pale-green caterpillar underneath, children look curious and gently delighted. No other objects, no table, no room, no extra plants. Entire compact friendly silhouette, a few light pencil grounding strokes only, no rectangular white panel.",
+      "references": [
+        "assets/characters.png"
+      ],
+      "transparentBackground": true,
+      "sha256": "62f12fbea429bac241df08941bfb95d2e049d3c0c3f9fb3d7ea0446b8ad145ac"
+    }
+  ]
+}

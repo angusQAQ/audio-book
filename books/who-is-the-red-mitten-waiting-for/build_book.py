@@ -1,0 +1,517 @@
+#!/usr/bin/env python3
+"""Build editable book layouts and embedded-font PDFs from one checked source."""
+import argparse
+import hashlib
+from collections import Counter
+from functools import lru_cache
+import html
+import io
+import json
+import os
+from pathlib import Path
+import re
+import subprocess
+import sys
+import xml.etree.ElementTree as ET
+
+import fitz
+from fontTools.ttLib import TTFont as FontToolsFont
+from PIL import Image, ImageDraw
+from pptx import Presentation
+from pptx.dml.color import RGBColor
+from pptx.enum.shapes import MSO_CONNECTOR, MSO_SHAPE, MSO_SHAPE_TYPE
+from pptx.oxml.xmlchemy import OxmlElement
+from pptx.util import Pt
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.pdfgen import canvas
+from reportlab.lib.utils import ImageReader
+
+ROOT = Path(__file__).resolve().parent
+BOOK = json.loads((ROOT / 'story.json').read_text())
+W, H = BOOK['format']['width'], BOOK['format']['height']
+INK, MUTED = BOOK['palette']['ink'], BOOK['palette']['muted']
+FONT = ROOT / 'assets/fonts/Iansui-Regular.ttf'
+HAND_FONT = ROOT / 'assets/fonts/JyunsaiKaai-Bold.ttf'
+HAND_FAMILY = 'JyunsaiKaai'
+FONTS = {'Iansui': FONT, HAND_FAMILY: HAND_FONT}
+EMPHASIS_SCALE = BOOK['typography']['targetScale']
+TARGETS = set(BOOK['coreCharacters'] + BOOK['extensionCharacters'] + [BOOK['radical']['variant']])
+NORMAL_CHARACTERS = set(BOOK['typography']['normalCharacters'])
+assert TARGETS.isdisjoint(NORMAL_CHARACTERS), 'Ordinary characters must not receive target emphasis'
+PROPER_NAMES = BOOK['typography']['properNames']
+assert all(len(name) == 2 and name[0] == name[1] for name in PROPER_NAMES), 'Character names must be reduplicated'
+NAME_MARK = BOOK['typography']['properNameMark']
+NAME_PATTERN = re.compile('|'.join(re.escape(name) for name in sorted(PROPER_NAMES, key=len, reverse=True)))
+STORY_HAN = len(re.findall(r'[\u3400-\u9fff]', ''.join(''.join(s['lines']) for s in BOOK['spreads'])))
+for family, path in FONTS.items():
+    pdfmetrics.registerFont(TTFont(family, str(path)))
+CROPS = {list(BOOK['characters'])[0]:(0,0,.25,1),list(BOOK['characters'])[1]:(.5,0,.75,1)}
+
+
+def text_item(text, x, y, size=23, colour=INK, emphasis=False):
+    fonts = [HAND_FAMILY if emphasis and ch in TARGETS else 'Iansui' for ch in text]
+    sizes = [size * (EMPHASIS_SCALE if family == HAND_FAMILY else 1) for family in fonts]
+    advances = [pdfmetrics.stringWidth(ch, family, fs) for ch, family, fs in zip(text, fonts, sizes)]
+    # Share a baseline while allowing the larger handwritten glyphs to rise above the body.
+    ascent = max((pdfmetrics.getAscent(family) / 1000 * fs for family, fs in zip(fonts, sizes)), default=size)
+    descent = max((-pdfmetrics.getDescent(family) / 1000 * fs for family, fs in zip(fonts, sizes)), default=0)
+    name_marks = []
+    for match in NAME_PATTERN.finditer(text):
+        name_marks.append(dict(name=match.group(), start=match.start(), end=match.end(),
+                               x=sum(advances[:match.start()]) + NAME_MARK['inset'],
+                               width=sum(advances[match.start():match.end()]) - 2 * NAME_MARK['inset']))
+    if name_marks:
+        descent = max(descent, NAME_MARK['baselineOffset'] + NAME_MARK['strokeWidth'] / 2)
+    return dict(kind='text', text=text, x=x, y=y, size=size, colour=colour,
+                fonts=fonts, sizes=sizes, advances=advances, ascent=ascent,
+                width=sum(advances), height=ascent + descent, nameMarks=name_marks)
+
+
+def wrap(text, width, size, emphasis):
+    if '\n' in text:
+        return [line for paragraph in text.split('\n') for line in wrap(paragraph,width,size,emphasis)]
+    closing, opening = set('，。！？：；、」』）》】…'), set('「『（《【')
+    units = []
+    # Keep each personal name on one line so its proper-name mark stays continuous.
+    tokens = []
+    cursor = 0
+    for match in NAME_PATTERN.finditer(text):
+        tokens.extend(text[cursor:match.start()]); tokens.append(match.group()); cursor = match.end()
+    tokens.extend(text[cursor:])
+    for token in tokens:
+        if units and (token in closing or units[-1][-1] in opening):
+            units[-1] += token
+        else:
+            units.append(token)
+    lines, line = [], ''
+    for unit in units:
+        if line and text_item(line+unit,0,0,size,emphasis=emphasis)['width'] > width:
+            lines.append(line); line=unit
+        else:
+            line += unit
+    if line: lines.append(line)
+    return lines
+
+
+def add_block(items, paragraphs, x, y, width=364, size=22.8, leading=33, colour=INK, emphasis=True):
+    for para in paragraphs:
+        fs = size
+        for line in wrap(para, width, fs, emphasis):
+            item = text_item(line, x, y, fs, colour, emphasis)
+            items.append(item)
+            y += max(leading, item['height'] + 6)
+    return y
+
+
+def picture(path, x, y, width, height, crop=None, alt='原創繪本插畫'):
+    return dict(kind='image', path=str(path), x=x, y=y, width=width, height=height, crop=crop, alt=alt)
+
+
+def rect(x, y, width, height, fill, stroke=None, radius=0):
+    return dict(kind='rect', x=x, y=y, width=width, height=height, fill=fill, stroke=stroke, radius=radius)
+
+
+def character(name, x, y, width, height):
+    return picture(ROOT/'assets/characters.png',x,y,width,height,CROPS[name],BOOK['characters'][name])
+
+
+def pages(proof):
+    result=[]
+    cover=ROOT/'assets/illustrations/cover.png'
+    if not cover.exists(): raise FileNotFoundError('Missing original cover illustration')
+    design=BOOK['presentation']
+    front=[rect(W/4,0,W/2,H,BOOK['palette']['cover']),
+           text_item(BOOK['series'],278,27,17,MUTED),
+           text_item(design['titleLines'][0],278,65,design['coverSizes'][0],emphasis=True),
+           text_item(design['titleLines'][1],278,183,design['coverSizes'][1],emphasis=True),
+           picture(cover,270,279,420,286,alt=design['coverAlt'])]
+    result.append(dict(id='cover',items=front,note=BOOK['series']+'；原創繪本封面。'))
+    title=[]
+    add_block(title,design['dedication'],58,73,365,21,36,emphasis=False)
+    names=list(BOOK['characters'])
+    title += [character(names[0],67,294,137,266),character(names[1],259,294,137,266),
+              text_item(design['titleLines'][0],536,146,44,emphasis=True),
+              text_item(design['titleLines'][1],536,236,46,emphasis=True),
+              text_item(BOOK['series'],539,337,19),
+              text_item('原創繁體中文繪本・'+BOOK['audience'],539,513,13,MUTED)]
+    result.append(dict(id='title',items=title,note='右頁扉頁1；左頁前襯，不計入單頁PDF。'))
+    for spread in BOOK['spreads']:
+        items=[];art=ROOT/'assets/illustrations'/(spread['id']+'.png')
+        if art.exists():items.append(picture(art,*spread['artPlacement'],alt=spread['art']))
+        elif proof:items.append(rect(535,315,358,211,'#F3F7F7'))
+        else:raise FileNotFoundError('Missing illustration: '+str(art))
+        paragraphs=list(spread['lines'])
+        if spread['layout']=='left-middle':
+            add_block(items,paragraphs,52,186,364,24,39)
+        elif spread['layout']=='top-left':
+            add_block(items,paragraphs,52,38,400,24,39)
+        else:
+            split=spread.get('textSplit',1)
+            add_block(items,paragraphs[:split],52,38,400,24,39)
+            add_block(items,paragraphs[split:],534,38,spread.get('rightTextWidth',374),24,39)
+        for number,x in zip(spread['pages'],(38,905)):items.append(text_item(str(number),x,H-29,10.5,MUTED))
+        result.append(dict(id=spread['id'],items=items,note=f"內頁 {spread['pages'][0]}–{spread['pages'][1]}。{spread['beat']}\n"+'\n'.join(spread['lines'])))
+    learn=BOOK['learning']
+    lesson=[text_item(learn['heading'],42,38,27,emphasis=True),text_item(learn['subtitle'],42,101,17,MUTED)]
+    for n,(ch,word) in enumerate(learn['cards']):
+        x,y=42+(n%3)*134,166+(n//3)*173
+        lesson.append(rect(x,y,118,158,learn['cardFill'],learn['cardStroke'],8))
+        glyph=text_item(ch,0,y+8,44,emphasis=True);glyph['x']=x+(118-glyph['width'])/2;lesson.append(glyph)
+        example=text_item(word,0,y+115,18,emphasis=True);example['x']=x+(118-example['width'])/2;lesson.append(example)
+    lesson.append(text_item(learn['variantHeading'],532,38,23,emphasis=True))
+    # Show both radical forms together, sharing one baseline despite mixed sizes.
+    forms = [text_item(label, x, 0, 23, emphasis=True)
+             for label, x in zip(learn['radicalForms'], (540, 738))]
+    form_ascent = max(item['ascent'] for item in forms)
+    for item in forms:
+        item['y'] = 142 + form_ascent - item['ascent']
+    lesson.extend(forms)
+    add_block(lesson,learn['explanation'],532,266,377,18,29,emphasis=True)
+    lesson.append(text_item(learn['example'],532,418,21,emphasis=True))
+    lesson.append(text_item(learn['note'],532,474,16,emphasis=True))
+    lesson.append(text_item(learn['question'],532,526,18,emphasis=True))
+    last_story=2*len(BOOK['spreads'])+1
+    lesson += [text_item(str(last_story+1),38,H-29,10.5,MUTED),text_item(str(last_story+2),905,H-29,10.5,MUTED)]
+    result.append(dict(id='lesson',items=lesson,note='核心字：'+'、'.join(BOOK['coreCharacters'])+'。答案：'+learn['answer']))
+    back=[rect(W/2,0,W/2,H,BOOK['palette']['cover']),
+          text_item(design['backHeadline'][0],52,43,26,emphasis=True),
+          text_item(design['backHeadline'][1],52,100,26,emphasis=True),
+          character(names[0],77,186,119,170),character(names[1],258,186,119,170),
+          text_item(design['backInvitation'][0],532,78,26,emphasis=True),
+          text_item(design['backInvitation'][1],532,136,26,emphasis=True),
+          text_item('原創繁體中文繪本・7–9 歲',532,574,12,MUTED),
+          picture(cover,527,304,386,257,alt=design['coverAlt']),
+          text_item(str(last_story+3),38,H-29,10.5,MUTED)]
+    add_block(back,[BOOK['title'],'原創故事與排版・點點書房','插畫：AI 輔助，依原創設定製作',
+                   '字型：芫荽／芫茜雅楷・SIL OFL 1.1',
+                   f'正文 {STORY_HAN} 個漢字・六個核心字',
+                   '答案：'+learn['answer'],'部首歸屬核對：Unicode 17.0'],52,390,382,11.5,20,MUTED,False)
+    result.append(dict(id='back',items=back,note='製作頁及封底；文字與線條原生可編輯，PNG可獨立替換。'))
+    return result
+
+
+def image_geometry(item):
+    iw, ih = Image.open(item['path']).size
+    if item['crop']:
+        l, t, r, b = item['crop']
+    else:
+        l, t, r, b = 0, 0, 1, 1
+    scale = min(item['width'] / ((r - l) * iw), item['height'] / ((b - t) * ih))
+    width, height = (r - l) * iw * scale, (b - t) * ih * scale
+    x = item['x'] + (item['width'] - width) / 2
+    y = item['y'] + (item['height'] - height) / 2
+    return dict(x=x, y=y, width=width, height=height,
+                full_x=x - l * iw * scale, full_y=y - t * ih * scale,
+                full_width=iw * scale, full_height=ih * scale, source=(iw, ih), crop=(l, t, r, b))
+
+
+def colour(value):
+    return tuple(int(value[i:i+2], 16) / 255 for i in (1, 3, 5))
+
+
+@lru_cache(maxsize=20)
+def pdf_image(path):
+    image = Image.open(path)
+    if 'A' in image.getbands():
+        return ImageReader(path)
+    # Standard high-quality PDF image encoding; the original PNG is kept intact.
+    encoded = io.BytesIO()
+    image.convert('RGB').save(encoded, format='JPEG', quality=95, subsampling=0, optimize=True)
+    encoded.seek(0)
+    return ImageReader(encoded)
+
+
+def render_pdf(page_list, target):
+    pdf = canvas.Canvas(str(target), pagesize=(W, H), pageCompression=1, initialFontName='Iansui')
+    pdf.setTitle(BOOK['title']+'｜'+BOOK['series']+'・跨頁閱讀版')
+    pdf.setAuthor('點點書房・原創繪本製作')
+    pdf.setSubject(BOOK['audience']+'；'+BOOK['theme'])
+    for page in page_list:
+        for item in page['items']:
+            kind = item['kind']
+            if kind == 'rect':
+                pdf.setFillColorRGB(*colour(item['fill']))
+                pdf.setStrokeColorRGB(*colour(item['stroke'] or item['fill']))
+                pdf.roundRect(item['x'], H - item['y'] - item['height'], item['width'], item['height'], item['radius'], stroke=int(bool(item['stroke'])), fill=1)
+            elif kind == 'image':
+                g = image_geometry(item)
+                pdf.saveState()
+                path = pdf.beginPath(); path.rect(g['x'], H - g['y'] - g['height'], g['width'], g['height'])
+                pdf.clipPath(path, stroke=0)
+                pdf.drawImage(pdf_image(item['path']), g['full_x'], H - g['full_y'] - g['full_height'], g['full_width'], g['full_height'], mask='auto')
+                pdf.restoreState()
+            else:
+                pdf.setFillColorRGB(*colour(item['colour']))
+                baseline = H - item['y'] - item['ascent']
+                obj = pdf.beginText(item['x'], baseline)
+                for ch, family, fs in zip(item['text'], item['fonts'], item['sizes']):
+                    obj.setFont(family, fs); obj.textOut(ch)
+                pdf.drawText(obj)
+                pdf.setStrokeColorRGB(*colour(item['colour']))
+                pdf.setLineWidth(NAME_MARK['strokeWidth'])
+                for mark in item['nameMarks']:
+                    x = item['x'] + mark['x']
+                    y = baseline - NAME_MARK['baselineOffset']
+                    pdf.line(x, y, x + mark['width'], y)
+        pdf.showPage()
+    pdf.save()
+
+
+def render_pptx(page_list, target):
+    deck = Presentation(); deck.slide_width = Pt(W); deck.slide_height = Pt(H)
+    deck.core_properties.title = BOOK['title']; deck.core_properties.subject = BOOK['series']+'・可編輯排版'
+    for page in page_list:
+        slide = deck.slides.add_slide(deck.slide_layouts[6])
+        slide.notes_slide.notes_text_frame.text = page['note']
+        for item in page['items']:
+            if item['kind'] == 'rect':
+                shape = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE if item['radius'] else MSO_SHAPE.RECTANGLE,
+                                               Pt(item['x']), Pt(item['y']), Pt(item['width']), Pt(item['height']))
+                shape.fill.solid(); shape.fill.fore_color.rgb = RGBColor.from_string(item['fill'][1:])
+                if item['stroke']:
+                    shape.line.color.rgb = RGBColor.from_string(item['stroke'][1:]); shape.line.width = Pt(.6)
+                else:
+                    shape.line.fill.background()
+                shape._element.spPr.append(OxmlElement('a:effectLst'))
+                for effect in shape._element.xpath('./p:style/a:effectRef'):
+                    effect.set('idx','0')
+            elif item['kind'] == 'image':
+                g = image_geometry(item)
+                shape = slide.shapes.add_picture(item['path'], Pt(g['x']), Pt(g['y']), Pt(g['width']), Pt(g['height']))
+                l, t, r, b = g['crop']
+                shape.crop_left = l; shape.crop_top = t; shape.crop_right = 1-r; shape.crop_bottom = 1-b
+                shape._element.xpath('.//p:cNvPr')[0].set('descr', item['alt'])
+            else:
+                # Group editable rules with their native text, so moving the text keeps its marks.
+                shapes = slide.shapes
+                if item['nameMarks']:
+                    group = shapes.add_group_shape()
+                    group.name = '專名號：' + item['text']
+                    shapes = group.shapes
+                shape = shapes.add_textbox(Pt(item['x']), Pt(item['y']), Pt(item['width'] + 5), Pt(item['height'] + 4))
+                tf = shape.text_frame; tf.word_wrap = False
+                tf.margin_left = tf.margin_top = tf.margin_right = tf.margin_bottom = 0
+                p = tf.paragraphs[0]; p.space_before = p.space_after = Pt(0); p.line_spacing = 1.0
+                for ch, family, fs in zip(item['text'], item['fonts'], item['sizes']):
+                    run = p.add_run(); run.text = ch; run.font.name = family; run.font.size = Pt(fs)
+                    run.font.bold = family == HAND_FAMILY
+                    run.font.color.rgb = RGBColor.from_string(item['colour'][1:])
+                    ea = OxmlElement('a:ea'); ea.set('typeface', family); run._r.get_or_add_rPr().append(ea)
+                for mark in item['nameMarks']:
+                    x = item['x'] + mark['x']
+                    y = item['y'] + item['ascent'] + NAME_MARK['baselineOffset']
+                    line = shapes.add_connector(MSO_CONNECTOR.STRAIGHT, Pt(x), Pt(y), Pt(x + mark['width']), Pt(y))
+                    line.name = '專名號：' + mark['name']
+                    line.line.width = Pt(NAME_MARK['strokeWidth'])
+                    line.line.color.rgb = RGBColor.from_string(item['colour'][1:])
+                    line._element.spPr.append(OxmlElement('a:effectLst'))
+                    for effect in line._element.xpath('./p:style/a:effectRef'):
+                        effect.set('idx', '0')
+    deck.save(str(target))
+
+
+def render_svgs(page_list, directory):
+    for page in page_list:
+        elements = []
+        for item in page['items']:
+            if item['kind'] == 'rect':
+                elements.append(f'<rect x="{item["x"]}" y="{item["y"]}" width="{item["width"]}" height="{item["height"]}" rx="{item["radius"]}" fill="{item["fill"]}" stroke="{item["stroke"] or "none"}"/>')
+            elif item['kind'] == 'image':
+                g = image_geometry(item); iw, ih = g['source']; l, t, r, b = g['crop']
+                href = os.path.relpath(item['path'], directory)
+                elements.append(f'<svg x="{g["x"]}" y="{g["y"]}" width="{g["width"]}" height="{g["height"]}" viewBox="{l*iw} {t*ih} {(r-l)*iw} {(b-t)*ih}"><title>{html.escape(item["alt"])}</title><image href="{html.escape(href)}" width="{iw}" height="{ih}"/></svg>')
+            else:
+                baseline = item['y'] + item['ascent']
+                spans = ''.join(f'<tspan font-family="{family}" font-weight="{700 if family == HAND_FAMILY else 400}" font-size="{fs}">{html.escape(ch)}</tspan>' for ch, family, fs in zip(item['text'], item['fonts'], item['sizes']))
+                elements.append(f'<text x="{item["x"]}" y="{baseline}" fill="{item["colour"]}" font-family="Iansui,芫荽">{spans}</text>')
+                for mark in item['nameMarks']:
+                    x = item['x'] + mark['x']; y = baseline + NAME_MARK['baselineOffset']
+                    elements.append(f'<line data-proper-name="{mark["name"]}" x1="{x}" y1="{y}" x2="{x+mark["width"]}" y2="{y}" stroke="{item["colour"]}" stroke-width="{NAME_MARK["strokeWidth"]}"/>')
+        content = '<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600"><rect width="960" height="600" fill="white"/>' + '\n'.join(elements) + '</svg>'
+        (directory / (page['id'] + '.svg')).write_text(content)
+        ET.fromstring(content)
+
+
+def single_pages(source, target):
+    spread = fitz.open(source); book = fitz.open()
+    for index in range(len(spread)):
+        if index == 0:
+            clips = [fitz.Rect(240, 0, 720, H)]
+        elif index == 1:
+            clips = [fitz.Rect(W/2, 0, W, H)]
+        else:
+            clips = [fitz.Rect(0, 0, W/2, H), fitz.Rect(W/2, 0, W, H)]
+        for clip in clips:
+            page = book.new_page(width=W/2, height=H)
+            page.show_pdf_page(page.rect, spread, index, clip=clip)
+    book.set_metadata({'title': BOOK['title']+'｜'+BOOK['series'], 'author': '點點書房・原創繪本製作', 'subject': BOOK['audience']+'；封面、'+str(BOOK['format']['interiorPages'])+'內頁、封底'})
+    book.set_toc([[1,'封面',1],[1,'故事',3],[1,BOOK['radical']['base']+'部遊戲',2*len(BOOK['spreads'])+3],[1,'製作頁',2*len(BOOK['spreads'])+5],[1,'封底',2*len(BOOK['spreads'])+6]])
+    book.save(target, garbage=4, deflate=True)
+
+
+def all_shapes(shapes):
+    for shape in shapes:
+        if shape.shape_type == MSO_SHAPE_TYPE.GROUP:
+            yield from all_shapes(shape.shapes)
+        else:
+            yield shape
+
+
+def validate(page_list, output, proof):
+    for page, spread in zip(page_list[2:2+len(BOOK['spreads'])],BOOK['spreads']):
+        visible=''.join(item['text'] for item in page['items'] if item['kind']=='text' and item['size']>11)
+        assert visible==''.join(spread['lines']), (page['id'],'Story text differs from manuscript')
+    artwork_count=0
+    if not proof:
+        provenance=json.loads((ROOT/'artwork-log.json').read_text())
+        for record in [provenance['characterBible']]+provenance['illustrations']:
+            assert hashlib.sha256((ROOT/record['file']).read_bytes()).hexdigest()==record['sha256'], ('Artwork differs from logged original',record['file'])
+            artwork_count+=1
+    cmaps = {family: FontToolsFont(path).getBestCmap() for family, path in FONTS.items()}
+    missing = sorted({ch for p in page_list for i in p['items'] if i['kind']=='text' for ch, family in zip(i['text'], i['fonts']) if ord(ch) not in cmaps[family]})
+    assert not missing, 'Missing glyphs: ' + ''.join(missing)
+    for p in page_list:
+        for i in p['items']:
+            if i['kind'] == 'text':
+                assert i['x'] >= 0 and i['x'] + i['width'] <= W + .1 and i['y'] + i['height'] <= H, (p['id'], i['text'], 'outside page')
+                if p['id'] != 'cover':
+                    assert not (i['x'] < W/2 and i['x'] + i['width'] > W/2), (p['id'], i['text'], 'text crosses binding')
+                else:
+                    assert 240 <= i['x'] and i['x'] + i['width'] <= 720, (p['id'], 'text outside cover trim')
+    spreads = fitz.open(output / f"{BOOK['title']}_跨頁閱讀版.pdf")
+    leaves = fitz.open(output / f"{BOOK['title']}_繪本.pdf")
+    assert len(spreads) == BOOK['format']['readingSlides'] and len(leaves) == BOOK['format']['interiorPages']+2
+    leaf_index = 0
+    for index, page in enumerate(page_list):
+        if index == 0:
+            clips = [(240,720)]
+        elif index == 1:
+            clips = [(480,960)]
+        else:
+            clips = [(0,480),(480,960)]
+        for left,right in clips:
+            expected = ''.join(i['text'] for i in page['items'] if i['kind']=='text' and i['x'] >= left and i['x'] + i['width'] <= right)
+            actual = leaves[leaf_index].get_text(clip=leaves[leaf_index].rect)
+            assert Counter(re.sub(r'\s','',expected)) == Counter(re.sub(r'\s','',actual)), ('Clipped or missing text',leaf_index+1)
+            leaf_index += 1
+    full_text = ''.join(p.get_text() for p in spreads)
+    for ch in BOOK['coreCharacters'] + BOOK['extensionCharacters'] + [BOOK['radical']['base'],BOOK['radical']['variant']]:
+        assert ch in full_text, 'PDF text missing: ' + ch
+    deck = Presentation(output / f"{BOOK['title']}_可編輯排版.pptx")
+    assert len(deck.slides) == BOOK['format']['readingSlides']
+    assert sum(len(s.shapes) for s in deck.slides) > 100
+    expected = ''.join(i['text'] for p in page_list for i in p['items'] if i['kind']=='text')
+    actual = ''.join(shape.text for slide in deck.slides for shape in all_shapes(slide.shapes) if shape.has_text_frame)
+    assert expected == actual, 'Editable slide text differs from book source'
+    # Verify the exported runs: fallback or flattened text would defeat the learning cue.
+    handwritten = Counter()
+    proper_name_marks = Counter()
+    for layout, pdf_page, slide in zip(page_list, spreads, deck.slides):
+        text_items = [item for item in layout['items'] if item['kind'] == 'text']
+        expected_runs = [(ch, family, fs) for item in text_items
+                         for ch, family, fs in zip(item['text'], item['fonts'], item['sizes'])]
+        actual_runs = [(run.text, run.font.name, run.font.size.pt)
+                       for shape in all_shapes(slide.shapes) if shape.has_text_frame
+                       for para in shape.text_frame.paragraphs for run in para.runs]
+        for shape in all_shapes(slide.shapes):
+            if shape.has_text_frame:
+                for para in shape.text_frame.paragraphs:
+                    for run in para.runs:
+                        assert run.font.bold==(run.font.name==HAND_FAMILY), (layout['id'],'Editable target font weight changed')
+        assert len(actual_runs) == len(expected_runs), (layout['id'], 'Editable font runs missing')
+        for (ch, family, fs), (text, exported_font, exported_size) in zip(expected_runs, actual_runs):
+            assert ch == text and family == exported_font and abs(fs - exported_size) < .011, (layout['id'], ch, 'Editable font or size changed')
+        expected_hand = Counter((ch, round(fs, 2)) for ch, family, fs in expected_runs if family == HAND_FAMILY)
+        pdf_hand = Counter((char['c'], round(span['size'], 2))
+                           for block in pdf_page.get_text('rawdict')['blocks'] if 'lines' in block
+                           for line in block['lines'] for span in line['spans'] if HAND_FAMILY in span['font']
+                           for char in span['chars'])
+        assert pdf_hand == expected_hand, (layout['id'], 'PDF handwriting font or size changed')
+        expected_marks = [(item, mark) for item in text_items for mark in item['nameMarks']]
+        pdf_rules = [drawing for drawing in pdf_page.get_drawings()
+                     if len(drawing['items']) == 1 and drawing['items'][0][0] == 'l']
+        pptx_rules = [shape for shape in all_shapes(slide.shapes)
+                      if shape.shape_type == MSO_SHAPE_TYPE.LINE and shape.name.startswith('專名號：')]
+        svg_rules = ET.parse((output/'editable' if proof else ROOT/'editable')/(layout['id']+'.svg')).findall('{http://www.w3.org/2000/svg}line')
+        assert len(pdf_rules) == len(pptx_rules) == len(svg_rules) == len(expected_marks), (layout['id'], 'Missing proper-name mark')
+        for (item, mark), drawing, shape, rule in zip(expected_marks, pdf_rules, pptx_rules, svg_rules):
+            x = item['x'] + mark['x']; y = item['y'] + item['ascent'] + NAME_MARK['baselineOffset']
+            expected_line = (x, y, x + mark['width'], y)
+            pdf_line = tuple(drawing['items'][0][1]) + tuple(drawing['items'][0][2])
+            pptx_line = (shape.begin_x.pt, shape.begin_y.pt, shape.end_x.pt, shape.end_y.pt)
+            svg_line = tuple(float(rule.get(key)) for key in ('x1','y1','x2','y2'))
+            assert all(abs(a-b)<.02 for line in (pdf_line,pptx_line,svg_line) for a,b in zip(line,expected_line)), (layout['id'],mark['name'],'Misplaced proper-name mark')
+            assert abs(drawing['width']-NAME_MARK['strokeWidth'])<.02 and abs(shape.line.width.pt-NAME_MARK['strokeWidth'])<.02
+            assert abs(float(rule.get('stroke-width'))-NAME_MARK['strokeWidth'])<.02
+            assert shape._element.spPr.find('{http://schemas.openxmlformats.org/drawingml/2006/main}effectLst') is not None
+            assert all(effect.get('idx') == '0' for effect in shape._element.xpath('./p:style/a:effectRef')), 'Proper-name rules must not inherit theme shadows'
+            assert shape.name == '專名號：'+mark['name'] and rule.get('data-proper-name') == mark['name']
+            proper_name_marks[mark['name']] += 1
+        handwritten.update(ch for ch, family, fs in expected_runs if family == HAND_FAMILY)
+        for item in text_items:
+            for ch, family, fs in zip(item['text'], item['fonts'], item['sizes']):
+                if ch in NORMAL_CHARACTERS:
+                    assert family == 'Iansui' and abs(fs-item['size']) < .001, (layout['id'], ch, 'Ordinary character enlarged')
+        expected_normal = Counter((ch, round(fs, 2)) for ch, family, fs in expected_runs if ch in NORMAL_CHARACTERS)
+        pdf_normal = Counter((char['c'], round(span['size'], 2))
+                             for block in pdf_page.get_text('rawdict')['blocks'] if 'lines' in block
+                             for line in block['lines'] for span in line['spans']
+                             for char in span['chars'] if char['c'] in NORMAL_CHARACTERS and 'Iansui' in span['font'])
+        assert pdf_normal == expected_normal, (layout['id'], 'PDF ordinary character font/size changed')
+        svg_root = ET.parse((output/'editable' if proof else ROOT/'editable')/(layout['id']+'.svg')).getroot()
+        svg_normal = Counter((span.text, round(float(span.get('font-size')), 2))
+                             for span in svg_root.findall('.//{http://www.w3.org/2000/svg}tspan')
+                             if span.text in NORMAL_CHARACTERS and span.get('font-family') == 'Iansui')
+        assert svg_normal == expected_normal, (layout['id'], 'SVG ordinary character font/size changed')
+        if layout['id'].startswith('s'):
+            for item in text_items:
+                for ch, family, fs in zip(item['text'], item['fonts'], item['sizes']):
+                    if ch in TARGETS:
+                        assert family == HAND_FAMILY and abs(fs / item['size'] - EMPHASIS_SCALE) < .001
+    manuscript_names = Counter(match.group() for spread in BOOK['spreads'] for line in spread['lines'] for match in NAME_PATTERN.finditer(line))
+    assert proper_name_marks == manuscript_names, 'Every manuscript name must retain a complete proper-name mark'
+    report = {'status': 'proof' if proof else 'complete', 'spreadPages':len(spreads), 'singlePages':len(leaves),
+              'editableSlides':len(deck.slides), 'missingGlyphs':missing, 'allTextEditable':True,
+              'originalArtworkHashesVerified':artwork_count,
+              'properNameMarks': {'names': dict(proper_name_marks), 'style': 'continuous rule below each full name',
+                                  'pdfPptxSvgGeometryVerified': True, 'editableTextAndRuleGrouped': True},
+              'targetTypography': {'font': HAND_FAMILY, 'bodyScale': EMPHASIS_SCALE,
+                                   'pdfAndPptxRunsVerified': True, 'handwrittenGlyphs': dict(handwritten)},
+              'normalCharacterTypography': {'characters':sorted(NORMAL_CHARACTERS),'bodyScale':1,
+                                            'font':'Iansui','pdfAndPptxRunsVerified':True,'svgRunsVerified':True},
+              'storyHanCharacters':len(re.findall(r'[\u3400-\u9fff]', ''.join(''.join(s['lines']) for s in BOOK['spreads']))),
+              'targets':{ch:full_text.count(ch) for ch in BOOK['coreCharacters']+BOOK['extensionCharacters']}}
+    (output / 'validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+    return report
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__); parser.add_argument('--proof', action='store_true')
+    args = parser.parse_args()
+    output = ROOT / ('.cache/proof' if args.proof else 'exports')
+    editable = output / 'editable' if args.proof else ROOT / 'editable'
+    output.mkdir(parents=True, exist_ok=True); editable.mkdir(parents=True, exist_ok=True)
+    page_list = pages(args.proof)
+    render_pdf(page_list, output / f"{BOOK['title']}_跨頁閱讀版.pdf")
+    single_pages(output / f"{BOOK['title']}_跨頁閱讀版.pdf", output / f"{BOOK['title']}_繪本.pdf")
+    render_pptx(page_list, output / f"{BOOK['title']}_可編輯排版.pptx")
+    render_svgs(page_list, editable)
+    report = validate(page_list, output, args.proof)
+    doc = fitz.open(output / f"{BOOK['title']}_跨頁閱讀版.pdf")
+    preview = ROOT / '.cache' / ('proof/previews' if args.proof else 'final/previews')
+    preview.mkdir(parents=True, exist_ok=True)
+    thumbs = []
+    for index, page in enumerate(doc):
+        pix = page.get_pixmap(matrix=fitz.Matrix(1,1), alpha=False)
+        pix.save(preview / f'{index+1:02}.png')
+        thumb = Image.frombytes('RGB',[pix.width,pix.height],pix.samples); thumb.thumbnail((320,200))
+        tile=Image.new('RGB',(336,228),'#e9ece9');tile.paste(thumb,(8,18));ImageDraw.Draw(tile).text((8,3),str(index+1),fill='#303536');thumbs.append(tile)
+    sheet=Image.new('RGB',(336*3,228*((len(thumbs)+2)//3)),'white')
+    for index,thumb in enumerate(thumbs):sheet.paste(thumb,((index%3)*336,(index//3)*228))
+    sheet.save(output / '全書縮圖.png')
+    print(json.dumps(report,ensure_ascii=False,indent=2))
+
+
+if __name__ == '__main__':
+    main()

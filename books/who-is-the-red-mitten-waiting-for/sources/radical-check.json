@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-02",
+  "description": "僅核對部首歸屬，不作粵語讀音來源",
+  "dataset": "Unicode 17.0 kRSUnicode",
+  "source": "https://github.com/unicode-org/unicodetools/blob/578f6c0516f5f268292ebda50b51848407a06478/unicodetools/data/ucd/17.0.0/Unihan/kRSUnicode.txt",
+  "sha256": "481f8a3d2fda0c6b8e6f7c746a0eedfb145a62f30bf6e61527a8f7cdb2a99108",
+  "entries": {
+    "說": {
+      "codepoint": "U+8AAA",
+      "kRSUnicode": "149.7",
+      "sourceLine": "8AA1..8AAE\t149.7"
+    },
+    "話": {
+      "codepoint": "U+8A71",
+      "kRSUnicode": "149.6",
+      "sourceLine": "8A61..8A8A\t149.6"
+    },
+    "請": {
+      "codepoint": "U+8ACB",
+      "kRSUnicode": "149.8",
+      "sourceLine": "8AAF..8ADA\t149.8"
+    },
+    "謝": {
+      "codepoint": "U+8B1D",
+      "kRSUnicode": "149.10",
+      "sourceLine": "8B04..8B22\t149.10"
+    },
+    "記": {
+      "codepoint": "U+8A18",
+      "kRSUnicode": "149.3",
+      "sourceLine": "8A09..8A1A\t149.3"
+    },
+    "認": {
+      "codepoint": "U+8A8D",
+      "kRSUnicode": "149.7",
+      "sourceLine": "8A8B..8A9F\t149.7"
+    },
+    "言": {
+      "codepoint": "U+8A00",
+      "kRSUnicode": "149.0",
+      "sourceLine": "8A00..8A01\t149.0"
+    },
+    "訁": {
+      "codepoint": "U+8A01",
+      "kRSUnicode": "149.0",
+      "sourceLine": "8A00..8A01\t149.0"
+    },
+    "口": {
+      "codepoint": "U+53E3",
+      "kRSUnicode": "30.0",
+      "sourceLine": "53E3\t30.0"
+    },
+    "借": {
+      "codepoint": "U+501F",
+      "kRSUnicode": "9.8",
+      "sourceLine": "4FEE..503A\t9.8"
+    }
+  }
+}
