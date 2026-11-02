@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "generator": "OpenAI image_gen",
+  "date": "2026-11-02",
+  "characterBible": {
+    "file": "assets/characters.png",
+    "source": "/workspace/generated_images/exec-08c29283-898b-45ac-b6b0-bdd4f61f85c9.png",
+    "prompt": "Create an ORIGINAL character model sheet for an independent Traditional Chinese picture book for ages 7–9, 'Little Birds Beside the Line'. Pure WHITE paper, NO text, letters, labels, numbers, watermarks or props. FOUR separate full-body figures in FOUR equal columns, left to right: BOY YU front, BOY YU three-quarter; GIRL LIN front, GIRL LIN three-quarter. Same height, eight-year-old East Asian children, natural child proportions about 3.8 heads tall, all shoes visible, empty hands, no overlap. YU: black short SIDE-SWEPT hair with a tiny triangular forelock, gentle dark graphite eyes, OLIVE GREEN long-sleeve crewneck shirt with NO patches or logos, beige long trousers, deep plum-purple sneakers. LIN: straight chin-length BLACK BOB with softly curved ends, ONE BROAD MUSTARD fabric headband across top of head, no clips or braids; dusty ROSE PINK button-front smock over cream long-sleeve shirt, slate blue long trousers, white canvas shoes. Subtle warm pink cheeks and curious thoughtful expressions. ART DIRECTION: flat grey GRAPHITE PENCIL contours, lively dark graphite hair hatching, restrained COLORED PENCIL and dry pastel sage/rose/ochre/blue accents, slight white paper grain, huge airy white separation. Natural hands, expressive posture. NOT anime, not 3D, not photorealistic, no glossy gradients or dense painted background. Entirely original characters, no existing-character likeness.",
+    "references": [],
+    "sha256": "38d929d9b9796f1840e540872cca257c297665e09303a2908d88346b43fe0a02"
+  },
+  "illustrations": []
+}

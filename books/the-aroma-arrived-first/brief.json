@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "book": {
+    "slug": "the-aroma-arrived-first",
+    "title": "香味先到了",
+    "language": "zh-HK"
+  },
+  "audience": {
+    "ageMin": 7,
+    "ageMax": 9,
+    "readingMode": "independent",
+    "readingAbility": "小二至小三，可自行閱讀",
+    "accessibilityNeeds": []
+  },
+  "theme": "社區小聚會中的等待、光亮、香味與小幫手的參與",
+  "content": {
+    "mode": "original",
+    "request": "獨立創作一本以漢字火部為主題的兒童故事繪本，與另一本新作有獨立人物及情節。",
+    "requiredElements": [
+      "部首字融入完整故事",
+      "原生文字與完整插畫"
+    ],
+    "avoidElements": [
+      "複製參考書圖像或原句",
+      "沿用另一本書人物與情節"
+    ],
+    "sourceTextPaths": [
+      "story.json"
+    ],
+    "references": [
+      {
+        "title": "生日會",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 16,
+        "sha256": "8f67a3121f40ebaa67844db1918eccb9c7f21bdc4faeacf4acd98557499d9eaf",
+        "source": "使用者附件，未重新公開原 PDF"
+      },
+      {
+        "title": "跟屁蟲",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 17,
+        "sha256": "abfb8339a9bbcb41fa25d914a9c1bff836b7ffc986eaa04077252a5d48a5a8fe",
+        "source": "使用者附件，未重新公開原 PDF"
+      }
+    ],
+    "learningGoals": [
+      "認識火部與灬的常見寫法",
+      "在完整情節中理解核心字"
+    ],
+    "targetCharacters": [
+      "炒",
+      "煮",
+      "烤",
+      "燈",
+      "照",
+      "熱"
+    ],
+    "characterNames": [
+      "米米"
+    ]
+  },
+  "design": {
+    "artDirection": "灰鉛筆與局部色鉛筆淡彩，大留白、動作及表情特寫；每本獨立配色與角色",
+    "palette": [
+      "#F6EDDB",
+      "#373632",
+      "#746C59",
+      "#DEB864",
+      "#C9684E",
+      "#8EAA91",
+      "#8CA6B0"
+    ],
+    "pageSize": {
+      "width": 960,
+      "height": 600,
+      "unit": "pt"
+    },
+    "storySpreads": 12,
+    "wordBudget": 313,
+    "bodyFont": "Iansui",
+    "emphasisFont": "JyunsaiKaai Bold",
+    "emphasisScale": 1.5,
+    "properNameMarks": true,
+    "normalCharacters": [
+      "火"
+    ]
+  },
+  "deliverables": {
+    "formats": [
+      "pdf-spread",
+      "pdf-single",
+      "pptx",
+      "svg"
+    ],
+    "readAlong": false,
+    "audio": null
+  },
+  "publication": {
+    "github": true,
+    "permanentWebsite": true,
+    "destination": "https://angusqaq.github.io/audio-book/"
+  },
+  "decisions": {
+    "userRequirements": [
+      "火部首主題，兩本為獨立作品",
+      "本次明確確認7–9歲自主閱讀及完整插畫PDF＋可編輯排版",
+      "GitHub保存正式檔案、每階段commit並同步永久網站"
+    ],
+    "editorialChoices": [
+      "題名《香味先到了》；12故事跨頁、28內頁，含封面封底30單頁",
+      "只放大選定字目，部首本形在說明中維持一般字級",
+      "本次成品為PDF與可編輯排版，不新增音源"
+    ],
+    "unresolvedQuestions": []
+  }
+}

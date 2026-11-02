@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "generator": "OpenAI image_gen",
+  "date": "2026-11-02",
+  "characterBible": {
+    "file": "assets/characters.png",
+    "source": "/workspace/generated_images/exec-6d734e88-bebf-4b08-adc7-830c0f7873b6.png",
+    "prompt": "Create an ORIGINAL character model sheet for an independent Traditional Chinese picture book for ages 7–9, 'The Aroma Arrived First'. Pure WHITE paper, NO text, letters, labels, numbers or watermark. FOUR separate full-body figures in FOUR equally spaced columns, left to right: GIRL MIMI front, GIRL MIMI three-quarter; GRANDMOTHER front, GRANDMOTHER three-quarter. Common ground baseline; the eight-year-old girl is about TWO THIRDS the grandmother's height, not a toddler. Entire shoes visible, no overlaps, empty hands. MIMI: East Asian girl, expressive dark eyes, black hair in TWO compact HIGH SIDE BUNS with a few curly wisps, no braids or bob. Cream long-sleeve shirt, VERMILION RED knitted sleeveless vest, navy cuffed long trousers, mustard yellow closed velcro shoes. No apron, bag or hair clips. GRANDMOTHER: East Asian woman around 65, friendly round face, short SILVER GREY wavy hair, round dark-rim eyeglasses, warm pale OCHRE long-sleeve shirt, long SAGE GREEN apron with one front pocket, charcoal long trousers, brick-red closed shoes. No hat or jewelry. ART: delicate flat GRAPHITE PENCIL outlines and densely scribbled graphite hair, sparse dry COLORED PENCIL accents in warm ochre, vermilion, sage and slate. Warm expressive but not exaggerated faces, childlike comic gesture, slight white-paper grain. Handcrafted pencil, NOT 3D, not photorealistic, not glossy airbrushing, not saturated painted skin. White background, no scenery, original faces and outfits, readable hands.",
+    "references": [],
+    "sha256": "5a568994fe9124099c1ad0a1b5188c5398efb73150ce4fbf7d6e5c3bad22d44f"
+  },
+  "illustrations": []
+}

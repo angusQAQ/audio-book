@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-02",
+  "description": "僅核對部首歸屬，不作粵語讀音來源",
+  "dataset": "Unicode 17.0 kRSUnicode",
+  "source": "https://github.com/unicode-org/unicodetools/blob/578f6c0516f5f268292ebda50b51848407a06478/unicodetools/data/ucd/17.0.0/Unihan/kRSUnicode.txt",
+  "sha256": "481f8a3d2fda0c6b8e6f7c746a0eedfb145a62f30bf6e61527a8f7cdb2a99108",
+  "entries": {
+    "火": {
+      "codepoint": "U+706B",
+      "kRSUnicode": "86.0",
+      "sourceLine": "706B..706C\t86.0"
+    },
+    "灬": {
+      "codepoint": "U+706C",
+      "kRSUnicode": "86.0",
+      "sourceLine": "706B..706C\t86.0"
+    },
+    "炒": {
+      "codepoint": "U+7092",
+      "kRSUnicode": "86.4",
+      "sourceLine": "7088..709E\t86.4"
+    },
+    "煮": {
+      "codepoint": "U+716E",
+      "kRSUnicode": "86.8",
+      "sourceLine": "716E\t86.8"
+    },
+    "烤": {
+      "codepoint": "U+70E4",
+      "kRSUnicode": "86.6",
+      "sourceLine": "70C4..70EE\t86.6"
+    },
+    "燈": {
+      "codepoint": "U+71C8",
+      "kRSUnicode": "86.12",
+      "sourceLine": "71B6..71DE\t86.12"
+    },
+    "照": {
+      "codepoint": "U+7167",
+      "kRSUnicode": "86.9",
+      "sourceLine": "715C..716D\t86.9"
+    },
+    "熱": {
+      "codepoint": "U+71B1",
+      "kRSUnicode": "86.11",
+      "sourceLine": "71A7..71B5\t86.11"
+    },
+    "魚": {
+      "codepoint": "U+9B5A",
+      "kRSUnicode": "195.0",
+      "sourceLine": "9B5A\t195.0"
+    },
+    "想": {
+      "codepoint": "U+60F3",
+      "kRSUnicode": "61.9",
+      "sourceLine": "60F0..6126\t61.9"
+    }
+  }
+}

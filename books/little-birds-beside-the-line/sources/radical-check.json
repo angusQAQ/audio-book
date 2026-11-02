@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-02",
+  "description": "僅核對部首歸屬，不作粵語讀音來源",
+  "dataset": "Unicode 17.0 kRSUnicode",
+  "source": "https://github.com/unicode-org/unicodetools/blob/578f6c0516f5f268292ebda50b51848407a06478/unicodetools/data/ucd/17.0.0/Unihan/kRSUnicode.txt",
+  "sha256": "481f8a3d2fda0c6b8e6f7c746a0eedfb145a62f30bf6e61527a8f7cdb2a99108",
+  "entries": {
+    "心": {
+      "codepoint": "U+5FC3",
+      "kRSUnicode": "61.0",
+      "sourceLine": "5FC3..5FC4\t61.0"
+    },
+    "忄": {
+      "codepoint": "U+5FC4",
+      "kRSUnicode": "61.0",
+      "sourceLine": "5FC3..5FC4\t61.0"
+    },
+    "急": {
+      "codepoint": "U+6025",
+      "kRSUnicode": "61.5",
+      "sourceLine": "6007..603F\t61.5"
+    },
+    "忘": {
+      "codepoint": "U+5FD8",
+      "kRSUnicode": "61.3",
+      "sourceLine": "5FCB..5FDC\t61.3"
+    },
+    "怕": {
+      "codepoint": "U+6015",
+      "kRSUnicode": "61.5",
+      "sourceLine": "6007..603F\t61.5"
+    },
+    "悄": {
+      "codepoint": "U+6084",
+      "kRSUnicode": "61.7",
+      "sourceLine": "607E..60AF\t61.7"
+    },
+    "想": {
+      "codepoint": "U+60F3",
+      "kRSUnicode": "61.9",
+      "sourceLine": "60F0..6126\t61.9"
+    },
+    "慢": {
+      "codepoint": "U+6162",
+      "kRSUnicode": "61.11",
+      "sourceLine": "6152..6167\t61.11"
+    },
+    "願": {
+      "codepoint": "U+9858",
+      "kRSUnicode": "181.10",
+      "sourceLine": "9856..985E\t181.10"
+    },
+    "眼": {
+      "codepoint": "U+773C",
+      "kRSUnicode": "109.6",
+      "sourceLine": "772D..773E\t109.6"
+    }
+  }
+}
