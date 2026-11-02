@@ -8,8 +8,8 @@
   "originalArtworkHashesVerified": 16,
   "properNameMarks": {
     "names": {
-      "阿琳": 8,
-      "小宇": 8
+      "琳琳": 8,
+      "豪豪": 8
     },
     "style": "continuous rule below each full name",
     "pdfPptxSvgGeometryVerified": true,
@@ -26,7 +26,7 @@
       "悄": 8,
       "想": 9,
       "慢": 12,
-      "忄": 2
+      "忄": 1
     }
   },
   "normalCharacterTypography": {
@@ -38,7 +38,7 @@
     "pdfAndPptxRunsVerified": true,
     "svgRunsVerified": true
   },
-  "storyHanCharacters": 272,
+  "storyHanCharacters": 270,
   "targets": {
     "急": 4,
     "忘": 5,

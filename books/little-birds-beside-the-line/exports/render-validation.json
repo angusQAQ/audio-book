@@ -18,11 +18,11 @@
     "s10",
     "lesson"
   ],
-  "officeRenderedPdfSha256": "e8219ac1d8d337e35f8a57f262a28b80ee072ae626f5ffcbf96307dbbfbcc5d6",
+  "officeRenderedPdfSha256": "23ae8df74399fb935049d27e6b5a5c026a2c35162389da88d412222ae0939b83",
   "files": {
-    "黑線旁的小鳥_繪本.pdf": "b53a6f2cfd4c1cc29c731d4df827a1734212bc5273de3924193cb06253708259",
-    "黑線旁的小鳥_跨頁閱讀版.pdf": "3525791bef568487f50722d56d19595667066ac5c91f384f3f7bba4a98df5373",
-    "黑線旁的小鳥_可編輯排版.pptx": "d715f60dfbebc563ee5502efe3080fdd5f3a538fde8e3721dcfd67e6d0eee7ad"
+    "黑線旁的小鳥_繪本.pdf": "aef396a8dc33386e0b7fb7a13d4d2d81e14a804030f9038b7ac8eb6e8320cd69",
+    "黑線旁的小鳥_跨頁閱讀版.pdf": "49e4aff436c6f30dad5efe963c50fbab27cbefd12b3b3f071c134adb17eca975",
+    "黑線旁的小鳥_可編輯排版.pptx": "d21558d39b7b76a82824ff9b71ccaa15443ba7be7b57f820b98375bf2cdd8530"
   },
   "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
 }

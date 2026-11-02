@@ -60,8 +60,8 @@
       "慢"
     ],
     "characterNames": [
-      "小宇",
-      "阿琳"
+      "豪豪",
+      "琳琳"
     ]
   },
   "design": {
@@ -81,7 +81,7 @@
       "unit": "pt"
     },
     "storySpreads": 12,
-    "wordBudget": 272,
+    "wordBudget": 270,
     "bodyFont": "Iansui",
     "emphasisFont": "JyunsaiKaai Bold",
     "emphasisScale": 1.5,
@@ -109,7 +109,9 @@
     "userRequirements": [
       "心部首主題，兩本為獨立作品",
       "本次明確確認7–9歲自主閱讀及完整插畫PDF＋可編輯排版",
-      "GitHub保存正式檔案、每階段commit並同步永久網站"
+      "GitHub保存正式檔案、每階段commit並同步永久網站",
+      "人物名稱使用疊字：小宇改為豪豪、阿琳改為琳琳，全部專名號同步。",
+      "調整笑容用語，完整句子不拆到左右頁；心與忄兩種常見寫法均列出。"
     ],
     "editorialChoices": [
       "題名《黑線旁的小鳥》；12故事跨頁、28內頁，含封面封底30單頁",

@@ -40,6 +40,7 @@ TARGETS = set(BOOK['coreCharacters'] + BOOK['extensionCharacters'] + [BOOK['radi
 NORMAL_CHARACTERS = set(BOOK['typography']['normalCharacters'])
 assert TARGETS.isdisjoint(NORMAL_CHARACTERS), 'Ordinary characters must not receive target emphasis'
 PROPER_NAMES = BOOK['typography']['properNames']
+assert all(len(name) == 2 and name[0] == name[1] for name in PROPER_NAMES), 'This book uses reduplicated character names'
 NAME_MARK = BOOK['typography']['properNameMark']
 NAME_PATTERN = re.compile('|'.join(re.escape(name) for name in sorted(PROPER_NAMES, key=len, reverse=True)))
 STORY_HAN = len(re.findall(r'[\u3400-\u9fff]', ''.join(''.join(s['lines']) for s in BOOK['spreads'])))
@@ -148,7 +149,7 @@ def pages(proof):
         else:
             split=spread.get('textSplit',1)
             add_block(items,paragraphs[:split],52,38,400,24,39)
-            add_block(items,paragraphs[split:],534,38,374,24,39)
+            add_block(items,paragraphs[split:],534,38,spread.get('rightTextWidth',374),24,39)
         for number,x in zip(spread['pages'],(38,905)):items.append(text_item(str(number),x,H-29,10.5,MUTED))
         result.append(dict(id=spread['id'],items=items,note=f"內頁 {spread['pages'][0]}–{spread['pages'][1]}。{spread['beat']}\n"+'\n'.join(spread['lines'])))
     learn=BOOK['learning']
@@ -158,9 +159,13 @@ def pages(proof):
         lesson.append(rect(x,y,118,158,learn['cardFill'],learn['cardStroke'],8))
         glyph=text_item(ch,0,y+8,44,emphasis=True);glyph['x']=x+(118-glyph['width'])/2;lesson.append(glyph)
         example=text_item(word,0,y+115,18,emphasis=True);example['x']=x+(118-example['width'])/2;lesson.append(example)
-    lesson += [text_item(learn['variantHeading'],532,38,23,emphasis=True),
-               text_item(learn['variantLabel'],540,158,19,MUTED),
-               text_item(BOOK['radical']['variant'],782,126,48,emphasis=True)]
+    lesson.append(text_item(learn['variantHeading'],532,38,23,emphasis=True))
+    forms = [text_item(label, x, 0, 23, emphasis=True)
+             for label, x in zip(learn['radicalForms'], (540, 738))]
+    form_ascent = max(item['ascent'] for item in forms)
+    for item in forms:
+        item['y'] = 142 + form_ascent - item['ascent']
+    lesson.extend(forms)
     add_block(lesson,learn['explanation'],532,266,377,18,29,emphasis=True)
     lesson.append(text_item(learn['example'],532,418,21,emphasis=True))
     lesson.append(text_item(learn['note'],532,474,16,emphasis=True))

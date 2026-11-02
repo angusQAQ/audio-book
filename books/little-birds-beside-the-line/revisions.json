@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-02",
+  "baseCommit": "7d12dc7",
+  "requestedBy": "user",
+  "changes": [
+    {
+      "location": "all character names / proper-name marks / visible text / alt text / brief",
+      "before": [
+        "小宇",
+        "阿琳"
+      ],
+      "after": [
+        "豪豪",
+        "琳琳"
+      ]
+    },
+    {
+      "location": "s03.lines[1]",
+      "before": "阿琳的笑不見了。",
+      "after": "琳琳不笑了。"
+    },
+    {
+      "location": "s06.lines / textSplit",
+      "before": [
+        "可是，越想不看，",
+        "眼睛越要往那裏跑。"
+      ],
+      "after": "可是，越想不看，眼睛越要往那裏跑。",
+      "layout": "合併為同一段文字，整句置於右頁，自然換行，不拆到左右頁。"
+    },
+    {
+      "location": "learning.radicalForms",
+      "before": "「心」的常見寫法（只示忄）",
+      "after": [
+        "心字底：心",
+        "豎心旁：忄"
+      ]
+    }
+  ],
+  "nameRequirement": "人物人名使用疊字，豪豪與琳琳各附連續專名號。",
+  "storyHanCharacters": 270,
+  "artwork": "全部插畫原圖與歷史生成提示保留，依最新人物名更新故事及替代文字。"
+}
