@@ -25,7 +25,7 @@ python3 books/the-rainy-day-bamboo-band/build_book.py
 
 程式輸出兩份PDF、PowerPoint、14份SVG及全書縮圖，檢查字型缺字、原稿、原圖雜湊、單頁裁切、150%字目、普通部首字級及姓名線幾何。
 
-將PowerPoint以LibreOffice實際另存全部頁面PDF，並以安裝了本書字型的Inkscape渲染editable內的s01、s10及lesson為同名PNG後執行：
+將PowerPoint以LibreOffice實際另存全部頁面PDF，並以安裝了本書字型的Inkscape渲染editable內的s01、s05、s10及lesson為同名PNG後執行：
 
 ```bash
 python3 books/the-rainy-day-bamboo-band/verify_exports.py --office-pdf 實際Office輸出.pdf --svg-renders SVG渲染目錄
