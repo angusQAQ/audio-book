@@ -360,6 +360,10 @@ def all_shapes(shapes):
 
 def validate(page_list, output, proof):
     for page, spread in zip(page_list[2:2+len(BOOK['spreads'])],BOOK['spreads']):
+        if spread['layout'] == 'top-split' and spread['textSplit'] < len(spread['lines']):
+            left_text = ''.join(spread['lines'][:spread['textSplit']])
+            assert not left_text.endswith(('，','：','、')), (spread['id'], 'Unfinished sentence crosses pages')
+            assert left_text.count('「') == left_text.count('」'), (spread['id'], 'Quotation crosses pages')
         visible=''.join(item['text'] for item in page['items'] if item['kind']=='text' and item['size']>11)
         assert visible==''.join(spread['lines']), (page['id'],'Story text differs from manuscript')
     artwork_count=0

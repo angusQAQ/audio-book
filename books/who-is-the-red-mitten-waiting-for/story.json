@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "storyboard-ready",
+  "status": "artwork-ready",
   "audience": "7–9 歲・小二至小三自主閱讀",
   "language": "zh-HK",
   "extensionCharacters": [],
@@ -215,11 +215,11 @@
       "beat": "把模糊問題換成有具體對象的完整提問。",
       "art": "下半部兩人並肩向操場方向詢問，朗朗舉紅手套，柔柔一手輕攏嘴邊；嘴形自然，沒有紙張告示或文字。",
       "layout": "top-split",
-      "textSplit": 2,
+      "textSplit": 1,
       "artPlacement": [
-        0,
+        44,
         100,
-        960,
+        916,
         460
       ]
     },
@@ -308,7 +308,7 @@
       "artPlacement": [
         0,
         100,
-        960,
+        941.133,
         460
       ]
     },

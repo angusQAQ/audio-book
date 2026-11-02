@@ -107,6 +107,80 @@
       ],
       "transparentBackground": false,
       "sha256": "940fe484202bdd4151573f1f78c4e8d1264647a93d865cde66c0b68e1e4c9398"
+    },
+    {
+      "id": "s07-initial",
+      "file": "assets/revisions/s07-initial.png",
+      "source": "/workspace/generated_images/exec-3eaa7345-67c2-41df-9d7e-d5585e48cc43.png",
+      "prompt": "Original delicate graphite pencil and restrained dry colored-pencil storybook art, abundant PURE WHITE paper, no 3D, no photorealism, no glossy rendering. Characters MUST match the attached original model: LANGLANG boy age8, neat round black BOWL haircut, burnt-orange hooded duffle coat with TWO dark toggles, navy full trousers, TEAL ankle boots. ROUROU girl age8 same height, one LOW black BRAID over shoulder, plum-purple knee-length coat, pale SKY BLUE scarf, cream trousers, slate shoes. No extra accessories. Cool-day school playground suggested with only sparse grey lines, no snow. Found item: ONE RIGHT-HAND red knitted MITTEN, one thumb, ribbed cuff, exactly ONE small YELLOW FIVE-POINT STAR on back; never a fingered glove. Other matching LEFT mitten appears only late. Original faces, pencil gestures, readable hands. No letters, symbols, typography, speech bubbles, signage or watermark. Keep faces away from central binding.\nTHE OTHER HALF ARRIVES. TOP 45% completely PURE WHITE. Lower LEFT Langlang holds the ORIGINAL single red mitten with yellow star, Rourou beside him but her head well away from center fold. At lower far RIGHT ONLY a true owner's small BARE hands and LIGHT BEIGE coat sleeves enter, carrying ONE matching red mitten with opposite thumb orientation and identical single yellow star. Exactly TWO RED mittens total, one with Langlang and one with owner, NOT yet stacked or handed over. Owner head and body outside frame. No brown sleeve (that was previous passerby), no writing or other glove. Make silhouettes a believable left/right pair.",
+      "references": [
+        "assets/characters.png",
+        "assets/mitten-model.png",
+        "assets/illustrations/cover.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "4bd4fe07247be639b587daa2a798913bc2bc5a6d62e7990ecac9d384513e60bf"
+    },
+    {
+      "id": "s08-initial",
+      "file": "assets/revisions/s08-initial.png",
+      "source": "/workspace/generated_images/exec-dc0200d9-ef4c-4acf-931f-02bb3e7ead3a.png",
+      "prompt": "Original delicate graphite pencil and restrained dry colored-pencil storybook art, abundant PURE WHITE paper, no 3D, no photorealism, no glossy rendering. Characters MUST match the attached original model: LANGLANG boy age8, neat round black BOWL haircut, burnt-orange hooded duffle coat with TWO dark toggles, navy full trousers, TEAL ankle boots. ROUROU girl age8 same height, one LOW black BRAID over shoulder, plum-purple knee-length coat, pale SKY BLUE scarf, cream trousers, slate shoes. No extra accessories. Cool-day school playground suggested with only sparse grey lines, no snow. Found item: ONE RIGHT-HAND red knitted MITTEN, one thumb, ribbed cuff, exactly ONE small YELLOW FIVE-POINT STAR on back; never a fingered glove. Other matching LEFT mitten appears only late. Original faces, pencil gestures, readable hands. No letters, symbols, typography, speech bubbles, signage or watermark. Keep faces away from central binding.\nTHE MATCHING PAIR. ENTIRE TOP 45% PURE WHITE. Lower half close-up only: true owner's TWO small bare hands with LIGHT BEIGE coat sleeves lay EXACTLY TWO RED knitted mittens side by side on a plain low pale wooden bench. Both mitten BACKS face reader with ONE yellow five-point star EACH, ribbed cuffs downward; thumbs MIRROR each other so it is clearly ONE LEFT and ONE RIGHT glove. Langlang's orange coat sleeve and Rourou's plum sleeve appear at opposite margins, but no extra fingers or third mitten. No full faces or letters, bright calm pencil texture, zero spare red objects.",
+      "references": [
+        "assets/characters.png",
+        "assets/mitten-model.png",
+        "assets/illustrations/cover.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "73ee701eeb9fbf001b1727c0535f08db307b2af97df40b7040464e56a9c806c9"
+    },
+    {
+      "id": "s09",
+      "file": "assets/illustrations/s09.png",
+      "source": "/workspace/generated_images/exec-5dc60b96-4544-4f36-9278-a6e4d47bfaeb.png",
+      "prompt": "Original delicate graphite pencil and restrained dry colored-pencil storybook art, abundant PURE WHITE paper, no 3D, no photorealism, no glossy rendering. Characters MUST match the attached original model: LANGLANG boy age8, neat round black BOWL haircut, burnt-orange hooded duffle coat with TWO dark toggles, navy full trousers, TEAL ankle boots. ROUROU girl age8 same height, one LOW black BRAID over shoulder, plum-purple knee-length coat, pale SKY BLUE scarf, cream trousers, slate shoes. No extra accessories. Cool-day school playground suggested with only sparse grey lines, no snow. Found item: ONE RIGHT-HAND red knitted MITTEN, one thumb, ribbed cuff, exactly ONE small YELLOW FIVE-POINT STAR on back; never a fingered glove. Other matching LEFT mitten appears only late. Original faces, pencil gestures, readable hands. No letters, symbols, typography, speech bubbles, signage or watermark. Keep faces away from central binding.\nTHANKING BOTH HELPERS. UPPER 47% entirely PURE WHITE, all figures low. Langlang on LEFT smiles and gestures toward Rourou on RIGHT, who smiles warmly at him, correct orange/plum/sky-blue clothing. At far right edge ONLY the true owner's LIGHT BEIGE coat sleeve and ONE raised hand now WEARING a RED mitten with one yellow star waves goodbye; the owner's OTHER RED-mittened hand is partly visible lower at edge. Exactly TWO RED mittens belong to owner, NO red mitten remains in main children's hands. Main two faces at x24% and x73%, not fold. Sparse grey playground sideline, no balloon, text or other child face.",
+      "references": [
+        "assets/characters.png",
+        "assets/mitten-model.png",
+        "assets/illustrations/cover.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "983956b1857daf1af36f7f9a66a5e7b28061d385b9e6f482f8b88136e7facbb5"
+    },
+    {
+      "id": "s10",
+      "file": "assets/illustrations/s10.png",
+      "source": "/workspace/generated_images/exec-04a36f3c-e990-4106-8189-abb45928ea6e.png",
+      "prompt": "Original delicate graphite pencil and restrained dry colored-pencil storybook art, abundant PURE WHITE paper, no 3D, no photorealism, no glossy rendering. Characters MUST match the attached original model: LANGLANG boy age8, neat round black BOWL haircut, burnt-orange hooded duffle coat with TWO dark toggles, navy full trousers, TEAL ankle boots. ROUROU girl age8 same height, one LOW black BRAID over shoulder, plum-purple knee-length coat, pale SKY BLUE scarf, cream trousers, slate shoes. No extra accessories. Cool-day school playground suggested with only sparse grey lines, no snow. Found item: ONE RIGHT-HAND red knitted MITTEN, one thumb, ribbed cuff, exactly ONE small YELLOW FIVE-POINT STAR on back; never a fingered glove. Other matching LEFT mitten appears only late. Original faces, pencil gestures, readable hands. No letters, symbols, typography, speech bubbles, signage or watermark. Keep faces away from central binding.\nA WARM FUNNY FINISH. UPPER 45% PURE WHITE. Langlang lower LEFT gives a small sheepish grin, shoulders gently hunched in a light breeze, both BARE hands drawn in close to coat. From ONE orange coat pocket peek EXACTLY TWO PLAIN TEAL knitted mittens, no stars, matching his teal boots, a clear tiny visual joke. Rourou lower RIGHT points lightly to that pocket with a friendly amused smile; her braid, plum coat and pale-blue scarf correct. Only TWO characters, NO RED glove anywhere, no snow or shivering blue skin, no lettering. Few thin grey breeze strokes only.",
+      "references": [
+        "assets/characters.png",
+        "assets/mitten-model.png",
+        "assets/illustrations/cover.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "d435e6dfb05f6d2e6b4e06a481dde04b6f1ea980886f6b7995f761b3976928cf"
+    },
+    {
+      "id": "s07",
+      "file": "assets/illustrations/s07.png",
+      "source": "/workspace/generated_images/exec-b7f38979-1929-4d0f-8439-9f8e2ae37075.png",
+      "prompt": "Edit ONLY the red mitten held by the anonymous child's BEIGE-SLEEVED hands at the FAR RIGHT edge of this original illustration. That second mitten must be the MIRRORED counterpart of the red mitten held by the orange-coated boy at left. Change only its thumb silhouette: when its yellow star faces us upright, its thumb must point toward the LEFT side of the image, not toward the right. Keep its single yellow five-point star, red knitting and ribbed cuff. Adjust the tiny beige hand grip only if needed for the opposite thumb orientation. Preserve ALL other pixels and features: both main children, exact faces, orange/plum coats, blue scarf, their positions, the left boy's original red mitten, white space and graphite texture. Exactly TWO red mittens total, now opposite left/right silhouettes. No new object, lettering or border, keep opaque white background.",
+      "references": [
+        "assets/revisions/s07-initial.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "349bffcf175658be0b36ac5db19786dedcc39f16562bbd9a85f82c61a60431b4"
+    },
+    {
+      "id": "s08",
+      "file": "assets/illustrations/s08.png",
+      "source": "/workspace/generated_images/exec-b1b48b9b-38be-4333-ad79-3880c1decb53.png",
+      "prompt": "Edit ONLY the colors of the TWO coat sleeves entering from the left and right edges in this original illustration. Recolor BOTH outer sleeves to the SAME soft LIGHT BEIGE / pale stone color, keeping original pencil texture, cuff folds, lighting and hand anatomy. These are the true owner's sleeves, so there must be NO orange or plum sleeve visible in this close-up. Preserve everything else EXACTLY: two bare hands, pale knitted cuff bands, wooden bench, exactly TWO red knitted mittens with mirrored inward-facing thumbs and ONE yellow five-point star each, their arrangement, huge pure white space and proportions. No extra arm, glove, person, text or border; opaque white background.",
+      "references": [
+        "assets/revisions/s08-initial.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "d3d19b30122a2a3c3ef7a03d44dea09033f87464a092f71b54be1394913f429c"
     }
   ]
 }
