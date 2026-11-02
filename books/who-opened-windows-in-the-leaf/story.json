@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "artwork-ready",
+  "status": "complete",
   "audience": "7–9 歲・小二至小三自主閱讀",
   "language": "zh-HK",
   "extensionCharacters": [],
@@ -125,7 +125,7 @@
       "作字頭時，常寫成艹。",
       "花、草、葉、苗、芽、藏都屬艸部。"
     ],
-    "example": "一片葉子，也能藏着發現。",
+    "example": "毛毛蟲藏在葉子背後。",
     "note": "「樹」與「根」都屬木部。",
     "question": "苗、樹、根，哪個屬艸部？",
     "answer": "苗。樹與根都屬木部。",

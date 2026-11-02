@@ -32,6 +32,14 @@ const shippedFiles = [
   'books/little-birds-beside-the-line/exports/黑線旁的小鳥_跨頁閱讀版.pdf',
   'books/little-birds-beside-the-line/exports/黑線旁的小鳥_可編輯排版.pptx',
   'books/little-birds-beside-the-line/exports/render-validation.json',
+  'books/who-is-the-red-mitten-waiting-for/exports/紅手套在等誰？_繪本.pdf',
+  'books/who-is-the-red-mitten-waiting-for/exports/紅手套在等誰？_跨頁閱讀版.pdf',
+  'books/who-is-the-red-mitten-waiting-for/exports/紅手套在等誰？_可編輯排版.pptx',
+  'books/who-is-the-red-mitten-waiting-for/exports/render-validation.json',
+  'books/who-opened-windows-in-the-leaf/exports/誰在葉子上開窗？_繪本.pdf',
+  'books/who-opened-windows-in-the-leaf/exports/誰在葉子上開窗？_跨頁閱讀版.pdf',
+  'books/who-opened-windows-in-the-leaf/exports/誰在葉子上開窗？_可編輯排版.pptx',
+  'books/who-opened-windows-in-the-leaf/exports/render-validation.json',
 ].map(path => ({
   path, hash: createHash('sha256').update(readFileSync(new URL('../' + path, import.meta.url))).digest('hex'),
 }));

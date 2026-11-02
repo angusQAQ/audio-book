@@ -1,0 +1,28 @@
+{
+  "status": "verified",
+  "date": "2026-11-02",
+  "officePages": 14,
+  "officeTextMatchesEveryPage": true,
+  "actualOfficeFonts": [
+    "Iansui-Regular",
+    "JyunsaiKaai-Bold"
+  ],
+  "officeTargetFontAndSizeVerified": true,
+  "properNameRulesVerified": 11,
+  "ordinaryCharactersNotEnlarged": [
+    "言"
+  ],
+  "storyTextImageCollisionChecks": 13,
+  "radicalEntriesVerified": 10,
+  "svgActualRenders": [
+    "s10",
+    "lesson"
+  ],
+  "officeRenderedPdfSha256": "5fe90ed2e44b94ca4f6992b729b2cc8e13d18169f11ca0332b09f052a15c817e",
+  "files": {
+    "紅手套在等誰？_跨頁閱讀版.pdf": "0746a691fba1a56572db591b4da91382f19044b9d4400115762167f7544737b9",
+    "紅手套在等誰？_繪本.pdf": "460a8c877cf4693154ee979c8790ae02507d3aa6811b0375f9515ffd5c5b876c",
+    "紅手套在等誰？_可編輯排版.pptx": "30093159194cfd7b733130b41f21e00cd1d3b6418bc39dd1bc93ce91e8423731"
+  },
+  "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
+}

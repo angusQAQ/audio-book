@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "artwork-ready",
+  "status": "complete",
   "audience": "7–9 歲・小二至小三自主閱讀",
   "language": "zh-HK",
   "extensionCharacters": [],
@@ -125,7 +125,7 @@
       "說、話、請、謝都有言字旁。",
       "記、認也屬言部。"
     ],
-    "example": "說得清楚，才容易認清。",
+    "example": "你說得清楚，別人才容易辨認。",
     "note": "「口」和「借」都不屬言部。",
     "question": "話、口、借，哪個屬言部？",
     "answer": "話。口屬口部，借屬人部。",

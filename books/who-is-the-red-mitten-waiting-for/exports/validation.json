@@ -1,0 +1,50 @@
+{
+  "status": "complete",
+  "spreadPages": 14,
+  "singlePages": 26,
+  "editableSlides": 14,
+  "missingGlyphs": [],
+  "allTextEditable": true,
+  "originalArtworkHashesVerified": 15,
+  "properNameMarks": {
+    "names": {
+      "朗朗": 6,
+      "柔柔": 5
+    },
+    "style": "continuous rule below each full name",
+    "pdfPptxSvgGeometryVerified": true,
+    "editableTextAndRuleGrouped": true
+  },
+  "targetTypography": {
+    "font": "JyunsaiKaai",
+    "bodyScale": 1.5,
+    "pdfAndPptxRunsVerified": true,
+    "handwrittenGlyphs": {
+      "話": 7,
+      "請": 5,
+      "說": 12,
+      "記": 4,
+      "認": 7,
+      "謝": 8,
+      "訁": 2
+    }
+  },
+  "normalCharacterTypography": {
+    "characters": [
+      "言"
+    ],
+    "bodyScale": 1,
+    "font": "Iansui",
+    "pdfAndPptxRunsVerified": true,
+    "svgRunsVerified": true
+  },
+  "storyHanCharacters": 257,
+  "targets": {
+    "說": 13,
+    "話": 9,
+    "請": 5,
+    "謝": 8,
+    "記": 4,
+    "認": 7
+  }
+}

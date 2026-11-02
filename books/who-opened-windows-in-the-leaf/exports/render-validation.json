@@ -1,0 +1,28 @@
+{
+  "status": "verified",
+  "date": "2026-11-02",
+  "officePages": 14,
+  "officeTextMatchesEveryPage": true,
+  "actualOfficeFonts": [
+    "Iansui-Regular",
+    "JyunsaiKaai-Bold"
+  ],
+  "officeTargetFontAndSizeVerified": true,
+  "properNameRulesVerified": 10,
+  "ordinaryCharactersNotEnlarged": [
+    "艸"
+  ],
+  "storyTextImageCollisionChecks": 7,
+  "radicalEntriesVerified": 10,
+  "svgActualRenders": [
+    "s10",
+    "lesson"
+  ],
+  "officeRenderedPdfSha256": "a7c830a18ee680e8855e444675b65b7936a0ea7a00f1808ab791fc06dce2d547",
+  "files": {
+    "誰在葉子上開窗？_繪本.pdf": "3675ad3ea43e41f729ae3e44891b13ec55c983729e1b044025ffb0417f4f73fd",
+    "誰在葉子上開窗？_可編輯排版.pptx": "b692f950e7acf05c5b631ff29eb80e601bfc227947f407277f68ce85b7fc9b87",
+    "誰在葉子上開窗？_跨頁閱讀版.pdf": "1676cae4d67f92fc0008bf3d978125328eeb6c472537489601376f81086fccc5"
+  },
+  "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
+}

@@ -114,6 +114,17 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 
 [火部專案](books/the-aroma-arrived-first/README.md)與[心部專案](books/little-birds-beside-the-line/README.md)保存參考分析、原稿／分鏡、原圖及修訂、精確提示、字型授權、SVG與重建程式。兩本均已實際以LibreOffice及Inkscape開啟渲染、逐頁核對文字和專名號；發布流程核對六份成品及兩份渲染報告的永久網址SHA-256。
 
+## 原創言部與艹部繪本
+
+兩本均依本次確認的7–9歲自主閱讀設定創作，人物採疊字名，各有獨立故事、場景、配色與完整插畫。每本10故事跨頁、14閱讀畫面、26單頁；六個核心字使用150%手寫楷體，人名附連續專名號。
+
+| 主題／書名 | 人物、核心字與故事 | 成品 |
+| --- | --- | --- |
+| 言／《紅手套在等誰？》 | 朗朗、柔柔。說、話、請、謝、記、認。靠手套上的黃星星辨認失物，257漢字。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/who-is-the-red-mitten-waiting-for/exports/紅手套在等誰？_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/who-is-the-red-mitten-waiting-for/exports/紅手套在等誰？_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/who-is-the-red-mitten-waiting-for/exports/紅手套在等誰？_可編輯排版.pptx) |
+| 艹／《誰在葉子上開窗？》 | 恩恩、豆豆。花、草、葉、苗、芽、藏。透過葉洞觀察藏着的小客人，249漢字。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/who-opened-windows-in-the-leaf/exports/誰在葉子上開窗？_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/who-opened-windows-in-the-leaf/exports/誰在葉子上開窗？_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/who-opened-windows-in-the-leaf/exports/誰在葉子上開窗？_可編輯排版.pptx) |
+
+[言部專案](books/who-is-the-red-mitten-waiting-for/README.md)及[艹部專案](books/who-opened-windows-in-the-leaf/README.md)包含參考細讀、原稿與分鏡、角色及道具模型、原創插畫、精確生成紀錄、字型授權、SVG及重建方法。各書已完成原生檢查、實際Office／SVG渲染與逐頁校稿；永久網址檢查涵蓋六份成品及兩份渲染報告。
+
 ## 設計與存檔點
 
 已加入使用者提供的[現代漢語規範 skill](.agents/skills/modern-chinese-norm/SKILL.md)及[參考文件](.agents/skills/modern-chinese-norm/reference.md)，可在本專案使用 `$modern-chinese-norm`。根目錄AGENTS.md已要求中文文案校訂時使用；[安裝與本次校訂紀錄](docs/modern-chinese-norm-review.md)說明適用範圍，以及《香味先到了》的句法、指稱與圖文核對結果。
