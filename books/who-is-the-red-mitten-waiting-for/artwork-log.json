@@ -29,6 +29,84 @@
       ],
       "transparentBackground": true,
       "sha256": "99ba449fec02ae151fca415b1ebe981def4a6bdce17cc80a1547017f988b1c40"
+    },
+    {
+      "id": "s01",
+      "file": "assets/illustrations/s01.png",
+      "source": "/workspace/generated_images/exec-7a35ea9d-2cc5-4083-9364-8bb780a3e2fb.png",
+      "prompt": "Original delicate graphite pencil and restrained dry colored-pencil storybook art, abundant PURE WHITE paper, no 3D, no photorealism, no glossy rendering. Characters MUST match the attached original model: LANGLANG boy age8, neat round black BOWL haircut, burnt-orange hooded duffle coat with TWO dark toggles, navy full trousers, TEAL ankle boots. ROUROU girl age8 same height, one LOW black BRAID over shoulder, plum-purple knee-length coat, pale SKY BLUE scarf, cream trousers, slate shoes. No extra accessories. Cool-day school playground suggested with only sparse grey lines, no snow. Found item: ONE RIGHT-HAND red knitted MITTEN, one thumb, ribbed cuff, exactly ONE small YELLOW FIVE-POINT STAR on back; never a fingered glove. Other matching LEFT mitten appears only late. Original faces, pencil gestures, readable hands. No letters, symbols, typography, speech bubbles, signage or watermark. Keep faces away from central binding.\nOPENING DISCOVERY. WIDE LANDSCAPE 16:10, reserve ENTIRE TOP 45% as completely PURE WHITE for native book text. In LOWER LEFT quadrant Langlang ALONE crouches near one tiny grey playground sideline and picks up EXACTLY ONE small red knitted mitten with a single yellow star. Show star clearly, thumb silhouette like the COVER. Boy's bare hands normal, his own teal mittens not visible. No girl, other children, snow, doors, signs or spare red gloves. Sparse ground only, full boy body and boots visible, generous white space to right.",
+      "references": [
+        "assets/characters.png",
+        "assets/mitten-model.png",
+        "assets/illustrations/cover.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "071ee51034933a7a59e3985676465041929985d3b99f1cd858a628357ecaf909"
+    },
+    {
+      "id": "s02",
+      "file": "assets/illustrations/s02.png",
+      "source": "/workspace/generated_images/exec-55a4fbaa-acbd-4cdc-b738-b30724997333.png",
+      "prompt": "Original delicate graphite pencil and restrained dry colored-pencil storybook art, abundant PURE WHITE paper, no 3D, no photorealism, no glossy rendering. Characters MUST match the attached original model: LANGLANG boy age8, neat round black BOWL haircut, burnt-orange hooded duffle coat with TWO dark toggles, navy full trousers, TEAL ankle boots. ROUROU girl age8 same height, one LOW black BRAID over shoulder, plum-purple knee-length coat, pale SKY BLUE scarf, cream trousers, slate shoes. No extra accessories. Cool-day school playground suggested with only sparse grey lines, no snow. Found item: ONE RIGHT-HAND red knitted MITTEN, one thumb, ribbed cuff, exactly ONE small YELLOW FIVE-POINT STAR on back; never a fingered glove. Other matching LEFT mitten appears only late. Original faces, pencil gestures, readable hands. No letters, symbols, typography, speech bubbles, signage or watermark. Keep faces away from central binding.\nNOISY PLAYGROUND. Wide double page, upper 45% completely PURE WHITE. Lower LEFT boy Langlang stands holding EXACTLY ONE red star mitten above his head, mouth gently open as if calling. In distant lower RIGHT show ONLY two pairs of anonymous children's trouser legs/feet and ONE small muted blue-grey bouncing ball, tiny pencil motion strokes, no faces or new named character. No Rourou in this scene. No writing, bubbles, musical symbols or sound-effect glyphs. Bare hands, orange coat correct; maintain single star mitten like cover.",
+      "references": [
+        "assets/characters.png",
+        "assets/mitten-model.png",
+        "assets/illustrations/cover.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "714b7fad3842af936b91f71f88d94b47a21d4771ceca072799d8c607d39e792a"
+    },
+    {
+      "id": "s03",
+      "file": "assets/illustrations/s03.png",
+      "source": "/workspace/generated_images/exec-d18f962f-e763-463c-aa2f-860bc5679f3e.png",
+      "prompt": "Original delicate graphite pencil and restrained dry colored-pencil storybook art, abundant PURE WHITE paper, no 3D, no photorealism, no glossy rendering. Characters MUST match the attached original model: LANGLANG boy age8, neat round black BOWL haircut, burnt-orange hooded duffle coat with TWO dark toggles, navy full trousers, TEAL ankle boots. ROUROU girl age8 same height, one LOW black BRAID over shoulder, plum-purple knee-length coat, pale SKY BLUE scarf, cream trousers, slate shoes. No extra accessories. Cool-day school playground suggested with only sparse grey lines, no snow. Found item: ONE RIGHT-HAND red knitted MITTEN, one thumb, ribbed cuff, exactly ONE small YELLOW FIVE-POINT STAR on back; never a fingered glove. Other matching LEFT mitten appears only late. Original faces, pencil gestures, readable hands. No letters, symbols, typography, speech bubbles, signage or watermark. Keep faces away from central binding.\nA FRIEND LISTENS. Upper 45% entirely PURE WHITE; all action below. Langlang lower LEFT holds single red yellow-star mitten at chest height and looks up toward Rourou lower RIGHT. She leans forward slightly, listening with a curious friendly expression, her braid/plum coat/pale-blue scarf exactly matching model. Comfortable speaking distance, no touching ears or giant ears, no third child, no ball. Faces at x24% and x77% well clear of center fold. Tiny grey ground marks only.",
+      "references": [
+        "assets/characters.png",
+        "assets/mitten-model.png",
+        "assets/illustrations/cover.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "7bfe866a4782467f145970cc64e7562d40dcefd6bda49c7cb17b0595d24a6122"
+    },
+    {
+      "id": "s04",
+      "file": "assets/illustrations/s04.png",
+      "source": "/workspace/generated_images/exec-1f393895-4910-47dd-b770-ce9356d8342b.png",
+      "prompt": "Original delicate graphite pencil and restrained dry colored-pencil storybook art, abundant PURE WHITE paper, no 3D, no photorealism, no glossy rendering. Characters MUST match the attached original model: LANGLANG boy age8, neat round black BOWL haircut, burnt-orange hooded duffle coat with TWO dark toggles, navy full trousers, TEAL ankle boots. ROUROU girl age8 same height, one LOW black BRAID over shoulder, plum-purple knee-length coat, pale SKY BLUE scarf, cream trousers, slate shoes. No extra accessories. Cool-day school playground suggested with only sparse grey lines, no snow. Found item: ONE RIGHT-HAND red knitted MITTEN, one thumb, ribbed cuff, exactly ONE small YELLOW FIVE-POINT STAR on back; never a fingered glove. Other matching LEFT mitten appears only late. Original faces, pencil gestures, readable hands. No letters, symbols, typography, speech bubbles, signage or watermark. Keep faces away from central binding.\nASKING MORE CLEARLY. Wide landscape, TOP 45% COMPLETELY PURE WHITE. Lower half: Langlang on LEFT and Rourou on RIGHT stand beside each other looking toward distant playground outside frame. Boy holds SINGLE red yellow-star mitten high enough for someone to recognize, girl gently cups one hand beside her mouth while speaking. Friendly natural expressions, all bodies/shoes visible, correct coat colors. Tiny grey ground line only, NO extra children, no poster, speech bubble or text. Faces well separated from center fold.",
+      "references": [
+        "assets/characters.png",
+        "assets/mitten-model.png",
+        "assets/illustrations/cover.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "e73f290c0559f92386af7bb8101ff8d0efffa3349aa474e6437848941683ada1"
+    },
+    {
+      "id": "s05",
+      "file": "assets/illustrations/s05.png",
+      "source": "/workspace/generated_images/exec-e4968a1b-b752-4e62-ba3e-928fc99579e7.png",
+      "prompt": "Original delicate graphite pencil and restrained dry colored-pencil storybook art, abundant PURE WHITE paper, no 3D, no photorealism, no glossy rendering. Characters MUST match the attached original model: LANGLANG boy age8, neat round black BOWL haircut, burnt-orange hooded duffle coat with TWO dark toggles, navy full trousers, TEAL ankle boots. ROUROU girl age8 same height, one LOW black BRAID over shoulder, plum-purple knee-length coat, pale SKY BLUE scarf, cream trousers, slate shoes. No extra accessories. Cool-day school playground suggested with only sparse grey lines, no snow. Found item: ONE RIGHT-HAND red knitted MITTEN, one thumb, ribbed cuff, exactly ONE small YELLOW FIVE-POINT STAR on back; never a fingered glove. Other matching LEFT mitten appears only late. Original faces, pencil gestures, readable hands. No letters, symbols, typography, speech bubbles, signage or watermark. Keep faces away from central binding.\nA SIMILAR COLOR IS NOT ENOUGH. TOP 45% PURE WHITE. Lower LEFT Langlang and Rourou study the SINGLE red mitten with yellow star, which stays in boy's bare hands. At far lower RIGHT edge ONLY the brown-coated sleeve/hand and cropped side/back of one anonymous passing child point hesitantly at yellow star, head mostly outside frame; their palm turns outward in a gentle 'not mine' gesture. NO second red mitten yet, no beige cuff (reserved for true owner later), no other person. Correct warm pencil style and genuine empty white text zones.",
+      "references": [
+        "assets/characters.png",
+        "assets/mitten-model.png",
+        "assets/illustrations/cover.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "c810abb5eafbcdbccfb59c5f613055b263fa1f40d42c3ebf6954da26a084ec97"
+    },
+    {
+      "id": "s06",
+      "file": "assets/illustrations/s06.png",
+      "source": "/workspace/generated_images/exec-0b44782b-b51f-44cf-97e1-2d6a43bd03af.png",
+      "prompt": "Original delicate graphite pencil and restrained dry colored-pencil storybook art, abundant PURE WHITE paper, no 3D, no photorealism, no glossy rendering. Characters MUST match the attached original model: LANGLANG boy age8, neat round black BOWL haircut, burnt-orange hooded duffle coat with TWO dark toggles, navy full trousers, TEAL ankle boots. ROUROU girl age8 same height, one LOW black BRAID over shoulder, plum-purple knee-length coat, pale SKY BLUE scarf, cream trousers, slate shoes. No extra accessories. Cool-day school playground suggested with only sparse grey lines, no snow. Found item: ONE RIGHT-HAND red knitted MITTEN, one thumb, ribbed cuff, exactly ONE small YELLOW FIVE-POINT STAR on back; never a fingered glove. Other matching LEFT mitten appears only late. Original faces, pencil gestures, readable hands. No letters, symbols, typography, speech bubbles, signage or watermark. Keep faces away from central binding.\nREMEMBERING THE DETAIL. Upper 45% PURE WHITE. A close-up in lower half of Langlang's two small BARE hands, burnt-orange sleeves, holding EXACTLY ONE red knitted mitten with ONE yellow five-point star facing reader; thumb projects viewer's RIGHT as in COVER. From right edge Rourou's plum sleeve and ONE normal small index finger point gently toward STAR. Her pointing hand is distinct from boy's hands. No full faces needed, no extra glove, no written label, no exaggerated anatomical fingers. The star is the clear focal detail, sparse graphite textile texture.",
+      "references": [
+        "assets/characters.png",
+        "assets/mitten-model.png",
+        "assets/illustrations/cover.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "940fe484202bdd4151573f1f78c4e8d1264647a93d865cde66c0b68e1e4c9398"
     }
   ]
 }

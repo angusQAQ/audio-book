@@ -29,6 +29,89 @@
       ],
       "transparentBackground": true,
       "sha256": "62f12fbea429bac241df08941bfb95d2e049d3c0c3f9fb3d7ea0446b8ad145ac"
+    },
+    {
+      "id": "s01",
+      "file": "assets/illustrations/s01.png",
+      "source": "/workspace/generated_images/exec-79f40b5f-d4a3-401a-8c96-1bd357c3ec02.png",
+      "prompt": "Original delicate GRAPHITE PENCIL and restrained dry COLORED PENCIL picture-book art, pure white paper and minimal setting; not 3D, not photo, not saturated paint. ENEN girl age8: two LOW black braided PIGTAILS with dusty-pink ties, APRICOT long sleeves, MINT GREEN full-length dungarees, pale peach velcro shoes. DOUDOU boy age8: short BLACK CURLY hair, CORNFLOWER BLUE long sleeves, warm BROWN knee shorts, ivory ankle socks, mustard sneakers. Match attached original model exactly, similar child heights, expressive original faces. Same ONE plain matte TERRACOTTA round plant pot on one shallow IVORY saucer, a single young green broad-OVAL-leaf seedling with a short central stem and just three fine grass blades at soil edge. Four main leaves initially, later a small fifth new leaf; selected older RIGHT leaf has THREE SMALL NATURAL CATERPILLAR HOLES and one small bitten edge once requested. Exactly ONE smooth pale GREEN caterpillar, very small compared with leaf, not hairy or smiling. No blossoms, fruit, butterfly, duplicate pots or miraculous plant regrowth. Leaves remain attached to plant. Ground setting is a low windowsill/table, never high dangerous ledge. No words, lettering, logos, labels, speech balloons or watermark. Important faces clear of center fold.\nINITIAL INTACT PLANT. WIDE 16:10 double page with TOP 45% completely blank PURE WHITE. Enen ALONE in lower LEFT gently sets the one terracotta potted seedling on a LOW plain wooden interior windowsill in lower RIGHT. Use LEFT panel of plant model: exactly FOUR broad oval green leaves, all INTACT, three fine grass blades at soil edge, ivory saucer. NO insect, holes, bud, new fifth leaf or flower. Clearly CLOSED simple window indicated by a tiny frame/latch behind pot, no full room wall. No Doudou yet. Entire child body/shoes visible, her pigtails and mint dungarees exact.",
+      "references": [
+        "assets/characters.png",
+        "assets/plant-model.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "bfa8b3cae6876d629cac8fd09f0417743f3508b57aee0c9aae44555725a80856"
+    },
+    {
+      "id": "s02-initial",
+      "file": "assets/revisions/s02-initial.png",
+      "source": "/workspace/generated_images/exec-2092af47-2dc3-4eed-ab64-191fef29d9e9.png",
+      "prompt": "Original delicate GRAPHITE PENCIL and restrained dry COLORED PENCIL picture-book art, pure white paper and minimal setting; not 3D, not photo, not saturated paint. ENEN girl age8: two LOW black braided PIGTAILS with dusty-pink ties, APRICOT long sleeves, MINT GREEN full-length dungarees, pale peach velcro shoes. DOUDOU boy age8: short BLACK CURLY hair, CORNFLOWER BLUE long sleeves, warm BROWN knee shorts, ivory ankle socks, mustard sneakers. Match attached original model exactly, similar child heights, expressive original faces. Same ONE plain matte TERRACOTTA round plant pot on one shallow IVORY saucer, a single young green broad-OVAL-leaf seedling with a short central stem and just three fine grass blades at soil edge. Four main leaves initially, later a small fifth new leaf; selected older RIGHT leaf has THREE SMALL NATURAL CATERPILLAR HOLES and one small bitten edge once requested. Exactly ONE smooth pale GREEN caterpillar, very small compared with leaf, not hairy or smiling. No blossoms, fruit, butterfly, duplicate pots or miraculous plant regrowth. Leaves remain attached to plant. Ground setting is a low windowsill/table, never high dangerous ledge. No words, lettering, logos, labels, speech balloons or watermark. Important faces clear of center fold.\nTHE MYSTERY APPEARS. TOP 45% completely PURE WHITE. Same pot/ivory saucer on LOW interior windowsill in lower RIGHT; FOUR green leaves only, older right leaf now THREE small holes and one modest bitten edge; no new unfolded leaf. Enen lower LEFT leans to look with surprised curious face. Doudou enters from lower RIGHT, leaning slightly, curly hair/blue sweatshirt/brown shorts exact. Caterpillar is HIDDEN underneath and must NOT be visible yet. No spare pot or flower. Window remains CLOSED, just sparse frame lines. Faces away from gutter.",
+      "references": [
+        "assets/characters.png",
+        "assets/plant-model.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "a295790148e83a3cb760206c2cb11358807f2886040a35e51a2ccdf69072828b"
+    },
+    {
+      "id": "s03",
+      "file": "assets/illustrations/s03.png",
+      "source": "/workspace/generated_images/exec-9c6b03bd-4e2d-4d1d-8acd-3a77bb281c81.png",
+      "prompt": "Original delicate GRAPHITE PENCIL and restrained dry COLORED PENCIL picture-book art, pure white paper and minimal setting; not 3D, not photo, not saturated paint. ENEN girl age8: two LOW black braided PIGTAILS with dusty-pink ties, APRICOT long sleeves, MINT GREEN full-length dungarees, pale peach velcro shoes. DOUDOU boy age8: short BLACK CURLY hair, CORNFLOWER BLUE long sleeves, warm BROWN knee shorts, ivory ankle socks, mustard sneakers. Match attached original model exactly, similar child heights, expressive original faces. Same ONE plain matte TERRACOTTA round plant pot on one shallow IVORY saucer, a single young green broad-OVAL-leaf seedling with a short central stem and just three fine grass blades at soil edge. Four main leaves initially, later a small fifth new leaf; selected older RIGHT leaf has THREE SMALL NATURAL CATERPILLAR HOLES and one small bitten edge once requested. Exactly ONE smooth pale GREEN caterpillar, very small compared with leaf, not hairy or smiling. No blossoms, fruit, butterfly, duplicate pots or miraculous plant regrowth. Leaves remain attached to plant. Ground setting is a low windowsill/table, never high dangerous ledge. No words, lettering, logos, labels, speech balloons or watermark. Important faces clear of center fold.\nCHECKING THE WIND GUESS. Upper 45% entirely PURE WHITE. Lower RIGHT Doudou points toward an unmistakably CLOSED simple window with visible latch, he looks thoughtful. Lower LEFT Enen looks at that latch. Same single pot with FOUR leaves and THREE holes/bitten edge on right old leaf sits low between them but slightly right of central fold; caterpillar hidden, no flower, no extra leaf yet. Minimal window corner only, not a fully shaded room. Nobody opens the window; no cartoon wind face. Proper outfits, all faces out of binding.",
+      "references": [
+        "assets/characters.png",
+        "assets/plant-model.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "dc9e743848bdad860e6527703a2c6a908a8d02445d26603e73f82bb98faa4dcb"
+    },
+    {
+      "id": "s04",
+      "file": "assets/illustrations/s04.png",
+      "source": "/workspace/generated_images/exec-7801b078-e65d-4540-abb0-fb40f01e286b.png",
+      "prompt": "Original delicate GRAPHITE PENCIL and restrained dry COLORED PENCIL picture-book art, pure white paper and minimal setting; not 3D, not photo, not saturated paint. ENEN girl age8: two LOW black braided PIGTAILS with dusty-pink ties, APRICOT long sleeves, MINT GREEN full-length dungarees, pale peach velcro shoes. DOUDOU boy age8: short BLACK CURLY hair, CORNFLOWER BLUE long sleeves, warm BROWN knee shorts, ivory ankle socks, mustard sneakers. Match attached original model exactly, similar child heights, expressive original faces. Same ONE plain matte TERRACOTTA round plant pot on one shallow IVORY saucer, a single young green broad-OVAL-leaf seedling with a short central stem and just three fine grass blades at soil edge. Four main leaves initially, later a small fifth new leaf; selected older RIGHT leaf has THREE SMALL NATURAL CATERPILLAR HOLES and one small bitten edge once requested. Exactly ONE smooth pale GREEN caterpillar, very small compared with leaf, not hairy or smiling. No blossoms, fruit, butterfly, duplicate pots or miraculous plant regrowth. Leaves remain attached to plant. Ground setting is a low windowsill/table, never high dangerous ledge. No words, lettering, logos, labels, speech balloons or watermark. Important faces clear of center fold.\nLOOKING UNDERNEATH. Entire TOP 45% PURE WHITE. Lower LEFT Enen and lower RIGHT Doudou lean down from opposite sides of low sill, examining the UNDERSIDE of right older leaf, still attached to single plant in terracotta pot/ivory saucer. Same four main leaves with three natural holes and bitten edge in right leaf. Only a TINY PART of a small smooth green caterpillar peeks beneath leaf as reader's first clue, not a complete insect body yet. Heads at x23% and x78%, no face at gutter. Window closed, no leaf picked or flipped upside-down unnaturally, normal hands.",
+      "references": [
+        "assets/characters.png",
+        "assets/plant-model.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "ce34fe3d86c9f11e860388fab56833ecd8fd5372e070fb882980abf25b1f2f84"
+    },
+    {
+      "id": "s05",
+      "file": "assets/illustrations/s05.png",
+      "source": "/workspace/generated_images/exec-77f0ee3e-388f-447f-a586-c54723986b69.png",
+      "prompt": "Original delicate GRAPHITE PENCIL and restrained dry COLORED PENCIL picture-book art, pure white paper and minimal setting; not 3D, not photo, not saturated paint. ENEN girl age8: two LOW black braided PIGTAILS with dusty-pink ties, APRICOT long sleeves, MINT GREEN full-length dungarees, pale peach velcro shoes. DOUDOU boy age8: short BLACK CURLY hair, CORNFLOWER BLUE long sleeves, warm BROWN knee shorts, ivory ankle socks, mustard sneakers. Match attached original model exactly, similar child heights, expressive original faces. Same ONE plain matte TERRACOTTA round plant pot on one shallow IVORY saucer, a single young green broad-OVAL-leaf seedling with a short central stem and just three fine grass blades at soil edge. Four main leaves initially, later a small fifth new leaf; selected older RIGHT leaf has THREE SMALL NATURAL CATERPILLAR HOLES and one small bitten edge once requested. Exactly ONE smooth pale GREEN caterpillar, very small compared with leaf, not hairy or smiling. No blossoms, fruit, butterfly, duplicate pots or miraculous plant regrowth. Leaves remain attached to plant. Ground setting is a low windowsill/table, never high dangerous ledge. No words, lettering, logos, labels, speech balloons or watermark. Important faces clear of center fold.\nREVEAL OF THE LITTLE GUEST. LEFT 46% and TOP 30% entirely PURE WHITE for native text. On RIGHT LOWER HALF ONLY, extreme close-up of ONE real broad oval green leaf with three small natural holes and tiny missing edge, attached via short stem to a cropped plant. Exactly ONE very SMALL SMOOTH pale green caterpillar creeps along underside/edge while nibbling. Natural tiny feet and plain real insect head, no face or tools; not smiling, not furry, not a worm on a plate. Leaf must clearly be MUCH larger than caterpillar, which is at most one quarter leaf length. Minimal pale veins, sparse pot fragment at bottom-right optional. No children, blossom, fruit, cocoon or butterfly.",
+      "references": [
+        "assets/characters.png",
+        "assets/plant-model.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "997f5970c5d4fd7261cbdbf1e7b976c0d356a6e7b8648a63b98935180a3bc742"
+    },
+    {
+      "id": "s06",
+      "file": "assets/illustrations/s06.png",
+      "source": "/workspace/generated_images/exec-89db2fb6-ae91-4be2-bbfb-8590558626da.png",
+      "prompt": "Original delicate GRAPHITE PENCIL and restrained dry COLORED PENCIL picture-book art, pure white paper and minimal setting; not 3D, not photo, not saturated paint. ENEN girl age8: two LOW black braided PIGTAILS with dusty-pink ties, APRICOT long sleeves, MINT GREEN full-length dungarees, pale peach velcro shoes. DOUDOU boy age8: short BLACK CURLY hair, CORNFLOWER BLUE long sleeves, warm BROWN knee shorts, ivory ankle socks, mustard sneakers. Match attached original model exactly, similar child heights, expressive original faces. Same ONE plain matte TERRACOTTA round plant pot on one shallow IVORY saucer, a single young green broad-OVAL-leaf seedling with a short central stem and just three fine grass blades at soil edge. Four main leaves initially, later a small fifth new leaf; selected older RIGHT leaf has THREE SMALL NATURAL CATERPILLAR HOLES and one small bitten edge once requested. Exactly ONE smooth pale GREEN caterpillar, very small compared with leaf, not hairy or smiling. No blossoms, fruit, butterfly, duplicate pots or miraculous plant regrowth. Leaves remain attached to plant. Ground setting is a low windowsill/table, never high dangerous ledge. No words, lettering, logos, labels, speech balloons or watermark. Important faces clear of center fold.\nWORRY ABOUT THE SEEDLING. TOP 45% COMPLETELY PURE WHITE. Enen lower LEFT crouches beside low interior sill, hands ON HER KNEES, worried but gentle expression, looking at right leaf with holes and one bitten edge. Doudou lower RIGHT looks thoughtfully at the same single four-leaf potted plant. Caterpillar hidden on underside, no need to show it fully. One terracotta pot, one ivory saucer, same three grass blades. No grabbing insect, spray, scissors, loose leaves, wilted dying plant or new fifth leaf. Correct clothing, minimal closed-window corner, full bodies if possible.",
+      "references": [
+        "assets/characters.png",
+        "assets/plant-model.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "9f198690b71a1cb94c354848a774675e4da86b2e073f5b74d758cd19f73931ef"
+    },
+    {
+      "id": "s02",
+      "file": "assets/illustrations/s02.png",
+      "source": "/workspace/generated_images/exec-64df4fc6-d370-4e23-8f8a-28c0d461aeac.png",
+      "prompt": "Edit this original picture-book illustration ONLY in the tiny area immediately underneath the right-hand leaf with the three small holes. Completely REMOVE the visible green caterpillar body there, replacing it with the natural plain white space and leaf underside already present. In this early mystery scene the insect must be fully HIDDEN. Preserve EVERYTHING else unchanged: both children and their exact faces/outfits/poses, pot and saucer, four green leaves, tiny folded bud, grass blades, all three holes, bitten leaf edge, window and latch, white text space, graphite/color-pencil texture and dimensions. No new leaf, object, writing, border, dark shadow or insect. Keep background opaque white.",
+      "references": [
+        "assets/revisions/s02-initial.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "fccabf5aaed6092963bb8194ffc44c6174f207435f14ca1e2658887939a7bc4b"
     }
   ]
 }
