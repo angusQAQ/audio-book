@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "production",
+  "status": "complete",
   "audience": "7–9 歲・小二至小三自主閱讀",
   "language": "zh-HK",
   "extensionCharacters": [],
@@ -147,7 +147,7 @@
         "「還要等多久？」"
       ],
       "beat": "想出門卻遇雨，建立等待的欲望。",
-      "art": "Girl lower LEFT standing holding an EMPTY oval bamboo basket, shoulders slumped, looking toward the open doorway at far left edge where thin grey rain is visible. Grandfather lower RIGHT on a low stool, attentive. No instruments yet. Warm sheltered veranda, tiny floor strokes, no snow.",
+      "art": "朵朵在門邊提着空竹籃等候，公公在右邊坐着，門外下着雨。",
       "layout": "top-split",
       "textSplit": 1,
       "artPlacement": [
@@ -164,12 +164,12 @@
         5
       ],
       "lines": [
-        "公公把一個竹筒放進籃裏。",
+        "公公拿來一個竹筒。",
         "朵朵找來一雙竹筷，輕輕敲了敲。",
         "「咚、咚！」"
       ],
       "beat": "從身邊物件發現聲音。",
-      "art": "Grandfather crouches lower RIGHT with relaxed hands after offering one bamboo tube. Girl lower LEFT kneels by basket and taps the smooth side of ONE upright closed-bottom bamboo tube using TWO short blunt bamboo chopsticks, one in each hand. Tube stands stably on a woven mat outside basket; basket nearby, single tube only, no flute yet. Show complete bodies and intact hands.",
+      "art": "朵朵跪在左邊，用一雙竹筷輕敲穩放在蓆上的竹筒；公公蹲在右邊。",
       "layout": "top-split",
       "textSplit": 1,
       "artPlacement": [
@@ -191,7 +191,7 @@
         "「慢一點，再試試。」"
       ],
       "beat": "快不等於合奏，邀請主角重新嘗試。",
-      "art": "Girl lower LEFT eagerly tapping her one bamboo tube with two chopsticks. Grandfather lower RIGHT seated on low stool, one hand gently tapping his thigh to keep a slow beat, raised calm eyebrow, not scolding. Rain strokes only at far left doorway. Basket beside girl. Complete figures, no flute yet.",
+      "art": "朵朵敲得很快，公公在右邊輕拍膝蓋，示範較慢的節拍。",
       "layout": "top-split",
       "textSplit": 1,
       "artPlacement": [
@@ -213,7 +213,7 @@
         "雨點正好接了下去。"
       ],
       "beat": "用停頓讓讀者也聽見雨。",
-      "art": "Girl lower LEFT pauses mid-performance, TWO chopsticks held still above tube, head turned toward rain at far left, alert little smile. Grandfather lower RIGHT quietly listens with hands resting on knees. Three tiny rain rings outside doorway, visual rhythm, no notation or letters. Basket and single tube remain.",
+      "art": "朵朵暫停敲擊，轉頭聽門外的雨；公公也安靜地聽。",
       "layout": "top-split",
       "textSplit": 2,
       "artPlacement": [
@@ -230,11 +230,11 @@
         11
       ],
       "lines": [
-        "公公拿出竹笛，吹起一段短短的曲子。",
+        "公公拿出竹笛，\n吹起一段短短的曲子。",
         "朵朵一聽見熟悉的旋律，就笑了。"
       ],
       "beat": "加入第二種音色，笑由情節引出。",
-      "art": "Grandfather lower RIGHT seated and playing ONE genuine sideways transverse bamboo flute: horizontal across mouth, correct hand placement and visible small finger holes, never a recorder pointed down. Girl lower LEFT smiles broadly, slightly uneven front tooth visible, two chopsticks resting above tube. Same empty basket beside her, no musical glyphs.",
+      "art": "公公在右邊橫吹竹笛，朵朵在左邊聽見熟悉的旋律，笑了起來。",
       "layout": "top-split",
       "textSplit": 1,
       "artPlacement": [
@@ -256,7 +256,7 @@
         "公公停了下來。"
       ],
       "beat": "再次失衡，人物須自己選擇如何合作。",
-      "art": "Girl lower LEFT enthusiastically hurries tapping single tube, two distinct chopsticks and a few small pencil motion ticks. Grandfather lower RIGHT stops blowing and lowers the transverse flute across lap, gently bemused. Both intact, not angry. Only these two people, same instruments and basket.",
+      "art": "朵朵急着敲竹筒，公公停下吹奏，把竹笛放在膝上。",
       "layout": "top-split",
       "textSplit": 1,
       "artPlacement": [
@@ -277,7 +277,7 @@
         "她等笛聲停下，才輕輕接上。"
       ],
       "beat": "從搶快改成等待、傾聽與接續。",
-      "art": "A calm turn-taking moment: grandfather lower RIGHT finishes playing a short phrase on horizontal transverse flute; girl lower LEFT waits with two chopsticks lifted but motionless, attentive narrow eyes, her single tube in front. Basket beside mat. No sound writing or extra hands.",
+      "art": "朵朵拿着竹筷安靜等待，公公吹完一小段後，她才接上。",
       "layout": "top-split",
       "textSplit": 1,
       "artPlacement": [
@@ -295,10 +295,10 @@
       ],
       "lines": [
         "一段笛聲，一段筒聲。",
-        "窗外的雨，成了第三個隊員。"
+        "門外的雨，成了第三個隊員。"
       ],
       "beat": "圖文以擬人表達聽雨，不把雨畫成人。",
-      "art": "Joyful ensemble lower half: grandfather seated RIGHT plays horizontal bamboo flute; girl seated LEFT taps bamboo tube gently with her pair of chopsticks. Small rain strokes outside far left doorway. Natural individual smiles, slight leaning body rhythm; rain remains ordinary rain, not a person, creature or musical symbol. Full figures.",
+      "art": "祖孫以竹笛和竹筒合奏，門外仍下着雨；雨不畫成人。",
       "layout": "top-split",
       "textSplit": 1,
       "artPlacement": [
@@ -320,7 +320,7 @@
         "公公把竹笛放進籃裏。"
       ],
       "beat": "天氣改變，為原來的出門願望製造選擇。",
-      "art": "Girl lower LEFT stands at open doorway pointing at a few remaining droplets falling from eave, no rainfall. Grandfather lower RIGHT carefully puts ONE transverse bamboo flute into oval basket; single bamboo tube remains on mat by basket, pair chopsticks laid together on mat. Faces and hands whole, all shoes visible, no cropped limbs.",
+      "art": "雨停了，朵朵在左邊指向屋簷餘下的水滴，公公把竹笛放進竹籃。",
       "layout": "top-split",
       "textSplit": 1,
       "artPlacement": [
@@ -342,7 +342,7 @@
         "「等我們再奏一首！」"
       ],
       "beat": "反轉收束：不必等雨停才快樂，主角主動再合奏。",
-      "art": "Girl lower LEFT gleefully lifts her pair of chopsticks ready over the single tube. Grandfather lower RIGHT laughs, holding transverse flute again, ready to play, not yet at lips. Basket beside girl, sky outside doorway now pale and clear. Affectionate but not saccharine, full bodies, one tube one flute two chopsticks. No text.",
+      "art": "朵朵笑着舉起竹筷，公公拿起竹笛，準備再奏一首。",
       "layout": "top-split",
       "textSplit": 1,
       "artPlacement": [
