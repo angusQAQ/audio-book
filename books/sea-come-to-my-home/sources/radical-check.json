@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-02",
+  "description": "部首歸屬核對；不是粵語正音來源",
+  "dataset": "Unicode 17.0 kRSUnicode",
+  "source": "https://github.com/unicode-org/unicodetools/blob/578f6c0516f5f268292ebda50b51848407a06478/unicodetools/data/ucd/17.0.0/Unihan/kRSUnicode.txt",
+  "sha256": "481f8a3d2fda0c6b8e6f7c746a0eedfb145a62f30bf6e61527a8f7cdb2a99108",
+  "entries": {
+    "水": {
+      "codepoint": "U+6C34",
+      "kRSUnicode": "85.0",
+      "sourceLine": "6C34..6C35\t85.0"
+    },
+    "氵": {
+      "codepoint": "U+6C35",
+      "kRSUnicode": "85.0",
+      "sourceLine": "6C34..6C35\t85.0"
+    },
+    "海": {
+      "codepoint": "U+6D77",
+      "kRSUnicode": "85.7",
+      "sourceLine": "6D56..6D98\t85.7"
+    },
+    "洗": {
+      "codepoint": "U+6D17",
+      "kRSUnicode": "85.6",
+      "sourceLine": "6D17..6D55\t85.6"
+    },
+    "泡": {
+      "codepoint": "U+6CE1",
+      "kRSUnicode": "85.5",
+      "sourceLine": "6CDB..6CF4\t85.5"
+    },
+    "浮": {
+      "codepoint": "U+6D6E",
+      "kRSUnicode": "85.7",
+      "sourceLine": "6D56..6D98\t85.7"
+    },
+    "沉": {
+      "codepoint": "U+6C89",
+      "kRSUnicode": "85.4",
+      "sourceLine": "6C78..6CAA\t85.4"
+    },
+    "濕": {
+      "codepoint": "U+6FD5",
+      "kRSUnicode": "85.14",
+      "sourceLine": "6FD4..6FD5\t85.14"
+    },
+    "流": {
+      "codepoint": "U+6D41",
+      "kRSUnicode": "85.6",
+      "sourceLine": "6D17..6D55\t85.6"
+    },
+    "雨": {
+      "codepoint": "U+96E8",
+      "kRSUnicode": "173.0",
+      "sourceLine": "96E8\t173.0"
+    },
+    "船": {
+      "codepoint": "U+8239",
+      "kRSUnicode": "137.5",
+      "sourceLine": "8232..823B\t137.5"
+    }
+  },
+  "note": "85水部；173雨部；137舟部。氵為水的偏旁寫法；三點水名稱不是字源解說。"
+}
