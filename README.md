@@ -103,6 +103,17 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 
 [本書專案](books/sea-come-to-my-home/README.md)保存參考細讀、完整故事／分鏡、14幅含角色表的原創圖、精確生成紀錄、原生文字SVG、字型授權與重建程式。兩份PDF、PowerPoint與實際渲染驗證報告加入永久網站雜湊檢查。
 
+## 原創火部與心部繪本
+
+兩本均依本次確認的7–9歲自主閱讀設定製作，各有獨立故事、人物、配色與完整插畫。每本12故事跨頁、16閱讀畫面、30單頁；部首字目採150%手寫楷體，人物姓名附專名號。
+
+| 主題／書名 | 核心字與故事 | 成品 |
+| --- | --- | --- |
+| 火／《香味先到了》 | 炒、煮、烤、燈、照、熱。米米幫婆婆的小攤迎接街坊。313漢字。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/the-aroma-arrived-first/exports/香味先到了_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/the-aroma-arrived-first/exports/香味先到了_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/the-aroma-arrived-first/exports/香味先到了_可編輯排版.pptx) |
+| 心／《黑線旁的小鳥》 | 急、忘、怕、悄、想、慢。一次畫畫意外，帶來承認、傾聽與再合作。272漢字。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/little-birds-beside-the-line/exports/黑線旁的小鳥_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/little-birds-beside-the-line/exports/黑線旁的小鳥_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/little-birds-beside-the-line/exports/黑線旁的小鳥_可編輯排版.pptx) |
+
+[火部專案](books/the-aroma-arrived-first/README.md)與[心部專案](books/little-birds-beside-the-line/README.md)保存參考分析、原稿／分鏡、原圖及修訂、精確提示、字型授權、SVG與重建程式。兩本均已實際以LibreOffice及Inkscape開啟渲染、逐頁核對文字和專名號；發布流程核對六份成品及兩份渲染報告的永久網址SHA-256。
+
 ## 設計與存檔點
 
 已建立 [電子兒童繪本 skill](.agents/skills/children-picture-book/SKILL.md)。在此專案可使用 `$children-picture-book`，說明本次適讀年齡、主題、內容及成品要求；不會把上一本書的 7–9 歲、部首、角色或頁數當成預設。涵蓋參考分析、故事／分鏡、角色與插畫、PDF／可編輯排版、專名號、實際校稿、另有要求的點讀及 Git／發布驗證。

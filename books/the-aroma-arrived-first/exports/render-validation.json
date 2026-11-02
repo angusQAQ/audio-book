@@ -1,0 +1,28 @@
+{
+  "status": "verified",
+  "date": "2026-11-02",
+  "officePages": 16,
+  "officeTextMatchesEveryPage": true,
+  "actualOfficeFonts": [
+    "Iansui-Regular",
+    "JyunsaiKaai-Bold"
+  ],
+  "officeTargetFontAndSizeVerified": true,
+  "properNameRulesVerified": 7,
+  "ordinaryCharactersNotEnlarged": [
+    "火"
+  ],
+  "storyTextImageCollisionChecks": 28,
+  "radicalEntriesVerified": 10,
+  "svgActualRenders": [
+    "s10",
+    "lesson"
+  ],
+  "officeRenderedPdfSha256": "87e05c90c21aae4793e8e73188a976b79543443886a75076a8027a171eedf959",
+  "files": {
+    "香味先到了_繪本.pdf": "ac1f312d4a33652837396cb080148b3200e3848deb8a515eb924bb91cb526093",
+    "香味先到了_可編輯排版.pptx": "8a8a98967497505c8fc969c6dd4567defe7fc8fb43a65b704d4eacb30f77480a",
+    "香味先到了_跨頁閱讀版.pdf": "af7d11b71d938b51586f1fbe38759a6ae7405d213df0f104e5ef1eabead39f9f"
+  },
+  "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
+}

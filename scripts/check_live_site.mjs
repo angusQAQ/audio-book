@@ -21,6 +21,14 @@ const shippedFiles = [
   'books/sea-come-to-my-home/exports/大海，來我家！_跨頁閱讀版.pdf',
   'books/sea-come-to-my-home/exports/大海，來我家！_可編輯排版.pptx',
   'books/sea-come-to-my-home/exports/render-validation.json',
+  'books/the-aroma-arrived-first/exports/香味先到了_繪本.pdf',
+  'books/the-aroma-arrived-first/exports/香味先到了_跨頁閱讀版.pdf',
+  'books/the-aroma-arrived-first/exports/香味先到了_可編輯排版.pptx',
+  'books/the-aroma-arrived-first/exports/render-validation.json',
+  'books/little-birds-beside-the-line/exports/黑線旁的小鳥_繪本.pdf',
+  'books/little-birds-beside-the-line/exports/黑線旁的小鳥_跨頁閱讀版.pdf',
+  'books/little-birds-beside-the-line/exports/黑線旁的小鳥_可編輯排版.pptx',
+  'books/little-birds-beside-the-line/exports/render-validation.json',
 ].map(path => ({
   path, hash: createHash('sha256').update(readFileSync(new URL('../' + path, import.meta.url))).digest('hex'),
 }));
