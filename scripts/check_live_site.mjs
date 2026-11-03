@@ -14,32 +14,11 @@ const shippedFiles = [
   'docs/picturebook-research-20261103.md',
   'AGENTS.md',
   '.agents/skills/children-picture-book/references/brief-and-story.md',
-  'books/little-wooden-bridge/revisions.json',
   'books/this-time-you-cant-find-me/revisions.json',
-  'books/little-wooden-bridge/assets/illustrations/cover.png',
-  'books/little-wooden-bridge/assets/illustrations/s01.png',
-  'books/little-wooden-bridge/assets/illustrations/s02.png',
-  'books/little-wooden-bridge/assets/illustrations/s03.png',
-  'books/little-wooden-bridge/assets/illustrations/s04.png',
-  'books/little-wooden-bridge/assets/illustrations/s05.png',
-  'books/little-wooden-bridge/assets/illustrations/s06.png',
-  'books/little-wooden-bridge/assets/illustrations/s07.png',
-  'books/little-wooden-bridge/assets/illustrations/s08.png',
-  'books/little-wooden-bridge/assets/illustrations/s09.png',
-  'books/little-wooden-bridge/assets/illustrations/s10.png',
   'assets/fonts/print/Iansui-Regular.ttf',
   'assets/fonts/print/JyunsaiKaai-Bold.ttf',
   'assets/fonts/print/manifest.json',
   'assets/fonts/print/SOURCE.md',
-  'books/little-wooden-bridge/story.json',
-  'books/little-wooden-bridge/brief.json',
-  'books/little-wooden-bridge/design-brief.md',
-  'books/little-wooden-bridge/artwork-log.json',
-  'books/little-wooden-bridge/exports/小木橋，通車了！_跨頁閱讀版.pdf',
-  'books/little-wooden-bridge/exports/小木橋，通車了！_繪本.pdf',
-  'books/little-wooden-bridge/exports/小木橋，通車了！_可編輯排版.pptx',
-  'books/little-wooden-bridge/exports/validation.json',
-  'books/little-wooden-bridge/exports/render-validation.json',
   'books/this-time-you-cant-find-me/story.json',
   'books/this-time-you-cant-find-me/brief.json',
   'books/this-time-you-cant-find-me/design-brief.md',
@@ -126,6 +105,21 @@ for (let attempt = 0; attempt < 24; attempt++) {
   if (attempt < 23) await new Promise(resolve => setTimeout(resolve, 10000));
 }
 assert.ok(published, 'Published library never matched the verified GitHub commit');
+
+// Retired editions must disappear from the permanent site, not only from links.
+for (const path of [
+  'books/little-wooden-bridge/story.json',
+  'books/little-wooden-bridge/assets/illustrations/cover.png',
+  'books/little-wooden-bridge/exports/小木橋，通車了！_跨頁閱讀版.pdf',
+  'books/little-wooden-bridge/exports/小木橋，通車了！_繪本.pdf',
+  'books/little-wooden-bridge/exports/小木橋，通車了！_可編輯排版.pptx',
+]) {
+  const url = new URL(path, base);
+  url.searchParams.set('removed', expectedHash);
+  const response = await fetch(url, { signal: AbortSignal.timeout(15000), cache: 'no-store' });
+  assert.equal(response.status, 404, `Retired edition still served: ${path}`);
+}
+
 
 const browser = await chromium.launch({
   executablePath: process.env.CHROMIUM_PATH,
