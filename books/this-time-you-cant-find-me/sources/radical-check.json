@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-03",
+  "description": "按固定Unicode17.0逐字查核，不以材料、意思或人物性別推斷部首。",
+  "dataset": "Unicode 17.0 kRSUnicode",
+  "source": "https://github.com/unicode-org/unicodetools/blob/578f6c0516f5f268292ebda50b51848407a06478/unicodetools/data/ucd/17.0.0/Unihan/kRSUnicode.txt",
+  "sha256": "481f8a3d2fda0c6b8e6f7c746a0eedfb145a62f30bf6e61527a8f7cdb2a99108",
+  "entries": {
+    "人": {
+      "codepoint": "U+4EBA",
+      "kRSUnicode": "9.0",
+      "sourceLine": "4EBA..4EBB\t9.0"
+    },
+    "亻": {
+      "codepoint": "U+4EBB",
+      "kRSUnicode": "9.0",
+      "sourceLine": "4EBA..4EBB\t9.0"
+    },
+    "他": {
+      "codepoint": "U+4ED6",
+      "kRSUnicode": "9.3",
+      "sourceLine": "4ED4..4EED\t9.3"
+    },
+    "低": {
+      "codepoint": "U+4F4E",
+      "kRSUnicode": "9.5",
+      "sourceLine": "4F2D..4F68\t9.5"
+    },
+    "你": {
+      "codepoint": "U+4F60",
+      "kRSUnicode": "9.5",
+      "sourceLine": "4F2D..4F68\t9.5"
+    },
+    "依": {
+      "codepoint": "U+4F9D",
+      "kRSUnicode": "9.6",
+      "sourceLine": "4F69..4FAD\t9.6"
+    },
+    "借": {
+      "codepoint": "U+501F",
+      "kRSUnicode": "9.8",
+      "sourceLine": "4FEE..503A\t9.8"
+    },
+    "做": {
+      "codepoint": "U+505A",
+      "kRSUnicode": "9.9",
+      "sourceLine": "5040..507F\t9.9"
+    },
+    "像": {
+      "codepoint": "U+50CF",
+      "kRSUnicode": "9.12",
+      "sourceLine": "50CE..50F1\t9.12"
+    },
+    "她": {
+      "codepoint": "U+5979",
+      "kRSUnicode": "38.3",
+      "sourceLine": "5977..5985\t38.3"
+    }
+  }
+}

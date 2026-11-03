@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "book": {
+    "slug": "little-wooden-bridge",
+    "title": "小木橋，通車了！",
+    "language": "zh-HK"
+  },
+  "audience": {
+    "ageMin": 7,
+    "ageMax": 9,
+    "readingMode": "independent",
+    "readingAbility": "以小二自主閱讀為主要目標",
+    "accessibilityNeeds": []
+  },
+  "theme": "兩個動物伙伴搭玩具橋送花，從木板太短、接合處下垂，到以木杯代替手指托住橋面，讓小車成功送花並載客回來。",
+  "content": {
+    "mode": "original",
+    "request": "設計獨立的部首故事・木兒童故事繪本，起因、經過、結果清楚，有好奇心與趣味。",
+    "requiredElements": [
+      "完整原創插畫與原生文字",
+      "依本次確認的7–9歲、小二自主閱讀程度選詞",
+      "起因、經過、結果及原目標的回應",
+      "按角色、動物或遊戲需要設計可預測的翻頁期待",
+      "人物使用疊字名及連續專名號",
+      "選定部首字150%手寫楷體，普通部首本形不放大"
+    ],
+    "avoidElements": [
+      "沿用另一新作的人物、道具或情節",
+      "把同一尋物情節套進每本書",
+      "用未交代的知識、抽象比喻或生字清單代替故事",
+      "只換衣服顏色而保留相同臉孔"
+    ],
+    "sourceTextPaths": [
+      "story.json"
+    ],
+    "references": [
+      {
+        "title": "生日會",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 16,
+        "sha256": "8f67a3121f40ebaa67844db1918eccb9c7f21bdc4faeacf4acd98557499d9eaf",
+        "source": "使用者附件，未重新公開原 PDF"
+      },
+      {
+        "title": "跟屁蟲",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 17,
+        "sha256": "abfb8339a9bbcb41fa25d914a9c1bff836b7ffc986eaa04077252a5d48a5a8fe",
+        "source": "使用者附件，未重新公開原 PDF"
+      }
+    ],
+    "learningGoals": [
+      "由完整故事理解核心字及用法",
+      "辨認實際部首歸屬，不以材質或意思猜部首"
+    ],
+    "targetCharacters": [
+      "果",
+      "板",
+      "橋",
+      "杯",
+      "根",
+      "棒"
+    ],
+    "characterNames": [
+      "果果",
+      "團團"
+    ],
+    "extensionCharacters": []
+  },
+  "design": {
+    "artDirection": "石墨輪廓、乾色鉛筆及白紙留白；本書另作角色模型，先比較既有九冊的輪廓與五官。",
+    "palette": [
+      "#FFFFFF",
+      "#DDEACC",
+      "#34443D",
+      "#718079",
+      "#4C8664",
+      "#8DBAC9",
+      "#BB5544"
+    ],
+    "pageSize": {
+      "width": 960,
+      "height": 600,
+      "unit": "pt"
+    },
+    "storySpreads": 10,
+    "wordBudget": 340,
+    "bodyFont": "Iansui",
+    "emphasisFont": "JyunsaiKaai Bold",
+    "emphasisScale": 1.5,
+    "properNameMarks": true,
+    "normalCharacters": [
+      "木"
+    ]
+  },
+  "deliverables": {
+    "formats": [
+      "pdf-spread",
+      "pdf-single",
+      "pptx",
+      "svg"
+    ],
+    "readAlong": false,
+    "audio": null
+  },
+  "publication": {
+    "github": true,
+    "permanentWebsite": true,
+    "destination": "https://angusqaq.github.io/audio-book/"
+  },
+  "decisions": {
+    "userRequirements": [
+      "兩本獨立新作，主題分別木與亻",
+      "使用者已明確確認兩本均沿用7–9歲、小二自主閱讀及完整插畫PDF＋可編輯排版檔",
+      "起因、經過、結果清楚，故事有趣並引起讀者好奇",
+      "姓名疊字及專名號，部首字放大手寫",
+      "每個可審閱階段Git存檔，驗證後同步永久網站"
+    ],
+    "editorialChoices": [
+      "動物伙伴玩具搭橋故事，採具體嘗試與後果推進，沒有科學術語",
+      "十跨頁、十四閱讀畫面、二十六單頁依本書事件設定",
+      "選果、板、橋、杯、根、棒，姓名果果中的果亦以手寫字放大",
+      "每本依事件與翻頁安排篇幅，不自動套用前作角色或故事",
+      "使用共用出版TTF，完整位元組與授權保存在assets/fonts/print，不重複複製20MB字型",
+      "未進行真實學生試讀，不以技術測試宣稱閱讀成效"
+    ],
+    "unresolvedQuestions": []
+  }
+}

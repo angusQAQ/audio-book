@@ -32,3 +32,5 @@ python3 books/little-birds-beside-the-line/verify_exports.py --office-pdf 實際
 ```
 
 實際LibreOffice全部16頁文字、兩種字型、放大字級與16條姓名線均相符；29個文字／底圖留白檢查通過。已查看原PDF及Office全書縮圖、SVG添小鳥與活動頁；黑線持續保留、先添兩鳥後添兩葉、結尾掛畫與新空紙的時序逐頁核對。結果見[原生檢查](exports/validation.json)與[實際渲染檢查](exports/render-validation.json)。此為數位版；未作印廠出血／CMYK製版，Office驗證工具為LibreOffice。本次未製作點讀音訊。
+
+共用出版字型的原始TTF已集中於[assets/fonts/print](../../assets/fonts/print)，其SHA-256與先前各書副本一致；重建程式已同步使用共用路徑。

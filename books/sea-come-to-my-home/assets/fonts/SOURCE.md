@@ -6,3 +6,7 @@
 - JyunsaiKaai：https://github.com/ItMarki/jyunsaikaai
 - 授權：SIL OFL 1.1，見同目錄授權檔。
 - 編輯 PowerPoint／SVG 前安裝這兩個字型。PDF 嵌入使用字形；PNG 插畫可獨立替換，並非可逐筆編輯向量。
+
+## 出版字型集中保存
+
+共用原始TTF已移至repository根目錄[assets/fonts/print](../../../../assets/fonts/print)，位元組與授權未改。安裝共用TTF後再編輯PPTX／SVG；本目錄保留授權及來源說明，Yomogi若有使用則仍保留本地。

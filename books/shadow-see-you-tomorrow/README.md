@@ -19,7 +19,7 @@
 
 ## 編輯與重建
 
-PDF嵌入實際字型；PPTX／SVG編輯前請安裝assets/fonts的芫荽與芫茜雅楷。PPTX保留原生文字、字型／字級、姓名線、色塊與獨立圖像；SVG保留原生文字與相對圖像路徑，移動時須帶同assets。不透明插圖在PDF／PowerPoint內以完整解像度的高品質JPEG編碼，透明封面維持PNG；本版全部原始PNG保留於assets；舊版原圖保存在上述Git歷史，SVG亦連結原圖。插圖可獨立替換，並非可逐筆修改的向量插畫。
+PDF嵌入實際字型；PPTX／SVG編輯前請安裝repository根目錄assets/fonts/print的芫荽與芫茜雅楷。PPTX保留原生文字、字型／字級、姓名線、色塊與獨立圖像；SVG保留原生文字與相對圖像路徑，移動時須帶同assets。不透明插圖在PDF／PowerPoint內以完整解像度的高品質JPEG編碼，透明封面維持PNG；本版全部原始PNG保留於assets；舊版原圖保存在上述Git歷史，SVG亦連結原圖。插圖可獨立替換，並非可逐筆修改的向量插畫。
 
 在工作區虛擬環境安裝requirements-book.txt，從專案根目錄執行：
 
@@ -38,3 +38,5 @@ python3 books/shadow-see-you-tomorrow/verify_exports.py --office-pdf 實際Offic
 [validation.json](exports/validation.json)與[render-validation.json](exports/render-validation.json)保存原生及實際Office／SVG檢查結果與成品雜湊。這是數位成品；實測工具為LibreOffice，未作Microsoft PowerPoint或印廠CMYK／出血驗證。本次交付PDF與可編輯檔，沒有新增點讀音訊。
 
 目前沿用舊的內部目錄識別shadow-see-you-tomorrow；成品及故事已改用新書名《今天，換我當爸爸！》。
+
+共用出版字型的原始TTF已集中於[assets/fonts/print](../../assets/fonts/print)，其SHA-256與先前各書副本一致；重建程式已同步使用共用路徑。

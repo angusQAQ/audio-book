@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "generator": "OpenAI image_gen",
+  "date": "2026-11-03",
+  "characterBible": {
+    "file": "assets/characters.png",
+    "source": "/workspace/generated_images/exec-766e61a9-1083-4160-ba1d-ee657081fc47.png",
+    "prompt": "Create an ORIGINAL four-column full-body CHARACTER MODEL SHEET for a children's literary picturebook ages7–9. Pure WHITE paper, four equal columns, generous white gaps, same baseline, complete connected bodies and ALL SHOES visible. No props, hats, letters, labels, logos, arrows or watermarks. LEFT TWO columns same GIRL YIYI age8 front and three-quarter. Taller sturdy athletic build, LONG OVAL face with HIGH forehead, thick straight eyebrows, SMALL slightly upturned narrow almond eyes, short broad flat nose, WIDE smile with a tiny GAP between front teeth, medium olive-tan skin. BLACK hair with blunt full straight eyebrow-length fringe, ONE HIGH PONYTAIL flowing down behind with a curl at end; no bob, pixie, pigtails, hair buns or glasses. Plain WARM CORAL-PINK short-sleeved top, MOSS GREEN loose knee-length shorts, navy crew socks,cream canvas sneakers. RIGHT TWO columns same BOY DONGDONG age8 front and three-quarter, shorter and compact build. Rounded-square face with broad cheekbones and rounded chin, round small button nose, scattered light freckles across cheeks, SMALL thoughtful oval eyes behind MUSTARD-YELLOW thin ROUND glasses, fine arched eyebrows and thin smiling lips, pale warm-cream skin. Short COPPER-CHESTNUT tight curls on top with clipped short sides, no black bowl cut, black flat-top or side spike. Mist-blue short-sleeved hooded top with NO cords, BRICK RED straight long trousers, dark brown canvas shoes. Neither is related, retain distinct skull/face structure, nose, eyes, body proportions, not same face with swapped clothing. No rabbit ears anywhere in neutral model. Lively GRAPHITE contours and FLAT DRY COLORED-PENCIL, visible hatching on white paper, original faces, no oversized round doll eyes, anime,3D, gloss, porcelain skin or photorealism.",
+    "references": [],
+    "transparentBackground": false,
+    "sha256": "1edbc553e29c06060c07ed60545394671ed2a2c77e655aee081190bde0b0500d"
+  },
+  "illustrations": [
+    {
+      "id": "props",
+      "file": "assets/props.png",
+      "source": "/workspace/generated_images/exec-a5361eff-519f-451e-95e3-6874a43ecbc6.png",
+      "prompt": "Create an ORIGINAL PROP MODEL SHEET in the attached new children's graphite and dry-colored-pencil style on PURE WHITE paper, no people,words,letters,numbers,labels,arrows or watermark. Exactly THREE separated full objects with large gaps. LEFT: ONE WHITE PAPER RABBIT-EAR HAT: a low simple paper headband/crown with exactly TWO EXTRA-LONG upright white oval rabbit ears, each with a pale SKY-BLUE inner oval, no rabbit face, eyes, flowers, ribbons or printed words. Paper ears are flexible so they can later fold backward; use same design throughout. MIDDLE: ONE LARGE OPEN KRAFT-BROWN CARDBOARD BOX large enough for an8yearold to crouch fully inside, rectangular simple body with OPEN TOP, four flaps folded OUTWARD/DOWN, no labels or symbols, no lid or tape sealing. RIGHT: ONE low sturdy wooden chair with BROAD SOLID RECTANGULAR BACK PANEL, normal4legs and seat, draped with a PLAIN DARK LAVENDER-BLUE CLOTH over its back reaching all the way to floor behind it and at sides, making a screen that hides a crouching child. Cloth must not have patterns,bunny silhouettes,holes,text or attached ears; hat separate. Chair back is lower than child standing but higher than crouched shoulders; extra-long paper ears can peek above it. No second hat, live rabbit, extra box, people or any sharp tools. Clean exact reusable props, flat dry colored-pencil hatching, white paper, no glossy3D or photorealism.",
+      "references": [
+        "assets/characters.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "1c6941f43131f84c2369db74cc73929260a7622f058415165053d77ff633f8e9"
+    }
+  ]
+}

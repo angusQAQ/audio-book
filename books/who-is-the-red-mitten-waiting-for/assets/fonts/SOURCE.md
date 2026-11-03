@@ -7,3 +7,7 @@
 - https://github.com/ItMarki/jyunsaikaai
 
 不宣稱為官方認證教育字體。
+
+## 出版字型集中保存
+
+共用原始TTF已移至repository根目錄[assets/fonts/print](../../../../assets/fonts/print)，位元組與授權未改。安裝共用TTF後再編輯PPTX／SVG；本目錄保留授權及來源說明，Yomogi若有使用則仍保留本地。

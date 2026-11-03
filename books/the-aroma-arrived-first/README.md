@@ -32,3 +32,5 @@ python3 books/the-aroma-arrived-first/verify_exports.py --office-pdf 實際Offic
 ```
 
 實際LibreOffice全部16頁文字、兩種字型、放大字級與7條姓名線均相符；28個文字／底圖留白檢查通過。已查看原PDF及Office全書縮圖、SVG搬桌布與活動頁；食物、燈的遮擋與移動、桌布出現時序及成人操作熱食逐頁核對。結果見[原生檢查](exports/validation.json)與[實際渲染檢查](exports/render-validation.json)。此為數位版；未作印廠出血／CMYK製版，Office驗證工具為LibreOffice。本次未製作點讀音訊。
+
+共用出版字型的原始TTF已集中於[assets/fonts/print](../../assets/fonts/print)，其SHA-256與先前各書副本一致；重建程式已同步使用共用路徑。

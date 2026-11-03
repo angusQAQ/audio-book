@@ -30,3 +30,5 @@ python3 books/sea-come-to-my-home/verify_exports.py --office-pdf 實際Office輸
 ```
 
 渲染驗證逐頁核對文字、實際字型／字級、12條姓名線及圖文留白，保存render-validation.json。已查看全書原PDF與Office縮圖、封面、沉船、造船與活動頁高解析；沒有以僅檔案存在代替實際開啟。此為數位版，未另作印廠出血／CMYK製版；實際Office驗證為LibreOffice。
+
+共用出版字型的原始TTF已集中於[assets/fonts/print](../../assets/fonts/print)，其SHA-256與先前各書副本一致；重建程式已同步使用共用路徑。

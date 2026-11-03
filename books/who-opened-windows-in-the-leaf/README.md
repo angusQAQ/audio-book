@@ -32,3 +32,5 @@ python3 books/who-opened-windows-in-the-leaf/verify_exports.py --office-pdf 實�
 ```
 
 實際渲染逐頁核對文字、字型／字級、姓名線及圖文留白，保存[render-validation.json](exports/render-validation.json)；原生檢查見[validation.json](exports/validation.json)。已查看原PDF與Office全書縮圖及代表頁高解析。此為數位成品；Office實測工具為LibreOffice，未作印廠出血／CMYK製版。本次沒有製作或註冊點讀音訊。
+
+共用出版字型的原始TTF已集中於[assets/fonts/print](../../assets/fonts/print)，其SHA-256與先前各書副本一致；重建程式已同步使用共用路徑。

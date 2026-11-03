@@ -35,3 +35,5 @@ python3 books/who-is-the-red-mitten-waiting-for/verify_exports.py --office-pdf �
 ## 內頁5插畫修訂（2026-11-02）
 
 修正踢球人物只有截斷小腿的構圖，補成兩名完整的遠景小朋友；正文及其他故事插畫維持原稿。跨頁PDF、單頁PDF、PowerPoint、SVG與縮圖同步重建。修改前原圖保留於assets/revisions/s02-initial.png，精確編輯提示與新舊雜湊見artwork-log.json，修訂範圍見[revisions.json](revisions.json)。
+
+共用出版字型的原始TTF已集中於[assets/fonts/print](../../assets/fonts/print)，其SHA-256與先前各書副本一致；重建程式已同步使用共用路徑。

@@ -10,7 +10,7 @@
 
 [需求](brief.json)、[故事與理解問題](story.json)、[設計及逐跨頁連貫](design-brief.md)、[人物與原圖精確提示](artwork-log.json)、[字型及授權](assets/fonts)、[部首條目](sources)均保存於本專案。來源的兩份參考PDF不重新公開。
 
-PDF嵌入字型；PPTX與SVG保留原生文字、150%手寫字、完整姓名線及獨立圖像。編輯前安裝assets/fonts內兩份TTF。PNG可獨立替換，不是可逐筆修改的向量插畫。PDF／PPTX的不透明圖像以完整解像度高品質JPEG編碼，透明封面保留PNG；原始PNG與SVG連結來源均保留。
+PDF嵌入字型；PPTX與SVG保留原生文字、150%手寫字、完整姓名線及獨立圖像。編輯前安裝repository根目錄assets/fonts/print內兩份TTF。PNG可獨立替換，不是可逐筆修改的向量插畫。PDF／PPTX的不透明圖像以完整解像度高品質JPEG編碼，透明封面保留PNG；原始PNG與SVG連結來源均保留。
 
 從repository根目錄安裝requirements-book.txt後重建：
 
@@ -27,3 +27,5 @@ python3 books/where-is-the-red-pencil/verify_exports.py --office-pdf 實際Offic
 驗證報告保存於exports/validation.json與exports/render-validation.json。實測工具為LibreOffice及Inkscape，未聲稱Microsoft PowerPoint或印廠CMYK／出血測試。本次交付PDF及可編輯檔，沒有另加點讀音訊。實際兒童試讀尚未進行。
 
 修訂前插畫與精確提示保存在b97fab2，現有artwork-log的historicalReferences記錄來源提交與雜湊；沒有把初圖改寫成最後修訂提示。
+
+共用出版字型的原始TTF已集中於[assets/fonts/print](../../assets/fonts/print)，其SHA-256與先前各書副本一致；重建程式已同步使用共用路徑。

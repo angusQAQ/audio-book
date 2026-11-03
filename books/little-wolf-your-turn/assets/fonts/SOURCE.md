@@ -15,3 +15,7 @@
 - https://raw.githubusercontent.com/google/fonts/main/ofl/yomogi/OFL.txt
 
 原樣保存為 `Yomogi-Regular.ttf`，授權與原作者資訊見 `Yomogi-OFL.txt`。已檢查八個繁體字的字形與涵蓋，PDF 嵌入兩種字體；PPTX／SVG 保留逐字可編輯樣式。Yomogi 原為日文手寫字體，並非香港官方教育標準字體；本書的部首符號「犬／犭」繼續採芫荽，避免不存在的「犭」字形被替代。
+
+## 出版字型集中保存
+
+共用原始TTF已移至repository根目錄[assets/fonts/print](../../../../assets/fonts/print)，位元組與授權未改。安裝共用TTF後再編輯PPTX／SVG；本目錄保留授權及來源說明，Yomogi若有使用則仍保留本地。

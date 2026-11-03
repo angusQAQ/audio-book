@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "generator": "OpenAI image_gen",
+  "date": "2026-11-03",
+  "characterBible": {
+    "file": "assets/characters.png",
+    "source": "/workspace/generated_images/exec-c9ebb39d-bb1a-4e5e-b3ce-d876a96e5ee8.png",
+    "prompt": "Create an ORIGINAL four-column full-body CHARACTER MODEL SHEET for a children's literary picturebook ages7–9, pure WHITE paper, no props,text,labels,arrows,swatches or watermarks. LEFT TWO columns same anthropomorphic SMALL SQUIRREL front and three-quarter; RIGHT TWO columns same anthropomorphic HEDGEHOG front and three-quarter. All full connected bodies and paws visible, equal column widths, generous white gaps, shared baseline. SQUIRREL GUOGUO: slim upright energetic body, distinctly LONG NARROW pointed squirrel muzzle, SMALL black oval eyes, little upright triangular ears with tufts, cinnamon-orange fur, cream cheeks and belly, very LARGE BUSHY TAIL curls upward behind his back from hips, tail never a limb. Emerald-green plain short-sleeved shirt, warm grey-ochre shorts, bare squirrel hind paws. HEDGEHOG TUANTUAN: clearly shorter squat PEAR-SHAPED body, long tapered pale cream muzzle with round dark nose, tiny black almond eyes, very small rounded ears, thick DARK CHOCOLATE SHORT DENSE QUILLS over crown and back, creamy face and belly. Golden-yellow short sleeveless vest, dark indigo shorts, bare small hind paws. Not porcupine with long needles, not brown bear, rabbit or human child. Both have exactly2arms and2legs, small naturally simplified animal hands, expressive eyebrows and smiles. Retain same individual faces and clothing in front and three-quarter. Delightful but not huge round doll eyes. LOOSE graphite contours, dry colored-pencil hatching, selective flat colors, white paper showing; no watercolor haze, glossy3D, anime or photorealism. Original designs, different silhouettes and muzzle shapes, no copied existing storybook characters.",
+    "references": [],
+    "transparentBackground": false,
+    "sha256": "06f1c330e096792aaeda6b87fb66963f54ead6ba80aa10360d822f88a9c5427a"
+  },
+  "illustrations": [
+    {
+      "id": "props",
+      "file": "assets/props.png",
+      "source": "/workspace/generated_images/exec-ff8b2ab6-4bd0-4348-82eb-098fe1b1f08b.png",
+      "prompt": "Create an ORIGINAL PROP MODEL SHEET for the attached graphite/dry-colored-pencil squirrel-and-hedgehog toy-bridge picturebook. Pure WHITE paper, separated intact objects, NO people or animals, no letters,numbers,labels,arrows,diagrams or watermark. Draw EXACTLY: TWO IDENTICAL flat warm light-maple rectangular toy WOOD PLANKS, short enough that one alone cannot bridge a gap but TWO with overlap can. Each smooth plank about3times length of red toy car and1.5times car width, no nails. TWO IDENTICAL solid pale wooden CUBES, same height, serve as river banks. ONE handleless small cylindrical WOODEN CUP, same HEIGHT as each cube, show it UPSIDE DOWN with flat closed base on TOP, hollow opening DOWN; no handle or writing. ONE small simple RED WOODEN FLATBED TOY CAR, FOUR dark round wheels, open flat cargo bed, no cab needed, sturdy low wagon-like toy; ONE YELLOW DAISY with green stem lies flat on its bed. ONE small CREAM WOODEN RABBIT TOY, two upright ears, dot eyes, small flat stable base; short enough to fit on that car, no clothes. ONE flat loose BLUE FABRIC SCARF used as pretend river, not actual water. TWO short blunt WOODEN STICKS with one tiny plain TRIANGULAR FLAG each, one coral-red and one pale-yellow. No extra cubes,planks,cups,cars,rabbits,flowers or flags. Arrange props in separate rows with generous whitespace. Lively graphite outlines, flat dry colored pencil, natural texture; no3D,photorealism,gloss or copied designs.",
+      "references": [
+        "assets/characters.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "a25b972a49cefeb586d09edf84c768f13d109f03571cb0eba72ce18e35a7d448"
+    }
+  ]
+}

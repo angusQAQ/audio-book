@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-03",
+  "baseCommit": "cf1da6e84783ceb9b1d3606eef6c2b16fd071ba1",
+  "description": "合併內容完全一致的出版字型副本，保留全部位元組與授權。",
+  "bytesSaved": 152162908,
+  "files": {
+    "Iansui-Regular.ttf": {
+      "sha256": "6e6340d80d618a42b48ade9370c34fa37a8210750c6fbc8efe65f23716538a2b",
+      "bytes": 9420560,
+      "previousCopies": [
+        "books/lets-find-that-cloud/assets/fonts/Iansui-Regular.ttf",
+        "books/little-birds-beside-the-line/assets/fonts/Iansui-Regular.ttf",
+        "books/little-wolf-your-turn/assets/fonts/Iansui-Regular.ttf",
+        "books/sea-come-to-my-home/assets/fonts/Iansui-Regular.ttf",
+        "books/shadow-see-you-tomorrow/assets/fonts/Iansui-Regular.ttf",
+        "books/the-aroma-arrived-first/assets/fonts/Iansui-Regular.ttf",
+        "books/where-is-the-red-pencil/assets/fonts/Iansui-Regular.ttf",
+        "books/who-is-the-red-mitten-waiting-for/assets/fonts/Iansui-Regular.ttf",
+        "books/who-opened-windows-in-the-leaf/assets/fonts/Iansui-Regular.ttf"
+      ]
+    },
+    "JyunsaiKaai-Bold.ttf": {
+      "sha256": "6585775335b9ff9e8c429a6a7c54c34353e27f44e67c5c7363fe0f4895eb7273",
+      "bytes": 10971204,
+      "previousCopies": [
+        "books/lets-find-that-cloud/assets/fonts/JyunsaiKaai-Bold.ttf",
+        "books/little-birds-beside-the-line/assets/fonts/JyunsaiKaai-Bold.ttf",
+        "books/sea-come-to-my-home/assets/fonts/JyunsaiKaai-Bold.ttf",
+        "books/shadow-see-you-tomorrow/assets/fonts/JyunsaiKaai-Bold.ttf",
+        "books/the-aroma-arrived-first/assets/fonts/JyunsaiKaai-Bold.ttf",
+        "books/where-is-the-red-pencil/assets/fonts/JyunsaiKaai-Bold.ttf",
+        "books/who-is-the-red-mitten-waiting-for/assets/fonts/JyunsaiKaai-Bold.ttf",
+        "books/who-opened-windows-in-the-leaf/assets/fonts/JyunsaiKaai-Bold.ttf"
+      ]
+    }
+  }
+}
