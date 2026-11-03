@@ -5,6 +5,16 @@
   "source": "https://github.com/unicode-org/unicodetools/blob/578f6c0516f5f268292ebda50b51848407a06478/unicodetools/data/ucd/17.0.0/Unihan/kRSUnicode.txt",
   "sha256": "481f8a3d2fda0c6b8e6f7c746a0eedfb145a62f30bf6e61527a8f7cdb2a99108",
   "entries": {
+    "可": {
+      "codepoint": "U+53EF",
+      "kRSUnicode": "30.2",
+      "sourceLine": "53E4..53FE\t30.2"
+    },
+    "團": {
+      "codepoint": "U+5718",
+      "kRSUnicode": "31.11",
+      "sourceLine": "5716..5719\t31.11"
+    },
     "木": {
       "codepoint": "U+6728",
       "kRSUnicode": "75.0",
@@ -20,10 +30,10 @@
       "kRSUnicode": "75.4",
       "sourceLine": "676A..6780\t75.4"
     },
-    "果": {
-      "codepoint": "U+679C",
-      "kRSUnicode": "75.4",
-      "sourceLine": "6782..67AD\t75.4"
+    "架": {
+      "codepoint": "U+67B6",
+      "kRSUnicode": "75.5",
+      "sourceLine": "67AE..6811\t75.5"
     },
     "根": {
       "codepoint": "U+6839",
@@ -44,6 +54,18 @@
       "codepoint": "U+82B1",
       "kRSUnicode": "140.4",
       "sourceLine": "8298..82BE\t140.4"
+    }
+  },
+  "properNameRadicalPolicy": {
+    "rule": "姓名中的漢字不得與本書主題部首同部",
+    "themeRadical": 75,
+    "names": {
+      "可可": {
+        "可": 30
+      },
+      "團團": {
+        "團": 31
+      }
     }
   }
 }

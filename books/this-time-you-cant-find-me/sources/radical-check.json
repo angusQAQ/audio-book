@@ -30,11 +30,6 @@
       "kRSUnicode": "9.5",
       "sourceLine": "4F2D..4F68\t9.5"
     },
-    "依": {
-      "codepoint": "U+4F9D",
-      "kRSUnicode": "9.6",
-      "sourceLine": "4F69..4FAD\t9.6"
-    },
     "借": {
       "codepoint": "U+501F",
       "kRSUnicode": "9.8",
@@ -50,10 +45,32 @@
       "kRSUnicode": "9.12",
       "sourceLine": "50CE..50F1\t9.12"
     },
+    "冬": {
+      "codepoint": "U+51AC",
+      "kRSUnicode": "15.3",
+      "sourceLine": "51AC..51AF\t15.3"
+    },
     "她": {
       "codepoint": "U+5979",
       "kRSUnicode": "38.3",
       "sourceLine": "5977..5985\t38.3"
+    },
+    "彤": {
+      "codepoint": "U+5F64",
+      "kRSUnicode": "59.4",
+      "sourceLine": "5F62..5F64\t59.4"
+    }
+  },
+  "properNameRadicalPolicy": {
+    "rule": "姓名中的漢字不得與本書主題部首同部",
+    "themeRadical": 9,
+    "names": {
+      "彤彤": {
+        "彤": 59
+      },
+      "冬冬": {
+        "冬": 15
+      }
     }
   }
 }

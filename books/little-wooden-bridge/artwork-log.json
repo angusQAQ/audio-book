@@ -197,5 +197,14 @@
       ],
       "sha256": "06066e8abffe94ca7f691bc035789f6d17c00cc3a350b9cab884c2d093df385f"
     }
-  ]
+  ],
+  "currentCharacterNames": {
+    "guoguo": "可可",
+    "tuantuan": "團團"
+  },
+  "nameRevision": {
+    "date": "2026-11-03",
+    "previousCommit": "15d6a3fd04af873edcdb24c8a979001a67bb9f94",
+    "description": "僅變更姓名文字，插畫原檔及原始生成提示保持原樣。"
+  }
 }

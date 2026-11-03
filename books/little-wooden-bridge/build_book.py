@@ -376,6 +376,11 @@ def validate(page_list, output, proof):
             assert left_text.count('「') == left_text.count('」'), (spread['id'], 'Quotation crosses pages')
         visible=''.join(item['text'] for item in page['items'] if item['kind']=='text' and item['size']>11)
         assert visible==''.join(spread['lines']).replace('\n',''), (page['id'],'Story text differs from manuscript')
+    facts = json.loads((ROOT/'sources/radical-check.json').read_text())['entries']
+    name_radicals = {ch:int(facts[ch]['kRSUnicode'].split('.')[0]) for ch in sorted(set(''.join(PROPER_NAMES)))}
+    assert all(radical != BOOK['radical']['kangxiNumber'] for radical in name_radicals.values()), 'Personal names must avoid the theme radical'
+    manuscript = ''.join(''.join(spread['lines']) for spread in BOOK['spreads'])
+    assert all(ch in manuscript for ch in BOOK['coreCharacters']), 'Core characters must occur in the story'
     artwork_count=0
     if not proof:
         provenance=json.loads((ROOT/'artwork-log.json').read_text())
@@ -491,6 +496,7 @@ def validate(page_list, output, proof):
     report = {'status': 'proof' if proof else 'complete', 'spreadPages':len(spreads), 'singlePages':len(leaves),
               'editableSlides':len(deck.slides), 'missingGlyphs':missing, 'allTextEditable':True,
               'originalArtworkHashesVerified':artwork_count,
+              'properNameRadicals':name_radicals, 'properNamesAvoidThemeRadical':True,
               'properNameMarks': {'names': dict(proper_name_marks), 'style': 'continuous rule below each full name',
                                   'pdfPptxSvgGeometryVerified': True, 'editableTextAndRuleGrouped': True},
               'targetTypography': {'font': HAND_FAMILY, 'bodyScale': EMPHASIS_SCALE,

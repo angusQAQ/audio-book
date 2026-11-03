@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "date": "2026-11-03",
+      "previousCommit": "15d6a3fd04af873edcdb24c8a979001a67bb9f94",
+      "changes": [
+        {
+          "kind": "character-name",
+          "before": "依依",
+          "after": "彤彤",
+          "reason": "姓名用字不得與本書主題部首同部，並保留疊字及連續專名號。"
+        },
+        {
+          "kind": "dialogue",
+          "spread": "s02",
+          "before": "你藏，我來找！",
+          "after": "你藏起來，我來找你！"
+        },
+        {
+          "kind": "dialogue",
+          "spread": "s12",
+          "before": "換我藏！你來找！",
+          "after": "換我藏起來，你來找我！"
+        },
+        {
+          "kind": "learning-character",
+          "before": "延伸依；依依的依，也屬人部。",
+          "after": "不設延伸字；請看清部首，再把字找出來。"
+        }
+      ],
+      "storyHanCharacters": 360,
+      "artwork": "原圖與精確生成提示保留，改名不需重繪。"
+    }
+  ]
+}

@@ -178,5 +178,14 @@
       "source": "/workspace/generated_images/exec-2020919c-d9a5-4ac0-8ee0-c02aabea488c.png",
       "sha256": "41f2013a2500f434e8890f5383f13db78ba564b6c332772255e55902f22a8058"
     }
-  ]
+  ],
+  "currentCharacterNames": {
+    "yiyi": "彤彤",
+    "dongdong": "冬冬"
+  },
+  "nameRevision": {
+    "date": "2026-11-03",
+    "previousCommit": "15d6a3fd04af873edcdb24c8a979001a67bb9f94",
+    "description": "僅變更姓名文字，插畫原檔及原始生成提示保持原樣。"
+  }
 }
