@@ -21,6 +21,138 @@
       ],
       "transparentBackground": false,
       "sha256": "a25b972a49cefeb586d09edf84c768f13d109f03571cb0eba72ce18e35a7d448"
+    },
+    {
+      "id": "cover",
+      "prompt": "Original hand-drawn children's literary picturebook artwork, restrained loose GRAPHITE contours and textured DRY COLORED PENCIL, flat selective colors, WHITE paper visible, light playful tiny graphite floor marks. No watercolor wash, glossy3D, anime, realism, border, lettering, numbers, watermark or diagram. Use attached FIRST image as exact CHARACTER reference, SECOND as exact PROP reference; change pose only, retain clothing, head proportions, features and original style. Do not copy the model-sheet layout. CHARACTERS: small slim cinnamon-orange SQUIRREL with long pointed muzzle, cream face/belly, small black oval eyes, upright tuft ears, HUGE BUSHY TAIL curling up behind hips; green short sleeves, grey-ochre shorts, bare paws, exactly2arms2legs. Shorter squat HEDGEHOG with creamy pointed muzzle and small rounded ears/black eyes, dense dark chocolate short quills, yellow vest, indigo shorts, bare paws; not bear. PROPS: red small flatbed wooden toycar, yellow daisy, tiny cream wooden rabbit, two identical short pale maple planks, two wooden bank cubes same height as one inverted handleless wooden cup, dry blue fabric scarf, no actual water. Scenes follow same LEFT/RIGHT riverbank orientation. ISOLATED compact joyful COVER vignette on TRANSPARENT background, both full characters squirrel LEFT, hedgehog RIGHT, proud small finished two-plank bridge with inverted wood cup and red car carrying yellow flower. Whole bodies and tail visible. No flags or extra scenery. Fill frame, suitable for fitting a half-page book cover; no white paper rectangle.",
+      "transparentBackground": true,
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "file": "assets/illustrations/cover.png",
+      "source": "/workspace/generated_images/exec-ddc2b81e-072b-4e6c-a481-362b3fc7eed9.png",
+      "sha256": "3b7db2b5f9acda3c5be05fd2830a5b8be46398c3962e0e547893bde1b9fd1790"
+    },
+    {
+      "id": "s01",
+      "prompt": "Original hand-drawn children's literary picturebook artwork, restrained loose GRAPHITE contours and textured DRY COLORED PENCIL, flat selective colors, WHITE paper visible, light playful tiny graphite floor marks. No watercolor wash, glossy3D, anime, realism, border, lettering, numbers, watermark or diagram. Use attached FIRST image as exact CHARACTER reference, SECOND as exact PROP reference; change pose only, retain clothing, head proportions, features and original style. Do not copy the model-sheet layout. CHARACTERS: small slim cinnamon-orange SQUIRREL with long pointed muzzle, cream face/belly, small black oval eyes, upright tuft ears, HUGE BUSHY TAIL curling up behind hips; green short sleeves, grey-ochre shorts, bare paws, exactly2arms2legs. Shorter squat HEDGEHOG with creamy pointed muzzle and small rounded ears/black eyes, dense dark chocolate short quills, yellow vest, indigo shorts, bare paws; not bear. PROPS: red small flatbed wooden toycar, yellow daisy, tiny cream wooden rabbit, two identical short pale maple planks, two wooden bank cubes same height as one inverted handleless wooden cup, dry blue fabric scarf, no actual water. Scenes follow same LEFT/RIGHT riverbank orientation. LANDSCAPE wide panoramic SINGLE SCENE 2:1. Upper 38% entirely PURE WHITE with no heads, ears, tail, furniture, scenery or shadows; illustration lives in lower62%, but keep whole connected figures and feet fully inside frame. Each face away from exact vertical middle binding x45–55%; small props can cross center. Compose left and right actions clearly, no inset, no panels, no multiple moments. BEGINNING: squirrel kneels LEFT beside the red toy car with one yellow daisy on bed, proudly suggesting delivery; hedgehog kneels RIGHT facing him. Between them dry BLUE FABRIC SCARF as pretend river, fringe visible. Two solid wooden cubes one at each bank; cream wooden toy rabbit stands RIGHT. Two short loose planks lie on left-side floor, not crossing scarf. Small wooden cup lies on floor aside. No bridge yet, no flags.",
+      "transparentBackground": false,
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "file": "assets/illustrations/s01.png",
+      "source": "/workspace/generated_images/exec-9f9b85f3-08a5-4ff3-a9ce-493914ccb22d.png",
+      "sha256": "c9e0bf6c7163ab8d801127d3821b9d89a174cffb591247f7d0f060e25c61b35a"
+    },
+    {
+      "id": "s02",
+      "prompt": "Original hand-drawn children's literary picturebook artwork, restrained loose GRAPHITE contours and textured DRY COLORED PENCIL, flat selective colors, WHITE paper visible, light playful tiny graphite floor marks. No watercolor wash, glossy3D, anime, realism, border, lettering, numbers, watermark or diagram. Use attached FIRST image as exact CHARACTER reference, SECOND as exact PROP reference; change pose only, retain clothing, head proportions, features and original style. Do not copy the model-sheet layout. CHARACTERS: small slim cinnamon-orange SQUIRREL with long pointed muzzle, cream face/belly, small black oval eyes, upright tuft ears, HUGE BUSHY TAIL curling up behind hips; green short sleeves, grey-ochre shorts, bare paws, exactly2arms2legs. Shorter squat HEDGEHOG with creamy pointed muzzle and small rounded ears/black eyes, dense dark chocolate short quills, yellow vest, indigo shorts, bare paws; not bear. PROPS: red small flatbed wooden toycar, yellow daisy, tiny cream wooden rabbit, two identical short pale maple planks, two wooden bank cubes same height as one inverted handleless wooden cup, dry blue fabric scarf, no actual water. Scenes follow same LEFT/RIGHT riverbank orientation. LANDSCAPE wide panoramic SINGLE SCENE 2:1. Upper 38% entirely PURE WHITE with no heads, ears, tail, furniture, scenery or shadows; illustration lives in lower62%, but keep whole connected figures and feet fully inside frame. Each face away from exact vertical middle binding x45–55%; small props can cross center. Compose left and right actions clearly, no inset, no panels, no multiple moments. FIRST OBSTACLE: squirrel LEFT holds just ONE short plank with both paws, its LEFT end on left cube and RIGHT end visibly falls SHORT of right cube by substantial gap. He supports it; no floating impossible plank. Hedgehog RIGHT leans forward studying the gap. Red car+yellow flower wait LEFT, cream wooden rabbit RIGHT, second unused plank and cup on floor beside them. NO successful bridge, no flags.",
+      "transparentBackground": false,
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "file": "assets/illustrations/s02.png",
+      "source": "/workspace/generated_images/exec-5f324eac-0554-434c-8d1a-54253eb597fd.png",
+      "sha256": "3aef1405b51f30ab4705b106e2c34846f300d3a4065f98f222055f1b29224fe0"
+    },
+    {
+      "id": "s03",
+      "prompt": "Original hand-drawn children's literary picturebook artwork, restrained loose GRAPHITE contours and textured DRY COLORED PENCIL, flat selective colors, WHITE paper visible, light playful tiny graphite floor marks. No watercolor wash, glossy3D, anime, realism, border, lettering, numbers, watermark or diagram. Use attached FIRST image as exact CHARACTER reference, SECOND as exact PROP reference; change pose only, retain clothing, head proportions, features and original style. Do not copy the model-sheet layout. CHARACTERS: small slim cinnamon-orange SQUIRREL with long pointed muzzle, cream face/belly, small black oval eyes, upright tuft ears, HUGE BUSHY TAIL curling up behind hips; green short sleeves, grey-ochre shorts, bare paws, exactly2arms2legs. Shorter squat HEDGEHOG with creamy pointed muzzle and small rounded ears/black eyes, dense dark chocolate short quills, yellow vest, indigo shorts, bare paws; not bear. PROPS: red small flatbed wooden toycar, yellow daisy, tiny cream wooden rabbit, two identical short pale maple planks, two wooden bank cubes same height as one inverted handleless wooden cup, dry blue fabric scarf, no actual water. Scenes follow same LEFT/RIGHT riverbank orientation. LANDSCAPE wide panoramic SINGLE SCENE 2:1. Upper 38% entirely PURE WHITE with no heads, ears, tail, furniture, scenery or shadows; illustration lives in lower62%, but keep whole connected figures and feet fully inside frame. Each face away from exact vertical middle binding x45–55%; small props can cross center. Compose left and right actions clearly, no inset, no panels, no multiple moments. SECOND ATTEMPT BEFORE testing: exactly TWO short rectangular planks, one outer end rests on LEFT cube, other outer end on RIGHT cube, their INNER ENDS OVERLAP at middle above blue scarf. Squirrel LEFT and hedgehog RIGHT SUPPORT THAT OVERLAPPING JOIN with their paws from underneath, creating nearly flat deck; no underside support objects yet. Red car and single yellow flower wait LEFT, rabbit RIGHT, wooden cup aside on floor. No flags.",
+      "transparentBackground": false,
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "file": "assets/illustrations/s03.png",
+      "source": "/workspace/generated_images/exec-b4a6138f-e1e0-40f1-9a76-ec62c94a82c2.png",
+      "sha256": "960aac24fbac680ec2e102e8c0f57175f7a66a73c3c43090bb024455c8f42f9f"
+    },
+    {
+      "id": "s04",
+      "prompt": "Original hand-drawn children's literary picturebook artwork, restrained loose GRAPHITE contours and textured DRY COLORED PENCIL, flat selective colors, WHITE paper visible, light playful tiny graphite floor marks. No watercolor wash, glossy3D, anime, realism, border, lettering, numbers, watermark or diagram. Use attached FIRST image as exact CHARACTER reference, SECOND as exact PROP reference; change pose only, retain clothing, head proportions, features and original style. Do not copy the model-sheet layout. CHARACTERS: small slim cinnamon-orange SQUIRREL with long pointed muzzle, cream face/belly, small black oval eyes, upright tuft ears, HUGE BUSHY TAIL curling up behind hips; green short sleeves, grey-ochre shorts, bare paws, exactly2arms2legs. Shorter squat HEDGEHOG with creamy pointed muzzle and small rounded ears/black eyes, dense dark chocolate short quills, yellow vest, indigo shorts, bare paws; not bear. PROPS: red small flatbed wooden toycar, yellow daisy, tiny cream wooden rabbit, two identical short pale maple planks, two wooden bank cubes same height as one inverted handleless wooden cup, dry blue fabric scarf, no actual water. Scenes follow same LEFT/RIGHT riverbank orientation. LANDSCAPE wide panoramic SINGLE SCENE 2:1. Upper 38% entirely PURE WHITE with no heads, ears, tail, furniture, scenery or shadows; illustration lives in lower62%, but keep whole connected figures and feet fully inside frame. Each face away from exact vertical middle binding x45–55%; small props can cross center. Compose left and right actions clearly, no inset, no panels, no multiple moments. PROBLEM: exactly two planks angled DOWN towards middle, outer ends on left/right cubes, overlapping central join DIPS clearly into shallow V above BLUE DRY SCARF. Red car carrying yellow daisy has started across LEFT plank and tips slightly toward join; squirrel LEFT catches car with his paws before falling. Hedgehog RIGHT reaches toward join alarmed. Show connected bodies, no injury. Wooden rabbit RIGHT, cup unused aside on floor. NO cup under join yet; no flags.",
+      "transparentBackground": false,
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "file": "assets/illustrations/s04.png",
+      "source": "/workspace/generated_images/exec-d88c33ee-13da-481b-bc92-e9bcf35211e0.png",
+      "sha256": "bb788c4159718f43335ea122a9e856dd80dc3ab81e7b58f7735d91aaad4c5d13"
+    },
+    {
+      "id": "s05",
+      "prompt": "Original hand-drawn children's literary picturebook artwork, restrained loose GRAPHITE contours and textured DRY COLORED PENCIL, flat selective colors, WHITE paper visible, light playful tiny graphite floor marks. No watercolor wash, glossy3D, anime, realism, border, lettering, numbers, watermark or diagram. Use attached FIRST image as exact CHARACTER reference, SECOND as exact PROP reference; change pose only, retain clothing, head proportions, features and original style. Do not copy the model-sheet layout. CHARACTERS: small slim cinnamon-orange SQUIRREL with long pointed muzzle, cream face/belly, small black oval eyes, upright tuft ears, HUGE BUSHY TAIL curling up behind hips; green short sleeves, grey-ochre shorts, bare paws, exactly2arms2legs. Shorter squat HEDGEHOG with creamy pointed muzzle and small rounded ears/black eyes, dense dark chocolate short quills, yellow vest, indigo shorts, bare paws; not bear. PROPS: red small flatbed wooden toycar, yellow daisy, tiny cream wooden rabbit, two identical short pale maple planks, two wooden bank cubes same height as one inverted handleless wooden cup, dry blue fabric scarf, no actual water. Scenes follow same LEFT/RIGHT riverbank orientation. LANDSCAPE wide panoramic SINGLE SCENE 2:1. Upper 38% entirely PURE WHITE with no heads, ears, tail, furniture, scenery or shadows; illustration lives in lower62%, but keep whole connected figures and feet fully inside frame. Each face away from exact vertical middle binding x45–55%; small props can cross center. Compose left and right actions clearly, no inset, no panels, no multiple moments. DISCOVERY: exactly two planks now level because hedgehog RIGHT reaches ONE paw under overlapping join and extends one finger to support underside, tip contacting wood. Show this contact clearly. Squirrel LEFT looks at finger with concerned thoughtful face, one paw near car still on LEFT bank with yellow daisy. A small wooden cup visible on floor beside squirrel. Two outer cubes, toy rabbit RIGHT. NO cup under bridge yet, no flags.",
+      "transparentBackground": false,
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "file": "assets/illustrations/s05.png",
+      "source": "/workspace/generated_images/exec-02c20b12-ed7d-447b-ad85-5bc23ba80757.png",
+      "sha256": "f760c982b03700f20df20356ec509c1353e99b9f67f990cde298aa5f3f1238de"
+    },
+    {
+      "id": "s06",
+      "prompt": "Original hand-drawn children's literary picturebook artwork, restrained loose GRAPHITE contours and textured DRY COLORED PENCIL, flat selective colors, WHITE paper visible, light playful tiny graphite floor marks. No watercolor wash, glossy3D, anime, realism, border, lettering, numbers, watermark or diagram. Use attached FIRST image as exact CHARACTER reference, SECOND as exact PROP reference; change pose only, retain clothing, head proportions, features and original style. Do not copy the model-sheet layout. CHARACTERS: small slim cinnamon-orange SQUIRREL with long pointed muzzle, cream face/belly, small black oval eyes, upright tuft ears, HUGE BUSHY TAIL curling up behind hips; green short sleeves, grey-ochre shorts, bare paws, exactly2arms2legs. Shorter squat HEDGEHOG with creamy pointed muzzle and small rounded ears/black eyes, dense dark chocolate short quills, yellow vest, indigo shorts, bare paws; not bear. PROPS: red small flatbed wooden toycar, yellow daisy, tiny cream wooden rabbit, two identical short pale maple planks, two wooden bank cubes same height as one inverted handleless wooden cup, dry blue fabric scarf, no actual water. Scenes follow same LEFT/RIGHT riverbank orientation. LANDSCAPE wide panoramic SINGLE SCENE 2:1. Upper 38% entirely PURE WHITE with no heads, ears, tail, furniture, scenery or shadows; illustration lives in lower62%, but keep whole connected figures and feet fully inside frame. Each face away from exact vertical middle binding x45–55%; small props can cross center. Compose left and right actions clearly, no inset, no panels, no multiple moments. SOLUTION being placed: squirrel LEFT slides ONE small wooden cup UPSIDE DOWN into middle UNDER two planks' overlapping join, cup flat closed bottom on TOP touches underside of join, opening DOWN on scarf. Cup same HEIGHT as outer wooden cubes so bridge level. Hedgehog RIGHT still has paw beside join steadying it, ready to release. Red toy car+yellow daisy LEFT, cream toy rabbit RIGHT. Exactly 2 planks,2 bank cubes,1 cup,1 car,1 rabbit,1 flower. No flags.",
+      "transparentBackground": false,
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "file": "assets/illustrations/s06.png",
+      "source": "/workspace/generated_images/exec-06123a17-f028-43dc-a4d4-eb5785ee8fc5.png",
+      "sha256": "c2284aa97fe058dd1ec15971851ab5f61182285f4d393bd07c32a9bddbcbd18e"
+    },
+    {
+      "id": "s07",
+      "prompt": "Original hand-drawn children's literary picturebook artwork, restrained loose GRAPHITE contours and textured DRY COLORED PENCIL, flat selective colors, WHITE paper visible, light playful tiny graphite floor marks. No watercolor wash, glossy3D, anime, realism, border, lettering, numbers, watermark or diagram. Use attached FIRST image as exact CHARACTER reference, SECOND as exact PROP reference; change pose only, retain clothing, head proportions, features and original style. Do not copy the model-sheet layout. CHARACTERS: small slim cinnamon-orange SQUIRREL with long pointed muzzle, cream face/belly, small black oval eyes, upright tuft ears, HUGE BUSHY TAIL curling up behind hips; green short sleeves, grey-ochre shorts, bare paws, exactly2arms2legs. Shorter squat HEDGEHOG with creamy pointed muzzle and small rounded ears/black eyes, dense dark chocolate short quills, yellow vest, indigo shorts, bare paws; not bear. PROPS: red small flatbed wooden toycar, yellow daisy, tiny cream wooden rabbit, two identical short pale maple planks, two wooden bank cubes same height as one inverted handleless wooden cup, dry blue fabric scarf, no actual water. Scenes follow same LEFT/RIGHT riverbank orientation. LANDSCAPE wide panoramic SINGLE SCENE 2:1. Upper 38% entirely PURE WHITE with no heads, ears, tail, furniture, scenery or shadows; illustration lives in lower62%, but keep whole connected figures and feet fully inside frame. Each face away from exact vertical middle binding x45–55%; small props can cross center. Compose left and right actions clearly, no inset, no panels, no multiple moments. TEST: finished TWO-PLANK bridge level, one inverted wooden CUP is sole middle support under overlapping join, same height as outer bank cubes. Hedgehog RIGHT pulls both paws AWAY, open palms clearly NOT touching deck. Squirrel LEFT poised to push red toy car with yellow daisy from left bank. Toy rabbit RIGHT. Clear space between hedgehog's paw and bridge shows released support. No flags.",
+      "transparentBackground": false,
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "file": "assets/illustrations/s07.png",
+      "source": "/workspace/generated_images/exec-40451c0b-e58b-42c5-8f58-5bb6af9a730e.png",
+      "sha256": "0f5372dd62a15b44eaaba4bbc51e12b395c8d6f711fc303110aa98336075c125"
+    },
+    {
+      "id": "s08",
+      "prompt": "Original hand-drawn children's literary picturebook artwork, restrained loose GRAPHITE contours and textured DRY COLORED PENCIL, flat selective colors, WHITE paper visible, light playful tiny graphite floor marks. No watercolor wash, glossy3D, anime, realism, border, lettering, numbers, watermark or diagram. Use attached FIRST image as exact CHARACTER reference, SECOND as exact PROP reference; change pose only, retain clothing, head proportions, features and original style. Do not copy the model-sheet layout. CHARACTERS: small slim cinnamon-orange SQUIRREL with long pointed muzzle, cream face/belly, small black oval eyes, upright tuft ears, HUGE BUSHY TAIL curling up behind hips; green short sleeves, grey-ochre shorts, bare paws, exactly2arms2legs. Shorter squat HEDGEHOG with creamy pointed muzzle and small rounded ears/black eyes, dense dark chocolate short quills, yellow vest, indigo shorts, bare paws; not bear. PROPS: red small flatbed wooden toycar, yellow daisy, tiny cream wooden rabbit, two identical short pale maple planks, two wooden bank cubes same height as one inverted handleless wooden cup, dry blue fabric scarf, no actual water. Scenes follow same LEFT/RIGHT riverbank orientation. LANDSCAPE wide panoramic SINGLE SCENE 2:1. Upper 38% entirely PURE WHITE with no heads, ears, tail, furniture, scenery or shadows; illustration lives in lower62%, but keep whole connected figures and feet fully inside frame. Each face away from exact vertical middle binding x45–55%; small props can cross center. Compose left and right actions clearly, no inset, no panels, no multiple moments. SUCCESSFUL ARRIVAL: red toy car with yellow daisy on its bed has reached RIGHT bank, directly beside cream wooden rabbit. Squirrel LEFT smiles with one paw extended from pushing, hedgehog RIGHT claps two paws delighted. Two planks stay level on middle INVERTED cup and outer cubes. Blue SCARF dry fringe. NO FLAGS yet.",
+      "transparentBackground": false,
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "file": "assets/illustrations/s08.png",
+      "source": "/workspace/generated_images/exec-29227d2f-04ae-4055-9511-e6a01ff2537f.png",
+      "sha256": "8584bb4df7e0641cf124cc972a53a1a486d64a64924a29139653cee29b600254"
+    },
+    {
+      "id": "s09",
+      "prompt": "Original hand-drawn children's literary picturebook artwork, restrained loose GRAPHITE contours and textured DRY COLORED PENCIL, flat selective colors, WHITE paper visible, light playful tiny graphite floor marks. No watercolor wash, glossy3D, anime, realism, border, lettering, numbers, watermark or diagram. Use attached FIRST image as exact CHARACTER reference, SECOND as exact PROP reference; change pose only, retain clothing, head proportions, features and original style. Do not copy the model-sheet layout. CHARACTERS: small slim cinnamon-orange SQUIRREL with long pointed muzzle, cream face/belly, small black oval eyes, upright tuft ears, HUGE BUSHY TAIL curling up behind hips; green short sleeves, grey-ochre shorts, bare paws, exactly2arms2legs. Shorter squat HEDGEHOG with creamy pointed muzzle and small rounded ears/black eyes, dense dark chocolate short quills, yellow vest, indigo shorts, bare paws; not bear. PROPS: red small flatbed wooden toycar, yellow daisy, tiny cream wooden rabbit, two identical short pale maple planks, two wooden bank cubes same height as one inverted handleless wooden cup, dry blue fabric scarf, no actual water. Scenes follow same LEFT/RIGHT riverbank orientation. LANDSCAPE wide panoramic SINGLE SCENE 2:1. Upper 38% entirely PURE WHITE with no heads, ears, tail, furniture, scenery or shadows; illustration lives in lower62%, but keep whole connected figures and feet fully inside frame. Each face away from exact vertical middle binding x45–55%; small props can cross center. Compose left and right actions clearly, no inset, no panels, no multiple moments. CELEBRATION: toy wooden rabbit and single yellow daisy now stand together on RIGHT bank; red toy car empty beside them. Squirrel LEFT and hedgehog RIGHT plant exactly TWO blunt short wood sticks, each supporting tiny plain triangular flag: coral-red at LEFT bank, pale-yellow at RIGHT bank, away from bridge deck. Finished level two-plank bridge, one inverted cup middle and two cubes unchanged. No extra rabbits, flowers, cups or flags.",
+      "transparentBackground": false,
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "file": "assets/illustrations/s09.png",
+      "source": "/workspace/generated_images/exec-4835ea52-9014-4046-8fde-c0ff6ebed16a.png",
+      "sha256": "4b7949b2efb12d5990b4d3ada04123abf934e154e747f9e983cbce7df5ad0be9"
+    },
+    {
+      "id": "s10",
+      "prompt": "Original hand-drawn children's literary picturebook artwork, restrained loose GRAPHITE contours and textured DRY COLORED PENCIL, flat selective colors, WHITE paper visible, light playful tiny graphite floor marks. No watercolor wash, glossy3D, anime, realism, border, lettering, numbers, watermark or diagram. Use attached FIRST image as exact CHARACTER reference, SECOND as exact PROP reference; change pose only, retain clothing, head proportions, features and original style. Do not copy the model-sheet layout. CHARACTERS: small slim cinnamon-orange SQUIRREL with long pointed muzzle, cream face/belly, small black oval eyes, upright tuft ears, HUGE BUSHY TAIL curling up behind hips; green short sleeves, grey-ochre shorts, bare paws, exactly2arms2legs. Shorter squat HEDGEHOG with creamy pointed muzzle and small rounded ears/black eyes, dense dark chocolate short quills, yellow vest, indigo shorts, bare paws; not bear. PROPS: red small flatbed wooden toycar, yellow daisy, tiny cream wooden rabbit, two identical short pale maple planks, two wooden bank cubes same height as one inverted handleless wooden cup, dry blue fabric scarf, no actual water. Scenes follow same LEFT/RIGHT riverbank orientation. LANDSCAPE wide panoramic SINGLE SCENE 2:1. Upper 38% entirely PURE WHITE with no heads, ears, tail, furniture, scenery or shadows; illustration lives in lower62%, but keep whole connected figures and feet fully inside frame. Each face away from exact vertical middle binding x45–55%; small props can cross center. Compose left and right actions clearly, no inset, no panels, no multiple moments. RETURN JOURNEY COMPLETE: one cream wooden toy RABBIT sits safely on red car's flatbed, car now on LEFT bank with squirrel smiling LEFT. The single yellow daisy remains on RIGHT bank beside smiling hedgehog; rabbit has left right bank. Same finished bridge, exactly two overlapping planks supported by one INVERTED cup middle and two outer cubes; coral flag left/pale-yellow flag right stay. Happy complete full characters; no extra rabbit or car.",
+      "transparentBackground": false,
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "file": "assets/illustrations/s10.png",
+      "source": "/workspace/generated_images/exec-d36cacfb-30eb-41f8-8669-afef8008531f.png",
+      "sha256": "febe4cc907f66196444c9f31af5dc78e8cf0b9084ed92be01f86507f719d8d45"
     }
   ]
 }
