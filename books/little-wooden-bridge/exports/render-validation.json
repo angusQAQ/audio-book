@@ -1,0 +1,33 @@
+{
+  "status": "verified",
+  "date": "2026-11-03",
+  "officePages": 14,
+  "officeTextMatchesEveryPage": true,
+  "actualOfficeFonts": [
+    "Iansui-Regular",
+    "JyunsaiKaai-Bold"
+  ],
+  "officeTargetFontAndSizeVerified": true,
+  "properNameRulesVerified": 15,
+  "ordinaryCharactersNotEnlarged": [
+    "木"
+  ],
+  "storyTextImageCollisionChecks": 24,
+  "radicalEntriesVerified": 8,
+  "svgActualRenders": [
+    "s02",
+    "s04",
+    "s05",
+    "s06",
+    "s08",
+    "s10",
+    "lesson"
+  ],
+  "officeRenderedPdfSha256": "c26528648fb641420892de2bd126a9bf5939639838501d7a57d0308efd1da7e6",
+  "files": {
+    "小木橋，通車了！_可編輯排版.pptx": "2d8491c86446557848f30dfc3484bb6f45f0ec5eb7e9fd3312ef006c4d19ec23",
+    "小木橋，通車了！_跨頁閱讀版.pdf": "d2f5e8a276f1dd2cb3fe6772e4531ee6f5c088191e03fd357cf786464d50dd23",
+    "小木橋，通車了！_繪本.pdf": "205986e2737317df077f4dcc7d15f566e523a207dbfd2768a7b2675a336c4bab"
+  },
+  "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
+}

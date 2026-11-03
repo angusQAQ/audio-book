@@ -2,7 +2,7 @@
 
 7–9歲，以小二自主閱讀為主要目標的繁體中文原創繪本。兩個動物伙伴搭玩具橋送花，從木板太短、接合處下垂，到以木杯代替手指托住橋面，讓小車成功送花並載客回來。 正文341漢字，10故事跨頁、14閱讀畫面、26單頁。
 
-目前為製作草稿，完成插畫與實際成品驗證後才發布下列下載。
+提供下列完整插畫PDF及可編輯排版，正式檔案、來源及驗證報告均保存於GitHub並同步永久網站。
 
 - [跨頁PDF](https://angusqaq.github.io/audio-book/books/little-wooden-bridge/exports/小木橋，通車了！_跨頁閱讀版.pdf)
 - [單頁PDF](https://angusqaq.github.io/audio-book/books/little-wooden-bridge/exports/小木橋，通車了！_繪本.pdf)

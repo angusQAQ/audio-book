@@ -1,0 +1,33 @@
+{
+  "status": "verified",
+  "date": "2026-11-03",
+  "officePages": 16,
+  "officeTextMatchesEveryPage": true,
+  "actualOfficeFonts": [
+    "Iansui-Regular",
+    "JyunsaiKaai-Bold"
+  ],
+  "officeTargetFontAndSizeVerified": true,
+  "properNameRulesVerified": 23,
+  "ordinaryCharactersNotEnlarged": [
+    "人"
+  ],
+  "storyTextImageCollisionChecks": 20,
+  "radicalEntriesVerified": 10,
+  "svgActualRenders": [
+    "s03",
+    "s04",
+    "s07",
+    "s08",
+    "s10",
+    "s12",
+    "lesson"
+  ],
+  "officeRenderedPdfSha256": "ee7f564ec11c9ad73de57991823e8edb44b051038b3af38ef1330685332502da",
+  "files": {
+    "這次，你找不到我！_可編輯排版.pptx": "e7340f1a237888b1efa1ca58d6f16827a946ff678bcdda95606172740fb59d1d",
+    "這次，你找不到我！_繪本.pdf": "753beac45b341a7b242ae89ef5e33064cae27cf6bfb75dd8ab06be846e35bced",
+    "這次，你找不到我！_跨頁閱讀版.pdf": "927b680892a875ccbbbdf165c6c5cb92f57b8fc5488ac4ce23b7ca5688a0195b"
+  },
+  "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
+}

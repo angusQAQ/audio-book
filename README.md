@@ -143,6 +143,17 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 
 [日部專案](books/shadow-see-you-tomorrow/README.md)包含角色、原稿、原圖與修訂、精確提示、字型授權、SVG和重建方法。這次交付繪本及可編輯檔，未新增點讀音訊。[研究分析](docs/picturebook-research-20261103.md)標明實際讀取的研究資料、作者摘要和筆記；每本附起因／經過／結果及理解證據，尚未進行真實學生試讀。
 
+## 原創木部與單人旁繪本
+
+兩本依本次確認的7–9歲、小二自主閱讀設定獨立創作。木部採動物伙伴玩玩具的搭橋故事；單人旁採朋友捉迷藏的生活喜劇，不套用同一個尋物情節。所選字目以150%手寫楷體呈現，疊字姓名附連續專名號，普通「木／人」維持正文大小。
+
+| 主題／書名 | 故事與字目 | 成品 |
+| --- | --- | --- |
+| 木／《小木橋，通車了！》 | 果果、團團想開玩具車送花，先遇到板太短，再發現中間需要托住，最後成功送花並載小兔回來。核心果、板、橋、杯、根、棒；341漢字、10故事跨頁、14閱讀畫面、26單頁。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/little-wooden-bridge/exports/小木橋，通車了！_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/little-wooden-bridge/exports/小木橋，通車了！_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/little-wooden-bridge/exports/小木橋，通車了！_可編輯排版.pptx) |
+| 亻／《這次，你找不到我！》 | 依依戴長兔耳帽玩捉迷藏，兩次露出耳朵；她留下空帽改藏紙箱，卻忍不住笑出聲。核心你、他、借、做、低、像，延伸依；354漢字、12故事跨頁、16閱讀畫面、30單頁。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/this-time-you-cant-find-me/exports/這次，你找不到我！_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/this-time-you-cant-find-me/exports/這次，你找不到我！_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/this-time-you-cant-find-me/exports/這次，你找不到我！_可編輯排版.pptx) |
+
+[木部專案](books/little-wooden-bridge/README.md)與[單人旁專案](books/this-time-you-cant-find-me/README.md)保存需求、完整原稿、分鏡、角色／道具模型、原始插畫、精確生成紀錄、部首資料及可重建的原生文字SVG。兩本是PDF與可編輯排版交付，尚未另製點讀音訊。編輯PPTX／SVG前安裝[共用出版字型](assets/fonts/print/SOURCE.md)：[芫荽](https://angusqaq.github.io/audio-book/assets/fonts/print/Iansui-Regular.ttf)、[芫茜雅楷](https://angusqaq.github.io/audio-book/assets/fonts/print/JyunsaiKaai-Bold.ttf)。原有九冊改用相同檔案的共用路徑，字型位元組及舊成品不變，移除152,162,908位元組的重複副本以維持網站容量。
+
 ## 設計與存檔點
 
 已加入使用者提供的[現代漢語規範 skill](.agents/skills/modern-chinese-norm/SKILL.md)及[參考文件](.agents/skills/modern-chinese-norm/reference.md)，可在本專案使用 `$modern-chinese-norm`。根目錄AGENTS.md已要求中文文案校訂時使用；[安裝與本次校訂紀錄](docs/modern-chinese-norm-review.md)說明適用範圍，以及《香味先到了》的句法、指稱與圖文核對結果。

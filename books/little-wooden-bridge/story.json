@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "draft",
+  "status": "complete",
   "audience": "7–9 歲・以小二自主閱讀為主要目標",
   "language": "zh-HK",
   "extensionCharacters": [],
@@ -179,7 +179,7 @@
         5
       ],
       "lines": [
-        "果果拿來一塊木板，想搭一座橋。",
+        "果果拿來一塊木板，\n想搭一座橋。",
         "可是，木板太短，\n差一截才碰到對岸。",
         "小車還沒出發，就停住了。"
       ],

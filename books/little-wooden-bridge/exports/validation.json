@@ -1,0 +1,49 @@
+{
+  "status": "complete",
+  "spreadPages": 14,
+  "singlePages": 26,
+  "editableSlides": 14,
+  "missingGlyphs": [],
+  "allTextEditable": true,
+  "originalArtworkHashesVerified": 13,
+  "properNameMarks": {
+    "names": {
+      "果果": 9,
+      "團團": 6
+    },
+    "style": "continuous rule below each full name",
+    "pdfPptxSvgGeometryVerified": true,
+    "editableTextAndRuleGrouped": true
+  },
+  "targetTypography": {
+    "font": "JyunsaiKaai",
+    "bodyScale": 1.5,
+    "pdfAndPptxRunsVerified": true,
+    "handwrittenGlyphs": {
+      "橋": 14,
+      "果": 22,
+      "板": 13,
+      "根": 6,
+      "杯": 8,
+      "棒": 5
+    }
+  },
+  "normalCharacterTypography": {
+    "characters": [
+      "木"
+    ],
+    "bodyScale": 1,
+    "font": "Iansui",
+    "pdfAndPptxRunsVerified": true,
+    "svgRunsVerified": true
+  },
+  "storyHanCharacters": 341,
+  "targets": {
+    "果": 22,
+    "板": 13,
+    "橋": 16,
+    "杯": 8,
+    "根": 6,
+    "棒": 5
+  }
+}
