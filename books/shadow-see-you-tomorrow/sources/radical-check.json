@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-02",
+  "date": "2026-11-03",
   "description": "部首歸屬核對；竹字頭符號先以EquivalentUnifiedIdeograph映射至統一漢字再查kRSUnicode，不把符號冒充Unihan條目。",
   "dataset": "Unicode 17.0 kRSUnicode",
   "source": "https://github.com/unicode-org/unicodetools/blob/578f6c0516f5f268292ebda50b51848407a06478/unicodetools/data/ucd/17.0.0/Unihan/kRSUnicode.txt",
@@ -20,6 +20,11 @@
       "kRSUnicode": "72.4",
       "sourceLine": "65F9..6619\t72.4"
     },
+    "星": {
+      "codepoint": "U+661F",
+      "kRSUnicode": "72.5",
+      "sourceLine": "661A..663B\t72.5"
+    },
     "時": {
       "codepoint": "U+6642",
       "kRSUnicode": "72.6",
@@ -34,11 +39,6 @@
       "codepoint": "U+6674",
       "kRSUnicode": "72.8",
       "sourceLine": "666A..6683\t72.8"
-    },
-    "暗": {
-      "codepoint": "U+6697",
-      "kRSUnicode": "72.9",
-      "sourceLine": "6692..6699\t72.9"
     },
     "月": {
       "codepoint": "U+6708",

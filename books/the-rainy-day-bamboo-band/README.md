@@ -1,21 +1,25 @@
 # 雨天的竹筒樂隊
 
-7–9歲、小二至小三自主閱讀的繁體中文原創繪本。雨天不能出門，祖孫從互相搶快到停下傾聽，合奏自己的音樂。 正文226個漢字、10個故事跨頁；24內頁，加封面封底共26單頁，14閱讀畫面。
+7–9歲，以小二自主閱讀為主要目標的繁體中文原創繪本。朵朵因下雨不能去公園，和公公在家玩音樂；發現聲音太響後，改成輪流演奏，雨停再帶樂器去公園。 正文354個漢字、10個故事跨頁；24內頁，加封面封底共26單頁，14閱讀畫面。
 
-核心字：筷、筒、笛、節、等、笑。選定字目使用150%芫茜雅楷粗體；普通部首本形「竹」維持一般字級。人物姓名朵朵每次出現均有連續專名號；公公為親屬稱謂，不作姓名標記。
+核心字：筷、筒、笛、答、等、笑。延伸字：籃。選定字目以150%手寫楷體呈現，普通部首本形不放大；姓名加連續專名號。
 
-- [跨頁閱讀PDF｜14畫面](https://angusqaq.github.io/audio-book/books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_跨頁閱讀版.pdf)
-- [單頁繪本PDF｜26頁](https://angusqaq.github.io/audio-book/books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_繪本.pdf)
-- [可編輯PowerPoint｜14張](https://angusqaq.github.io/audio-book/books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_可編輯排版.pptx)
+- [跨頁閱讀PDF](https://angusqaq.github.io/audio-book/books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_跨頁閱讀版.pdf)
+- [單頁繪本PDF](https://angusqaq.github.io/audio-book/books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_繪本.pdf)
+- [可編輯PowerPoint](https://angusqaq.github.io/audio-book/books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_可編輯排版.pptx)
 - [全書縮圖](exports/全書縮圖.png)、[SVG來源](editable)、[原始插畫](assets/illustrations)、[字型與授權](assets/fonts)
 
 ## 人物與來源
 
-朵朵是寬方臉、雀斑、小杏眼、高束捲髮及結實身形；公公瘦高，有白側髮、白鬚、長方臉及長方眼鏡。 本書與另一新作不共用角色模型或情節，也不以換衣服代替人物差異。[design-brief.md](design-brief.md)保存參考細讀、人物比較、圖文分工與連貫規則；[brief.json](brief.json)、[story.json](story.json)保存本次需求及全部原稿。原創插畫、模型與修改前版本共13份，精確提示、參考與SHA-256見[artwork-log.json](artwork-log.json)。使用者的參考書未重新公開。部首條目及授權見[sources](sources)。
+朵朵，八歲女孩；寬方臉、棕色皮膚、雀斑、小杏眼、單個高束黑捲髮；青綠寬T恤、赭紅七分闊褲、米白帆布鞋，身形結實。 公公，七十歲；瘦高、長方臉、禿頂白側髮、白短鬚、長鼻、長方金屬眼鏡；米白短袖、深綠背心、炭灰長褲、棕鞋。公公是稱謂，不另作姓名。
+
+[設計與理解證據](design-brief.md)、[需求](brief.json)、[故事](story.json)保存完整來源。[研究分析](../../docs/picturebook-research-20261103.md)區分學術資料、實讀摘要及研究筆記，沒有假稱已讀不可取得的論文全文。尚未進行真實學生試讀。
+
+本次修訂前原稿、需求、精確提示和說明的位元組快照見[revisions/2026-11-03](revisions/2026-11-03)。原始插畫及舊版PDF／PPTX完整保存在[修訂前Git存檔點3c20ead](https://github.com/angusQAQ/audio-book/tree/3c20ead69eaf5ef079533682fde9018badf3d64f/books/the-rainy-day-bamboo-band)，大型舊圖不在目前網站重複存放。當前原始PNG、精確生成提示、參考和SHA-256見[artwork-log.json](artwork-log.json)。參考書附件未重新公開。部首逐字核對及授權見[sources](sources)。
 
 ## 編輯與重建
 
-PDF嵌入實際字型；PPTX／SVG編輯前請安裝assets/fonts的芫荽與芫茜雅楷。PPTX保留原生文字、字型／字級、姓名線、色塊與獨立圖像；SVG保留原生文字與相對圖像路徑，移動時須帶同assets。不透明插圖在PDF／PowerPoint內以完整解像度的高品質JPEG編碼，透明封面維持PNG；全部原始PNG保留於assets，SVG亦連結原圖。插圖可獨立替換，並非可逐筆修改的向量插畫。
+PDF嵌入實際字型；PPTX／SVG編輯前請安裝assets/fonts的芫荽與芫茜雅楷。PPTX保留原生文字、字型／字級、姓名線、色塊與獨立圖像；SVG保留原生文字與相對圖像路徑，移動時須帶同assets。不透明插圖在PDF／PowerPoint內以完整解像度的高品質JPEG編碼，透明封面維持PNG；本版全部原始PNG保留於assets；舊版原圖保存在上述Git歷史，SVG亦連結原圖。插圖可獨立替換，並非可逐筆修改的向量插畫。
 
 在工作區虛擬環境安裝requirements-book.txt，從專案根目錄執行：
 

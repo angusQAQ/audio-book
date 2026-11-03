@@ -1,0 +1,11 @@
+{
+  "baseCommit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
+  "description": "本次修訂前的原始資料快照。原始插畫、舊版成品及精確提示完整保存在此Git提交；不重複發布已取代的大型檔案。",
+  "sha256": {
+    "story.json": "1f7966e55eb0fcc8420ac120bba114d2b00240d05d5e5108328bf376b04fd639",
+    "brief.json": "e29e500f3eb8d11fa534b5021a1cc1ec16da97eac06ccb486655214d6b46420c",
+    "artwork-log.json": "5b438ae354c10c9e67135392dac9877ee925ca35c711d35c90fb2fcea9c03b49",
+    "design-brief.md": "77fc2bdeeb4260d4569c5f6f974874215a88b3b920cfc4f9e2604b72b6a543c4",
+    "README.md": "4f1a0dc4f72729c0b872851e8863a0edb048769bff2b2dc064f5932763c550a9"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "book": {
+    "slug": "the-rainy-day-bamboo-band",
+    "title": "雨天的竹筒樂隊",
+    "language": "zh-HK"
+  },
+  "audience": {
+    "ageMin": 7,
+    "ageMax": 9,
+    "readingMode": "independent",
+    "readingAbility": "小二至小三，可自行閱讀",
+    "accessibilityNeeds": []
+  },
+  "theme": "雨天不能出門，祖孫從互相搶快到停下傾聽，合奏自己的音樂。",
+  "content": {
+    "mode": "original",
+    "request": "獨立創作以⺮部首為主題的兒童故事繪本，重點修正既有人物樣貌同質化。",
+    "requiredElements": [
+      "完整故事與原創插畫",
+      "人物使用疊字名及專名號",
+      "選定字目以放大手寫楷體呈現",
+      "規範現代漢語與符合年齡的詞彙",
+      "以臉形、五官、髮型、年齡及體態建立差異，不只換衣服顏色",
+      "配角稱謂公公／爸爸不當作姓名加專名號"
+    ],
+    "avoidElements": [
+      "複製參考書人物、原句或構圖",
+      "沿用另一新作人物與情節"
+    ],
+    "sourceTextPaths": [
+      "story.json"
+    ],
+    "references": [
+      {
+        "title": "生日會",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 16,
+        "sha256": "8f67a3121f40ebaa67844db1918eccb9c7f21bdc4faeacf4acd98557499d9eaf",
+        "source": "使用者附件，未重新公開原 PDF"
+      },
+      {
+        "title": "跟屁蟲",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 17,
+        "sha256": "abfb8339a9bbcb41fa25d914a9c1bff836b7ffc986eaa04077252a5d48a5a8fe",
+        "source": "使用者附件，未重新公開原 PDF"
+      }
+    ],
+    "learningGoals": [
+      "在完整故事中理解六個核心字",
+      "辨認部首本形與偏旁／字頭，區分非本部字"
+    ],
+    "targetCharacters": [
+      "筷",
+      "筒",
+      "笛",
+      "節",
+      "等",
+      "笑"
+    ],
+    "characterNames": [
+      "朵朵"
+    ]
+  },
+  "design": {
+    "artDirection": "原創人物；較小杏眼、不同臉部結構及頭身比，鬆活石墨輪廓、乾色鉛筆、白紙留白。",
+    "palette": [
+      "#FFFFFF",
+      "#E7EFE5",
+      "#323B36",
+      "#6A786E",
+      "#2B8B88",
+      "#AD613D"
+    ],
+    "pageSize": {
+      "width": 960,
+      "height": 600,
+      "unit": "pt"
+    },
+    "storySpreads": 10,
+    "wordBudget": 226,
+    "bodyFont": "Iansui",
+    "emphasisFont": "JyunsaiKaai Bold",
+    "emphasisScale": 1.5,
+    "properNameMarks": true,
+    "normalCharacters": [
+      "竹"
+    ]
+  },
+  "deliverables": {
+    "formats": [
+      "pdf-spread",
+      "pdf-single",
+      "pptx",
+      "svg"
+    ],
+    "readAlong": false,
+    "audio": null
+  },
+  "publication": {
+    "github": true,
+    "permanentWebsite": true,
+    "destination": "https://angusqaq.github.io/audio-book/"
+  },
+  "decisions": {
+    "userRequirements": [
+      "本次明確確認兩本均沿用7–9歲自主閱讀、完整插畫PDF＋可編輯排版檔",
+      "兩本獨立的主題、內容與人物",
+      "人物名字使用疊字",
+      "現代漢語規範校稿",
+      "所有正式檔案GitHub保存，每個可審閱階段建立commit，驗證後同步永久網站",
+      "此次明確要求大幅改善人物樣貌同質化"
+    ],
+    "editorialChoices": [
+      "10個故事跨頁、24內頁，含封面封底26單頁、14閱讀畫面",
+      "六字依各自情節選定，普通部首本形不放大，姓名使用連續專名號",
+      "不同世代家庭組合；本冊未要求點讀，不新增音訊"
+    ],
+    "unresolvedQuestions": []
+  }
+}
