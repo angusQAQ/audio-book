@@ -1,6 +1,6 @@
 {
   "status": "verified",
-  "date": "2026-11-02",
+  "date": "2026-11-03",
   "officePages": 14,
   "officeTextMatchesEveryPage": true,
   "actualOfficeFonts": [
@@ -8,23 +8,24 @@
     "JyunsaiKaai-Bold"
   ],
   "officeTargetFontAndSizeVerified": true,
-  "properNameRulesVerified": 7,
+  "properNameRulesVerified": 16,
   "ordinaryCharactersNotEnlarged": [
     "竹"
   ],
-  "storyTextImageCollisionChecks": 8,
-  "radicalEntriesVerified": 9,
+  "storyTextImageCollisionChecks": 26,
+  "radicalEntriesVerified": 10,
   "svgActualRenders": [
     "s01",
     "s05",
+    "s08",
     "s10",
     "lesson"
   ],
-  "officeRenderedPdfSha256": "e5232db7d55da1beec747ee14262131340828540b3863461aec7dedcc2f99a52",
+  "officeRenderedPdfSha256": "8a0068974d45d7b2b3f61dfc4f91356bf7cb29255d655db5da263345ced48c5d",
   "files": {
-    "雨天的竹筒樂隊_可編輯排版.pptx": "4c6536cdbdef6c9a521474621a5bf016e59f0b57a3d39c9c07ef583617241fb8",
-    "雨天的竹筒樂隊_跨頁閱讀版.pdf": "4a381e02f3dcf4512af4cf5ddd55bc0d6319caba0db4f029930c4928b05b7db4",
-    "雨天的竹筒樂隊_繪本.pdf": "d50cfbf08cfb88b5726e73cbd4b482affd24932a1bfd669e168d990c35390e57"
+    "雨天的竹筒樂隊_可編輯排版.pptx": "d37970c7590ddf2eba6ba6d16b6cb22f6c42ee5ed8b22f98c51b4479abde9803",
+    "雨天的竹筒樂隊_跨頁閱讀版.pdf": "97b307b6de54b3c51625ab75cbe1543fbdad914f716052eb42b284cff5a3a303",
+    "雨天的竹筒樂隊_繪本.pdf": "9d80571e14395b605c0d5eb6dd60d3a0b425d6de7a18ab3e714b458cfb643704"
   },
   "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
 }

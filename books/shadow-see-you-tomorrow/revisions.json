@@ -1,18 +1,14 @@
 {
-  "date": "2026-11-02",
-  "request": "使用者要求父子外貌有可辨認的親子特徵，同時改善跨書人物同質化。",
+  "date": "2026-11-03",
+  "request": "原版日部故事過於平淡，光影關係不適合本次小二讀者；以有趣、完整的生活故事重寫。",
+  "previousRevisionRecord": "revisions/2026-11-03/revisions.json",
+  "previousBookCommit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
+  "intermediateArtworkCommit": "2a4a969",
   "changes": [
-    "爸爸改為與平平相似的長鼻、耳形、眉眼與笑容，保持成年身形與鬍鬚。",
-    "封面及全部父子同框頁以新版模型製作。",
-    "校正中午固定圈及小熊位置、入夜出場順序、電筒與影子的方向。"
+    "改名《今天，換我當爸爸！》，以父子角色互換串連開瓶、裝小熊、玩球和回家。",
+    "保留平平與爸爸有親子共同五官的模型，重畫封面、道具及十二個故事跨頁。",
+    "核心字改為早、晴、時、晚、明、星；普通日字不放大，姓名專名號持續保留。"
   ],
-  "preservedInitialAssets": [
-    "assets/revisions/cover-initial.png",
-    "assets/revisions/s04-initial.png",
-    "assets/revisions/characters-initial.png",
-    "assets/revisions/s09-initial.png",
-    "assets/revisions/s10-initial.png",
-    "assets/revisions/s11-initial.png"
-  ],
-  "provenance": "artwork-log.json"
+  "provenance": "artwork-log.json",
+  "preservation": "原稿、全部舊圖與成品保存在指定Git提交；原模型比較所需的characters-initial仍保留於目前assets/revisions。"
 }

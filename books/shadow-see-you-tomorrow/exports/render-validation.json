@@ -1,6 +1,6 @@
 {
   "status": "verified",
-  "date": "2026-11-02",
+  "date": "2026-11-03",
   "officePages": 16,
   "officeTextMatchesEveryPage": true,
   "actualOfficeFonts": [
@@ -8,23 +8,27 @@
     "JyunsaiKaai-Bold"
   ],
   "officeTargetFontAndSizeVerified": true,
-  "properNameRulesVerified": 7,
+  "properNameRulesVerified": 15,
   "ordinaryCharactersNotEnlarged": [
     "日"
   ],
-  "storyTextImageCollisionChecks": 7,
+  "storyTextImageCollisionChecks": 45,
   "radicalEntriesVerified": 9,
   "svgActualRenders": [
     "s01",
+    "s03",
+    "s06",
+    "s09",
     "s10",
     "s11",
+    "s12",
     "lesson"
   ],
-  "officeRenderedPdfSha256": "131cf7728037ab5fced89549ce0a6cb204b7cc74ec43395035503f2c7fa81359",
+  "officeRenderedPdfSha256": "ace4f508fc5fe73b1ede8931a59e14086227f5c4ed589e9220c095704f8f23a9",
   "files": {
-    "影子，明天見！_可編輯排版.pptx": "37fd4120f0a3d5ebf64555043e18941432b8046c53c746283535fc9254ff9e83",
-    "影子，明天見！_繪本.pdf": "e8bb5eab1b7a9845ad7127849d18d72d37e71f2f42e18bbd599d4107dabe3c37",
-    "影子，明天見！_跨頁閱讀版.pdf": "2f0e52e935293837a93c4f1f149687a3bd355dab9076504a19b658c21e86ceeb"
+    "今天，換我當爸爸！_跨頁閱讀版.pdf": "f9597fb19b806810bc425df32fa12be8f45eab3bbca66067d706f6fb5b0d2761",
+    "今天，換我當爸爸！_可編輯排版.pptx": "13e7e6a94e39791cfc0044c5868b1477b468df95fa339e39bcb90eb93b3a1a63",
+    "今天，換我當爸爸！_繪本.pdf": "e5f08239eda4758197a546eae4897155cf7890abbd75a22a7a55ecbe4628886d"
   },
   "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
 }

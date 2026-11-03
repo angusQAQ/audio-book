@@ -127,14 +127,14 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 
 ## 原創竹字頭與日部繪本
 
-本次確認兩本均為7–9歲自主閱讀、完整插畫PDF及可編輯排版檔。人物重新設計，區分臉形、五官、髮型、年齡和體態；日部父子另依使用者意見保留共通的鼻形、耳形、眉眼與笑容。
+2026-11-03依小二讀者需求修訂：竹部交代想去公園、下雨留家、輪流玩音樂及雨停出門的因果；日部改為親子角色互換的生活喜劇《今天，換我當爸爸！》，以開瓶和裝小熊的意外推進，結尾回扣前文。保留7–9歲、完整插畫PDF及可編輯排版的設定與已確認的人物外貌。
 
 | 主題／書名 | 故事與字目 | 成品 |
 | --- | --- | --- |
-| ⺮／《雨天的竹筒樂隊》 | 筷、筒、笛、節、等、笑。226漢字、10故事跨頁。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_可編輯排版.pptx) |
-| 日／《影子，明天見！》 | 早、晴、時、晚、暗、明。296漢字、12故事跨頁。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/shadow-see-you-tomorrow/exports/影子，明天見！_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/shadow-see-you-tomorrow/exports/影子，明天見！_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/shadow-see-you-tomorrow/exports/影子，明天見！_可編輯排版.pptx) |
+| ⺮／《雨天的竹筒樂隊》 | 筷、筒、笛、答、等、笑，延伸籃。354漢字、10故事跨頁。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_可編輯排版.pptx) |
+| 日／《今天，換我當爸爸！》 | 早、晴、時、晚、明、星。441漢字、12故事跨頁。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/shadow-see-you-tomorrow/exports/今天，換我當爸爸！_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/shadow-see-you-tomorrow/exports/今天，換我當爸爸！_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/shadow-see-you-tomorrow/exports/今天，換我當爸爸！_可編輯排版.pptx) |
 
-[竹字頭專案](books/the-rainy-day-bamboo-band/README.md)及[日部專案](books/shadow-see-you-tomorrow/README.md)包含角色、原稿、原圖與修訂、精確提示、字型授權、SVG和重建方法。這次交付繪本及可編輯檔，未新增點讀音訊。
+[竹字頭專案](books/the-rainy-day-bamboo-band/README.md)及[日部專案](books/shadow-see-you-tomorrow/README.md)包含角色、原稿、原圖與修訂、精確提示、字型授權、SVG和重建方法。這次交付繪本及可編輯檔，未新增點讀音訊。[研究分析](docs/picturebook-research-20261103.md)標明實際讀取的研究資料、作者摘要和筆記；每本附起因／經過／結果及理解證據，尚未進行真實學生試讀。
 
 ## 設計與存檔點
 

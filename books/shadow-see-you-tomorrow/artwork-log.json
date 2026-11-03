@@ -30,19 +30,6 @@
       "sha256": "87dc95fde7f4f500c69cb50fde07e751bc366b2984052325beea647e0a3ed547"
     },
     {
-      "id": "cover-initial",
-      "file": "assets/revisions/cover-initial.png",
-      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. PINGPING: lanky long-faced boy8, protruding ears, short black FLAT-TOP CREW CUT with no fringe, VIOLET RECTANGULAR glasses, ultramarine polo with pale-yellow collar/sleeve trim, grey shorts, white socks, yellow sneakers. FATHER: stocky broad shoulder, wide trapezoid face, rounded nose, black wavy hair and square short beard, coral T-shirt, warm grey trousers, navy shoes. ONE small honey-brown carved wooden bear with round ears, dot eyes, no clothes; one white chalk oval only AFTER requested. Yellow flashlight and white rectangular cardboard screen appear ONLY at night when requested. No lettering, typography, logos, speech balloons or watermark. Transparent-background compact FULL-BODY cover cutout: boy LEFT holds one small wooden bear gently at chest height and looks curiously at it; father RIGHT kneels smiling, holds ONE switched-OFF small yellow flashlight pointing downward. Full figures and all shoes visible, no shadow, scene, cardboard or chalk circle.",
-      "references": [
-        "assets/revisions/characters-initial.png",
-        "assets/props.png"
-      ],
-      "transparentBackground": true,
-      "source": "/workspace/generated_images/exec-21b37009-f1c1-446a-9124-b624a7c72fe4.png",
-      "sha256": "fcb313f804734b71878f968cff1cab797cfdcdddc3cc7c12f11b92c8cef3b19e",
-      "supersededBy": "cover"
-    },
-    {
       "id": "s01",
       "file": "assets/illustrations/s01.png",
       "prompt": "Original funny children's literary picturebook illustration, graphite contours and restrained flat DRY COLORED PENCIL on pure WHITE paper. Match the two referenced family character models exactly: PINGPING boy8 lanky, long narrow face, prominent long nose and big protruding ears, small almond eyes, black bristly flat-top, VIOLET RECTANGULAR glasses, ULTRAMARINE polo with pale-yellow collar and sleeve edges, grey shorts, white socks,yellow sneakers. FATHER38 broad shoulders and adult proportions, same long nose/ears/brows/eyes/smile as his son, violet rectangular glasses, black bristly flat-top, short square beard, CORAL T-shirt,grey long trousers,navy sneakers. Preserve recognizable family resemblance. Referenced props: one honey-brown carved wooden bear, round ears,dot eyes,no clothes; red-lid jam jar,two bread slices,cream cloth tote blue handles,orange ball; stars only when specified. No Chinese, letters, numbers, labels, speech bubbles, watermarks or symbols. Full connected bodies, natural two arms/two legs, complete shoes. Landscape wide composition TOP45PERCENT ENTIRELY WHITE EMPTY, small scene in LOWER55percent, all faces and important props clear of central binding x45–55percent. Stage complete characters lowerLEFT and lowerRIGHT, sparse simple home/park cues, white feathered edges. Morning at HOME. Boy lowerLEFT standing with one hand confidently raised to propose a pretend game. Father lowerRIGHT sitting on simple low chair, listening with amused smile. A low breakfast table at left has exactly two bread slices and closed red-lid jam jar. No food eating yet, no stars, no tote or ball. Tiny window frame far edge, open airy white interior.",
@@ -92,19 +79,6 @@
         "sha256": "30fb2fe0003cfa649bd042317e7bfc3348b54d8063bfacf6de49057e237b145a"
       },
       "sha256": "a6c43773ea95e3f36f84d2a3d0a2aa67dea2720005b9288d8cb98c58e7b62f1d"
-    },
-    {
-      "id": "s04-initial",
-      "file": "assets/revisions/s04-initial.png",
-      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. PINGPING: lanky long-faced boy8, protruding ears, short black FLAT-TOP CREW CUT with no fringe, VIOLET RECTANGULAR glasses, ultramarine polo with pale-yellow collar/sleeve trim, grey shorts, white socks, yellow sneakers. FATHER: stocky broad shoulder, wide trapezoid face, rounded nose, black wavy hair and square short beard, coral T-shirt, warm grey trousers, navy shoes. ONE small honey-brown carved wooden bear with round ears, dot eyes, no clothes; one white chalk oval only AFTER requested. Yellow flashlight and white rectangular cardboard screen appear ONLY at night when requested. No letters, numbers, Chinese, typography, musical notes, speech balloons, diagrams or watermark. Draw COMPLETE connected bodies and hands, no floating or amputated legs. WIDE LANDSCAPE composition, entire TOP 45 percent completely PURE WHITE, all art in lower55 percent. Keep central binding strip x45–55 percent free of faces, hands, toys and important marks; stage complete groups in left or right quarter. Sparse ground strokes, white feathered edges. NEAR NOON: overhead sunlight, ONE wooden bear in EXACT same left-of-oval position on paving in lower RIGHT; white chalk oval unchanged and empty on its right side. The bear shadow is SHORT and tucked near its feet, not long or detached. Boy lower LEFT returns with surprised tilted eyebrows. Only one boy and one toy.",
-      "references": [
-        "assets/revisions/characters-initial.png",
-        "assets/props.png"
-      ],
-      "transparentBackground": false,
-      "source": "/workspace/generated_images/exec-4a172dbb-9092-4dca-b32f-884beaa7d6d7.png",
-      "sha256": "2b1d90c3ebc2c5558f7235a61c1226368fed9dd53f74529f43a5ce1aa146b5e4",
-      "supersededBy": "s04"
     },
     {
       "file": "assets/revisions/characters-initial.png",
@@ -170,95 +144,71 @@
     {
       "id": "s07",
       "file": "assets/illustrations/s07.png",
-      "prompt": "undefinedPUBLIC PARK in clear daytime, sparse green grass and two tiny trees at edges. Boy lowerLEFT and father lowerRIGHT running playfully toward ONE orange ball on grass on right side of binding. Both laughing, father trying to catch up. Cream cloth tote with blue handles on park bench at far LEFT; ONE wooden bear visibly inside tote, head peeking out. No stars, breakfast objects, other people or shadow diagrams.",
-      "source": "/workspace/generated_images/exec-1dbf54d9-335d-4b7c-8f4f-023e214fb775.png",
+      "prompt": "Revise the attached existing children's picturebook illustration ONLY for EDITORIAL PAGE COMPOSITION. KEEP exactly same two distinctive related father-and-son faces, violet rectangular glasses, clothing, limbs, expressions and action, same wooden bear and exact requested props and star-sticker continuity. Recompose as a SMALL SPARSE graphite and flat dry-colored-pencil VIGNETTE on PURE WHITE PAPER. The ENTIRE UPPER 55 PERCENT of the final landscape canvas must be ABSOLUTELY BLANK WHITE: no heads, walls, trees, sky, lamps, frames, windows, texture shading, background wash or objects there. Scale DOWN and lower ALL existing figures and scenery into lower45percent, keep COMPLETE HEAD-TO-SHOE connected bodies fully visible. Left character completely in left quarter, right character completely in right quarter, central binding strip x45–55percent free of faces, hands and bear. Remove almost all scenery: only tiny relevant ground/grass strokes and simple bench or low table. Keep SAME ACTION from original: boy and father running laughing after ONE orange ball; tote and one wooden bear on park bench at far-left. No lettering, symbols, speech bubbles, full-bleed wall or sky. Whole UPPER55PERCENT PURE WHITE for native typesetting. Feathered white paper edges around tiny lower-half scene.",
+      "source": "/workspace/generated_images/exec-7ead71cc-2f36-4833-bda1-e99519726f71.png",
       "transparentBackground": false,
       "references": [
-        "assets/characters.png",
-        "assets/props.png"
+        "assets/characters.png"
       ],
-      "replacesHistoricalArtwork": {
-        "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
-        "file": "assets/illustrations/s07.png",
-        "sha256": "cbc41a61c092b03649b1ffc84b97d7d6cf516de1ab9ddd0e6170daa410d96c3f"
-      },
-      "sha256": "0360e01a598562ae0338ea249f819dddc72babf243fa1712be496a287b06c29a"
+      "historicalReferences": [
+        {
+          "toolInputIndex": 0,
+          "commit": "2a4a969",
+          "file": "assets/illustrations/s07.png",
+          "sha256": "0360e01a598562ae0338ea249f819dddc72babf243fa1712be496a287b06c29a"
+        }
+      ],
+      "toolReferencePaths": [
+        "/workspace/generated_images/exec-1dbf54d9-335d-4b7c-8f4f-023e214fb775.png",
+        "/workspace/audio-book/books/shadow-see-you-tomorrow/assets/characters.png"
+      ],
+      "sha256": "57140df7ada173eb3b70e0dcb4510f8673da2540e51cd2f5a921580251d84de0"
     },
     {
       "id": "s08",
       "file": "assets/illustrations/s08.png",
-      "prompt": "undefinedPUBLIC PARK in late afternoon, sparse grass and bench; no dark full-background wash, keep WHITE TOP45percent. Boy lowerLEFT stands, gesturing gently toward exit; father lowerRIGHT SQUATS on grass, cuddles wooden bear and playfully pouts like a child who wants to keep playing. Father is clearly an adult pretending, not distressed. ONE orange ball on grass to side, cream tote blue handles on bench at far-left. No stars or food.",
-      "source": "/workspace/generated_images/exec-77bd3b01-561e-403a-a192-39a60a52adec.png",
+      "prompt": "Revise the attached existing children's picturebook illustration ONLY for EDITORIAL PAGE COMPOSITION. KEEP exactly same two distinctive related father-and-son faces, violet rectangular glasses, clothing, limbs, expressions and action, same wooden bear and exact requested props and star-sticker continuity. Recompose as a SMALL SPARSE graphite and flat dry-colored-pencil VIGNETTE on PURE WHITE PAPER. The ENTIRE UPPER 55 PERCENT of the final landscape canvas must be ABSOLUTELY BLANK WHITE: no heads, walls, trees, sky, lamps, frames, windows, texture shading, background wash or objects there. Scale DOWN and lower ALL existing figures and scenery into lower45percent, keep COMPLETE HEAD-TO-SHOE connected bodies fully visible. Left character completely in left quarter, right character completely in right quarter, central binding strip x45–55percent free of faces, hands and bear. Remove almost all scenery: only tiny relevant ground/grass strokes and simple bench or low table. Keep SAME ACTION from original: father SQUATTING, cuddling bear, pretend-pouting while boy invites him to go home; orange ball on ground and cream/blue tote on bench. REMOVE the English EXIT sign completely, no signs. No lettering, symbols, speech bubbles, full-bleed wall or sky. Whole UPPER55PERCENT PURE WHITE for native typesetting. Feathered white paper edges around tiny lower-half scene.",
+      "source": "/workspace/generated_images/exec-62721649-2d9b-4ea0-825a-e435dfa5d9bd.png",
       "transparentBackground": false,
       "references": [
-        "assets/characters.png",
-        "assets/props.png"
+        "assets/characters.png"
       ],
-      "replacesHistoricalArtwork": {
-        "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
-        "file": "assets/illustrations/s08.png",
-        "sha256": "4eab7fc12390b85d2c626f36798a098cf5b16d0154f919bd48846fa8dc497e83"
-      },
-      "sha256": "4858ba3fd3e5df47eb8e2bed07a3ee39e49a19c272fe22b1a625e69fac496b8f"
-    },
-    {
-      "id": "s09-initial",
-      "file": "assets/revisions/s09-initial.png",
-      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. PINGPING: lanky long-faced boy8, protruding ears, short black FLAT-TOP CREW CUT with no fringe, VIOLET RECTANGULAR glasses, ultramarine polo with pale-yellow collar/sleeve trim, grey shorts, white socks, yellow sneakers. FATHER: stocky broad shoulder, long rectangular face, same prominent ears and long rounded-tip nose as his son, same arched brow and almond eye shapes, violet rectangular glasses, short black bristly crew cut and square short beard, coral T-shirt, warm grey trousers, navy shoes. ONE small honey-brown carved wooden bear with round ears, dot eyes, no clothes; one white chalk oval only AFTER requested. Yellow flashlight and white rectangular cardboard screen appear ONLY at night when requested. No letters, numbers, Chinese, typography, musical notes, speech balloons, diagrams or watermark. Draw COMPLETE connected bodies and hands, no floating or amputated legs. WIDE LANDSCAPE composition, entire TOP 45 percent completely PURE WHITE, all art in lower55 percent. Keep central binding strip x45–55 percent free of faces, hands, toys and important marks; stage complete groups in left or right quarter. Sparse ground strokes, white feathered edges. TWILIGHT only in lower 55 percent as a restrained desaturated graphite-blue vignette fading to white edges. Boy lower LEFT and ONE wooden bear lower RIGHT at unchanged chalk oval remain faintly visible. NO discernible cast bear shadow, no bright moon, stars, streetlights or lamps. Do not fill top with night sky; leave upper 45 percent pure white. Quiet, not frightening. The wooden bear always faces LEFT, muzzle pointing left. When a chalk oval is present, the bear stands INSIDE the LEFT portion of that fixed oval, never outside it. Father MUST match REVISED family character sheet: violet rectangular glasses, long face, long rounded-tip nose and prominent ears like the boy, short bristly hair and short beard. Preserve family resemblance. The drawing scene fixes bear and chalk oval location. Bear remains INSIDE LEFT portion of original oval.",
-      "references": [
-        "assets/characters.png",
-        "assets/props.png",
-        "assets/illustrations/s03.png"
+      "historicalReferences": [
+        {
+          "toolInputIndex": 0,
+          "commit": "2a4a969",
+          "file": "assets/illustrations/s08.png",
+          "sha256": "4858ba3fd3e5df47eb8e2bed07a3ee39e49a19c272fe22b1a625e69fac496b8f"
+        }
       ],
-      "transparentBackground": false,
-      "source": "/workspace/generated_images/exec-7476c991-e871-4fb2-be20-6e20c1c9c950.png",
-      "sha256": "d982a0c97308d13fa7d7f1c84b7efe4d4cc952464e64074a83c547d5d99b1ee8",
-      "supersededBy": "s09"
-    },
-    {
-      "id": "s10-initial",
-      "file": "assets/revisions/s10-initial.png",
-      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. PINGPING: lanky long-faced boy8, protruding ears, short black FLAT-TOP CREW CUT with no fringe, VIOLET RECTANGULAR glasses, ultramarine polo with pale-yellow collar/sleeve trim, grey shorts, white socks, yellow sneakers. FATHER: stocky broad shoulder, long rectangular face, same prominent ears and long rounded-tip nose as his son, same arched brow and almond eye shapes, violet rectangular glasses, short black bristly crew cut and square short beard, coral T-shirt, warm grey trousers, navy shoes. ONE small honey-brown carved wooden bear with round ears, dot eyes, no clothes; one white chalk oval only AFTER requested. Yellow flashlight and white rectangular cardboard screen appear ONLY at night when requested. No letters, numbers, Chinese, typography, musical notes, speech balloons, diagrams or watermark. Draw COMPLETE connected bodies and hands, no floating or amputated legs. WIDE LANDSCAPE composition, entire TOP 45 percent completely PURE WHITE, all art in lower55 percent. Keep central binding strip x45–55 percent free of faces, hands, toys and important marks; stage complete groups in left or right quarter. Sparse ground strokes, white feathered edges. NIGHT in a soft lower-half blue-grey vignette, pure white upper half. Father kneels lower LEFT beside boy. Father holds ONE small pale-yellow flashlight aimed toward ONE wooden bear lower RIGHT. Behind the bear is ONE upright white cardboard screen on a discreet stand, wholly in right half. Light source LEFT, toy in MIDDLE RIGHT, cardboard further RIGHT: a coherent bear-shaped grey shadow falls ON SCREEN behind toy, not between light and toy. Original white chalk oval faint on ground. All people full and coherent, no giant black bear creature. The wooden bear always faces LEFT, muzzle pointing left. When a chalk oval is present, the bear stands INSIDE the LEFT portion of that fixed oval, never outside it. Father MUST match REVISED family character sheet: violet rectangular glasses, long face, long rounded-tip nose and prominent ears like the boy, short bristly hair and short beard. Preserve family resemblance. The drawing scene fixes bear and chalk oval location. Bear remains INSIDE LEFT portion of original oval.",
-      "references": [
-        "assets/characters.png",
-        "assets/props.png",
-        "assets/illustrations/s03.png"
+      "toolReferencePaths": [
+        "/workspace/generated_images/exec-77bd3b01-561e-403a-a192-39a60a52adec.png",
+        "/workspace/audio-book/books/shadow-see-you-tomorrow/assets/characters.png"
       ],
-      "transparentBackground": false,
-      "source": "/workspace/generated_images/exec-0f6b8b4f-962b-40cb-a45c-765843482122.png",
-      "sha256": "632c021f69d8298cdb7deba000938e612db566878144703c3da029754c161ebe",
-      "supersededBy": "s10"
-    },
-    {
-      "id": "s11-initial",
-      "file": "assets/revisions/s11-initial.png",
-      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. PINGPING: lanky long-faced boy8, protruding ears, short black FLAT-TOP CREW CUT with no fringe, VIOLET RECTANGULAR glasses, ultramarine polo with pale-yellow collar/sleeve trim, grey shorts, white socks, yellow sneakers. FATHER: stocky broad shoulder, long rectangular face, same prominent ears and long rounded-tip nose as his son, same arched brow and almond eye shapes, violet rectangular glasses, short black bristly crew cut and square short beard, coral T-shirt, warm grey trousers, navy shoes. ONE small honey-brown carved wooden bear with round ears, dot eyes, no clothes; one white chalk oval only AFTER requested. Yellow flashlight and white rectangular cardboard screen appear ONLY at night when requested. No letters, numbers, Chinese, typography, musical notes, speech balloons, diagrams or watermark. Draw COMPLETE connected bodies and hands, no floating or amputated legs. WIDE LANDSCAPE composition, entire TOP 45 percent completely PURE WHITE, all art in lower55 percent. Keep central binding strip x45–55 percent free of faces, hands, toys and important marks; stage complete groups in left or right quarter. Sparse ground strokes, white feathered edges. Same nighttime setup: boy lower LEFT now holds ONE yellow flashlight in hand aimed to ONE wooden bear lower RIGHT, father kneels beside and behind him with empty hands. One upright white cardboard screen behind toy on right receives ONE visible enlarged grey bear-shaped silhouette. Beam directional from left source through toy onto screen; no detached living shadow or duplicate bear. Small pencil motion ticks by flashlight hand, no writing. Upper 45 percent PURE WHITE. The wooden bear always faces LEFT, muzzle pointing left. When a chalk oval is present, the bear stands INSIDE the LEFT portion of that fixed oval, never outside it. Father MUST match REVISED family character sheet: violet rectangular glasses, long face, long rounded-tip nose and prominent ears like the boy, short bristly hair and short beard. Preserve family resemblance. The drawing scene fixes bear and chalk oval location. Bear remains INSIDE LEFT portion of original oval.",
-      "references": [
-        "assets/characters.png",
-        "assets/props.png",
-        "assets/illustrations/s03.png"
-      ],
-      "transparentBackground": false,
-      "source": "/workspace/generated_images/exec-efdc6846-3a8a-4442-b20d-3b4941d0c256.png",
-      "sha256": "3c90fb3d96872cb73352cf22394ce1d0334617c7045e4aff337d3c6fddc00570",
-      "supersededBy": "s11"
+      "sha256": "00c232d45dd196d4b65d2e89ce38bcc0160f3230181818dae63ecbe8d309026d"
     },
     {
       "id": "s12",
       "file": "assets/illustrations/s12.png",
-      "prompt": "undefinedAt HOME, heartfelt comic ending: father KNEELS so boy can HUG him naturally; father and boy laugh and embrace in the RIGHT HALF, faces and hands fully outside central binding. Their full bodies and all shoes visible. ONE honey-brown wooden bear is gently squeezed between their chests, bear head and star sticker visible, not mangled. Boy has one yellow star on his blue shirt, bear one yellow star on chest. Father coral shirt NO star. Left half sparse white with a low table and closed red-lid jam jar at far-left lower corner as callback. No extra limbs or toys.",
-      "source": "/workspace/generated_images/exec-7a53749d-b586-4226-aa4d-289dab86966a.png",
+      "prompt": "Edit this existing graphite/dry-colored-pencil father-son picturebook final hug illustration. Preserve exact two related faces,violet rectangular glasses,black flat-top hair,clothes,wooden bear,one yellow star on boy and one star on bear. IMPORTANT: radically SCALE DOWN the whole embracing father-son-bear group and put it entirely in BOTTOM RIGHT QUARTER, occupying only bottom40percent of canvas height. ALL TOP55PERCENT of entire landscape canvas must be entirely PURE WHITE empty space, no faces or outlines there. Full father kneeling and full boy standing hugging, all limbs connected and all shoes visible. Boy LEFT arm points playfully at father's chest while they smile and hug, with wooden bear held gently between. No floating hands, no missing legs. REMOVE VERTICAL CENTER LINE completely. Keep LEFT half completely blank except a tiny low table with one closed red-lid jam jar at bottom-left. Sparse light ground strokes only. No scenery,walls,sky,lettering,frames or diagram. This is a small lower-page vignette with generous pure-white typesetting space ABOVE, not a full-height portrait. Preserve natural original faces and family similarity.",
+      "source": "/workspace/generated_images/exec-0eb80415-ed43-4581-8b4b-1c2c58fa86db.png",
       "transparentBackground": false,
       "references": [
-        "assets/characters.png",
-        "assets/props.png"
+        "assets/characters.png"
       ],
-      "replacesHistoricalArtwork": {
-        "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
-        "file": "assets/illustrations/s12.png",
-        "sha256": "2b4e2a5bf620a51cb23781bca429a4f5594c86a74cb5680644072b49d87af2b9"
-      },
-      "sha256": "9b598b3852d3f41edb95d39d4516ae870091f9414383f86c90b84296a146abc3"
+      "historicalReferences": [
+        {
+          "toolInputIndex": 0,
+          "commit": "2a4a969",
+          "file": "assets/illustrations/s12.png",
+          "sha256": "9b598b3852d3f41edb95d39d4516ae870091f9414383f86c90b84296a146abc3"
+        }
+      ],
+      "toolReferencePaths": [
+        "/workspace/generated_images/exec-7a53749d-b586-4226-aa4d-289dab86966a.png",
+        "/workspace/audio-book/books/shadow-see-you-tomorrow/assets/characters.png"
+      ],
+      "sha256": "e8577c426ce51a738064a084869b4178b69ac6f25c970daa7fae1fa529a1899e"
     },
     {
       "id": "cover",
@@ -280,53 +230,99 @@
     {
       "id": "s09",
       "file": "assets/illustrations/s09.png",
-      "prompt": "undefinedPUBLIC PARK at end of afternoon. Father lowerRIGHT now STANDING smiles warmly. Boy lowerLEFT takes father's hand to lead him HOME; held hands just on RIGHT side of centerbinding, faces distant from binding. Boy's other hand holds CREAM tote with BLUE handles, orange ball and one wooden bear visibly inside. Clear connected full hands, complete shoes, movement toward edge, sparse path and park bench in background. No stars, no extra ball or bear on ground.",
-      "source": "/workspace/generated_images/exec-f2bf61c1-5732-4422-bced-4b7cf4006d77.png",
+      "prompt": "Revise the attached existing children's picturebook illustration ONLY for EDITORIAL PAGE COMPOSITION. KEEP exactly same two distinctive related father-and-son faces, violet rectangular glasses, clothing, limbs, expressions and action, same wooden bear and exact requested props and star-sticker continuity. Recompose as a SMALL SPARSE graphite and flat dry-colored-pencil VIGNETTE on PURE WHITE PAPER. The ENTIRE UPPER 55 PERCENT of the final landscape canvas must be ABSOLUTELY BLANK WHITE: no heads, walls, trees, sky, lamps, frames, windows, texture shading, background wash or objects there. Scale DOWN and lower ALL existing figures and scenery into lower45percent, keep COMPLETE HEAD-TO-SHOE connected bodies fully visible. Left character completely in left quarter, right character completely in right quarter, central binding strip x45–55percent free of faces, hands and bear. Remove almost all scenery: only tiny relevant ground/grass strokes and simple bench or low table. Keep SAME ACTION from original: boy taking adult father's hand as they WALK HOME smiling; boy also carries tote containing one wooden bear and orange ball. Hands naturally connected just RIGHT of central gutter. Show full bodies not only legs. No lettering, symbols, speech bubbles, full-bleed wall or sky. Whole UPPER55PERCENT PURE WHITE for native typesetting. Feathered white paper edges around tiny lower-half scene.",
+      "source": "/workspace/generated_images/exec-846e744e-c9e1-4107-82f6-783171c953c6.png",
       "transparentBackground": false,
       "references": [
-        "assets/characters.png",
-        "assets/props.png"
+        "assets/characters.png"
       ],
-      "replacesHistoricalArtwork": {
-        "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
-        "file": "assets/illustrations/s09.png",
-        "sha256": "22838929c78c814dc996a7b22bb400bc1b25603a8e2a95d7ebf0f3f43b9d22be"
-      },
-      "sha256": "6dad2c72350fb8c341a54a446828c82308311addc73440db7003b35385262bcb"
+      "historicalReferences": [
+        {
+          "toolInputIndex": 0,
+          "commit": "2a4a969",
+          "file": "assets/illustrations/s09.png",
+          "sha256": "6dad2c72350fb8c341a54a446828c82308311addc73440db7003b35385262bcb"
+        }
+      ],
+      "toolReferencePaths": [
+        "/workspace/generated_images/exec-f2bf61c1-5732-4422-bced-4b7cf4006d77.png",
+        "/workspace/audio-book/books/shadow-see-you-tomorrow/assets/characters.png"
+      ],
+      "sha256": "f3aaab65246451c74cbae5e138ac438a277f2856f431ffa21fabefff6b5077b0"
     },
     {
       "id": "s10",
       "file": "assets/illustrations/s10.png",
-      "prompt": "undefinedAt HOME after dinner, sparse low table and warm floor lamp far edge, white paper not full dark wash. Boy lowerLEFT already has ONE SMALL YELLOW STAR STICKER on blue shirt and is applying SECOND YELLOW STAR to chest of wooden bear standing on low table near him. Father lowerRIGHT seated smiles and watches, hands empty relaxed. Exactly TWO star stickers total: boy shirt and bear chest. No stars floating, no star-shaped living characters. No dinner plates needed.",
-      "source": "/workspace/generated_images/exec-bde767fd-96fb-4885-a854-0d428492bc97.png",
+      "prompt": "Revise the attached existing children's picturebook illustration ONLY for EDITORIAL PAGE COMPOSITION. KEEP exactly same two distinctive related father-and-son faces, violet rectangular glasses, clothing, limbs, expressions and action, same wooden bear and exact requested props and star-sticker continuity. Recompose as a SMALL SPARSE graphite and flat dry-colored-pencil VIGNETTE on PURE WHITE PAPER. The ENTIRE UPPER 55 PERCENT of the final landscape canvas must be ABSOLUTELY BLANK WHITE: no heads, walls, trees, sky, lamps, frames, windows, texture shading, background wash or objects there. Scale DOWN and lower ALL existing figures and scenery into lower45percent, keep COMPLETE HEAD-TO-SHOE connected bodies fully visible. Left character completely in left quarter, right character completely in right quarter, central binding strip x45–55percent free of faces, hands and bear. Remove almost all scenery: only tiny relevant ground/grass strokes and simple bench or low table. Keep SAME ACTION from original: boy applying yellow star to standing WOODEN bear on low table, one yellow star already on blue shirt, father watching. Exactly two star stickers total, all wood grain remains on bear. Evening suggested by a tiny floor lamp at far edge below the white zone. No lettering, symbols, speech bubbles, full-bleed wall or sky. Whole UPPER55PERCENT PURE WHITE for native typesetting. Feathered white paper edges around tiny lower-half scene.",
+      "source": "/workspace/generated_images/exec-a7dda5fd-99b2-49f5-9e38-2d58853ff2da.png",
       "transparentBackground": false,
       "references": [
-        "assets/characters.png",
-        "assets/props.png"
+        "assets/characters.png"
       ],
-      "replacesHistoricalArtwork": {
-        "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
-        "file": "assets/illustrations/s10.png",
-        "sha256": "c1dba06df3f472228911d09dab855205219f74d32d80e3e37e948eae0629065f"
-      },
-      "sha256": "5208450ed4edc76bb28dca77c15a1dd449473c593c96853e211506c7f694689a"
+      "historicalReferences": [
+        {
+          "toolInputIndex": 0,
+          "commit": "2a4a969",
+          "file": "assets/illustrations/s10.png",
+          "sha256": "5208450ed4edc76bb28dca77c15a1dd449473c593c96853e211506c7f694689a"
+        }
+      ],
+      "toolReferencePaths": [
+        "/workspace/generated_images/exec-bde767fd-96fb-4885-a854-0d428492bc97.png",
+        "/workspace/audio-book/books/shadow-see-you-tomorrow/assets/characters.png"
+      ],
+      "sha256": "9488ac89ae1fc838a16339ce545026ff17751ccf9e0175e9283c5f29afa65036"
     },
     {
       "id": "s11",
       "file": "assets/illustrations/s11.png",
-      "prompt": "undefinedAt HOME: father lowerRIGHT seated deliberately makes funny furrowed-brow expression while pointing to ONE CLOSED red-lid jam jar on low table beside him; his other hand relaxed. Boy lowerLEFT laughs while holding wooden bear toward father, as if suggesting it could play dad tomorrow. Preserve ONE yellow star sticker on boy blue shirt and ONE on bear chest, exactly two. No extra bear, lids, bread, ball or tote.",
-      "source": "/workspace/generated_images/exec-45652301-5985-4a67-841a-6cfe31d7e2b5.png",
+      "prompt": "Revise the attached existing children's picturebook illustration ONLY for EDITORIAL PAGE COMPOSITION. KEEP exactly same two distinctive related father-and-son faces, violet rectangular glasses, clothing, limbs, expressions and action, same wooden bear and exact requested props and star-sticker continuity. Recompose as a SMALL SPARSE graphite and flat dry-colored-pencil VIGNETTE on PURE WHITE PAPER. The ENTIRE UPPER 55 PERCENT of the final landscape canvas must be ABSOLUTELY BLANK WHITE: no heads, walls, trees, sky, lamps, frames, windows, texture shading, background wash or objects there. Scale DOWN and lower ALL existing figures and scenery into lower45percent, keep COMPLETE HEAD-TO-SHOE connected bodies fully visible. Left character completely in left quarter, right character completely in right quarter, central binding strip x45–55percent free of faces, hands and bear. Remove almost all scenery: only tiny relevant ground/grass strokes and simple bench or low table. Keep SAME ACTION from original: father playfully furrows brows while pointing at CLOSED red-lid jam jar on low table; boy laughs holding wooden bear; exactly one yellow star on boy shirt and one on bear chest. No lettering, symbols, speech bubbles, full-bleed wall or sky. Whole UPPER55PERCENT PURE WHITE for native typesetting. Feathered white paper edges around tiny lower-half scene.",
+      "source": "/workspace/generated_images/exec-71a1cb71-b917-4c7b-9a23-c0afe147d370.png",
       "transparentBackground": false,
       "references": [
-        "assets/characters.png",
-        "assets/props.png"
+        "assets/characters.png"
       ],
-      "replacesHistoricalArtwork": {
-        "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
-        "file": "assets/illustrations/s11.png",
-        "sha256": "10eff8d3fcd6de4a436a22d45af4af42e19dcffca1e3b93b0aed59a471b9ea27"
-      },
-      "sha256": "fca9659b1afde3efc19dd6a8d46b4260fa14ab7a712bd6219fbef65882d09636"
+      "historicalReferences": [
+        {
+          "toolInputIndex": 0,
+          "commit": "2a4a969",
+          "file": "assets/illustrations/s11.png",
+          "sha256": "fca9659b1afde3efc19dd6a8d46b4260fa14ab7a712bd6219fbef65882d09636"
+        }
+      ],
+      "toolReferencePaths": [
+        "/workspace/generated_images/exec-45652301-5985-4a67-841a-6cfe31d7e2b5.png",
+        "/workspace/audio-book/books/shadow-see-you-tomorrow/assets/characters.png"
+      ],
+      "sha256": "75c4d18c7bfaafb5444b76dd85bf36ec6189cd674abe43c3eabffd58c384f275"
     }
-  ]
+  ],
+  "historicalArtwork": [
+    {
+      "file": "assets/revisions/cover-initial.png",
+      "sha256": "fcb313f804734b71878f968cff1cab797cfdcdddc3cc7c12f11b92c8cef3b19e",
+      "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f"
+    },
+    {
+      "file": "assets/revisions/s04-initial.png",
+      "sha256": "2b1d90c3ebc2c5558f7235a61c1226368fed9dd53f74529f43a5ce1aa146b5e4",
+      "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f"
+    },
+    {
+      "file": "assets/revisions/s09-initial.png",
+      "sha256": "d982a0c97308d13fa7d7f1c84b7efe4d4cc952464e64074a83c547d5d99b1ee8",
+      "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f"
+    },
+    {
+      "file": "assets/revisions/s10-initial.png",
+      "sha256": "632c021f69d8298cdb7deba000938e612db566878144703c3da029754c161ebe",
+      "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f"
+    },
+    {
+      "file": "assets/revisions/s11-initial.png",
+      "sha256": "3c90fb3d96872cb73352cf22394ce1d0334617c7045e4aff337d3c6fddc00570",
+      "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f"
+    }
+  ],
+  "historyNote": "原提示與所有舊圖均完整保存在指定Git存檔點及修訂前artwork-log快照；目前不重複發布已取代的大型原圖。"
 }

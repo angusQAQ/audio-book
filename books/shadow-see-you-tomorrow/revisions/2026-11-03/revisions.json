@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-02",
+  "request": "使用者要求父子外貌有可辨認的親子特徵，同時改善跨書人物同質化。",
+  "changes": [
+    "爸爸改為與平平相似的長鼻、耳形、眉眼與笑容，保持成年身形與鬍鬚。",
+    "封面及全部父子同框頁以新版模型製作。",
+    "校正中午固定圈及小熊位置、入夜出場順序、電筒與影子的方向。"
+  ],
+  "preservedInitialAssets": [
+    "assets/revisions/cover-initial.png",
+    "assets/revisions/s04-initial.png",
+    "assets/revisions/characters-initial.png",
+    "assets/revisions/s09-initial.png",
+    "assets/revisions/s10-initial.png",
+    "assets/revisions/s11-initial.png"
+  ],
+  "provenance": "artwork-log.json"
+}

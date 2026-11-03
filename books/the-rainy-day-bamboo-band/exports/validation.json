@@ -8,7 +8,7 @@
   "originalArtworkHashesVerified": 13,
   "properNameMarks": {
     "names": {
-      "朵朵": 7
+      "朵朵": 16
     },
     "style": "continuous rule below each full name",
     "pdfPptxSvgGeometryVerified": true,
@@ -19,12 +19,13 @@
     "bodyScale": 1.5,
     "pdfAndPptxRunsVerified": true,
     "handwrittenGlyphs": {
-      "筒": 7,
-      "等": 8,
-      "筷": 6,
-      "節": 4,
-      "笛": 8,
-      "笑": 6,
+      "筒": 13,
+      "等": 9,
+      "筷": 7,
+      "笑": 9,
+      "笛": 9,
+      "答": 5,
+      "籃": 4,
       "⺮": 1
     }
   },
@@ -37,13 +38,14 @@
     "pdfAndPptxRunsVerified": true,
     "svgRunsVerified": true
   },
-  "storyHanCharacters": 226,
+  "storyHanCharacters": 354,
   "targets": {
-    "筷": 6,
-    "筒": 8,
-    "笛": 8,
-    "節": 4,
-    "等": 8,
-    "笑": 6
+    "筷": 7,
+    "筒": 14,
+    "笛": 9,
+    "答": 6,
+    "等": 9,
+    "笑": 9,
+    "籃": 4
   }
 }

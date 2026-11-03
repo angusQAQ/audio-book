@@ -484,7 +484,10 @@ def validate(page_list, output, proof):
                     if ch in TARGETS:
                         assert family == HAND_FAMILY and abs(fs / item['size'] - EMPHASIS_SCALE) < .001
     manuscript_names = Counter(match.group() for spread in BOOK['spreads'] for line in spread['lines'] for match in NAME_PATTERN.finditer(line))
-    assert proper_name_marks == manuscript_names, 'Every manuscript name must retain a complete proper-name mark'
+    story_marks = Counter(mark['name'] for page in page_list[2:2+len(BOOK['spreads'])] for item in page['items'] if item['kind']=='text' for mark in item['nameMarks'])
+    assert story_marks == manuscript_names, 'Every manuscript name must retain a complete proper-name mark'
+    visible_names = Counter(match.group() for page in page_list for item in page['items'] if item['kind']=='text' for match in NAME_PATTERN.finditer(item['text']))
+    assert proper_name_marks == visible_names, 'Every visible name, including the learning page, must retain a proper-name mark'
     report = {'status': 'proof' if proof else 'complete', 'spreadPages':len(spreads), 'singlePages':len(leaves),
               'editableSlides':len(deck.slides), 'missingGlyphs':missing, 'allTextEditable':True,
               'originalArtworkHashesVerified':artwork_count,
