@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "OpenAI image_gen",
+  "date": "2026-11-03",
+  "characterBible": {
+    "prompt": "Create an ORIGINAL four-column full-body CHARACTER MODEL SHEET for a literary children's picturebook, ages7–9, primary2. Pure WHITE paper background, no props, scenery, letters, labels, logos, arrows or watermarks. Four equal columns separated by generous white gaps, all complete shoes visible, same baseline. LEFT TWO columns: same GIRL age8 front and three-quarter. She is tall and lean with a distinctive PEAR-SHAPED FACE: narrow forehead, wider lower cheeks and small pointed chin; SMALL narrow single-lidded eyes spaced widely, gently drooping outer corners, fine straight eyebrows, a broad short nose, asymmetrical smile and ONE pronounced cheek dimple. Warm light-tan skin. CHESTNUT-BROWN very short SIDE-PARTED PIXIE hair, closely cropped at nape, one long swept side lock, both ears visible, NO bob, braids, buns, spikes, hair accessories or glasses. Her look is lively and observant, no huge round doll eyes. Clothes: plain LAKE-BLUE short-sleeved collared blouse, DARK PLUM knee-length A-line skirt with two side pockets, white ankle socks, pale cream flat shoes. RIGHT TWO columns: SAME female TEACHER age42, front and three-quarter; noticeably tall and broad sturdy adult build, about1.5times girl's height. LONG ANGULAR DIAMOND-SHAPED face with high cheekbones, deep brown skin, LONG NARROW slightly hooked nose, very thin straight eyebrows, SMALL deep-set almond eyes and full broad smiling lips. Black hair smoothly swept back into ONE LOW compact bun at nape, ears fully visible; NO glasses. Clothes: moss-green short-sleeved button blouse with one breast pocket, indigo-blue loose cropped trousers, burgundy flat closed shoes, no jewellery. She is clearly middle-aged, with subtle laugh lines, NOT grandmother, not related to the girl, keep their different facial structures. Empty relaxed hands. Neither character has a pencil anywhere in this neutral model. Clear original silhouettes, human natural proportions: child about5.5 heads, adult about7 heads. Lively graphite contours, varied pressure, visible dry colored-pencil hatching, restrained flat local colors with abundant paper. No photorealism, glossy rendering, anime, 3D, cutesy oversized eyes or copied existing character.",
+    "source": "/workspace/generated_images/exec-0eecc514-7250-4908-8d1c-28b5539016f5.png",
+    "transparentBackground": false,
+    "file": "assets/characters.png",
+    "references": [],
+    "sha256": "9b8fcbb74915974d35a009ad0b87ec2b9da34a453d5621524e4dcac0af290da9"
+  },
+  "illustrations": []
+}

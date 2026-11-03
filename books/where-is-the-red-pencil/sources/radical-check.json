@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-03",
+  "description": "依固定Unicode17.0逐字查部首；符號⺮先以EquivalentUnifiedIdeograph映射U+25AD7再查118部，不冒充直接的Unihan條目。",
+  "dataset": "Unicode 17.0 kRSUnicode",
+  "source": "https://github.com/unicode-org/unicodetools/blob/578f6c0516f5f268292ebda50b51848407a06478/unicodetools/data/ucd/17.0.0/Unihan/kRSUnicode.txt",
+  "sha256": "481f8a3d2fda0c6b8e6f7c746a0eedfb145a62f30bf6e61527a8f7cdb2a99108",
+  "entries": {
+    "⺮": {
+      "codepoint": "U+2EAE",
+      "kRSUnicode": "118.0",
+      "sourceLine": "25AD7\t118.0",
+      "equivalentUnifiedIdeograph": "U+25AD7",
+      "equivalenceSourceLine": "2EAE       ; 25AD7 #     CJK RADICAL BAMBOO"
+    },
+    "哭": {
+      "codepoint": "U+54ED",
+      "kRSUnicode": "30.7",
+      "sourceLine": "54E0..5527\t30.7"
+    },
+    "竹": {
+      "codepoint": "U+7AF9",
+      "kRSUnicode": "118.0",
+      "sourceLine": "7AF9\t118.0"
+    },
+    "笑": {
+      "codepoint": "U+7B11",
+      "kRSUnicode": "118.4",
+      "sourceLine": "7B05..7B15\t118.4"
+    },
+    "筆": {
+      "codepoint": "U+7B46",
+      "kRSUnicode": "118.6",
+      "sourceLine": "7B3F..7B5D\t118.6"
+    },
+    "等": {
+      "codepoint": "U+7B49",
+      "kRSUnicode": "118.6",
+      "sourceLine": "7B3F..7B5D\t118.6"
+    },
+    "筒": {
+      "codepoint": "U+7B52",
+      "kRSUnicode": "118.6",
+      "sourceLine": "7B3F..7B5D\t118.6"
+    },
+    "答": {
+      "codepoint": "U+7B54",
+      "kRSUnicode": "118.6",
+      "sourceLine": "7B3F..7B5D\t118.6"
+    },
+    "箱": {
+      "codepoint": "U+7BB1",
+      "kRSUnicode": "118.9",
+      "sourceLine": "7BAC..7BBF\t118.9"
+    }
+  },
+  "symbolEquivalenceSource": {
+    "url": "https://github.com/unicode-org/unicodetools/blob/578f6c0516f5f268292ebda50b51848407a06478/unicodetools/data/ucd/17.0.0/EquivalentUnifiedIdeograph.txt",
+    "sha256": "38619c05a17e771554000fe604afee92e10eb49e0616ecf0c87af3c1eb0f4320"
+  }
+}

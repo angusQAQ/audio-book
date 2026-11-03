@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "book": {
+    "slug": "where-is-the-red-pencil",
+    "title": "紅鉛筆去哪裏了？",
+    "language": "zh-HK"
+  },
+  "audience": {
+    "ageMin": 7,
+    "ageMax": 9,
+    "readingMode": "independent",
+    "readingAbility": "以小二自主閱讀為主要目標",
+    "accessibilityNeeds": []
+  },
+  "theme": "彤彤想畫完紅恐龍，借給老師的紅鉛筆卻不見了；師生依顏色和白線尋找，最後發現筆一直夾在老師耳後，畫作完成後再以鉛筆回扣笑點。",
+  "content": {
+    "mode": "original",
+    "request": "重新設計竹字頭主題的兒童故事繪本；起因、經過、結果清晰，讓讀者好奇並能依線索尋找答案。使用者已確認校園尋物小偵探方向。",
+    "requiredElements": [
+      "完整插畫及原生文字排版",
+      "主角目標、鉛筆去向的懸念、可辨識線索與結果",
+      "兒童主角依兩條白線辨認，自己發現答案",
+      "結尾完成原來畫作願望，以畫中鉛筆回扣笑點",
+      "人物使用疊字名，姓名有連續專名號",
+      "竹部核心字150%手寫楷體，普通竹不放大"
+    ],
+    "avoidElements": [
+      "沿用未採用作品的音樂情節、人物或插畫",
+      "只羅列尋找位置而無辨認線索",
+      "指控未經證實的偷竊",
+      "為教字硬塞詞語",
+      "與既有八冊人物同臉換衣"
+    ],
+    "sourceTextPaths": [
+      "story.json"
+    ],
+    "references": [
+      {
+        "title": "生日會",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 16,
+        "sha256": "8f67a3121f40ebaa67844db1918eccb9c7f21bdc4faeacf4acd98557499d9eaf",
+        "source": "使用者附件，未重新公開原 PDF"
+      },
+      {
+        "title": "跟屁蟲",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 17,
+        "sha256": "abfb8339a9bbcb41fa25d914a9c1bff836b7ffc986eaa04077252a5d48a5a8fe",
+        "source": "使用者附件，未重新公開原 PDF"
+      }
+    ],
+    "learningGoals": [
+      "由完整校園故事理解六個竹部字",
+      "辨認竹部本形與竹字頭，不以語義猜部首"
+    ],
+    "targetCharacters": [
+      "筆",
+      "筒",
+      "箱",
+      "等",
+      "答",
+      "笑"
+    ],
+    "characterNames": [
+      "彤彤"
+    ]
+  },
+  "design": {
+    "artDirection": "原創梨形臉極短栗棕髮女孩與深棕膚高大低髻女老師；小細眼、不同五官與輪廓；石墨線條、乾色鉛筆和白紙留白。",
+    "palette": [
+      "#FFFFFF",
+      "#F3DCC3",
+      "#303D46",
+      "#728186",
+      "#57A5BD",
+      "#687D50",
+      "#BC4B44"
+    ],
+    "pageSize": {
+      "width": 960,
+      "height": 600,
+      "unit": "pt"
+    },
+    "storySpreads": 10,
+    "wordBudget": 332,
+    "bodyFont": "Iansui",
+    "emphasisFont": "JyunsaiKaai Bold",
+    "emphasisScale": 1.5,
+    "properNameMarks": true,
+    "normalCharacters": [
+      "竹"
+    ]
+  },
+  "deliverables": {
+    "formats": [
+      "pdf-spread",
+      "pdf-single",
+      "pptx",
+      "svg"
+    ],
+    "readAlong": false,
+    "audio": null
+  },
+  "publication": {
+    "github": true,
+    "permanentWebsite": true,
+    "destination": "https://angusqaq.github.io/audio-book/"
+  },
+  "decisions": {
+    "userRequirements": [
+      "重新創作竹字頭繪本並移除未採用作品檔案",
+      "起因、經過、結果清晰，故事引起好奇",
+      "使用者已選校園尋物小偵探方向",
+      "保留本次小二主要讀者及既有完整插畫PDF／可編輯排版交付設定",
+      "每階段Git存檔，驗證後同步永久網站"
+    ],
+    "editorialChoices": [
+      "新書名《紅鉛筆去哪裏了？》，十個故事跨頁",
+      "使用熟悉教室事件及辨認顏色／白線，不依靠未交代的科學原理",
+      "先形成完整因果故事，再由故事選筆、筒、箱、等、答、笑六字",
+      "另立專案，不復用未採用作品的人物、插畫或情節",
+      "沿用已驗證的共用排版方法，所有書名、字目、角色、頁數與內容由本書資料定義"
+    ],
+    "unresolvedQuestions": []
+  }
+}
