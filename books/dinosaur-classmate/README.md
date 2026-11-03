@@ -2,7 +2,7 @@
 
 7–9歲，以小二自主閱讀為主要目標的原創繁體中文繪本。玩具上學日，多多想與小恐龍拍同桌合照；先因玩具坐得太低而拍不到，再因湊得太近而擋住自己，最後主動抱在胸前，兩個一起入鏡。正文370漢字、12故事跨頁、16閱讀畫面、30單頁。
 
-目前為製作草稿，完整插畫與實際成品驗證完成後發布下載。
+已完成完整插畫、單頁及跨頁PDF、原生文字PowerPoint／SVG，並以LibreOffice及Inkscape實際開啟驗證。
 
 - [跨頁PDF](https://angusqaq.github.io/audio-book/books/dinosaur-classmate/exports/恐龍同學，請坐好！_跨頁閱讀版.pdf)
 - [單頁PDF](https://angusqaq.github.io/audio-book/books/dinosaur-classmate/exports/恐龍同學，請坐好！_繪本.pdf)

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "date": "2026-11-03",
+      "previousCommit": "7068a542f0fc9a1f9c4eccb064552eb5dd540015",
+      "artwork": [
+        {
+          "id": "s03",
+          "reason": "玩具頭部低於桌面，讓第一次照片取景有清楚原因。",
+          "beforeSha256": "06616b2e40ceb3f53e51469ce7d01bd36fef4c40ebfabf891d66b79bc11bbc7b",
+          "afterSha256": "a3d3645d023db8f80be94f29510da6e29acb3395432bcb7cf080cb206c04cb27"
+        },
+        {
+          "id": "s12",
+          "reason": "縮小桌上玩具，保持手持小玩具比例；嘴巴朝向課本但沒有咬書。",
+          "beforeSha256": "2d7304566a0add5f34c1b5093fb9800f3f44cd6f7cab7e3442bf5a2c77e068d4",
+          "afterSha256": "c4063d565c10e431bbae109df92dec65fbce9e89675246401c5755d0c4276a5f"
+        }
+      ]
+    }
+  ]
+}

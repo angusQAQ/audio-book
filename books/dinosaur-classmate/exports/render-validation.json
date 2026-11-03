@@ -1,0 +1,36 @@
+{
+  "status": "verified",
+  "date": "2026-11-03",
+  "officePages": 16,
+  "officeTextMatchesEveryPage": true,
+  "actualOfficeFonts": [
+    "Iansui-Regular",
+    "JyunsaiKaai-Bold"
+  ],
+  "officeTargetFontAndSizeVerified": true,
+  "properNameRulesVerified": 26,
+  "ordinaryCharactersNotEnlarged": [
+    "木"
+  ],
+  "storyTextImageCollisionChecks": 11,
+  "radicalEntriesVerified": 12,
+  "svgActualRenders": [
+    "s01",
+    "s03",
+    "s04",
+    "s06",
+    "s07",
+    "s09",
+    "s10",
+    "s11",
+    "s12",
+    "lesson"
+  ],
+  "officeRenderedPdfSha256": "348060e25b005d21dcd7503ddd4ed3eaf3baefc433eea45a788e3c8a75b32ab7",
+  "files": {
+    "恐龍同學，請坐好！_可編輯排版.pptx": "fd56ad9c0d3efaaec324a50ddf80e9239bbde3220acab832c1fddd76e6b9e8f9",
+    "恐龍同學，請坐好！_跨頁閱讀版.pdf": "f4cef34c5af49ce47e72f5c2f52c8d4e53f335eea3061b10379e43ca672a7372",
+    "恐龍同學，請坐好！_繪本.pdf": "addde1c4dd350b7dbb1f22f1d9eb49efb15d80fca8ec44a30bfde31fbfc35798"
+  },
+  "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
+}

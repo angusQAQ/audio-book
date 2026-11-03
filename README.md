@@ -151,7 +151,13 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 
 [專案與編輯方法](books/this-time-you-cant-find-me/README.md)保存需求、原稿、分鏡、原圖、精確提示、部首資料及SVG。編輯前安裝[共用出版字型](assets/fonts/print/SOURCE.md)：[芫荽](https://angusqaq.github.io/audio-book/assets/fonts/print/Iansui-Regular.ttf)、[芫茜雅楷](https://angusqaq.github.io/audio-book/assets/fonts/print/JyunsaiKaai-Bold.ttf)。共用字型保留原始位元組及授權，合併重複副本已節省152,162,908位元組。本書尚未另製點讀音訊。
 
-木部作品已依使用者要求撤下並移除現行檔案，新故事另行創作；舊版只保留於Git歷史。
+## 原創木部繪本《恐龍同學，請坐好！》
+
+全新校園小喜劇，7–9歲，以小二自主閱讀為主要目標。玩具上學日，多多想與小恐龍皮皮拍合照：第一張只有自己，第二張卻只剩恐龍的大臉；他改變抱法，終於一起入鏡，再以張嘴遊戲回扣笑點。正文370漢字，12故事跨頁、16閱讀畫面、30單頁；核心校、桌、椅、機、樣、本，延伸棒。人名避開木部並附專名號，所選字目採150%手寫楷體。
+
+[跨頁PDF](https://angusqaq.github.io/audio-book/books/dinosaur-classmate/exports/恐龍同學，請坐好！_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/dinosaur-classmate/exports/恐龍同學，請坐好！_繪本.pdf) · [可編輯PowerPoint](https://angusqaq.github.io/audio-book/books/dinosaur-classmate/exports/恐龍同學，請坐好！_可編輯排版.pptx)
+
+[完整專案與編輯方法](books/dinosaur-classmate/README.md)保存需求、故事、分鏡、全新人物與道具模型、原圖及修訂、精確提示、部首資料、SVG和重建程式。PDF嵌字；編輯檔使用[共用出版字型](assets/fonts/print/SOURCE.md)。未採用的上一版木部作品已移除現行檔案及網站下載，僅保留Git歷史。這本新作尚未另製點讀音訊。
 
 ## 設計與存檔點
 

@@ -1,0 +1,56 @@
+{
+  "status": "complete",
+  "spreadPages": 16,
+  "singlePages": 30,
+  "editableSlides": 16,
+  "missingGlyphs": [],
+  "allTextEditable": true,
+  "originalArtworkHashesVerified": 15,
+  "properNameRadicals": {
+    "多": 36,
+    "皮": 107
+  },
+  "properNamesAvoidThemeRadical": true,
+  "properNameMarks": {
+    "names": {
+      "多多": 12,
+      "皮皮": 14
+    },
+    "style": "continuous rule below each full name",
+    "pdfPptxSvgGeometryVerified": true,
+    "editableTextAndRuleGrouped": true
+  },
+  "targetTypography": {
+    "font": "JyunsaiKaai",
+    "bodyScale": 1.5,
+    "pdfAndPptxRunsVerified": true,
+    "handwrittenGlyphs": {
+      "校": 5,
+      "桌": 8,
+      "機": 9,
+      "樣": 5,
+      "椅": 7,
+      "棒": 3,
+      "本": 6
+    }
+  },
+  "normalCharacterTypography": {
+    "characters": [
+      "木"
+    ],
+    "bodyScale": 1,
+    "font": "Iansui",
+    "pdfAndPptxRunsVerified": true,
+    "svgRunsVerified": true
+  },
+  "storyHanCharacters": 370,
+  "targets": {
+    "校": 6,
+    "桌": 8,
+    "椅": 7,
+    "機": 9,
+    "樣": 5,
+    "本": 8,
+    "棒": 3
+  }
+}
