@@ -24,7 +24,7 @@
       "晴": 6,
       "時": 5,
       "晚": 6,
-      "明": 8
+      "明": 9
     }
   },
   "normalCharacterTypography": {
@@ -36,13 +36,13 @@
     "pdfAndPptxRunsVerified": true,
     "svgRunsVerified": true
   },
-  "storyHanCharacters": 441,
+  "storyHanCharacters": 445,
   "targets": {
     "早": 8,
     "晴": 6,
     "時": 5,
     "晚": 6,
-    "明": 9,
+    "明": 10,
     "星": 10
   }
 }

@@ -10,5 +10,26 @@
     "核心字改為早、晴、時、晚、明、星；普通日字不放大，姓名專名號持續保留。"
   ],
   "provenance": "artwork-log.json",
-  "preservation": "原稿、全部舊圖與成品保存在指定Git提交；原模型比較所需的characters-initial仍保留於目前assets/revisions。"
+  "preservation": "原稿、全部舊圖與成品保存在指定Git提交；原模型比較所需的characters-initial仍保留於目前assets/revisions。",
+  "textCorrections": [
+    {
+      "date": "2026-11-03",
+      "previousBookCommit": "1f501b6c9f6879eda12f1d09ef66dd10100bf4d8",
+      "changes": [
+        {
+          "spread": "s09",
+          "original": "平平拉拉爸爸的手",
+          "replacement": "平平牽著爸爸的手",
+          "reason": "依使用者指定改為牽手動作。"
+        },
+        {
+          "spread": "s11",
+          "original": "那果醬瓶，誰來開呢？",
+          "replacement": "明天誰來幫忙打開果醬瓶呢？",
+          "reason": "直接問誰幫忙開瓶，對應下頁平平指着爸爸回答。"
+        }
+      ],
+      "artwork": "現有牽手及指向果醬瓶插畫與新文字相符，沿用原圖。"
+    }
+  ]
 }

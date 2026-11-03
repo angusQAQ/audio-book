@@ -125,16 +125,15 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 
 [言部專案](books/who-is-the-red-mitten-waiting-for/README.md)及[艹部專案](books/who-opened-windows-in-the-leaf/README.md)包含參考細讀、原稿與分鏡、角色及道具模型、原創插畫、精確生成紀錄、字型授權、SVG及重建方法。各書已完成原生檢查、實際Office／SVG渲染與逐頁校稿；永久網址檢查涵蓋六份成品及兩份渲染報告。
 
-## 原創竹字頭與日部繪本
+## 原創日部繪本
 
-2026-11-03依小二讀者需求修訂：竹部交代想去公園、下雨留家、輪流玩音樂及雨停出門的因果；日部改為親子角色互換的生活喜劇《今天，換我當爸爸！》，以開瓶和裝小熊的意外推進，結尾回扣前文。保留7–9歲、完整插畫PDF及可編輯排版的設定與已確認的人物外貌。
+2026-11-03依小二讀者需求修訂：日部改為親子角色互換的生活喜劇《今天，換我當爸爸！》，以開瓶和裝小熊的意外推進，結尾回扣前文。保留7–9歲、完整插畫PDF及可編輯排版的設定與已確認的人物外貌。
 
 | 主題／書名 | 故事與字目 | 成品 |
 | --- | --- | --- |
-| ⺮／《雨天的竹筒樂隊》 | 筷、筒、笛、答、等、笑，延伸籃。354漢字、10故事跨頁。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/the-rainy-day-bamboo-band/exports/雨天的竹筒樂隊_可編輯排版.pptx) |
-| 日／《今天，換我當爸爸！》 | 早、晴、時、晚、明、星。441漢字、12故事跨頁。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/shadow-see-you-tomorrow/exports/今天，換我當爸爸！_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/shadow-see-you-tomorrow/exports/今天，換我當爸爸！_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/shadow-see-you-tomorrow/exports/今天，換我當爸爸！_可編輯排版.pptx) |
+| 日／《今天，換我當爸爸！》 | 早、晴、時、晚、明、星。445漢字、12故事跨頁。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/shadow-see-you-tomorrow/exports/今天，換我當爸爸！_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/shadow-see-you-tomorrow/exports/今天，換我當爸爸！_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/shadow-see-you-tomorrow/exports/今天，換我當爸爸！_可編輯排版.pptx) |
 
-[竹字頭專案](books/the-rainy-day-bamboo-band/README.md)及[日部專案](books/shadow-see-you-tomorrow/README.md)包含角色、原稿、原圖與修訂、精確提示、字型授權、SVG和重建方法。這次交付繪本及可編輯檔，未新增點讀音訊。[研究分析](docs/picturebook-research-20261103.md)標明實際讀取的研究資料、作者摘要和筆記；每本附起因／經過／結果及理解證據，尚未進行真實學生試讀。
+[日部專案](books/shadow-see-you-tomorrow/README.md)包含角色、原稿、原圖與修訂、精確提示、字型授權、SVG和重建方法。這次交付繪本及可編輯檔，未新增點讀音訊。[研究分析](docs/picturebook-research-20261103.md)標明實際讀取的研究資料、作者摘要和筆記；每本附起因／經過／結果及理解證據，尚未進行真實學生試讀。
 
 ## 設計與存檔點
 

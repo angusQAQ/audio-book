@@ -24,11 +24,11 @@
     "s12",
     "lesson"
   ],
-  "officeRenderedPdfSha256": "ace4f508fc5fe73b1ede8931a59e14086227f5c4ed589e9220c095704f8f23a9",
+  "officeRenderedPdfSha256": "81a2f221d0482a3629edccb63c070107de40de6f34f4a0bba3421ccfd3fce8c5",
   "files": {
-    "今天，換我當爸爸！_跨頁閱讀版.pdf": "f9597fb19b806810bc425df32fa12be8f45eab3bbca66067d706f6fb5b0d2761",
-    "今天，換我當爸爸！_可編輯排版.pptx": "13e7e6a94e39791cfc0044c5868b1477b468df95fa339e39bcb90eb93b3a1a63",
-    "今天，換我當爸爸！_繪本.pdf": "e5f08239eda4758197a546eae4897155cf7890abbd75a22a7a55ecbe4628886d"
+    "今天，換我當爸爸！_跨頁閱讀版.pdf": "b48f8af08b68a6682c2e0a6370b6cdf8a24412f23ad8bea087ebffa390f77cb4",
+    "今天，換我當爸爸！_可編輯排版.pptx": "b7a10f820d1de50e600803c8c90964f1614b1808dadee199da845b27c6a2b694",
+    "今天，換我當爸爸！_繪本.pdf": "bfb8cce6807d75486c70c176770f88bc12863de5d8a97ee64d33a2d84c094b0c"
   },
   "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
 }
