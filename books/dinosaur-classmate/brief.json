@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "book": {
+    "slug": "dinosaur-classmate",
+    "title": "恐龍同學，請坐好！",
+    "language": "zh-HK"
+  },
+  "audience": {
+    "ageMin": 7,
+    "ageMax": 9,
+    "readingMode": "independent",
+    "readingAbility": "以小二自主閱讀為主要目標",
+    "accessibilityNeeds": []
+  },
+  "theme": "玩具上學日，多多想與小恐龍拍同桌合照；先因玩具坐得太低而拍不到，再因湊得太近而擋住自己，最後主動抱在胸前，兩個一起入鏡。",
+  "content": {
+    "mode": "original",
+    "request": "刪除未採用的木部作品，另行構思完整而有趣的木部兒童故事繪本。",
+    "requiredElements": [
+      "同題替換保留7–9歲、小二自主閱讀及完整插畫PDF／可編輯檔",
+      "起因、經過、結果清楚",
+      "透過動作、照片結果、說清原因及孩子的選擇推進",
+      "名字疊字、避開木部並有專名號",
+      "所選木部字150%手寫楷體，普通木字不放大"
+    ],
+    "avoidElements": [
+      "沿用被否決的搭橋情節、人物、插畫、藍布及木杯",
+      "把攝影光學或器材知識當作故事",
+      "每一本都套用尋物偵探框架",
+      "只換服裝而沿用同一張角色臉"
+    ],
+    "sourceTextPaths": [
+      "story.json"
+    ],
+    "references": [
+      {
+        "title": "生日會",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 16,
+        "sha256": "8f67a3121f40ebaa67844db1918eccb9c7f21bdc4faeacf4acd98557499d9eaf",
+        "source": "使用者附件，未重新公開原 PDF"
+      },
+      {
+        "title": "跟屁蟲",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 17,
+        "sha256": "abfb8339a9bbcb41fa25d914a9c1bff836b7ffc986eaa04077252a5d48a5a8fe",
+        "source": "使用者附件，未重新公開原 PDF"
+      }
+    ],
+    "learningGoals": [
+      "從完整故事理解六個木部字及棒的延伸用法",
+      "理解每次失敗的具體原因及主角的調整"
+    ],
+    "targetCharacters": [
+      "校",
+      "桌",
+      "椅",
+      "機",
+      "樣",
+      "本"
+    ],
+    "extensionCharacters": [
+      "棒"
+    ],
+    "characterNames": [
+      "多多",
+      "皮皮"
+    ]
+  },
+  "design": {
+    "artDirection": "石墨輪廓、乾色鉛筆、大留白；全景動作與三張照片近鏡交替，另作角色及道具模型。",
+    "palette": [
+      "#FFFFFF",
+      "#DDEBF1",
+      "#354255",
+      "#748190",
+      "#D57D42",
+      "#AD9FC1",
+      "#6391B4"
+    ],
+    "pageSize": {
+      "width": 960,
+      "height": 600,
+      "unit": "pt"
+    },
+    "storySpreads": 12,
+    "wordBudget": 370,
+    "bodyFont": "Iansui",
+    "emphasisFont": "JyunsaiKaai Bold",
+    "emphasisScale": 1.5,
+    "properNameMarks": true,
+    "normalCharacters": [
+      "木"
+    ]
+  },
+  "deliverables": {
+    "formats": [
+      "pdf-spread",
+      "pdf-single",
+      "pptx",
+      "svg"
+    ],
+    "readAlong": false,
+    "audio": null
+  },
+  "publication": {
+    "github": true,
+    "permanentWebsite": true,
+    "destination": "https://angusqaq.github.io/audio-book/"
+  },
+  "decisions": {
+    "userRequirements": [
+      "明確刪除舊木部故事並重新構思",
+      "保留當前木部任務已確認的適讀年齡與成品要求",
+      "名字不得與主題部首同部，名字疊字並附專名號",
+      "所有正式檔案Git提交及驗證後同步網站"
+    ],
+    "editorialChoices": [
+      "先按建議的校園小喜劇方向進行，使用者可在製作中提供偏好",
+      "用三次合照的變化引起期待，不以搭建或知識解釋作主軸",
+      "核心校桌椅機樣本、延伸棒；相在相機一詞中但屬目部，不能誤列木部",
+      "角色另作外貌，不重用舊書的人物或動物",
+      "未進行學生試讀，不把檔案檢查當成適讀性實證"
+    ],
+    "unresolvedQuestions": []
+  }
+}

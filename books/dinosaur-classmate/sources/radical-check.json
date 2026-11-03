@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-03",
+  "dataset": "Unicode 17.0 kRSUnicode",
+  "source": "https://github.com/unicode-org/unicodetools/blob/578f6c0516f5f268292ebda50b51848407a06478/unicodetools/data/ucd/17.0.0/Unihan/kRSUnicode.txt",
+  "sha256": "481f8a3d2fda0c6b8e6f7c746a0eedfb145a62f30bf6e61527a8f7cdb2a99108",
+  "entries": {
+    "多": {
+      "codepoint": "U+591A",
+      "kRSUnicode": "36.3",
+      "sourceLine": "5919..591B\t36.3"
+    },
+    "手": {
+      "codepoint": "U+624B",
+      "kRSUnicode": "64.0",
+      "sourceLine": "624B..624D\t64.0"
+    },
+    "木": {
+      "codepoint": "U+6728",
+      "kRSUnicode": "75.0",
+      "sourceLine": "6728..6729\t75.0"
+    },
+    "本": {
+      "codepoint": "U+672C",
+      "kRSUnicode": "75.1",
+      "sourceLine": "672A..672F\t75.1"
+    },
+    "校": {
+      "codepoint": "U+6821",
+      "kRSUnicode": "75.6",
+      "sourceLine": "6812..683D\t75.6"
+    },
+    "桌": {
+      "codepoint": "U+684C",
+      "kRSUnicode": "75.6",
+      "sourceLine": "683F..686A\t75.6"
+    },
+    "棒": {
+      "codepoint": "U+68D2",
+      "kRSUnicode": "75.8",
+      "sourceLine": "68C3..692E\t75.8"
+    },
+    "椅": {
+      "codepoint": "U+6905",
+      "kRSUnicode": "75.8",
+      "sourceLine": "68C3..692E\t75.8"
+    },
+    "樣": {
+      "codepoint": "U+6A23",
+      "kRSUnicode": "75.11",
+      "sourceLine": "69EA..6A2D\t75.11"
+    },
+    "機": {
+      "codepoint": "U+6A5F",
+      "kRSUnicode": "75.12",
+      "sourceLine": "6A32..6A64\t75.12"
+    },
+    "皮": {
+      "codepoint": "U+76AE",
+      "kRSUnicode": "107.0",
+      "sourceLine": "76AE\t107.0"
+    },
+    "相": {
+      "codepoint": "U+76F8",
+      "kRSUnicode": "109.4",
+      "sourceLine": "76F6..770D\t109.4"
+    }
+  }
+}
