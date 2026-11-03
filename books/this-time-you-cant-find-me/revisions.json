@@ -27,6 +27,11 @@
           "kind": "learning-character",
           "before": "延伸依；依依的依，也屬人部。",
           "after": "不設延伸字；請看清部首，再把字找出來。"
+        },
+        {
+          "kind": "layout",
+          "spread": "s02",
+          "description": "圖像略向下調整，讓長兔耳與姓名／故事文字之間保留清楚空白。"
         }
       ],
       "storyHanCharacters": 360,

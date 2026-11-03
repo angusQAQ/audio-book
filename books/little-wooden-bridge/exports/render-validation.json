@@ -12,22 +12,27 @@
   "ordinaryCharactersNotEnlarged": [
     "木"
   ],
-  "storyTextImageCollisionChecks": 24,
-  "radicalEntriesVerified": 8,
+  "storyTextImageCollisionChecks": 25,
+  "radicalEntriesVerified": 10,
   "svgActualRenders": [
+    "cover",
+    "s01",
     "s02",
+    "s03",
     "s04",
     "s05",
     "s06",
+    "s07",
     "s08",
+    "s09",
     "s10",
     "lesson"
   ],
-  "officeRenderedPdfSha256": "c26528648fb641420892de2bd126a9bf5939639838501d7a57d0308efd1da7e6",
+  "officeRenderedPdfSha256": "ffc153be557b4838993459e1344ce2eb91ca44bc40fb021110729ae5e3c13dc4",
   "files": {
-    "小木橋，通車了！_可編輯排版.pptx": "2d8491c86446557848f30dfc3484bb6f45f0ec5eb7e9fd3312ef006c4d19ec23",
-    "小木橋，通車了！_跨頁閱讀版.pdf": "d2f5e8a276f1dd2cb3fe6772e4531ee6f5c088191e03fd357cf786464d50dd23",
-    "小木橋，通車了！_繪本.pdf": "205986e2737317df077f4dcc7d15f566e523a207dbfd2768a7b2675a336c4bab"
+    "小木橋，通車了！_可編輯排版.pptx": "d9f20b7cc9b51d25b97c2d0c3879f9fab799cae9a3f1293e737bb31e67817af5",
+    "小木橋，通車了！_跨頁閱讀版.pdf": "659f27998a25555c29d404b7140e0a37604ea72a0ee00d158a518f991e2ef3cb",
+    "小木橋，通車了！_繪本.pdf": "bd3842d9815c3e41f2ba77587f7791630da3bec173d7252a6e49010803db74e4"
   },
   "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
 }

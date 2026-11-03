@@ -6,9 +6,14 @@
   "missingGlyphs": [],
   "allTextEditable": true,
   "originalArtworkHashesVerified": 13,
+  "properNameRadicals": {
+    "可": 30,
+    "團": 31
+  },
+  "properNamesAvoidThemeRadical": true,
   "properNameMarks": {
     "names": {
-      "果果": 9,
+      "可可": 9,
       "團團": 6
     },
     "style": "continuous rule below each full name",
@@ -20,11 +25,11 @@
     "bodyScale": 1.5,
     "pdfAndPptxRunsVerified": true,
     "handwrittenGlyphs": {
-      "橋": 14,
-      "果": 22,
-      "板": 13,
+      "橋": 15,
+      "板": 14,
+      "架": 5,
       "根": 6,
-      "杯": 8,
+      "杯": 10,
       "棒": 5
     }
   },
@@ -37,12 +42,12 @@
     "pdfAndPptxRunsVerified": true,
     "svgRunsVerified": true
   },
-  "storyHanCharacters": 341,
+  "storyHanCharacters": 358,
   "targets": {
-    "果": 22,
-    "板": 13,
-    "橋": 16,
-    "杯": 8,
+    "架": 5,
+    "板": 14,
+    "橋": 17,
+    "杯": 10,
     "根": 6,
     "棒": 5
   }

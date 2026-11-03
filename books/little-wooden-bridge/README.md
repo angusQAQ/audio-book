@@ -16,7 +16,7 @@
 python3 books/little-wooden-bridge/build_book.py
 ```
 
-以LibreOffice實際另存全書PDF，並以Inkscape渲染s02、s04、s05、s06、s08、s10、lesson為同名960×600 PNG後驗證：
+以LibreOffice實際另存全書PDF，並以Inkscape渲染cover、s01至s10、lesson為同名960×600 PNG後驗證：
 
 ```bash
 python3 books/little-wooden-bridge/verify_exports.py --office-pdf 實際Office輸出.pdf --svg-renders SVG渲染目錄

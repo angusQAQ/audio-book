@@ -16,7 +16,7 @@
 python3 books/this-time-you-cant-find-me/build_book.py
 ```
 
-以LibreOffice實際另存全書PDF，並以Inkscape渲染s03、s04、s07、s08、s10、s12、lesson為同名960×600 PNG後驗證：
+以LibreOffice實際另存全書PDF，並以Inkscape渲染s02、s03、s04、s07、s08、s10、s12、lesson為同名960×600 PNG後驗證：
 
 ```bash
 python3 books/this-time-you-cant-find-me/verify_exports.py --office-pdf 實際Office輸出.pdf --svg-renders SVG渲染目錄

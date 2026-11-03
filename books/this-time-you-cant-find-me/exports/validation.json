@@ -6,9 +6,14 @@
   "missingGlyphs": [],
   "allTextEditable": true,
   "originalArtworkHashesVerified": 15,
+  "properNameRadicals": {
+    "冬": 15,
+    "彤": 59
+  },
+  "properNamesAvoidThemeRadical": true,
   "properNameMarks": {
     "names": {
-      "依依": 12,
+      "彤彤": 11,
       "冬冬": 11
     },
     "style": "continuous rule below each full name",
@@ -20,8 +25,7 @@
     "bodyScale": 1.5,
     "pdfAndPptxRunsVerified": true,
     "handwrittenGlyphs": {
-      "你": 15,
-      "依": 25,
+      "你": 16,
       "他": 9,
       "做": 4,
       "借": 4,
@@ -39,14 +43,13 @@
     "pdfAndPptxRunsVerified": true,
     "svgRunsVerified": true
   },
-  "storyHanCharacters": 354,
+  "storyHanCharacters": 360,
   "targets": {
-    "你": 17,
+    "你": 18,
     "他": 9,
     "借": 4,
     "做": 4,
     "低": 7,
-    "像": 4,
-    "依": 26
+    "像": 4
   }
 }

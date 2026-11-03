@@ -74,7 +74,7 @@ def verify(office_pdf, svg_renders):
     for character in book.TARGETS: assert facts[character]['kRSUnicode'].split('.')[0] == str(book.BOOK['radical']['kangxiNumber'])
     for character,radical in book.BOOK['learning']['choiceRadicals'].items():
         assert facts[character]['kRSUnicode'].split('.')[0] == str(radical)
-    for name in ('s03', 's04', 's07', 's08', 's10', 's12', 'lesson'):
+    for name in ('s02', 's03', 's04', 's07', 's08', 's10', 's12', 'lesson'):
         with Image.open(svg_renders/(name+'.png')) as image:
             assert image.size == (book.W,book.H)
             image.verify()
@@ -87,7 +87,7 @@ def verify(office_pdf, svg_renders):
         'officeTargetFontAndSizeVerified':True,'properNameRulesVerified':marks,
         'ordinaryCharactersNotEnlarged':sorted(book.NORMAL_CHARACTERS),
         'storyTextImageCollisionChecks':collision_checks,'radicalEntriesVerified':len(facts),
-        'svgActualRenders':['s03', 's04', 's07', 's08', 's10', 's12', 'lesson'],
+        'svgActualRenders':['s02', 's03', 's04', 's07', 's08', 's10', 's12', 'lesson'],
         'officeRenderedPdfSha256':hashlib.sha256(office_pdf.read_bytes()).hexdigest(),
         'files':{path.name:hashlib.sha256(path.read_bytes()).hexdigest() for path in (book.ROOT/'exports').iterdir() if path.suffix in ('.pdf','.pptx')},
         'scope':'Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification.'

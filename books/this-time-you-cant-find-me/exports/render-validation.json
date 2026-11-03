@@ -8,13 +8,14 @@
     "JyunsaiKaai-Bold"
   ],
   "officeTargetFontAndSizeVerified": true,
-  "properNameRulesVerified": 23,
+  "properNameRulesVerified": 22,
   "ordinaryCharactersNotEnlarged": [
     "人"
   ],
-  "storyTextImageCollisionChecks": 20,
-  "radicalEntriesVerified": 10,
+  "storyTextImageCollisionChecks": 18,
+  "radicalEntriesVerified": 11,
   "svgActualRenders": [
+    "s02",
     "s03",
     "s04",
     "s07",
@@ -23,11 +24,11 @@
     "s12",
     "lesson"
   ],
-  "officeRenderedPdfSha256": "ee7f564ec11c9ad73de57991823e8edb44b051038b3af38ef1330685332502da",
+  "officeRenderedPdfSha256": "b00d0a535024e4c59f2d7cb0f6dc10d0b07d5f2593d41001277a66e12aa44bf5",
   "files": {
-    "這次，你找不到我！_可編輯排版.pptx": "e7340f1a237888b1efa1ca58d6f16827a946ff678bcdda95606172740fb59d1d",
-    "這次，你找不到我！_繪本.pdf": "753beac45b341a7b242ae89ef5e33064cae27cf6bfb75dd8ab06be846e35bced",
-    "這次，你找不到我！_跨頁閱讀版.pdf": "927b680892a875ccbbbdf165c6c5cb92f57b8fc5488ac4ce23b7ca5688a0195b"
+    "這次，你找不到我！_可編輯排版.pptx": "3209292a6dae2098a2a589e7a6ff741115f040242ec55e002a25c4088f18dbdd",
+    "這次，你找不到我！_繪本.pdf": "bbc399549a6d948e191b1765f0620dfdfb33d401c1005245f5cc211c205f1720",
+    "這次，你找不到我！_跨頁閱讀版.pdf": "5823b207d14e656a63f5f1218fae329ef85076659729aee3bdc0d599f4fdc097"
   },
   "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
 }

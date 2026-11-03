@@ -62,9 +62,9 @@
         "assets/illustrations/s01.png"
       ],
       "transparentBackground": false,
-      "prompt": "Edit ONLY the provided children's picturebook illustration. Keep EXACT original canvas dimensions/aspect ratio, white empty space (or transparency on cover), graphite and dry-colored-pencil medium, both existing animal characters' distinct faces/clothes, full connected bodies/paws/tail, pose, position, expressions, toys and the exact story moment. No lettering, arrows, labels, diagram, panels, watermark, new scenery, extra objects or changes to anatomy. Correct the spatial logic of the pretend RIVER and BRIDGE. The wooden BRIDGE/PLANKS stay HORIZONTAL LEFT TO RIGHT, exactly as now, between the same LEFT and RIGHT bank cubes. REPLACE the current side-to-side blue scarf with ONE NARROW BLUE FABRIC SCARF running VERTICALLY from the BACK of scene (upper centre ground) towards the FRONT (lower centre ground), PERPENDICULAR to the left-to-right bridge. Its long central axis must point TOP TO BOTTOM, not left-to-right or parallel to bridge. The scarf has two narrow fringed ends, one farther BACK visible behind bridge and one nearer FRONT at bottom; long side edges unfringed. A shallow perspective or gentle bend is fine, but the long axis remains top-to-bottom. It passes UNDER the centre of bridge, clearly showing blue fabric BOTH BEHIND and IN FRONT of deck. Width fits completely INSIDE the gap between bank cubes, leaving BOTH bank cubes, both animals' feet, car, rabbit and flags on dry white/grass banks at LEFT or RIGHT. Not a broad carpet under everything, not real water, no blue from left edge to right edge, no horizontal blue scarf remnant. Do not rotate the canvas, characters or wooden bridge. This is BEFORE bridge construction: NO assembled bridge. Keep two LOOSE horizontal wood planks on left floor and two cubes at opposite LEFT/RIGHT sides of vertical scarf. Scarf already points the correct top-to-bottom direction; retain that orientation. Change the UNUSED cup on right floor to UPRIGHT with OPEN HOLLOW MOUTH ON TOP visible as dark oval inside rim, closed bottom on floor. There is exactly one cup, NOT a second cup. Car with yellow flower left, rabbit right, no flags.",
-      "source": "/workspace/generated_images/exec-68d13398-59e6-485e-9e2f-81517b0087c8.png",
-      "sha256": "10c7161725cb6773e81ebaf1f2514ab01451a96c78fbdff191b487889d99cede",
+      "prompt": "Edit the attached illustration with MINIMAL LOCAL CHANGES. Preserve exact canvas dimensions and white space, both complete animal characters' faces/poses/clothing/paws/tail, horizontal wood planks/bridge, exact moment and supported or sagging geometry, car/flower/rabbit, bank cubes, paper texture, graphite/dry-colored-pencil style. No text, diagrams, labels, watermarks or new objects. The one UNUSED wooden CUP beside scene must be UPRIGHT BEFORE being turned upside down on a later page. Correct its taper to a familiar drinking cup: WIDE OPEN MOUTH at TOP with visible hollow dark inside/rim, NARROWER CLOSED FLAT BASE at BOTTOM on ground. Top mouth diameter about1.3times bottom base diameter. Its sides taper INWARD going DOWN, not outward going down. Keep same single handleless wooden cup, position and height, no extra cup, no lid, no central cup under bridge on this page. Preserve corrected vertical top-to-bottom narrow blue scarf exactly; do not rotate scarf or bridge. ",
+      "source": "/workspace/generated_images/exec-b06aa0fe-dc05-46b3-9736-b59774ece0c0.png",
+      "sha256": "780aac6011d0fc539ca31ec6edd4be9a38f7d8244856ff3941aef38a9f6d7e87",
       "history": [
         {
           "id": "s01",
@@ -78,13 +78,32 @@
           "source": "/workspace/generated_images/exec-9f9b85f3-08a5-4ff3-a9ce-493914ccb22d.png",
           "sha256": "c9e0bf6c7163ab8d801127d3821b9d89a174cffb591247f7d0f060e25c61b35a",
           "gitCommit": "906db82b7e9e4c3b26d0e2e1ad2f2154888034c1"
+        },
+        {
+          "id": "s01",
+          "file": "assets/illustrations/s01.png",
+          "references": [
+            "assets/illustrations/s01.png"
+          ],
+          "transparentBackground": false,
+          "prompt": "Edit ONLY the provided children's picturebook illustration. Keep EXACT original canvas dimensions/aspect ratio, white empty space (or transparency on cover), graphite and dry-colored-pencil medium, both existing animal characters' distinct faces/clothes, full connected bodies/paws/tail, pose, position, expressions, toys and the exact story moment. No lettering, arrows, labels, diagram, panels, watermark, new scenery, extra objects or changes to anatomy. Correct the spatial logic of the pretend RIVER and BRIDGE. The wooden BRIDGE/PLANKS stay HORIZONTAL LEFT TO RIGHT, exactly as now, between the same LEFT and RIGHT bank cubes. REPLACE the current side-to-side blue scarf with ONE NARROW BLUE FABRIC SCARF running VERTICALLY from the BACK of scene (upper centre ground) towards the FRONT (lower centre ground), PERPENDICULAR to the left-to-right bridge. Its long central axis must point TOP TO BOTTOM, not left-to-right or parallel to bridge. The scarf has two narrow fringed ends, one farther BACK visible behind bridge and one nearer FRONT at bottom; long side edges unfringed. A shallow perspective or gentle bend is fine, but the long axis remains top-to-bottom. It passes UNDER the centre of bridge, clearly showing blue fabric BOTH BEHIND and IN FRONT of deck. Width fits completely INSIDE the gap between bank cubes, leaving BOTH bank cubes, both animals' feet, car, rabbit and flags on dry white/grass banks at LEFT or RIGHT. Not a broad carpet under everything, not real water, no blue from left edge to right edge, no horizontal blue scarf remnant. Do not rotate the canvas, characters or wooden bridge. This is BEFORE bridge construction: NO assembled bridge. Keep two LOOSE horizontal wood planks on left floor and two cubes at opposite LEFT/RIGHT sides of vertical scarf. Scarf already points the correct top-to-bottom direction; retain that orientation. Change the UNUSED cup on right floor to UPRIGHT with OPEN HOLLOW MOUTH ON TOP visible as dark oval inside rim, closed bottom on floor. There is exactly one cup, NOT a second cup. Car with yellow flower left, rabbit right, no flags.",
+          "source": "/workspace/generated_images/exec-68d13398-59e6-485e-9e2f-81517b0087c8.png",
+          "sha256": "10c7161725cb6773e81ebaf1f2514ab01451a96c78fbdff191b487889d99cede",
+          "referenceVersions": [
+            {
+              "file": "assets/illustrations/s01.png",
+              "gitCommit": "906db82b7e9e4c3b26d0e2e1ad2f2154888034c1",
+              "sha256": "c9e0bf6c7163ab8d801127d3821b9d89a174cffb591247f7d0f060e25c61b35a"
+            }
+          ],
+          "gitCommit": "514e9d384def127a63a9bb69223b6b84130979cd"
         }
       ],
       "referenceVersions": [
         {
           "file": "assets/illustrations/s01.png",
-          "gitCommit": "906db82b7e9e4c3b26d0e2e1ad2f2154888034c1",
-          "sha256": "c9e0bf6c7163ab8d801127d3821b9d89a174cffb591247f7d0f060e25c61b35a"
+          "gitCommit": "514e9d384def127a63a9bb69223b6b84130979cd",
+          "sha256": "10c7161725cb6773e81ebaf1f2514ab01451a96c78fbdff191b487889d99cede"
         }
       ]
     },
@@ -95,9 +114,9 @@
         "assets/illustrations/s02.png"
       ],
       "transparentBackground": false,
-      "prompt": "Edit ONLY the provided children's picturebook illustration. Keep EXACT original canvas dimensions/aspect ratio, white empty space (or transparency on cover), graphite and dry-colored-pencil medium, both existing animal characters' distinct faces/clothes, full connected bodies/paws/tail, pose, position, expressions, toys and the exact story moment. No lettering, arrows, labels, diagram, panels, watermark, new scenery, extra objects or changes to anatomy. Correct the spatial logic of the pretend RIVER and BRIDGE. The wooden BRIDGE/PLANKS stay HORIZONTAL LEFT TO RIGHT, exactly as now, between the same LEFT and RIGHT bank cubes. REPLACE the current side-to-side blue scarf with ONE NARROW BLUE FABRIC SCARF running VERTICALLY from the BACK of scene (upper centre ground) towards the FRONT (lower centre ground), PERPENDICULAR to the left-to-right bridge. Its long central axis must point TOP TO BOTTOM, not left-to-right or parallel to bridge. The scarf has two narrow fringed ends, one farther BACK visible behind bridge and one nearer FRONT at bottom; long side edges unfringed. A shallow perspective or gentle bend is fine, but the long axis remains top-to-bottom. It passes UNDER the centre of bridge, clearly showing blue fabric BOTH BEHIND and IN FRONT of deck. Width fits completely INSIDE the gap between bank cubes, leaving BOTH bank cubes, both animals' feet, car, rabbit and flags on dry white/grass banks at LEFT or RIGHT. Not a broad carpet under everything, not real water, no blue from left edge to right edge, no horizontal blue scarf remnant. Do not rotate the canvas, characters or wooden bridge. FIRST SHORT PLANK: squirrel still SUPPORTS ONE horizontal plank from left bank cube, and it remains TOO SHORT to touch right cube, visible gap. Do NOT complete bridge. Second loose plank remains on right floor. UNUSED cup on right floor should be UPRIGHT with visible OPEN HOLLOW MOUTH ON TOP, closed bottom on floor. One cup only. Car+yellow flower left, rabbit right, no flags.",
-      "source": "/workspace/generated_images/exec-1e116df5-09ec-4e05-b7b8-2c9f0452f8a7.png",
-      "sha256": "f67c773c890711852a20f1aaf86f15aaf9f309c4fef4b015b9906055513469e9",
+      "prompt": "Edit the attached illustration with MINIMAL LOCAL CHANGES. Preserve exact canvas dimensions and white space, both complete animal characters' faces/poses/clothing/paws/tail, horizontal wood planks/bridge, exact moment and supported or sagging geometry, car/flower/rabbit, bank cubes, paper texture, graphite/dry-colored-pencil style. No text, diagrams, labels, watermarks or new objects. The one UNUSED wooden CUP beside scene must be UPRIGHT BEFORE being turned upside down on a later page. Correct its taper to a familiar drinking cup: WIDE OPEN MOUTH at TOP with visible hollow dark inside/rim, NARROWER CLOSED FLAT BASE at BOTTOM on ground. Top mouth diameter about1.3times bottom base diameter. Its sides taper INWARD going DOWN, not outward going down. Keep same single handleless wooden cup, position and height, no extra cup, no lid, no central cup under bridge on this page. ALSO correct BLUE SCARF LOCATION/WIDTH: it remains a vertical top-to-bottom fabric river perpendicular to horizontal plank. The blue river must FILL the horizontal GAP BETWEEN the INNER EDGES OF THE TWO BANK CUBES. Its LEFT long edge is just right of LEFT cube, RIGHT long edge just left of RIGHT cube. The supported single plank's RIGHT TIP should stop OVER BLUE FABRIC, BEFORE reaching the RIGHT edge of river/right cube, visibly unable to cross fully. Do not lengthen plank or move cubes! Widen/move scarf only inside this gap; front and back fringed ends still face bottom/top, never left/right. Both cubes and full animal feet stay on dry ground outside blue. Keep the second loose plank on ground right and all other objects unchanged. The gap beyond short plank tip must remain blue, not white.",
+      "source": "/workspace/generated_images/exec-422bd8b2-8fac-4d05-8c59-4ef359b5407d.png",
+      "sha256": "ba768bd7bc9219450348c4667aebcde980981378f27dff1809b44a369c375bd4",
       "history": [
         {
           "id": "s02",
@@ -111,13 +130,32 @@
           "source": "/workspace/generated_images/exec-5f324eac-0554-434c-8d1a-54253eb597fd.png",
           "sha256": "3aef1405b51f30ab4705b106e2c34846f300d3a4065f98f222055f1b29224fe0",
           "gitCommit": "906db82b7e9e4c3b26d0e2e1ad2f2154888034c1"
+        },
+        {
+          "id": "s02",
+          "file": "assets/illustrations/s02.png",
+          "references": [
+            "assets/illustrations/s02.png"
+          ],
+          "transparentBackground": false,
+          "prompt": "Edit ONLY the provided children's picturebook illustration. Keep EXACT original canvas dimensions/aspect ratio, white empty space (or transparency on cover), graphite and dry-colored-pencil medium, both existing animal characters' distinct faces/clothes, full connected bodies/paws/tail, pose, position, expressions, toys and the exact story moment. No lettering, arrows, labels, diagram, panels, watermark, new scenery, extra objects or changes to anatomy. Correct the spatial logic of the pretend RIVER and BRIDGE. The wooden BRIDGE/PLANKS stay HORIZONTAL LEFT TO RIGHT, exactly as now, between the same LEFT and RIGHT bank cubes. REPLACE the current side-to-side blue scarf with ONE NARROW BLUE FABRIC SCARF running VERTICALLY from the BACK of scene (upper centre ground) towards the FRONT (lower centre ground), PERPENDICULAR to the left-to-right bridge. Its long central axis must point TOP TO BOTTOM, not left-to-right or parallel to bridge. The scarf has two narrow fringed ends, one farther BACK visible behind bridge and one nearer FRONT at bottom; long side edges unfringed. A shallow perspective or gentle bend is fine, but the long axis remains top-to-bottom. It passes UNDER the centre of bridge, clearly showing blue fabric BOTH BEHIND and IN FRONT of deck. Width fits completely INSIDE the gap between bank cubes, leaving BOTH bank cubes, both animals' feet, car, rabbit and flags on dry white/grass banks at LEFT or RIGHT. Not a broad carpet under everything, not real water, no blue from left edge to right edge, no horizontal blue scarf remnant. Do not rotate the canvas, characters or wooden bridge. FIRST SHORT PLANK: squirrel still SUPPORTS ONE horizontal plank from left bank cube, and it remains TOO SHORT to touch right cube, visible gap. Do NOT complete bridge. Second loose plank remains on right floor. UNUSED cup on right floor should be UPRIGHT with visible OPEN HOLLOW MOUTH ON TOP, closed bottom on floor. One cup only. Car+yellow flower left, rabbit right, no flags.",
+          "source": "/workspace/generated_images/exec-1e116df5-09ec-4e05-b7b8-2c9f0452f8a7.png",
+          "sha256": "f67c773c890711852a20f1aaf86f15aaf9f309c4fef4b015b9906055513469e9",
+          "referenceVersions": [
+            {
+              "file": "assets/illustrations/s02.png",
+              "gitCommit": "906db82b7e9e4c3b26d0e2e1ad2f2154888034c1",
+              "sha256": "3aef1405b51f30ab4705b106e2c34846f300d3a4065f98f222055f1b29224fe0"
+            }
+          ],
+          "gitCommit": "514e9d384def127a63a9bb69223b6b84130979cd"
         }
       ],
       "referenceVersions": [
         {
           "file": "assets/illustrations/s02.png",
-          "gitCommit": "906db82b7e9e4c3b26d0e2e1ad2f2154888034c1",
-          "sha256": "3aef1405b51f30ab4705b106e2c34846f300d3a4065f98f222055f1b29224fe0"
+          "gitCommit": "514e9d384def127a63a9bb69223b6b84130979cd",
+          "sha256": "f67c773c890711852a20f1aaf86f15aaf9f309c4fef4b015b9906055513469e9"
         }
       ]
     },
@@ -128,9 +166,9 @@
         "assets/illustrations/s03.png"
       ],
       "transparentBackground": false,
-      "prompt": "Edit ONLY the provided children's picturebook illustration. Keep EXACT original canvas dimensions/aspect ratio, white empty space (or transparency on cover), graphite and dry-colored-pencil medium, both existing animal characters' distinct faces/clothes, full connected bodies/paws/tail, pose, position, expressions, toys and the exact story moment. No lettering, arrows, labels, diagram, panels, watermark, new scenery, extra objects or changes to anatomy. Correct the spatial logic of the pretend RIVER and BRIDGE. The wooden BRIDGE/PLANKS stay HORIZONTAL LEFT TO RIGHT, exactly as now, between the same LEFT and RIGHT bank cubes. REPLACE the current side-to-side blue scarf with ONE NARROW BLUE FABRIC SCARF running VERTICALLY from the BACK of scene (upper centre ground) towards the FRONT (lower centre ground), PERPENDICULAR to the left-to-right bridge. Its long central axis must point TOP TO BOTTOM, not left-to-right or parallel to bridge. The scarf has two narrow fringed ends, one farther BACK visible behind bridge and one nearer FRONT at bottom; long side edges unfringed. A shallow perspective or gentle bend is fine, but the long axis remains top-to-bottom. It passes UNDER the centre of bridge, clearly showing blue fabric BOTH BEHIND and IN FRONT of deck. Width fits completely INSIDE the gap between bank cubes, leaving BOTH bank cubes, both animals' feet, car, rabbit and flags on dry white/grass banks at LEFT or RIGHT. Not a broad carpet under everything, not real water, no blue from left edge to right edge, no horizontal blue scarf remnant. Do not rotate the canvas, characters or wooden bridge. TWO PLANKS before testing, both outside ends on two cubes, central join supported ONLY by characters' paws. No cup under join. UNUSED cup on right floor must be UPRIGHT with visible hollow open TOP and bottom on floor. Squirrel left, hedgehog ONE coherent face/ONE nose right, car with daisy left, rabbit right. Do not put flower on floor. No flags.",
-      "source": "/workspace/generated_images/exec-2bfc7e7d-46d7-47ba-9164-459d5f6357c6.png",
-      "sha256": "dbb8cd3e952513aa7bf37393c8f8970f16f50dabcd0199cbe442ff62dea368e5",
+      "prompt": "Edit the attached illustration with MINIMAL LOCAL CHANGES. Preserve exact canvas dimensions and white space, both complete animal characters' faces/poses/clothing/paws/tail, horizontal wood planks/bridge, exact moment and supported or sagging geometry, car/flower/rabbit, bank cubes, paper texture, graphite/dry-colored-pencil style. No text, diagrams, labels, watermarks or new objects. The one UNUSED wooden CUP beside scene must be UPRIGHT BEFORE being turned upside down on a later page. Correct its taper to a familiar drinking cup: WIDE OPEN MOUTH at TOP with visible hollow dark inside/rim, NARROWER CLOSED FLAT BASE at BOTTOM on ground. Top mouth diameter about1.3times bottom base diameter. Its sides taper INWARD going DOWN, not outward going down. Keep same single handleless wooden cup, position and height, no extra cup, no lid, no central cup under bridge on this page. Preserve corrected vertical top-to-bottom narrow blue scarf exactly; do not rotate scarf or bridge. Keep hedgehog's one coherent face, one nose; flower inside car.",
+      "source": "/workspace/generated_images/exec-2da3c4e6-6898-4941-b173-b5d1f2bc9af9.png",
+      "sha256": "628e1cfb7c4922f147f2223fdc7f747f762f42b8d53725de4d8049f85f74dc88",
       "history": [
         {
           "id": "s03",
@@ -164,13 +202,32 @@
           ],
           "sha256": "3d442612fb600852eb1c5a059514168be67b1a6ddc900f29ed8a2597ef631c32",
           "gitCommit": "906db82b7e9e4c3b26d0e2e1ad2f2154888034c1"
+        },
+        {
+          "id": "s03",
+          "file": "assets/illustrations/s03.png",
+          "references": [
+            "assets/illustrations/s03.png"
+          ],
+          "transparentBackground": false,
+          "prompt": "Edit ONLY the provided children's picturebook illustration. Keep EXACT original canvas dimensions/aspect ratio, white empty space (or transparency on cover), graphite and dry-colored-pencil medium, both existing animal characters' distinct faces/clothes, full connected bodies/paws/tail, pose, position, expressions, toys and the exact story moment. No lettering, arrows, labels, diagram, panels, watermark, new scenery, extra objects or changes to anatomy. Correct the spatial logic of the pretend RIVER and BRIDGE. The wooden BRIDGE/PLANKS stay HORIZONTAL LEFT TO RIGHT, exactly as now, between the same LEFT and RIGHT bank cubes. REPLACE the current side-to-side blue scarf with ONE NARROW BLUE FABRIC SCARF running VERTICALLY from the BACK of scene (upper centre ground) towards the FRONT (lower centre ground), PERPENDICULAR to the left-to-right bridge. Its long central axis must point TOP TO BOTTOM, not left-to-right or parallel to bridge. The scarf has two narrow fringed ends, one farther BACK visible behind bridge and one nearer FRONT at bottom; long side edges unfringed. A shallow perspective or gentle bend is fine, but the long axis remains top-to-bottom. It passes UNDER the centre of bridge, clearly showing blue fabric BOTH BEHIND and IN FRONT of deck. Width fits completely INSIDE the gap between bank cubes, leaving BOTH bank cubes, both animals' feet, car, rabbit and flags on dry white/grass banks at LEFT or RIGHT. Not a broad carpet under everything, not real water, no blue from left edge to right edge, no horizontal blue scarf remnant. Do not rotate the canvas, characters or wooden bridge. TWO PLANKS before testing, both outside ends on two cubes, central join supported ONLY by characters' paws. No cup under join. UNUSED cup on right floor must be UPRIGHT with visible hollow open TOP and bottom on floor. Squirrel left, hedgehog ONE coherent face/ONE nose right, car with daisy left, rabbit right. Do not put flower on floor. No flags.",
+          "source": "/workspace/generated_images/exec-2bfc7e7d-46d7-47ba-9164-459d5f6357c6.png",
+          "sha256": "dbb8cd3e952513aa7bf37393c8f8970f16f50dabcd0199cbe442ff62dea368e5",
+          "referenceVersions": [
+            {
+              "file": "assets/illustrations/s03.png",
+              "gitCommit": "906db82b7e9e4c3b26d0e2e1ad2f2154888034c1",
+              "sha256": "3d442612fb600852eb1c5a059514168be67b1a6ddc900f29ed8a2597ef631c32"
+            }
+          ],
+          "gitCommit": "514e9d384def127a63a9bb69223b6b84130979cd"
         }
       ],
       "referenceVersions": [
         {
           "file": "assets/illustrations/s03.png",
-          "gitCommit": "906db82b7e9e4c3b26d0e2e1ad2f2154888034c1",
-          "sha256": "3d442612fb600852eb1c5a059514168be67b1a6ddc900f29ed8a2597ef631c32"
+          "gitCommit": "514e9d384def127a63a9bb69223b6b84130979cd",
+          "sha256": "dbb8cd3e952513aa7bf37393c8f8970f16f50dabcd0199cbe442ff62dea368e5"
         }
       ]
     },
@@ -181,9 +238,9 @@
         "assets/illustrations/s04.png"
       ],
       "transparentBackground": false,
-      "prompt": "Edit ONLY the provided children's picturebook illustration. Keep EXACT original canvas dimensions/aspect ratio, white empty space (or transparency on cover), graphite and dry-colored-pencil medium, both existing animal characters' distinct faces/clothes, full connected bodies/paws/tail, pose, position, expressions, toys and the exact story moment. No lettering, arrows, labels, diagram, panels, watermark, new scenery, extra objects or changes to anatomy. Correct the spatial logic of the pretend RIVER and BRIDGE. The wooden BRIDGE/PLANKS stay HORIZONTAL LEFT TO RIGHT, exactly as now, between the same LEFT and RIGHT bank cubes. REPLACE the current side-to-side blue scarf with ONE NARROW BLUE FABRIC SCARF running VERTICALLY from the BACK of scene (upper centre ground) towards the FRONT (lower centre ground), PERPENDICULAR to the left-to-right bridge. Its long central axis must point TOP TO BOTTOM, not left-to-right or parallel to bridge. The scarf has two narrow fringed ends, one farther BACK visible behind bridge and one nearer FRONT at bottom; long side edges unfringed. A shallow perspective or gentle bend is fine, but the long axis remains top-to-bottom. It passes UNDER the centre of bridge, clearly showing blue fabric BOTH BEHIND and IN FRONT of deck. Width fits completely INSIDE the gap between bank cubes, leaving BOTH bank cubes, both animals' feet, car, rabbit and flags on dry white/grass banks at LEFT or RIGHT. Not a broad carpet under everything, not real water, no blue from left edge to right edge, no horizontal blue scarf remnant. Do not rotate the canvas, characters or wooden bridge. FAILURE moment: two planks MUST RETAIN the shallow DOWNWARD V-shaped dip at centre, outer ends on bank cubes. Squirrel catches red car+yellow flower on LEFT descending plank, hedgehog reaches out RIGHT. NO middle support, no successful flat bridge yet. UNUSED cup on right floor must be UPRIGHT with visible hollow open TOP. Rabbit right, no flags.",
-      "source": "/workspace/generated_images/exec-8b73837c-07f3-4584-a01f-bd0b7b6306b2.png",
-      "sha256": "019caa97d9d67844a67ac74d42e036a0363b5d83bb4853d102a20e5fadd89096",
+      "prompt": "Edit the attached illustration with MINIMAL LOCAL CHANGES. Preserve exact canvas dimensions and white space, both complete animal characters' faces/poses/clothing/paws/tail, horizontal wood planks/bridge, exact moment and supported or sagging geometry, car/flower/rabbit, bank cubes, paper texture, graphite/dry-colored-pencil style. No text, diagrams, labels, watermarks or new objects. The one UNUSED wooden CUP beside scene must be UPRIGHT BEFORE being turned upside down on a later page. Correct its taper to a familiar drinking cup: WIDE OPEN MOUTH at TOP with visible hollow dark inside/rim, NARROWER CLOSED FLAT BASE at BOTTOM on ground. Top mouth diameter about1.3times bottom base diameter. Its sides taper INWARD going DOWN, not outward going down. Keep same single handleless wooden cup, position and height, no extra cup, no lid, no central cup under bridge on this page. Preserve corrected vertical top-to-bottom narrow blue scarf exactly; do not rotate scarf or bridge. Preserve downward-V sag in two planks and car caught by squirrel, no middle support.",
+      "source": "/workspace/generated_images/exec-bb4a1e4d-84e9-428a-9f9f-6ea0f0f8c881.png",
+      "sha256": "d5373879df53c0c868fdae461530558bf2d961db6af4536fd78108758c0ed58f",
       "history": [
         {
           "id": "s04",
@@ -197,13 +254,32 @@
           "source": "/workspace/generated_images/exec-d88c33ee-13da-481b-bc92-e9bcf35211e0.png",
           "sha256": "bb788c4159718f43335ea122a9e856dd80dc3ab81e7b58f7735d91aaad4c5d13",
           "gitCommit": "906db82b7e9e4c3b26d0e2e1ad2f2154888034c1"
+        },
+        {
+          "id": "s04",
+          "file": "assets/illustrations/s04.png",
+          "references": [
+            "assets/illustrations/s04.png"
+          ],
+          "transparentBackground": false,
+          "prompt": "Edit ONLY the provided children's picturebook illustration. Keep EXACT original canvas dimensions/aspect ratio, white empty space (or transparency on cover), graphite and dry-colored-pencil medium, both existing animal characters' distinct faces/clothes, full connected bodies/paws/tail, pose, position, expressions, toys and the exact story moment. No lettering, arrows, labels, diagram, panels, watermark, new scenery, extra objects or changes to anatomy. Correct the spatial logic of the pretend RIVER and BRIDGE. The wooden BRIDGE/PLANKS stay HORIZONTAL LEFT TO RIGHT, exactly as now, between the same LEFT and RIGHT bank cubes. REPLACE the current side-to-side blue scarf with ONE NARROW BLUE FABRIC SCARF running VERTICALLY from the BACK of scene (upper centre ground) towards the FRONT (lower centre ground), PERPENDICULAR to the left-to-right bridge. Its long central axis must point TOP TO BOTTOM, not left-to-right or parallel to bridge. The scarf has two narrow fringed ends, one farther BACK visible behind bridge and one nearer FRONT at bottom; long side edges unfringed. A shallow perspective or gentle bend is fine, but the long axis remains top-to-bottom. It passes UNDER the centre of bridge, clearly showing blue fabric BOTH BEHIND and IN FRONT of deck. Width fits completely INSIDE the gap between bank cubes, leaving BOTH bank cubes, both animals' feet, car, rabbit and flags on dry white/grass banks at LEFT or RIGHT. Not a broad carpet under everything, not real water, no blue from left edge to right edge, no horizontal blue scarf remnant. Do not rotate the canvas, characters or wooden bridge. FAILURE moment: two planks MUST RETAIN the shallow DOWNWARD V-shaped dip at centre, outer ends on bank cubes. Squirrel catches red car+yellow flower on LEFT descending plank, hedgehog reaches out RIGHT. NO middle support, no successful flat bridge yet. UNUSED cup on right floor must be UPRIGHT with visible hollow open TOP. Rabbit right, no flags.",
+          "source": "/workspace/generated_images/exec-8b73837c-07f3-4584-a01f-bd0b7b6306b2.png",
+          "sha256": "019caa97d9d67844a67ac74d42e036a0363b5d83bb4853d102a20e5fadd89096",
+          "referenceVersions": [
+            {
+              "file": "assets/illustrations/s04.png",
+              "gitCommit": "906db82b7e9e4c3b26d0e2e1ad2f2154888034c1",
+              "sha256": "bb788c4159718f43335ea122a9e856dd80dc3ab81e7b58f7735d91aaad4c5d13"
+            }
+          ],
+          "gitCommit": "514e9d384def127a63a9bb69223b6b84130979cd"
         }
       ],
       "referenceVersions": [
         {
           "file": "assets/illustrations/s04.png",
-          "gitCommit": "906db82b7e9e4c3b26d0e2e1ad2f2154888034c1",
-          "sha256": "bb788c4159718f43335ea122a9e856dd80dc3ab81e7b58f7735d91aaad4c5d13"
+          "gitCommit": "514e9d384def127a63a9bb69223b6b84130979cd",
+          "sha256": "019caa97d9d67844a67ac74d42e036a0363b5d83bb4853d102a20e5fadd89096"
         }
       ]
     },
@@ -214,9 +290,9 @@
         "assets/illustrations/s05.png"
       ],
       "transparentBackground": false,
-      "prompt": "Edit ONLY the provided children's picturebook illustration. Keep EXACT original canvas dimensions/aspect ratio, white empty space (or transparency on cover), graphite and dry-colored-pencil medium, both existing animal characters' distinct faces/clothes, full connected bodies/paws/tail, pose, position, expressions, toys and the exact story moment. No lettering, arrows, labels, diagram, panels, watermark, new scenery, extra objects or changes to anatomy. Correct the spatial logic of the pretend RIVER and BRIDGE. The wooden BRIDGE/PLANKS stay HORIZONTAL LEFT TO RIGHT, exactly as now, between the same LEFT and RIGHT bank cubes. REPLACE the current side-to-side blue scarf with ONE NARROW BLUE FABRIC SCARF running VERTICALLY from the BACK of scene (upper centre ground) towards the FRONT (lower centre ground), PERPENDICULAR to the left-to-right bridge. Its long central axis must point TOP TO BOTTOM, not left-to-right or parallel to bridge. The scarf has two narrow fringed ends, one farther BACK visible behind bridge and one nearer FRONT at bottom; long side edges unfringed. A shallow perspective or gentle bend is fine, but the long axis remains top-to-bottom. It passes UNDER the centre of bridge, clearly showing blue fabric BOTH BEHIND and IN FRONT of deck. Width fits completely INSIDE the gap between bank cubes, leaving BOTH bank cubes, both animals' feet, car, rabbit and flags on dry white/grass banks at LEFT or RIGHT. Not a broad carpet under everything, not real water, no blue from left edge to right edge, no horizontal blue scarf remnant. Do not rotate the canvas, characters or wooden bridge. FINGER SUPPORT moment: hedgehog keeps EXACT same extended single finger contacting UNDERSIDE OF CENTRAL JOIN, flat two planks, no cup below join. UNUSED cup at far LEFT should be UPRIGHT with visible hollow open TOP, closed bottom on floor; one cup only. Squirrel thinks beside car+yellow flower LEFT, rabbit RIGHT. Preserve finger, arms and contact. No flags.",
-      "source": "/workspace/generated_images/exec-21cce352-b969-4559-8009-a6b3879ab30d.png",
-      "sha256": "a1155b38187a7409e858a0c0f238daa1ad2177a13ce6ce07fda4ea98cf11d6be",
+      "prompt": "Edit the attached illustration with MINIMAL LOCAL CHANGES. Preserve exact canvas dimensions and white space, both complete animal characters' faces/poses/clothing/paws/tail, horizontal wood planks/bridge, exact moment and supported or sagging geometry, car/flower/rabbit, bank cubes, paper texture, graphite/dry-colored-pencil style. No text, diagrams, labels, watermarks or new objects. The one UNUSED wooden CUP beside scene must be UPRIGHT BEFORE being turned upside down on a later page. Correct its taper to a familiar drinking cup: WIDE OPEN MOUTH at TOP with visible hollow dark inside/rim, NARROWER CLOSED FLAT BASE at BOTTOM on ground. Top mouth diameter about1.3times bottom base diameter. Its sides taper INWARD going DOWN, not outward going down. Keep same single handleless wooden cup, position and height, no extra cup, no lid, no central cup under bridge on this page. Preserve corrected vertical top-to-bottom narrow blue scarf exactly; do not rotate scarf or bridge. Preserve hedgehog's extended SINGLE FINGER touching underneath bridge join, no cup under bridge.",
+      "source": "/workspace/generated_images/exec-9d0f8264-9764-4504-8406-e7f1894dd7ac.png",
+      "sha256": "42d33871c18c09da290f7b13a7bc09dd090e3964c1c7d9b56f0e93556f2de810",
       "history": [
         {
           "id": "s05",
@@ -230,13 +306,32 @@
           "source": "/workspace/generated_images/exec-02c20b12-ed7d-447b-ad85-5bc23ba80757.png",
           "sha256": "f760c982b03700f20df20356ec509c1353e99b9f67f990cde298aa5f3f1238de",
           "gitCommit": "906db82b7e9e4c3b26d0e2e1ad2f2154888034c1"
+        },
+        {
+          "id": "s05",
+          "file": "assets/illustrations/s05.png",
+          "references": [
+            "assets/illustrations/s05.png"
+          ],
+          "transparentBackground": false,
+          "prompt": "Edit ONLY the provided children's picturebook illustration. Keep EXACT original canvas dimensions/aspect ratio, white empty space (or transparency on cover), graphite and dry-colored-pencil medium, both existing animal characters' distinct faces/clothes, full connected bodies/paws/tail, pose, position, expressions, toys and the exact story moment. No lettering, arrows, labels, diagram, panels, watermark, new scenery, extra objects or changes to anatomy. Correct the spatial logic of the pretend RIVER and BRIDGE. The wooden BRIDGE/PLANKS stay HORIZONTAL LEFT TO RIGHT, exactly as now, between the same LEFT and RIGHT bank cubes. REPLACE the current side-to-side blue scarf with ONE NARROW BLUE FABRIC SCARF running VERTICALLY from the BACK of scene (upper centre ground) towards the FRONT (lower centre ground), PERPENDICULAR to the left-to-right bridge. Its long central axis must point TOP TO BOTTOM, not left-to-right or parallel to bridge. The scarf has two narrow fringed ends, one farther BACK visible behind bridge and one nearer FRONT at bottom; long side edges unfringed. A shallow perspective or gentle bend is fine, but the long axis remains top-to-bottom. It passes UNDER the centre of bridge, clearly showing blue fabric BOTH BEHIND and IN FRONT of deck. Width fits completely INSIDE the gap between bank cubes, leaving BOTH bank cubes, both animals' feet, car, rabbit and flags on dry white/grass banks at LEFT or RIGHT. Not a broad carpet under everything, not real water, no blue from left edge to right edge, no horizontal blue scarf remnant. Do not rotate the canvas, characters or wooden bridge. FINGER SUPPORT moment: hedgehog keeps EXACT same extended single finger contacting UNDERSIDE OF CENTRAL JOIN, flat two planks, no cup below join. UNUSED cup at far LEFT should be UPRIGHT with visible hollow open TOP, closed bottom on floor; one cup only. Squirrel thinks beside car+yellow flower LEFT, rabbit RIGHT. Preserve finger, arms and contact. No flags.",
+          "source": "/workspace/generated_images/exec-21cce352-b969-4559-8009-a6b3879ab30d.png",
+          "sha256": "a1155b38187a7409e858a0c0f238daa1ad2177a13ce6ce07fda4ea98cf11d6be",
+          "referenceVersions": [
+            {
+              "file": "assets/illustrations/s05.png",
+              "gitCommit": "906db82b7e9e4c3b26d0e2e1ad2f2154888034c1",
+              "sha256": "f760c982b03700f20df20356ec509c1353e99b9f67f990cde298aa5f3f1238de"
+            }
+          ],
+          "gitCommit": "514e9d384def127a63a9bb69223b6b84130979cd"
         }
       ],
       "referenceVersions": [
         {
           "file": "assets/illustrations/s05.png",
-          "gitCommit": "906db82b7e9e4c3b26d0e2e1ad2f2154888034c1",
-          "sha256": "f760c982b03700f20df20356ec509c1353e99b9f67f990cde298aa5f3f1238de"
+          "gitCommit": "514e9d384def127a63a9bb69223b6b84130979cd",
+          "sha256": "a1155b38187a7409e858a0c0f238daa1ad2177a13ce6ce07fda4ea98cf11d6be"
         }
       ]
     },
