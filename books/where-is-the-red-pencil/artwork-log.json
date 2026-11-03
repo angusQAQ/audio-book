@@ -10,5 +10,149 @@
     "references": [],
     "sha256": "9b8fcbb74915974d35a009ad0b87ec2b9da34a453d5621524e4dcac0af290da9"
   },
-  "illustrations": []
+  "illustrations": [
+    {
+      "id": "props",
+      "file": "assets/props.png",
+      "prompt": "Create an original PROP AND CONTINUITY MODEL SHEET for the attached new hand-drawn school mystery characters. Match graphite contours, dry colored-pencil on white paper. NO letters, numbers, labels, arrows or typography. Pure WHITE background with generous gaps. Show these DISTINCT objects: 1) ONE short RED hexagonal wooden colored pencil, sharpened natural wood tip, exactly TWO ivory-white narrow rings around the shaft near its BLUNT lower end, no eraser or printed brand. Red shaft length about10cm. 2) ONE slightly longer PLAIN RED colored pencil with NO white rings, visibly different; these two pencils are separate. 3) ONE plain golden-YELLOW cylindrical desktop pencil cup with closed bottom and no labels, shown empty. 4) ONE small open kraft-brown CARDBOARD craft box containing two green paper sheets and a loose ball of RED YARN, yarn end trailing out, NO text, tape labels or markings. 5) A plain white A4 drawing paper with a simple friendly RED T.REX drawing, drawn by an8yearold: triangular white teeth, little front arms, big hind legs and long tail, some red outlines unfinished; no pencil on the dinosaur's head yet. 6) A small low classroom wooden table without writing. RIGHT SIDE: close-up THREE-QUARTER PROFILE of the SAME adult female TEACHER from attached model, black low bun, angular diamond face, deep brown skin, long nose, small eyes, moss-green blouse collar; she faces toward the viewer's RIGHT so HER OWN RIGHT EAR is clearly visible on viewer-left side of her head. Show the IDENTICAL short TWO-WHITE-RING RED PENCIL tucked securely BEHIND HER OWN RIGHT EAR, tip points upward and AWAY from eyes, shaft follows outside of temple, clearly separate from skin and hair. White rings near blunt lower end are visible just behind ear. Only this ear holds pencil; no pencil in bun, left ear or mouth. The miniature head illustration is a continuity reference, no full body needed. Keep all objects distinct and intact, drawing medium consistent, no glossy3D, anime or huge round eyes.",
+      "references": [
+        "assets/characters.png"
+      ],
+      "transparentBackground": false,
+      "source": "/workspace/generated_images/exec-b144583c-3dc6-4967-bc1d-e9d54dc12cc1.png",
+      "sha256": "0a5714ab04ca4d88eadc2e1c1141cb4f2b68542d060d3c2e22f86029a6298c0c"
+    },
+    {
+      "id": "cover",
+      "file": "assets/illustrations/cover.png",
+      "prompt": "Original children's school-mystery picturebook, loose graphite contours and FLAT DRY COLORED PENCIL, white paper, no photorealism, glossy3D, anime or large round doll eyes. Match the two attached new character models EXACTLY. TONGTONG girl8: slender body, pear-shaped face, SMALL narrow eyes and one cheek dimple, CHESTNUT VERY SHORT SIDE-PARTED PIXIE hair with exposed ears, LAKE-BLUE short-sleeve collared blouse, DARK PLUM knee-length A-line skirt, white ankle socks,cream flat shoes. TEACHER woman42: tall broad adult, deep brown skin, long angular diamond face, LONG NARROW nose, small eyes, fine brows, black hair in LOW NAPE BUN, NO glasses, MOSS-GREEN short sleeves, INDIGO loose cropped trousers, BURGUNDY closed flat shoes. They are teacher and student, NOT family. Same model faces and clothes throughout. Props from second attachment: PRIMARY short RED wooden pencil with EXACTLY TWO IVORY-WHITE RINGS near BLUNT end, no eraser; a DIFFERENT longer PLAIN RED pencil only if requested; yellow cylindrical pencil cup, small kraft craft box and red yarn; same white A4 paper showing a child's friendly red T.REX facingLEFT, two short forearms,two hindlegs,one long tail towardRIGHT, white triangular teeth. No lettering, numbers, Chinese, labels, logos, musical symbols, speech bubbles or watermark anywhere. Complete connected bodies and hands, shoes fully visible. For story scenes: WIDE landscape SMALL VIGNETTE on WHITE, entire TOP48PERCENT must be ABSOLUTELY EMPTY PURE WHITE, no scenery or heads there. Keep figures and props in LOWER52percent. Girl in LEFT QUARTER, teacher RIGHT QUARTER, central binding x45–55percent clear of faces, hands, pencils and drawing. Tiny classroom cues only, no walls or full-bleed scene, all white feathered edges. Transparent-background COVER CUTOUT of the same two full-body characters, no table or scenery. Girl LEFT holds a plain A4 paper with small unfinished red dinosaur drawing at belly height and looks curiously up. Teacher RIGHT kneels at girl's level, smiles thoughtfully and holds ONE short TWO-WHITE-RING RED PENCIL in her right hand well away from her face, showing it to girl. BOTH EARS EMPTY; this is BEFORE pencil goes missing. Whole figures, complete shoes, air between silhouettes; no other pencils or objects. No mystery answer revealed on cover.",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": true,
+      "source": "/workspace/generated_images/exec-fa9a0a4c-dca1-47fb-8141-161ba13070c7.png",
+      "sha256": "99e09c98b20b14bbd40f7db20e95fe3c73a97b4d4dcf060b1220d5b41817e05a"
+    },
+    {
+      "id": "s01",
+      "file": "assets/illustrations/s01.png",
+      "prompt": "Original children's school-mystery picturebook, loose graphite contours and FLAT DRY COLORED PENCIL, white paper, no photorealism, glossy3D, anime or large round doll eyes. Match the two attached new character models EXACTLY. TONGTONG girl8: slender body, pear-shaped face, SMALL narrow eyes and one cheek dimple, CHESTNUT VERY SHORT SIDE-PARTED PIXIE hair with exposed ears, LAKE-BLUE short-sleeve collared blouse, DARK PLUM knee-length A-line skirt, white ankle socks,cream flat shoes. TEACHER woman42: tall broad adult, deep brown skin, long angular diamond face, LONG NARROW nose, small eyes, fine brows, black hair in LOW NAPE BUN, NO glasses, MOSS-GREEN short sleeves, INDIGO loose cropped trousers, BURGUNDY closed flat shoes. They are teacher and student, NOT family. Same model faces and clothes throughout. Props from second attachment: PRIMARY short RED wooden pencil with EXACTLY TWO IVORY-WHITE RINGS near BLUNT end, no eraser; a DIFFERENT longer PLAIN RED pencil only if requested; yellow cylindrical pencil cup, small kraft craft box and red yarn; same white A4 paper showing a child's friendly red T.REX facingLEFT, two short forearms,two hindlegs,one long tail towardRIGHT, white triangular teeth. No lettering, numbers, Chinese, labels, logos, musical symbols, speech bubbles or watermark anywhere. Complete connected bodies and hands, shoes fully visible. For story scenes: WIDE landscape SMALL VIGNETTE on WHITE, entire TOP48PERCENT must be ABSOLUTELY EMPTY PURE WHITE, no scenery or heads there. Keep figures and props in LOWER52percent. Girl in LEFT QUARTER, teacher RIGHT QUARTER, central binding x45–55percent clear of faces, hands, pencils and drawing. Tiny classroom cues only, no walls or full-bleed scene, all white feathered edges. FIRST SCENE at low wooden classroom table. Girl lowerLEFT watches attentively, right hand lightly on tabletop. Teacher lowerRIGHT leans over and uses ONE SHORT TWO-WHITE-RING RED PENCIL in her right hand to demonstrate drawing a triangular tooth on girl’s white paper, red friendly dinosaur outline still unfinished with long tail only sketched. The paper and teacher's drawing hand are entirely on RIGHT side of centerbinding, not across gutter. Teacher's ears are BOTH EMPTY. Yellow pencil cup at far-left side of table. NO other red pencils visible.",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "source": "/workspace/generated_images/exec-157fcf87-2808-471f-b34b-e97f2e7fad20.png",
+      "sha256": "0eb03724a7fd3f224d598dbaeb3807b023e483f5d35aa324bc8537d350b73527"
+    },
+    {
+      "id": "s02",
+      "file": "assets/illustrations/s02.png",
+      "prompt": "Original children's school-mystery picturebook, loose graphite contours and FLAT DRY COLORED PENCIL, white paper, no photorealism, glossy3D, anime or large round doll eyes. Match the two attached new character models EXACTLY. TONGTONG girl8: slender body, pear-shaped face, SMALL narrow eyes and one cheek dimple, CHESTNUT VERY SHORT SIDE-PARTED PIXIE hair with exposed ears, LAKE-BLUE short-sleeve collared blouse, DARK PLUM knee-length A-line skirt, white ankle socks,cream flat shoes. TEACHER woman42: tall broad adult, deep brown skin, long angular diamond face, LONG NARROW nose, small eyes, fine brows, black hair in LOW NAPE BUN, NO glasses, MOSS-GREEN short sleeves, INDIGO loose cropped trousers, BURGUNDY closed flat shoes. They are teacher and student, NOT family. Same model faces and clothes throughout. Props from second attachment: PRIMARY short RED wooden pencil with EXACTLY TWO IVORY-WHITE RINGS near BLUNT end, no eraser; a DIFFERENT longer PLAIN RED pencil only if requested; yellow cylindrical pencil cup, small kraft craft box and red yarn; same white A4 paper showing a child's friendly red T.REX facingLEFT, two short forearms,two hindlegs,one long tail towardRIGHT, white triangular teeth. No lettering, numbers, Chinese, labels, logos, musical symbols, speech bubbles or watermark anywhere. Complete connected bodies and hands, shoes fully visible. For story scenes: WIDE landscape SMALL VIGNETTE on WHITE, entire TOP48PERCENT must be ABSOLUTELY EMPTY PURE WHITE, no scenery or heads there. Keep figures and props in LOWER52percent. Girl in LEFT QUARTER, teacher RIGHT QUARTER, central binding x45–55percent clear of faces, hands, pencils and drawing. Tiny classroom cues only, no walls or full-bleed scene, all white feathered edges. Girl lowerLEFT lifts her unfinished red dinosaur paper and looks puzzled, free hand open as if looking for pencil. Teacher lowerRIGHT has turned three-quarter toward viewer's RIGHT to help someone off-frame, hands empty and relaxed. IMPORTANT FAIR CLUE: the ONE short TWO-WHITE-RING RED PENCIL is now tucked securely BEHIND TEACHER'S OWN RIGHT EAR (visible on viewer-left side of her turned head), sharpened tip points UP away from eyes, white rings near lower end behind ear; only a small subtle bit visible, but do NOT omit it. Pencil is not in bun, left ear, pocket or hand. Same low table at far-left edge, cup. No other people need to be drawn.",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "source": "/workspace/generated_images/exec-03fb3245-40d6-4b40-a100-294802adab2c.png",
+      "sha256": "0b863a8a714757d546f3e203c519621170ff3f094954f9b395374cf7bb68aeaa"
+    },
+    {
+      "id": "s03",
+      "file": "assets/illustrations/s03.png",
+      "prompt": "Original children's school-mystery picturebook, loose graphite contours and FLAT DRY COLORED PENCIL, white paper, no photorealism, glossy3D, anime or large round doll eyes. Match the two attached new character models EXACTLY. TONGTONG girl8: slender body, pear-shaped face, SMALL narrow eyes and one cheek dimple, CHESTNUT VERY SHORT SIDE-PARTED PIXIE hair with exposed ears, LAKE-BLUE short-sleeve collared blouse, DARK PLUM knee-length A-line skirt, white ankle socks,cream flat shoes. TEACHER woman42: tall broad adult, deep brown skin, long angular diamond face, LONG NARROW nose, small eyes, fine brows, black hair in LOW NAPE BUN, NO glasses, MOSS-GREEN short sleeves, INDIGO loose cropped trousers, BURGUNDY closed flat shoes. They are teacher and student, NOT family. Same model faces and clothes throughout. Props from second attachment: PRIMARY short RED wooden pencil with EXACTLY TWO IVORY-WHITE RINGS near BLUNT end, no eraser; a DIFFERENT longer PLAIN RED pencil only if requested; yellow cylindrical pencil cup, small kraft craft box and red yarn; same white A4 paper showing a child's friendly red T.REX facingLEFT, two short forearms,two hindlegs,one long tail towardRIGHT, white triangular teeth. No lettering, numbers, Chinese, labels, logos, musical symbols, speech bubbles or watermark anywhere. Complete connected bodies and hands, shoes fully visible. For story scenes: WIDE landscape SMALL VIGNETTE on WHITE, entire TOP48PERCENT must be ABSOLUTELY EMPTY PURE WHITE, no scenery or heads there. Keep figures and props in LOWER52percent. Girl in LEFT QUARTER, teacher RIGHT QUARTER, central binding x45–55percent clear of faces, hands, pencils and drawing. Tiny classroom cues only, no walls or full-bleed scene, all white feathered edges. Girl lowerLEFT asks a question with palms open, looking at teacher. Teacher lowerRIGHT pulls out lining of her EMPTY right trouser pocket with one hand while the other hand pats blouse pocket, bemused puzzled face. ONE short TWO-WHITE-RING RED PENCIL remains securely BEHIND HER OWN RIGHT EAR, tip UP away from eyes, rings near lower end just behind ear; clearly separate from hair. Both hands otherwise EMPTY, no pencil in pocket. Same low classroom table at far-left with girl’s unfinished red dinosaur paper and yellow cup. No other pencils lying around.",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "source": "/workspace/generated_images/exec-f13a3759-9e8e-4473-a800-e5968fed2e59.png",
+      "sha256": "7c4dfd6850d90cee1254c1d968d9ec1f7071f705eadb3e3fe2e4071355c9468a"
+    },
+    {
+      "id": "s04",
+      "file": "assets/illustrations/s04.png",
+      "prompt": "Original children's school-mystery picturebook, loose graphite contours and FLAT DRY COLORED PENCIL, white paper, no photorealism, glossy3D, anime or large round doll eyes. Match the two attached new character models EXACTLY. TONGTONG girl8: slender body, pear-shaped face, SMALL narrow eyes and one cheek dimple, CHESTNUT VERY SHORT SIDE-PARTED PIXIE hair with exposed ears, LAKE-BLUE short-sleeve collared blouse, DARK PLUM knee-length A-line skirt, white ankle socks,cream flat shoes. TEACHER woman42: tall broad adult, deep brown skin, long angular diamond face, LONG NARROW nose, small eyes, fine brows, black hair in LOW NAPE BUN, NO glasses, MOSS-GREEN short sleeves, INDIGO loose cropped trousers, BURGUNDY closed flat shoes. They are teacher and student, NOT family. Same model faces and clothes throughout. Props from second attachment: PRIMARY short RED wooden pencil with EXACTLY TWO IVORY-WHITE RINGS near BLUNT end, no eraser; a DIFFERENT longer PLAIN RED pencil only if requested; yellow cylindrical pencil cup, small kraft craft box and red yarn; same white A4 paper showing a child's friendly red T.REX facingLEFT, two short forearms,two hindlegs,one long tail towardRIGHT, white triangular teeth. No lettering, numbers, Chinese, labels, logos, musical symbols, speech bubbles or watermark anywhere. Complete connected bodies and hands, shoes fully visible. For story scenes: WIDE landscape SMALL VIGNETTE on WHITE, entire TOP48PERCENT must be ABSOLUTELY EMPTY PURE WHITE, no scenery or heads there. Keep figures and props in LOWER52percent. Girl in LEFT QUARTER, teacher RIGHT QUARTER, central binding x45–55percent clear of faces, hands, pencils and drawing. Tiny classroom cues only, no walls or full-bleed scene, all white feathered edges. Girl lowerLEFT has just taken ONE LONGER PLAIN RED PENCIL WITH NO WHITE RINGS from the yellow cylindrical pencil cup and holds it visibly near her chest. Teacher lowerRIGHT points toward THAT PLAIN PENCIL and looks thoughtful. The ORIGINAL SHORTER TWO-WHITE-RING RED PENCIL stays BEHIND HER OWN RIGHT EAR, tip UP, its two white rings subtly visible near ear. Thus EXACTLY TWO DIFFERENT red pencils in whole scene: one PLAIN in girl's hand, one WHITE-RINGED behind teacher ear. Do not put rings on decoy pencil or remove ear pencil. Small low table at far-left with paper and yellow cup. Full bodies and hands intact. No text or visible thought balloons.",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "source": "/workspace/generated_images/exec-02611ab9-f5e4-4a91-8232-0f06d8d100ed.png",
+      "sha256": "83c68090b2f0518dd18c53862226fb5587f472c10ffef8bcb866285e88b1720d"
+    },
+    {
+      "id": "s05",
+      "file": "assets/illustrations/s05.png",
+      "prompt": "Original children's school mystery, graphite and flat dry colored-pencil on WHITE paper. Match attached NEW character sheet precisely: GIRL8 with pear-shaped face, very short CHESTNUT SIDE-PARTED PIXIE hair, small narrow eyes, one cheek dimple, LAKE-BLUE short sleeve collared blouse, DARK PLUM knee-length A-line skirt,white socks,cream flats. TEACHER42 female, deep brown skin,long angular diamond face,long narrow nose,small eyes,black LOW NAPE BUN,NO GLASSES,MOSS-GREEN blouse,INDIGO loose cropped trousers,BURGUNDY flats. Teacher and student are NOT relatives. PRIMARY PENCIL is SHORT RED with exactly TWO IVORY-WHITE RINGS near blunt end, no eraser, sharpened wooden tip; compare prop model. Same low classroom wood table, white A4 friendly RED T.REX paper and yellow cylindrical pencil cup. A SMALL LOW VIGNETTE in WIDE landscape: TOP48PERCENT ABSOLUTELY EMPTY PURE WHITE, no heads, scenery,wash or objects there. Complete figures and connected limbs/shoes visible in LOWER52percent, girl LEFT QUARTER,teacher RIGHT QUARTER; centerbinding x45–55percent free of faces,hands,pencil and paper. Sparse floor strokes, pure white feathered edges, no full-bleed room. NO words,numbers,labels,Chinese,speech bubbles,arrows or symbols. No3D,anime,gloss or doll eyes. Girl lowerLEFT kneels at open kraft cardboard craft box, pulls out a RED YARN END to discover it is YARN, not pencil; rest wound in ball with two green paper sheets. Teacher lowerRIGHT bends slightly to look; ONE short TWO-WHITE-RING RED PENCIL remains BEHIND HER OWN RIGHT EAR (viewer-left side of her face), TIP UP away from eyes. Rings near lower end behind ear. NO pencil in hands, box, on floor or at left ear. Plain decoy red pencil no longer visible. Complete bodies and shoes, upper48percent empty white.",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "source": "/workspace/generated_images/exec-38a73646-4a4c-4fa6-8ca5-794c9e55e1d5.png",
+      "sha256": "0a859cf7c7d3c9489a054d63dbdb0fc12d238003de4d1e8876509a3db183fd06"
+    },
+    {
+      "id": "s06",
+      "file": "assets/illustrations/s06.png",
+      "prompt": "Original children's school mystery, graphite and flat dry colored-pencil on WHITE paper. Match attached NEW character sheet precisely: GIRL8 with pear-shaped face, very short CHESTNUT SIDE-PARTED PIXIE hair, small narrow eyes, one cheek dimple, LAKE-BLUE short sleeve collared blouse, DARK PLUM knee-length A-line skirt,white socks,cream flats. TEACHER42 female, deep brown skin,long angular diamond face,long narrow nose,small eyes,black LOW NAPE BUN,NO GLASSES,MOSS-GREEN blouse,INDIGO loose cropped trousers,BURGUNDY flats. Teacher and student are NOT relatives. PRIMARY PENCIL is SHORT RED with exactly TWO IVORY-WHITE RINGS near blunt end, no eraser, sharpened wooden tip; compare prop model. Same low classroom wood table, white A4 friendly RED T.REX paper and yellow cylindrical pencil cup. A SMALL LOW VIGNETTE in WIDE landscape: TOP48PERCENT ABSOLUTELY EMPTY PURE WHITE, no heads, scenery,wash or objects there. Complete figures and connected limbs/shoes visible in LOWER52percent, girl LEFT QUARTER,teacher RIGHT QUARTER; centerbinding x45–55percent free of faces,hands,pencil and paper. Sparse floor strokes, pure white feathered edges, no full-bleed room. NO words,numbers,labels,Chinese,speech bubbles,arrows or symbols. No3D,anime,gloss or doll eyes. Turning point. Teacher lowerRIGHT kneels beside low classroom table after looking underneath, now lifts her head. Pose head THREE-QUARTER toward viewer's RIGHT so HER OWN RIGHT EAR is visible on viewer-left. ONE SHORT RED PENCIL with EXACTLY TWO WHITE RINGS is securely behind that RIGHT ear, tip UP away from eyes. The TWO WHITE RINGS are now clearly exposed, separate from skin and hair. NO pencil in left ear,bun,hands or on table. Girl lowerLEFT raises open hand to say wait, delighted observant face looking at rings. Teacher's hands relaxed on knee/table edge. Complete full figures and all shoes. Large pure-white upper48percent.",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "source": "/workspace/generated_images/exec-69a8d9bc-b09c-4bde-bd68-a923da45b70f.png",
+      "sha256": "508cced5009016bc9ed92707adbc0f98650c92478c1325a01e5e148cc93cf8ab"
+    },
+    {
+      "id": "s07",
+      "file": "assets/illustrations/s07.png",
+      "prompt": "Original children's school mystery, graphite and flat dry colored-pencil on WHITE paper. Match attached NEW character sheet precisely: GIRL8 with pear-shaped face, very short CHESTNUT SIDE-PARTED PIXIE hair, small narrow eyes, one cheek dimple, LAKE-BLUE short sleeve collared blouse, DARK PLUM knee-length A-line skirt,white socks,cream flats. TEACHER42 female, deep brown skin,long angular diamond face,long narrow nose,small eyes,black LOW NAPE BUN,NO GLASSES,MOSS-GREEN blouse,INDIGO loose cropped trousers,BURGUNDY flats. Teacher and student are NOT relatives. PRIMARY PENCIL is SHORT RED with exactly TWO IVORY-WHITE RINGS near blunt end, no eraser, sharpened wooden tip; compare prop model. Same low classroom wood table, white A4 friendly RED T.REX paper and yellow cylindrical pencil cup. A SMALL LOW VIGNETTE in WIDE landscape: TOP48PERCENT ABSOLUTELY EMPTY PURE WHITE, no heads, scenery,wash or objects there. Complete figures and connected limbs/shoes visible in LOWER52percent, girl LEFT QUARTER,teacher RIGHT QUARTER; centerbinding x45–55percent free of faces,hands,pencil and paper. Sparse floor strokes, pure white feathered edges, no full-bleed room. NO words,numbers,labels,Chinese,speech bubbles,arrows or symbols. No3D,anime,gloss or doll eyes. Mystery reveal: girl lowerLEFT points toward teacher's head with excited discovery. Teacher lowerRIGHT has just removed the ONE short TWO-WHITE-RING RED PENCIL: her RIGHT HAND holds it just outside her own RIGHT ear, fully separated from hair and skin. BOTH EARS NOW EMPTY, no second pencil! Teacher looks surprised and amused, left hand relaxed. Small low desk at far-left holds unfinished red dinosaur paper and yellow cup. Pencil not in either ear or bun. Complete bodies and shoes, natural hands, top48percent entirely pure white.",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "source": "/workspace/generated_images/exec-19613b81-0cb2-46c2-a9b5-bf3803a3f958.png",
+      "sha256": "b1b0da60674d670194af90c2c0942dc36faee6df661cf0b7ed20903b9945cc92"
+    },
+    {
+      "id": "s08",
+      "file": "assets/illustrations/s08.png",
+      "prompt": "Original children's school mystery, graphite and flat dry colored-pencil on WHITE paper. Match attached NEW character sheet precisely: GIRL8 with pear-shaped face, very short CHESTNUT SIDE-PARTED PIXIE hair, small narrow eyes, one cheek dimple, LAKE-BLUE short sleeve collared blouse, DARK PLUM knee-length A-line skirt,white socks,cream flats. TEACHER42 female, deep brown skin,long angular diamond face,long narrow nose,small eyes,black LOW NAPE BUN,NO GLASSES,MOSS-GREEN blouse,INDIGO loose cropped trousers,BURGUNDY flats. Teacher and student are NOT relatives. PRIMARY PENCIL is SHORT RED with exactly TWO IVORY-WHITE RINGS near blunt end, no eraser, sharpened wooden tip; compare prop model. Same low classroom wood table, white A4 friendly RED T.REX paper and yellow cylindrical pencil cup. A SMALL LOW VIGNETTE in WIDE landscape: TOP48PERCENT ABSOLUTELY EMPTY PURE WHITE, no heads, scenery,wash or objects there. Complete figures and connected limbs/shoes visible in LOWER52percent, girl LEFT QUARTER,teacher RIGHT QUARTER; centerbinding x45–55percent free of faces,hands,pencil and paper. Sparse floor strokes, pure white feathered edges, no full-bleed room. NO words,numbers,labels,Chinese,speech bubbles,arrows or symbols. No3D,anime,gloss or doll eyes. After finding pencil, teacher lowerRIGHT laughs gently at her own forgetfulness. Her RIGHT HAND touches her EMPTY RIGHT EAR; LEFT hand holds ONE short TWO-WHITE-RING RED PENCIL at waist, tip DOWN away from faces. NO pencil in either ear or bun. Girl lowerLEFT bends forward laughing, one hand on stomach, other rests on skirt/knee, all limbs connected. No shame or laughter symbols. Same low desk at far-left with unfinished red dinosaur paper and cup, spare floor lines. Top48percent entirely white.",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "source": "/workspace/generated_images/exec-d2c54c26-344d-4e91-85f4-13eb1c3abc0e.png",
+      "sha256": "17530f888adaa659a7cb2ba6aff4a9a124b9801ff6032624c9157f27880e94e2"
+    },
+    {
+      "id": "s09",
+      "file": "assets/illustrations/s09.png",
+      "prompt": "Original children's school mystery, graphite and flat dry colored-pencil on WHITE paper. Match attached NEW character sheet precisely: GIRL8 with pear-shaped face, very short CHESTNUT SIDE-PARTED PIXIE hair, small narrow eyes, one cheek dimple, LAKE-BLUE short sleeve collared blouse, DARK PLUM knee-length A-line skirt,white socks,cream flats. TEACHER42 female, deep brown skin,long angular diamond face,long narrow nose,small eyes,black LOW NAPE BUN,NO GLASSES,MOSS-GREEN blouse,INDIGO loose cropped trousers,BURGUNDY flats. Teacher and student are NOT relatives. PRIMARY PENCIL is SHORT RED with exactly TWO IVORY-WHITE RINGS near blunt end, no eraser, sharpened wooden tip; compare prop model. Same low classroom wood table, white A4 friendly RED T.REX paper and yellow cylindrical pencil cup. A SMALL LOW VIGNETTE in WIDE landscape: TOP48PERCENT ABSOLUTELY EMPTY PURE WHITE, no heads, scenery,wash or objects there. Complete figures and connected limbs/shoes visible in LOWER52percent, girl LEFT QUARTER,teacher RIGHT QUARTER; centerbinding x45–55percent free of faces,hands,pencil and paper. Sparse floor strokes, pure white feathered edges, no full-bleed room. NO words,numbers,labels,Chinese,speech bubbles,arrows or symbols. No3D,anime,gloss or doll eyes. Back to drawing: girl lowerLEFT uses ONE SHORT TWO-WHITE-RING RED PENCIL in RIGHT hand on her same white A4 RED T.REX drawing on low desk. Show dinosaur's white triangular teeth and long red tail, two small front arms,two hind legs. PAGE-TURN SECRET: paper angled and girl's free hand naturally cover dinosaur's HEAD so we cannot see what extra detail she adds there yet. No drawn pencil visible on dinosaur head in this scene. Teacher lowerRIGHT watches, relaxed EMPTY hands, BOTH EARS and BUN EMPTY OF PENCILS. Yellow cup nearby, no other red pencil. Full figures/shoes, upper48percent blank white.",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "source": "/workspace/generated_images/exec-ead8f122-35aa-44db-944a-a4861c1b3fa0.png",
+      "sha256": "c33bf4ec768c16309818e94bb14c855450cd621dffeda4c4018da872cb1b5aa2"
+    },
+    {
+      "id": "s10",
+      "file": "assets/illustrations/s10.png",
+      "prompt": "Original children's school mystery, graphite and flat dry colored-pencil on WHITE paper. Match attached NEW character sheet precisely: GIRL8 with pear-shaped face, very short CHESTNUT SIDE-PARTED PIXIE hair, small narrow eyes, one cheek dimple, LAKE-BLUE short sleeve collared blouse, DARK PLUM knee-length A-line skirt,white socks,cream flats. TEACHER42 female, deep brown skin,long angular diamond face,long narrow nose,small eyes,black LOW NAPE BUN,NO GLASSES,MOSS-GREEN blouse,INDIGO loose cropped trousers,BURGUNDY flats. Teacher and student are NOT relatives. PRIMARY PENCIL is SHORT RED with exactly TWO IVORY-WHITE RINGS near blunt end, no eraser, sharpened wooden tip; compare prop model. Same low classroom wood table, white A4 friendly RED T.REX paper and yellow cylindrical pencil cup. A SMALL LOW VIGNETTE in WIDE landscape: TOP48PERCENT ABSOLUTELY EMPTY PURE WHITE, no heads, scenery,wash or objects there. Complete figures and connected limbs/shoes visible in LOWER52percent, girl LEFT QUARTER,teacher RIGHT QUARTER; centerbinding x45–55percent free of faces,hands,pencil and paper. Sparse floor strokes, pure white feathered edges, no full-bleed room. NO words,numbers,labels,Chinese,speech bubbles,arrows or symbols. No3D,anime,gloss or doll eyes. Resolved goal and visual joke. Girl lowerLEFT proudly holds completed A4 paper FACING READER, whole sheet within LEFT quarter. On paper is friendly child-drawn RED T.REX facingLEFT, one long tail RIGHT,2short forearms,2hindlegs,white triangular teeth. ON TOP OF DINOSAUR'S HEAD draw ONE SMALL RED PENCIL with TWO WHITE RINGS, as part of the drawing, not a real object sticking out. Drawing must be clear enough for joke and has NO writing. ONE REAL short two-white-ring red pencil lies FLAT on low desk at far-left beside yellow cup, no other real pencils. Teacher lowerRIGHT laughs, RIGHT hand touches her EMPTY RIGHT EAR; both ears and bun EMPTY, other hand relaxed. Full figures and shoes, top48percent white, sparse vignette.",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "source": "/workspace/generated_images/exec-ddf31cb0-864a-4c86-9a4e-7040ad61e554.png",
+      "sha256": "738af4d9493b642be5d76da94d4b97e5165b1b3b35b8c2f053e035b598788be8"
+    }
+  ]
 }
