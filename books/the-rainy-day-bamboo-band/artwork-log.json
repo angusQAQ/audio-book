@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generator": "OpenAI image_gen",
-  "date": "2026-11-02",
+  "date": "2026-11-03",
   "characterBible": {
     "file": "assets/characters.png",
     "source": "/workspace/generated_images/exec-b960e54a-eea6-4f01-970f-59879d40d180.png",
@@ -117,16 +117,23 @@
       "sha256": "7fd3c387fbfe58ca81cf2b206f3bb27d50a2f1cab68914179f910e28368288a0"
     },
     {
-      "id": "s08",
       "file": "assets/illustrations/s08.png",
-      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. DUODUO: sturdy brown-skinned girl age8, square face, freckles, ONE HIGH BLACK CURLY PUFF, teal boxy short-sleeved shirt, burnt sienna wide cropped trousers, cream slip-on shoes. GRANDFATHER: tall lean bald crown with cropped white side hair, white moustache, long rectangular face, rectangular wire glasses, cream short sleeves, dark forest-green waistcoat, charcoal trousers, brown lace-up shoes. Props match attached model: ONE oval woven bamboo basket, ONE smooth closed-bottom upright bamboo tube, TWO blunt bamboo chopsticks, ONE transverse side-blown bamboo flute only when requested. No letters, numbers, Chinese, typography, musical notes, speech balloons, diagrams or watermark. Draw COMPLETE connected bodies and hands, no floating or amputated legs. WIDE LANDSCAPE composition, entire TOP 45 percent completely PURE WHITE, all art in lower55 percent. Keep central binding strip x45–55 percent free of faces, hands, toys and important marks; stage complete groups in left or right quarter. Sparse ground strokes, white feathered edges. Joyful ensemble lower half: grandfather seated RIGHT plays horizontal bamboo flute; girl seated LEFT taps bamboo tube gently with her pair of chopsticks. Small rain strokes outside far left doorway. Natural individual smiles, slight leaning body rhythm; rain remains ordinary rain, not a person, creature or musical symbol. Full figures.",
+      "prompt": "Edit the first referenced children's picturebook illustration. Preserve the original dry colored-pencil graphite style, same brown-skinned girl with one HIGH curly black puff and teal shirt, and same lean grandfather with bald crown, white side hair, white moustache, wire glasses and green waistcoat, same complete bodies and white upper45percent composition. Important story correction: it is the GIRL'S TURN to play alone. Girl is gently tapping the upright bamboo tube with exactly two blunt bamboo chopsticks. Grandfather has FINISHED blowing, is smiling and listening, with the single transverse bamboo flute lowered horizontally on his LAP, well away from his mouth. Keep basket, rain outside far-left doorway, original garments, full intact hands and bodies. No lettering, musical notes, diagrams or extra instruments. White paper background, top45percent empty, centerbinding clear of faces.",
+      "source": "/workspace/generated_images/exec-acc4c456-2df2-4029-a434-8c978e915940.png",
+      "id": "s08",
       "references": [
         "assets/characters.png",
         "assets/props.png"
       ],
+      "historicalReferences": [
+        {
+          "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
+          "file": "assets/illustrations/s08.png",
+          "sha256": "a89cdce854858cb8241688bd72100649d9b054283b2ce5ecb4a44560344460d0"
+        }
+      ],
       "transparentBackground": false,
-      "source": "/workspace/generated_images/exec-5657e608-df06-4e38-99f6-1c74bffde8bf.png",
-      "sha256": "a89cdce854858cb8241688bd72100649d9b054283b2ce5ecb4a44560344460d0"
+      "sha256": "d73eaa85bcd69c1a904b6bfad2850dd85afa74c6a3e5959e1d830043bebf0941"
     },
     {
       "id": "s09",
@@ -141,16 +148,23 @@
       "sha256": "196eef05cef5f1bafa08259941ff19062c8137ac0c741b7127649393edbc067a"
     },
     {
-      "id": "s10",
       "file": "assets/illustrations/s10.png",
-      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. DUODUO: sturdy brown-skinned girl age8, square face, freckles, ONE HIGH BLACK CURLY PUFF, teal boxy short-sleeved shirt, burnt sienna wide cropped trousers, cream slip-on shoes. GRANDFATHER: tall lean bald crown with cropped white side hair, white moustache, long rectangular face, rectangular wire glasses, cream short sleeves, dark forest-green waistcoat, charcoal trousers, brown lace-up shoes. Props match attached model: ONE oval woven bamboo basket, ONE smooth closed-bottom upright bamboo tube, TWO blunt bamboo chopsticks, ONE transverse side-blown bamboo flute only when requested. No letters, numbers, Chinese, typography, musical notes, speech balloons, diagrams or watermark. Draw COMPLETE connected bodies and hands, no floating or amputated legs. WIDE LANDSCAPE composition, entire TOP 45 percent completely PURE WHITE, all art in lower55 percent. Keep central binding strip x45–55 percent free of faces, hands, toys and important marks; stage complete groups in left or right quarter. Sparse ground strokes, white feathered edges. Girl lower LEFT gleefully lifts her pair of chopsticks ready over the single tube. Grandfather lower RIGHT laughs, holding transverse flute again, ready to play, not yet at lips. Basket beside girl, sky outside doorway now pale and clear. Affectionate but not saccharine, full bodies, one tube one flute two chopsticks. No text.",
+      "prompt": "Redraw the first referenced children's picturebook scene to show the HAPPY OUTCOME: these exact same girl and grandfather have finally arrived at a PUBLIC PARK after the rain. Retain graphite/dry colored-pencil style, white paper, brown-skinned sturdy girl one HIGH curly black puff, teal shirt, burnt-sienna cropped trousers, cream slipons; lean grandfather bald crown, white side hair and moustache, wire glasses, cream shirt, green waistcoat, charcoal trousers,brown shoes. Wide landscape with upper45percent PURE WHITE empty for typesetting; entire scene low in lower55percent, complete feet visible. Girl lowerLEFT sits on a low park bench next to upright closed-bottom bamboo tube, gently taps with TWO blunt bamboo chopsticks. Grandfather lowerRIGHT sits on same sort of park bench, listens smiling, his flute lowered on his lap, not blowing simultaneously. Oval bamboo basket on ground beside girl. Sparse green park grass and edge trees plus a few damp paving marks make outdoor PUBLIC PARK unmistakable. No house doorway, veranda columns, wall or distant mountains. Centerbinding free of faces,hands,instruments. No words or musical symbols.",
+      "source": "/workspace/generated_images/exec-8c1944b5-2ca3-42d4-bad2-6c42ed415bbd.png",
+      "id": "s10",
       "references": [
         "assets/characters.png",
         "assets/props.png"
       ],
+      "historicalReferences": [
+        {
+          "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
+          "file": "assets/illustrations/s10.png",
+          "sha256": "42c1920dd178461b8815c8c0fd79481888af34e19c7dc98f86bc6bf0e742f347"
+        }
+      ],
       "transparentBackground": false,
-      "source": "/workspace/generated_images/exec-b7775d1c-8530-4454-a4a7-887516df1283.png",
-      "sha256": "42c1920dd178461b8815c8c0fd79481888af34e19c7dc98f86bc6bf0e742f347"
+      "sha256": "26f696ad4d8dc40e93dab5ffeff4591974fbb1ed0b026b21721a57497c22612e"
     }
   ]
 }

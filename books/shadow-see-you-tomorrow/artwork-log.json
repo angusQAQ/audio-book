@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generator": "OpenAI image_gen",
-  "date": "2026-11-02",
+  "date": "2026-11-03",
   "characterBible": {
     "file": "assets/characters.png",
     "prompt": "Edit the attached ORIGINAL four-column character model sheet. KEEP THE BOY in the first TWO columns unchanged: his exact face, violet rectangular glasses, prominent ears, long rounded-tip nose, arched brows, small almond eyes, black bristly flat-top hair, slim proportions, outfit and shoes. Re-design ONLY THE FATHER in columns THREE and FOUR so this pair has CLEAR, warm familial resemblance rather than two unrelated face designs. Father keeps stocky broad shoulders, adult height, coral T-shirt, grey trousers, navy shoes and short square dark beard. Change father's face to an ADULT version of son's: LONG RECTANGULAR facial outline, same prominent outward ears, same long nose with subtly rounded tip, same arched eyebrow structure and small horizontal almond eye shape, same asymmetric gentle upward smile and chin structure under beard, same warm beige skin tone. Father also wears VIOLET RECTANGULAR glasses matching son's, but likeness must remain in nose, ears, eyes, brows and face structure. Father's hair is short black bristly crew cut with a subtly flat top, adult receding temple corners. Keep him clearly age38, adult thicker neck and broader body, no baby face or teen father. Two views of each SAME person, full bodies, all shoes intact. Preserve graphite and dry colored-pencil style, pure WHITE background, four separated columns. No text, labels, logos, speech balloons or props. Aim for a convincing illustrated father and son through shared distinctive face structures, while retaining their age and silhouette differences.",
@@ -14,13 +14,20 @@
   },
   "illustrations": [
     {
-      "id": "props",
       "file": "assets/props.png",
-      "prompt": "Original graphite and restrained flat dry colored-pencil PROP MODEL SHEET on pure WHITE background, no people, lettering or labels. THREE columns: LEFT two views of SAME simple honey-brown carved WOODEN BEAR toy, standing upright, round ears, short round muzzle, two dot eyes, paws at sides, no clothes, bow or hat, about15cm tall, opaque wood with faint grain; MIDDLE one small pale-YELLOW flashlight with dark grey lens rim and one tiny round switch, switched off; RIGHT one white rectangular CARDBOARD screen upright on a discreet tiny stand, no drawing on it, plus ONE small short white chalk stick laid below. No shadow creature, live bear, text, symbols or extra toys.",
+      "prompt": "Create an original PROP MODEL SHEET in the same graphite and flat dry colored-pencil style as the reference, on pure WHITE background, no people, no lettering or labels. Retain exactly the same honey-brown carved WOODEN BEAR with round ears,dot eyes,smooth simple wood grain, standing pose, no clothing. Show it once front and once three-quarter. Other clearly separated props: ONE small glass strawberry-jam jar filled with red jam and round plain red screw lid, TWO simple slices of white bread, ONE roomy cream cloth tote bag with two blue handles, ONE small orange ball, and exactly TWO separate small yellow five-point star stickers. No flashlight, chalk, screen, live bear, knife, Chinese or diagram. Distinct full objects with generous white gaps. These objects will be used in a funny parent-child pretend-role story.",
+      "source": "/workspace/generated_images/exec-e30b20f6-6a99-492d-b95b-1c427dce37b4.png",
+      "id": "props",
       "references": [],
+      "historicalReferences": [
+        {
+          "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
+          "file": "assets/props.png",
+          "sha256": "91265fadc02897408b49122cb548ef36daf98d40200342d18fd26a82af3b8ec1"
+        }
+      ],
       "transparentBackground": false,
-      "source": "/workspace/generated_images/exec-9bd53583-6e5a-489e-abea-39991f334f9f.png",
-      "sha256": "91265fadc02897408b49122cb548ef36daf98d40200342d18fd26a82af3b8ec1"
+      "sha256": "87dc95fde7f4f500c69cb50fde07e751bc366b2984052325beea647e0a3ed547"
     },
     {
       "id": "cover-initial",
@@ -38,38 +45,53 @@
     {
       "id": "s01",
       "file": "assets/illustrations/s01.png",
-      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. PINGPING: lanky long-faced boy8, protruding ears, short black FLAT-TOP CREW CUT with no fringe, VIOLET RECTANGULAR glasses, ultramarine polo with pale-yellow collar/sleeve trim, grey shorts, white socks, yellow sneakers. FATHER: stocky broad shoulder, wide trapezoid face, rounded nose, black wavy hair and square short beard, coral T-shirt, warm grey trousers, navy shoes. ONE small honey-brown carved wooden bear with round ears, dot eyes, no clothes; one white chalk oval only AFTER requested. Yellow flashlight and white rectangular cardboard screen appear ONLY at night when requested. No letters, numbers, Chinese, typography, musical notes, speech balloons, diagrams or watermark. Draw COMPLETE connected bodies and hands, no floating or amputated legs. WIDE LANDSCAPE composition, entire TOP 45 percent completely PURE WHITE, all art in lower55 percent. Keep central binding strip x45–55 percent free of faces, hands, toys and important marks; stage complete groups in left or right quarter. Sparse ground strokes, white feathered edges. SUNNY MORNING. Boy lower LEFT crouches and looks toward ONE small honey-brown wooden bear standing on paving in lower RIGHT quarter. Low morning light from LEFT makes a long clear grey BEAR-SHAPED shadow extending to the RIGHT of bear, safely within right half. No chalk circle yet. Father not present. Sparse private courtyard paving, pure white top.",
+      "prompt": "Original funny children's literary picturebook illustration, graphite contours and restrained flat DRY COLORED PENCIL on pure WHITE paper. Match the two referenced family character models exactly: PINGPING boy8 lanky, long narrow face, prominent long nose and big protruding ears, small almond eyes, black bristly flat-top, VIOLET RECTANGULAR glasses, ULTRAMARINE polo with pale-yellow collar and sleeve edges, grey shorts, white socks,yellow sneakers. FATHER38 broad shoulders and adult proportions, same long nose/ears/brows/eyes/smile as his son, violet rectangular glasses, black bristly flat-top, short square beard, CORAL T-shirt,grey long trousers,navy sneakers. Preserve recognizable family resemblance. Referenced props: one honey-brown carved wooden bear, round ears,dot eyes,no clothes; red-lid jam jar,two bread slices,cream cloth tote blue handles,orange ball; stars only when specified. No Chinese, letters, numbers, labels, speech bubbles, watermarks or symbols. Full connected bodies, natural two arms/two legs, complete shoes. Landscape wide composition TOP45PERCENT ENTIRELY WHITE EMPTY, small scene in LOWER55percent, all faces and important props clear of central binding x45–55percent. Stage complete characters lowerLEFT and lowerRIGHT, sparse simple home/park cues, white feathered edges. Morning at HOME. Boy lowerLEFT standing with one hand confidently raised to propose a pretend game. Father lowerRIGHT sitting on simple low chair, listening with amused smile. A low breakfast table at left has exactly two bread slices and closed red-lid jam jar. No food eating yet, no stars, no tote or ball. Tiny window frame far edge, open airy white interior.",
+      "source": "/workspace/generated_images/exec-ec4aa6d7-5cbc-47b3-897d-081ba8232f8c.png",
+      "transparentBackground": false,
       "references": [
-        "assets/revisions/characters-initial.png",
+        "assets/characters.png",
         "assets/props.png"
       ],
-      "transparentBackground": false,
-      "source": "/workspace/generated_images/exec-57879c8f-ac7a-4d91-83be-79a08468442f.png",
-      "sha256": "b5afd931418a30a35d3277f165f9069fc2f41a940ea712f87d6e99f847d956c0"
+      "replacesHistoricalArtwork": {
+        "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
+        "file": "assets/illustrations/s01.png",
+        "sha256": "b5afd931418a30a35d3277f165f9069fc2f41a940ea712f87d6e99f847d956c0"
+      },
+      "sha256": "6d319c7eb6624e6e20d8b2653555db3e3db17bca6b30fd239c35e434162f91a0"
     },
     {
       "id": "s02",
       "file": "assets/illustrations/s02.png",
-      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. PINGPING: lanky long-faced boy8, protruding ears, short black FLAT-TOP CREW CUT with no fringe, VIOLET RECTANGULAR glasses, ultramarine polo with pale-yellow collar/sleeve trim, grey shorts, white socks, yellow sneakers. FATHER: stocky broad shoulder, wide trapezoid face, rounded nose, black wavy hair and square short beard, coral T-shirt, warm grey trousers, navy shoes. ONE small honey-brown carved wooden bear with round ears, dot eyes, no clothes; one white chalk oval only AFTER requested. Yellow flashlight and white rectangular cardboard screen appear ONLY at night when requested. No letters, numbers, Chinese, typography, musical notes, speech balloons, diagrams or watermark. Draw COMPLETE connected bodies and hands, no floating or amputated legs. WIDE LANDSCAPE composition, entire TOP 45 percent completely PURE WHITE, all art in lower55 percent. Keep central binding strip x45–55 percent free of faces, hands, toys and important marks; stage complete groups in left or right quarter. Sparse ground strokes, white feathered edges. Morning light LEFT. Boy lower LEFT leans a hand toward bear shadow on lower RIGHT, his fingertip touches paving rather than picking up a physical object. ONE wooden bear on paving, attached grey bear-shaped shadow extends right. No second bear, living shadow character, chalk circle or father.",
+      "prompt": "Original funny children's literary picturebook illustration, graphite contours and restrained flat DRY COLORED PENCIL on pure WHITE paper. Match the two referenced family character models exactly: PINGPING boy8 lanky, long narrow face, prominent long nose and big protruding ears, small almond eyes, black bristly flat-top, VIOLET RECTANGULAR glasses, ULTRAMARINE polo with pale-yellow collar and sleeve edges, grey shorts, white socks,yellow sneakers. FATHER38 broad shoulders and adult proportions, same long nose/ears/brows/eyes/smile as his son, violet rectangular glasses, black bristly flat-top, short square beard, CORAL T-shirt,grey long trousers,navy sneakers. Preserve recognizable family resemblance. Referenced props: one honey-brown carved wooden bear, round ears,dot eyes,no clothes; red-lid jam jar,two bread slices,cream cloth tote blue handles,orange ball; stars only when specified. No Chinese, letters, numbers, labels, speech bubbles, watermarks or symbols. Full connected bodies, natural two arms/two legs, complete shoes. Landscape wide composition TOP45PERCENT ENTIRELY WHITE EMPTY, small scene in LOWER55percent, all faces and important props clear of central binding x45–55percent. Stage complete characters lowerLEFT and lowerRIGHT, sparse simple home/park cues, white feathered edges. At HOME. Father lowerRIGHT SITS ON FLOOR like a child, cuddles one wooden bear with his left arm and rubs his own hungry stomach with his right hand, playfully pouting. Boy lowerLEFT standing tall, one hand pats his own chest proudly, other relaxed. Funny reversal of roles but father's body remains adult. No stars, no other props, no table needed.",
+      "source": "/workspace/generated_images/exec-622779f5-c2e4-43f9-b41c-4bb5dddff754.png",
+      "transparentBackground": false,
       "references": [
-        "assets/revisions/characters-initial.png",
+        "assets/characters.png",
         "assets/props.png"
       ],
-      "transparentBackground": false,
-      "source": "/workspace/generated_images/exec-315579ea-0e83-45a3-a05c-41eb7ce0f3b5.png",
-      "sha256": "3c7b582060b517be2f21fc38f0b76769a87102d03cfcfb9573eec1320d256d23"
+      "replacesHistoricalArtwork": {
+        "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
+        "file": "assets/illustrations/s02.png",
+        "sha256": "3c7b582060b517be2f21fc38f0b76769a87102d03cfcfb9573eec1320d256d23"
+      },
+      "sha256": "944c51d963b06bf9d9153ef46e4ccee6010037f7128a9343b09425af314dc190"
     },
     {
       "id": "s03",
       "file": "assets/illustrations/s03.png",
-      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. PINGPING: lanky long-faced boy8, protruding ears, short black FLAT-TOP CREW CUT with no fringe, VIOLET RECTANGULAR glasses, ultramarine polo with pale-yellow collar/sleeve trim, grey shorts, white socks, yellow sneakers. FATHER: stocky broad shoulder, wide trapezoid face, rounded nose, black wavy hair and square short beard, coral T-shirt, warm grey trousers, navy shoes. ONE small honey-brown carved wooden bear with round ears, dot eyes, no clothes; one white chalk oval only AFTER requested. Yellow flashlight and white rectangular cardboard screen appear ONLY at night when requested. No letters, numbers, Chinese, typography, musical notes, speech balloons, diagrams or watermark. Draw COMPLETE connected bodies and hands, no floating or amputated legs. WIDE LANDSCAPE composition, entire TOP 45 percent completely PURE WHITE, all art in lower55 percent. Keep central binding strip x45–55 percent free of faces, hands, toys and important marks; stage complete groups in left or right quarter. Sparse ground strokes, white feathered edges. Morning, light from LEFT. Boy lower LEFT draws with ONE short white chalk stick. In lower RIGHT quarter ONE honey-brown wooden bear and its right-extending long grey shadow are both INSIDE ONE thin white chalk oval on grey paving. Oval fully within right half, not crossing center binding. The bear stands toward LEFT side of oval so the morning shadow fits to its right. Father absent.",
+      "prompt": "Original funny children's literary picturebook illustration, graphite contours and restrained flat DRY COLORED PENCIL on pure WHITE paper. Match the two referenced family character models exactly: PINGPING boy8 lanky, long narrow face, prominent long nose and big protruding ears, small almond eyes, black bristly flat-top, VIOLET RECTANGULAR glasses, ULTRAMARINE polo with pale-yellow collar and sleeve edges, grey shorts, white socks,yellow sneakers. FATHER38 broad shoulders and adult proportions, same long nose/ears/brows/eyes/smile as his son, violet rectangular glasses, black bristly flat-top, short square beard, CORAL T-shirt,grey long trousers,navy sneakers. Preserve recognizable family resemblance. Referenced props: one honey-brown carved wooden bear, round ears,dot eyes,no clothes; red-lid jam jar,two bread slices,cream cloth tote blue handles,orange ball; stars only when specified. No Chinese, letters, numbers, labels, speech bubbles, watermarks or symbols. Full connected bodies, natural two arms/two legs, complete shoes. Landscape wide composition TOP45PERCENT ENTIRELY WHITE EMPTY, small scene in LOWER55percent, all faces and important props clear of central binding x45–55percent. Stage complete characters lowerLEFT and lowerRIGHT, sparse simple home/park cues, white feathered edges. At HOME. Boy lowerLEFT strains to twist lid of CLOSED RED-LID JAM JAR using exactly two hands, jar resting on simple low table. Exactly two bread slices nearby on table. Father lowerRIGHT seated and rubs belly in exaggerated pretend hunger, looking expectantly at boy. Wooden bear on father's lap. No opened lid, stars, tote or ball.",
+      "source": "/workspace/generated_images/exec-6d07a22a-d098-4d16-bdac-85e2cbd6fa61.png",
+      "transparentBackground": false,
       "references": [
-        "assets/revisions/characters-initial.png",
+        "assets/characters.png",
         "assets/props.png"
       ],
-      "transparentBackground": false,
-      "source": "/workspace/generated_images/exec-5f289838-b47c-46ef-ad12-a714378039de.png",
-      "sha256": "30fb2fe0003cfa649bd042317e7bfc3348b54d8063bfacf6de49057e237b145a"
+      "replacesHistoricalArtwork": {
+        "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
+        "file": "assets/illustrations/s03.png",
+        "sha256": "30fb2fe0003cfa649bd042317e7bfc3348b54d8063bfacf6de49057e237b145a"
+      },
+      "sha256": "a6c43773ea95e3f36f84d2a3d0a2aa67dea2720005b9288d8cb98c58e7b62f1d"
     },
     {
       "id": "s04-initial",
@@ -97,64 +119,87 @@
     {
       "id": "s04",
       "file": "assets/illustrations/s04.png",
-      "prompt": "Edit the attached original picture-book scene of a boy drawing ONE white chalk oval around a wooden bear and its long rightward shadow. This is the SAME spot later near noon. Preserve the SAME boy face, glasses, clothes, SAME wooden bear shape, size, LEFT-facing orientation and EXACT stationary position INSIDE THE LEFT PORTION OF THE SAME white chalk oval. Preserve the complete oval's location around bear, ground and muted pencil style. Change sunlight to near-overhead NOON: REMOVE the long rightward bear shadow, replace with a very SHORT attached soft grey shadow tucked immediately at the bear's feet. The oval remains around BOTH the bear and short shadow, large empty space to the right where long shadow used to be. IMPORTANT: do NOT place the circle beside the bear; bear must stand INSIDE its left quarter. Boy lower LEFT now STANDS looking surprised and curiously leaning toward toy, no chalk in hand and no drawing action. Full body and all yellow sneakers visible. No father or other props. Pure WHITE upper45% for separately typeset text; complete bear/oval within right half; no letters, watermark, floating limbs or new people. Preserve spatial continuity from the attached drawing scene.",
-      "references": [
-        "assets/illustrations/s03.png"
-      ],
+      "prompt": "Original funny children's literary picturebook illustration, graphite contours and restrained flat DRY COLORED PENCIL on pure WHITE paper. Match the two referenced family character models exactly: PINGPING boy8 lanky, long narrow face, prominent long nose and big protruding ears, small almond eyes, black bristly flat-top, VIOLET RECTANGULAR glasses, ULTRAMARINE polo with pale-yellow collar and sleeve edges, grey shorts, white socks,yellow sneakers. FATHER38 broad shoulders and adult proportions, same long nose/ears/brows/eyes/smile as his son, violet rectangular glasses, black bristly flat-top, short square beard, CORAL T-shirt,grey long trousers,navy sneakers. Preserve recognizable family resemblance. Referenced props: one honey-brown carved wooden bear, round ears,dot eyes,no clothes; red-lid jam jar,two bread slices,cream cloth tote blue handles,orange ball; stars only when specified. No Chinese, letters, numbers, labels, speech bubbles, watermarks or symbols. Full connected bodies, natural two arms/two legs, complete shoes. Landscape wide composition TOP45PERCENT ENTIRELY WHITE EMPTY, small scene in LOWER55percent, all faces and important props clear of central binding x45–55percent. Stage complete characters lowerLEFT and lowerRIGHT, sparse simple home/park cues, white feathered edges. At HOME. Father lowerRIGHT sitting on chair has JUST OPENED jar easily, holds OPEN jar in one hand and separate RED lid in other, gently amused face. Boy lowerLEFT extends empty hands toward him, grinning at help. Low breakfast table beside boy with two bread slices, wooden bear sitting on floor beside father. Exactly one jar and one lid, no double objects, no stars.",
+      "source": "/workspace/generated_images/exec-39745315-6deb-4b98-bb90-986ced95af1a.png",
       "transparentBackground": false,
-      "source": "/workspace/generated_images/exec-325b3ce0-0357-4099-92c2-4798f6d5f5b0.png",
-      "sha256": "4ba14cd44e3f5f7b7b06cbf397abc1535f6dc2bcf0a9525fc9caf454fb305a71"
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "replacesHistoricalArtwork": {
+        "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
+        "file": "assets/illustrations/s04.png",
+        "sha256": "4ba14cd44e3f5f7b7b06cbf397abc1535f6dc2bcf0a9525fc9caf454fb305a71"
+      },
+      "sha256": "abaef9a499e3d530592c3199fb33ca478e37b7ba6e13bbd05a6db431b7fd28f3"
     },
     {
       "id": "s05",
       "file": "assets/illustrations/s05.png",
-      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. PINGPING: lanky long-faced boy8, protruding ears, short black FLAT-TOP CREW CUT with no fringe, VIOLET RECTANGULAR glasses, ultramarine polo with pale-yellow collar/sleeve trim, grey shorts, white socks, yellow sneakers. FATHER: stocky broad shoulder, long rectangular face, same prominent ears and long rounded-tip nose as his son, same arched brow and almond eye shapes, violet rectangular glasses, short black bristly crew cut and square short beard, coral T-shirt, warm grey trousers, navy shoes. ONE small honey-brown carved wooden bear with round ears, dot eyes, no clothes; one white chalk oval only AFTER requested. Yellow flashlight and white rectangular cardboard screen appear ONLY at night when requested. No letters, numbers, Chinese, typography, musical notes, speech balloons, diagrams or watermark. Draw COMPLETE connected bodies and hands, no floating or amputated legs. WIDE LANDSCAPE composition, entire TOP 45 percent completely PURE WHITE, all art in lower55 percent. Keep central binding strip x45–55 percent free of faces, hands, toys and important marks; stage complete groups in left or right quarter. Sparse ground strokes, white feathered edges. Boy lower LEFT sits on a low plain stool leaning forward, long slim legs and violet rectangular glasses recognizable. ONE wooden bear lower RIGHT at SAME left-side position inside unchanged chalk oval, small noon shadow close to feet. No extra toys, father or markings. Small warm light wash low on paving only. The wooden bear always faces LEFT, muzzle pointing left. When a chalk oval is present, the bear stands INSIDE the LEFT portion of that fixed oval, never outside it.",
+      "prompt": "Original funny children's literary picturebook illustration, graphite contours and restrained flat DRY COLORED PENCIL on pure WHITE paper. Match the two referenced family character models exactly: PINGPING boy8 lanky, long narrow face, prominent long nose and big protruding ears, small almond eyes, black bristly flat-top, VIOLET RECTANGULAR glasses, ULTRAMARINE polo with pale-yellow collar and sleeve edges, grey shorts, white socks,yellow sneakers. FATHER38 broad shoulders and adult proportions, same long nose/ears/brows/eyes/smile as his son, violet rectangular glasses, black bristly flat-top, short square beard, CORAL T-shirt,grey long trousers,navy sneakers. Preserve recognizable family resemblance. Referenced props: one honey-brown carved wooden bear, round ears,dot eyes,no clothes; red-lid jam jar,two bread slices,cream cloth tote blue handles,orange ball; stars only when specified. No Chinese, letters, numbers, labels, speech bubbles, watermarks or symbols. Full connected bodies, natural two arms/two legs, complete shoes. Landscape wide composition TOP45PERCENT ENTIRELY WHITE EMPTY, small scene in LOWER55percent, all faces and important props clear of central binding x45–55percent. Stage complete characters lowerLEFT and lowerRIGHT, sparse simple home/park cues, white feathered edges. At HOME preparing for park. Boy lowerLEFT looking down, attempts to tuck wooden bear into grey SHORTS FRONT POCKET but only ONE FOOT of bear fits; rest of intact carved bear body fully visible sticking upward, his hands hold it gently. This is the only wooden bear. Father lowerRIGHT looks at simple wall clock positioned low on far-right wall with two hands and ticks, NO numerals, indicating late morning. No stars, tote or ball. Soft blue window edge suggests clear day.",
+      "source": "/workspace/generated_images/exec-09af8c4e-4f7e-4f79-897a-8c15c47e04a3.png",
+      "transparentBackground": false,
       "references": [
-        "assets/revisions/characters-initial.png",
+        "assets/characters.png",
         "assets/props.png"
       ],
-      "transparentBackground": false,
-      "source": "/workspace/generated_images/exec-87a493f8-fb42-46f5-9d36-6db8a4fd9d64.png",
-      "sha256": "262d1779b43a7982422d23a3f3a85d55f1bc2f4a8364850d2d82e8d497a94304"
+      "replacesHistoricalArtwork": {
+        "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
+        "file": "assets/illustrations/s05.png",
+        "sha256": "262d1779b43a7982422d23a3f3a85d55f1bc2f4a8364850d2d82e8d497a94304"
+      },
+      "sha256": "fcf167e96414fb47e78ef19b0792cd83ef5f88c4921016c3558e4fc86bda49ef"
     },
     {
       "id": "s06",
       "file": "assets/illustrations/s06.png",
-      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. PINGPING: lanky long-faced boy8, protruding ears, short black FLAT-TOP CREW CUT with no fringe, VIOLET RECTANGULAR glasses, ultramarine polo with pale-yellow collar/sleeve trim, grey shorts, white socks, yellow sneakers. FATHER: stocky broad shoulder, long rectangular face, same prominent ears and long rounded-tip nose as his son, same arched brow and almond eye shapes, violet rectangular glasses, short black bristly crew cut and square short beard, coral T-shirt, warm grey trousers, navy shoes. ONE small honey-brown carved wooden bear with round ears, dot eyes, no clothes; one white chalk oval only AFTER requested. Yellow flashlight and white rectangular cardboard screen appear ONLY at night when requested. No letters, numbers, Chinese, typography, musical notes, speech balloons, diagrams or watermark. Draw COMPLETE connected bodies and hands, no floating or amputated legs. WIDE LANDSCAPE composition, entire TOP 45 percent completely PURE WHITE, all art in lower55 percent. Keep central binding strip x45–55 percent free of faces, hands, toys and important marks; stage complete groups in left or right quarter. Sparse ground strokes, white feathered edges. A CLOUDY moment represented only by soft cool-grey light low over courtyard; keep entire upper 45 percent PURE WHITE. Boy lower LEFT on stool puzzled. ONE wooden bear lower RIGHT unchanged in same chalk oval. Its ground shadow is now extremely FAINT and SOFT, almost invisible, not a crisp black shape. No rain, no storm, no sun glyph, no cloud drawn over text area. The wooden bear always faces LEFT, muzzle pointing left. When a chalk oval is present, the bear stands INSIDE the LEFT portion of that fixed oval, never outside it. The attached drawing scene supplies the EXACT chalk oval and fixed bear location. Preserve that same oval and toy position, adapting only light, shadow and the boy pose. Do not move the physical toy.",
+      "prompt": "Original funny children's literary picturebook illustration, graphite contours and restrained flat DRY COLORED PENCIL on pure WHITE paper. Match the two referenced family character models exactly: PINGPING boy8 lanky, long narrow face, prominent long nose and big protruding ears, small almond eyes, black bristly flat-top, VIOLET RECTANGULAR glasses, ULTRAMARINE polo with pale-yellow collar and sleeve edges, grey shorts, white socks,yellow sneakers. FATHER38 broad shoulders and adult proportions, same long nose/ears/brows/eyes/smile as his son, violet rectangular glasses, black bristly flat-top, short square beard, CORAL T-shirt,grey long trousers,navy sneakers. Preserve recognizable family resemblance. Referenced props: one honey-brown carved wooden bear, round ears,dot eyes,no clothes; red-lid jam jar,two bread slices,cream cloth tote blue handles,orange ball; stars only when specified. No Chinese, letters, numbers, labels, speech bubbles, watermarks or symbols. Full connected bodies, natural two arms/two legs, complete shoes. Landscape wide composition TOP45PERCENT ENTIRELY WHITE EMPTY, small scene in LOWER55percent, all faces and important props clear of central binding x45–55percent. Stage complete characters lowerLEFT and lowerRIGHT, sparse simple home/park cues, white feathered edges. At HOME: Father lowerRIGHT attempts the same silly idea, one FOOT of intact wooden bear inserted into FRONT trouser pocket, rest of entire wooden bear visible sticking upward and supported by his hand; no chopped bear, no extra bear. Boy lowerLEFT laughs and holds OPEN ROOMY CREAM CLOTH TOTE with blue handles, showing a simple solution. ONE orange ball beside bag on floor. Do NOT put bear inside tote yet. No stars, jar or bread.",
+      "source": "/workspace/generated_images/exec-af73b7a7-b38f-4875-b880-d074ed97d76b.png",
+      "transparentBackground": false,
       "references": [
         "assets/characters.png",
-        "assets/props.png",
-        "assets/illustrations/s03.png"
+        "assets/props.png"
       ],
-      "transparentBackground": false,
-      "source": "/workspace/generated_images/exec-20b572bd-8be9-47ed-82e0-b6de6c0a31b3.png",
-      "sha256": "876d4f8f1504ba5a4ae800fff4c6683d7e9f6e4cc896c1f9e85b41cec06e8d2b"
+      "replacesHistoricalArtwork": {
+        "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
+        "file": "assets/illustrations/s06.png",
+        "sha256": "876d4f8f1504ba5a4ae800fff4c6683d7e9f6e4cc896c1f9e85b41cec06e8d2b"
+      },
+      "sha256": "989bb3da5f95c09d04b8e2093218bf344e171af751901aeed46558186e038434"
     },
     {
       "id": "s07",
       "file": "assets/illustrations/s07.png",
-      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. PINGPING: lanky long-faced boy8, protruding ears, short black FLAT-TOP CREW CUT with no fringe, VIOLET RECTANGULAR glasses, ultramarine polo with pale-yellow collar/sleeve trim, grey shorts, white socks, yellow sneakers. FATHER: stocky broad shoulder, long rectangular face, same prominent ears and long rounded-tip nose as his son, same arched brow and almond eye shapes, violet rectangular glasses, short black bristly crew cut and square short beard, coral T-shirt, warm grey trousers, navy shoes. ONE small honey-brown carved wooden bear with round ears, dot eyes, no clothes; one white chalk oval only AFTER requested. Yellow flashlight and white rectangular cardboard screen appear ONLY at night when requested. No letters, numbers, Chinese, typography, musical notes, speech balloons, diagrams or watermark. Draw COMPLETE connected bodies and hands, no floating or amputated legs. WIDE LANDSCAPE composition, entire TOP 45 percent completely PURE WHITE, all art in lower55 percent. Keep central binding strip x45–55 percent free of faces, hands, toys and important marks; stage complete groups in left or right quarter. Sparse ground strokes, white feathered edges. AFTERNOON light now comes from RIGHT. ONE wooden bear still at same position in lower RIGHT chalk oval, but its clearly attached grey shadow extends LEFT from the feet, rather than morning right. Bear and shadow all stay in lower right half; oval remains fixed around original morning area. Boy lower LEFT stands from stool, pointing in discovery. No extra toy or floating shadow. The wooden bear always faces LEFT, muzzle pointing left. When a chalk oval is present, the bear stands INSIDE the LEFT portion of that fixed oval, never outside it. The attached drawing scene supplies the EXACT chalk oval and fixed bear location. Preserve that same oval and toy position, adapting only light, shadow and the boy pose. Do not move the physical toy.",
+      "prompt": "undefinedPUBLIC PARK in clear daytime, sparse green grass and two tiny trees at edges. Boy lowerLEFT and father lowerRIGHT running playfully toward ONE orange ball on grass on right side of binding. Both laughing, father trying to catch up. Cream cloth tote with blue handles on park bench at far LEFT; ONE wooden bear visibly inside tote, head peeking out. No stars, breakfast objects, other people or shadow diagrams.",
+      "source": "/workspace/generated_images/exec-1dbf54d9-335d-4b7c-8f4f-023e214fb775.png",
+      "transparentBackground": false,
       "references": [
         "assets/characters.png",
-        "assets/props.png",
-        "assets/illustrations/s03.png"
+        "assets/props.png"
       ],
-      "transparentBackground": false,
-      "source": "/workspace/generated_images/exec-55ba135c-3c1f-49e8-aa5c-d8340de3a71a.png",
-      "sha256": "cbc41a61c092b03649b1ffc84b97d7d6cf516de1ab9ddd0e6170daa410d96c3f"
+      "replacesHistoricalArtwork": {
+        "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
+        "file": "assets/illustrations/s07.png",
+        "sha256": "cbc41a61c092b03649b1ffc84b97d7d6cf516de1ab9ddd0e6170daa410d96c3f"
+      },
+      "sha256": "0360e01a598562ae0338ea249f819dddc72babf243fa1712be496a287b06c29a"
     },
     {
       "id": "s08",
       "file": "assets/illustrations/s08.png",
-      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. PINGPING: lanky long-faced boy8, protruding ears, short black FLAT-TOP CREW CUT with no fringe, VIOLET RECTANGULAR glasses, ultramarine polo with pale-yellow collar/sleeve trim, grey shorts, white socks, yellow sneakers. FATHER: stocky broad shoulder, long rectangular face, same prominent ears and long rounded-tip nose as his son, same arched brow and almond eye shapes, violet rectangular glasses, short black bristly crew cut and square short beard, coral T-shirt, warm grey trousers, navy shoes. ONE small honey-brown carved wooden bear with round ears, dot eyes, no clothes; one white chalk oval only AFTER requested. Yellow flashlight and white rectangular cardboard screen appear ONLY at night when requested. No letters, numbers, Chinese, typography, musical notes, speech balloons, diagrams or watermark. Draw COMPLETE connected bodies and hands, no floating or amputated legs. WIDE LANDSCAPE composition, entire TOP 45 percent completely PURE WHITE, all art in lower55 percent. Keep central binding strip x45–55 percent free of faces, hands, toys and important marks; stage complete groups in left or right quarter. Sparse ground strokes, white feathered edges. LATE AFTERNOON: warm low light from RIGHT. ONE wooden bear lower RIGHT same position. Its VERY LONG coherent bear-shaped shadow stretches LEFT, and its rounded ear silhouette at far end extends a little beyond the LEFT edge of the unchanged chalk oval. Keep complete shadow and circle in right half, no center-cut vital detail. Boy lower LEFT leans in delighted. The physical bear is still upright and unmoved. The wooden bear always faces LEFT, muzzle pointing left. When a chalk oval is present, the bear stands INSIDE the LEFT portion of that fixed oval, never outside it. The attached drawing scene supplies the EXACT chalk oval and fixed bear location. Preserve that same oval and toy position, adapting only light, shadow and the boy pose. Do not move the physical toy.",
+      "prompt": "undefinedPUBLIC PARK in late afternoon, sparse grass and bench; no dark full-background wash, keep WHITE TOP45percent. Boy lowerLEFT stands, gesturing gently toward exit; father lowerRIGHT SQUATS on grass, cuddles wooden bear and playfully pouts like a child who wants to keep playing. Father is clearly an adult pretending, not distressed. ONE orange ball on grass to side, cream tote blue handles on bench at far-left. No stars or food.",
+      "source": "/workspace/generated_images/exec-77bd3b01-561e-403a-a192-39a60a52adec.png",
+      "transparentBackground": false,
       "references": [
         "assets/characters.png",
-        "assets/props.png",
-        "assets/illustrations/s03.png"
+        "assets/props.png"
       ],
-      "transparentBackground": false,
-      "source": "/workspace/generated_images/exec-a7a5e4ff-ae71-4774-a431-9b48aded2dc6.png",
-      "sha256": "4eab7fc12390b85d2c626f36798a098cf5b16d0154f919bd48846fa8dc497e83"
+      "replacesHistoricalArtwork": {
+        "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
+        "file": "assets/illustrations/s08.png",
+        "sha256": "4eab7fc12390b85d2c626f36798a098cf5b16d0154f919bd48846fa8dc497e83"
+      },
+      "sha256": "4858ba3fd3e5df47eb8e2bed07a3ee39e49a19c272fe22b1a625e69fac496b8f"
     },
     {
       "id": "s09-initial",
@@ -201,61 +246,87 @@
     {
       "id": "s12",
       "file": "assets/illustrations/s12.png",
-      "prompt": "Original hand-drawn literary picture-book illustration with lively graphite contours and restrained flat dry colored pencil, abundant pure WHITE paper; NO 3D, anime, glossy eyes, doll face, photorealism. Use ONLY this book character model; retain each individual face, proportions, clothes and small almond eyes. PINGPING: lanky long-faced boy8, protruding ears, short black FLAT-TOP CREW CUT with no fringe, VIOLET RECTANGULAR glasses, ultramarine polo with pale-yellow collar/sleeve trim, grey shorts, white socks, yellow sneakers. FATHER: stocky broad shoulder, long rectangular face, same prominent ears and long rounded-tip nose as his son, same arched brow and almond eye shapes, violet rectangular glasses, short black bristly crew cut and square short beard, coral T-shirt, warm grey trousers, navy shoes. ONE small honey-brown carved wooden bear with round ears, dot eyes, no clothes; one white chalk oval only AFTER requested. Yellow flashlight and white rectangular cardboard screen appear ONLY at night when requested. No letters, numbers, Chinese, typography, musical notes, speech balloons, diagrams or watermark. Draw COMPLETE connected bodies and hands, no floating or amputated legs. WIDE LANDSCAPE composition, entire TOP 45 percent completely PURE WHITE, all art in lower55 percent. Keep central binding strip x45–55 percent free of faces, hands, toys and important marks; stage complete groups in left or right quarter. Sparse ground strokes, white feathered edges. Quiet night, upper 45 percent pure white, lower-half soft blue-grey vignette. Boy lower LEFT waves to ONE wooden bear still on paving in lower RIGHT at same chalk oval. Father stands well to LEFT behind boy, holds yellow flashlight SWITCHED OFF pointing down and white cardboard at his side. No cast bear shadow now. Both father and boy complete and recognizable, clear separation of silhouettes, warm satisfied expressions. The wooden bear always faces LEFT, muzzle pointing left. When a chalk oval is present, the bear stands INSIDE the LEFT portion of that fixed oval, never outside it. Father MUST match REVISED family character sheet: violet rectangular glasses, long face, long rounded-tip nose and prominent ears like the boy, short bristly hair and short beard. Preserve family resemblance. The drawing scene fixes bear and chalk oval location. Bear remains INSIDE LEFT portion of original oval.",
+      "prompt": "undefinedAt HOME, heartfelt comic ending: father KNEELS so boy can HUG him naturally; father and boy laugh and embrace in the RIGHT HALF, faces and hands fully outside central binding. Their full bodies and all shoes visible. ONE honey-brown wooden bear is gently squeezed between their chests, bear head and star sticker visible, not mangled. Boy has one yellow star on his blue shirt, bear one yellow star on chest. Father coral shirt NO star. Left half sparse white with a low table and closed red-lid jam jar at far-left lower corner as callback. No extra limbs or toys.",
+      "source": "/workspace/generated_images/exec-7a53749d-b586-4226-aa4d-289dab86966a.png",
+      "transparentBackground": false,
       "references": [
         "assets/characters.png",
-        "assets/props.png",
-        "assets/illustrations/s03.png"
+        "assets/props.png"
       ],
-      "transparentBackground": false,
-      "source": "/workspace/generated_images/exec-71245335-5a51-4d12-936b-8b4b8d78ce78.png",
-      "sha256": "2b4e2a5bf620a51cb23781bca429a4f5594c86a74cb5680644072b49d87af2b9"
+      "replacesHistoricalArtwork": {
+        "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
+        "file": "assets/illustrations/s12.png",
+        "sha256": "2b4e2a5bf620a51cb23781bca429a4f5594c86a74cb5680644072b49d87af2b9"
+      },
+      "sha256": "9b598b3852d3f41edb95d39d4516ae870091f9414383f86c90b84296a146abc3"
     },
     {
       "id": "cover",
       "file": "assets/illustrations/cover.png",
+      "prompt": "undefinedTransparent-background compact FULL-BODY COVER CUTOUT, no scenery. SAME boy stands LEFT, one hand on hip, other hand pointing confidently upward, amusing proud pretend-father stance. SAME father kneels RIGHT, hugging ONE wooden bear and making a playful pout like a pretend child, smiling eyes. Correct family resemblance in nose,ears,eye,brow and violet rectangular glasses. Complete figures, all shoes visible, ample air. No stars, text, clock, jam, tote, ball or ground scene.",
+      "source": "/workspace/generated_images/exec-3c345c35-5215-4f91-a167-808293b2fb80.png",
       "transparentBackground": true,
       "references": [
-        "assets/revisions/cover-initial.png",
         "assets/characters.png",
         "assets/props.png"
       ],
-      "prompt": "Edit the FIRST attached original transparent cover illustration, using the SECOND attached REVISED character sheet to correct father-and-son FAMILY RESEMBLANCE. Keep boy's exact distinctive face, violet rectangular glasses, long nose, outward ears, short bristly flat-top, outfit, full body, hands and wooden bear; preserve father's kneeling pose, broad adult shoulders, coral shirt, grey trousers, navy shoes and switched-off yellow flashlight pointing down. Replace father's HEAD and face with his revised model from attachment2: LONG RECTANGULAR adult face, same prominent ears, long rounded-tip nose, arched brows, almond eye shapes and gentle asymmetric smile as his son, VIOLET RECTANGULAR glasses, short BLACK BRISTLY flat-top crew cut, short square beard. He must look age38, related to the boy through STRUCTURAL face features as well as glasses, no broad round original face or soft curly original hair. Preserve age, body mass and height differences. Full figures and all shoes intact, warm curious expressions, separate silhouettes. Fine graphite outlines and dry colored-pencil original literary style. Truly TRANSPARENT background including cutout gaps, no haze, night sky, shadow, text, watermark, cardboard or chalk.",
-      "source": "/workspace/generated_images/exec-66e44c91-a738-47bd-89c7-3a8622b91d39.png",
-      "sha256": "24094b6212ff112f72b38a4acb7877b7e1afac76ee42aaa6d0834f3777290f41"
+      "replacesHistoricalArtwork": {
+        "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
+        "file": "assets/illustrations/cover.png",
+        "sha256": "24094b6212ff112f72b38a4acb7877b7e1afac76ee42aaa6d0834f3777290f41"
+      },
+      "sha256": "4f7f3f0915c7cb23e750d770af910a90d509843b20585af56495de062e0d971d"
     },
     {
-      "transparentBackground": false,
       "id": "s09",
       "file": "assets/illustrations/s09.png",
+      "prompt": "undefinedPUBLIC PARK at end of afternoon. Father lowerRIGHT now STANDING smiles warmly. Boy lowerLEFT takes father's hand to lead him HOME; held hands just on RIGHT side of centerbinding, faces distant from binding. Boy's other hand holds CREAM tote with BLUE handles, orange ball and one wooden bear visibly inside. Clear connected full hands, complete shoes, movement toward edge, sparse path and park bench in background. No stars, no extra ball or bear on ground.",
+      "source": "/workspace/generated_images/exec-f2bf61c1-5732-4422-bced-4b7cf4006d77.png",
+      "transparentBackground": false,
       "references": [
-        "assets/revisions/s09-initial.png"
+        "assets/characters.png",
+        "assets/props.png"
       ],
-      "prompt": "Correct the attached ORIGINAL picture-book scene to an EARLIER twilight moment BEFORE father arrives. REMOVE THE FATHER entirely. REMOVE the flashlight, the visible yellow light cone, the white cardboard screen and its stand, and every cast bear shadow. Keep ONLY the original SAME slim boy with black flat-top, violet rectangular glasses, blue/yellow polo, grey shorts, white socks and yellow shoes on LEFT; and ONE LEFT-facing honey-brown wooden bear in its same position INSIDE LEFT portion of the same white chalk oval on RIGHT. Boy sits quietly on a low plain stool, puzzled at the bear's now invisible shadow. Keep a muted dusky blue-grey pencil vignette in lower half showing early darkness, upper45percent PURE WHITE. No moon, stars, lamps or bright directional light. We can still see toy faintly in twilight, but no discernible toy cast shadow. Preserve loose graphite and dry colored-pencil rendering, full connected limbs and all shoes. Absolutely no adult, spare toy, text or signage. This scene illustrates 'it grew dark; courtyard lamps were off; he could no longer see bear shadow'. Do NOT add the later flashlight experiment props.",
-      "source": "/workspace/generated_images/exec-840af878-c0ef-48c3-8a2d-2c4ab8ef8c31.png",
-      "sha256": "22838929c78c814dc996a7b22bb400bc1b25603a8e2a95d7ebf0f3f43b9d22be"
+      "replacesHistoricalArtwork": {
+        "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
+        "file": "assets/illustrations/s09.png",
+        "sha256": "22838929c78c814dc996a7b22bb400bc1b25603a8e2a95d7ebf0f3f43b9d22be"
+      },
+      "sha256": "6dad2c72350fb8c341a54a446828c82308311addc73440db7003b35385262bcb"
     },
     {
-      "transparentBackground": false,
       "id": "s10",
       "file": "assets/illustrations/s10.png",
+      "prompt": "undefinedAt HOME after dinner, sparse low table and warm floor lamp far edge, white paper not full dark wash. Boy lowerLEFT already has ONE SMALL YELLOW STAR STICKER on blue shirt and is applying SECOND YELLOW STAR to chest of wooden bear standing on low table near him. Father lowerRIGHT seated smiles and watches, hands empty relaxed. Exactly TWO star stickers total: boy shirt and bear chest. No stars floating, no star-shaped living characters. No dinner plates needed.",
+      "source": "/workspace/generated_images/exec-bde767fd-96fb-4885-a854-0d428492bc97.png",
+      "transparentBackground": false,
       "references": [
-        "assets/revisions/s10-initial.png"
+        "assets/characters.png",
+        "assets/props.png"
       ],
-      "prompt": "Edit the attached ORIGINAL father-and-son wooden-bear shadow experiment illustration to correct LIGHTING GEOMETRY while preserving both people's exact shared family faces, violet rectangular glasses, short flat-top hair, long nose, prominent ears, father's beard, clothes, complete bodies, shoes and original pencil style. Preserve the one wooden bear, its orientation, white chalk oval, and white upright cardboard screen. The FATHER holds the ONE yellow flashlight: LOWER the flashlight to just above the ground at the SAME HEIGHT AS THE WOODEN BEAR'S BELLY, pointing toward the bear's body rather than over its head. Both lamp and hand must be at a coherent reachable position near knee height as they kneel, arms anatomically connected. REMOVE THE VISIBLE YELLOW TRIANGULAR CONE entirely: in clean air a light beam need not be drawn. Instead show only a softly illuminated patch on the white cardboard behind the toy and ONE clear grey silhouette of THAT SAME wooden bear on the cardboard. Light source LEFT -> opaque wooden bear MIDDLE -> white screen RIGHT, screen receives the shadow. No beam passing through the toy, no beam pointing above it, no additional ground bear shadow, duplicate toy or living shadow creature. Keep upper45percent pure WHITE, sparse cool twilight lower-half graphite vignette, and keep faces and toy off central gutter. No lettering, diagrams, watermark or extra people.",
-      "source": "/workspace/generated_images/exec-389d43d9-c20b-42a3-8d38-e1ec7a42279c.png",
-      "sha256": "c1dba06df3f472228911d09dab855205219f74d32d80e3e37e948eae0629065f"
+      "replacesHistoricalArtwork": {
+        "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
+        "file": "assets/illustrations/s10.png",
+        "sha256": "c1dba06df3f472228911d09dab855205219f74d32d80e3e37e948eae0629065f"
+      },
+      "sha256": "5208450ed4edc76bb28dca77c15a1dd449473c593c96853e211506c7f694689a"
     },
     {
-      "transparentBackground": false,
       "id": "s11",
       "file": "assets/illustrations/s11.png",
+      "prompt": "undefinedAt HOME: father lowerRIGHT seated deliberately makes funny furrowed-brow expression while pointing to ONE CLOSED red-lid jam jar on low table beside him; his other hand relaxed. Boy lowerLEFT laughs while holding wooden bear toward father, as if suggesting it could play dad tomorrow. Preserve ONE yellow star sticker on boy blue shirt and ONE on bear chest, exactly two. No extra bear, lids, bread, ball or tote.",
+      "source": "/workspace/generated_images/exec-45652301-5985-4a67-841a-6cfe31d7e2b5.png",
+      "transparentBackground": false,
       "references": [
-        "assets/revisions/s11-initial.png"
+        "assets/characters.png",
+        "assets/props.png"
       ],
-      "prompt": "Edit the attached ORIGINAL father-and-son wooden-bear shadow experiment illustration to correct LIGHTING GEOMETRY while preserving both people's exact shared family faces, violet rectangular glasses, short flat-top hair, long nose, prominent ears, father's beard, clothes, complete bodies, shoes and original pencil style. Preserve the one wooden bear, its orientation, white chalk oval, and white upright cardboard screen. The BOY holds the ONE yellow flashlight: LOWER the flashlight to just above the ground at the SAME HEIGHT AS THE WOODEN BEAR'S BELLY, pointing toward the bear's body rather than over its head. Both lamp and hand must be at a coherent reachable position near knee height as they kneel, arms anatomically connected. REMOVE THE VISIBLE YELLOW TRIANGULAR CONE entirely: in clean air a light beam need not be drawn. Instead show only a softly illuminated patch on the white cardboard behind the toy and ONE clear grey silhouette of THAT SAME wooden bear on the cardboard. Light source LEFT -> opaque wooden bear MIDDLE -> white screen RIGHT, screen receives the shadow. No beam passing through the toy, no beam pointing above it, no additional ground bear shadow, duplicate toy or living shadow creature. Keep upper45percent pure WHITE, sparse cool twilight lower-half graphite vignette, and keep faces and toy off central gutter. No lettering, diagrams, watermark or extra people.",
-      "source": "/workspace/generated_images/exec-0361de25-86ed-48f9-85ec-a2b387530e24.png",
-      "sha256": "10eff8d3fcd6de4a436a22d45af4af42e19dcffca1e3b93b0aed59a471b9ea27"
+      "replacesHistoricalArtwork": {
+        "commit": "3c20ead69eaf5ef079533682fde9018badf3d64f",
+        "file": "assets/illustrations/s11.png",
+        "sha256": "10eff8d3fcd6de4a436a22d45af4af42e19dcffca1e3b93b0aed59a471b9ea27"
+      },
+      "sha256": "fca9659b1afde3efc19dd6a8d46b4260fa14ab7a712bd6219fbef65882d09636"
     }
   ]
 }
