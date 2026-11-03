@@ -125,6 +125,14 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 
 [言部專案](books/who-is-the-red-mitten-waiting-for/README.md)及[艹部專案](books/who-opened-windows-in-the-leaf/README.md)包含參考細讀、原稿與分鏡、角色及道具模型、原創插畫、精確生成紀錄、字型授權、SVG及重建方法。各書已完成原生檢查、實際Office／SVG渲染與逐頁校稿；永久網址檢查涵蓋六份成品及兩份渲染報告。
 
+## 原創竹字頭繪本《紅鉛筆去哪裏了？》
+
+全新校園尋物小偵探故事，7–9歲，以小二自主閱讀為主要目標。彤彤想畫完紅恐龍，借給老師的鉛筆卻不見了；她依紅色與兩條白線排除錯誤線索，自己發現答案，再回到完成畫作的願望。正文343漢字，10故事跨頁、14閱讀畫面、26單頁；核心筆、筒、箱、等、答、笑，兼認竹／⺮。
+
+[跨頁PDF](https://angusqaq.github.io/audio-book/books/where-is-the-red-pencil/exports/紅鉛筆去哪裏了？_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/where-is-the-red-pencil/exports/紅鉛筆去哪裏了？_繪本.pdf) · [可編輯PowerPoint](https://angusqaq.github.io/audio-book/books/where-is-the-red-pencil/exports/紅鉛筆去哪裏了？_可編輯排版.pptx)
+
+[專案來源與重建方法](books/where-is-the-red-pencil/README.md)保存需求、原稿、分鏡、人物與道具模型、精確插畫提示、字型授權、Unicode部首核對及理解問題。原生文字與獨立圖像可編輯；沒有新增點讀音訊。未採用的上一版竹字頭作品已依指示移除，目前網站不再提供該書檔案及下載連結。
+
 ## 原創日部繪本
 
 2026-11-03依小二讀者需求修訂：日部改為親子角色互換的生活喜劇《今天，換我當爸爸！》，以開瓶和裝小熊的意外推進，結尾回扣前文。保留7–9歲、完整插畫PDF及可編輯排版的設定與已確認的人物外貌。

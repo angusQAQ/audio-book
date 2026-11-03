@@ -73,26 +73,52 @@
     {
       "id": "s04",
       "file": "assets/illustrations/s04.png",
-      "prompt": "Original children's school-mystery picturebook, loose graphite contours and FLAT DRY COLORED PENCIL, white paper, no photorealism, glossy3D, anime or large round doll eyes. Match the two attached new character models EXACTLY. TONGTONG girl8: slender body, pear-shaped face, SMALL narrow eyes and one cheek dimple, CHESTNUT VERY SHORT SIDE-PARTED PIXIE hair with exposed ears, LAKE-BLUE short-sleeve collared blouse, DARK PLUM knee-length A-line skirt, white ankle socks,cream flat shoes. TEACHER woman42: tall broad adult, deep brown skin, long angular diamond face, LONG NARROW nose, small eyes, fine brows, black hair in LOW NAPE BUN, NO glasses, MOSS-GREEN short sleeves, INDIGO loose cropped trousers, BURGUNDY closed flat shoes. They are teacher and student, NOT family. Same model faces and clothes throughout. Props from second attachment: PRIMARY short RED wooden pencil with EXACTLY TWO IVORY-WHITE RINGS near BLUNT end, no eraser; a DIFFERENT longer PLAIN RED pencil only if requested; yellow cylindrical pencil cup, small kraft craft box and red yarn; same white A4 paper showing a child's friendly red T.REX facingLEFT, two short forearms,two hindlegs,one long tail towardRIGHT, white triangular teeth. No lettering, numbers, Chinese, labels, logos, musical symbols, speech bubbles or watermark anywhere. Complete connected bodies and hands, shoes fully visible. For story scenes: WIDE landscape SMALL VIGNETTE on WHITE, entire TOP48PERCENT must be ABSOLUTELY EMPTY PURE WHITE, no scenery or heads there. Keep figures and props in LOWER52percent. Girl in LEFT QUARTER, teacher RIGHT QUARTER, central binding x45–55percent clear of faces, hands, pencils and drawing. Tiny classroom cues only, no walls or full-bleed scene, all white feathered edges. Girl lowerLEFT has just taken ONE LONGER PLAIN RED PENCIL WITH NO WHITE RINGS from the yellow cylindrical pencil cup and holds it visibly near her chest. Teacher lowerRIGHT points toward THAT PLAIN PENCIL and looks thoughtful. The ORIGINAL SHORTER TWO-WHITE-RING RED PENCIL stays BEHIND HER OWN RIGHT EAR, tip UP, its two white rings subtly visible near ear. Thus EXACTLY TWO DIFFERENT red pencils in whole scene: one PLAIN in girl's hand, one WHITE-RINGED behind teacher ear. Do not put rings on decoy pencil or remove ear pencil. Small low table at far-left with paper and yellow cup. Full bodies and hands intact. No text or visible thought balloons.",
-      "references": [
+      "prompt": "Edit the FIRST attached school-mystery illustration only to correct EAR-SIDE CONTINUITY. Preserve the same two faces, body poses, hands, original clothes, table, drawing, pencil cup, box/yarn and all white composition. Teacher has turned her face toward viewer's LEFT, so the ear visible on viewer's RIGHT side of her head is her OWN LEFT EAR. The missing pencil MUST NOT be on that near left ear. REMOVE THE RED PENCIL AND WHITE RINGS from that visible near LEFT EAR. The same single short red pencil is tucked behind her OTHER, FAR RIGHT EAR, on the far side of her head, MOSTLY HIDDEN BY HER HEAD/HAIR IN THIS VIEW. At most leave a very tiny hint of RED TIP peeking along the FAR LEFT outline of teacher's head, no white rings visible from this camera angle. It is okay that pencil is largely occluded here: earlier and later pages reveal it when she turns. Keep hair, low bun, face and head orientation unchanged, do not draw pencil through skull, no pencil in bun, no extra pencil. Keep the ONE PLAIN RED PENCIL WITHOUT WHITE RINGS in GIRL'S HAND exactly as it is; this is a DIFFERENT decoy, do not erase or band it. Teacher continues pointing at it. Exact original graphite/dry-colored-pencil style, all body parts and shoes intact, pure white paper and blank upper zone, no lettering, symbols, speech bubbles or changes to dinosaur drawing.",
+      "toolReferencePaths": [
+        "assets/illustrations/s04.png",
         "assets/characters.png",
         "assets/props.png"
       ],
       "transparentBackground": false,
-      "source": "/workspace/generated_images/exec-02611ab9-f5e4-4a91-8232-0f06d8d100ed.png",
-      "sha256": "83c68090b2f0518dd18c53862226fb5587f472c10ffef8bcb866285e88b1720d"
+      "source": "/workspace/generated_images/exec-5097e952-e43a-4566-9f60-2de27487d6fa.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "historicalReferences": [
+        {
+          "toolInputIndex": 0,
+          "commit": "b97fab2",
+          "file": "assets/illustrations/s04.png",
+          "sha256": "83c68090b2f0518dd18c53862226fb5587f472c10ffef8bcb866285e88b1720d"
+        }
+      ],
+      "sha256": "3ba1707bfb823486982664e367ec7c4abb03f74cfee7411147b21904a859dc0e"
     },
     {
       "id": "s05",
       "file": "assets/illustrations/s05.png",
-      "prompt": "Original children's school mystery, graphite and flat dry colored-pencil on WHITE paper. Match attached NEW character sheet precisely: GIRL8 with pear-shaped face, very short CHESTNUT SIDE-PARTED PIXIE hair, small narrow eyes, one cheek dimple, LAKE-BLUE short sleeve collared blouse, DARK PLUM knee-length A-line skirt,white socks,cream flats. TEACHER42 female, deep brown skin,long angular diamond face,long narrow nose,small eyes,black LOW NAPE BUN,NO GLASSES,MOSS-GREEN blouse,INDIGO loose cropped trousers,BURGUNDY flats. Teacher and student are NOT relatives. PRIMARY PENCIL is SHORT RED with exactly TWO IVORY-WHITE RINGS near blunt end, no eraser, sharpened wooden tip; compare prop model. Same low classroom wood table, white A4 friendly RED T.REX paper and yellow cylindrical pencil cup. A SMALL LOW VIGNETTE in WIDE landscape: TOP48PERCENT ABSOLUTELY EMPTY PURE WHITE, no heads, scenery,wash or objects there. Complete figures and connected limbs/shoes visible in LOWER52percent, girl LEFT QUARTER,teacher RIGHT QUARTER; centerbinding x45–55percent free of faces,hands,pencil and paper. Sparse floor strokes, pure white feathered edges, no full-bleed room. NO words,numbers,labels,Chinese,speech bubbles,arrows or symbols. No3D,anime,gloss or doll eyes. Girl lowerLEFT kneels at open kraft cardboard craft box, pulls out a RED YARN END to discover it is YARN, not pencil; rest wound in ball with two green paper sheets. Teacher lowerRIGHT bends slightly to look; ONE short TWO-WHITE-RING RED PENCIL remains BEHIND HER OWN RIGHT EAR (viewer-left side of her face), TIP UP away from eyes. Rings near lower end behind ear. NO pencil in hands, box, on floor or at left ear. Plain decoy red pencil no longer visible. Complete bodies and shoes, upper48percent empty white.",
-      "references": [
+      "prompt": "Edit the FIRST attached school-mystery illustration only to correct EAR-SIDE CONTINUITY. Preserve the same two faces, body poses, hands, original clothes, table, drawing, pencil cup, box/yarn and all white composition. Teacher has turned her face toward viewer's LEFT, so the ear visible on viewer's RIGHT side of her head is her OWN LEFT EAR. The missing pencil MUST NOT be on that near left ear. REMOVE THE RED PENCIL AND WHITE RINGS from that visible near LEFT EAR. The same single short red pencil is tucked behind her OTHER, FAR RIGHT EAR, on the far side of her head, MOSTLY HIDDEN BY HER HEAD/HAIR IN THIS VIEW. At most leave a very tiny hint of RED TIP peeking along the FAR LEFT outline of teacher's head, no white rings visible from this camera angle. It is okay that pencil is largely occluded here: earlier and later pages reveal it when she turns. Keep hair, low bun, face and head orientation unchanged, do not draw pencil through skull, no pencil in bun, no extra pencil. Girl still pulls RED YARN from cardboard box; teacher is bending over, neither person holds any pencil. Exact original graphite/dry-colored-pencil style, all body parts and shoes intact, pure white paper and blank upper zone, no lettering, symbols, speech bubbles or changes to dinosaur drawing.",
+      "toolReferencePaths": [
+        "assets/illustrations/s05.png",
         "assets/characters.png",
         "assets/props.png"
       ],
       "transparentBackground": false,
-      "source": "/workspace/generated_images/exec-38a73646-4a4c-4fa6-8ca5-794c9e55e1d5.png",
-      "sha256": "0a859cf7c7d3c9489a054d63dbdb0fc12d238003de4d1e8876509a3db183fd06"
+      "source": "/workspace/generated_images/exec-997020e5-fcfb-4dbb-9488-160515aa1613.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "historicalReferences": [
+        {
+          "toolInputIndex": 0,
+          "commit": "b97fab2",
+          "file": "assets/illustrations/s05.png",
+          "sha256": "0a859cf7c7d3c9489a054d63dbdb0fc12d238003de4d1e8876509a3db183fd06"
+        }
+      ],
+      "sha256": "a677c86e121b5ae7e0d568ed95883a59b53a10cfa6a531a61615c61106cd179f"
     },
     {
       "id": "s06",

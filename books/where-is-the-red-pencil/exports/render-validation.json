@@ -1,0 +1,33 @@
+{
+  "status": "verified",
+  "date": "2026-11-03",
+  "officePages": 14,
+  "officeTextMatchesEveryPage": true,
+  "actualOfficeFonts": [
+    "Iansui-Regular",
+    "JyunsaiKaai-Bold"
+  ],
+  "officeTargetFontAndSizeVerified": true,
+  "properNameRulesVerified": 10,
+  "ordinaryCharactersNotEnlarged": [
+    "竹"
+  ],
+  "storyTextImageCollisionChecks": 23,
+  "radicalEntriesVerified": 9,
+  "svgActualRenders": [
+    "s02",
+    "s04",
+    "s05",
+    "s06",
+    "s07",
+    "s10",
+    "lesson"
+  ],
+  "officeRenderedPdfSha256": "365100f02d552bf22e8c6bba65ce0170a20d1d0882b4d2425bce5239f5cbdd74",
+  "files": {
+    "紅鉛筆去哪裏了？_繪本.pdf": "02090d2440497c5b55a2ce65475ac4832d0cafd9d50d33bfc35a4af1c444bfd3",
+    "紅鉛筆去哪裏了？_可編輯排版.pptx": "976229a9e9945193fb0ef46741537106bd709d01929b0387b3ccd1b89b9f55c6",
+    "紅鉛筆去哪裏了？_跨頁閱讀版.pdf": "51c60d4c9a4d17f08fe3b86fb784a8167274c29ab996c08b93e908c3bef01599"
+  },
+  "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
+}
