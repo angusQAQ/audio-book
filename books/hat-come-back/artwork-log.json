@@ -2,5 +2,26 @@
   "schemaVersion": 1,
   "generator": "OpenAI image_gen",
   "date": "2026-11-05",
-  "illustrations": []
+  "illustrations": [
+    {
+      "slug": "hat-come-back",
+      "id": "props",
+      "prompt": "ORIGINAL picturebook PROP and LANDMARK sheet, pure white paper, loose graphite and dry colored pencil, muted moss/turquoise with small red accent. NO words, letters, labels, numerals, borders or watermark, no people or animals. Show exact same ONE RED soft BUCKET HAT with a plain MUSTARD YELLOW hatband in TWO clearly separated model views: upright wearable view and upside-down BOWL view. No logo, pattern, long chin strings or extra decorations. Fabric hat must be small head-sized but can hold a few berries when inverted. Other separate props: ONE large oval GREEN LEAF as a small plate, FIVE small RED round berries shown beside leaf, ONE simple bare slender long BROWN TREE BRANCH with a slightly hooked end, not a forked spear. Landmarks shown separately on white: ONE big low GREY angular rock with flat top; ONE LOW GREEN GRASS ISLET clearly surrounded on ALL SIDES by calm pale-blue water; ONE distant soft grey-green mountain PEAK silhouette. One pale-blue meandering riverbank vignette. Clearly separate prop views, not a story scene, no real wicker basket, no picnic basket, no extra hats, boats, bridges, cliffs, human equipment or food plates. All object designs simple enough to repeat.",
+      "source": "/workspace/generated_images/exec-781d15fd-e96f-449f-91f0-f2c71f0a8b6a.png",
+      "file": "assets/props.png",
+      "references": [],
+      "transparentBackground": false,
+      "sha256": "31bdae601cb1a08fec557a603df22e33bfc0abf829879830ca3e0cc892371da8"
+    }
+  ],
+  "characterBible": {
+    "slug": "hat-come-back",
+    "id": "characters",
+    "prompt": "Create an ORIGINAL children's literary picturebook CHARACTER MODEL BIBLE on pure WHITE paper. FOUR equally spaced columns in ONE ROW, all complete connected bodies and feet, wide white margins between figures: first two columns the SAME young anthropomorphic GOAT LIANGLIANG front and three-quarter, last two the SAME anthropomorphic BEAVER BOBO front and three-quarter. NO text, labels, numbers, grid, props, hats, food, watermark or backgrounds. Loose light graphite, dry colored-pencil hatching, restrained soft colours, white paper showing; not glossy3D, watercolor haze, anime or enormous round doll eyes. GOAT: slender TALL upright body, ivory/cream short fur, LONG NARROW MUZZLE, two short beige backward-curved horns, SMALL narrow eyes with horizontal pupils, long ears golden inside, little pointed chin tuft. Two rounded CLOVEN HOOF-shaped front hands and two cloven hind feet, TWO ARMS TWO LEGS, anthropomorphic standing on hind legs, NOT a human wearing goat mask. PURPLE fine-striped sleeveless vest, OCHRE short trousers, NO footwear or hat. BEAVER: one head shorter than goat, ROUND LOW STOCKY body, orange/chestnut short fur, cream broad flat muzzle and belly, two short flat buckteeth, small dark round ears, SMALL almond eyes, very WIDE FLAT dark-brown crosshatched paddle tail, two rounded four-finger front paws and two webbed hind feet, two arms/two legs, TEAL BLUE sleeveless vest, no pants or shoes. NOT otter, mouse, squirrel, bear or humanoid. Same exact outfits, shapes, markings between front/quarter. Keep goat much slimmer/taller, beaver low/round, both friendly and expressive. No reference to previous wolf/fox/dog characters.",
+    "source": "/workspace/generated_images/exec-786cba96-17ae-4eff-beb0-f6cbb2865fec.png",
+    "file": "assets/characters.png",
+    "references": [],
+    "transparentBackground": false,
+    "sha256": "c4557ae8774b1fb45affb465dd6660df55c1251e4145cad2b94da2e3c1c47179"
+  }
 }

@@ -2,5 +2,26 @@
   "schemaVersion": 1,
   "generator": "OpenAI image_gen",
   "date": "2026-11-05",
-  "illustrations": []
+  "illustrations": [
+    {
+      "slug": "your-majesty-please-sit",
+      "id": "props",
+      "prompt": "ORIGINAL picturebook SAND PROP CONTINUITY SHEET, pure white paper, expressive graphite and dry colored-pencil, pale sand gold, muted blue/indigo/red accents. No people, animals, text, labels, numbers, speech balloons, grids, arrows, watermarks or photorealism. Separate teaching model views with generous gaps: ONE SMALL SANDCASTLE with TWO simple ROUND TOWERS and one little arch gate, ONE tiny YELLOW TRIANGULAR FLAG at one tower; castle is a play object not inhabitable. ONE tiny damp-sand CHAIR with a small flat seat and low sand back, no wood or metal. ONE low WIDE DAMP-SAND MOUND/SLOPE with gently FLATTENED top, much wider than the little sandchair, not a steep mountain. ONE broad SHALLOW oval SITTING IMPRESSION in this mound with two soft curved seat lobes, ankle-deep only, light sand interior, NOT a deep pit or dark hole. A few small damp sand LUMPS and flat sandy ground. Keep sandcastle/flag design identical when shown at slight angle. Do not add crowns, buckets, shovels, wood chairs, deep caves, steep cliffs, extra flags or extra castles. Warm paper, selective pencil texture, no full scene.",
+      "source": "/workspace/generated_images/exec-8976a000-9e23-4e73-9f3c-83eecf255349.png",
+      "file": "assets/props.png",
+      "references": [],
+      "transparentBackground": false,
+      "sha256": "337e1c7253c3a5b0c371d9cca05b0bf0cf729bad6c110e95dcd47127f9e9ae36"
+    }
+  ],
+  "characterBible": {
+    "slug": "your-majesty-please-sit",
+    "id": "characters",
+    "prompt": "Create ORIGINAL children's literary picturebook CHARACTER BIBLE, pure WHITE paper, FOUR equal columns in ONE ROW, complete bodies and feet, wide gaps, same baseline. First two columns SAME anthropomorphic RABBIT DINGDING front/three-quarter, last two SAME ELEPHANT YUANYUAN front/three-quarter. No writing, labels, numbers, grid, props, crowns, chairs or scenery. Loose expressive GRAPHITE and textured DRY COLOURED PENCIL, restrained cream/indigo/greyblue/brick red; not watercolor haze, glossy3D, anime, living plush toys or giant doll eyes. RABBIT: very SLIM SMALL quick body, LONG NARROW EARS one tip leaning slightly forward other backward, narrow inverted-triangle rabbit face, small slanted almond eyes, magenta triangular nose, two small flat front teeth, tiny muzzle freckles, ivory short fur, small round tail. INDIGO short overalls over CREAM short-sleeve tee, barefoot soft rabbit hind paws, two front hand-paws/two hind legs, can stand or squat, NOT a human wearing rabbit head. ELEPHANT: about1.6 times rabbit BODY HEIGHT excluding rabbit ears, BROAD ROUNDED heavy body, BLUE-GREY skin with subtle creases, huge fan-shaped ears, short thick TRUNK curling slightly upward, tiny drooping eyes, WIDE friendly laughing mouth, NO tusks. BRICK RED short waistcoat only, no pants, crown or footwear. TWO front arm-like limbs and TWO sturdy hind legs, clear anthropomorphic upright elephant anatomy, no extra pair of arms/legs. The elephant is recognizably much wider and heavier than slim rabbit, never same size. Same exact animals/outfits between views. Avoid earlier fox/wolf/handpuppet character faces.",
+    "source": "/workspace/generated_images/exec-aca7df83-08ef-4778-be37-de0779437278.png",
+    "file": "assets/characters.png",
+    "references": [],
+    "transparentBackground": false,
+    "sha256": "a907159cece1264c1c6466291f280ea4026d1721744dc566a35e920a3c7cdc1b"
+  }
 }

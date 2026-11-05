@@ -2,5 +2,26 @@
   "schemaVersion": 1,
   "generator": "OpenAI image_gen",
   "date": "2026-11-05",
-  "illustrations": []
+  "illustrations": [
+    {
+      "slug": "my-boots-wont-budge",
+      "id": "props",
+      "prompt": "ORIGINAL children's picturebook PROP CONTINUITY SHEET on WHITE paper, loose graphite and dry colored-pencil, selective emerald/orange/red/violet. No humans, limbs, text, labels, numbers, grids, arrows, watermark or full scenery. ONE MATCHED PAIR of bright plain ORANGE rubber RAINBOOTS, calf-height shafts, rounded toe, same size, no print or logo, front three-quarter view with EMPTY DARK OPEN SHAFTS clearly visible; only TWO boots total. Nearby ONE matched pair of ORANGE AND WHITE horizontally STRIPED SOCKS as unattached flat garment model, not human feet. ONE plain smooth bright RED KICKBALL with a subtle seam and NO spots, numbers, logos, stripes or other balls. ONE SMALL SHALLOW SOFT MUD PATCH edged by dry green grass, depth only a few centimetres, pale damp brown, NOT a deep hole, black pit or flooded pond. A separate example of TWO shallow sole-shaped marks in soft mud. No branches, bridges, tools, helmets, shoes for mother, food, castles, animals or rain clouds. Keep boots, socks, ball simple and repeatable; source is a model sheet, not events in sequence.",
+      "source": "/workspace/generated_images/exec-1a57aceb-3262-4722-8e40-2f0d67aa443e.png",
+      "file": "assets/props.png",
+      "references": [],
+      "transparentBackground": false,
+      "sha256": "5220679d135f6fb111bbc709ad1d8a791a050a02ef80eda636beca40352b7ef2"
+    }
+  ],
+  "characterBible": {
+    "slug": "my-boots-wont-budge",
+    "id": "characters",
+    "prompt": "ORIGINAL human FAMILY CHARACTER BIBLE on PURE WHITE paper, FOUR equal columns in ONE ROW with ample gaps, full connected bodies including footwear, relative heights correct. First TWO columns the same boy DONGDONG8 front and three-quarter; last TWO the same MOTHER36 front and three-quarter. Mother about1.5times boy height. Clearly recognizable family with shared VERY NARROW LONG EYES whose outer corners DROOP, THICK STRAIGHT BROWS, BROAD FLAT SQUARED NOSE, TWO DEEP CHEEK DIMPLES when smiling, dark OLIVE skin, wide elongated DIAMOND FACE. Child has shorter chin/baby cheeks and compact sturdy body; mother adult longer jaw/cheekbones, modest smile-lines at eye corners, sturdy adult body, not teenager or identical resized child. BOY: black short spiky STRAIGHT hair, broad forehead, NO GLASSES; EMERALD sleeveless vest over CREAM short-sleeve T-shirt, DARK PURPLE knee shorts, one matched pair BRIGHT ORANGE calf-height RAINBOOTS, ORANGE-WHITE HORIZONTAL STRIPED SOCK TOPS just peeping above boots. Mother: black hair in one diagonal braid tucked into a LOW BUN, NO GLASSES; COBALT BLUE short-sleeve WORK COVERALL with grey-white long-sleeve underlayer rolled up, GREY athletic shoes. Same outfits/features between views. Loose graphite and DRY COLOURED-PENCIL, selective emerald/cobalt/orange/purple, visible white paper, lively natural expressions; not earlier round-faced doll-eye children, not glossy3D, anime, watercolor haze or photography. No extra boots, ball, mud, labels, words, numbers, arrows, props or watermark.",
+    "source": "/workspace/generated_images/exec-fc531df0-7f3a-41df-b3da-4a63f7e708b5.png",
+    "file": "assets/characters.png",
+    "references": [],
+    "transparentBackground": false,
+    "sha256": "2aeafb5c4259607e972ce751a1cc81daae30b252af931eef9ed7661574a200f3"
+  }
 }
