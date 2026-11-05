@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "date": "2026-11-05",
+      "previousCommit": "84a559ad98840bdc9a480e08d805841490462ac8",
+      "changes": [
+        {
+          "id": "s04",
+          "kind": "artwork",
+          "reason": "重新構圖為橫向2:1跨頁，保留河岸、浮帽、小島及完整山羊。",
+          "beforeSha256": "6c255ddd9aac601fce11d1a9550f8d927a0ef045395d22c30f675014c6e8c2d9",
+          "afterSha256": "9bc85146d40e95d7dff0788d00670dd71eef0ea492f53f780742aa7db1ddab6a"
+        },
+        {
+          "kind": "editorial",
+          "reason": "活動頁以小帽子指故事中的道具；s08明確交代海狸托葉運回莓子。"
+        },
+        {
+          "kind": "layout",
+          "reason": "依每頁文字及圖像留白選定插畫位置；原生裁切模型只顯示完整的單一角色，保留原模型及相對身高。"
+        }
+      ]
+    }
+  ]
+}

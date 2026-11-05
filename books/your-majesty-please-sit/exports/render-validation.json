@@ -1,0 +1,38 @@
+{
+  "status": "verified",
+  "date": "2026-11-05",
+  "officePages": 14,
+  "officeTextMatchesEveryPage": true,
+  "actualOfficeFonts": [
+    "Iansui-Regular",
+    "JyunsaiKaai-Bold"
+  ],
+  "officeTargetFontAndSizeVerified": true,
+  "audienceCaptionsSingleLineVerified": 2,
+  "properNameRulesVerified": 12,
+  "ordinaryCharactersNotEnlarged": [
+    "土"
+  ],
+  "storyTextImageCollisionChecks": 16,
+  "radicalEntriesVerified": 10,
+  "svgActualRenders": [
+    "s01",
+    "s02",
+    "s03",
+    "s04",
+    "s05",
+    "s06",
+    "s07",
+    "s08",
+    "s09",
+    "s10",
+    "lesson"
+  ],
+  "officeRenderedPdfSha256": "0259a882d31eb7e03d9ec5f309a6551e22fbbb8b915319c8f2b3167cbddcf144",
+  "files": {
+    "國王，請坐！_跨頁閱讀版.pdf": "09ccff16693cbebedfcdfea0888bc2439bfe6d8471ccf31459c488596fefab25",
+    "國王，請坐！_繪本.pdf": "f4d31c127e753936b78e61ec378e7c1ef46b22a8298fe1db7894f08dd1c3d657",
+    "國王，請坐！_可編輯排版.pptx": "284f764a44c0a9ff790ca5092dab41a96c93afcee4b30f3b1eade4c0bb86c008"
+  },
+  "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
+}

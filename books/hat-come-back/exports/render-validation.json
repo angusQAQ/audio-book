@@ -1,0 +1,38 @@
+{
+  "status": "verified",
+  "date": "2026-11-05",
+  "officePages": 14,
+  "officeTextMatchesEveryPage": true,
+  "actualOfficeFonts": [
+    "Iansui-Regular",
+    "JyunsaiKaai-Bold"
+  ],
+  "officeTargetFontAndSizeVerified": true,
+  "audienceCaptionsSingleLineVerified": 2,
+  "properNameRulesVerified": 13,
+  "ordinaryCharactersNotEnlarged": [
+    "山"
+  ],
+  "storyTextImageCollisionChecks": 19,
+  "radicalEntriesVerified": 8,
+  "svgActualRenders": [
+    "s01",
+    "s02",
+    "s03",
+    "s04",
+    "s05",
+    "s06",
+    "s07",
+    "s08",
+    "s09",
+    "s10",
+    "lesson"
+  ],
+  "officeRenderedPdfSha256": "0f676edb19528eda05aceae7e3c5ac3f0ffb7ff08ca55fcff4b1e7640b9a13c6",
+  "files": {
+    "帽子，回來呀！_繪本.pdf": "a2908e011d89a1fdca23cb6becffb922e0703e352b42b63d435eeffa7a8fa584",
+    "帽子，回來呀！_可編輯排版.pptx": "df94f49dec3c9bad36a8d9b38da54858d0c12b2317effeea000d6161962348da",
+    "帽子，回來呀！_跨頁閱讀版.pdf": "05542d81b6db0f72379c03adefe17837c6093d5cc620612e0679cf91419f318d"
+  },
+  "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
+}

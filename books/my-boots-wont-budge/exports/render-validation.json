@@ -1,0 +1,40 @@
+{
+  "status": "verified",
+  "date": "2026-11-05",
+  "officePages": 16,
+  "officeTextMatchesEveryPage": true,
+  "actualOfficeFonts": [
+    "Iansui-Regular",
+    "JyunsaiKaai-Bold"
+  ],
+  "officeTargetFontAndSizeVerified": true,
+  "audienceCaptionsSingleLineVerified": 2,
+  "properNameRulesVerified": 13,
+  "ordinaryCharactersNotEnlarged": [
+    "力"
+  ],
+  "storyTextImageCollisionChecks": 17,
+  "radicalEntriesVerified": 8,
+  "svgActualRenders": [
+    "s01",
+    "s02",
+    "s03",
+    "s04",
+    "s05",
+    "s06",
+    "s07",
+    "s08",
+    "s09",
+    "s10",
+    "s11",
+    "s12",
+    "lesson"
+  ],
+  "officeRenderedPdfSha256": "379ab5894f35452fbdbe64b38ff4bed45ec5cbe447f92bfe79a64227661afeb0",
+  "files": {
+    "我的雨靴不肯走！_繪本.pdf": "07fee32da1ad26d1258401b123ee82309bd982debbec3718b31924b291f42d5b",
+    "我的雨靴不肯走！_跨頁閱讀版.pdf": "0b22dfa2d1480e029c03024668f063cf893bf92257af797f75d3e14f533da14a",
+    "我的雨靴不肯走！_可編輯排版.pptx": "b83eb99e685f58cc9280b147e9d64c7e84bab703aee22da438e1b1304cf9fa1f"
+  },
+  "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
+}

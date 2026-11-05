@@ -69,14 +69,32 @@
       "id": "s04",
       "slug": "hat-come-back",
       "file": "assets/illustrations/s04.png",
-      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO anthropomorphic animals only when present in this moment: tall slim IVORY GOAT LIANGLIANG with long narrow muzzle, small horizontal-pupil eyes, short backward horns, long golden-inner ears, chin tuft, purple fine-striped vest, ochre shorts, cloven hand-hooves and hind feet. Short ROUND orange-brown BEAVER BOBO, cream broad muzzle, two flat buckteeth, small ears, TEAL vest, large FLAT CROSSHATCHED PADDLE TAIL, webbed hind feet and rounded front paws. Do not confuse beaver with mouse/otter. ONLY ONE RED BUCKET HAT WITH MUSTARD BAND exists, never worn by two animals or duplicated lying elsewhere. No real basket at all: the inverted hat is mistaken for a berry basket. Calm shallow-blue river with LEFT riverbank/big low grey flat-top rock and RIGHT low grassy islet completely surrounded by water; no steep cliffs, bridges or boats. Hat must always be where this moment specifies. STORY MOMENT s04 (never draw labels): 亮亮站左河岸，唯一紅帽在右側小小草島外的淺藍河面。小島為四面被水圍住的低平草地，不是連岸山坡；大灰岩在左岸後方，海狸暫在島上草後不可見。 STRICT CURRENT STATE: HAT STATE: one hat FLOATING AT ISLET EDGE; goat alone on left bank, beaver concealed in island grass. NO food yet. Keep whole connected figures and feet inside the canvas, with a little space around them.",
-      "source": "/workspace/generated_images/exec-a673852f-45f0-4c4d-b593-247b181bf129.png",
+      "prompt": "Edit the first supplied illustration into a WIDE HORIZONTAL LANDSCAPE picturebook spread, canvas aspect ratio 2:1 (for example 1774 pixels wide by 887 pixels tall), NEVER portrait. Recompose the scene across the full landscape width; do not simply squeeze the portrait or put it inside a frame. Preserve this exact event and character: bareheaded ivory slim goat in purple striped vest and ochre shorts, complete connected body and both hooves, on LEFT riverbank beside a low grey flat rock, looking urgently toward the SINGLE red bucket hat with mustard band floating in the blue river next to the RIGHT grassy islet. The islet is completely surrounded by calm shallow water; no beaver visible yet, no berries, leaf, branch or second hat. Distant soft mountain peak. Small stomp gesture, worried open mouth, original graphite and dry coloured-pencil hatching and soft colours. Use second image only for precise character design, third image only for the same landscape proportion, river setting and white-paper composition. Keep goat, hat and islet out of the centre binding strip. Top 38% PURE WHITE EMPTY PAPER for native text, artwork in lower 62%, one continuous spacious scene, no panels, generated letters, labels, captions or watermark.",
+      "source": "/workspace/generated_images/exec-bcc7e51c-b6b0-4f21-97ca-f5f596e9aaaf.png",
       "references": [
+        "assets/illustrations/s04.png",
         "assets/characters.png",
-        "assets/props.png"
+        "assets/illustrations/s03.png"
       ],
       "transparentBackground": false,
-      "sha256": "6c255ddd9aac601fce11d1a9550f8d927a0ef045395d22c30f675014c6e8c2d9"
+      "sha256": "9bc85146d40e95d7dff0788d00670dd71eef0ea492f53f780742aa7db1ddab6a",
+      "history": [
+        {
+          "id": "s04",
+          "slug": "hat-come-back",
+          "file": "assets/illustrations/s04.png",
+          "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO anthropomorphic animals only when present in this moment: tall slim IVORY GOAT LIANGLIANG with long narrow muzzle, small horizontal-pupil eyes, short backward horns, long golden-inner ears, chin tuft, purple fine-striped vest, ochre shorts, cloven hand-hooves and hind feet. Short ROUND orange-brown BEAVER BOBO, cream broad muzzle, two flat buckteeth, small ears, TEAL vest, large FLAT CROSSHATCHED PADDLE TAIL, webbed hind feet and rounded front paws. Do not confuse beaver with mouse/otter. ONLY ONE RED BUCKET HAT WITH MUSTARD BAND exists, never worn by two animals or duplicated lying elsewhere. No real basket at all: the inverted hat is mistaken for a berry basket. Calm shallow-blue river with LEFT riverbank/big low grey flat-top rock and RIGHT low grassy islet completely surrounded by water; no steep cliffs, bridges or boats. Hat must always be where this moment specifies. STORY MOMENT s04 (never draw labels): 亮亮站左河岸，唯一紅帽在右側小小草島外的淺藍河面。小島為四面被水圍住的低平草地，不是連岸山坡；大灰岩在左岸後方，海狸暫在島上草後不可見。 STRICT CURRENT STATE: HAT STATE: one hat FLOATING AT ISLET EDGE; goat alone on left bank, beaver concealed in island grass. NO food yet. Keep whole connected figures and feet inside the canvas, with a little space around them.",
+          "source": "/workspace/generated_images/exec-a673852f-45f0-4c4d-b593-247b181bf129.png",
+          "references": [
+            "assets/characters.png",
+            "assets/props.png"
+          ],
+          "transparentBackground": false,
+          "sha256": "6c255ddd9aac601fce11d1a9550f8d927a0ef045395d22c30f675014c6e8c2d9",
+          "commit": "84a559ad98840bdc9a480e08d805841490462ac8"
+        }
+      ],
+      "referenceCommit": "84a559ad98840bdc9a480e08d805841490462ac8"
     },
     {
       "id": "s05",

@@ -1,6 +1,6 @@
 # 國王，請坐！
 
-7–9歲，以小二自主閱讀為主要目標。小兔用沙做城堡和小沙椅，想邀大象當國王；小椅被坐扁，主角改堆大沙坡讓朋友坐穩，大象起身後留下的大屁股坑，又成了小兔的座位，兩個朋友一起玩。正文244漢字、10故事跨頁、14閱讀畫面、26單頁。製作中，完成插畫與實際輸出驗證後發布。
+7–9歲，以小二自主閱讀為主要目標。小兔用沙做城堡和小沙椅，想邀大象當國王；小椅被坐扁，主角改堆大沙坡讓朋友坐穩，大象起身後留下的大屁股坑，又成了小兔的座位，兩個朋友一起玩。正文244漢字、10故事跨頁、14閱讀畫面、26單頁。已完成完整插畫、原生PDF／PPTX／SVG及實際LibreOffice／Inkscape驗證。
 
 - [跨頁PDF](https://angusqaq.github.io/audio-book/books/your-majesty-please-sit/exports/國王，請坐！_跨頁閱讀版.pdf)
 - [單頁PDF](https://angusqaq.github.io/audio-book/books/your-majesty-please-sit/exports/國王，請坐！_繪本.pdf)
@@ -11,3 +11,5 @@
 安裝requirements-book.txt後，在repository根目錄執行 `python3 books/your-majesty-please-sit/build_book.py`。以LibreOffice輸出全書PDF，Inkscape把每個故事SVG及lesson實際渲染成960×600 PNG，再執行 `python3 books/your-majesty-please-sit/verify_exports.py --office-pdf 實際Office輸出.pdf --svg-renders PNG目錄`。報告見exports/validation.json及exports/render-validation.json。
 
 沒有冒稱學生試讀、Microsoft PowerPoint或印廠製版測試；本次沒有另製點讀音訊。
+
+本次實測：LibreOffice全書14畫面、姓名線12條；Inkscape渲染全部故事跨頁及活動頁。逐頁文字、實際字型／字級、專名號及16項圖文留白檢查通過，普通土字不放大。原圖存檔點84a559a；[修訂紀錄](revisions.json)保留前後雜湊。

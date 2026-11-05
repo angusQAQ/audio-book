@@ -1,6 +1,6 @@
 # 帽子，回來呀！
 
-7–9歲，以小二自主閱讀為主要目標。一陣風把山羊的新帽子吹過岩石、河岸與小島，朋友卻把帽子認作野餐籃；兩個朋友說清誤會，取回帽子，再一起把它變成野餐的小籃子。正文298漢字、10故事跨頁、14閱讀畫面、26單頁。製作中，完成插畫與實際輸出驗證後發布。
+7–9歲，以小二自主閱讀為主要目標。一陣風把山羊的新帽子吹過岩石、河岸與小島，朋友卻把帽子認作野餐籃；兩個朋友說清誤會，取回帽子，再一起把它變成野餐的小籃子。正文298漢字、10故事跨頁、14閱讀畫面、26單頁。已完成完整插畫、原生PDF／PPTX／SVG及實際LibreOffice／Inkscape驗證。
 
 - [跨頁PDF](https://angusqaq.github.io/audio-book/books/hat-come-back/exports/帽子，回來呀！_跨頁閱讀版.pdf)
 - [單頁PDF](https://angusqaq.github.io/audio-book/books/hat-come-back/exports/帽子，回來呀！_繪本.pdf)
@@ -11,3 +11,5 @@
 安裝requirements-book.txt後，在repository根目錄執行 `python3 books/hat-come-back/build_book.py`。以LibreOffice輸出全書PDF，Inkscape把每個故事SVG及lesson實際渲染成960×600 PNG，再執行 `python3 books/hat-come-back/verify_exports.py --office-pdf 實際Office輸出.pdf --svg-renders PNG目錄`。報告見exports/validation.json及exports/render-validation.json。
 
 沒有冒稱學生試讀、Microsoft PowerPoint或印廠製版測試；本次沒有另製點讀音訊。
+
+本次實測：LibreOffice全書14畫面、姓名線13條；Inkscape渲染全部故事跨頁及活動頁。逐頁文字、實際字型／字級、專名號及19項圖文留白檢查通過，普通山字不放大。原圖存檔點84a559a；[修訂紀錄](revisions.json)保留前後雜湊。

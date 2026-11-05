@@ -179,3 +179,15 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 [下載可移植 skill ZIP](https://angusqaq.github.io/audio-book/downloads/children-picture-book-skill.zip)。解壓後將 `children-picture-book/` 放到目標專案的 `.agents/skills/`；支援 skill 的工具可按其規則發現，若目前工作階段尚未顯示，重新開啟該專案後使用。模板 `templates/book-brief.json` 的年齡／主題等欄位故意留空，填寫後可用附帶的 `scripts/init_book.py --brief 本次需求.json --output 新書目錄` 檢查並建立草稿；不會覆寫既有書。封裝可由 `python3 scripts/package_picture_book_skill.py` 重建。
 
 專案已安裝 [Apple Design skill](https://github.com/dickwu/apple-design-skill)，固定來源與技能檔案位於 `.agents/skills/apple-design/`；設計檢視見 `docs/apple-design-review.md`。`AGENTS.md` 要求每個可審閱更新階段建立 Git commit 並推送 GitHub，完成驗證後自動同步永久網站。
+
+## 山部、土部與力部三本獨立繪本（2026-11-05）
+
+本次確認三本均為7–9歲，以小二自主閱讀為主要目標。人物、情節與字目分別設計；核心字採150%手寫楷體，姓名使用疊字並附完整專名號。每本提供完整插畫、原生文字PDF、可編輯PowerPoint及SVG。
+
+| 主題／書名 | 故事與核心字 | 成品 |
+| --- | --- | --- |
+| 山部《帽子，回來呀！》 | 追帽子引出朋友把帽子當籃子的誤會；核心峰、岩、岸、島。298漢字，14閱讀畫面／26單頁。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/hat-come-back/exports/帽子，回來呀！_跨頁閱讀版.pdf)・[單頁PDF](https://angusqaq.github.io/audio-book/books/hat-come-back/exports/帽子，回來呀！_繪本.pdf)・[PowerPoint](https://angusqaq.github.io/audio-book/books/hat-come-back/exports/帽子，回來呀！_可編輯排版.pptx) |
+| 土部《國王，請坐！》 | 小沙椅坐扁了，小兔另做大沙椅，最後兩個國王都有座位；核心城、堡、堆、坡、坑、塊。244漢字，14閱讀畫面／26單頁。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/your-majesty-please-sit/exports/國王，請坐！_跨頁閱讀版.pdf)・[單頁PDF](https://angusqaq.github.io/audio-book/books/your-majesty-please-sit/exports/國王，請坐！_繪本.pdf)・[PowerPoint](https://angusqaq.github.io/audio-book/books/your-majesty-please-sit/exports/國王，請坐！_可編輯排版.pptx) |
+| 力部《我的雨靴不肯走！》 | 媽媽幫忙拔出孩子，雨靴卻留在泥裏，兩人再取回靴子與球；核心動、加、助、努、功。274漢字，16閱讀畫面／30單頁。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/my-boots-wont-budge/exports/我的雨靴不肯走！_跨頁閱讀版.pdf)・[單頁PDF](https://angusqaq.github.io/audio-book/books/my-boots-wont-budge/exports/我的雨靴不肯走！_繪本.pdf)・[PowerPoint](https://angusqaq.github.io/audio-book/books/my-boots-wont-budge/exports/我的雨靴不肯走！_可編輯排版.pptx) |
+
+三書的故事、需求、分鏡、部首逐字來源、原始插畫、精確提示、修訂及重建程式分別見[山部專案](books/hat-come-back/README.md)、[土部專案](books/your-majesty-please-sit/README.md)、[力部專案](books/my-boots-wont-budge/README.md)。共用字型及授權保存在assets/fonts/print；PNG可獨立替換，PDF／PPTX／SVG的文字與姓名線保留原生結構。本次交付繪本成品，未另製或註冊新點讀音訊。

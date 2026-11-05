@@ -1,0 +1,50 @@
+{
+  "status": "complete",
+  "spreadPages": 14,
+  "singlePages": 26,
+  "editableSlides": 14,
+  "missingGlyphs": [],
+  "allTextEditable": true,
+  "originalArtworkHashesVerified": 13,
+  "properNameRadicals": {
+    "亮": 8,
+    "波": 85
+  },
+  "properNamesAvoidThemeRadical": true,
+  "properNameMarks": {
+    "names": {
+      "亮亮": 8,
+      "波波": 5
+    },
+    "style": "continuous rule below each full name",
+    "pdfPptxSvgGeometryVerified": true,
+    "editableTextAndRuleGrouped": true
+  },
+  "targetTypography": {
+    "font": "JyunsaiKaai",
+    "bodyScale": 1.5,
+    "pdfAndPptxRunsVerified": true,
+    "handwrittenGlyphs": {
+      "峰": 5,
+      "岩": 8,
+      "島": 8,
+      "岸": 6
+    }
+  },
+  "normalCharacterTypography": {
+    "characters": [
+      "山"
+    ],
+    "bodyScale": 1,
+    "font": "Iansui",
+    "pdfAndPptxRunsVerified": true,
+    "svgRunsVerified": true
+  },
+  "storyHanCharacters": 298,
+  "targets": {
+    "峰": 5,
+    "岩": 8,
+    "岸": 6,
+    "島": 8
+  }
+}

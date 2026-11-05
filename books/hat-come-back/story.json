@@ -96,7 +96,7 @@
     ]
   },
   "learning": {
-    "heading": "跟小紅帽一起認字",
+    "heading": "跟小帽子一起認字",
     "subtitle": "一起找找字裏的山。",
     "variantHeading": "認識山部",
     "radicalForms": [
@@ -158,9 +158,9 @@
       "textSplit": 1,
       "artPlacement": [
         0,
-        160,
+        100,
         960,
-        400
+        460
       ]
     },
     {
@@ -179,9 +179,9 @@
       "textSplit": 1,
       "artPlacement": [
         0,
-        160,
+        100,
         960,
-        400
+        460
       ]
     },
     {
@@ -200,9 +200,9 @@
       "textSplit": 1,
       "artPlacement": [
         0,
-        160,
+        100,
         960,
-        400
+        460
       ]
     },
     {
@@ -221,9 +221,9 @@
       "textSplit": 1,
       "artPlacement": [
         0,
-        160,
+        100,
         960,
-        400
+        460
       ]
     },
     {
@@ -242,9 +242,9 @@
       "textSplit": 1,
       "artPlacement": [
         0,
-        160,
+        100,
         960,
-        400
+        460
       ]
     },
     {
@@ -263,9 +263,9 @@
       "textSplit": 1,
       "artPlacement": [
         0,
-        160,
+        100,
         960,
-        400
+        460
       ]
     },
     {
@@ -284,9 +284,9 @@
       "textSplit": 1,
       "artPlacement": [
         0,
-        160,
+        100,
         960,
-        400
+        460
       ]
     },
     {
@@ -305,9 +305,9 @@
       "textSplit": 1,
       "artPlacement": [
         0,
-        160,
+        100,
         960,
-        400
+        460
       ]
     },
     {
@@ -326,9 +326,9 @@
       "textSplit": 1,
       "artPlacement": [
         0,
-        160,
+        100,
         960,
-        400
+        460
       ]
     },
     {
@@ -348,9 +348,9 @@
       "textSplit": 1,
       "artPlacement": [
         0,
-        160,
+        100,
         960,
-        400
+        460
       ]
     }
   ],
