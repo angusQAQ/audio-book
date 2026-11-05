@@ -12,6 +12,149 @@
       "references": [],
       "transparentBackground": false,
       "sha256": "31bdae601cb1a08fec557a603df22e33bfc0abf829879830ca3e0cc892371da8"
+    },
+    {
+      "id": "cover",
+      "slug": "hat-come-back",
+      "file": "assets/illustrations/cover.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO anthropomorphic animals only when present in this moment: tall slim IVORY GOAT LIANGLIANG with long narrow muzzle, small horizontal-pupil eyes, short backward horns, long golden-inner ears, chin tuft, purple fine-striped vest, ochre shorts, cloven hand-hooves and hind feet. Short ROUND orange-brown BEAVER BOBO, cream broad muzzle, two flat buckteeth, small ears, TEAL vest, large FLAT CROSSHATCHED PADDLE TAIL, webbed hind feet and rounded front paws. Do not confuse beaver with mouse/otter. ONLY ONE RED BUCKET HAT WITH MUSTARD BAND exists, never worn by two animals or duplicated lying elsewhere. No real basket at all: the inverted hat is mistaken for a berry basket. Calm shallow-blue river with LEFT riverbank/big low grey flat-top rock and RIGHT low grassy islet completely surrounded by water; no steep cliffs, bridges or boats. Hat must always be where this moment specifies. COVER CUTOUT: goat on LEFT, bareheaded, stretches both forepaws with surprised playful expression toward BEAVER on RIGHT. Beaver holds the ONE RED HAT UPSIDE DOWN LIKE A BOWL with a few red berries in it, beaming as if it were a basket. Two complete connected animals and feet, small grey rock/low grass only if useful, no river scene or separate hats. Compact composition, fully TRANSPARENT background, no upper white text-gap requirement for cover.",
+      "source": "/workspace/generated_images/exec-8b2c3a2f-4205-44bd-a377-f495a8922a02.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": true,
+      "sha256": "20edecd3f5e44ec803bf5c89de6d9adcc13de3aae18685d7c5d8a2bf3d74c33d"
+    },
+    {
+      "id": "s01",
+      "slug": "hat-come-back",
+      "file": "assets/illustrations/s01.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO anthropomorphic animals only when present in this moment: tall slim IVORY GOAT LIANGLIANG with long narrow muzzle, small horizontal-pupil eyes, short backward horns, long golden-inner ears, chin tuft, purple fine-striped vest, ochre shorts, cloven hand-hooves and hind feet. Short ROUND orange-brown BEAVER BOBO, cream broad muzzle, two flat buckteeth, small ears, TEAL vest, large FLAT CROSSHATCHED PADDLE TAIL, webbed hind feet and rounded front paws. Do not confuse beaver with mouse/otter. ONLY ONE RED BUCKET HAT WITH MUSTARD BAND exists, never worn by two animals or duplicated lying elsewhere. No real basket at all: the inverted hat is mistaken for a berry basket. Calm shallow-blue river with LEFT riverbank/big low grey flat-top rock and RIGHT low grassy islet completely surrounded by water; no steep cliffs, bridges or boats. Hat must always be where this moment specifies. STORY MOMENT s01 (never draw labels): 左側小山羊亮亮戴唯一一頂紅色黃色帽帶漁夫帽，去河邊找海狸波波；波波可在右側岸邊向牠揮手，兩位朋友約好野餐。背景淡描一個山峰、河岸及一塊大灰岩，沒有食物或籃子。 STRICT CURRENT STATE: HAT STATE: one red hat ON GOAT HEAD. Beaver on same bank greeting. NO berries, leaf or real basket. Keep whole connected figures and feet inside the canvas, with a little space around them.",
+      "source": "/workspace/generated_images/exec-83b4c9f8-1676-40ed-96a5-f4afd88b0e54.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "35d8727ffaa941ac313c382bc71fba9dfeca26952e19b8042cb744c9f079c0cc"
+    },
+    {
+      "id": "s02",
+      "slug": "hat-come-back",
+      "file": "assets/illustrations/s02.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO anthropomorphic animals only when present in this moment: tall slim IVORY GOAT LIANGLIANG with long narrow muzzle, small horizontal-pupil eyes, short backward horns, long golden-inner ears, chin tuft, purple fine-striped vest, ochre shorts, cloven hand-hooves and hind feet. Short ROUND orange-brown BEAVER BOBO, cream broad muzzle, two flat buckteeth, small ears, TEAL vest, large FLAT CROSSHATCHED PADDLE TAIL, webbed hind feet and rounded front paws. Do not confuse beaver with mouse/otter. ONLY ONE RED BUCKET HAT WITH MUSTARD BAND exists, never worn by two animals or duplicated lying elsewhere. No real basket at all: the inverted hat is mistaken for a berry basket. Calm shallow-blue river with LEFT riverbank/big low grey flat-top rock and RIGHT low grassy islet completely surrounded by water; no steep cliffs, bridges or boats. Hat must always be where this moment specifies. STORY MOMENT s02 (never draw labels): 唯一紅帽已從亮亮頭上飛走，正落在大灰岩頂部；山羊在岩石左下跳起伸前掌，沒有戴第二頂帽子。海狸不在此鏡頭內，背景同一河岸。 STRICT CURRENT STATE: HAT STATE: one hat on ROCK, both animals bareheaded; goat reaching. NO berries or leaf. Keep whole connected figures and feet inside the canvas, with a little space around them.",
+      "source": "/workspace/generated_images/exec-07f86eaf-1723-45f8-9835-da25d43f4fcd.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "960aa51962e1fb89303382f8d2607d56221e830a671b4f148bd4137be9ce2a8c"
+    },
+    {
+      "id": "s03",
+      "slug": "hat-come-back",
+      "file": "assets/illustrations/s03.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO anthropomorphic animals only when present in this moment: tall slim IVORY GOAT LIANGLIANG with long narrow muzzle, small horizontal-pupil eyes, short backward horns, long golden-inner ears, chin tuft, purple fine-striped vest, ochre shorts, cloven hand-hooves and hind feet. Short ROUND orange-brown BEAVER BOBO, cream broad muzzle, two flat buckteeth, small ears, TEAL vest, large FLAT CROSSHATCHED PADDLE TAIL, webbed hind feet and rounded front paws. Do not confuse beaver with mouse/otter. ONLY ONE RED BUCKET HAT WITH MUSTARD BAND exists, never worn by two animals or duplicated lying elsewhere. No real basket at all: the inverted hat is mistaken for a berry basket. Calm shallow-blue river with LEFT riverbank/big low grey flat-top rock and RIGHT low grassy islet completely surrounded by water; no steep cliffs, bridges or boats. Hat must always be where this moment specifies. STORY MOMENT s03 (never draw labels): 亮亮站在同一岩石上伸前掌，唯一紅帽翻滾落向岩石右邊河水，帽子與羊掌有一小段距離；沒有重複畫前後兩頂帽，身體四肢完整，無跌落受傷。 STRICT CURRENT STATE: HAT STATE: one hat just FALLING INTO RIVER, never on goat or rock at the same time. Goat on rock. NO berries or leaf. Keep whole connected figures and feet inside the canvas, with a little space around them.",
+      "source": "/workspace/generated_images/exec-e7b3b12b-4b75-4e19-862a-9dc83ff61e94.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "c40d380a191dbab9545978a1c36f4534217e7322ad970e8e50ba8d8bbb60bd98"
+    },
+    {
+      "id": "s04",
+      "slug": "hat-come-back",
+      "file": "assets/illustrations/s04.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO anthropomorphic animals only when present in this moment: tall slim IVORY GOAT LIANGLIANG with long narrow muzzle, small horizontal-pupil eyes, short backward horns, long golden-inner ears, chin tuft, purple fine-striped vest, ochre shorts, cloven hand-hooves and hind feet. Short ROUND orange-brown BEAVER BOBO, cream broad muzzle, two flat buckteeth, small ears, TEAL vest, large FLAT CROSSHATCHED PADDLE TAIL, webbed hind feet and rounded front paws. Do not confuse beaver with mouse/otter. ONLY ONE RED BUCKET HAT WITH MUSTARD BAND exists, never worn by two animals or duplicated lying elsewhere. No real basket at all: the inverted hat is mistaken for a berry basket. Calm shallow-blue river with LEFT riverbank/big low grey flat-top rock and RIGHT low grassy islet completely surrounded by water; no steep cliffs, bridges or boats. Hat must always be where this moment specifies. STORY MOMENT s04 (never draw labels): 亮亮站左河岸，唯一紅帽在右側小小草島外的淺藍河面。小島為四面被水圍住的低平草地，不是連岸山坡；大灰岩在左岸後方，海狸暫在島上草後不可見。 STRICT CURRENT STATE: HAT STATE: one hat FLOATING AT ISLET EDGE; goat alone on left bank, beaver concealed in island grass. NO food yet. Keep whole connected figures and feet inside the canvas, with a little space around them.",
+      "source": "/workspace/generated_images/exec-a673852f-45f0-4c4d-b593-247b181bf129.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "6c255ddd9aac601fce11d1a9550f8d927a0ef045395d22c30f675014c6e8c2d9"
+    },
+    {
+      "id": "s05",
+      "slug": "hat-come-back",
+      "file": "assets/illustrations/s05.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO anthropomorphic animals only when present in this moment: tall slim IVORY GOAT LIANGLIANG with long narrow muzzle, small horizontal-pupil eyes, short backward horns, long golden-inner ears, chin tuft, purple fine-striped vest, ochre shorts, cloven hand-hooves and hind feet. Short ROUND orange-brown BEAVER BOBO, cream broad muzzle, two flat buckteeth, small ears, TEAL vest, large FLAT CROSSHATCHED PADDLE TAIL, webbed hind feet and rounded front paws. Do not confuse beaver with mouse/otter. ONLY ONE RED BUCKET HAT WITH MUSTARD BAND exists, never worn by two animals or duplicated lying elsewhere. No real basket at all: the inverted hat is mistaken for a berry basket. Calm shallow-blue river with LEFT riverbank/big low grey flat-top rock and RIGHT low grassy islet completely surrounded by water; no steep cliffs, bridges or boats. Hat must always be where this moment specifies. STORY MOMENT s05 (never draw labels): 亮亮站左岸，拿一根長樹枝伸向小島邊的唯一紅帽，枝端仍差一小段；島上只露海狸的一隻棕色前爪接近帽沿，身體藏在低矮草叢後；沒有第二隻動物或第二頂帽。 STRICT CURRENT STATE: HAT STATE: one hat still at ISLET EDGE, treebranch tip DOES NOT TOUCH hat, one beaver paw reaches from island grass. NO food or whole beaver visible yet. Keep whole connected figures and feet inside the canvas, with a little space around them.",
+      "source": "/workspace/generated_images/exec-502bef02-1018-4e09-8185-25da6cf2f1f9.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "8bfdf396c023d1307531040723181e97179dadd98bbf0ae6dd2fa7719c8e3ed7"
+    },
+    {
+      "id": "s06",
+      "slug": "hat-come-back",
+      "file": "assets/illustrations/s06.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO anthropomorphic animals only when present in this moment: tall slim IVORY GOAT LIANGLIANG with long narrow muzzle, small horizontal-pupil eyes, short backward horns, long golden-inner ears, chin tuft, purple fine-striped vest, ochre shorts, cloven hand-hooves and hind feet. Short ROUND orange-brown BEAVER BOBO, cream broad muzzle, two flat buckteeth, small ears, TEAL vest, large FLAT CROSSHATCHED PADDLE TAIL, webbed hind feet and rounded front paws. Do not confuse beaver with mouse/otter. ONLY ONE RED BUCKET HAT WITH MUSTARD BAND exists, never worn by two animals or duplicated lying elsewhere. No real basket at all: the inverted hat is mistaken for a berry basket. Calm shallow-blue river with LEFT riverbank/big low grey flat-top rock and RIGHT low grassy islet completely surrounded by water; no steep cliffs, bridges or boats. Hat must always be where this moment specifies. STORY MOMENT s06 (never draw labels): 較近的小島鏡頭，波波在島上捧着唯一紅帽，帽口朝上，內有幾顆紅莓子；亮亮在遠方左岸張嘴驚訝。沒有真正野餐籃，只有帽子被誤認為籃子。 STRICT CURRENT STATE: HAT STATE: only beaver on island holds inverted hat with berries INSIDE. Goat small at far-left bank, bareheaded. Branch can rest on left bank; no true basket. Intentional MEDIUM view: beaver, hat and berries large at right foreground island, goat smaller at far-left bank, clear continuous river space. Natural bodies continue to ground or below lower canvas, no cut-off floating fragments.",
+      "source": "/workspace/generated_images/exec-63b178a9-7d84-489d-b568-0006e18ca95c.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "d2285ccf016e8662dbcf3fa05f4d3794c588e50cf6cba33dced3a95bec6f82b6"
+    },
+    {
+      "id": "s07",
+      "slug": "hat-come-back",
+      "file": "assets/illustrations/s07.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO anthropomorphic animals only when present in this moment: tall slim IVORY GOAT LIANGLIANG with long narrow muzzle, small horizontal-pupil eyes, short backward horns, long golden-inner ears, chin tuft, purple fine-striped vest, ochre shorts, cloven hand-hooves and hind feet. Short ROUND orange-brown BEAVER BOBO, cream broad muzzle, two flat buckteeth, small ears, TEAL vest, large FLAT CROSSHATCHED PADDLE TAIL, webbed hind feet and rounded front paws. Do not confuse beaver with mouse/otter. ONLY ONE RED BUCKET HAT WITH MUSTARD BAND exists, never worn by two animals or duplicated lying elsewhere. No real basket at all: the inverted hat is mistaken for a berry basket. Calm shallow-blue river with LEFT riverbank/big low grey flat-top rock and RIGHT low grassy islet completely surrounded by water; no steep cliffs, bridges or boats. Hat must always be where this moment specifies. STORY MOMENT s07 (never draw labels): 亮亮左岸一手指自己頭頂、一手朝島上說話；波波右島上把紅帽帽口朝上拿在胸前，幾顆莓子仍在裏面，低頭恍然；兩者隔着河水，不畫第二個波波。 STRICT CURRENT STATE: HAT STATE: beaver still holds inverted hat/berries on island, goat on left bank points at own bare head. No duplicate hats. Intentional MEDIUM view: beaver, hat and berries large at right foreground island, goat smaller at far-left bank, clear continuous river space. Natural bodies continue to ground or below lower canvas, no cut-off floating fragments.",
+      "source": "/workspace/generated_images/exec-d22c3044-363a-4f09-8505-9f3acfc9947f.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "0da263e185f5ba5bb5ffd78b985b183597bf35899cafc020af61d000fe8f7cd5"
+    },
+    {
+      "id": "s08",
+      "slug": "hat-come-back",
+      "file": "assets/illustrations/s08.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO anthropomorphic animals only when present in this moment: tall slim IVORY GOAT LIANGLIANG with long narrow muzzle, small horizontal-pupil eyes, short backward horns, long golden-inner ears, chin tuft, purple fine-striped vest, ochre shorts, cloven hand-hooves and hind feet. Short ROUND orange-brown BEAVER BOBO, cream broad muzzle, two flat buckteeth, small ears, TEAL vest, large FLAT CROSSHATCHED PADDLE TAIL, webbed hind feet and rounded front paws. Do not confuse beaver with mouse/otter. ONLY ONE RED BUCKET HAT WITH MUSTARD BAND exists, never worn by two animals or duplicated lying elsewhere. No real basket at all: the inverted hat is mistaken for a berry basket. Calm shallow-blue river with LEFT riverbank/big low grey flat-top rock and RIGHT low grassy islet completely surrounded by water; no steep cliffs, bridges or boats. Hat must always be where this moment specifies. STORY MOMENT s08 (never draw labels): 波波戴唯一紅帽，頭與眼睛清楚露出，游向左岸的亮亮；水面自然遮住下半身，一隻前爪把裝莓子的大葉子托在水面上，另一前爪及扁尾划水連貫。小島上沒有留下葉子或莓子，沒有帽子留在島上或河面。 STRICT CURRENT STATE: HAT STATE: beaver WEARS the ONE HAT while swimming towards left bank, EYES NOT COVERED, one paw holds the ONE LEAF WITH BERRIES ABOVE WATER, other paw and paddle tail swim. No hat, berries or leaf left on island. No second beaver. Keep whole connected figures and feet inside the canvas, with a little space around them.",
+      "source": "/workspace/generated_images/exec-fe267283-f02c-42a1-8cca-2d5f09ffe625.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "78b34a2e6e54a85b98faf90a50fe2ea124d6bd01454c78b26637cd60e02ff355"
+    },
+    {
+      "id": "s09",
+      "slug": "hat-come-back",
+      "file": "assets/illustrations/s09.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO anthropomorphic animals only when present in this moment: tall slim IVORY GOAT LIANGLIANG with long narrow muzzle, small horizontal-pupil eyes, short backward horns, long golden-inner ears, chin tuft, purple fine-striped vest, ochre shorts, cloven hand-hooves and hind feet. Short ROUND orange-brown BEAVER BOBO, cream broad muzzle, two flat buckteeth, small ears, TEAL vest, large FLAT CROSSHATCHED PADDLE TAIL, webbed hind feet and rounded front paws. Do not confuse beaver with mouse/otter. ONLY ONE RED BUCKET HAT WITH MUSTARD BAND exists, never worn by two animals or duplicated lying elsewhere. No real basket at all: the inverted hat is mistaken for a berry basket. Calm shallow-blue river with LEFT riverbank/big low grey flat-top rock and RIGHT low grassy islet completely surrounded by water; no steep cliffs, bridges or boats. Hat must always be where this moment specifies. STORY MOMENT s09 (never draw labels): 兩位朋友已在同一左岸，亮亮雙手接回紅帽，波波頭上沒有帽，攤爪笑；大葉子及莓子已由波波帶回岸邊放在大岩石上，沒有第二頂帽或真正籃子。 STRICT CURRENT STATE: HAT STATE: both animals on same LEFT BANK, goat receives ONE hat in hands, beaver bareheaded with open paws. Leaf and berries rest on rock beside them, branch on ground. Keep whole connected figures and feet inside the canvas, with a little space around them.",
+      "source": "/workspace/generated_images/exec-00a5b9b9-6251-4684-9b77-df144fa8cbe6.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "78887fdc2c048f58cdfdd4e53f2adb4a7cf7928fbbd8147d28e580ba5b03f22b"
+    },
+    {
+      "id": "s10",
+      "slug": "hat-come-back",
+      "file": "assets/illustrations/s10.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO anthropomorphic animals only when present in this moment: tall slim IVORY GOAT LIANGLIANG with long narrow muzzle, small horizontal-pupil eyes, short backward horns, long golden-inner ears, chin tuft, purple fine-striped vest, ochre shorts, cloven hand-hooves and hind feet. Short ROUND orange-brown BEAVER BOBO, cream broad muzzle, two flat buckteeth, small ears, TEAL vest, large FLAT CROSSHATCHED PADDLE TAIL, webbed hind feet and rounded front paws. Do not confuse beaver with mouse/otter. ONLY ONE RED BUCKET HAT WITH MUSTARD BAND exists, never worn by two animals or duplicated lying elsewhere. No real basket at all: the inverted hat is mistaken for a berry basket. Calm shallow-blue river with LEFT riverbank/big low grey flat-top rock and RIGHT low grassy islet completely surrounded by water; no steep cliffs, bridges or boats. Hat must always be where this moment specifies. STORY MOMENT s10 (never draw labels): 兩個朋友在左岸大岩石兩側，紅帽帽口向上放岩石上，莓子在帽裏；兩人各用一隻前掌按住帽沿以免風吹，笑着野餐。只有一頂帽，兩人頭上都沒有帽；大葉子空着放旁邊。 STRICT CURRENT STATE: HAT STATE: neither animal wears a hat. ONE inverted hat ON LEFT-BANK ROCK contains berries. Empty leaf on rock beside it. Both animals use one paw each to PRESS HAT BRIM DOWN against wind. No actual picnic basket. Keep whole connected figures and feet inside the canvas, with a little space around them.",
+      "source": "/workspace/generated_images/exec-41a10766-4dfd-4413-9ce6-2051e3e896f9.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "4b5daab3275e9259dc574e482772422f7fdfdb245aa168d45e9c13a4dfd06a84"
     }
   ],
   "characterBible": {

@@ -12,6 +12,149 @@
       "references": [],
       "transparentBackground": false,
       "sha256": "337e1c7253c3a5b0c371d9cca05b0bf0cf729bad6c110e95dcd47127f9e9ae36"
+    },
+    {
+      "id": "cover",
+      "slug": "your-majesty-please-sit",
+      "file": "assets/illustrations/cover.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO friends: small SLIM ivory RABBIT DINGDING, very long narrow ears with different bent tips, inverted-triangle face, SMALL slanted almond eyes, magenta triangular nose, freckles, two little flat teeth, INDIGO short overalls over cream tee, barefoot. Much BIGGER BROAD BLUE-GREY ELEPHANT YUANYUAN, huge fan ears, short upward-curling thick trunk, tiny drooping eyes, wide smile, NO tusks, BRICK RED waistcoat. Anthropomorphic two arms/two legs, no extra limb pair, not humans in animal costumes. Elephant bodyheight about1.6times rabbit excluding rabbit ears, much wider/heavier; keep relative scale. Exactly ONE TOY-SCALE SANDCASTLE on left/background, TWO round towers and ONE SMALL YELLOW TRIANGULAR FLAG. No one enters castle: seats are always OUTSIDE it to the right. Only damp sand seats/mounds, never wood chair or crown. Impressions are SHALLOW SANDY SIT MARKS, ankle-deep, never black deep holes. No nude human anatomy or crude detail, just rounded elephant body and soft oval sitting impression. COVER CUTOUT: rabbit LEFT politely invites elephant RIGHT to sit near one small sandcastle. A broad shallow elephant-sized sitting impression is visible in a low sand mound, elephant looks amused at the seat, rabbit grins. Both whole connected bodies including feet, one little yellow flag, no duplicate castle, no woodchair/crown. Fully TRANSPARENT background, compact composition, no upper text-gap requirement.",
+      "source": "/workspace/generated_images/exec-cbf088e7-ba99-4ba8-af72-26aeea2ae64d.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": true,
+      "sha256": "66e7c7128a03bc119f9e75b2ce27b2529b4ed76d6adfc2a74331b5ce728555e1"
+    },
+    {
+      "id": "s01",
+      "slug": "your-majesty-please-sit",
+      "file": "assets/illustrations/s01.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO friends: small SLIM ivory RABBIT DINGDING, very long narrow ears with different bent tips, inverted-triangle face, SMALL slanted almond eyes, magenta triangular nose, freckles, two little flat teeth, INDIGO short overalls over cream tee, barefoot. Much BIGGER BROAD BLUE-GREY ELEPHANT YUANYUAN, huge fan ears, short upward-curling thick trunk, tiny drooping eyes, wide smile, NO tusks, BRICK RED waistcoat. Anthropomorphic two arms/two legs, no extra limb pair, not humans in animal costumes. Elephant bodyheight about1.6times rabbit excluding rabbit ears, much wider/heavier; keep relative scale. Exactly ONE TOY-SCALE SANDCASTLE on left/background, TWO round towers and ONE SMALL YELLOW TRIANGULAR FLAG. No one enters castle: seats are always OUTSIDE it to the right. Only damp sand seats/mounds, never wood chair or crown. Impressions are SHALLOW SANDY SIT MARKS, ankle-deep, never black deep holes. No nude human anatomy or crude detail, just rounded elephant body and soft oval sitting impression. STORY MOMENT s01 (never draw labels): 淡金沙灘，左側擬人小白兔丁丁站在自己堆的一座小沙城堡旁，右側擬人大象圓圓前來。只有一座小城堡，兩個圓塔及一面小黃三角旗；城堡是玩具比例，不供動物走進去；人物全身完整。 STRICT CURRENT STATE: SEAT STATE: no seat or pit yet, only one intact small toy sandcastle, rabbit welcoming elephant. Keep whole connected figures and feet inside the canvas, with a little space around them.",
+      "source": "/workspace/generated_images/exec-f2abbdda-7adb-43d8-bcba-42a846ba2108.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "73e99ef095252f3f6c717c95c48ad2e3dabe51e34bf40032227786e3f39bf4d6"
+    },
+    {
+      "id": "s02",
+      "slug": "your-majesty-please-sit",
+      "file": "assets/illustrations/s02.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO friends: small SLIM ivory RABBIT DINGDING, very long narrow ears with different bent tips, inverted-triangle face, SMALL slanted almond eyes, magenta triangular nose, freckles, two little flat teeth, INDIGO short overalls over cream tee, barefoot. Much BIGGER BROAD BLUE-GREY ELEPHANT YUANYUAN, huge fan ears, short upward-curling thick trunk, tiny drooping eyes, wide smile, NO tusks, BRICK RED waistcoat. Anthropomorphic two arms/two legs, no extra limb pair, not humans in animal costumes. Elephant bodyheight about1.6times rabbit excluding rabbit ears, much wider/heavier; keep relative scale. Exactly ONE TOY-SCALE SANDCASTLE on left/background, TWO round towers and ONE SMALL YELLOW TRIANGULAR FLAG. No one enters castle: seats are always OUTSIDE it to the right. Only damp sand seats/mounds, never wood chair or crown. Impressions are SHALLOW SANDY SIT MARKS, ankle-deep, never black deep holes. No nude human anatomy or crude detail, just rounded elephant body and soft oval sitting impression. STORY MOMENT s02 (never draw labels): 丁丁在城堡左側向一把剛堆成的小沙椅做邀請動作，圓圓在右側看；小沙椅在城堡右前方，椅座約兔膝高、很小，還沒有被坐扁。 STRICT CURRENT STATE: SEAT STATE: ONE small SAND CHAIR outside castle, not yet flattened or sat on, rabbit inviting. Keep whole connected figures and feet inside the canvas, with a little space around them.",
+      "source": "/workspace/generated_images/exec-dea29bb8-eb90-4ec5-8ef6-caa8109e5e8f.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "0054c3a96b01282dffbfcf90d6bd3bbc3c675b460dab4c177a26e4f3fd02eeaf"
+    },
+    {
+      "id": "s03",
+      "slug": "your-majesty-please-sit",
+      "file": "assets/illustrations/s03.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO friends: small SLIM ivory RABBIT DINGDING, very long narrow ears with different bent tips, inverted-triangle face, SMALL slanted almond eyes, magenta triangular nose, freckles, two little flat teeth, INDIGO short overalls over cream tee, barefoot. Much BIGGER BROAD BLUE-GREY ELEPHANT YUANYUAN, huge fan ears, short upward-curling thick trunk, tiny drooping eyes, wide smile, NO tusks, BRICK RED waistcoat. Anthropomorphic two arms/two legs, no extra limb pair, not humans in animal costumes. Elephant bodyheight about1.6times rabbit excluding rabbit ears, much wider/heavier; keep relative scale. Exactly ONE TOY-SCALE SANDCASTLE on left/background, TWO round towers and ONE SMALL YELLOW TRIANGULAR FLAG. No one enters castle: seats are always OUTSIDE it to the right. Only damp sand seats/mounds, never wood chair or crown. Impressions are SHALLOW SANDY SIT MARKS, ankle-deep, never black deep holes. No nude human anatomy or crude detail, just rounded elephant body and soft oval sitting impression. STORY MOMENT s03 (never draw labels): 圓圓已坐到小沙椅上，小沙椅被牠的屁股壓平，下面一小圈扁濕沙可見；大象完整身體兩腳踩地、沒有壓壞左邊的城堡。丁丁左側驚訝張嘴，無第二把椅子。 STRICT CURRENT STATE: SEAT STATE: elephant NOW SITTING on former little sandchair, collapsed sand beneath bottom. No intact little chair, no empty pit until elephant stands. Keep whole connected figures and feet inside the canvas, with a little space around them.",
+      "source": "/workspace/generated_images/exec-f594a1e5-c11c-4731-8352-acc4f20f0536.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "05c52ad70e76e5f3bf20fa18c1ed75cbf8b0fdc1e33e2439b85c82fd084afc45"
+    },
+    {
+      "id": "s04",
+      "slug": "your-majesty-please-sit",
+      "file": "assets/illustrations/s04.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO friends: small SLIM ivory RABBIT DINGDING, very long narrow ears with different bent tips, inverted-triangle face, SMALL slanted almond eyes, magenta triangular nose, freckles, two little flat teeth, INDIGO short overalls over cream tee, barefoot. Much BIGGER BROAD BLUE-GREY ELEPHANT YUANYUAN, huge fan ears, short upward-curling thick trunk, tiny drooping eyes, wide smile, NO tusks, BRICK RED waistcoat. Anthropomorphic two arms/two legs, no extra limb pair, not humans in animal costumes. Elephant bodyheight about1.6times rabbit excluding rabbit ears, much wider/heavier; keep relative scale. Exactly ONE TOY-SCALE SANDCASTLE on left/background, TWO round towers and ONE SMALL YELLOW TRIANGULAR FLAG. No one enters castle: seats are always OUTSIDE it to the right. Only damp sand seats/mounds, never wood chair or crown. Impressions are SHALLOW SANDY SIT MARKS, ankle-deep, never black deep holes. No nude human anatomy or crude detail, just rounded elephant body and soft oval sitting impression. STORY MOMENT s04 (never draw labels): 圓圓已站起，轉頭看右前方的小淺坑，原小沙椅不復存在；丁丁在左側捂嘴笑，城堡和唯一小黃旗在左後保持完整；坑只有很淺的坐印，不是深洞。 STRICT CURRENT STATE: SEAT STATE: elephant STANDS beside ONLY ONE small shallow sitting mark, original little chair is GONE. Rabbit laughs. Castle intact. Keep whole connected figures and feet inside the canvas, with a little space around them.",
+      "source": "/workspace/generated_images/exec-2bc8d84f-17b8-42db-92e2-08248e5d0730.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "6bcc6d516899eba8b1cc7b0e78a5163f595a8a5edacfb7c12c0b5c000ecbaff3"
+    },
+    {
+      "id": "s05",
+      "slug": "your-majesty-please-sit",
+      "file": "assets/illustrations/s05.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO friends: small SLIM ivory RABBIT DINGDING, very long narrow ears with different bent tips, inverted-triangle face, SMALL slanted almond eyes, magenta triangular nose, freckles, two little flat teeth, INDIGO short overalls over cream tee, barefoot. Much BIGGER BROAD BLUE-GREY ELEPHANT YUANYUAN, huge fan ears, short upward-curling thick trunk, tiny drooping eyes, wide smile, NO tusks, BRICK RED waistcoat. Anthropomorphic two arms/two legs, no extra limb pair, not humans in animal costumes. Elephant bodyheight about1.6times rabbit excluding rabbit ears, much wider/heavier; keep relative scale. Exactly ONE TOY-SCALE SANDCASTLE on left/background, TWO round towers and ONE SMALL YELLOW TRIANGULAR FLAG. No one enters castle: seats are always OUTSIDE it to the right. Only damp sand seats/mounds, never wood chair or crown. Impressions are SHALLOW SANDY SIT MARKS, ankle-deep, never black deep holes. No nude human anatomy or crude detail, just rounded elephant body and soft oval sitting impression. STORY MOMENT s05 (never draw labels): 丁丁雙前掌推幾塊濕沙到城堡右前方，正在擴大原小椅的位置；圓圓在右側彎腰看，沒有先出現完成的大沙坡；原小坑在濕沙下將被填平。 STRICT CURRENT STATE: SEAT STATE: rabbit pushes wet sand lumps onto old seat location, not yet complete large mound. Old small pit being filled, no standing wood chair. Keep whole connected figures and feet inside the canvas, with a little space around them.",
+      "source": "/workspace/generated_images/exec-fd51c4bf-f297-472a-b593-8bec256553cf.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "ef04628d2c18f5a543f8d8d78cc82fedd1e8c7fa514cfec7bc4a1874b212658f"
+    },
+    {
+      "id": "s06",
+      "slug": "your-majesty-please-sit",
+      "file": "assets/illustrations/s06.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO friends: small SLIM ivory RABBIT DINGDING, very long narrow ears with different bent tips, inverted-triangle face, SMALL slanted almond eyes, magenta triangular nose, freckles, two little flat teeth, INDIGO short overalls over cream tee, barefoot. Much BIGGER BROAD BLUE-GREY ELEPHANT YUANYUAN, huge fan ears, short upward-curling thick trunk, tiny drooping eyes, wide smile, NO tusks, BRICK RED waistcoat. Anthropomorphic two arms/two legs, no extra limb pair, not humans in animal costumes. Elephant bodyheight about1.6times rabbit excluding rabbit ears, much wider/heavier; keep relative scale. Exactly ONE TOY-SCALE SANDCASTLE on left/background, TWO round towers and ONE SMALL YELLOW TRIANGULAR FLAG. No one enters castle: seats are always OUTSIDE it to the right. Only damp sand seats/mounds, never wood chair or crown. Impressions are SHALLOW SANDY SIT MARKS, ankle-deep, never black deep holes. No nude human anatomy or crude detail, just rounded elephant body and soft oval sitting impression. STORY MOMENT s06 (never draw labels): 城堡右前方新堆出一個寬低的濕沙坡，上方已拍平，可讓大象坐；丁丁用前掌拍平頂面，圓圓站右側準備，城堡左後未動，沒有木椅或工具。 STRICT CURRENT STATE: SEAT STATE: ONE LOW WIDE SAND MOUND with FLAT TOP has just been made, elephant still standing, no empty sitting impression yet. Keep whole connected figures and feet inside the canvas, with a little space around them.",
+      "source": "/workspace/generated_images/exec-6d4aea55-dec1-4ba5-a963-89f10a201d57.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "2fe4d12034ec36d9253f66a13f1c3d44eea789a2cbb67387296e885f0062602c"
+    },
+    {
+      "id": "s07",
+      "slug": "your-majesty-please-sit",
+      "file": "assets/illustrations/s07.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO friends: small SLIM ivory RABBIT DINGDING, very long narrow ears with different bent tips, inverted-triangle face, SMALL slanted almond eyes, magenta triangular nose, freckles, two little flat teeth, INDIGO short overalls over cream tee, barefoot. Much BIGGER BROAD BLUE-GREY ELEPHANT YUANYUAN, huge fan ears, short upward-curling thick trunk, tiny drooping eyes, wide smile, NO tusks, BRICK RED waistcoat. Anthropomorphic two arms/two legs, no extra limb pair, not humans in animal costumes. Elephant bodyheight about1.6times rabbit excluding rabbit ears, much wider/heavier; keep relative scale. Exactly ONE TOY-SCALE SANDCASTLE on left/background, TWO round towers and ONE SMALL YELLOW TRIANGULAR FLAG. No one enters castle: seats are always OUTSIDE it to the right. Only damp sand seats/mounds, never wood chair or crown. Impressions are SHALLOW SANDY SIT MARKS, ankle-deep, never black deep holes. No nude human anatomy or crude detail, just rounded elephant body and soft oval sitting impression. STORY MOMENT s07 (never draw labels): 圓圓完整身體穩坐在大沙坡頂部，兩腳着地，笑得舒適；丁丁站在左側自豪地看，大沙坡被稍壓低但尚未露出空坐印；一個城堡一面旗。 STRICT CURRENT STATE: SEAT STATE: elephant SITS STABLY ON the big LOW WIDE MOUND. The occupied mound is slightly compressed but no separate empty pit. Rabbit watches proudly. Keep whole connected figures and feet inside the canvas, with a little space around them.",
+      "source": "/workspace/generated_images/exec-82d748b7-6cf6-40b1-9cfc-a0fc68d8da96.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "1c284723ca30480764b952e64d8d9fd5ba5949acf7cde313361888dfa8a35f71"
+    },
+    {
+      "id": "s08",
+      "slug": "your-majesty-please-sit",
+      "file": "assets/illustrations/s08.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO friends: small SLIM ivory RABBIT DINGDING, very long narrow ears with different bent tips, inverted-triangle face, SMALL slanted almond eyes, magenta triangular nose, freckles, two little flat teeth, INDIGO short overalls over cream tee, barefoot. Much BIGGER BROAD BLUE-GREY ELEPHANT YUANYUAN, huge fan ears, short upward-curling thick trunk, tiny drooping eyes, wide smile, NO tusks, BRICK RED waistcoat. Anthropomorphic two arms/two legs, no extra limb pair, not humans in animal costumes. Elephant bodyheight about1.6times rabbit excluding rabbit ears, much wider/heavier; keep relative scale. Exactly ONE TOY-SCALE SANDCASTLE on left/background, TWO round towers and ONE SMALL YELLOW TRIANGULAR FLAG. No one enters castle: seats are always OUTSIDE it to the right. Only damp sand seats/mounds, never wood chair or crown. Impressions are SHALLOW SANDY SIT MARKS, ankle-deep, never black deep holes. No nude human anatomy or crude detail, just rounded elephant body and soft oval sitting impression. STORY MOMENT s08 (never draw labels): 圓圓已站在沙坡右邊，轉頭看坡上清楚的寬淺橢圓屁股坐印，前掌輕拍自己的屁股；丁丁左側驚喜，坐印只有約兔腳踝深，不能畫成深黑洞。 STRICT CURRENT STATE: SEAT STATE: elephant has STOOD UP beside big low mound, which now has ONE wide SHALLOW oval buttock sit-mark. Rabbit outside mark. NO second mound, no deep hole. Keep whole connected figures and feet inside the canvas, with a little space around them.",
+      "source": "/workspace/generated_images/exec-45566d62-9c7a-4db6-bf96-11ac871443ab.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "7aaefecba886379c1dc8a69d94a71dd58ba48361732b3dfbc1bb1dab4bbeb45f"
+    },
+    {
+      "id": "s09",
+      "slug": "your-majesty-please-sit",
+      "file": "assets/illustrations/s09.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO friends: small SLIM ivory RABBIT DINGDING, very long narrow ears with different bent tips, inverted-triangle face, SMALL slanted almond eyes, magenta triangular nose, freckles, two little flat teeth, INDIGO short overalls over cream tee, barefoot. Much BIGGER BROAD BLUE-GREY ELEPHANT YUANYUAN, huge fan ears, short upward-curling thick trunk, tiny drooping eyes, wide smile, NO tusks, BRICK RED waistcoat. Anthropomorphic two arms/two legs, no extra limb pair, not humans in animal costumes. Elephant bodyheight about1.6times rabbit excluding rabbit ears, much wider/heavier; keep relative scale. Exactly ONE TOY-SCALE SANDCASTLE on left/background, TWO round towers and ONE SMALL YELLOW TRIANGULAR FLAG. No one enters castle: seats are always OUTSIDE it to the right. Only damp sand seats/mounds, never wood chair or crown. Impressions are SHALLOW SANDY SIT MARKS, ankle-deep, never black deep holes. No nude human anatomy or crude detail, just rounded elephant body and soft oval sitting impression. STORY MOMENT s09 (never draw labels): 丁丁坐在寬淺坐印裏，完整頭、身體和兩隻長耳都露在沙面以上，腳可見；圓圓站在右側微笑看，城堡左後保持，不能只畫兩隻不連身體的耳朵。 STRICT CURRENT STATE: SEAT STATE: rabbit sits IN the wide SHALLOW sit-mark, head/body/ears and feet visible above shallow rim. Elephant standing beside. Never bury rabbit or show only detached ears. Keep whole connected figures and feet inside the canvas, with a little space around them.",
+      "source": "/workspace/generated_images/exec-793ed588-f126-4f39-99e3-06308d13d75e.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "404390b8dd69dc33772266912802e30f92ecd814928374170c5c4bb8cca8f2b6"
+    },
+    {
+      "id": "s10",
+      "slug": "your-majesty-please-sit",
+      "file": "assets/illustrations/s10.png",
+      "prompt": "ORIGINAL children's literary picturebook, dry COLOURED-PENCIL hatching and loose GRAPHITE outlines on WHITE PAPER, fine visible pencil texture, selective soft colours. Match supplied character and prop models exactly. One continuous landscape2:1 scene, NOT a collage, no panels or inset views. Reserve the TOP35–40% of the canvas as PURE WHITE EMPTY PAPER for native text; all art in lower60–65%. Keep faces and key objects OUTSIDE the centre45–55% binding strip. Complete connected bodies and limbs as appropriate; never floating heads, detached feet or extra hands. Natural expressive gestures, facial expressions vary with the action, not identical smiles. No letters, words, numbers, labels, captions, signs, speech balloons, watermark or generated typography. Not glossy3D, photographic, anime, plastic, watercolor haze or huge doll eyes. Exactly TWO friends: small SLIM ivory RABBIT DINGDING, very long narrow ears with different bent tips, inverted-triangle face, SMALL slanted almond eyes, magenta triangular nose, freckles, two little flat teeth, INDIGO short overalls over cream tee, barefoot. Much BIGGER BROAD BLUE-GREY ELEPHANT YUANYUAN, huge fan ears, short upward-curling thick trunk, tiny drooping eyes, wide smile, NO tusks, BRICK RED waistcoat. Anthropomorphic two arms/two legs, no extra limb pair, not humans in animal costumes. Elephant bodyheight about1.6times rabbit excluding rabbit ears, much wider/heavier; keep relative scale. Exactly ONE TOY-SCALE SANDCASTLE on left/background, TWO round towers and ONE SMALL YELLOW TRIANGULAR FLAG. No one enters castle: seats are always OUTSIDE it to the right. Only damp sand seats/mounds, never wood chair or crown. Impressions are SHALLOW SANDY SIT MARKS, ankle-deep, never black deep holes. No nude human anatomy or crude detail, just rounded elephant body and soft oval sitting impression. STORY MOMENT s10 (never draw labels): 丁丁坐在原寬淺坐印內，圓圓坐在其右旁平沙地上，兩位朋友都笑着招手；左後小城堡和小黃旗完整，沒有新增第二個城堡、深坑、皇冠或木椅。 STRICT CURRENT STATE: SEAT STATE: rabbit remains in ONE shallow sitting impression, elephant SITS ON FLAT SAND TO ITS RIGHT. Both together at castle outside. No extra castle, deep pit, throne or new chair. Keep whole connected figures and feet inside the canvas, with a little space around them.",
+      "source": "/workspace/generated_images/exec-4bd74ca6-402e-4538-9684-0b86ddaa9035.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "35b9cc4480edaabc9247ce51d34c5bd71b91e75f95069a57b6c50649ca29450f"
     }
   ],
   "characterBible": {
