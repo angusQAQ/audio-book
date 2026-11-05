@@ -1,6 +1,6 @@
 # 帽子，回來呀！
 
-7–9歲，以小二自主閱讀為主要目標。一陣風把山羊的新帽子吹過岩石、河岸與小島，朋友卻把帽子認作野餐籃；兩個朋友說清誤會，取回帽子，再一起把它變成野餐的小籃子。正文298漢字、10故事跨頁、14閱讀畫面、26單頁。已完成完整插畫、原生PDF／PPTX／SVG及實際LibreOffice／Inkscape驗證。
+7–9歲，以小二自主閱讀為主要目標。一陣風把山羊的新帽子吹過岩石、河岸與小島，朋友卻把帽子認作野餐籃；兩個朋友說清誤會，取回帽子，再一起把它變成野餐的小籃子。正文297漢字、10故事跨頁、14閱讀畫面、26單頁。已完成完整插畫、原生PDF／PPTX／SVG及實際LibreOffice／Inkscape驗證。
 
 - [跨頁PDF](https://angusqaq.github.io/audio-book/books/hat-come-back/exports/帽子，回來呀！_跨頁閱讀版.pdf)
 - [單頁PDF](https://angusqaq.github.io/audio-book/books/hat-come-back/exports/帽子，回來呀！_繪本.pdf)

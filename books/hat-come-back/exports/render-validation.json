@@ -28,11 +28,11 @@
     "s10",
     "lesson"
   ],
-  "officeRenderedPdfSha256": "0f676edb19528eda05aceae7e3c5ac3f0ffb7ff08ca55fcff4b1e7640b9a13c6",
+  "officeRenderedPdfSha256": "6e90170d22db816dda800297876b6ee457f78ab12628585bac3c50b0fd8399da",
   "files": {
-    "帽子，回來呀！_繪本.pdf": "a2908e011d89a1fdca23cb6becffb922e0703e352b42b63d435eeffa7a8fa584",
-    "帽子，回來呀！_可編輯排版.pptx": "df94f49dec3c9bad36a8d9b38da54858d0c12b2317effeea000d6161962348da",
-    "帽子，回來呀！_跨頁閱讀版.pdf": "05542d81b6db0f72379c03adefe17837c6093d5cc620612e0679cf91419f318d"
+    "帽子，回來呀！_繪本.pdf": "6e77725f3421cfac3d1f7ca49b7327c416a39630808df71350c12173d28ac3d6",
+    "帽子，回來呀！_可編輯排版.pptx": "8dd5de6212d75047c65172a62f3dbffb8e091c6d50ac013d237d89774924e2f0",
+    "帽子，回來呀！_跨頁閱讀版.pdf": "64ad7d2b1a86aebcd153bdedb918cbad4a2dbe0941540617e8208197efa30a11"
   },
   "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
 }

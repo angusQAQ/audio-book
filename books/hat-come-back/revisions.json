@@ -3,6 +3,32 @@
   "entries": [
     {
       "date": "2026-11-05",
+      "previousCommit": "96efb00a6b3af636c4c56393d425538866660be6",
+      "changes": [
+        {
+          "kind": "wording",
+          "id": "s03",
+          "before": "亮亮爬上岩石，伸手去抓帽沿。",
+          "after": "亮亮爬上岩石，伸手去抓帽子。",
+          "reason": "依使用者要求，將較難理解的部位名稱改為小二熟悉的帽子。"
+        },
+        {
+          "kind": "wording",
+          "id": "s10",
+          "before": "風又來了。這次，兩個朋友各按住一邊帽沿。",
+          "after": "風又來了。這次，兩個朋友一起按住帽子。",
+          "reason": "結尾同步簡化相同詞語；故事動作、結局及插畫保持一致。"
+        },
+        {
+          "kind": "source",
+          "reason": "同步理解問題答案、分鏡及替代文字；正文298改為297漢字。保留全部原始插畫與生成紀錄。"
+        }
+      ],
+      "storyHanBefore": 298,
+      "storyHanAfter": 297
+    },
+    {
+      "date": "2026-11-05",
       "previousCommit": "84a559ad98840bdc9a480e08d805841490462ac8",
       "changes": [
         {

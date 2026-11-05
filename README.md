@@ -186,7 +186,7 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 
 | 主題／書名 | 故事與核心字 | 成品 |
 | --- | --- | --- |
-| 山部《帽子，回來呀！》 | 追帽子引出朋友把帽子當籃子的誤會；核心峰、岩、岸、島。298漢字，14閱讀畫面／26單頁。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/hat-come-back/exports/帽子，回來呀！_跨頁閱讀版.pdf)・[單頁PDF](https://angusqaq.github.io/audio-book/books/hat-come-back/exports/帽子，回來呀！_繪本.pdf)・[PowerPoint](https://angusqaq.github.io/audio-book/books/hat-come-back/exports/帽子，回來呀！_可編輯排版.pptx) |
+| 山部《帽子，回來呀！》 | 追帽子引出朋友把帽子當籃子的誤會；核心峰、岩、岸、島。297漢字，14閱讀畫面／26單頁。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/hat-come-back/exports/帽子，回來呀！_跨頁閱讀版.pdf)・[單頁PDF](https://angusqaq.github.io/audio-book/books/hat-come-back/exports/帽子，回來呀！_繪本.pdf)・[PowerPoint](https://angusqaq.github.io/audio-book/books/hat-come-back/exports/帽子，回來呀！_可編輯排版.pptx) |
 | 土部《國王，請坐！》 | 小沙椅坐扁了，小兔另做大沙椅，最後兩個國王都有座位；核心城、堡、堆、坡、坑、塊。244漢字，14閱讀畫面／26單頁。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/your-majesty-please-sit/exports/國王，請坐！_跨頁閱讀版.pdf)・[單頁PDF](https://angusqaq.github.io/audio-book/books/your-majesty-please-sit/exports/國王，請坐！_繪本.pdf)・[PowerPoint](https://angusqaq.github.io/audio-book/books/your-majesty-please-sit/exports/國王，請坐！_可編輯排版.pptx) |
 | 力部《我的雨靴不肯走！》 | 媽媽幫忙拔出孩子，雨靴卻留在泥裏，兩人再取回靴子與球；核心動、加、助、努、功。274漢字，16閱讀畫面／30單頁。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/my-boots-wont-budge/exports/我的雨靴不肯走！_跨頁閱讀版.pdf)・[單頁PDF](https://angusqaq.github.io/audio-book/books/my-boots-wont-budge/exports/我的雨靴不肯走！_繪本.pdf)・[PowerPoint](https://angusqaq.github.io/audio-book/books/my-boots-wont-budge/exports/我的雨靴不肯走！_可編輯排版.pptx) |
 
