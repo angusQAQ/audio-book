@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-05",
+  "dataset": "Unicode 17.0 kRSUnicode",
+  "source": "https://github.com/unicode-org/unicodetools/blob/578f6c0516f5f268292ebda50b51848407a06478/unicodetools/data/ucd/17.0.0/Unihan/kRSUnicode.txt",
+  "sha256": "481f8a3d2fda0c6b8e6f7c746a0eedfb145a62f30bf6e61527a8f7cdb2a99108",
+  "entries": {
+    "力": {
+      "codepoint": "U+529B",
+      "kRSUnicode": "19.0",
+      "sourceLine": "529B\t19.0"
+    },
+    "功": {
+      "codepoint": "U+529F",
+      "kRSUnicode": "19.3",
+      "sourceLine": "529F..52A2\t19.3"
+    },
+    "加": {
+      "codepoint": "U+52A0",
+      "kRSUnicode": "19.3",
+      "sourceLine": "529F..52A2\t19.3"
+    },
+    "助": {
+      "codepoint": "U+52A9",
+      "kRSUnicode": "19.5",
+      "sourceLine": "52A9..52B2\t19.5"
+    },
+    "努": {
+      "codepoint": "U+52AA",
+      "kRSUnicode": "19.5",
+      "sourceLine": "52A9..52B2\t19.5"
+    },
+    "動": {
+      "codepoint": "U+52D5",
+      "kRSUnicode": "19.9",
+      "sourceLine": "52D2..52D6\t19.9"
+    },
+    "木": {
+      "codepoint": "U+6728",
+      "kRSUnicode": "75.0",
+      "sourceLine": "6728..6729\t75.0"
+    },
+    "東": {
+      "codepoint": "U+6771",
+      "kRSUnicode": "75.4",
+      "sourceLine": "676A..6780\t75.4"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-05",
+  "dataset": "Unicode 17.0 kRSUnicode",
+  "source": "https://github.com/unicode-org/unicodetools/blob/578f6c0516f5f268292ebda50b51848407a06478/unicodetools/data/ucd/17.0.0/Unihan/kRSUnicode.txt",
+  "sha256": "481f8a3d2fda0c6b8e6f7c746a0eedfb145a62f30bf6e61527a8f7cdb2a99108",
+  "entries": {
+    "丁": {
+      "codepoint": "U+4E01",
+      "kRSUnicode": "1.1",
+      "sourceLine": "4E01..4E06\t1.1"
+    },
+    "口": {
+      "codepoint": "U+53E3",
+      "kRSUnicode": "30.0",
+      "sourceLine": "53E3\t30.0"
+    },
+    "圓": {
+      "codepoint": "U+5713",
+      "kRSUnicode": "31.10",
+      "sourceLine": "5711..5715\t31.10"
+    },
+    "土": {
+      "codepoint": "U+571F",
+      "kRSUnicode": "32.0",
+      "sourceLine": "571F\t32.0"
+    },
+    "坑": {
+      "codepoint": "U+5751",
+      "kRSUnicode": "32.4",
+      "sourceLine": "573B..5760\t32.4"
+    },
+    "坡": {
+      "codepoint": "U+5761",
+      "kRSUnicode": "32.5",
+      "sourceLine": "5761..5781\t32.5"
+    },
+    "城": {
+      "codepoint": "U+57CE",
+      "kRSUnicode": "32.6",
+      "sourceLine": "57CE\t32.6"
+    },
+    "堆": {
+      "codepoint": "U+5806",
+      "kRSUnicode": "32.8",
+      "sourceLine": "57EB..5814\t32.8"
+    },
+    "堡": {
+      "codepoint": "U+5821",
+      "kRSUnicode": "32.9",
+      "sourceLine": "5815..583C\t32.9"
+    },
+    "塊": {
+      "codepoint": "U+584A",
+      "kRSUnicode": "32.10",
+      "sourceLine": "5849..585E\t32.10"
+    }
+  }
+}

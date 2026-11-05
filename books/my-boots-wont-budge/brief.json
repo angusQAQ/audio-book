@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "book": {
+    "slug": "my-boots-wont-budge",
+    "title": "我的雨靴不肯走！",
+    "language": "zh-HK"
+  },
+  "audience": {
+    "ageMin": 7,
+    "ageMax": 9,
+    "readingMode": "independent",
+    "readingAbility": "以小二自主閱讀為主要目標",
+    "accessibilityNeeds": []
+  },
+  "theme": "雨後踢球時，孩子的雨靴陷在淺軟泥裏；媽媽拉出了孩子，雨靴卻留在原處。母子再各拔一靴，孩子繞草邊拿回球，把空雨靴放成球門，完成最初踢球的願望。",
+  "content": {
+    "mode": "original",
+    "request": "獨立設計以漢字力部首為主題的兒童故事繪本。",
+    "requiredElements": [
+      "起因、經過、結果清楚",
+      "引起好奇的行動、嘗試與笑點",
+      "姓名疊字、避開主題部首並附專名號",
+      "人物樣貌另作，親子共同五官可辨",
+      "字目150%手寫楷體"
+    ],
+    "avoidElements": [
+      "生字排列取代故事",
+      "難懂知識講解",
+      "只更換前作人物衣服或道具",
+      "把童話動物當科學知識解釋"
+    ],
+    "sourceTextPaths": [
+      "story.json"
+    ],
+    "references": [
+      {
+        "title": "生日會",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 16,
+        "sha256": "8f67a3121f40ebaa67844db1918eccb9c7f21bdc4faeacf4acd98557499d9eaf",
+        "source": "使用者附件，未重新公開原 PDF"
+      },
+      {
+        "title": "跟屁蟲",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 17,
+        "sha256": "abfb8339a9bbcb41fa25d914a9c1bff836b7ffc986eaa04077252a5d48a5a8fe",
+        "source": "使用者附件，未重新公開原 PDF"
+      }
+    ],
+    "learningGoals": [
+      "從完整故事認識所選部首字",
+      "理解人物目標、嘗試、後果與解法"
+    ],
+    "targetCharacters": [
+      "動",
+      "加",
+      "助",
+      "努",
+      "功"
+    ],
+    "characterNames": [
+      "東東"
+    ]
+  },
+  "design": {
+    "artDirection": "石墨與乾色鉛筆、大留白；本書另設角色、道具與配色，近鏡和全景交替。",
+    "palette": [
+      "#FFFFFF",
+      "#DCEBE1",
+      "#35483E",
+      "#758A7D",
+      "#E18D3E",
+      "#7A638A"
+    ],
+    "pageSize": {
+      "width": 960,
+      "height": 600,
+      "unit": "pt"
+    },
+    "storySpreads": 12,
+    "wordBudget": 274,
+    "bodyFont": "Iansui",
+    "emphasisFont": "JyunsaiKaai Bold",
+    "emphasisScale": 1.5,
+    "properNameMarks": true
+  },
+  "deliverables": {
+    "formats": [
+      "pdf-spread",
+      "pdf-single",
+      "pptx",
+      "svg"
+    ],
+    "readAlong": false,
+    "audio": null
+  },
+  "publication": {
+    "github": true,
+    "permanentWebsite": true,
+    "destination": "https://angusqaq.github.io/audio-book/"
+  },
+  "decisions": {
+    "userRequirements": [
+      "本次確認三書均為7–9歲、小二自主閱讀、完整插畫PDF＋可編輯排版檔",
+      "沿用人物命名、部首查核、原圖保留及Git／永久網站規則"
+    ],
+    "editorialChoices": [
+      "正文274漢字，12故事跨頁、16閱讀畫面、30單頁，依本書情節選定",
+      "人物、字目、情節及分鏡獨立創作",
+      "未做學生試讀，不把檔案檢查當成閱讀成效實證"
+    ],
+    "unresolvedQuestions": []
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-05",
+  "dataset": "Unicode 17.0 kRSUnicode",
+  "source": "https://github.com/unicode-org/unicodetools/blob/578f6c0516f5f268292ebda50b51848407a06478/unicodetools/data/ucd/17.0.0/Unihan/kRSUnicode.txt",
+  "sha256": "481f8a3d2fda0c6b8e6f7c746a0eedfb145a62f30bf6e61527a8f7cdb2a99108",
+  "entries": {
+    "亮": {
+      "codepoint": "U+4EAE",
+      "kRSUnicode": "8.7",
+      "sourceLine": "4EAD..4EB1\t8.7"
+    },
+    "山": {
+      "codepoint": "U+5C71",
+      "kRSUnicode": "46.0",
+      "sourceLine": "5C71\t46.0"
+    },
+    "岩": {
+      "codepoint": "U+5CA9",
+      "kRSUnicode": "46.5",
+      "sourceLine": "5C9D..5CC5\t46.5"
+    },
+    "岸": {
+      "codepoint": "U+5CB8",
+      "kRSUnicode": "46.5",
+      "sourceLine": "5C9D..5CC5\t46.5"
+    },
+    "峰": {
+      "codepoint": "U+5CF0",
+      "kRSUnicode": "46.7",
+      "sourceLine": "5CE8..5D05\t46.7"
+    },
+    "島": {
+      "codepoint": "U+5CF6",
+      "kRSUnicode": "46.7",
+      "sourceLine": "5CE8..5D05\t46.7"
+    },
+    "手": {
+      "codepoint": "U+624B",
+      "kRSUnicode": "64.0",
+      "sourceLine": "624B..624D\t64.0"
+    },
+    "波": {
+      "codepoint": "U+6CE2",
+      "kRSUnicode": "85.5",
+      "sourceLine": "6CDB..6CF4\t85.5"
+    }
+  }
+}
