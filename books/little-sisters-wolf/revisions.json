@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "date": "2026-11-05",
+      "previousCommit": "0f40332",
+      "changes": [
+        {
+          "id": "s06",
+          "kind": "artwork",
+          "reason": "修正姐姐戴小兔、妹妹戴灰狼，保持角色分配。",
+          "beforeSha256": "6a69f5ee9d59df9a7a3a149b74b701ac03e88058f39144d4cc708059c3e17840",
+          "afterSha256": "3ad8cc8998f4c4e8154926bdd463e66e7011b0824cdd9e3b275db65df850ab04"
+        },
+        {
+          "id": "s11",
+          "kind": "artwork",
+          "reason": "妹妹坐回地上，桌面只放手偶與空碟。",
+          "beforeSha256": "bae7840dea46f3146b39d8cb4520c0c15551cbaf7e4b274419ef5aff51ae90b3",
+          "afterSha256": "cc8262f64b1b20a353a1838aee0fb90838fe0c8d09f388f3edda53a5d26b3fa1"
+        },
+        {
+          "kind": "layout",
+          "reason": "原生裁切隔離模型，排除鄰近人物和下一行頭髮邊緣；保留面板原縮放及模型原圖，短化顯示用年齡標籤避免孤字換行。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "date": "2026-11-05",
+      "previousCommit": "0f40332",
+      "changes": [
+        {
+          "id": "s05",
+          "kind": "artwork",
+          "reason": "鼓包及接觸動作固定在左床，避免兩床之間跳位。",
+          "beforeSha256": "0fdfde0c687e19b95bbc1b0189f56adfa8cf0e89b8b82928a9c089d51acfad4d",
+          "afterSha256": "a252e90e940a8c63e06b6940cf59ce20e1be14ea13b70af1a43d377d1e6d0778"
+        },
+        {
+          "id": "s07",
+          "kind": "artwork",
+          "reason": "被套及尾巴留在左床，避免突然滑到地上。",
+          "beforeSha256": "45627d7b7b46e01bd12fd1940a91da51d76408c75c449d0c363d341f5dd11cc9",
+          "afterSha256": "c3baabf54bd9f680a05a38d89194d3f1ff6c101787a5c64ec8195fe974cc9de9"
+        },
+        {
+          "kind": "text",
+          "id": "s04",
+          "before": "被子還沒拿來，\n被套卻鼓了起來。",
+          "after": "被子還沒放進去，\n被套卻鼓了起來。",
+          "reason": "已取來的被芯仍在床外，鼓包發生在裝入之前，與插畫的時間順序一致。"
+        },
+        {
+          "id": "s10",
+          "kind": "artwork",
+          "reason": "小貓從同一張左床被套跳出，右床保持平放。",
+          "beforeSha256": "763d3db7e41cb10f2705857cdebcdb4c9435b04f11d96c3a858924c7a82707cb",
+          "afterSha256": "a482312527eec2528b34a56a498b013cefa46c52d7f4aec1da46d2555a6475b8"
+        },
+        {
+          "kind": "layout",
+          "reason": "原生裁切隔離模型，排除鄰近人物和下一行頭髮邊緣；保留面板原縮放及模型原圖，短化顯示用年齡標籤避免孤字換行。"
+        }
+      ]
+    }
+  ]
+}

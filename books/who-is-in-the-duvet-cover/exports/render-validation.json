@@ -1,0 +1,37 @@
+{
+  "status": "verified",
+  "date": "2026-11-05",
+  "officePages": 16,
+  "officeTextMatchesEveryPage": true,
+  "actualOfficeFonts": [
+    "Iansui-Regular",
+    "JyunsaiKaai-Bold"
+  ],
+  "officeTargetFontAndSizeVerified": true,
+  "audienceCaptionsSingleLineVerified": 2,
+  "properNameRulesVerified": 20,
+  "ordinaryCharactersNotEnlarged": [
+    "大"
+  ],
+  "storyTextImageCollisionChecks": 15,
+  "radicalEntriesVerified": 10,
+  "svgActualRenders": [
+    "s01",
+    "s03",
+    "s04",
+    "s06",
+    "s07",
+    "s09",
+    "s10",
+    "s11",
+    "s12",
+    "lesson"
+  ],
+  "officeRenderedPdfSha256": "c29a2fc5110836f1cfc519ef8e28e250e5d555f2c3e86036e5b2d7840895356e",
+  "files": {
+    "誰躲在被套裏？_可編輯排版.pptx": "f596ee91f06a3ca89c112cbc81d86fe48167ef33c32aa64660f322444efbc1b7",
+    "誰躲在被套裏？_跨頁閱讀版.pdf": "ee770f691d4481005d0fd54332acf053005774cd3f2d3bdc2297813c4e85d324",
+    "誰躲在被套裏？_繪本.pdf": "1fb6373bb9fb40144208b2ab46ec57d2788bd951b95dfcba46e732daf6053501"
+  },
+  "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
+}

@@ -21,11 +21,16 @@ def verify(office_pdf, svg_renders):
     layouts = book.pages(False)
     document = fitz.open(office_pdf)
     assert len(document) == len(layouts)
-    fonts, marks, collision_checks = set(), 0, 0
+    fonts, marks, collision_checks, caption_checks = set(), 0, 0, 0
     thumbnails = []
     for layout, page in zip(layouts, document):
         text_items = [item for item in layout['items'] if item['kind'] == 'text']
         assert normalized(''.join(item['text'] for item in text_items)) == normalized(page.get_text()), (layout['id'], 'Office text changed')
+        for item in text_items:
+            if item['text'].startswith('原創繁體中文繪本'):
+                matches = page.search_for(item['text'])
+                assert matches and max(rect.y0 for rect in matches)-min(rect.y0 for rect in matches)<.2, (layout['id'], 'Audience caption wrapped')
+                caption_checks += 1
         spans = [span for block in page.get_text('rawdict')['blocks'] if 'lines' in block
                  for line in block['lines'] for span in line['spans']]
         fonts.update(span['font'] for span in spans)
@@ -84,7 +89,7 @@ def verify(office_pdf, svg_renders):
     report = {
         'status':'verified','date':'2026-11-05','officePages':len(document),
         'officeTextMatchesEveryPage':True,'actualOfficeFonts':sorted(fonts),
-        'officeTargetFontAndSizeVerified':True,'properNameRulesVerified':marks,
+        'officeTargetFontAndSizeVerified':True,'audienceCaptionsSingleLineVerified':caption_checks,'properNameRulesVerified':marks,
         'ordinaryCharactersNotEnlarged':sorted(book.NORMAL_CHARACTERS),
         'storyTextImageCollisionChecks':collision_checks,'radicalEntriesVerified':len(facts),
         'svgActualRenders':['s01', 's03', 's04', 's06', 's07', 's09', 's10', 's11', 's12', 'lesson'],

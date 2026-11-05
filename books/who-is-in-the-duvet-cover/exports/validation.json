@@ -1,0 +1,54 @@
+{
+  "status": "complete",
+  "spreadPages": 16,
+  "singlePages": 30,
+  "editableSlides": 16,
+  "missingGlyphs": [],
+  "allTextEditable": true,
+  "originalArtworkHashesVerified": 15,
+  "properNameRadicals": {
+    "卓": 24,
+    "團": 31,
+    "言": 149
+  },
+  "properNamesAvoidThemeRadical": true,
+  "properNameMarks": {
+    "names": {
+      "言言": 6,
+      "卓卓": 7,
+      "團團": 7
+    },
+    "style": "continuous rule below each full name",
+    "pdfPptxSvgGeometryVerified": true,
+    "editableTextAndRuleGrouped": true
+  },
+  "targetTypography": {
+    "font": "JyunsaiKaai",
+    "bodyScale": 1.5,
+    "pdfAndPptxRunsVerified": true,
+    "handwrittenGlyphs": {
+      "套": 13,
+      "天": 5,
+      "夾": 5,
+      "奇": 6,
+      "太": 7
+    }
+  },
+  "normalCharacterTypography": {
+    "characters": [
+      "大"
+    ],
+    "bodyScale": 1,
+    "font": "Iansui",
+    "pdfAndPptxRunsVerified": true,
+    "svgRunsVerified": true
+  },
+  "storyHanCharacters": 304,
+  "targets": {
+    "天": 5,
+    "太": 7,
+    "奇": 6,
+    "套": 14,
+    "夾": 5
+  }
+}

@@ -95,14 +95,32 @@
       "id": "s06",
       "slug": "little-sisters-wolf",
       "file": "assets/illustrations/s06.png",
-      "prompt": "ORIGINAL Chinese children's literary picturebook scene. Fine loose graphite and DRY COLOURED-PENCIL texture on pure WHITE paper, selective coral/berry-purple/jade/ochre accents. Follow supplied THREE-PERSON FAMILY and PROP sheets exactly. Sisters share upturned nose tips, rising fine eyebrows and cheek dimple with their grandma; older slender pear face with SHORT rope-twist braids and purple shirt/ochre shorts; younger five-year-old twin SMALL SIDE BUNS, coral overalls/ivory tee; tall slim old grandmother long silver side braid, jade blouse/purple trousers, NO glasses. One rabbit ivory/mint and one grey wolf handpuppet, NOT real animals. Exactly two puppets total; do not duplicate as props and worn versions. One low walnut table, ONE jade-cushioned wooden armchair at RIGHT. ONLY these three humans, no extra people. Three human faces, natural expressions appropriate to each action, two arms per person with connected human hands. Puppet sleeves worn on children's hands must visibly connect to their forearm; puppets never replace their heads. No character, face, puppet or important object at centre seam (45–55% canvas width); the younger child can be just right of centre. All bodies/feet remain connected and within the picture. Camera wide-to-medium WIDE LANDSCAPE 2:1 frame. Upper35–40% of canvas must be PURE WHITE EMPTY paper for native Chinese text; all illustration clustered in LOWER60–65%. Full paper background, no rectangular colored panel, no generated text, letters, numbers, signs, labels, borders, captions, speech balloons or watermark. Not watercolor haze, glossy3D, anime, photographic or huge doll eyes. STORY MOMENT s06 (do not print): 星星向可可側身低聲提醒，手偶保持戴着，兩個人的手臂與手偶有清楚連接；可可側耳聽，奶奶右側等候。 Native text context only (DO NOT draw or print text): 姐姐湊近妹妹，\n輕聲提醒她： 「大灰狼要追小兔子，\n小兔子才會逃走呀！」 NO plate, biscuit or food anywhere in this scene.",
-      "source": "/workspace/generated_images/exec-6510ecb2-ae66-4db5-91a8-d6a993faf9ec.png",
+      "prompt": "Make ONE precise continuity correction to this exact full landscape pencil illustration. The two HAND PUPPETS are currently on the wrong children. SWAP ONLY THE PUPPETS: the ELDER girl in PURPLE at LEFT must wear the IVORY RABBIT with pink ears/nose and MINT GREEN sleeve on her existing raised hand. The LITTLE girl in CORAL overalls at MIDDLE must wear the SLATE-GREY WOLF with black round nose, amber eyes, red felt mouth and TWO blunt cream upper teeth on her existing raised hand. Keep the girls' original hands/forearms naturally connected into each puppet sleeve. One rabbit and one wolf total, no duplicates. Preserve ALL human faces, whispering/attentive expressions, hair, clothing, whole connected bodies/feet, grandma seated RIGHT, armchair, empty low table LEFT, white upper text area, exact canvas and dry coloured-pencil style. No other changes, no text, food or extra people. Return complete full original picture with just the swapped puppet identities corrected.",
+      "source": "/workspace/generated_images/exec-558ae07f-ba2b-448d-a337-52b628825961.png",
       "references": [
-        "assets/characters.png",
-        "assets/props.png"
+        {
+          "commit": "0f40332",
+          "file": "assets/illustrations/s06.png",
+          "sha256": "6a69f5ee9d59df9a7a3a149b74b701ac03e88058f39144d4cc708059c3e17840"
+        }
       ],
       "transparentBackground": false,
-      "sha256": "6a69f5ee9d59df9a7a3a149b74b701ac03e88058f39144d4cc708059c3e17840"
+      "sha256": "3ad8cc8998f4c4e8154926bdd463e66e7011b0824cdd9e3b275db65df850ab04",
+      "previousVersions": [
+        {
+          "id": "s06",
+          "slug": "little-sisters-wolf",
+          "file": "assets/illustrations/s06.png",
+          "prompt": "ORIGINAL Chinese children's literary picturebook scene. Fine loose graphite and DRY COLOURED-PENCIL texture on pure WHITE paper, selective coral/berry-purple/jade/ochre accents. Follow supplied THREE-PERSON FAMILY and PROP sheets exactly. Sisters share upturned nose tips, rising fine eyebrows and cheek dimple with their grandma; older slender pear face with SHORT rope-twist braids and purple shirt/ochre shorts; younger five-year-old twin SMALL SIDE BUNS, coral overalls/ivory tee; tall slim old grandmother long silver side braid, jade blouse/purple trousers, NO glasses. One rabbit ivory/mint and one grey wolf handpuppet, NOT real animals. Exactly two puppets total; do not duplicate as props and worn versions. One low walnut table, ONE jade-cushioned wooden armchair at RIGHT. ONLY these three humans, no extra people. Three human faces, natural expressions appropriate to each action, two arms per person with connected human hands. Puppet sleeves worn on children's hands must visibly connect to their forearm; puppets never replace their heads. No character, face, puppet or important object at centre seam (45–55% canvas width); the younger child can be just right of centre. All bodies/feet remain connected and within the picture. Camera wide-to-medium WIDE LANDSCAPE 2:1 frame. Upper35–40% of canvas must be PURE WHITE EMPTY paper for native Chinese text; all illustration clustered in LOWER60–65%. Full paper background, no rectangular colored panel, no generated text, letters, numbers, signs, labels, borders, captions, speech balloons or watermark. Not watercolor haze, glossy3D, anime, photographic or huge doll eyes. STORY MOMENT s06 (do not print): 星星向可可側身低聲提醒，手偶保持戴着，兩個人的手臂與手偶有清楚連接；可可側耳聽，奶奶右側等候。 Native text context only (DO NOT draw or print text): 姐姐湊近妹妹，\n輕聲提醒她： 「大灰狼要追小兔子，\n小兔子才會逃走呀！」 NO plate, biscuit or food anywhere in this scene.",
+          "source": "/workspace/generated_images/exec-6510ecb2-ae66-4db5-91a8-d6a993faf9ec.png",
+          "references": [
+            "assets/characters.png",
+            "assets/props.png"
+          ],
+          "transparentBackground": false,
+          "sha256": "6a69f5ee9d59df9a7a3a149b74b701ac03e88058f39144d4cc708059c3e17840"
+        }
+      ]
     },
     {
       "id": "s07",
@@ -134,14 +152,32 @@
       "id": "s11",
       "slug": "little-sisters-wolf",
       "file": "assets/illustrations/s11.png",
-      "prompt": "ORIGINAL Chinese children's literary picturebook scene. Fine loose graphite and DRY COLOURED-PENCIL texture on pure WHITE paper, selective coral/berry-purple/jade/ochre accents. Follow supplied THREE-PERSON FAMILY and PROP sheets exactly. Sisters share upturned nose tips, rising fine eyebrows and cheek dimple with their grandma; older slender pear face with SHORT rope-twist braids and purple shirt/ochre shorts; younger five-year-old twin SMALL SIDE BUNS, coral overalls/ivory tee; tall slim old grandmother long silver side braid, jade blouse/purple trousers, NO glasses. One rabbit ivory/mint and one grey wolf handpuppet, NOT real animals. Exactly two puppets total; do not duplicate as props and worn versions. One low walnut table, ONE jade-cushioned wooden armchair at RIGHT. ONLY these three humans, no extra people. Three human faces, natural expressions appropriate to each action, two arms per person with connected human hands. Puppet sleeves worn on children's hands must visibly connect to their forearm; puppets never replace their heads. No character, face, puppet or important object at centre seam (45–55% canvas width); the younger child can be just right of centre. All bodies/feet remain connected and within the picture. Camera wide-to-medium WIDE LANDSCAPE 2:1 frame. Upper35–40% of canvas must be PURE WHITE EMPTY paper for native Chinese text; all illustration clustered in LOWER60–65%. Full paper background, no rectangular colored panel, no generated text, letters, numbers, signs, labels, borders, captions, speech balloons or watermark. Not watercolor haze, glossy3D, anime, photographic or huge doll eyes. STORY MOMENT s11 (do not print): 低桌奶白小碟是空的，兩個手偶仍平放遠側；三個人手上已沒有餅乾。可可用手指自己的肚子、大笑，嘴角有一點細餅乾屑，奶奶看空碟逗她，姐姐笑。 Native text context only (DO NOT draw or print text): 奶奶看看空盤子：\n「餅乾都到哪裏去了？」 可可指指自己的肚子：\n「在這裏！大灰狼沒吃，\n是我吃的！」 No biscuit in hands, empty plate, both puppets on table, slight crumbs at little sister mouth.",
-      "source": "/workspace/generated_images/exec-1d83e361-adcf-494b-b7dd-d5d385202b9d.png",
+      "prompt": "Make ONE precise posture correction to this exact complete wide landscape illustration, preserving original pencil artwork, paper, faces, clothes, grandma in her chair at RIGHT, elder sister at LEFT, walnut table, TWO puppets lying on table and EMPTY IVORY PLATE. The LITTLE GIRL in coral overalls currently sits cross-legged ON TOP of the table. Move ONLY that little girl OFF THE TABLE to sit cross-legged on the FLOOR just IN FRONT OF AND TO THE RIGHT OF the low table, still between elder sister and grandmother. She must point at her own belly and laugh exactly as before, her whole connected body, two arms, two folded legs and both red strap shoes visible. Her head must now be lower than grandmother's shoulder. Keep the tabletop entirely free of human body parts: only the two empty handpuppets and the empty plate remain on it, clearly visible. Keep the original identical little girl's face, side-bun hairstyle and scale relative to the sister; do NOT shrink just her head or detach limbs. Preserve all other people, furnishings, colours, composition, white upper text space and exact dry coloured-pencil style; return complete entire original canvas. No food in anyone's hand, no extra people or puppets, no words or labels.",
+      "source": "/workspace/generated_images/exec-76f4dc41-a152-473c-b167-b5c30166c861.png",
       "references": [
-        "assets/characters.png",
-        "assets/props.png"
+        {
+          "commit": "0f40332",
+          "file": "assets/illustrations/s11.png",
+          "sha256": "bae7840dea46f3146b39d8cb4520c0c15551cbaf7e4b274419ef5aff51ae90b3"
+        }
       ],
       "transparentBackground": false,
-      "sha256": "bae7840dea46f3146b39d8cb4520c0c15551cbaf7e4b274419ef5aff51ae90b3"
+      "sha256": "cc8262f64b1b20a353a1838aee0fb90838fe0c8d09f388f3edda53a5d26b3fa1",
+      "previousVersions": [
+        {
+          "id": "s11",
+          "slug": "little-sisters-wolf",
+          "file": "assets/illustrations/s11.png",
+          "prompt": "ORIGINAL Chinese children's literary picturebook scene. Fine loose graphite and DRY COLOURED-PENCIL texture on pure WHITE paper, selective coral/berry-purple/jade/ochre accents. Follow supplied THREE-PERSON FAMILY and PROP sheets exactly. Sisters share upturned nose tips, rising fine eyebrows and cheek dimple with their grandma; older slender pear face with SHORT rope-twist braids and purple shirt/ochre shorts; younger five-year-old twin SMALL SIDE BUNS, coral overalls/ivory tee; tall slim old grandmother long silver side braid, jade blouse/purple trousers, NO glasses. One rabbit ivory/mint and one grey wolf handpuppet, NOT real animals. Exactly two puppets total; do not duplicate as props and worn versions. One low walnut table, ONE jade-cushioned wooden armchair at RIGHT. ONLY these three humans, no extra people. Three human faces, natural expressions appropriate to each action, two arms per person with connected human hands. Puppet sleeves worn on children's hands must visibly connect to their forearm; puppets never replace their heads. No character, face, puppet or important object at centre seam (45–55% canvas width); the younger child can be just right of centre. All bodies/feet remain connected and within the picture. Camera wide-to-medium WIDE LANDSCAPE 2:1 frame. Upper35–40% of canvas must be PURE WHITE EMPTY paper for native Chinese text; all illustration clustered in LOWER60–65%. Full paper background, no rectangular colored panel, no generated text, letters, numbers, signs, labels, borders, captions, speech balloons or watermark. Not watercolor haze, glossy3D, anime, photographic or huge doll eyes. STORY MOMENT s11 (do not print): 低桌奶白小碟是空的，兩個手偶仍平放遠側；三個人手上已沒有餅乾。可可用手指自己的肚子、大笑，嘴角有一點細餅乾屑，奶奶看空碟逗她，姐姐笑。 Native text context only (DO NOT draw or print text): 奶奶看看空盤子：\n「餅乾都到哪裏去了？」 可可指指自己的肚子：\n「在這裏！大灰狼沒吃，\n是我吃的！」 No biscuit in hands, empty plate, both puppets on table, slight crumbs at little sister mouth.",
+          "source": "/workspace/generated_images/exec-1d83e361-adcf-494b-b7dd-d5d385202b9d.png",
+          "references": [
+            "assets/characters.png",
+            "assets/props.png"
+          ],
+          "transparentBackground": false,
+          "sha256": "bae7840dea46f3146b39d8cb4520c0c15551cbaf7e4b274419ef5aff51ae90b3"
+        }
+      ]
     },
     {
       "id": "s12",

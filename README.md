@@ -159,6 +159,17 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 
 [完整專案與編輯方法](books/dinosaur-classmate/README.md)保存需求、故事、分鏡、全新人物與道具模型、原圖及修訂、精確提示、部首資料、SVG和重建程式。PDF嵌字；編輯檔使用[共用出版字型](assets/fonts/print/SOURCE.md)。未採用的上一版木部作品已移除現行檔案及網站下載，僅保留Git歷史。這本新作尚未另製點讀音訊。
 
+## 原創女部與大部繪本
+
+兩本均依本次確認的7–9歲、小二自主閱讀、完整插畫PDF＋可編輯排版檔設定製作，各有獨立人物、情節、配色與模型。每本12故事跨頁、16閱讀畫面、30單頁；所選字目150%手寫楷體，人物及小貓姓名附完整專名號。
+
+| 主題／書名 | 故事與字目 | 成品 |
+| --- | --- | --- |
+| 女／《妹妹的大灰狼》 | 星星與可可演戲給奶奶看，妹妹不肯讓狼吃朋友，臨場把故事改成分享餅乾的喜劇。核心姐、妹、奶、娃、好、她，319漢字。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/little-sisters-wolf/exports/妹妹的大灰狼_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/little-sisters-wolf/exports/妹妹的大灰狼_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/little-sisters-wolf/exports/妹妹的大灰狼_可編輯排版.pptx) |
+| 大／《誰躲在被套裏？》 | 朋友首次留宿，卓卓與言言要請小貓團團離開被套，再完成鋪床；夜晚的鼓包另有答案。核心天、太、奇、套、夾，304漢字。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/who-is-in-the-duvet-cover/exports/誰躲在被套裏？_跨頁閱讀版.pdf) · [單頁PDF](https://angusqaq.github.io/audio-book/books/who-is-in-the-duvet-cover/exports/誰躲在被套裏？_繪本.pdf) · [PowerPoint](https://angusqaq.github.io/audio-book/books/who-is-in-the-duvet-cover/exports/誰躲在被套裏？_可編輯排版.pptx) |
+
+[女部完整專案](books/little-sisters-wolf/README.md)與[大部完整專案](books/who-is-in-the-duvet-cover/README.md)保存需求、故事、分鏡、角色與道具模型、原圖及修訂、精確提示、部首資料、原生文字SVG與重建方法。PDF嵌字，編輯前安裝[共用出版字型](assets/fonts/print/SOURCE.md)。這次未另製點讀音訊。
+
 ## 設計與存檔點
 
 已加入使用者提供的[現代漢語規範 skill](.agents/skills/modern-chinese-norm/SKILL.md)及[參考文件](.agents/skills/modern-chinese-norm/reference.md)，可在本專案使用 `$modern-chinese-norm`。根目錄AGENTS.md已要求中文文案校訂時使用；[安裝與本次校訂紀錄](docs/modern-chinese-norm-review.md)說明適用範圍，以及《香味先到了》的句法、指稱與圖文核對結果。

@@ -1,0 +1,37 @@
+{
+  "status": "verified",
+  "date": "2026-11-05",
+  "officePages": 16,
+  "officeTextMatchesEveryPage": true,
+  "actualOfficeFonts": [
+    "Iansui-Regular",
+    "JyunsaiKaai-Bold"
+  ],
+  "officeTargetFontAndSizeVerified": true,
+  "audienceCaptionsSingleLineVerified": 2,
+  "properNameRulesVerified": 5,
+  "ordinaryCharactersNotEnlarged": [
+    "女"
+  ],
+  "storyTextImageCollisionChecks": 23,
+  "radicalEntriesVerified": 10,
+  "svgActualRenders": [
+    "s01",
+    "s03",
+    "s04",
+    "s06",
+    "s07",
+    "s09",
+    "s10",
+    "s11",
+    "s12",
+    "lesson"
+  ],
+  "officeRenderedPdfSha256": "8dd5f2db8153af741184d2667bdd819b860e933d083df067d5bec6ab06cc4540",
+  "files": {
+    "妹妹的大灰狼_繪本.pdf": "fb11c5d5d25f989476b9a8fce59e17707fdce1569069682d07436f6b49f8f7c2",
+    "妹妹的大灰狼_可編輯排版.pptx": "a284b3806c17694673c35d568324e8195c6033e75c78c5bb06f253ca01516daf",
+    "妹妹的大灰狼_跨頁閱讀版.pdf": "eeac79fc120d6aa2476b183f5606fbdb74188089dccc9c2186a3e0aac4f5de8a"
+  },
+  "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
+}

@@ -82,14 +82,32 @@
       "id": "s05",
       "slug": "who-is-in-the-duvet-cover",
       "file": "assets/illustrations/s05.png",
-      "prompt": "ORIGINAL Chinese literary picturebook, WHITE paper, slightly bold expressive graphite and textured DRY COLOURED PENCIL, selected COBALT, MUSTARD, brick red, sky-blue and grey only. Follow provided CHARACTER and PROP sheets exactly: ZHUOZHUO8 slender narrow LONG OVAL face/pointed chin/pale FRECKLES/small narrow eyes/rising thick short brows/dark chestnut short UPWARD FORELOCK, BLUE short pajama top+blue knee shorts+ivory slippers; YANYAN8 taller sturdy girl BROAD rounded-rectangle face/olive-brown skin/straight thick eyebrows/narrow monolid eyes/broad flat nose/full lower lip/BLACK very short COILY hair, mustard pajama top+brickred shorts+purple slippers. They are friends, NOT siblings. Real stocky slate-grey CAT TUANTUAN with white chin/chest bib, green almond eyes, four dark tail rings, no clothing or human anatomy. EXACTLY ONE CAT in the entire picture including concealed body, do not duplicate as outside companion. Two low matching BLOND WOOD single beds and ivory mattresses, plain SKY BLUE duvet covers, mustard pillows, folded ivory duvet insert in a wicker basket, flat NAVY cat mat, purple travel bag, ONE CORAL cloth-fish toy on short dark handle/short cord. Do NOT show any fish toy before s09. Clear natural space, no disembodied limbs or floating feet. Spread landscape2:1. Reserve TOP35–40% as PURE WHITE EMPTY PAPER for native text; illustration in LOWER60–65%. Human faces and important clue/tail/fish stay OUT of central45–55% binding. Correctly connected arms/hands/feet, no extra people or cats. Draw expressions of curiosity, surprise, thought or laughter appropriate to the moment; do not give identical smiles to every scene. Not photography, glossy3D, watercolor haze, anime or huge round doll eyes. NO words, labels, signs, letters, numbers, borders, captions, speech balloons or watermark. STORY MOMENT s05 DO NOT PRINT: 言言右側用一隻手輕碰被套鼓包，卓卓左側把奶白被芯放回床旁籃裏。鼓包略向床頭移動，沒有畫出布下透視的貓，人物表情好奇而不恐怖。 Native story context only, NEVER generate text: 言言輕輕碰了碰那個鼓包。 鼓包忽然往前動！ 「它會走路？太奇怪了！」 CAT STATE STRICTLY:  ONLY one cloth mound represents concealed cat. NO visible cat, ears, face, paws or tail anywhere outside cover. Wide room composition with complete children and beds. NO fish toy or toy handle anywhere.",
-      "source": "/workspace/generated_images/exec-fbb38fbd-c0fc-445b-9963-12240a5a2721.png",
+      "prompt": "Correct the spatial continuity in this exact full landscape bedroom illustration while preserving these SAME TWO children, clothes/faces, furniture designs, white upper text area, colours and pencil style. The CONCEALED-CAT MOUND must be on the LEFT BED, which is the bed next to the BOY in BLUE. Transfer the raised sky-blue cloth mound from the RIGHT bed to the LEFT bed. The right bed's blue covering becomes FLAT, no mound there. Turn the GIRL in mustard shirt slightly LEFT at her present position BETWEEN the beds, so her connected arm reaches LEFT and one fingertip gently touches the mound on the LEFT bed. Keep her feet on the floor. Keep the boy kneeling at the wicker basket of ivory duvet in the LEFT foreground. Exactly ONE hidden cat, represented only by that one LEFT-bed mound; NO exposed cat, face, ears, tail or paws anywhere. Preserve two blond-wood beds, mustard pillows, navy floor mat and purple bag. No duplicate girl or extra hand/arm. Return the whole full original canvas, no crop, no text or labels.",
+      "source": "/workspace/generated_images/exec-0561ad32-4138-4014-96a0-c530e2aa9a0f.png",
       "references": [
-        "assets/characters.png",
-        "assets/props.png"
+        {
+          "commit": "0f40332",
+          "file": "assets/illustrations/s05.png",
+          "sha256": "0fdfde0c687e19b95bbc1b0189f56adfa8cf0e89b8b82928a9c089d51acfad4d"
+        }
       ],
       "transparentBackground": false,
-      "sha256": "0fdfde0c687e19b95bbc1b0189f56adfa8cf0e89b8b82928a9c089d51acfad4d"
+      "sha256": "a252e90e940a8c63e06b6940cf59ce20e1be14ea13b70af1a43d377d1e6d0778",
+      "previousVersions": [
+        {
+          "id": "s05",
+          "slug": "who-is-in-the-duvet-cover",
+          "file": "assets/illustrations/s05.png",
+          "prompt": "ORIGINAL Chinese literary picturebook, WHITE paper, slightly bold expressive graphite and textured DRY COLOURED PENCIL, selected COBALT, MUSTARD, brick red, sky-blue and grey only. Follow provided CHARACTER and PROP sheets exactly: ZHUOZHUO8 slender narrow LONG OVAL face/pointed chin/pale FRECKLES/small narrow eyes/rising thick short brows/dark chestnut short UPWARD FORELOCK, BLUE short pajama top+blue knee shorts+ivory slippers; YANYAN8 taller sturdy girl BROAD rounded-rectangle face/olive-brown skin/straight thick eyebrows/narrow monolid eyes/broad flat nose/full lower lip/BLACK very short COILY hair, mustard pajama top+brickred shorts+purple slippers. They are friends, NOT siblings. Real stocky slate-grey CAT TUANTUAN with white chin/chest bib, green almond eyes, four dark tail rings, no clothing or human anatomy. EXACTLY ONE CAT in the entire picture including concealed body, do not duplicate as outside companion. Two low matching BLOND WOOD single beds and ivory mattresses, plain SKY BLUE duvet covers, mustard pillows, folded ivory duvet insert in a wicker basket, flat NAVY cat mat, purple travel bag, ONE CORAL cloth-fish toy on short dark handle/short cord. Do NOT show any fish toy before s09. Clear natural space, no disembodied limbs or floating feet. Spread landscape2:1. Reserve TOP35–40% as PURE WHITE EMPTY PAPER for native text; illustration in LOWER60–65%. Human faces and important clue/tail/fish stay OUT of central45–55% binding. Correctly connected arms/hands/feet, no extra people or cats. Draw expressions of curiosity, surprise, thought or laughter appropriate to the moment; do not give identical smiles to every scene. Not photography, glossy3D, watercolor haze, anime or huge round doll eyes. NO words, labels, signs, letters, numbers, borders, captions, speech balloons or watermark. STORY MOMENT s05 DO NOT PRINT: 言言右側用一隻手輕碰被套鼓包，卓卓左側把奶白被芯放回床旁籃裏。鼓包略向床頭移動，沒有畫出布下透視的貓，人物表情好奇而不恐怖。 Native story context only, NEVER generate text: 言言輕輕碰了碰那個鼓包。 鼓包忽然往前動！ 「它會走路？太奇怪了！」 CAT STATE STRICTLY:  ONLY one cloth mound represents concealed cat. NO visible cat, ears, face, paws or tail anywhere outside cover. Wide room composition with complete children and beds. NO fish toy or toy handle anywhere.",
+          "source": "/workspace/generated_images/exec-fbb38fbd-c0fc-445b-9963-12240a5a2721.png",
+          "references": [
+            "assets/characters.png",
+            "assets/props.png"
+          ],
+          "transparentBackground": false,
+          "sha256": "0fdfde0c687e19b95bbc1b0189f56adfa8cf0e89b8b82928a9c089d51acfad4d"
+        }
+      ]
     },
     {
       "id": "s06",
@@ -108,14 +126,32 @@
       "id": "s07",
       "slug": "who-is-in-the-duvet-cover",
       "file": "assets/illustrations/s07.png",
-      "prompt": "ORIGINAL Chinese literary picturebook, WHITE paper, slightly bold expressive graphite and textured DRY COLOURED PENCIL, selected COBALT, MUSTARD, brick red, sky-blue and grey only. Follow provided CHARACTER and PROP sheets exactly: ZHUOZHUO8 slender narrow LONG OVAL face/pointed chin/pale FRECKLES/small narrow eyes/rising thick short brows/dark chestnut short UPWARD FORELOCK, BLUE short pajama top+blue knee shorts+ivory slippers; YANYAN8 taller sturdy girl BROAD rounded-rectangle face/olive-brown skin/straight thick eyebrows/narrow monolid eyes/broad flat nose/full lower lip/BLACK very short COILY hair, mustard pajama top+brickred shorts+purple slippers. They are friends, NOT siblings. Real stocky slate-grey CAT TUANTUAN with white chin/chest bib, green almond eyes, four dark tail rings, no clothing or human anatomy. EXACTLY ONE CAT in the entire picture including concealed body, do not duplicate as outside companion. Two low matching BLOND WOOD single beds and ivory mattresses, plain SKY BLUE duvet covers, mustard pillows, folded ivory duvet insert in a wicker basket, flat NAVY cat mat, purple travel bag, ONE CORAL cloth-fish toy on short dark handle/short cord. Do NOT show any fish toy before s09. Clear natural space, no disembodied limbs or floating feet. Spread landscape2:1. Reserve TOP35–40% as PURE WHITE EMPTY PAPER for native text; illustration in LOWER60–65%. Human faces and important clue/tail/fish stay OUT of central45–55% binding. Correctly connected arms/hands/feet, no extra people or cats. Draw expressions of curiosity, surprise, thought or laughter appropriate to the moment; do not give identical smiles to every scene. Not photography, glossy3D, watercolor haze, anime or huge round doll eyes. NO words, labels, signs, letters, numbers, borders, captions, speech balloons or watermark. STORY MOMENT s07 DO NOT PRINT: 言言蹲在右側面向被套開口輕聲叫喚，卓卓左側指向尾巴微笑；團團的尾巴在開口外，其餘身體在被套內，不能有第二隻貓。 Native story context only, NEVER generate text: 「原來是團團！」 言言輕輕叫牠：\n「出來吧，我們要鋪床啦！」 CAT STATE STRICTLY:  ONLY ONE ringed tail is visible outside the blue cover opening; all cat body/head/paws concealed, no second cat. Wide room composition with complete children and beds. NO fish toy or toy handle anywhere.",
-      "source": "/workspace/generated_images/exec-7670c5d5-6a98-4c4d-b744-fdfc894fc271.png",
+      "prompt": "Correct ONLY the location of the sky-blue duvet cover in this exact full wide bedroom illustration. The cover with the SINGLE CONCEALED CAT is incorrectly on the FLOOR. Move that complete blue cover and its cat-sized mound UP ONTO THE LEFT BED (the bed behind the BOY IN BLUE). Drape the EMPTY soft cover across that left cream mattress, with its open end at the FOOT of that left bed. The SAME SINGLE grey ringed CAT TAIL must emerge from the open end over that bed foot, not from the floor. No cat head, ears, paws or second cat anywhere. Remove the old blue cloth mound from the FLOOR entirely; leave clean paper ground there, not a second cover. Keep both children on the floor, boy LEFT kneeling and pointing to the tail, girl RIGHT crouched with hand by mouth calling softly. Adjust their connected arm gestures or posture just enough to look toward the LEFT BED FOOT and tail. Preserve their exact faces, hair, clothes, full bodies and feet, two low blond wooden beds, mustard pillows, right bed cream mattress, basket with folded cream quilt, navy mat, folded spare blue cover and purple bag. Preserve white upper text space, original canvas, palette and dry coloured pencil. No new people, text, disconnected body parts or extra props. Return whole complete illustration.",
+      "source": "/workspace/generated_images/exec-b6d2d3f0-d6ac-4b09-82b7-be662fc73d0d.png",
       "references": [
-        "assets/characters.png",
-        "assets/props.png"
+        {
+          "commit": "0f40332",
+          "file": "assets/illustrations/s07.png",
+          "sha256": "45627d7b7b46e01bd12fd1940a91da51d76408c75c449d0c363d341f5dd11cc9"
+        }
       ],
       "transparentBackground": false,
-      "sha256": "45627d7b7b46e01bd12fd1940a91da51d76408c75c449d0c363d341f5dd11cc9"
+      "sha256": "c3baabf54bd9f680a05a38d89194d3f1ff6c101787a5c64ec8195fe974cc9de9",
+      "previousVersions": [
+        {
+          "id": "s07",
+          "slug": "who-is-in-the-duvet-cover",
+          "file": "assets/illustrations/s07.png",
+          "prompt": "ORIGINAL Chinese literary picturebook, WHITE paper, slightly bold expressive graphite and textured DRY COLOURED PENCIL, selected COBALT, MUSTARD, brick red, sky-blue and grey only. Follow provided CHARACTER and PROP sheets exactly: ZHUOZHUO8 slender narrow LONG OVAL face/pointed chin/pale FRECKLES/small narrow eyes/rising thick short brows/dark chestnut short UPWARD FORELOCK, BLUE short pajama top+blue knee shorts+ivory slippers; YANYAN8 taller sturdy girl BROAD rounded-rectangle face/olive-brown skin/straight thick eyebrows/narrow monolid eyes/broad flat nose/full lower lip/BLACK very short COILY hair, mustard pajama top+brickred shorts+purple slippers. They are friends, NOT siblings. Real stocky slate-grey CAT TUANTUAN with white chin/chest bib, green almond eyes, four dark tail rings, no clothing or human anatomy. EXACTLY ONE CAT in the entire picture including concealed body, do not duplicate as outside companion. Two low matching BLOND WOOD single beds and ivory mattresses, plain SKY BLUE duvet covers, mustard pillows, folded ivory duvet insert in a wicker basket, flat NAVY cat mat, purple travel bag, ONE CORAL cloth-fish toy on short dark handle/short cord. Do NOT show any fish toy before s09. Clear natural space, no disembodied limbs or floating feet. Spread landscape2:1. Reserve TOP35–40% as PURE WHITE EMPTY PAPER for native text; illustration in LOWER60–65%. Human faces and important clue/tail/fish stay OUT of central45–55% binding. Correctly connected arms/hands/feet, no extra people or cats. Draw expressions of curiosity, surprise, thought or laughter appropriate to the moment; do not give identical smiles to every scene. Not photography, glossy3D, watercolor haze, anime or huge round doll eyes. NO words, labels, signs, letters, numbers, borders, captions, speech balloons or watermark. STORY MOMENT s07 DO NOT PRINT: 言言蹲在右側面向被套開口輕聲叫喚，卓卓左側指向尾巴微笑；團團的尾巴在開口外，其餘身體在被套內，不能有第二隻貓。 Native story context only, NEVER generate text: 「原來是團團！」 言言輕輕叫牠：\n「出來吧，我們要鋪床啦！」 CAT STATE STRICTLY:  ONLY ONE ringed tail is visible outside the blue cover opening; all cat body/head/paws concealed, no second cat. Wide room composition with complete children and beds. NO fish toy or toy handle anywhere.",
+          "source": "/workspace/generated_images/exec-7670c5d5-6a98-4c4d-b744-fdfc894fc271.png",
+          "references": [
+            "assets/characters.png",
+            "assets/props.png"
+          ],
+          "transparentBackground": false,
+          "sha256": "45627d7b7b46e01bd12fd1940a91da51d76408c75c449d0c363d341f5dd11cc9"
+        }
+      ]
     },
     {
       "id": "s08",
@@ -147,14 +183,32 @@
       "id": "s10",
       "slug": "who-is-in-the-duvet-cover",
       "file": "assets/illustrations/s10.png",
-      "prompt": "ORIGINAL Chinese literary picturebook, WHITE paper, slightly bold expressive graphite and textured DRY COLOURED PENCIL, selected COBALT, MUSTARD, brick red, sky-blue and grey only. Follow provided CHARACTER and PROP sheets exactly: ZHUOZHUO8 slender narrow LONG OVAL face/pointed chin/pale FRECKLES/small narrow eyes/rising thick short brows/dark chestnut short UPWARD FORELOCK, BLUE short pajama top+blue knee shorts+ivory slippers; YANYAN8 taller sturdy girl BROAD rounded-rectangle face/olive-brown skin/straight thick eyebrows/narrow monolid eyes/broad flat nose/full lower lip/BLACK very short COILY hair, mustard pajama top+brickred shorts+purple slippers. They are friends, NOT siblings. Real stocky slate-grey CAT TUANTUAN with white chin/chest bib, green almond eyes, four dark tail rings, no clothing or human anatomy. EXACTLY ONE CAT in the entire picture including concealed body, do not duplicate as outside companion. Two low matching BLOND WOOD single beds and ivory mattresses, plain SKY BLUE duvet covers, mustard pillows, folded ivory duvet insert in a wicker basket, flat NAVY cat mat, purple travel bag, ONE CORAL cloth-fish toy on short dark handle/short cord. Do NOT show any fish toy before s09. Clear natural space, no disembodied limbs or floating feet. Spread landscape2:1. Reserve TOP35–40% as PURE WHITE EMPTY PAPER for native text; illustration in LOWER60–65%. Human faces and important clue/tail/fish stay OUT of central45–55% binding. Correctly connected arms/hands/feet, no extra people or cats. Draw expressions of curiosity, surprise, thought or laughter appropriate to the moment; do not give identical smiles to every scene. Not photography, glossy3D, watercolor haze, anime or huge round doll eyes. NO words, labels, signs, letters, numbers, borders, captions, speech balloons or watermark. STORY MOMENT s10 DO NOT PRINT: 卓卓把同一短棒小魚往床邊小墊子移動，團團整隻從床上被套開口跳到地上墊子追玩具；單貓完整四肢尾巴，動作短距離自然，言言在右側拍手笑。 Native story context only, NEVER generate text: 小魚往旁邊一跳，\n團團也跟着跳了出來！ 「這回，我們可以鋪床啦！」 CAT STATE STRICTLY:  EXACTLY ONE whole real cat visible as described, no mound indicating another cat. Wide room composition with complete children and beds.",
-      "source": "/workspace/generated_images/exec-68818920-cfbe-4cbe-a9b4-6b159d66e607.png",
+      "prompt": "Correct one continuity error in this exact full landscape bedroom pencil illustration. The SINGLE CAT must be jumping OUT OF THE LEFT BED's SKY-BLUE COVER, the bed directly BEHIND THE BOY IN BLUE at left, NOT the right bed. Keep exactly the same children, faces, clothes, pose of boy holding the short fish-toy handle, coral fish on navy floor mat and girl clapping at right. Lift the near FOOT EDGE of the LEFT bed's blue cover to form the opening the cat has just left. Shift/repose the SAME ONE grey striped-tail cat slightly LEFT as necessary so its whole connected body is airborne forward from that LEFT bed toward the fish on floor, its hind paws and curved ringed tail clearly trailing back toward the LEFT bed opening. No detached tail or legs. FLATTEN the blue covering on the RIGHT BED completely, remove its former opening/mound; nothing comes from the right bed. One real grey cat with white bib and green eyes, one toy fish and one toy handle joined by short cord. Keep two complete blond-wood beds, mustard pillows, wicker basket of cream duvet at right, purple bag, white upper text space, exact full canvas, colours and dry colored-pencil style. No extra animals or people, no changes elsewhere, no words. Return the complete corrected illustration.",
+      "source": "/workspace/generated_images/exec-4667b3cb-71a9-4ec3-bae5-9a4bd4099620.png",
       "references": [
-        "assets/characters.png",
-        "assets/props.png"
+        {
+          "commit": "0f40332",
+          "file": "assets/illustrations/s10.png",
+          "sha256": "763d3db7e41cb10f2705857cdebcdb4c9435b04f11d96c3a858924c7a82707cb"
+        }
       ],
       "transparentBackground": false,
-      "sha256": "763d3db7e41cb10f2705857cdebcdb4c9435b04f11d96c3a858924c7a82707cb"
+      "sha256": "a482312527eec2528b34a56a498b013cefa46c52d7f4aec1da46d2555a6475b8",
+      "previousVersions": [
+        {
+          "id": "s10",
+          "slug": "who-is-in-the-duvet-cover",
+          "file": "assets/illustrations/s10.png",
+          "prompt": "ORIGINAL Chinese literary picturebook, WHITE paper, slightly bold expressive graphite and textured DRY COLOURED PENCIL, selected COBALT, MUSTARD, brick red, sky-blue and grey only. Follow provided CHARACTER and PROP sheets exactly: ZHUOZHUO8 slender narrow LONG OVAL face/pointed chin/pale FRECKLES/small narrow eyes/rising thick short brows/dark chestnut short UPWARD FORELOCK, BLUE short pajama top+blue knee shorts+ivory slippers; YANYAN8 taller sturdy girl BROAD rounded-rectangle face/olive-brown skin/straight thick eyebrows/narrow monolid eyes/broad flat nose/full lower lip/BLACK very short COILY hair, mustard pajama top+brickred shorts+purple slippers. They are friends, NOT siblings. Real stocky slate-grey CAT TUANTUAN with white chin/chest bib, green almond eyes, four dark tail rings, no clothing or human anatomy. EXACTLY ONE CAT in the entire picture including concealed body, do not duplicate as outside companion. Two low matching BLOND WOOD single beds and ivory mattresses, plain SKY BLUE duvet covers, mustard pillows, folded ivory duvet insert in a wicker basket, flat NAVY cat mat, purple travel bag, ONE CORAL cloth-fish toy on short dark handle/short cord. Do NOT show any fish toy before s09. Clear natural space, no disembodied limbs or floating feet. Spread landscape2:1. Reserve TOP35–40% as PURE WHITE EMPTY PAPER for native text; illustration in LOWER60–65%. Human faces and important clue/tail/fish stay OUT of central45–55% binding. Correctly connected arms/hands/feet, no extra people or cats. Draw expressions of curiosity, surprise, thought or laughter appropriate to the moment; do not give identical smiles to every scene. Not photography, glossy3D, watercolor haze, anime or huge round doll eyes. NO words, labels, signs, letters, numbers, borders, captions, speech balloons or watermark. STORY MOMENT s10 DO NOT PRINT: 卓卓把同一短棒小魚往床邊小墊子移動，團團整隻從床上被套開口跳到地上墊子追玩具；單貓完整四肢尾巴，動作短距離自然，言言在右側拍手笑。 Native story context only, NEVER generate text: 小魚往旁邊一跳，\n團團也跟着跳了出來！ 「這回，我們可以鋪床啦！」 CAT STATE STRICTLY:  EXACTLY ONE whole real cat visible as described, no mound indicating another cat. Wide room composition with complete children and beds.",
+          "source": "/workspace/generated_images/exec-68818920-cfbe-4cbe-a9b4-6b159d66e607.png",
+          "references": [
+            "assets/characters.png",
+            "assets/props.png"
+          ],
+          "transparentBackground": false,
+          "sha256": "763d3db7e41cb10f2705857cdebcdb4c9435b04f11d96c3a858924c7a82707cb"
+        }
+      ]
     },
     {
       "id": "s11",

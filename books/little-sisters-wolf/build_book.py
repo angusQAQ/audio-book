@@ -113,7 +113,14 @@ def rect(x, y, width, height, fill, stroke=None, radius=0):
 
 
 def character(name, x, y, width, height):
-    return picture(ROOT/'assets/characters.png',x,y,width,height,CROPS[name],BOOK['characters'][name])
+    path=ROOT/'assets/characters.png'
+    iw,ih=Image.open(path).size
+    panel_width,panel_height=BOOK['characterPanelSize']
+    scale=min(width/(iw*panel_width),height/(ih*panel_height))
+    left,top,right,bottom=CROPS[name]
+    visible_width,visible_height=(right-left)*iw*scale,(bottom-top)*ih*scale
+    return picture(path,x+(width-visible_width)/2,y+(height-visible_height)/2,
+                   visible_width,visible_height,CROPS[name],BOOK['characters'][name])
 
 
 def pages(proof):
@@ -301,7 +308,9 @@ def render_pptx(page_list, target):
                     group = shapes.add_group_shape()
                     group.name = '專名號：' + item['text']
                     shapes = group.shapes
-                shape = shapes.add_textbox(Pt(item['x']), Pt(item['y']), Pt(item['width'] + 5), Pt(item['height'] + 4))
+                # Small captions need a little extra frame width for Office font advances.
+                frame_padding = 18 if item['size'] <= 13 else 5
+                shape = shapes.add_textbox(Pt(item['x']), Pt(item['y']), Pt(item['width'] + frame_padding), Pt(item['height'] + 4))
                 tf = shape.text_frame; tf.word_wrap = False
                 tf.margin_left = tf.margin_top = tf.margin_right = tf.margin_bottom = 0
                 p = tf.paragraphs[0]; p.space_before = p.space_after = Pt(0); p.line_spacing = 1.0

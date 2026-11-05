@@ -1,0 +1,54 @@
+{
+  "status": "complete",
+  "spreadPages": 16,
+  "singlePages": 30,
+  "editableSlides": 16,
+  "missingGlyphs": [],
+  "allTextEditable": true,
+  "originalArtworkHashesVerified": 15,
+  "properNameRadicals": {
+    "可": 30,
+    "星": 72
+  },
+  "properNamesAvoidThemeRadical": true,
+  "properNameMarks": {
+    "names": {
+      "星星": 2,
+      "可可": 3
+    },
+    "style": "continuous rule below each full name",
+    "pdfPptxSvgGeometryVerified": true,
+    "editableTextAndRuleGrouped": true
+  },
+  "targetTypography": {
+    "font": "JyunsaiKaai",
+    "bodyScale": 1.5,
+    "pdfAndPptxRunsVerified": true,
+    "handwrittenGlyphs": {
+      "妹": 28,
+      "奶": 16,
+      "她": 5,
+      "姐": 15,
+      "娃": 18,
+      "好": 8
+    }
+  },
+  "normalCharacterTypography": {
+    "characters": [
+      "女"
+    ],
+    "bodyScale": 1,
+    "font": "Iansui",
+    "pdfAndPptxRunsVerified": true,
+    "svgRunsVerified": true
+  },
+  "storyHanCharacters": 319,
+  "targets": {
+    "姐": 15,
+    "妹": 30,
+    "奶": 16,
+    "娃": 18,
+    "好": 8,
+    "她": 5
+  }
+}
