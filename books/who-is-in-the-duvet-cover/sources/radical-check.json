@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-05",
+  "dataset": "Unicode 17.0 kRSUnicode",
+  "source": "https://github.com/unicode-org/unicodetools/blob/578f6c0516f5f268292ebda50b51848407a06478/unicodetools/data/ucd/17.0.0/Unihan/kRSUnicode.txt",
+  "sha256": "481f8a3d2fda0c6b8e6f7c746a0eedfb145a62f30bf6e61527a8f7cdb2a99108",
+  "entries": {
+    "卓": {
+      "codepoint": "U+5353",
+      "kRSUnicode": "24.6",
+      "sourceLine": "5351..5356\t24.6"
+    },
+    "團": {
+      "codepoint": "U+5718",
+      "kRSUnicode": "31.11",
+      "sourceLine": "5716..5719\t31.11"
+    },
+    "大": {
+      "codepoint": "U+5927",
+      "kRSUnicode": "37.0",
+      "sourceLine": "5927..5928\t37.0"
+    },
+    "天": {
+      "codepoint": "U+5929",
+      "kRSUnicode": "37.1",
+      "sourceLine": "5929..592D\t37.1"
+    },
+    "太": {
+      "codepoint": "U+592A",
+      "kRSUnicode": "37.1",
+      "sourceLine": "5929..592D\t37.1"
+    },
+    "夾": {
+      "codepoint": "U+593E",
+      "kRSUnicode": "37.4",
+      "sourceLine": "593D..5942\t37.4"
+    },
+    "奇": {
+      "codepoint": "U+5947",
+      "kRSUnicode": "37.5",
+      "sourceLine": "5943..5949\t37.5"
+    },
+    "套": {
+      "codepoint": "U+5957",
+      "kRSUnicode": "37.7",
+      "sourceLine": "5957..595A\t37.7"
+    },
+    "手": {
+      "codepoint": "U+624B",
+      "kRSUnicode": "64.0",
+      "sourceLine": "624B..624D\t64.0"
+    },
+    "言": {
+      "codepoint": "U+8A00",
+      "kRSUnicode": "149.0",
+      "sourceLine": "8A00..8A01\t149.0"
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "book": {
+    "slug": "who-is-in-the-duvet-cover",
+    "title": "誰躲在被套裏？",
+    "language": "zh-HK"
+  },
+  "audience": {
+    "ageMin": 7,
+    "ageMax": 9,
+    "readingMode": "independent",
+    "readingAbility": "以小二自主閱讀為主要目標",
+    "accessibilityNeeds": []
+  },
+  "theme": "朋友首次留宿，兩個孩子想鋪好床再玩；會動的被套原來藏着小貓，叫喚和拉角都沒用，孩子改用小魚玩具請牠出來，完成鋪床，再以腳趾回扣鼓包笑點。",
+  "content": {
+    "mode": "original",
+    "request": "以漢字大部首為主題，獨立設計完整兒童故事繪本。",
+    "requiredElements": [
+      "起因、經過、結果清楚",
+      "有可預測的翻頁期待與回扣笑點",
+      "角色另作外貌，姓名疊字、避開主題部首並附專名號",
+      "所選部首字150%手寫楷體"
+    ],
+    "avoidElements": [
+      "套用既有故事、更換道具當成新作",
+      "生字排列取代故事",
+      "難懂知識或未交代的原因",
+      "人物只換衣服而不改五官"
+    ],
+    "sourceTextPaths": [
+      "story.json"
+    ],
+    "references": [
+      {
+        "title": "生日會",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 16,
+        "sha256": "8f67a3121f40ebaa67844db1918eccb9c7f21bdc4faeacf4acd98557499d9eaf",
+        "source": "使用者附件，未重新公開原 PDF"
+      },
+      {
+        "title": "跟屁蟲",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 17,
+        "sha256": "abfb8339a9bbcb41fa25d914a9c1bff836b7ffc986eaa04077252a5d48a5a8fe",
+        "source": "使用者附件，未重新公開原 PDF"
+      }
+    ],
+    "learningGoals": [
+      "從完整故事認識本書所選部首字",
+      "從圖文理解主角的目標、嘗試及結果"
+    ],
+    "targetCharacters": [
+      "天",
+      "太",
+      "奇",
+      "套",
+      "夾"
+    ],
+    "characterNames": [
+      "卓卓",
+      "言言",
+      "團團"
+    ]
+  },
+  "design": {
+    "artDirection": "石墨輪廓、乾色鉛筆、大留白；女部以細線與莓紫／珊瑚為主，大部以較粗筆觸與藍／芥黃為主；兩書各有獨立模型與道具。",
+    "palette": [
+      "#DFE9F3",
+      "#354257",
+      "#71839C",
+      "#4377AD",
+      "#D6AB4C"
+    ],
+    "pageSize": {
+      "width": 960,
+      "height": 600,
+      "unit": "pt"
+    },
+    "storySpreads": 12,
+    "wordBudget": 303,
+    "bodyFont": "Iansui",
+    "emphasisFont": "JyunsaiKaai Bold",
+    "emphasisScale": 1.5,
+    "properNameMarks": true
+  },
+  "deliverables": {
+    "formats": [
+      "pdf-spread",
+      "pdf-single",
+      "pptx",
+      "svg"
+    ],
+    "readAlong": false,
+    "audio": null
+  },
+  "publication": {
+    "github": true,
+    "permanentWebsite": true,
+    "destination": "https://angusqaq.github.io/audio-book/"
+  },
+  "decisions": {
+    "userRequirements": [
+      "本次已確認兩書均為7–9歲、小二自主閱讀、完整插畫PDF＋可編輯排版檔",
+      "人物命名、外貌差異、故事因果及Git／網站存檔遵守已確認要求"
+    ],
+    "editorialChoices": [
+      "人物、情節、字目與分鏡為本書重新選定",
+      "正文303漢字、12故事跨頁，篇幅依本書因果與笑點決定",
+      "尚未做學生試讀，不宣稱已實證可讀性"
+    ],
+    "unresolvedQuestions": []
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-05",
+  "dataset": "Unicode 17.0 kRSUnicode",
+  "source": "https://github.com/unicode-org/unicodetools/blob/578f6c0516f5f268292ebda50b51848407a06478/unicodetools/data/ucd/17.0.0/Unihan/kRSUnicode.txt",
+  "sha256": "481f8a3d2fda0c6b8e6f7c746a0eedfb145a62f30bf6e61527a8f7cdb2a99108",
+  "entries": {
+    "口": {
+      "codepoint": "U+53E3",
+      "kRSUnicode": "30.0",
+      "sourceLine": "53E3\t30.0"
+    },
+    "可": {
+      "codepoint": "U+53EF",
+      "kRSUnicode": "30.2",
+      "sourceLine": "53E4..53FE\t30.2"
+    },
+    "女": {
+      "codepoint": "U+5973",
+      "kRSUnicode": "38.0",
+      "sourceLine": "5973\t38.0"
+    },
+    "奶": {
+      "codepoint": "U+5976",
+      "kRSUnicode": "38.2",
+      "sourceLine": "5974..5976\t38.2"
+    },
+    "她": {
+      "codepoint": "U+5979",
+      "kRSUnicode": "38.3",
+      "sourceLine": "5977..5985\t38.3"
+    },
+    "好": {
+      "codepoint": "U+597D",
+      "kRSUnicode": "38.3",
+      "sourceLine": "5977..5985\t38.3"
+    },
+    "妹": {
+      "codepoint": "U+59B9",
+      "kRSUnicode": "38.5",
+      "sourceLine": "59AC..59D7\t38.5"
+    },
+    "姐": {
+      "codepoint": "U+59D0",
+      "kRSUnicode": "38.5",
+      "sourceLine": "59AC..59D7\t38.5"
+    },
+    "娃": {
+      "codepoint": "U+5A03",
+      "kRSUnicode": "38.6",
+      "sourceLine": "59ED..5A03\t38.6"
+    },
+    "星": {
+      "codepoint": "U+661F",
+      "kRSUnicode": "72.5",
+      "sourceLine": "661A..663B\t72.5"
+    }
+  }
+}
