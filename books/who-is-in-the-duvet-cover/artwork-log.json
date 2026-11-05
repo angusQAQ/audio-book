@@ -142,6 +142,45 @@
       ],
       "transparentBackground": false,
       "sha256": "702e91554a08a9dfa1e84393723a16ffc6d92bbf2b591f77525eb12eef40b66c"
+    },
+    {
+      "id": "s10",
+      "slug": "who-is-in-the-duvet-cover",
+      "file": "assets/illustrations/s10.png",
+      "prompt": "ORIGINAL Chinese literary picturebook, WHITE paper, slightly bold expressive graphite and textured DRY COLOURED PENCIL, selected COBALT, MUSTARD, brick red, sky-blue and grey only. Follow provided CHARACTER and PROP sheets exactly: ZHUOZHUO8 slender narrow LONG OVAL face/pointed chin/pale FRECKLES/small narrow eyes/rising thick short brows/dark chestnut short UPWARD FORELOCK, BLUE short pajama top+blue knee shorts+ivory slippers; YANYAN8 taller sturdy girl BROAD rounded-rectangle face/olive-brown skin/straight thick eyebrows/narrow monolid eyes/broad flat nose/full lower lip/BLACK very short COILY hair, mustard pajama top+brickred shorts+purple slippers. They are friends, NOT siblings. Real stocky slate-grey CAT TUANTUAN with white chin/chest bib, green almond eyes, four dark tail rings, no clothing or human anatomy. EXACTLY ONE CAT in the entire picture including concealed body, do not duplicate as outside companion. Two low matching BLOND WOOD single beds and ivory mattresses, plain SKY BLUE duvet covers, mustard pillows, folded ivory duvet insert in a wicker basket, flat NAVY cat mat, purple travel bag, ONE CORAL cloth-fish toy on short dark handle/short cord. Do NOT show any fish toy before s09. Clear natural space, no disembodied limbs or floating feet. Spread landscape2:1. Reserve TOP35–40% as PURE WHITE EMPTY PAPER for native text; illustration in LOWER60–65%. Human faces and important clue/tail/fish stay OUT of central45–55% binding. Correctly connected arms/hands/feet, no extra people or cats. Draw expressions of curiosity, surprise, thought or laughter appropriate to the moment; do not give identical smiles to every scene. Not photography, glossy3D, watercolor haze, anime or huge round doll eyes. NO words, labels, signs, letters, numbers, borders, captions, speech balloons or watermark. STORY MOMENT s10 DO NOT PRINT: 卓卓把同一短棒小魚往床邊小墊子移動，團團整隻從床上被套開口跳到地上墊子追玩具；單貓完整四肢尾巴，動作短距離自然，言言在右側拍手笑。 Native story context only, NEVER generate text: 小魚往旁邊一跳，\n團團也跟着跳了出來！ 「這回，我們可以鋪床啦！」 CAT STATE STRICTLY:  EXACTLY ONE whole real cat visible as described, no mound indicating another cat. Wide room composition with complete children and beds.",
+      "source": "/workspace/generated_images/exec-68818920-cfbe-4cbe-a9b4-6b159d66e607.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "763d3db7e41cb10f2705857cdebcdb4c9435b04f11d96c3a858924c7a82707cb"
+    },
+    {
+      "id": "s11",
+      "slug": "who-is-in-the-duvet-cover",
+      "file": "assets/illustrations/s11.png",
+      "prompt": "ORIGINAL Chinese literary picturebook, WHITE paper, slightly bold expressive graphite and textured DRY COLOURED PENCIL, selected COBALT, MUSTARD, brick red, sky-blue and grey only. Follow provided CHARACTER and PROP sheets exactly: ZHUOZHUO8 slender narrow LONG OVAL face/pointed chin/pale FRECKLES/small narrow eyes/rising thick short brows/dark chestnut short UPWARD FORELOCK, BLUE short pajama top+blue knee shorts+ivory slippers; YANYAN8 taller sturdy girl BROAD rounded-rectangle face/olive-brown skin/straight thick eyebrows/narrow monolid eyes/broad flat nose/full lower lip/BLACK very short COILY hair, mustard pajama top+brickred shorts+purple slippers. They are friends, NOT siblings. Real stocky slate-grey CAT TUANTUAN with white chin/chest bib, green almond eyes, four dark tail rings, no clothing or human anatomy. EXACTLY ONE CAT in the entire picture including concealed body, do not duplicate as outside companion. Two low matching BLOND WOOD single beds and ivory mattresses, plain SKY BLUE duvet covers, mustard pillows, folded ivory duvet insert in a wicker basket, flat NAVY cat mat, purple travel bag, ONE CORAL cloth-fish toy on short dark handle/short cord. Do NOT show any fish toy before s09. Clear natural space, no disembodied limbs or floating feet. Spread landscape2:1. Reserve TOP35–40% as PURE WHITE EMPTY PAPER for native text; illustration in LOWER60–65%. Human faces and important clue/tail/fish stay OUT of central45–55% binding. Correctly connected arms/hands/feet, no extra people or cats. Draw expressions of curiosity, surprise, thought or laughter appropriate to the moment; do not give identical smiles to every scene. Not photography, glossy3D, watercolor haze, anime or huge round doll eyes. NO words, labels, signs, letters, numbers, borders, captions, speech balloons or watermark. STORY MOMENT s11 DO NOT PRINT: 兩張矮床都鋪好淺藍被套裝着奶白被芯，芥黃枕頭各一。卓卓左、言言右看成果。團團在床邊深藍小墊子抱珊瑚色小魚睡着，玩具短棒放墊子旁，旅行袋放右床腳邊。 Native story context only, NEVER generate text: 兩人終於鋪好了床。 團團抱着小魚玩具，\n在床邊的小墊子上睡着了。 CAT STATE STRICTLY:  EXACTLY ONE whole real cat visible as described, no mound indicating another cat. Wide room composition with complete children and beds.",
+      "source": "/workspace/generated_images/exec-7cf3f630-b044-43f0-b957-562ae761a62c.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "45552c1e0a3359e0a0cef445825bc1298fc69a22329693011f5a8c309cafc378"
+    },
+    {
+      "id": "s12",
+      "slug": "who-is-in-the-duvet-cover",
+      "file": "assets/illustrations/s12.png",
+      "prompt": "ORIGINAL Chinese literary picturebook, WHITE paper, slightly bold expressive graphite and textured DRY COLOURED PENCIL, selected COBALT, MUSTARD, brick red, sky-blue and grey only. Follow provided CHARACTER and PROP sheets exactly: ZHUOZHUO8 slender narrow LONG OVAL face/pointed chin/pale FRECKLES/small narrow eyes/rising thick short brows/dark chestnut short UPWARD FORELOCK, BLUE short pajama top+blue knee shorts+ivory slippers; YANYAN8 taller sturdy girl BROAD rounded-rectangle face/olive-brown skin/straight thick eyebrows/narrow monolid eyes/broad flat nose/full lower lip/BLACK very short COILY hair, mustard pajama top+brickred shorts+purple slippers. They are friends, NOT siblings. Real stocky slate-grey CAT TUANTUAN with white chin/chest bib, green almond eyes, four dark tail rings, no clothing or human anatomy. EXACTLY ONE CAT in the entire picture including concealed body, do not duplicate as outside companion. Two low matching BLOND WOOD single beds and ivory mattresses, plain SKY BLUE duvet covers, mustard pillows, folded ivory duvet insert in a wicker basket, flat NAVY cat mat, purple travel bag, ONE CORAL cloth-fish toy on short dark handle/short cord. Do NOT show any fish toy before s09. Clear natural space, no disembodied limbs or floating feet. Spread landscape2:1. Reserve TOP35–40% as PURE WHITE EMPTY PAPER for native text; illustration in LOWER60–65%. Human faces and important clue/tail/fish stay OUT of central45–55% binding. Correctly connected arms/hands/feet, no extra people or cats. Draw expressions of curiosity, surprise, thought or laughter appropriate to the moment; do not give identical smiles to every scene. Not photography, glossy3D, watercolor haze, anime or huge round doll eyes. NO words, labels, signs, letters, numbers, borders, captions, speech balloons or watermark. STORY MOMENT s12 DO NOT PRINT: 夜晚臥室柔和局部藍色但上方文字仍純白。兩張完整床頭與床尾都在畫面內，卓卓在左床、言言在右床各露頭肩。卓卓的腿仍在被子下，腳趾從左床被尾一角伸出，形成被子鼓包的明確原因，不畫分離的腳。團團仍在地上墊子睡，小魚在旁，兩人笑。 Native story context only, NEVER generate text: 晚上，被子又鼓起一塊。 「又是團團？」言言問。 卓卓伸出腳趾，笑着說：\n「這次是我！」 CAT STATE STRICTLY:  EXACTLY ONE whole real cat visible as described, no mound indicating another cat. Wide room composition with complete children and beds. The cat is visibly asleep on floor mat, so the new blanket mound is ONLY the boy's still-connected leg and poking toes. Gentle bedtime blue accents limited to illustration area; top white text space must stay white.",
+      "source": "/workspace/generated_images/exec-7bf87e0f-961f-40ae-b5c7-85406a2c5963.png",
+      "references": [
+        "assets/characters.png",
+        "assets/props.png"
+      ],
+      "transparentBackground": false,
+      "sha256": "f69e1b21a0fa559fc4e376861a6d2d2c0e98b9c035325a397c47ad4ed5f7b27b"
     }
   ],
   "characterBible": {
