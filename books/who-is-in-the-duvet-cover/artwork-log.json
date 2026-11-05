@@ -2,5 +2,26 @@
   "schemaVersion": 1,
   "generator": "OpenAI image_gen",
   "date": "2026-11-05",
-  "illustrations": []
+  "illustrations": [
+    {
+      "id": "props",
+      "slug": "who-is-in-the-duvet-cover",
+      "prompt": "Create ORIGINAL PROP CONTINUITY SHEET on PURE WHITE paper, dry coloured-pencil and graphite, simple cobalt/mustard accents, no people, cats, labels, text, lettering, numbers, grid or watermark. Props shown separately with white gaps. ONE low BLOND-WOOD single bed, simple rectangular headboard and footboard, four short legs, CREAM MATTRESS; front three-quarter view. A second matching bed same design shown separately. Plain LIGHT SKY-BLUE DUVET COVER, a large soft cloth envelope with a wide OPEN END, empty and flat, NO print or pattern, no actual blanket inside yet; show one unfolded example and a separate folded example. ONE soft IVORY DUVET INSERT, same bed size, folded in a plain wicker basket. TWO identical MUSTARD rectangular PILLOWS. ONE flat NAVY rectangular cat mat. ONE CORAL small FISH-SHAPED FABRIC CAT TOY with stitched black dot eye, attached to a SHORT dark wooden handle by a SHORT cord, clear connected one stick, one cord, one fish. ONE plain SMALL PURPLE travel bag with two handles, no graphics. One toy only. No quilt patchwork, paw prints, stripes on duvet, flags, stars, clothing, food, camera or wooden bridge. The cat mat and duvet cover are separate and distinguishable by colour and size; do not draw a cat. Native illustrations will use these exact props consistently.",
+      "source": "/workspace/generated_images/exec-b23cc8c9-c849-4e62-941e-448de48d538e.png",
+      "file": "assets/props.png",
+      "references": [],
+      "transparentBackground": false,
+      "sha256": "d9c9c34a31764c826f6a806fb9ef798e9f24ee927aed26ffedee36f9c92ed1fe"
+    }
+  ],
+  "characterBible": {
+    "id": "characters",
+    "slug": "who-is-in-the-duvet-cover",
+    "prompt": "ORIGINAL children's picturebook CHARACTER BIBLE on pure WHITE paper, 3 columns, TWO rows, no visible grid, labels, text, numbers, arrows or watermark. TOP row front views: boy ZHUOZHUO left, girl YANYAN middle, REAL four-legged cat TUANTUAN right. BOTTOM row same exact characters three-quarter views beneath. Whole connected bodies and feet/paws, ample white gaps. Graphite expressive slightly bold outlines with textured DRY COLOURED PENCIL, selective cobalt blue, mustard, brick red, slate grey; white paper, no glossy3D, watercolor haze or gigantic doll eyes. BOY8: slim elongated body, very NARROW LONG OVAL FACE with slightly POINTED CHIN, pale ivory skin with small freckles at nose bridge/high cheeks, SMALL narrow eyes, thick short rising brows, pointed short nose, slightly upturned smile, DARK-CHESTNUT short hair with ONE thick upward-curved FORELOCK at the top, short sides, NO GLASSES or circular curls. COBALT short sleeve pajama top, same blue knee shorts, IVORY closed-toe house slippers. GIRL8: slightly taller sturdy body, BROAD ROUNDED-RECTANGLE FACE, olive-brown skin, STRAIGHT THICK EYEBROWS, narrow long single-lid eyes, BROAD FLAT NOSE, full lower lip, long open laughing mouth, BLACK VERY SHORT NATURAL COILY HAIR, NO fringe, braids or glasses. MUSTARD short sleeve pajama top, BRICK RED knee shorts, PURPLE closed-toe house slippers. They are FRIENDS, not siblings, deliberately different facial bone structure, hair, skin and silhouette. CAT: natural QUADRUPED, short round STOCKY slate-grey shorthaired cat, cream-white chin and chest bib, almond GREEN eyes, darker ear tips, LONG TAIL with FOUR dark grey rings; no clothing, no anthropomorphic hands or upright posing. Cat small relative to children, but render clearly in its panel. Exact same individuals/colours between front and quarter views. No beds, props or scenes.",
+    "source": "/workspace/generated_images/exec-5e615057-1108-4bb7-a172-13f1198bceca.png",
+    "file": "assets/characters.png",
+    "references": [],
+    "transparentBackground": false,
+    "sha256": "aefacec1570512c400b8d1865559012429c087bd2c97b450b9b4917aa6649a06"
+  }
 }
