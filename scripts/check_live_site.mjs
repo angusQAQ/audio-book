@@ -192,11 +192,22 @@ const browser = await chromium.launch({
   args: ['--no-sandbox', '--disable-dev-shm-usage', '--autoplay-policy=no-user-gesture-required'],
 });
 let verificationPage;
+const failedRequests = [];
 try {
   const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
   verificationPage=page;
   const errors = [];
   page.on('pageerror', error => errors.push(error.message));
+  page.on('requestfailed', request => {
+    if (request.url().startsWith(base.href)) failedRequests.push({
+      url: request.url(), type: request.resourceType(), error: request.failure()?.errorText,
+    });
+  });
+  page.on('response', response => {
+    if (response.url().startsWith(base.href) && response.status() >= 400) failedRequests.push({
+      url: response.url(), type: response.request().resourceType(), status: response.status(),
+    });
+  });
   await page.goto(base.href, { waitUntil: 'networkidle' });
   await page.getByRole('heading', { name: book.title, exact: true }).waitFor();
   await page.getByRole('heading', { name: wolf.title, exact: true }).waitFor();
@@ -275,8 +286,15 @@ try {
   for (const illustrated of [wolf, cloud]) {
     const illustratedPdf = await page.request.get(new URL(illustrated.source.url,base).href);
     assert.equal(createHash('sha256').update(await illustratedPdf.body()).digest('hex'), illustrated.source.sha256);
+    // Confirm the canonical page URLs are available before testing interactions
+    // against a freshly deployed Pages site. Keep every image hash assertion.
+    for (const item of illustrated.pages) {
+      const response=await page.request.get(new URL(item.image,base).href);
+      assert.equal(response.status(),200,`Published reader image unavailable: ${item.image}`);
+      assert.equal(createHash('sha256').update(await response.body()).digest('hex'),item.imageSha256);
+    }
     await page.getByRole('button',{name:`閱讀《${illustrated.title}》`,exact:true}).click();
-    await page.waitForFunction(()=>window.readerDiagnostics().imageReady);
+    await page.waitForFunction(()=>window.readerDiagnostics().imageReady,undefined,{timeout:60000});
     await page.locator('#next-page').click();
     await page.waitForFunction(()=>window.readerDiagnostics().page===2 && window.readerDiagnostics().imageReady);
     assert.equal(await page.locator('#page-image').getAttribute('src'),illustrated.pages[1].image);
@@ -297,11 +315,6 @@ try {
       const response=await page.request.get(new URL(src,base).href);
       assert.equal(createHash('sha256').update(await response.body()).digest('hex'),asset.sha256);
       await page.locator('#stop').click();
-    }
-    for (let index=0;index<illustrated.pages.length;index++) {
-      const item=illustrated.pages[index];
-      const response=await page.request.get(new URL(item.image,base).href);
-      assert.equal(createHash('sha256').update(await response.body()).digest('hex'),item.imageSha256);
     }
     if (illustrated.id === wolf.id) {
       await page.locator('#page-select').selectOption('17');
@@ -336,7 +349,14 @@ try {
   console.log(`PASS: published library matches ${expectedHash.slice(0, 12)}; all three books, both original picture-book PDFs and 36 page hashes, all MP3 modes, real timed glyph cues, audio controls, page turns, reversible archive and phone layout verified.`);
 } catch (error) {
   const state=await verificationPage?.evaluate(()=>window.readerDiagnostics?.()).catch(()=>null);
-  const diagnosis=String(error.stack || error)+'\nReader state: '+JSON.stringify(state);
+  const image=await verificationPage?.locator('#page-image').evaluate(node=>({
+    src:node.src,currentSrc:node.currentSrc,complete:node.complete,
+    width:node.naturalWidth,height:node.naturalHeight,
+    busy:node.closest('#page-canvas')?.getAttribute('aria-busy'),
+    status:document.querySelector('#status')?.textContent,
+  })).catch(()=>null);
+  const diagnosis=String(error.stack || error)+'\nReader state: '+JSON.stringify(state)
+    +'\nReader image: '+JSON.stringify(image)+'\nFailed requests: '+JSON.stringify(failedRequests.slice(-20));
   if(process.env.GITHUB_ACTIONS==='true') console.error('::error title=Permanent website verification::'+diagnosis.slice(0,10000).replaceAll('%','%25').replaceAll('\r','%0D').replaceAll('\n','%0A'));
   throw error;
 } finally {
