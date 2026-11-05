@@ -2,5 +2,26 @@
   "schemaVersion": 1,
   "generator": "OpenAI image_gen",
   "date": "2026-11-05",
-  "illustrations": []
+  "illustrations": [
+    {
+      "id": "props",
+      "slug": "little-sisters-wolf",
+      "prompt": "ORIGINAL PROP CONTINUITY SHEET, pure white background, no letters, labels, numbers, watermark, humans, food in mouths or living animals. Fine graphite outlines and dry colored-pencil hatching, very selective coral/berry/jade accents. Show TWO SOFT HAND PUPPETS, each in front and side views, separate clearly spaced: ONE IVORY RABBIT handpuppet with two long upright ears pink inside, pink small nose, black dot eyes, MINT GREEN simple bodice, soft flexible opening mouth; ONE SLATE-GREY WOLF handpuppet with triangular ears pink inside, long grey snout, large black round NOSE, amber dot eyes, flexible red felt mouth with exactly two blunt cream upper teeth, darker grey back/head, no clothing. Both are small hand-sized manufactured FABRIC puppets about20cm high with obvious open BOTTOM SLEEVES for a human hand and two small soft side arms. They must not look like real animals or separate full-bodied toys. Both unclothed except rabbit's mint bodice; no sharp scary teeth. Other props: ONE low rectangular WALNUT wooden table, four short legs, no drawers; ONE simple wooden ARMCHAIR with muted jade cushion; ONE IVORY small round plate next to THREE plain round golden biscuits; plain white paper ground. Keep views consistent. No scenery, stage, real door, curtain, printed text, cup, cake or apples.",
+      "source": "/workspace/generated_images/exec-14005e79-4020-4523-91fc-6655ceb4ec30.png",
+      "file": "assets/props.png",
+      "references": [],
+      "transparentBackground": false,
+      "sha256": "e7e17dd9049e08ba8aaa24570b400bec9e6dee86a70ad5d4546e79dab0fb3a66"
+    }
+  ],
+  "characterBible": {
+    "id": "characters",
+    "slug": "little-sisters-wolf",
+    "prompt": "Create an ORIGINAL Chinese literary children's picturebook CHARACTER BIBLE, pure white background, 3 columns and TWO rows of figures, no actual grid lines, labels, lettering, arrows or watermarks. TOP ROW: front views of elder sister XINGXING left, little sister KEKE middle, their grandmother right. BOTTOM ROW: same individuals three-quarter views directly underneath. Keep whole connected bodies including feet, ample space, consistent relative stature: grandma tallest, eight-year-old sister about70% of grandma height, five-year-old about55%. Fine loose GRAPHITE contour and dry COLOURED PENCIL on WHITE paper, restrained coral, berry-purple, jade, ochre, not glossy3D, anime, watercolor haze or huge round doll eyes. All THREE are recognizably related with shared small upturned NOSE TIPS, fine sharply rising eyebrows, ONE cheek DIMPLE, warm medium-brown skin, small long almond eyes. ELDER8: thin upright build, NARROW PEAR-SHAPED face, high cheekbones, long small almond eyes, black side-parted hair with TWO SHORT THICK ROPE TWISTS flaring gently backwards behind ears, no fringe; BERRY-PURPLE short-sleeve shirt, OCHRE knee shorts, grey-purple socks, dark-purple canvas shoes. LITTLE5: clearly shorter, shorter broad-upper pear face, same shared features but soft baby cheeks, black hair in two SMALL TIGHT SIDE BUNS close to ears, NO fringe, CORAL short overalls over IVORY T-shirt, brown-red strap shoes. GRANDMA65: slim tall slightly stooped, LONG NARROW PEAR FACE, high cheekbones, shared upturned nose, thin rising eyebrows, single dimple and warm brown skin, clear eye/mouth wrinkles, SILVER LONG BRAID wrapped along one side of head, NO GLASSES, JADE long-sleeve loose blouse, dark-purple wide trousers, tan cloth slippers. Not the round-faced curly-haired grandmother in apron from other books. Same exact people/clothes between rows. No props, food or puppets.",
+    "source": "/workspace/generated_images/exec-3551ab0c-e909-48fe-a7be-bf08633adc96.png",
+    "file": "assets/characters.png",
+    "references": [],
+    "transparentBackground": false,
+    "sha256": "b1714eff28b105cfb4a545333e200f91df6cfa2ff0d7d30d02f4a7ad13ff9488"
+  }
 }
