@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "book": {
+    "slug": "the-biscuit-grew-legs",
+    "title": "餅乾長腳了！",
+    "language": "zh-HK"
+  },
+  "audience": {
+    "ageMin": 6,
+    "ageMax": 8,
+    "readingMode": "independent",
+    "readingAbility": "使用者指定小學一年級及二年級程度；初讀者可由成人伴讀",
+    "accessibilityNeeds": []
+  },
+  "theme": "一小塊餅乾掉在地上，孩子先被花上的蜜蜂與蝴蝶吸引，再發現餅乾移動；蹲下看清是螞蟻，觀察牠們合力繞過樹枝把點心搬回家，結尾咬手中餅乾回扣長腳的誤會。",
+  "content": {
+    "mode": "original",
+    "request": "獨立設計以漢字「蟲」部首為主題的兒童故事繪本。",
+    "requiredElements": [
+      "小一至小二詞語及短句",
+      "清楚起因、經過、結果與可見線索",
+      "字目150%手寫體",
+      "姓名疊字並附專名號，避開虫142部"
+    ],
+    "avoidElements": [
+      "故事取代為知識講解",
+      "只換前作衣服或道具",
+      "稱所有虫部字都是昆蟲",
+      "把標題的長腳誤會當真實生理現象"
+    ],
+    "sourceTextPaths": [
+      "story.json"
+    ],
+    "references": [
+      {
+        "title": "生日會",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 16,
+        "sha256": "8f67a3121f40ebaa67844db1918eccb9c7f21bdc4faeacf4acd98557499d9eaf",
+        "source": "使用者附件，未重新公開原 PDF"
+      },
+      {
+        "title": "跟屁蟲",
+        "author": "小荷",
+        "illustrator": "Keman",
+        "publisher": "新雅",
+        "pdfPages": 17,
+        "sha256": "abfb8339a9bbcb41fa25d914a9c1bff836b7ffc986eaa04077252a5d48a5a8fe",
+        "source": "使用者附件，未重新公開原 PDF"
+      }
+    ],
+    "learningGoals": [
+      "在蜜蜂、蝴蝶、螞蟻三個熟悉詞語中找出虫部",
+      "從圖文理解餅乾被搬動的原因與螞蟻繞路的辦法"
+    ],
+    "targetCharacters": [
+      "蜜",
+      "蜂",
+      "蝴",
+      "蝶",
+      "螞",
+      "蟻"
+    ],
+    "characterNames": [
+      "安安",
+      "元元"
+    ]
+  },
+  "design": {
+    "artDirection": "乾色鉛筆及石墨細線，白紙大留白；新人物另作五官及輪廓，從全景轉為連續的近地視角，昆蟲保持基本形態。",
+    "palette": [
+      "#FFFFFF",
+      "#DDECF3",
+      "#33483E",
+      "#75877C",
+      "#B5834A",
+      "#81A17F",
+      "#BD655A"
+    ],
+    "pageSize": {
+      "width": 960,
+      "height": 600,
+      "unit": "pt"
+    },
+    "storySpreads": 10,
+    "wordBudget": 218,
+    "bodyFont": "Iansui",
+    "emphasisFont": "JyunsaiKaai Bold",
+    "emphasisScale": 1.5,
+    "properNameMarks": true
+  },
+  "deliverables": {
+    "formats": [
+      "pdf-spread",
+      "pdf-single",
+      "pptx",
+      "svg"
+    ],
+    "readAlong": false,
+    "audio": null
+  },
+  "publication": {
+    "github": true,
+    "permanentWebsite": true,
+    "destination": "https://angusqaq.github.io/audio-book/"
+  },
+  "decisions": {
+    "userRequirements": [
+      "本次指定小一及小二程度",
+      "主題為蟲部的獨立故事",
+      "沿用原創人物、姓名、字目與Git／永久網站要求"
+    ],
+    "editorialChoices": [
+      "正文218漢字，10故事跨頁、14閱讀畫面、26單頁，由本書十個敘事節拍選定。",
+      "以三個熟悉雙字詞承載六字；查部首的字形為虫，蟲是常用繁體漢字，兩者均歸142部。",
+      "使用者以年級指定程度，6–8歲只作一般年齡參考，成品顯示小一至小二。",
+      "完整插畫PDF及可編輯PPTX／SVG沿用既有交付方式；沒有新增音訊要求。",
+      "未做學生試讀，不把檔案驗證當成適讀性的實證。"
+    ],
+    "unresolvedQuestions": []
+  }
+}

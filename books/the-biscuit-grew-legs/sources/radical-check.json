@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-13",
+  "dataset": "Unicode 17.0 kRSUnicode",
+  "source": "https://github.com/unicode-org/unicodetools/blob/578f6c0516f5f268292ebda50b51848407a06478/unicodetools/data/ucd/17.0.0/Unihan/kRSUnicode.txt",
+  "sha256": "481f8a3d2fda0c6b8e6f7c746a0eedfb145a62f30bf6e61527a8f7cdb2a99108",
+  "entries": {
+    "元": {
+      "codepoint": "U+5143",
+      "kRSUnicode": "10.2",
+      "sourceLine": "5141..5143\t10.2"
+    },
+    "口": {
+      "codepoint": "U+53E3",
+      "kRSUnicode": "30.0",
+      "sourceLine": "53E3\t30.0"
+    },
+    "安": {
+      "codepoint": "U+5B89",
+      "kRSUnicode": "40.3",
+      "sourceLine": "5B85..5B89\t40.3"
+    },
+    "虫": {
+      "codepoint": "U+866B",
+      "kRSUnicode": "142.0",
+      "sourceLine": "866B\t142.0"
+    },
+    "蜂": {
+      "codepoint": "U+8702",
+      "kRSUnicode": "142.7",
+      "sourceLine": "86F5..8717\t142.7"
+    },
+    "蜜": {
+      "codepoint": "U+871C",
+      "kRSUnicode": "142.8",
+      "sourceLine": "8718..872A\t142.8"
+    },
+    "蝴": {
+      "codepoint": "U+8774",
+      "kRSUnicode": "142.9",
+      "sourceLine": "874C..8778\t142.9"
+    },
+    "蝶": {
+      "codepoint": "U+8776",
+      "kRSUnicode": "142.9",
+      "sourceLine": "874C..8778\t142.9"
+    },
+    "螞": {
+      "codepoint": "U+879E",
+      "kRSUnicode": "142.10",
+      "sourceLine": "8781..87A9\t142.10"
+    },
+    "蟲": {
+      "codepoint": "U+87F2",
+      "kRSUnicode": "142.12",
+      "sourceLine": "87E2..87F5\t142.12"
+    },
+    "蟻": {
+      "codepoint": "U+87FB",
+      "kRSUnicode": "142.13",
+      "sourceLine": "87F6..8800\t142.13"
+    }
+  }
+}
