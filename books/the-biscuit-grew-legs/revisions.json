@@ -9,6 +9,19 @@
           "reason": "依本次小一至小二程度另作短句、明確視覺線索、昆蟲模型及三詞六字活動。"
         }
       ]
+    },
+    {
+      "date": "2026-11-13",
+      "previousCommit": "086e8a2",
+      "changes": [
+        {
+          "kind": "artwork",
+          "id": "props",
+          "reason": "調整螞蟻模型的視角及足部間距，清楚顯示六足與兩觸角。",
+          "beforeSha256": "3da226bf9006b64a6b282e138e5bff27731cd41e704e9cc80022a2f998d8a501",
+          "afterSha256": "47f74341ad4ca3aba8d5ba0f78a27739369dfb017b4b74ce1424926611b3cda0"
+        }
+      ]
     }
   ]
 }
