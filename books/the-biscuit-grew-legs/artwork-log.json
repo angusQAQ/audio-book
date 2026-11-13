@@ -2,5 +2,24 @@
   "schemaVersion": 1,
   "generator": "OpenAI image_gen",
   "date": "2026-11-13",
-  "illustrations": []
+  "illustrations": [
+    {
+      "id": "props",
+      "prompt": "ORIGINAL children's picturebook PROP and INSECT MODEL SHEET on PURE WHITE paper, fine GRAPHITE outlines and dry COLOURED-PENCIL hatching, restrained warm natural colors. Separate clear objects with generous white spacing, NO labels, text, letters, numbers, borders or watermark, no human figures or extra duplicate insects. TOP ROW three clear NATURAL insect models: LEFT one small honeybee, fuzzy ochre-gold and dark-brown striped abdomen, HEAD–THORAX–ABDOMEN, exactly SIX thin legs attached to thorax, TWO antennae, TWO PAIRS of naturally overlapping transparent veined wings (four total), natural dark eyes and no human face/hands; CENTRE one BLUE butterfly, FOUR wings clearly grouped as TWO forewings plus TWO smaller hindwings with dark edge/veins, narrow dark body, exactly SIX fine legs attached to thorax and TWO clubbed antennae, natural eyes no smile; RIGHT one RUSSET-BROWN WORKER ANT, natural head, thorax and rounded abdomen with thin waist, exactly SIX slender jointed legs (THREE PAIRS) ALL attached to thorax, TWO elbowed antennae, small biting MANDIBLES, NO WINGS, no human hands, no cartoon eyes or clothes. Show legs clearly separated; do not merge antennae and legs. LOWER ROW simple props: ONE GOLDEN ROUND BISCUIT with a SINGLE small crescent bite missing from edge, softly dotted surface; ONE PALE CREAM SQUARE CRACKER with rounded corners and a few small pinholes, visibly different from the round golden biscuit; ONE TINY irregular TRIANGULAR GOLDEN BISCUIT CRUMB with rough broken edges, not a second whole biscuit; ONE thin low BROWN FORKED TWIG lying flat on ground, a short side prong; ONE BROAD GREEN LEAF arched loosely over a TINY ant-nest entrance in a little patch of soil (not a black deep hole, human door, furniture or cutaway house); ONE simple PINK FIVE-PETAL FLOWER on short green stalk and ONE smooth LOW LIGHT GREY FLAT STONE. At story scale crumb is about one ant body long, twig is low but blocks crumb along a straight route, tiny opening is behind the leaf. These are separate design views, not a story scene, no picnic baskets, packets, plates, buildings or extra foods. Not glossy3D, photograph or watercolor haze.",
+      "source": "/workspace/generated_images/exec-eaafd129-b63a-425f-aa3a-23c5c6a91764.png",
+      "file": "assets/props.png",
+      "references": [],
+      "transparentBackground": false,
+      "sha256": "3da226bf9006b64a6b282e138e5bff27731cd41e704e9cc80022a2f998d8a501"
+    }
+  ],
+  "characterBible": {
+    "id": "characters",
+    "prompt": "Create an ORIGINAL children's literary picturebook CHARACTER MODEL BIBLE, dry COLOURED-PENCIL hatching and light GRAPHITE on PURE WHITE PAPER. FOUR equally spaced separated columns in ONE ROW, two front and three-quarter views of the SAME girl in columns1–2, the SAME boy in columns3–4. Complete connected bodies, all hands, legs and shoes in frame, generous white gaps. They are seven-year-old FRIENDS, not siblings, both convincingly young, about4.5heads tall. Girl ANAN: SHORT STOCKY body, DEEP neutral brown skin, BROAD SOFT RECTANGULAR face and clearly squared rounded jaw, high broad forehead, widely spaced SMALL NARROW HORIZONTAL eyes, SHORT STRAIGHT eyebrows, SHORT WIDE nose, full upper lip, cheerful little missing-front-tooth gap. Thick straight BLACK hair cut into a BOX-SHAPED CHIN-LENGTH BOB and VERY SHORT STRAIGHT FRINGE high above eyebrows, NO braids, puffs, clips, glasses or headband. MUSTARD-YELLOW short-trouser overalls over an IVORY short-sleeved tee, WHITE ankle socks, DARK BRICK-RED Velcro shoes. Boy YUANYUAN: about10% taller than girl and VERY SLIM, FAIR skin, NARROW LONG face tapering to a small pointed-rounded chin, close-set TINY DROOPING OVAL eyes, fine brown eyebrows, noticeably LONGER forward-projecting nose, prominent round outward ears, few freckles on nose bridge, thin lips. Straight COPPER/AUBURN short hair, plain SIDE PART, NOT CURLY, no glasses, NO exaggerated adult wrinkles or moustache. TEAL short-sleeved tee, BERRY-RED shorts, WHITE ankle socks, NAVY Velcro shoes. Keep faces, silhouettes, nose and eye structure CLEARLY DISTINCT, not one round-eyed doll face with different hair or skin. Friendly restrained expressions, same exact faces and clothes across views. Fine pencil marks visible, restrained flat color, white paper shows. NO props, food, insects, background, text, letters, labels, numbers, watermark, panels or frames. Not glossy3D, anime, photographic, watercolor blur or generic huge shining eyes.",
+    "source": "/workspace/generated_images/exec-a02c1073-d4c9-4849-8136-c705a1f6b6a1.png",
+    "file": "assets/characters.png",
+    "references": [],
+    "transparentBackground": false,
+    "sha256": "4393fa892f376ae4fae5f4553f9f3dee3bcf1ee47156faa4494e27bbc9c50b01"
+  }
 }
