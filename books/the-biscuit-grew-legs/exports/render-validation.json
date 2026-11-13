@@ -1,0 +1,39 @@
+{
+  "status": "verified",
+  "date": "2026-11-13",
+  "officePages": 14,
+  "officeTextMatchesEveryPage": true,
+  "actualOfficeFonts": [
+    "Iansui-Regular",
+    "JyunsaiKaai-Bold"
+  ],
+  "officeTargetFontAndSizeVerified": true,
+  "audienceCaptionsSingleLineVerified": 2,
+  "properNameRulesVerified": 10,
+  "ordinaryCharactersNotEnlarged": [
+    "虫",
+    "蟲"
+  ],
+  "storyTextImageCollisionChecks": 14,
+  "radicalEntriesVerified": 11,
+  "svgActualRenders": [
+    "s01",
+    "s02",
+    "s03",
+    "s04",
+    "s05",
+    "s06",
+    "s07",
+    "s08",
+    "s09",
+    "s10",
+    "lesson"
+  ],
+  "officeRenderedPdfSha256": "cb30683171f70a41fe6b57078e6bddfe941d818aafa377dc638bed4e13605fb0",
+  "files": {
+    "餅乾長腳了！_繪本.pdf": "6f63ccfbbe6bffae471fa0b3f2339ef82869689672bc71552d01525b7d61b79f",
+    "餅乾長腳了！_跨頁閱讀版.pdf": "f2c79bfa6850cac2b11a5c321399ed0880e8fb541cc65444589e73479821abcd",
+    "餅乾長腳了！_可編輯排版.pptx": "ce8b6ee13abcfc8ed5b5b51b760ddcee003d08207b19c4e1fdd085e23c179eae"
+  },
+  "scope": "Actual LibreOffice PDF and Inkscape PNG checks; not Microsoft PowerPoint, print production or audio verification."
+}

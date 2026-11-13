@@ -191,3 +191,15 @@ GitHub Actions 的 **Prepare and verify Cantonese MP3** 可在工作分支手動
 | 力部《我的雨靴不肯走！》 | 媽媽幫忙拔出孩子，雨靴卻留在泥裏，兩人再取回靴子與球；核心動、加、助、努、功。274漢字，16閱讀畫面／30單頁。 | [跨頁PDF](https://angusqaq.github.io/audio-book/books/my-boots-wont-budge/exports/我的雨靴不肯走！_跨頁閱讀版.pdf)・[單頁PDF](https://angusqaq.github.io/audio-book/books/my-boots-wont-budge/exports/我的雨靴不肯走！_繪本.pdf)・[PowerPoint](https://angusqaq.github.io/audio-book/books/my-boots-wont-budge/exports/我的雨靴不肯走！_可編輯排版.pptx) |
 
 三書的故事、需求、分鏡、部首逐字來源、原始插畫、精確提示、修訂及重建程式分別見[山部專案](books/hat-come-back/README.md)、[土部專案](books/your-majesty-please-sit/README.md)、[力部專案](books/my-boots-wont-budge/README.md)。共用字型及授權保存在assets/fonts/print；PNG可獨立替換，PDF／PPTX／SVG的文字與姓名線保留原生結構。本次交付繪本成品，未另製或註冊新點讀音訊。
+
+## 虫部《餅乾長腳了！》（小一至小二）
+
+一小塊餅乾掉在地上，孩子卻發現它會走！蹲下看清螞蟻後，再看牠們合力繞過樹枝，把點心搬回大葉子下。結尾咬手中餅乾的笑話回應開頭。正文218漢字、10故事跨頁、14閱讀畫面、26單頁，採26pt短句正文、150%手寫字目，以及附專名號的安安與元元。
+
+核心蜜、蜂、蝴、蝶、螞、蟻由「蜜蜂、蝴蝶、螞蟻」三個熟悉詞語帶出；學習頁分清部首字形虫與繁體字蟲，兩者皆歸虫142部，普通虫／蟲不放大。
+
+- [跨頁閱讀PDF](https://angusqaq.github.io/audio-book/books/the-biscuit-grew-legs/exports/餅乾長腳了！_跨頁閱讀版.pdf)
+- [單頁繪本PDF](https://angusqaq.github.io/audio-book/books/the-biscuit-grew-legs/exports/餅乾長腳了！_繪本.pdf)
+- [可編輯PowerPoint](https://angusqaq.github.io/audio-book/books/the-biscuit-grew-legs/exports/餅乾長腳了！_可編輯排版.pptx)
+
+[本書專案](books/the-biscuit-grew-legs/README.md)保存需求、故事、分鏡、部首資料、原始圖像、精確生成及修訂、原生文字SVG與重建程式；編輯前安裝共用字型。

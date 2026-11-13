@@ -22,6 +22,64 @@
           "afterSha256": "47f74341ad4ca3aba8d5ba0f78a27739369dfb017b4b74ce1424926611b3cda0"
         }
       ]
+    },
+    {
+      "date": "2026-11-13",
+      "previousCommit": "21216d7",
+      "changes": [
+        {
+          "id": "s02",
+          "kind": "artwork",
+          "reason": "統一碎餅在樹枝之前、葉下洞口在更右方的路線；受阻頁讓碎餅碰到樹枝，保留孩子、食物與昆蟲數量。",
+          "beforeSha256": "5198ebabbc6f4afabe2909fcead103b2cec8e547ec1bb6b3e8324e9a3ce07d30",
+          "afterSha256": "b5a8107e4d96d0e5afebbcf30679236fbb491a871a64c581b189f8f9c585aa8f"
+        },
+        {
+          "id": "s03",
+          "kind": "artwork",
+          "reason": "統一碎餅在樹枝之前、葉下洞口在更右方的路線；受阻頁讓碎餅碰到樹枝，保留孩子、食物與昆蟲數量。",
+          "beforeSha256": "e35af19113d3cb96857fab3cf759cfb0241622d892ebae3b8602e550d297472e",
+          "afterSha256": "2b115e524a6346a0188fc04ddf40d3929db91a0c77fbe3e31ee9ea81006c55d0"
+        },
+        {
+          "id": "s04",
+          "kind": "artwork",
+          "reason": "統一碎餅在樹枝之前、葉下洞口在更右方的路線；受阻頁讓碎餅碰到樹枝，保留孩子、食物與昆蟲數量。",
+          "beforeSha256": "f1acb85aa5f0afc19728a27fd8dd218d94bb3aac2237f9b2d3a52b312f590e1c",
+          "afterSha256": "2ac59d74a546a605872ac64c1e0495d16c9d3be29bf5187d494db5953d01ef07"
+        },
+        {
+          "id": "s05",
+          "kind": "artwork",
+          "reason": "統一碎餅在樹枝之前、葉下洞口在更右方的路線；受阻頁讓碎餅碰到樹枝，保留孩子、食物與昆蟲數量。",
+          "beforeSha256": "c0e9b5d4990f72868087ebe3472a27f44ceca3dcdd9c259ee59443015d4e562d",
+          "afterSha256": "e83c3f26eefa6937ac416b3bde907616c1b6485d76a053a49b35953e0b221da2"
+        },
+        {
+          "id": "s06",
+          "kind": "artwork",
+          "reason": "統一碎餅在樹枝之前、葉下洞口在更右方的路線；受阻頁讓碎餅碰到樹枝，保留孩子、食物與昆蟲數量。",
+          "beforeSha256": "1574e866206dff3417a443986f62b730265cc6e45c9a03c2d60ab74f75a7cb2c",
+          "afterSha256": "d1732da1484b5ea58591671c96b8c1b19f6f65b3ca95b270f23581e9bc603c71"
+        },
+        {
+          "id": "s07",
+          "kind": "artwork",
+          "reason": "統一碎餅在樹枝之前、葉下洞口在更右方的路線；受阻頁讓碎餅碰到樹枝，保留孩子、食物與昆蟲數量。",
+          "beforeSha256": "47b38357bc29ed1f1e166f7abcad9fe2aa68632c852de9e744e5aa65d40701f4",
+          "afterSha256": "27a6d2bad276f11f32b6faca395b4ebdee67d9a3a6ae6c20be7ef1b20065ceb2"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-13",
+      "changes": [
+        {
+          "kind": "native-layout",
+          "reason": "正文26pt，核心字39pt；s05、s06、s08插畫平移70pt，將完整螞蟻／群蟻置於裝訂線右方，保留左方完整孩子；模型以原生裁切隔離完整單人。",
+          "verified": "LibreOffice全14畫面、Inkscape全部10故事與活動頁實際渲染，全文、字型、10條姓名線、14項圖文留白及11項部首來源通過。"
+        }
+      ]
     }
   ]
 }

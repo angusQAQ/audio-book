@@ -1,0 +1,55 @@
+{
+  "status": "complete",
+  "spreadPages": 14,
+  "singlePages": 26,
+  "editableSlides": 14,
+  "missingGlyphs": [],
+  "allTextEditable": true,
+  "originalArtworkHashesVerified": 13,
+  "properNameRadicals": {
+    "元": 10,
+    "安": 40
+  },
+  "properNamesAvoidThemeRadical": true,
+  "properNameMarks": {
+    "names": {
+      "安安": 6,
+      "元元": 4
+    },
+    "style": "continuous rule below each full name",
+    "pdfPptxSvgGeometryVerified": true,
+    "editableTextAndRuleGrouped": true
+  },
+  "targetTypography": {
+    "font": "JyunsaiKaai",
+    "bodyScale": 1.5,
+    "pdfAndPptxRunsVerified": true,
+    "handwrittenGlyphs": {
+      "蜜": 6,
+      "蜂": 6,
+      "蝴": 6,
+      "蝶": 7,
+      "螞": 9,
+      "蟻": 9
+    }
+  },
+  "normalCharacterTypography": {
+    "characters": [
+      "虫",
+      "蟲"
+    ],
+    "bodyScale": 1,
+    "font": "Iansui",
+    "pdfAndPptxRunsVerified": true,
+    "svgRunsVerified": true
+  },
+  "storyHanCharacters": 218,
+  "targets": {
+    "蜜": 6,
+    "蜂": 6,
+    "蝴": 6,
+    "蝶": 7,
+    "螞": 9,
+    "蟻": 9
+  }
+}
